@@ -4,8 +4,8 @@
   "description": "",
   "main": "genapi",
   "scripts": {
-    "genapi-js": "node ./versionJs/index.js",
-    "genapi-ts": "node ./versionTs/index.js"
+    "genapi-js": "node ./genApiJs/index.js",
+    "genapi-ts": "node ./genApiTs/index.js"
   },
   "repository": {
     "type": "git",
