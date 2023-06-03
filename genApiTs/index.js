@@ -3,6 +3,7 @@ const path = require('node:path')
 const { exec } = require('node:child_process')
 const axios = require('axios')
 const apiConfig = require('./apiConfig')
+const handleDefinitions = require('./definitions').handleDefinitions
 
 const CWD = process.cwd()
 
@@ -38,6 +39,8 @@ apiList.forEach(item => {
 
 function parseData(jsonData, { absOutputDir, ignoreReg, prefix }) {
   const apiList = handlePaths(jsonData.paths, ignoreReg)
+  const definitions = handleDefinitions(jsonData.definitions || {})
+  writeDeinitionToFile(definitions, absOutputDir)
   const count = apiList.reduce((pre, cur) => {
     return pre + cur.apis.length
   }, 0)
@@ -111,6 +114,29 @@ export function ${name}(config?: AxiosRequestConfig):AxiosPromise<any>{
   })
 }
 
+/** 写入所有 interface */
+function writeDeinitionToFile(definitions, absOutputDir) {
+  let str = ''
+  definitions.forEach(item => {
+    if (item.type === 'object') {
+      str += `export interface ${item.name}{`
+      if (item.properties && item.properties.length) {
+        item.properties.forEach(it => {
+          const description = it.description ? `/**${it.description}*/` : ''
+          str += `
+  ${description ? description : ''}
+  ${it.name}:${it.type}
+`
+        })
+      }
+      str += '}\n'
+    } else {
+      console.log('还有不是对象的？？')
+    }
+  })
+  const targetFile = path.join(absOutputDir, `_interfaces.ts`)
+  fs.writeFileSync(targetFile, str)
+}
 /**
  * 获取接口地址
  * "/bankIcbc/zjzhPassAuto/{taskId}"   => `/bankIcbc/zjzhPassAuto/${taskId}`
