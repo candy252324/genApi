@@ -1,2377 +1,1616 @@
-export interface AddGroupResp{
+export interface ResResultAddGroupResp {
   /**是否直接入群*/
-  directEntryGroup:boolean
-
+  directEntryGroup: boolean
   /**群id*/
-  imGroupId:number
+  imGroupId: number
 }
-export interface AddressBookTenantInfoResp{
+export interface ResResultAddressBookTenantInfoResp {
   /**租户头像*/
-  avatar:string
-
+  avatar: string
   /**是否选中*/
-  checked:boolean
-
+  checked: boolean
   /**租户类型,ENTERPRISE 企业租户,PERSON 个人租户,PLATFORM 平台租户*/
-  kind:string
-
+  kind: string
   /**是否显示imgroupid： true显示*/
-  showImGroupId:boolean
-
+  showImGroupId: boolean
   /**租户id*/
-  tenantId:number
-
+  tenantId: number
   /**租户名称*/
-  tenantName:string
+  tenantName: string
 }
-export interface ApiResponse{
-  
-  code:number
-
-  
-  data:object
-
-  
-  msg:string
-
-  
-  success:boolean
-
-  
-  timestamp:number
-
-  
-  traceId:string
+export interface ResResultApiResponse {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
 }
-export interface BasePageReq{
-  
-  page:number
-
-  
-  size:number
+export interface ResResultBasePageReq {
+  page: number
+  size: number
 }
-export interface ComLoginReq{
+export interface ResResultComLoginReq {
   /**身份标识:邮箱，手机号，微信appid,xxx*/
-  account:string
-
+  account: string
   /**密码凭证：微信：code*/
-  certificate:string
-
-  
-  clientType:string
-
-  
-  clientVersion:string
-
-  
-  deviceCode:string
-
-  
-  deviceManufacturer:string
-
-  
-  deviceModel:string
-
+  certificate: string
+  clientType: string
+  clientVersion: string
+  deviceCode: string
+  deviceManufacturer: string
+  deviceModel: string
   /**登录模式*/
-  loginModeEnum:string
-
+  loginModeEnum: string
   /**滑块验证唯一标示*/
-  uuid:string
+  uuid: string
 }
-export interface ComPage{
-  
-  current:number
-
-  
-  records:[]
-
-  
-  size:number
-
-  
-  total:number
+export interface ResResultComPage {
+  current: number
+  records: []
+  size: number
+  total: number
 }
-export interface CommonSearchReq{
+export interface ResResultCommonSearchReq {
   /**用户ID*/
-  imUserId:number
-
+  imUserId: number
   /**搜索关键字*/
-  keywords:string
-
-  
-  page:number
-
-  
-  size:number
-
+  keywords: string
+  page: number
+  size: number
   /**类型*/
-  type:string
+  type: string
 }
-export interface CommonSearchResp{
+export interface ResResultCommonSearchResp {
   /**头像*/
-  avatar:string
-
+  avatar: string
   /**CHAT单聊 GROUP群聊*/
-  chatType:string
-
+  chatType: string
   /**公司*/
-  company:string
-
+  company: string
   /**创建类型 AUTO, MANUAL*/
-  createType:string
-
+  createType: string
   /**部门群DEPT*/
-  groupAttr:string
-
-  
-  groupAvatar:number
-
+  groupAttr: string
+  groupAvatar: number
   /**内部INNER，外部OUTER*/
-  groupType:string
-
+  groupType: string
   /**im群id*/
-  imGroupId:number
-
+  imGroupId: number
   /**im用户id*/
-  imUserId:number
-
+  imUserId: number
   /**是否好友*/
-  isFriendship:boolean
-
+  isFriendship: boolean
   /**是否通知*/
-  isNotice:boolean
-
+  isNotice: boolean
   /**是否同一租户*/
-  isSameTenant:boolean
-
+  isSameTenant: boolean
   /**是否置顶*/
-  isTop:boolean
-
+  isTop: boolean
   /**职务*/
-  job:string
-
+  job: string
   /**关键字*/
-  keywords:string
-
+  keywords: string
   /**群名称*/
-  name:string
-
+  name: string
   /**群主id*/
-  ownerId:number
-
+  ownerId: number
   /**岗位*/
-  post:string
-
+  post: string
   /**群成员数量*/
-  total:number
+  total: number
 }
-export interface ContactReq{
+export interface ResResultContactReq {
   /**非某个群成员*/
-  excludeMemberImGroupId:number
-
+  excludeMemberImGroupId: number
   /**当前用户ID*/
-  imUserId:number
-
+  imUserId: number
   /**搜索关键字*/
-  keywords:string
-
-  
-  page:number
-
-  
-  size:number
+  keywords: string
+  page: number
+  size: number
 }
-export interface ContactResp{
+export interface ResResultContactResp {
   /**头像*/
-  avatar:string
-
+  avatar: string
   /**头像ID*/
-  chatAvatar:number
-
-  
-  chatStatus:string
-
+  chatAvatar: number
+  chatStatus: string
   /**CHAT单聊 GROUP群聊*/
-  chatType:string
-
+  chatType: string
   /**创建类型 AUTO, MANUAL*/
-  createType:string
-
+  createType: string
   /**群属性: 部门群DEPT*/
-  groupAttr:string
-
+  groupAttr: string
   /**类型：内部INNER，外部OUTER*/
-  groupType:string
-
+  groupType: string
   /**im群id*/
-  imGroupId:number
-
+  imGroupId: number
   /**im用户id*/
-  imUserId:number
-
+  imUserId: number
   /**是否好友*/
-  isFriendship:boolean
-
+  isFriendship: boolean
   /**是否本群成员*/
-  isGroupMember:boolean
-
+  isGroupMember: boolean
   /**是否通知*/
-  isNotice:boolean
-
+  isNotice: boolean
   /**是否同一子公司*/
-  isSameSubsidiary:boolean
-
+  isSameSubsidiary: boolean
   /**是否同一租户*/
-  isSameTenant:boolean
-
+  isSameTenant: boolean
   /**是否置顶*/
-  isTop:boolean
-
+  isTop: boolean
   /**岗位*/
-  job:string
-
+  job: string
   /**关键字*/
-  keywords:string
-
+  keywords: string
   /**会话名称*/
-  name:string
-
+  name: string
   /**职位*/
-  post:string
-
+  post: string
   /**会话备注*/
-  remark:string
-
+  remark: string
   /**状态：NONACTIVATED未激活, NORMAL正常, FORBID禁用, CANCEL注销, 会话已删除CHAT_DELETE*/
-  status:string
-
+  status: string
   /**公司*/
-  tenantName:string
-
+  tenantName: string
   /**群成员数量*/
-  total:number
-
-  
-  userStatus:string
+  total: number
+  userStatus: string
 }
-export interface DeptNoteResp{
-  
-  employeeCount:number
-
-  
-  info:undefined
+export interface ResResultDeptNoteResp {
+  employeeCount: number
+  info: undefined
 }
-export interface DeptResp{
+export interface ResResultDeptResp {
   /**祖级列表*/
-  ancestors:string
-
-  
-  createId:number
-
-  
-  createName:string
-
-  
-  created:string
-
+  ancestors: string
+  createId: number
+  createName: string
+  created: string
   /**部门code*/
-  deptCode:string
-
+  deptCode: string
   /**部门名称*/
-  deptName:string
-
+  deptName: string
   /**邮箱*/
-  email:string
-
+  email: string
   /**部门id*/
-  id:number
-
+  id: number
   /**负责人id*/
-  leaderEmployeeId:number
-
+  leaderEmployeeId: number
   /**部门负责人userId*/
-  leaderUserId:number
-
+  leaderUserId: number
   /**组织关联的企业,默认false没有关联*/
-  linkStatus:boolean
-
+  linkStatus: boolean
   /**部门体系: 内部：INNER*/
-  mark:string
-
-  
-  markDesc:string
-
-  
-  modified:string
-
+  mark: string
+  markDesc: string
+  modified: string
   /**显示顺序*/
-  orderNum:number
-
+  orderNum: number
   /**父部门code*/
-  parentCode:string
-
+  parentCode: string
   /**父部门id*/
-  parentId:number
-
+  parentId: number
   /**联系电话*/
-  phone:string
-
+  phone: string
   /**部门简介*/
-  profile:string
-
+  profile: string
   /**部门类型,部门：DEPT, 公司:COMPANY*/
-  scaleType:string
-
-  
-  scaleTypeDesc:string
-
+  scaleType: string
+  scaleTypeDesc: string
   /**部门状态（NORMAL正常 STOP停用）*/
-  status:string
-
-  
-  statusDesc:string
-
+  status: string
+  statusDesc: string
   /**租户id*/
-  tenantId:number
-
-  
-  updateId:number
-
-  
-  updateName:string
+  tenantId: number
+  updateId: number
+  updateName: string
 }
-export interface EmployeeAllInfoResp{
+export interface ResResultEmployeeAllInfoResp {
   /**部门信息*/
-  deptRespList:[]
-
+  deptRespList: []
   /**员工信息*/
-  employeeResp:undefined
-
+  employeeResp: undefined
   /**职务信息*/
-  jobRespList:[]
-
+  jobRespList: []
   /**岗位信息*/
-  postRespList:[]
-
+  postRespList: []
   /**角色信息*/
-  roleRespList:[]
+  roleRespList: []
 }
-export interface EmployeeResp{
-  
-  createId:number
-
+export interface ResResultEmployeeResp {
+  createId: number
   /**邀请人*/
-  createName:string
-
+  createName: string
   /**加入时间*/
-  created:string
-
+  created: string
   /**员工邮箱*/
-  email:string
-
+  email: string
   /**员工id*/
-  id:number
-
+  id: number
   /**手机号*/
-  mobile:string
-
-  
-  modified:string
-
+  mobile: string
+  modified: string
   /**员工昵称*/
-  nickName:string
-
+  nickName: string
   /**关联关系：INIT:创建人，CREATE：后台添加，INVITE:邀请加入，ADD:搜索加入*/
-  relation:string
-
+  relation: string
   /**性别,man:表示男性,woman表示女性，unknown未知*/
-  sex:string
-
+  sex: string
   /**账号状态：NONACTIVATED未激活,NORMAL正常,FORBID禁用*/
-  status:string
-
-  
-  updateId:number
-
-  
-  updateName:string
-
+  status: string
+  updateId: number
+  updateName: string
   /**账号id*/
-  userId:number
-
+  userId: number
   /**员工姓名*/
-  userName:string
+  userName: string
 }
-export interface EnterGroupReq{
+export interface ResResultEnterGroupReq {
   /**f2fGroupId*/
-  f2fGroupId:number
-
+  f2fGroupId: number
   /**im用户id*/
-  imUserId:number
+  imUserId: number
 }
-export interface EnterpriseMainInfoResp{
+export interface ResResultEnterpriseMainInfoResp {
   /**认证状态: 未认证 UNCERTIFICATED, 已认证 CERTIFIED*/
-  authStatus:string
-
+  authStatus: string
   /**企业logo*/
-  avatar:string
-
+  avatar: string
   /**联系电话*/
-  contactNumber:string
-
+  contactNumber: string
   /**联系人*/
-  contactor:string
-
-  
-  created:boolean
-
+  contactor: string
+  created: boolean
   /**企业ID*/
-  enterpriseId:number
-
+  enterpriseId: number
   /**法定代表人*/
-  legalPerson:string
-
+  legalPerson: string
   /**法定代表人*/
-  legalPersonPhone:string
-
+  legalPersonPhone: string
   /**企业 社会统一信用代码*/
-  licenseUnifiedCode:string
-
+  licenseUnifiedCode: string
   /**企业地址*/
-  location:string
-
+  location: string
   /**企业名称*/
-  name:string
-
+  name: string
   /**租户id*/
-  tenantId:number
-
+  tenantId: number
   /**用户ID*/
-  userId:number
+  userId: number
 }
-export interface ExtDeptResp{
+export interface ResResultExtDeptResp {
   /**祖级列表*/
-  ancestors:string
-
-  
-  createId:number
-
-  
-  createName:string
-
-  
-  created:string
-
+  ancestors: string
+  createId: number
+  createName: string
+  created: string
   /**部门code*/
-  deptCode:string
-
+  deptCode: string
   /**部门名称*/
-  deptName:string
-
+  deptName: string
   /**邮箱*/
-  email:string
-
+  email: string
   /**员工id*/
-  employeeId:number
-
+  employeeId: number
   /**部门id*/
-  id:number
-
+  id: number
   /**负责人id*/
-  leaderEmployeeId:number
-
+  leaderEmployeeId: number
   /**部门负责人userId*/
-  leaderUserId:number
-
+  leaderUserId: number
   /**组织关联的企业,默认false没有关联*/
-  linkStatus:boolean
-
+  linkStatus: boolean
   /**是否是主部门*/
-  mainDept:boolean
-
+  mainDept: boolean
   /**部门体系: 内部：INNER*/
-  mark:string
-
-  
-  modified:string
-
+  mark: string
+  modified: string
   /**显示顺序*/
-  orderNum:number
-
+  orderNum: number
   /**父部门code*/
-  parentCode:string
-
+  parentCode: string
   /**父部门id*/
-  parentId:number
-
+  parentId: number
   /**联系电话*/
-  phone:string
-
+  phone: string
   /**部门简介*/
-  profile:string
-
+  profile: string
   /**部门类型,部门：DEPT, 公司:COMPANY*/
-  scaleType:string
-
+  scaleType: string
   /**部门状态（NORMAL正常 STOP停用）*/
-  status:string
-
+  status: string
   /**租户id*/
-  tenantId:number
-
-  
-  updateId:number
-
-  
-  updateName:string
+  tenantId: number
+  updateId: number
+  updateName: string
 }
-export interface ForwardListReq{
+export interface ResResultForwardListReq {
   /**终端类型:IOS/ANDROID/WEB*/
-  channel:string
-
+  channel: string
   /**用户id*/
-  imUserId:number
-
+  imUserId: number
   /**申请人姓名/手机号*/
-  keyword:string
-
-  
-  page:number
-
-  
-  size:number
-
+  keyword: string
+  page: number
+  size: number
   /**搜索类型:USER/GROUP*/
-  type:string
+  type: string
 }
-export interface ForwardListResp{
+export interface ResResultForwardListResp {
   /**头像*/
-  avatar:string
-
+  avatar: string
   /**CHAT单聊 GROUP群聊*/
-  chatType:string
-
+  chatType: string
   /**im群id*/
-  imGroupId:number
-
+  imGroupId: number
   /**im用户id*/
-  imUserId:number
-
+  imUserId: number
   /**是否好友*/
-  isFriendship:boolean
-
+  isFriendship: boolean
   /**姓名/群名称*/
-  name:string
-
+  name: string
   /**企业名称*/
-  tenantName:string
-
+  tenantName: string
   /**群成员数量*/
-  total:number
+  total: number
 }
-export interface FriendshipDetailReq{
+export interface ResResultFriendshipDetailReq {
   /**渠道*/
-  channel:string
-
+  channel: string
   /**好友id*/
-  friendId:number
-
+  friendId: number
   /**群id*/
-  imGroupId:number
-
+  imGroupId: number
   /**im用户id*/
-  imUserId:number
+  imUserId: number
 }
-export interface FriendshipDetailResp{
+export interface ResResultFriendshipDetailResp {
   /**头像*/
-  avatar:string
-
+  avatar: string
   /**子公司*/
-  childCompany:string
-
+  childCompany: string
   /**公司*/
-  company:string
-
+  company: string
   /**部门id*/
-  deptId:number
-
+  deptId: number
   /**部门名称*/
-  deptName:string
-
+  deptName: string
   /**部门路径*/
-  deptPath:string
-
+  deptPath: string
   /**邮箱*/
-  email:string
-
+  email: string
   /**im群组ID*/
-  imGroupId:number
-
+  imGroupId: number
   /**im用户ID*/
-  imUserId:number
-
+  imUserId: number
   /**是否好友*/
-  isFriendship:boolean
-
+  isFriendship: boolean
   /**免打扰*/
-  isNotice:boolean
-
+  isNotice: boolean
   /**是否特别关注*/
-  isPayAttention:boolean
-
+  isPayAttention: boolean
   /**是否同子公司*/
-  isSameSubsidiary:boolean
-
+  isSameSubsidiary: boolean
   /**是否同租户*/
-  isSameTenant:boolean
-
+  isSameTenant: boolean
   /**职务*/
-  job:string
-
+  job: string
   /**昵称*/
-  nickName:string
-
+  nickName: string
   /**手机号*/
-  phone:string
-
+  phone: string
   /**拼音*/
-  pinyin:string
-
+  pinyin: string
   /**岗位*/
-  post:string
-
+  post: string
   /**性别,man:表示男性,woman表示女性，unknown未知*/
-  sex:string
-
+  sex: string
   /**状态：NONACTIVATED未激活, NORMAL正常, FORBID禁用, CANCEL注销, 会话已删除CHAT_DELETE*/
-  status:string
-
+  status: string
   /**账号状态：中文*/
-  statusDesc:string
-
+  statusDesc: string
   /**对话职级*/
-  title:string
-
+  title: string
   /**姓名*/
-  userName:string
+  userName: string
 }
-export interface FriendshipResp{
+export interface ResResultFriendshipResp {
   /**头像*/
-  avatar:string
-
+  avatar: string
   /**im群id*/
-  imGroupId:number
-
+  imGroupId: number
   /**im用户id*/
-  imUserId:number
-
+  imUserId: number
   /**姓名pinyin(只返回首字母)*/
-  pinyin:string
-
+  pinyin: string
   /**企业(租户)名称*/
-  tenantName:string
-
+  tenantName: string
   /**姓名*/
-  userName:string
+  userName: string
 }
-export interface GetUnreadPageReq{
+export interface ResResultGetUnreadPageReq {
   /**用户id*/
-  imUserId:number
-
+  imUserId: number
   /**用户id*/
-  requestIdList:[]
+  requestIdList: []
 }
-export interface GroupF2fUserListResp{
+export interface ResResultGroupF2fUserListResp {
   /**头像id*/
-  avatar:number
-
+  avatar: number
   /**头像地址*/
-  avatarUrl:string
-
+  avatarUrl: string
   /**f2fGroupId*/
-  f2fGroupId:number
-
+  f2fGroupId: number
   /**im用户ID*/
-  imUserId:number
-
+  imUserId: number
   /**姓名*/
-  userName:string
+  userName: string
 }
-export interface GroupTransferReq{
+export interface ResResultGroupTransferReq {
   /**imGroupId*/
-  imGroupId:number
-
+  imGroupId: number
   /**新群主id*/
-  imUserId:number
+  imUserId: number
 }
-export interface InviteToGroupReq{
+export interface ResResultInviteToGroupReq {
   /**被邀请人*/
-  applyIds:[]
-
+  applyIds: []
   /**群描述(可空)*/
-  desc:string
-
+  desc: string
   /**群名称*/
-  groupName:string
-
+  groupName: string
   /**群id*/
-  imGroupId:number
-
+  imGroupId: number
   /**邀请人id*/
-  inviterId:number
+  inviterId: number
 }
-export interface JobResp{
+export interface ResResultJobResp {
   /**祖级列表*/
-  ancestors:string
-
-  
-  createId:number
-
-  
-  createName:string
-
-  
-  created:string
-
+  ancestors: string
+  createId: number
+  createName: string
+  created: string
   /**职务id*/
-  id:number
-
+  id: number
   /**职务code*/
-  jobCode:string
-
-  
-  modified:string
-
+  jobCode: string
+  modified: string
   /**名称*/
-  name:string
-
+  name: string
   /**显示顺序*/
-  orderNum:number
-
+  orderNum: number
   /**父职务code*/
-  parentCode:string
-
+  parentCode: string
   /**父职务id*/
-  parentId:number
-
+  parentId: number
   /**状态（NORMAL正常 STOP停用）*/
-  status:string
-
-  
-  updateId:number
-
-  
-  updateName:string
+  status: string
+  updateId: number
+  updateName: string
 }
-export interface MemberGroupStatusResp{
+export interface ResResultMemberGroupStatusResp {
   /**群id*/
-  imGroupId:number
-
+  imGroupId: number
   /**im用户id*/
-  imUserId:number
-
+  imUserId: number
   /**GROUP_DISSOLVE: 群解散, MEMBER_DELETED: 成员已删除: NORMAL:正常*/
-  status:string
-
-  
-  statusDesc:string
+  status: string
+  statusDesc: string
 }
-export interface MessageSyncDTO{
-  
-  applyType:string
-
-  
-  cardMessageIdList:[]
-
-  
-  channel:string
-
-  
-  clientMessageId:string
-
-  
-  content:string
-
-  
-  contentType:string
-
-  
-  excludeUserIds:[]
-
-  
-  fileId:number
-
-  
-  forwardMessageId:number
-
-  
-  groupIdList:[]
-
-  
-  receiverList:[]
-
-  
-  sender:number
+export interface ResResultMessageSyncDTO {
+  applyType: string
+  cardMessageIdList: []
+  channel: string
+  clientMessageId: string
+  content: string
+  contentType: string
+  excludeUserIds: []
+  fileId: number
+  forwardMessageId: number
+  groupIdList: []
+  receiverList: []
+  sender: number
 }
-export interface PhoneFriendshipResp{
+export interface ResResultPhoneFriendshipResp {
   /**头像*/
-  avatar:string
-
+  avatar: string
   /**im群id*/
-  imGroupId:number
-
+  imGroupId: number
   /**im用户id*/
-  imUserId:number
-
+  imUserId: number
   /**是否是好友*/
-  isFriend:boolean
-
+  isFriend: boolean
   /**手机号*/
-  phone:string
-
+  phone: string
   /**姓名pinyin(只返回首字母)*/
-  pinyin:string
-
+  pinyin: string
   /**企业(租户)名称*/
-  tenantName:string
-
+  tenantName: string
   /**姓名*/
-  userName:string
+  userName: string
 }
-export interface PhoneListReq{
+export interface ResResultPhoneListReq {
   /**用户ID*/
-  imUserId:number
-
+  imUserId: number
   /**手机号列表*/
-  phoneList:[]
+  phoneList: []
 }
-export interface PostResp{
-  
-  createId:number
-
-  
-  createName:string
-
-  
-  created:string
-
+export interface ResResultPostResp {
+  createId: number
+  createName: string
+  created: string
   /**岗位id*/
-  id:number
-
-  
-  modified:string
-
+  id: number
+  modified: string
   /**岗位编码*/
-  postCode:string
-
+  postCode: string
   /**岗位名称*/
-  postName:string
-
+  postName: string
   /**显示顺序*/
-  postSort:number
-
+  postSort: number
   /**岗位状态（NORMAL正常 STOP停用）*/
-  status:string
-
-  
-  updateId:number
-
-  
-  updateName:string
+  status: string
+  updateId: number
+  updateName: string
 }
-export interface PutFileResp{
+export interface ResResultPutFileResp {
   /**业务对象id、如userid groupid messageid等*/
-  businessId:number
-
+  businessId: number
   /**文件id*/
-  fileId:number
-
+  fileId: number
   /**原始文件名*/
-  originalFileName:string
-
+  originalFileName: string
   /**文件访问连接[http-put方法上传]*/
-  url:string
+  url: string
 }
-export interface QueryLastMessageResp{
+export interface ResResultQueryLastMessageResp {
   /**应用类型，1：安卓 2：苹果*/
-  appType:number
-
+  appType: number
   /**是否强制更新*/
-  isForceUpdate:boolean
-
+  isForceUpdate: boolean
   /**版本描述*/
-  versionDesc:string
-
+  versionDesc: string
   /**版本名*/
-  versionName:string
-
+  versionName: string
   /**版本链接*/
-  versionUrl:string
+  versionUrl: string
 }
-export interface RequestMsgReqDuiXiang{
+export interface ResResultRequestMsgReqDuiXiang {
   /**内容*/
-  content:string
-
+  content: string
   /**接收者id*/
-  receiverId:number
-
+  receiverId: number
   /**请求id*/
-  requestId:number
-
+  requestId: number
   /**发送者id*/
-  senderId:number
+  senderId: number
 }
-export interface RoleResq{
+export interface ResResultRoleResq {
   /**是否允许分配该角色拥有权限*/
-  allowAllot:boolean
-
+  allowAllot: boolean
   /**祖级列表*/
-  ancestors:string
-
-  
-  createId:number
-
-  
-  createName:string
-
-  
-  created:string
-
+  ancestors: string
+  createId: number
+  createName: string
+  created: string
   /**部门树选择项是否关联显示*/
-  deptCheckStrictly:boolean
-
+  deptCheckStrictly: boolean
   /**角色id*/
-  id:number
-
+  id: number
   /**角色层级*/
-  level:number
-
+  level: number
   /**菜单树选择项是否关联显示*/
-  menuCheckStrictly:boolean
-
+  menuCheckStrictly: boolean
   /**菜单组名称*/
-  menuNames:string
-
-  
-  modified:string
-
+  menuNames: string
+  modified: string
   /**父角色code*/
-  parentCode:string
-
+  parentCode: string
   /**父角色id*/
-  parentId:number
-
+  parentId: number
   /**说明*/
-  remark:string
-
+  remark: string
   /**角色code*/
-  roleCode:string
-
+  roleCode: string
   /**角色名称*/
-  roleName:string
-
+  roleName: string
   /**显示顺序*/
-  roleSort:number
-
+  roleSort: number
   /**状态（NORMAL正常 STOP停用）*/
-  status:string
-
-  
-  updateId:number
-
-  
-  updateName:string
+  status: string
+  updateId: number
+  updateName: string
 }
-export interface SaveRandomReq{
+export interface ResResultSaveRandomReq {
   /**im用户id*/
-  imUserId:number
-
+  imUserId: number
   /**纬度*/
-  latitude:number
-
+  latitude: number
   /**经度*/
-  longitude:number
-
+  longitude: number
   /**随机数*/
-  random:string
+  random: string
 }
-export interface SearchBeforeAddFriendReq{
+export interface ResResultSearchBeforeAddFriendReq {
   /**非某个群成员*/
-  excludeMemberImGroupId:number
-
+  excludeMemberImGroupId: number
   /**im用户id*/
-  imUserId:number
-
+  imUserId: number
   /**是否显示全名(默认true)*/
-  isShowFullName:boolean
-
+  isShowFullName: boolean
   /**是否显示企业名(默认true)*/
-  isShowTenantName:boolean
-
+  isShowTenantName: boolean
   /**手机号或姓名*/
-  keyword:string
-
-  
-  page:number
-
-  
-  size:number
+  keyword: string
+  page: number
+  size: number
 }
-export interface SearchBeforeAddFriendResp{
+export interface ResResultSearchBeforeAddFriendResp {
   /**头像*/
-  avatar:string
-
+  avatar: string
   /**添加好友来源*/
-  channel:string
-
+  channel: string
   /**im用户id*/
-  imUserId:number
-
+  imUserId: number
   /**是否是好友*/
-  isFriend:boolean
-
+  isFriend: boolean
   /**是否为群成员*/
-  isGroupMember:boolean
-
+  isGroupMember: boolean
   /**手机号*/
-  phone:string
-
+  phone: string
   /**姓名pinyin(只返回首字母)*/
-  pinyin:string
-
+  pinyin: string
   /**企业(租户)名称*/
-  tenantName:string
-
+  tenantName: string
   /**姓名*/
-  userName:string
+  userName: string
 }
-export interface SearchMapResp{
-  
-  hasMore:boolean
-
-  
-  userList:[]
+export interface ResResultSearchMapResp {
+  hasMore: boolean
+  userList: []
 }
-export interface SearchReq{
+export interface ResResultSearchReq {
   /**用户ID*/
-  imUserId:number
-
+  imUserId: number
   /**关键字*/
-  keywords:string
+  keywords: string
 }
-export interface SearchResp{
+export interface ResResultSearchResp {
   /**头像*/
-  avatar:string
-
+  avatar: string
   /**CHAT单聊 GROUP群聊*/
-  chatType:string
-
+  chatType: string
   /**公司*/
-  company:string
-
+  company: string
   /**创建类型 AUTO, MANUAL*/
-  createType:string
-
+  createType: string
   /**部门群DEPT*/
-  groupAttr:string
-
+  groupAttr: string
   /**内部INNER，外部OUTER*/
-  groupType:string
-
+  groupType: string
   /**im群id*/
-  imGroupId:number
-
+  imGroupId: number
   /**im用户id*/
-  imUserId:number
-
+  imUserId: number
   /**职务*/
-  job:string
-
+  job: string
   /**关键字*/
-  keywords:string
-
+  keywords: string
   /**群名称*/
-  name:string
-
+  name: string
   /**群主id*/
-  ownerId:number
-
+  ownerId: number
   /**岗位*/
-  post:string
-
+  post: string
   /**群成员数量*/
-  total:number
+  total: number
 }
-export interface SwitchUserListResp{
+export interface ResResultSwitchUserListResp {
   /**头像*/
-  avatar:string
-
+  avatar: string
   /**im用户ID*/
-  imUserId:number
-
+  imUserId: number
   /**手机号*/
-  phone:string
-
+  phone: string
   /**satoken*/
-  satoken:string
-
+  satoken: string
   /**姓名*/
-  userName:string
+  userName: string
 }
-export interface SwitchUserReq{
+export interface ResResultSwitchUserReq {
   /**设备唯一标识*/
-  deviceId:string
-
+  deviceId: string
   /**当前用户ID*/
-  imUserId:number
+  imUserId: number
 }
-export interface UnreadResp{
+export interface ResResultUnreadResp {
   /**false未读*/
-  isRead:boolean
-
+  isRead: boolean
   /**请求id*/
-  requestId:number
+  requestId: number
 }
-export interface UserBindReq{
+export interface ResResultUserBindReq {
   /**终端类型: WEB IOS ANDROID*/
-  channel:string
-
+  channel: string
   /**终端唯一标识符(本地缓存随机数)*/
-  deviceId:string
-
+  deviceId: string
   /**用户ID*/
-  imUserId:number
+  imUserId: number
 }
-export interface UserBindResp{}
-export interface UserCancelReq{
-  
-  imUserId:number
-
+export interface ResResultUserBindResp {
+}
+export interface ResResultUserCancelReq {
+  imUserId: number
   /**短信验证码*/
-  smsCode:string
+  smsCode: string
 }
-export interface UserDetailResp{
+export interface ResResultUserDetailResp {
   /**是否同租户*/
-  hasSameTenant:boolean
-
+  hasSameTenant: boolean
   /**群ID*/
-  imGroupId:number
-
+  imGroupId: number
   /**是否特别关注*/
-  isAttention:boolean
-
+  isAttention: boolean
   /**是否好友*/
-  isFrinedship:boolean
-
+  isFrinedship: boolean
   /**是否通知*/
-  isNotice:boolean
-
+  isNotice: boolean
   /**允许私聊*/
-  isPrivate:boolean
-
+  isPrivate: boolean
   /**置顶*/
-  isTop:boolean
-
+  isTop: boolean
   /**备注*/
-  remark:string
-
+  remark: string
   /**是否显示备注(好友|有相同租户)*/
-  showRemark:boolean
+  showRemark: boolean
 }
-export interface UserListAllTenantResp{
+export interface ResResultUserListAllTenantResp {
   /**是否有更多标识 >3 才有*/
-  hasMore:boolean
-
+  hasMore: boolean
   /**租户id*/
-  tenantId:number
-
+  tenantId: number
   /**租户名称*/
-  tenantName:string
-
+  tenantName: string
   /**租户下对应的人员*/
-  userList:[]
+  userList: []
 }
-export interface UserRespDuiXiang{
+export interface ResResultUserRespDuiXiang {
   /**头像*/
-  avatar:string
-
+  avatar: string
   /**部门id*/
-  deptId:number
-
+  deptId: number
   /**部门名称*/
-  deptName:string
-
+  deptName: string
   /**邮箱*/
-  email:string
-
+  email: string
   /**群成员昵称*/
-  groupMemberRemark:string
-
+  groupMemberRemark: string
   /**im用户ID*/
-  imUserId:number
-
+  imUserId: number
   /**是否需要验证(添加我为好友)*/
-  isApprove:boolean
-
+  isApprove: boolean
   /**入外部群时是否需要认证*/
-  isGroupApprove:boolean
-
+  isGroupApprove: boolean
   /**是否接受通知 1是 0否*/
-  isNotice:boolean
-
+  isNotice: boolean
   /**职务*/
-  job:string
-
+  job: string
   /**昵称*/
-  nickName:string
-
+  nickName: string
   /**父部门路径*/
-  parentDeptPath:string
-
+  parentDeptPath: string
   /**手机号*/
-  phone:string
-
+  phone: string
   /**拼音*/
-  pinyin:string
-
+  pinyin: string
   /**岗位*/
-  post:string
-
+  post: string
   /**群聊GROUP, 手机号PHONE, 名片BUSINESS_CARD，二维码QR_CODE, 姓名USER_NAME, ADDRESS_BOOK通讯录， CHAT聊天 [暂不支持名片]*/
-  requestChannel:string
-
+  requestChannel: string
   /**性别,man:表示男性,woman表示女性，unknown未知*/
-  sex:string
-
+  sex: string
   /**账号状态：NONACTIVATED未激活, NORMAL正常, FORBID禁用, CANCEL注销*/
-  status:string
-
+  status: string
   /**主租户id*/
-  tenantId:number
-
+  tenantId: number
   /**主租户名称*/
-  tenantName:string
-
+  tenantName: string
   /**姓名*/
-  userName:string
+  userName: string
 }
-export interface UserTenantReq{
+export interface ResResultUserTenantReq {
   /**租户中心用户id*/
-  platformUserId:number
-
+  platformUserId: number
   /**租户id*/
-  tenantId:number
+  tenantId: number
 }
-export interface ErWeiMa{
+export interface ResResultErWeiMa {
   /**用户id/群id*/
-  id:number
-
+  id: number
   /**USER,GROUP*/
-  type:string
+  type: string
 }
-export interface HuiHua{
+export interface ResResultHuiHua {
   /**头像地址*/
-  avatar:string
-
+  avatar: string
   /**WEB IOS ANDROID*/
-  channel:string
-
+  channel: string
   /**会话名称*/
-  chatName:string
-
+  chatName: string
   /**会话类型*/
-  chatType:string
-
-  
-  groupAttr:string
-
+  chatType: string
+  groupAttr: string
   /**会话群ID*/
-  groupIdList:[]
-
+  groupIdList: []
   /**群状态*/
-  groupStatus:boolean
-
-  
-  groupType:string
-
+  groupStatus: boolean
+  groupType: string
   /**群id*/
-  imGroupId:number
-
+  imGroupId: number
   /**用户id*/
-  imUserId:number
-
+  imUserId: number
   /**全员禁言 1禁言*/
-  isAllSilence:boolean
-
+  isAllSilence: boolean
   /**所有成员可@所有人*/
-  isAtAll:boolean
-
+  isAtAll: boolean
   /**是否通知 0免打扰 1正常*/
-  isFriendship:boolean
-
+  isFriendship: boolean
   /**允许群成员修改昵称 1允许 0禁止*/
-  isModifyName:boolean
-
+  isModifyName: boolean
   /**是否通知 0免打扰 1正常*/
-  isNotice:boolean
-
+  isNotice: boolean
   /**允许普通成员邀请 1允许 0禁止*/
-  isOrdinaryInvent:boolean
-
+  isOrdinaryInvent: boolean
   /**允许私聊 1允许 0禁止*/
-  isPrivate:boolean
-
+  isPrivate: boolean
   /**是否展示 0免打扰 1展示*/
-  isShow:boolean
-
+  isShow: boolean
   /**置顶*/
-  isTop:boolean
-
+  isTop: boolean
   /**职务*/
-  job:string
-
+  job: string
   /**更新时间*/
-  modified:string
-
+  modified: string
   /**好友备注/群名称*/
-  nickName:string
-
+  nickName: string
   /**岗位*/
-  post:string
-
+  post: string
   /**接受者（单聊中存在）*/
-  receiver:number
-
+  receiver: number
   /**总数*/
-  total:number
-
+  total: number
   /**姓名*/
-  userName:string
+  userName: string
 }
-export interface HuiHuaLieBiao{
+export interface ResResultHuiHuaLieBiao {
   /**终端设备类型*/
-  channel:string
-
+  channel: string
   /**群ID列表*/
-  groupIdList:[]
-
+  groupIdList: []
   /**im用户id*/
-  imUserId:number
-
+  imUserId: number
   /**分页数量*/
-  limit:number
-
+  limit: number
   /**是否查询总数*/
-  selectSum:boolean
-
+  selectSum: boolean
   /**跳过前面条数*/
-  skipCount:number
+  skipCount: number
 }
-export interface HuiHuaLieBiaoXiangYing{
+export interface ResResultHuiHuaLieBiaoXiangYing {
   /**终端类型*/
-  channel:string
-
+  channel: string
   /**头像URL*/
-  chatAvatar:string
-
+  chatAvatar: string
   /**公司/租户*/
-  chatCompany:string
-
+  chatCompany: string
   /**职务*/
-  chatJob:string
-
+  chatJob: string
   /**会话名称*/
-  chatName:string
-
+  chatName: string
   /**岗位*/
-  chatPost:string
-
+  chatPost: string
   /**会话备注*/
-  chatRemark:string
-
+  chatRemark: string
   /**CHAT单聊 GROUP群聊*/
-  chatType:string
-
+  chatType: string
   /**群属性: 部门群DEPT*/
-  groupAttr:string
-
+  groupAttr: string
   /**im群id*/
-  groupId:number
-
+  groupId: number
   /**类型：内部INNER，外部OUTER*/
-  groupType:string
-
+  groupType: string
   /**是否特别关注*/
-  isAttention:boolean
-
+  isAttention: boolean
   /**是否好友*/
-  isFriendship:boolean
-
+  isFriendship: boolean
   /**是否通知*/
-  isNotice:boolean
-
+  isNotice: boolean
   /**是否同一子公司*/
-  isSameSubsidiary:boolean
-
+  isSameSubsidiary: boolean
   /**是否同一租户*/
-  isSameTenant:boolean
-
+  isSameTenant: boolean
   /**是否置顶*/
-  isTop:boolean
-
+  isTop: boolean
   /**活跃时间*/
-  modified:string
-
+  modified: string
   /**引用类型：FORWARD转发 REPLY引用回复*/
-  msgApplyType:string
-
+  msgApplyType: string
   /**消息content*/
-  msgContent:string
-
+  msgContent: string
   /**消息类型：TEXT文本 TIP提示消息 IMG图片 AUDIO语音 VIDEO视频 FILE文件*/
-  msgContentType:string
-
+  msgContentType: string
   /**文件地址*/
-  msgFileUrl:string
-
+  msgFileUrl: string
   /**消息id*/
-  msgId:number
-
+  msgId: number
   /**消息发送者名称(昵称)*/
-  msgSenderName:string
-
+  msgSenderName: string
   /**`sequence`*/
-  msgSequence:number
-
+  msgSequence: number
   /**消息时间*/
-  msgTime:string
-
+  msgTime: string
   /**群成员数量*/
-  total:number
-
+  total: number
   /**未读数量*/
-  unreadCount:number
-
+  unreadCount: number
   /**未读消息总数*/
-  unreadSum:number
-
+  unreadSum: number
   /**im用户ID*/
-  userid:number
+  userid: number
 }
-export interface XiuGaiBeiZhuModifyRemarkGroupReq{
+export interface ResResultXiuGaiBeiZhuModifyRemarkGroupReq {
   /**本群备注*/
-  groupRemark:string
-
+  groupRemark: string
   /**imGroupId*/
-  imGroupId:number
-
+  imGroupId: number
   /**im用户id*/
-  imUserId:number
+  imUserId: number
 }
-export interface XiuGaiBeiZhuModifyfriendRemarkReq{
+export interface ResResultXiuGaiBeiZhuModifyfriendRemarkReq {
   /**备注*/
-  friendRemark:string
-
+  friendRemark: string
   /**imFriendId*/
-  imFriendId:number
-
+  imFriendId: number
   /**im用户id*/
-  imUserId:number
+  imUserId: number
 }
-export interface XiuGaiYongHuTouXiang{
+export interface ResResultXiuGaiYongHuTouXiang {
   /**修改的头像*/
-  avatar:number
+  avatar: number
 }
-export interface XiuGaiQunMingChenRuCanModifyGroupNameReq{
+export interface ResResultXiuGaiQunMingChenRuCanModifyGroupNameReq {
   /**群昵称*/
-  groupName:string
-
+  groupName: string
   /**imGroupId*/
-  imGroupId:number
-
+  imGroupId: number
   /**im用户id*/
-  imUserId:number
+  imUserId: number
 }
-export interface RuQunQingQiuAddGroupReq{
+export interface ResResultRuQunQingQiuAddGroupReq {
   /**申请人id*/
-  applyId:number
-
+  applyId: number
   /**群id*/
-  imGroupId:number
-
+  imGroupId: number
   /**邀请人id*/
-  inviterId:number
-
+  inviterId: number
   /**请求类型：2主动入群请求 3邀请入群请求*/
-  type:number
+  type: number
 }
-export interface ChuangJianHuiHua{
+export interface ResResultChuangJianHuiHua {
   /**终端类型*/
-  channel:string
-
-  
-  checkCache:boolean
-
+  channel: string
+  checkCache: boolean
   /**群ID*/
-  groupIdList:[]
-
+  groupIdList: []
   /**接收人*/
-  receiverIdList:[]
-
-  
-  updateGroupChat:boolean
+  receiverIdList: []
+  updateGroupChat: boolean
 }
-export interface ChuangJianGengXinDuiXiangGroupSaveReq{
+export interface ResResultChuangJianGengXinDuiXiangGroupSaveReq {
   /**群描述(可空)*/
-  desc:string
-
+  desc: string
   /**群成员id*/
-  memberIdList:[]
-
+  memberIdList: []
   /**群名称(可空)*/
-  name:string
-
+  name: string
   /**群主id*/
-  ownerId:number
+  ownerId: number
 }
-export interface LiShiXiaoXiMessageHistoryReq{
+export interface ResResultLiShiXiaoXiMessageHistoryReq {
   /**im群ID*/
-  imGroupId:number
-
+  imGroupId: number
   /**1 查更新的数据  0 查更老的数据*/
-  orderType:number
-
-  
-  page:number
-
+  orderType: number
+  page: number
   /**消息序列号，默认为 0*/
-  sequence:number
-
-  
-  size:number
+  sequence: number
+  size: number
 }
-export interface HaoYouFriendshipReq{
+export interface ResResultHaoYouFriendshipReq {
   /**imFriendId*/
-  imFriendId:number
-
+  imFriendId: number
   /**im用户id*/
-  imUserId:number
-
+  imUserId: number
   /**是否通知*/
-  isNotice:boolean
-
+  isNotice: boolean
   /**是否置顶*/
-  isTop:boolean
+  isTop: boolean
 }
-export interface HaoYouLieBiaoChaXunFriendshipQueryReq{
+export interface ResResultHaoYouLieBiaoChaXunFriendshipQueryReq {
   /**非某个群成员*/
-  excludeMemberImGroupId:number
-
+  excludeMemberImGroupId: number
   /**im用户id*/
-  imUserId:number
-
+  imUserId: number
   /**关键字(姓名/手机号)*/
-  keyword:string
-
-  
-  page:number
-
-  
-  size:number
+  keyword: string
+  page: number
+  size: number
 }
-export interface XiaoXiack{
+export interface ResResultXiaoXiack {
   /**会话ID*/
-  imGroupId:number
-
+  imGroupId: number
   /**消息ID*/
-  imUserId:number
+  imUserId: number
 }
-export interface XiaoXiShanChu{
+export interface ResResultXiaoXiShanChu {
   /**im群组ID*/
-  imGroupId:number
-
+  imGroupId: number
   /**im用户id*/
-  imUserId:number
-
+  imUserId: number
   /**消息ID*/
-  messageIdList:[]
+  messageIdList: []
 }
-export interface XiaoXiDuiXiang{
+export interface ResResultXiaoXiDuiXiang {
   /**消息类型：FORWARD转发 REPLY引用回复*/
-  applyType:string
-
+  applyType: string
   /**引用/转发消息*/
-  cardMessageList:[]
-
+  cardMessageList: []
   /**消息内容*/
-  content:string
-
+  content: string
   /**content类型：TEXT文本 TIP提示消息 IMG图片 AUDIO语音 VIDEO视频 FILE文件*/
-  contentType:string
-
+  contentType: string
   /**创建时间*/
-  created:string
-
+  created: string
   /**文件ID*/
-  fileId:number
-
+  fileId: number
   /**原始文件名*/
-  fileName:string
-
+  fileName: string
   /**原始文件大小*/
-  fileSize:number
-
+  fileSize: number
   /**文件文本内容*/
-  fileText:string
-
+  fileText: string
   /**文件时长*/
-  fileTime:number
-
+  fileTime: number
   /**文件格式*/
-  fileType:string
-
+  fileType: string
   /**文件匿名访问链接*/
-  fileUrl:string
-
+  fileUrl: string
   /**群id*/
-  groupId:number
-
+  groupId: number
   /**消息id*/
-  id:number
-
+  id: number
   /**发送者昵称*/
-  nickName:string
-
+  nickName: string
   /**发送者头像*/
-  senderAvatar:string
-
+  senderAvatar: string
   /**发送者id*/
-  senderId:number
-
+  senderId: number
   /**发送者姓名*/
-  senderName:string
-
+  senderName: string
   /**序号*/
-  sequence:number
+  sequence: number
 }
-export interface XiaoXiSouSuoShiTi{
+export interface ResResultXiaoXiSouSuoShiTi {
   /**搜索群组*/
-  groupId:number
-
+  groupId: number
   /**搜索关键字*/
-  keywords:string
-
-  
-  page:number
-
-  
-  size:number
-
+  keywords: string
+  page: number
+  size: number
   /**消息类型：LINK连接,IMG图片,AUDIO_VIDEO音频视频,FILE文件*/
-  type:string
-
+  type: string
   /**用户ID*/
-  userId:number
+  userId: number
 }
-export interface XiaoXiXiangQingMessageDetailReq{
+export interface ResResultXiaoXiXiangQingMessageDetailReq {
   /**要查询的消息id*/
-  messageId:number
+  messageId: number
 }
-export interface TianJiaHaoYouAddFriendReq{
+export interface ResResultTianJiaHaoYouAddFriendReq {
   /**添加好友方式 群聊GROUP, 手机号PHONE, 名片BUSINESS_CARD，二维码QR_CODE, 姓名USER_NAME*/
-  channel:string
-
+  channel: string
   /**内容*/
-  content:string
-
+  content: string
   /**好友备注*/
-  friendRemark:string
-
+  friendRemark: string
   /**好友id*/
-  imFriendId:number
-
+  imFriendId: number
   /**用户id*/
-  imUserId:number
-
+  imUserId: number
   /**是否置顶*/
-  isTop:boolean
-
+  isTop: boolean
   /**手机号*/
-  phone:string
+  phone: string
 }
-export interface TianJiaWoWeiHaoYouDeFangShi{
-  
-  imUserId:number
-
+export interface ResResultTianJiaWoWeiHaoYouDeFangShi {
+  imUserId: number
   /**群组GROUP, 手机号PHONE, 姓名USER_NAME，二维码QR_CODE*/
-  requestChannels:[]
+  requestChannels: []
 }
-export interface QingKongXiaoXiRuCan{
+export interface ResResultQingKongXiaoXiRuCan {
   /**群id*/
-  imGroupId:number
-
+  imGroupId: number
   /**im用户id*/
-  imUserId:number
+  imUserId: number
 }
-export interface QingKongXiaoXiJiLu{
+export interface ResResultQingKongXiaoXiJiLu {
   /**终端类型*/
-  channel:string
-
+  channel: string
   /**im群id*/
-  imGroupId:number
-
+  imGroupId: number
   /**im用户id*/
-  imUserId:number
+  imUserId: number
 }
-export interface BanBen{
+export interface ResResultBanBen {
   /**应用类型 ANDROID：安卓 IOS：苹果*/
-  appType:string
-
+  appType: string
   /**强制更新*/
-  isForceUpdate:boolean
-
+  isForceUpdate: boolean
   /**版本描述*/
-  versionDesc:string
-
+  versionDesc: string
   /**版本名称*/
-  versionName:string
-
+  versionName: string
   /**版本号*/
-  versionNum:string
-
+  versionNum: string
   /**版本链接*/
-  versionUrl:string
+  versionUrl: string
 }
-export interface YongHuSuoYouZuHuUserListAllTenantReq{
+export interface ResResultYongHuSuoYouZuHuUserListAllTenantReq {
   /**非某个群成员*/
-  excludeMemberImGroupId:number
-
+  excludeMemberImGroupId: number
   /**用户id*/
-  imUserId:number
-
+  imUserId: number
   /**关键字*/
-  keyword:string
+  keyword: string
 }
-export interface DengLuXiangYingShiTi{
+export interface ResResultDengLuXiangYingShiTi {
   /**客户端类型ChannelEnum: IOS ANDROID WEB*/
-  channel:string
-
-  
-  code:number
-
+  channel: string
+  code: number
   /**im侧用户id*/
-  imUserId:number
-
+  imUserId: number
   /**是否新用户 0-否 1-是*/
-  newUser:boolean
-
+  newUser: boolean
   /**satoken值*/
-  satoken:string
-
+  satoken: string
   /**是否设置密码 0-否 1-是*/
-  setPassWord:boolean
-
-  
-  token:string
-
-  
-  tokenTimeOut:number
-
+  setPassWord: boolean
+  token: string
+  tokenTimeOut: number
   /**用户中心侧用户id*/
-  userId:number
+  userId: number
 }
-export interface ZuHuXinXi{
+export interface ResResultZuHuXinXi {
   /**租户头像*/
-  avatar:string
-
+  avatar: string
   /**客户端类型*/
-  channel:string
-
+  channel: string
   /**是否选中*/
-  checked:boolean
-
+  checked: boolean
   /**租户类型,ENTERPRISE 企业租户,PERSON 个人租户,PLATFORM 平台租户*/
-  kind:string
-
+  kind: string
   /**手机号*/
-  phone:string
-
+  phone: string
   /**岗位*/
-  post:string
-
+  post: string
   /**租户id*/
-  tenantId:number
-
+  tenantId: number
   /**租户名称*/
-  tenantName:string
-
+  tenantName: string
   /**姓名*/
-  userName:string
+  userName: string
 }
-export interface QunXinXiGroupDetailReq{
+export interface ResResultQunXinXiGroupDetailReq {
   /**imGroupId*/
-  imGroupId:number
-
+  imGroupId: number
   /**im用户id*/
-  imUserId:number
-
+  imUserId: number
   /**是否通知*/
-  isNotice:boolean
-
+  isNotice: boolean
   /**是否置顶*/
-  isTop:boolean
+  isTop: boolean
 }
-export interface QunFenYeGroupPageListReq{
+export interface ResResultQunFenYeGroupPageListReq {
   /**im用户id*/
-  imUserId:number
-
+  imUserId: number
   /**成员名称/phone*/
-  keyword:string
-
+  keyword: string
   /**群名称*/
-  name:string
-
-  
-  page:number
-
-  
-  size:number
+  name: string
+  page: number
+  size: number
 }
-export interface QunDuiXiangGroupDetailResp{
+export interface ResResultQunDuiXiangGroupDetailResp {
   /**头像*/
-  avatar:string
-
+  avatar: string
   /**创建类型 AUTO, MANUAL*/
-  createType:string
-
+  createType: string
   /**部门id*/
-  deptId:number
-
+  deptId: number
   /**部门路径*/
-  deptPath:string
-
+  deptPath: string
   /**群描述*/
-  desc:string
-
+  desc: string
   /**部门群DEPT 组织群COMPANY*/
-  groupAttr:string
-
+  groupAttr: string
   /**群归属*/
-  groupBelong:string
-
+  groupBelong: string
   /**内部INNER，外部OUTER*/
-  groupType:string
-
+  groupType: string
   /**im群id*/
-  imGroupId:number
-
+  imGroupId: number
   /**入群需群主/管理员确认 1是 0否*/
-  isAdminConfirm:boolean
-
+  isAdminConfirm: boolean
   /**全员禁言 1禁言*/
-  isAllSilence:boolean
-
+  isAllSilence: boolean
   /**所有成员可@所有人*/
-  isAtAll:boolean
-
+  isAtAll: boolean
   /**允许群成员修改昵称 1允许 0禁止*/
-  isModifyName:boolean
-
+  isModifyName: boolean
   /**允许普通成员邀请 1允许 0禁止*/
-  isOrdinaryInvent:boolean
-
+  isOrdinaryInvent: boolean
   /**允许私聊 1允许 0禁止*/
-  isPrivate:boolean
-
+  isPrivate: boolean
   /**群名称*/
-  name:string
-
+  name: string
   /**群公告*/
-  notice:string
-
+  notice: string
   /**群主id*/
-  ownerId:number
-
+  ownerId: number
   /**GROUP_REMOVE 群解散, MEMBER_REMOVE 被踢出群聊, NORMAL 正常, MEMBER_SILENCE 成员禁言*/
-  status:string
-
+  status: string
   /**租户id*/
-  tenantId:number
-
+  tenantId: number
   /**群成员数量*/
-  total:number
+  total: number
 }
-export interface QunDuiXiangGroupResp{
+export interface ResResultQunDuiXiangGroupResp {
   /**头像*/
-  avatar:string
-
+  avatar: string
   /**CHAT单聊 GROUP群聊*/
-  chatType:string
-
+  chatType: string
   /**创建类型 AUTO, MANUAL*/
-  createType:string
-
+  createType: string
   /**部门群DEPT*/
-  groupAttr:string
-
+  groupAttr: string
   /**内部INNER，外部OUTER*/
-  groupType:string
-
+  groupType: string
   /**im群id*/
-  imGroupId:number
-
+  imGroupId: number
   /**群名称*/
-  name:string
-
+  name: string
   /**群主id*/
-  ownerId:number
-
+  ownerId: number
   /**群成员数量*/
-  total:number
+  total: number
 }
-export interface QunChengYuanXinXiDuiXiangGroupMemberResp{
+export interface ResResultQunChengYuanXinXiDuiXiangGroupMemberResp {
   /**群id*/
-  imGroupId:number
-
+  imGroupId: number
   /**im用户id*/
-  imUserId:number
-
+  imUserId: number
   /**是否通知*/
-  isNotice:boolean
-
+  isNotice: boolean
   /**是否置顶*/
-  isTop:boolean
-
+  isTop: boolean
   /**群成员头像*/
-  memberAvatar:string
-
+  memberAvatar: string
   /**群成员姓名*/
-  memberName:string
-
+  memberName: string
   /**群成员手机号*/
-  memberPhone:string
-
+  memberPhone: string
   /**我在本群备注*/
-  memberRemark:string
-
+  memberRemark: string
   /**群成员租户名*/
-  memberTenantName:string
-
+  memberTenantName: string
   /**LEADER:群主MANAGER:管理员MEMBER:普通成员*/
-  memberType:string
+  memberType: string
 }
-export interface QunChengYuanFenYeGroupMemberPageReq{
+export interface ResResultQunChengYuanFenYeGroupMemberPageReq {
   /**群id*/
-  imGroupId:number
-
+  imGroupId: number
   /**当前人*/
-  imUserId:number
-
+  imUserId: number
   /**是否为删除群成员场景*/
-  isDeleteMember:boolean
-
+  isDeleteMember: boolean
   /**关键字(姓名/手机号)*/
-  keyword:string
-
+  keyword: string
   /**群成员类型 LEADER:群主MANAGER:管理员MEMBER:普通成员*/
-  memberType:string
-
-  
-  page:number
-
-  
-  size:number
+  memberType: string
+  page: number
+  size: number
 }
-export interface QunChengYuanShanChuGroupMemberDelReq{
+export interface ResResultQunChengYuanShanChuGroupMemberDelReq {
   /**群id*/
-  imGroupId:number
-
+  imGroupId: number
   /**退群的成员id列表*/
-  imMemberIdList:[]
-
+  imMemberIdList: []
   /**当前操作人*/
-  imUserId:number
+  imUserId: number
 }
-export interface QunChengYuanXinZengGroupMemberSaveReq{
+export interface ResResultQunChengYuanXinZengGroupMemberSaveReq {
   /**群id*/
-  imGroupId:number
-
+  imGroupId: number
   /**当前操作人id*/
-  imUserId:number
-
+  imUserId: number
   /**加群的成员id列表*/
-  imUserIdList:[]
+  imUserIdList: []
 }
-export interface QunSheZhiZhiNenYiGeZhiBuWeiNullGroupSetReq{
+export interface ResResultQunSheZhiZhiNenYiGeZhiBuWeiNullGroupSetReq {
   /**群ID*/
-  imGroupId:number
-
+  imGroupId: number
   /**im用户id*/
-  imUserId:number
-
+  imUserId: number
   /**入群需群主/管理员确认 1是 0否*/
-  isAdminConfirm:boolean
-
+  isAdminConfirm: boolean
   /**全员禁言 1禁言*/
-  isAllSilence:boolean
-
+  isAllSilence: boolean
   /**所有成员可@所有人*/
-  isAtAll:boolean
-
+  isAtAll: boolean
   /**允许群成员修改昵称 1允许 0禁止*/
-  isModifyName:boolean
-
+  isModifyName: boolean
   /**允许普通成员邀请 1允许 0禁止*/
-  isOrdinaryInvent:boolean
-
+  isOrdinaryInvent: boolean
   /**允许私聊 1允许 0禁止*/
-  isPrivate:boolean
+  isPrivate: boolean
 }
-export interface SheZhiMoRenQiYe{
+export interface ResResultSheZhiMoRenQiYe {
   /**默认企业名称*/
-  kind:string
-
+  kind: string
   /**默认企业id*/
-  tenantId:number
-
+  tenantId: number
   /**默认企业名称*/
-  tenantName:string
+  tenantName: string
 }
-export interface QingQiuHuiFuXiaoXiLieBiaoReqMsgDetailResp{
+export interface ResResultQingQiuHuiFuXiaoXiLieBiaoReqMsgDetailResp {
   /**内容*/
-  content:string
-
+  content: string
   /**创建时间*/
-  created:string
-
+  created: string
   /**1已读 0未读*/
-  isRead:boolean
-
+  isRead: boolean
   /**接收者id*/
-  receiverId:number
-
+  receiverId: number
   /**接收者姓名*/
-  receiverName:string
-
+  receiverName: string
   /**请求id*/
-  requestId:number
-
+  requestId: number
   /**请求回复消息id*/
-  requestMsgId:number
-
+  requestMsgId: number
   /**发送者id*/
-  senderId:number
-
+  senderId: number
   /**发送者姓名*/
-  senderName:string
+  senderName: string
 }
-export interface QingQiuXiaoXiLieBiaoRequestPageListReq{
+export interface ResResultQingQiuXiaoXiLieBiaoRequestPageListReq {
   /**用户id*/
-  imUserId:number
-
+  imUserId: number
   /**申请人姓名/手机号*/
-  keyword:string
-
-  
-  page:number
-
-  
-  size:number
-
+  keyword: string
+  page: number
+  size: number
   /**请求类型 1好友请求 2主动入群请求 3邀请入群请求 4个人验证*/
-  type:number
+  type: number
 }
-export interface QingQiuXiaoXiDuBaoKuoYanZhengJiHuiFuXiaoXiDuRequestReadReq{
+export interface ResResultQingQiuXiaoXiDuBaoKuoYanZhengJiHuiFuXiaoXiDuRequestReadReq {
   /**用户id*/
-  imUserId:number
-
+  imUserId: number
   /**请求id*/
-  requestId:number
-
+  requestId: number
   /**请求回复消息id*/
-  requestMsgIdList:[]
+  requestMsgIdList: []
 }
-export interface ZhuanFaXiaoXiDuiXiang{
+export interface ResResultZhuanFaXiaoXiDuiXiang {
   /**消息类型：FORWARD转发 REPLY引用回复*/
-  applyType:string
-
+  applyType: string
   /**消息内容*/
-  content:string
-
+  content: string
   /**content类型：TEXT文本 TIP提示消息 IMG图片 AUDIO语音 VIDEO视频 FILE文件*/
-  contentType:string
-
+  contentType: string
   /**创建时间*/
-  created:string
-
+  created: string
   /**文件ID*/
-  fileId:number
-
+  fileId: number
   /**原始文件名*/
-  fileName:string
-
+  fileName: string
   /**原始文件大小*/
-  fileSize:number
-
+  fileSize: number
   /**文件文本内容*/
-  fileText:string
-
+  fileText: string
   /**文件时长*/
-  fileTime:number
-
+  fileTime: number
   /**文件格式*/
-  fileType:string
-
+  fileType: string
   /**文件匿名访问链接*/
-  fileUrl:string
-
+  fileUrl: string
   /**群id*/
-  groupId:number
-
+  groupId: number
   /**消息id*/
-  id:number
-
+  id: number
   /**发送者头像*/
-  senderAvatar:string
-
+  senderAvatar: string
   /**发送者id*/
-  senderId:number
-
+  senderId: number
   /**发送者昵称*/
-  senderName:string
-
+  senderName: string
   /**序号*/
-  sequence:number
+  sequence: number
 }
-export interface TongGuoJuJueApproveReq{
+export interface ResResultTongGuoJuJueApproveReq {
   /**im用户id*/
-  imUserId:number
-
+  imUserId: number
   /**消息是否通知*/
-  isNotice:boolean
-
+  isNotice: boolean
   /**同意/拒绝*/
-  permitted:boolean
-
+  permitted: boolean
   /**好友备注/我在本群备注*/
-  remark:string
-
+  remark: string
   /**请求id*/
-  requestId:number
+  requestId: number
 }
-export interface YaoQingRuQunXiangYing{
+export interface ResResultYaoQingRuQunXiangYing {
   /**需要个人验证的成员id集合*/
-  checkUserIds:[]
-
+  checkUserIds: []
   /**需要验证的成员集合*/
-  checkUsers:[]
-
+  checkUsers: []
   /**响应信息*/
-  inviteMsg:string
+  inviteMsg: string
 }
-export interface BuMenXinXiDeptResp{
+export interface ResResultBuMenXinXiDeptResp {
   /**部门id*/
-  deptId:number
-
+  deptId: number
   /**部门名称*/
-  deptName:string
-
+  deptName: string
   /**群id*/
-  imGroupId:number
+  imGroupId: number
 }
-export interface BuMenLieBiaoDeptListReq{
+export interface ResResultBuMenLieBiaoDeptListReq {
   /**是否获取对应群id(通讯录需要)*/
-  getImGroupId:boolean
-
+  getImGroupId: boolean
   /**父部门id/0获取顶级部门*/
-  parentId:number
-
+  parentId: number
   /**租户id*/
-  tenantId:number
+  tenantId: number
 }
-export interface BuMenChaXunRuCan{
+export interface ResResultBuMenChaXunRuCan {
   /**部门id*/
-  deptId:number
-
+  deptId: number
   /**租户id*/
-  tenantId:number
+  tenantId: number
 }
-export interface BuMenYongHuFenYeUserPageReq{
+export interface ResResultBuMenYongHuFenYeUserPageReq {
   /**部门id*/
-  deptId:number
-
+  deptId: number
   /**非某个群成员*/
-  excludeMemberImGroupId:number
-
+  excludeMemberImGroupId: number
   /**用户id*/
-  imUserId:number
-
+  imUserId: number
   /**关键字*/
-  keyword:string
-
-  
-  page:number
-
-  
-  size:number
-
+  keyword: string
+  page: number
+  size: number
   /**租户id*/
-  tenantId:number
+  tenantId: number
 }
-export interface BuMenYongHuLieBiaoDeptListReq{
+export interface ResResultBuMenYongHuLieBiaoDeptListReq {
   /**是否获取对应群id(通讯录需要)*/
-  getImGroupId:boolean
-
+  getImGroupId: boolean
   /**租户id*/
-  tenantId:number
+  tenantId: number
 }
-export interface BuMenYongHuLieBiaoDeptUserResp{
+export interface ResResultBuMenYongHuLieBiaoDeptUserResp {
   /**头像*/
-  avatar:string
-
+  avatar: string
   /**头像*/
-  avatarId:number
-
+  avatarId: number
   /**im用户id*/
-  imUserId:number
-
+  imUserId: number
   /**是否为当前群成员*/
-  isGroupMember:boolean
-
+  isGroupMember: boolean
   /**租户id*/
-  tenantId:number
-
+  tenantId: number
   /**租户名*/
-  tenantName:string
-
+  tenantName: string
   /**姓名*/
-  userName:string
+  userName: string
 }
-export interface YanZhengXiaoXiFenYeRequestPageListResp{
+export interface ResResultYanZhengXiaoXiFenYeRequestPageListResp {
   /**申请人头像*/
-  applyAvatar:number
-
+  applyAvatar: number
   /**申请人头像url*/
-  applyAvatarUrl:string
-
+  applyAvatarUrl: string
   /**申请人id*/
-  applyId:number
-
+  applyId: number
   /**申请人姓名*/
-  applyName:string
-
+  applyName: string
   /**头像*/
-  avatar:string
-
+  avatar: string
   /**请求内容*/
-  content:string
-
+  content: string
   /**邀请人头像*/
-  inviterAvatar:number
-
+  inviterAvatar: number
   /**邀请人头像url*/
-  inviterAvatarUrl:string
-
+  inviterAvatarUrl: string
   /**申请人id*/
-  inviterId:number
-
+  inviterId: number
   /**邀请人姓名*/
-  inviterName:string
-
+  inviterName: string
   /**接收人/群头像*/
-  receiverAvatar:number
-
+  receiverAvatar: number
   /**接收人/群头像url*/
-  receiverAvatarUrl:string
-
+  receiverAvatarUrl: string
   /**接收人id*/
-  receiverId:number
-
+  receiverId: number
   /**接收人/群名称*/
-  receiverName:string
-
+  receiverName: string
   /**请求id*/
-  requestId:number
-
+  requestId: number
   /**0未同意 1已同意 2入群拒绝  3已过期*/
-  status:number
-
+  status: number
   /**租户名称*/
-  tenantName:string
-
+  tenantName: string
   /**请求类型 1好友请求 2主动入群请求 3邀请入群请求 4个人验证*/
-  type:number
-
+  type: number
   /**接收人头像*/
-  userAvatar:number
-
+  userAvatar: number
   /**接收人头像url*/
-  userAvatarUrl:string
-
+  userAvatarUrl: string
   /**姓名*/
-  userName:string
+  userName: string
 }
-export interface YanZhengXiaoXiXiangQingRequestDetailResp{
+export interface ResResultYanZhengXiaoXiXiangQingRequestDetailResp {
   /**申请者头像*/
-  applyAvatar:string
-
+  applyAvatar: string
   /**申请人id*/
-  applyId:number
-
+  applyId: number
   /**申请者姓名*/
-  applyName:string
-
+  applyName: string
   /**申请人租户名称*/
-  applyTenantName:string
-
+  applyTenantName: string
   /**群组GROUP, 手机号PHONE, 名片BUSINESS_CARD，二维码QR_CODE, 个人资料PERSON_INFO*/
-  channel:string
-
+  channel: string
   /**请求内容*/
-  content:string
-
+  content: string
   /**创建时间*/
-  created:string
-
+  created: string
   /**申请者头像*/
-  inviterAvatar:string
-
+  inviterAvatar: string
   /**邀请者id*/
-  inviterId:number
-
+  inviterId: number
   /**邀请者姓名*/
-  inviterName:string
-
+  inviterName: string
   /**是否好友或同租户*/
-  isFriendshipOrHasSameTenant:boolean
-
+  isFriendshipOrHasSameTenant: boolean
   /**回复消息列表*/
-  msgList:[]
-
+  msgList: []
   /**接收者头像/群头像*/
-  receiverAvatar:string
-
+  receiverAvatar: string
   /**接收者id/群id*/
-  receiverId:number
-
+  receiverId: number
   /**接收者姓名/群名称*/
-  receiverName:string
-
+  receiverName: string
   /**接收人租户名称*/
-  receiverTenantName:string
-
+  receiverTenantName: string
   /**备注*/
-  remark:string
-
+  remark: string
   /**请求id*/
-  requestId:number
-
+  requestId: number
   /**0未同意 1已同意 2入群拒绝  3已过期*/
-  status:number
-
+  status: number
   /**群成员数量*/
-  total:number
-
+  total: number
   /**请求类型 1好友请求 2主动入群请求 3邀请入群请求*/
-  type:number
+  type: number
 }
