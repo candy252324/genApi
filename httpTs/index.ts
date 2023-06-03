@@ -50,16 +50,16 @@ instance.interceptors.response.use(
 const Http = {
   instance,
   get(url, params = {}, config = {}) {
-    return instance.get(url, { params, ...config, emulateJSON: true })
+    return instance.get(url, { params, ...config })
   },
   post(url, data = {}, config = {}) {
-    return instance.post(url, data, { ...config, emulateJSON: true })
+    return instance.post(url, data, { ...config })
   },
   put(url, data = {}, config = {}) {
-    return instance.put(url, data, { ...config, emulateJSON: true })
+    return instance.put(url, data, { ...config })
   },
   delete(url, params = {}, config = {}) {
-    return instance.delete(url, { params, ...config, emulateJSON: true })
+    return instance.delete(url, { params, ...config })
   },
 }
 

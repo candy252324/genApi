@@ -81,23 +81,16 @@ function writeToFile(apiList, options) {
       // 有入参
       if (parameters && parameters.length) {
         apiStr += `
-/**
- * ${summary}
- * @param {*} data 接口入参
- * @param {*} config 可选，如：{headers:{}}
- */
-export function ${name}  (data, config) {
+/** ${summary} */
+export function ${name}  (data:any, config?: AxiosRequestConfig) :AxiosPromise<any>{
   return ${httpFn}.${method}('${prefix}${url}', data, config)
 }\n`
       }
       // 没入参
       else {
         apiStr += `
-/**
- * ${summary}
- * @param {*} config 可选，如：{headers:{}}
- */
-export function ${name}(config){
+/** ${summary} */
+export function ${name}(config?: AxiosRequestConfig):AxiosPromise<any>{
   return ${httpFn}.${method}('${prefix}${url}', config)
 }\n`
       }
@@ -109,7 +102,7 @@ export function ${name}(config){
         fs.mkdirSync(outputDir, { recursive: true })
       }
       // 写入目标目录
-      const targetFile = path.join(outputDir, `${namespace}.js`)
+      const targetFile = path.join(outputDir, `${namespace}.ts`)
       fs.writeFileSync(targetFile, apiStr)
 
       // 格式化
