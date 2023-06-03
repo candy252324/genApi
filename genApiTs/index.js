@@ -10,6 +10,9 @@ const CWD = process.cwd()
 const httpFn = apiConfig.httpFn
 const httpTpl = apiConfig.httpTpl
 
+let allResInterfaces = [] // 所有出参的 interface
+let uniQueResInterfaces = [] // 所有出参的 interface(已去重)
+
 const apiList = apiConfig.apiList.filter(item => item.tag)
 apiList.forEach(item => {
   const swaggerUrl = item.swaggerUrl
@@ -39,8 +42,9 @@ apiList.forEach(item => {
 
 function parseData(jsonData, { absOutputDir, ignoreReg, prefix }) {
   const apiList = handlePaths(jsonData.paths, ignoreReg)
-  const definitions = handleDefinitions(jsonData.definitions || {})
-  writeDeinitionToFile(definitions, absOutputDir)
+  allResInterfaces = handleDefinitions(jsonData.definitions || {}).allInterfaces
+  uniQueResInterfaces = handleDefinitions(jsonData.definitions || {}).uniqueInterfaces
+  // writeDeinitionToFile(uniQueResInterfaces, absOutputDir)
   const count = apiList.reduce((pre, cur) => {
     return pre + cur.apis.length
   }, 0)
@@ -61,7 +65,8 @@ function handlePaths(paths, ignoreReg) {
       const summary = obj[method].summary // 接口注释
       const parameters = obj[method].parameters // 入参
       const idx = apiList.findIndex(item => item.namespace === namespace)
-      const apiModel = { name, url, method, summary, parameters }
+      const resSchemeOriginalRef = obj[method]?.responses['200']?.schema?.originalRef // 出参模型
+      const apiModel = { name, url, method, summary, parameters, resSchemeOriginalRef }
       if (idx > -1) apiList[idx].apis.push(apiModel)
       else apiList.push({ namespace, apis: [apiModel] })
     }
@@ -79,13 +84,20 @@ function writeToFile(apiList, options) {
   apiList.forEach(item => {
     let apiStr = `${httpTpl}\n`
     const namespace = item.namespace
+    let fileUsedInterface = [] // 当前文件用到的 interface
     item.apis.forEach(api => {
-      const { name, url, method, summary, parameters } = api
+      const { name, url, method, summary, parameters, resSchemeOriginalRef } = api
+      const resInterface = getResInterface(resSchemeOriginalRef)
+      if (resInterface && !fileUsedInterface.includes(resInterface)) {
+        fileUsedInterface.push(resInterface)
+      }
+
+      const _resInterfece = `${resInterface ? resInterface : 'any'}` // 接口出参类型
       // 有入参
       if (parameters && parameters.length) {
         apiStr += `
 /** ${summary} */
-export function ${name}  (data:any, config?: AxiosRequestConfig) :AxiosPromise<any>{
+export function ${name}  (data:any, config?: AxiosRequestConfig) :AxiosPromise<${_resInterfece}>{
   return ${httpFn}.${method}('${prefix}${url}', data, config)
 }\n`
       }
@@ -93,11 +105,21 @@ export function ${name}  (data:any, config?: AxiosRequestConfig) :AxiosPromise<a
       else {
         apiStr += `
 /** ${summary} */
-export function ${name}(config?: AxiosRequestConfig):AxiosPromise<any>{
+export function ${name}(config?: AxiosRequestConfig):AxiosPromise<${_resInterfece}>{
   return ${httpFn}.${method}('${prefix}${url}', config)
 }\n`
       }
     })
+
+    let interfaceStr = ''
+    // interface 引入
+    if (fileUsedInterface.length) {
+      interfaceStr += `import {`
+      fileUsedInterface.forEach(item => {
+        interfaceStr += `${item},`
+      })
+      interfaceStr += `} from './_interfaces'`
+    }
 
     fs.access(outputDir, err => {
       if (err) {
@@ -106,7 +128,7 @@ export function ${name}(config?: AxiosRequestConfig):AxiosPromise<any>{
       }
       // 写入目标目录
       const targetFile = path.join(outputDir, `${namespace}.ts`)
-      fs.writeFileSync(targetFile, apiStr)
+      fs.writeFileSync(targetFile, interfaceStr + apiStr)
 
       // 格式化
       exec(`npx eslint --fix ${targetFile}`)
@@ -119,17 +141,24 @@ function writeDeinitionToFile(definitions, absOutputDir) {
   let str = ''
   definitions.forEach(item => {
     if (item.type === 'object') {
-      str += `export interface ${item.name}{`
+      str += `export interface ${item.name} {`
       if (item.properties && item.properties.length) {
         item.properties.forEach(it => {
           const description = it.description ? `/**${it.description}*/` : ''
-          str += `
+          // 有注释
+          if (description) {
+            str += `
   ${description ? description : ''}
-  ${it.name}:${it.type}
-`
+  ${it.name}: ${it.type}`
+          }
+          // 没注释
+          else {
+            str += `
+  ${it.name}: ${it.type}`
+          }
         })
       }
-      str += '}\n'
+      str += '\n}\n'
     } else {
       console.log('还有不是对象的？？')
     }
@@ -146,6 +175,11 @@ function getUrl(url) {
   return url.replace(/{/g, '${')
 }
 
+/** 获取出参 interface  */
+function getResInterface(resSchemeOriginalRef) {
+  const find = allResInterfaces.find(item => item.originName === resSchemeOriginalRef)
+  return !!find ? find.name : ''
+}
 /**
  * 获取接口名称, 需要处理一些特殊的路径
  * /api/variable/create 处理成 variableCreate

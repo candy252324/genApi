@@ -1,23 +1,32 @@
 let pinyin = require('js-pinyin')
 function handleDefinitions(definitions) {
   /**
-   * [{
+   * [
+   *  {
    *    originName:""  // swagger上的原始key，如 "ApiResponse«ComPage«会话列表响应»»"
-   *    name:"",   // 如 UserInfo
+   *    name:"",   // 原始 key 处理后结果，如： ApiResponse
    *    type:"",   // 类型，如 "object"
    *    properties:[{
    *      name:"",
    *      type:"",        // 类型，如 string
+   *      type:"",        // 类型，如 string
    *      description:""  // 注释
    *    }]
-   * }]
+   *  },
+   *  {
+   *    originName:""  // swagger上的原始key，如 "ApiResponse«ComPage«ContactResp»»"
+   *    name:"",     // 原始 key 处理后结果，如： ApiResponse
+   *    type:"",     // 类型，如 "object"
+   *    properties:[]  // 同上
+   *  },
+   * ]
    */
   let defs = []
   Object.keys(definitions).forEach(key => {
     const obj = definitions[key]
     const properties = handleProperties(obj.properties || {})
-    const interfaceName = handleKey(key)
-    const exist = defs.find(item => item.name === interfaceName)
+    const interfaceName = 'ResResult' + handleKey(key) // 为防止和入参的 interface 重复，拼上一个 ResResult
+    const exist = defs.find(item => item.originName === key)
     if (!exist) {
       defs.push({
         originName: key,
@@ -27,8 +36,24 @@ function handleDefinitions(definitions) {
       })
     }
   })
-  return defs
+  const uniqueInterfaces = uniqueByName(defs)
+  return {
+    allInterfaces: defs,
+    uniqueInterfaces,
+  }
 }
+
+/** 根据name去重 */
+function uniqueByName(defs) {
+  const newArr = []
+  defs.forEach(item => {
+    const find = newArr.find(it => it.name === item.name)
+    if (!find) {
+      newArr.push(item)
+    }
+  })
+}
+
 /** 处理属性
  * @param properties 格式如下
 *  "properties": {
