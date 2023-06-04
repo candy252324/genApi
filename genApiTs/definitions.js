@@ -1,9 +1,20 @@
 let pinyin = require('js-pinyin')
+
+/** 入参格式
+ * "ApiResponse«AddGroupResp»": {
+ *    "type": "object",
+ *    "relationInterface":[ "ResOfGetUserList", "ResOfCommonSearch" ]
+ *    "properties": {
+ *     "code": { "type": "integer", "format": "int32" },
+ *     "data": { "$ref": "#/definitions/AddGroupResp", "originalRef": "AddGroupResp" },
+ *     "msg": { "type": "string" },
+ *     "success": { "type": "boolean" },
+ *   },
+ * },
+ */
 function handleDefinitions(definitions) {
   /**
-   * [
-   *  {
-   *    originName:""  // swagger上的原始key，如 "ApiResponse«ComPage«会话列表响应»»"
+   * [{
    *    name:"",   // 原始 key 处理后结果，如： ApiResponse
    *    type:"",   // 类型，如 "object"
    *    properties:[{
@@ -12,46 +23,40 @@ function handleDefinitions(definitions) {
    *      type:"",        // 类型，如 string
    *      description:""  // 注释
    *    }]
-   *  },
-   *  {
-   *    originName:""  // swagger上的原始key，如 "ApiResponse«ComPage«ContactResp»»"
-   *    name:"",     // 原始 key 处理后结果，如： ApiResponse
-   *    type:"",     // 类型，如 "object"
-   *    properties:[]  // 同上
-   *  },
-   * ]
+   *  }]
    */
   let defs = []
   Object.keys(definitions).forEach(key => {
     const obj = definitions[key]
     const properties = handleProperties(obj.properties || {})
-    const interfaceName = 'ResResult' + handleKey(key) // 为防止和入参的 interface 重复，拼上一个 ResResult
-    const exist = defs.find(item => item.originName === key)
-    if (!exist) {
-      defs.push({
-        originName: key,
-        name: interfaceName,
-        type: handleType(obj.type),
-        properties,
+    const relationInterface = obj.relationInterface
+    // 接口直接出参
+    if (relationInterface && relationInterface.length) {
+      relationInterface.forEach(interfaceName => {
+        const exist = defs.find(item => item.name === interfaceName)
+        if (!exist) {
+          defs.push({
+            name: interfaceName,
+            type: handleType(obj.type),
+            properties,
+          })
+        }
       })
     }
-  })
-  const uniqueInterfaces = uniqueByName(defs)
-  return {
-    allInterfaces: defs,
-    uniqueInterfaces,
-  }
-}
-
-/** 根据name去重 */
-function uniqueByName(defs) {
-  const newArr = []
-  defs.forEach(item => {
-    const find = newArr.find(it => it.name === item.name)
-    if (!find) {
-      newArr.push(item)
+    // 直接出参中嵌的 interface
+    else {
+      const interfaceName = handleKey(key)
+      const exist = defs.find(item => item.name === key)
+      if (!exist) {
+        defs.push({
+          name: interfaceName,
+          type: handleType(obj.type),
+          properties,
+        })
+      }
     }
   })
+  return defs
 }
 
 /** 处理属性
