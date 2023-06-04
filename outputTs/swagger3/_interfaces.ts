@@ -1,10 +1,10 @@
-export interface ResResultAddGroupResp {
+export interface AddGroupResp {
   /**是否直接入群*/
   directEntryGroup: boolean
   /**群id*/
   imGroupId: number
 }
-export interface ResResultAddressBookTenantInfoResp {
+export interface AddressBookTenantInfoResp {
   /**租户头像*/
   avatar: string
   /**是否选中*/
@@ -18,7 +18,7 @@ export interface ResResultAddressBookTenantInfoResp {
   /**租户名称*/
   tenantName: string
 }
-export interface ResResultApiResponse {
+export interface ResOfApiAdminGetAvatar {
   code: number
   data: object
   msg: string
@@ -26,11 +26,1107 @@ export interface ResResultApiResponse {
   timestamp: number
   traceId: string
 }
-export interface ResResultBasePageReq {
+export interface ResOfApiFriendshipDelete {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiFriendshipModifyRemark {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiFriendshipSetNoticeAndTop {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiGroupDissolve {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiGroupGroupSetting {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiGroupModifyGroupName {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiGroupTransfer {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiGroupMemberDelete {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiGroupMemberDeleteAdmin {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiGroupMemberLeaveGroup {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiGroupMemberModifyRemark {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiGroupMemberSave {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiGroupMemberSaveAdmin {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiGroupMemberSetNoticeAndTop {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiGroupf2fSaveRandom {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiLoginDoLogout {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiRequestAddFriend {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiRequestApprove {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiRequestRead {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiRequestMsgSave {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiUserCancel {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiUserGetCancelSmsCode {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiUserSetDefaultEnterprise {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiUserSetIsApprove {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiUserSetIsGroupApprove {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiUserSetIsNotice {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiUserSetRequestChannel {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfDelete {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfDeleteAdmin {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfFriendshipModifyRemark {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfGroupGroupSetting {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfGroupModifyGroupName {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfLeaveGroup {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfLoginDoLogout {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfModifyRemark {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfSave {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfSaveAdmin {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiRequestAddGroup {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiCommonSearchType {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiForwardSearch {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfCommonSearchType {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfForwardSearch {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiChatOftenContact {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiChatRecentContact {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfChatOftenContact {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfChatRecentContact {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfBasePlatformQueryEnterpriseAll {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiFriendshipPageList {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfFriendshipPageList {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiCommonSearchBeforeAddFriend {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfCommonSearchBeforeAddFriend {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiChatPageList {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiChatUnreadList {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfChatPageList {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiMessageHistoryPageList {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiMessageSearchPageList {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiGroupPageList {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfGroupPageList {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiGroupMemberPageList {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfPageList {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiDeptUserPage {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfDeptUserPage {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiRequestPageList {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfBasePlatformGetEmployeeAllByUserAndTenant {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiFriendshipDetail {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfFriendshipDetail {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfAddressBookListTenantInfo {
+  code: number
+  data: []
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiAddressBookListTenantInfo {
+  code: number
+  data: []
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfBasePlatformListDeptByParent {
+  code: number
+  data: []
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiForwardList {
+  code: number
+  data: []
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfForwardList {
+  code: number
+  data: []
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiGroupf2fList {
+  code: number
+  data: []
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiPhoneList {
+  code: number
+  data: []
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiCommonSwitchUserList {
+  code: number
+  data: []
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfCommonSwitchUserList {
+  code: number
+  data: []
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiRequestGetUnreadAttr {
+  code: number
+  data: []
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiDeptUserListAllTenant {
+  code: number
+  data: []
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfDeptUserListAllTenant {
+  code: number
+  data: []
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiAppVersionList {
+  code: number
+  data: []
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiUserListTenantInfo {
+  code: number
+  data: []
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfBasePlatformListTenantInfo {
+  code: number
+  data: []
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiGroupMemberListAdmin {
+  code: number
+  data: []
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfListAdmin {
+  code: number
+  data: []
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiDeptList {
+  code: number
+  data: []
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiDeptUserDeptList {
+  code: number
+  data: []
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfDeptList {
+  code: number
+  data: []
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfDeptUserDeptList {
+  code: number
+  data: []
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiCommonSearch {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfCommonSearch {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiGroupMemberGroupStatus {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfGroupStatus {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiAdminPutAppVersionFile {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiFilePutOssFile {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiUserQueryAppVersion {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiCommonBind {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiCommonSwitchChannel {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfCommonBind {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfCommonSwitchChannel {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiFriendshipGetUserDetail {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfFriendshipGetUserDetail {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiUserPersonInfo {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiFriendshipGetIsFriend {
+  code: number
+  data: boolean
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiGroupMemberExistInGroup {
+  code: number
+  data: boolean
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiUserHasSelectTenant {
+  code: number
+  data: boolean
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiUserModifyAvatar {
+  code: number
+  data: boolean
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiUserModifyEmail {
+  code: number
+  data: boolean
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfExistInGroup {
+  code: number
+  data: boolean
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfFriendshipGetIsFriend {
+  code: number
+  data: boolean
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiGroupf2fEnterGroup {
+  code: number
+  data: number
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiRequestGetUnreadCount {
+  code: number
+  data: number
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiChatClearChat {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiChatCreate {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiMessageAck {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiMessageClear {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiMessageDelete {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiMessageTestSendMQ {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiUserAttentionRemove {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiUserAttentionSave {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfChatClearChat {
+  code: number
+  data: object
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiLoginSendPhoneValidateCode {
+  code: number
+  data: string
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiQrcodeGetImg {
+  code: number
+  data: string
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfFriendshipDelete {
+  code: number
+  data: string
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfLoginSendPhoneValidateCode {
+  code: number
+  data: string
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiForwardCheckAndCreate {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfChatCreate {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiMessageDetail {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiLoginDoLogin {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfLoginDoLogin {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiGroupDetail {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfGroupDetail {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiGroupSave {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfGroupSave {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiGroupMemberDetail {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfDetail {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiRequestInvite {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiRequestTryInvite {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ResOfApiRequestDetail {
+  code: number
+  data: undefined
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface BasePageReq {
   page: number
   size: number
 }
-export interface ResResultComLoginReq {
+export interface ComLoginReq {
   /**身份标识:邮箱，手机号，微信appid,xxx*/
   account: string
   /**密码凭证：微信：code*/
@@ -45,13 +1141,73 @@ export interface ResResultComLoginReq {
   /**滑块验证唯一标示*/
   uuid: string
 }
-export interface ResResultComPage {
+export interface ComPage {
   current: number
   records: []
   size: number
   total: number
 }
-export interface ResResultCommonSearchReq {
+export interface ComPage {
+  current: number
+  records: []
+  size: number
+  total: number
+}
+export interface ComPage {
+  current: number
+  records: []
+  size: number
+  total: number
+}
+export interface ComPage {
+  current: number
+  records: []
+  size: number
+  total: number
+}
+export interface ComPage {
+  current: number
+  records: []
+  size: number
+  total: number
+}
+export interface ComPage {
+  current: number
+  records: []
+  size: number
+  total: number
+}
+export interface ComPage {
+  current: number
+  records: []
+  size: number
+  total: number
+}
+export interface ComPage {
+  current: number
+  records: []
+  size: number
+  total: number
+}
+export interface ComPage {
+  current: number
+  records: []
+  size: number
+  total: number
+}
+export interface ComPage {
+  current: number
+  records: []
+  size: number
+  total: number
+}
+export interface ComPage {
+  current: number
+  records: []
+  size: number
+  total: number
+}
+export interface CommonSearchReq {
   /**用户ID*/
   imUserId: number
   /**搜索关键字*/
@@ -61,7 +1217,7 @@ export interface ResResultCommonSearchReq {
   /**类型*/
   type: string
 }
-export interface ResResultCommonSearchResp {
+export interface CommonSearchResp {
   /**头像*/
   avatar: string
   /**CHAT单聊 GROUP群聊*/
@@ -100,7 +1256,7 @@ export interface ResResultCommonSearchResp {
   /**群成员数量*/
   total: number
 }
-export interface ResResultContactReq {
+export interface ContactReq {
   /**非某个群成员*/
   excludeMemberImGroupId: number
   /**当前用户ID*/
@@ -110,7 +1266,7 @@ export interface ResResultContactReq {
   page: number
   size: number
 }
-export interface ResResultContactResp {
+export interface ContactResp {
   /**头像*/
   avatar: string
   /**头像ID*/
@@ -158,11 +1314,11 @@ export interface ResResultContactResp {
   total: number
   userStatus: string
 }
-export interface ResResultDeptNoteResp {
+export interface DeptNoteResp {
   employeeCount: number
   info: undefined
 }
-export interface ResResultDeptResp {
+export interface DeptResp {
   /**祖级列表*/
   ancestors: string
   createId: number
@@ -207,7 +1363,7 @@ export interface ResResultDeptResp {
   updateId: number
   updateName: string
 }
-export interface ResResultEmployeeAllInfoResp {
+export interface EmployeeAllInfoResp {
   /**部门信息*/
   deptRespList: []
   /**员工信息*/
@@ -219,7 +1375,7 @@ export interface ResResultEmployeeAllInfoResp {
   /**角色信息*/
   roleRespList: []
 }
-export interface ResResultEmployeeResp {
+export interface EmployeeResp {
   createId: number
   /**邀请人*/
   createName: string
@@ -247,13 +1403,13 @@ export interface ResResultEmployeeResp {
   /**员工姓名*/
   userName: string
 }
-export interface ResResultEnterGroupReq {
+export interface EnterGroupReq {
   /**f2fGroupId*/
   f2fGroupId: number
   /**im用户id*/
   imUserId: number
 }
-export interface ResResultEnterpriseMainInfoResp {
+export interface EnterpriseMainInfoResp {
   /**认证状态: 未认证 UNCERTIFICATED, 已认证 CERTIFIED*/
   authStatus: string
   /**企业logo*/
@@ -280,7 +1436,7 @@ export interface ResResultEnterpriseMainInfoResp {
   /**用户ID*/
   userId: number
 }
-export interface ResResultExtDeptResp {
+export interface ExtDeptResp {
   /**祖级列表*/
   ancestors: string
   createId: number
@@ -326,7 +1482,7 @@ export interface ResResultExtDeptResp {
   updateId: number
   updateName: string
 }
-export interface ResResultForwardListReq {
+export interface ForwardListReq {
   /**终端类型:IOS/ANDROID/WEB*/
   channel: string
   /**用户id*/
@@ -338,7 +1494,7 @@ export interface ResResultForwardListReq {
   /**搜索类型:USER/GROUP*/
   type: string
 }
-export interface ResResultForwardListResp {
+export interface ForwardListResp {
   /**头像*/
   avatar: string
   /**CHAT单聊 GROUP群聊*/
@@ -356,7 +1512,7 @@ export interface ResResultForwardListResp {
   /**群成员数量*/
   total: number
 }
-export interface ResResultFriendshipDetailReq {
+export interface FriendshipDetailReq {
   /**渠道*/
   channel: string
   /**好友id*/
@@ -366,7 +1522,7 @@ export interface ResResultFriendshipDetailReq {
   /**im用户id*/
   imUserId: number
 }
-export interface ResResultFriendshipDetailResp {
+export interface FriendshipDetailResp {
   /**头像*/
   avatar: string
   /**子公司*/
@@ -416,7 +1572,7 @@ export interface ResResultFriendshipDetailResp {
   /**姓名*/
   userName: string
 }
-export interface ResResultFriendshipResp {
+export interface FriendshipResp {
   /**头像*/
   avatar: string
   /**im群id*/
@@ -430,13 +1586,13 @@ export interface ResResultFriendshipResp {
   /**姓名*/
   userName: string
 }
-export interface ResResultGetUnreadPageReq {
+export interface GetUnreadPageReq {
   /**用户id*/
   imUserId: number
   /**用户id*/
   requestIdList: []
 }
-export interface ResResultGroupF2fUserListResp {
+export interface GroupF2fUserListResp {
   /**头像id*/
   avatar: number
   /**头像地址*/
@@ -448,13 +1604,13 @@ export interface ResResultGroupF2fUserListResp {
   /**姓名*/
   userName: string
 }
-export interface ResResultGroupTransferReq {
+export interface GroupTransferReq {
   /**imGroupId*/
   imGroupId: number
   /**新群主id*/
   imUserId: number
 }
-export interface ResResultInviteToGroupReq {
+export interface InviteToGroupReq {
   /**被邀请人*/
   applyIds: []
   /**群描述(可空)*/
@@ -466,7 +1622,7 @@ export interface ResResultInviteToGroupReq {
   /**邀请人id*/
   inviterId: number
 }
-export interface ResResultJobResp {
+export interface JobResp {
   /**祖级列表*/
   ancestors: string
   createId: number
@@ -490,7 +1646,7 @@ export interface ResResultJobResp {
   updateId: number
   updateName: string
 }
-export interface ResResultMemberGroupStatusResp {
+export interface MemberGroupStatusResp {
   /**群id*/
   imGroupId: number
   /**im用户id*/
@@ -499,7 +1655,7 @@ export interface ResResultMemberGroupStatusResp {
   status: string
   statusDesc: string
 }
-export interface ResResultMessageSyncDTO {
+export interface MessageSyncDTO {
   applyType: string
   cardMessageIdList: []
   channel: string
@@ -513,7 +1669,7 @@ export interface ResResultMessageSyncDTO {
   receiverList: []
   sender: number
 }
-export interface ResResultPhoneFriendshipResp {
+export interface PhoneFriendshipResp {
   /**头像*/
   avatar: string
   /**im群id*/
@@ -531,13 +1687,13 @@ export interface ResResultPhoneFriendshipResp {
   /**姓名*/
   userName: string
 }
-export interface ResResultPhoneListReq {
+export interface PhoneListReq {
   /**用户ID*/
   imUserId: number
   /**手机号列表*/
   phoneList: []
 }
-export interface ResResultPostResp {
+export interface PostResp {
   createId: number
   createName: string
   created: string
@@ -555,7 +1711,7 @@ export interface ResResultPostResp {
   updateId: number
   updateName: string
 }
-export interface ResResultPutFileResp {
+export interface PutFileResp {
   /**业务对象id、如userid groupid messageid等*/
   businessId: number
   /**文件id*/
@@ -565,7 +1721,7 @@ export interface ResResultPutFileResp {
   /**文件访问连接[http-put方法上传]*/
   url: string
 }
-export interface ResResultQueryLastMessageResp {
+export interface QueryLastMessageResp {
   /**应用类型，1：安卓 2：苹果*/
   appType: number
   /**是否强制更新*/
@@ -577,7 +1733,7 @@ export interface ResResultQueryLastMessageResp {
   /**版本链接*/
   versionUrl: string
 }
-export interface ResResultRequestMsgReqDuiXiang {
+export interface RequestMsgReqDuiXiang {
   /**内容*/
   content: string
   /**接收者id*/
@@ -587,7 +1743,7 @@ export interface ResResultRequestMsgReqDuiXiang {
   /**发送者id*/
   senderId: number
 }
-export interface ResResultRoleResq {
+export interface RoleResq {
   /**是否允许分配该角色拥有权限*/
   allowAllot: boolean
   /**祖级列表*/
@@ -623,7 +1779,7 @@ export interface ResResultRoleResq {
   updateId: number
   updateName: string
 }
-export interface ResResultSaveRandomReq {
+export interface SaveRandomReq {
   /**im用户id*/
   imUserId: number
   /**纬度*/
@@ -633,7 +1789,7 @@ export interface ResResultSaveRandomReq {
   /**随机数*/
   random: string
 }
-export interface ResResultSearchBeforeAddFriendReq {
+export interface SearchBeforeAddFriendReq {
   /**非某个群成员*/
   excludeMemberImGroupId: number
   /**im用户id*/
@@ -647,7 +1803,7 @@ export interface ResResultSearchBeforeAddFriendReq {
   page: number
   size: number
 }
-export interface ResResultSearchBeforeAddFriendResp {
+export interface SearchBeforeAddFriendResp {
   /**头像*/
   avatar: string
   /**添加好友来源*/
@@ -667,17 +1823,17 @@ export interface ResResultSearchBeforeAddFriendResp {
   /**姓名*/
   userName: string
 }
-export interface ResResultSearchMapResp {
+export interface SearchMapResp {
   hasMore: boolean
   userList: []
 }
-export interface ResResultSearchReq {
+export interface SearchReq {
   /**用户ID*/
   imUserId: number
   /**关键字*/
   keywords: string
 }
-export interface ResResultSearchResp {
+export interface SearchResp {
   /**头像*/
   avatar: string
   /**CHAT单聊 GROUP群聊*/
@@ -707,7 +1863,7 @@ export interface ResResultSearchResp {
   /**群成员数量*/
   total: number
 }
-export interface ResResultSwitchUserListResp {
+export interface SwitchUserListResp {
   /**头像*/
   avatar: string
   /**im用户ID*/
@@ -719,19 +1875,19 @@ export interface ResResultSwitchUserListResp {
   /**姓名*/
   userName: string
 }
-export interface ResResultSwitchUserReq {
+export interface SwitchUserReq {
   /**设备唯一标识*/
   deviceId: string
   /**当前用户ID*/
   imUserId: number
 }
-export interface ResResultUnreadResp {
+export interface UnreadResp {
   /**false未读*/
   isRead: boolean
   /**请求id*/
   requestId: number
 }
-export interface ResResultUserBindReq {
+export interface UserBindReq {
   /**终端类型: WEB IOS ANDROID*/
   channel: string
   /**终端唯一标识符(本地缓存随机数)*/
@@ -739,14 +1895,14 @@ export interface ResResultUserBindReq {
   /**用户ID*/
   imUserId: number
 }
-export interface ResResultUserBindResp {
+export interface UserBindResp {
 }
-export interface ResResultUserCancelReq {
+export interface UserCancelReq {
   imUserId: number
   /**短信验证码*/
   smsCode: string
 }
-export interface ResResultUserDetailResp {
+export interface UserDetailResp {
   /**是否同租户*/
   hasSameTenant: boolean
   /**群ID*/
@@ -766,7 +1922,7 @@ export interface ResResultUserDetailResp {
   /**是否显示备注(好友|有相同租户)*/
   showRemark: boolean
 }
-export interface ResResultUserListAllTenantResp {
+export interface UserListAllTenantResp {
   /**是否有更多标识 >3 才有*/
   hasMore: boolean
   /**租户id*/
@@ -776,7 +1932,7 @@ export interface ResResultUserListAllTenantResp {
   /**租户下对应的人员*/
   userList: []
 }
-export interface ResResultUserRespDuiXiang {
+export interface UserRespDuiXiang {
   /**头像*/
   avatar: string
   /**部门id*/
@@ -820,19 +1976,19 @@ export interface ResResultUserRespDuiXiang {
   /**姓名*/
   userName: string
 }
-export interface ResResultUserTenantReq {
+export interface UserTenantReq {
   /**租户中心用户id*/
   platformUserId: number
   /**租户id*/
   tenantId: number
 }
-export interface ResResultErWeiMa {
+export interface ErWeiMa {
   /**用户id/群id*/
   id: number
   /**USER,GROUP*/
   type: string
 }
-export interface ResResultHuiHua {
+export interface HuiHua {
   /**头像地址*/
   avatar: string
   /**WEB IOS ANDROID*/
@@ -884,7 +2040,7 @@ export interface ResResultHuiHua {
   /**姓名*/
   userName: string
 }
-export interface ResResultHuiHuaLieBiao {
+export interface HuiHuaLieBiao {
   /**终端设备类型*/
   channel: string
   /**群ID列表*/
@@ -898,7 +2054,7 @@ export interface ResResultHuiHuaLieBiao {
   /**跳过前面条数*/
   skipCount: number
 }
-export interface ResResultHuiHuaLieBiaoXiangYing {
+export interface HuiHuaLieBiaoXiangYing {
   /**终端类型*/
   channel: string
   /**头像URL*/
@@ -960,7 +2116,7 @@ export interface ResResultHuiHuaLieBiaoXiangYing {
   /**im用户ID*/
   userid: number
 }
-export interface ResResultXiuGaiBeiZhuModifyRemarkGroupReq {
+export interface XiuGaiBeiZhuModifyRemarkGroupReq {
   /**本群备注*/
   groupRemark: string
   /**imGroupId*/
@@ -968,7 +2124,7 @@ export interface ResResultXiuGaiBeiZhuModifyRemarkGroupReq {
   /**im用户id*/
   imUserId: number
 }
-export interface ResResultXiuGaiBeiZhuModifyfriendRemarkReq {
+export interface XiuGaiBeiZhuModifyfriendRemarkReq {
   /**备注*/
   friendRemark: string
   /**imFriendId*/
@@ -976,11 +2132,11 @@ export interface ResResultXiuGaiBeiZhuModifyfriendRemarkReq {
   /**im用户id*/
   imUserId: number
 }
-export interface ResResultXiuGaiYongHuTouXiang {
+export interface XiuGaiYongHuTouXiang {
   /**修改的头像*/
   avatar: number
 }
-export interface ResResultXiuGaiQunMingChenRuCanModifyGroupNameReq {
+export interface XiuGaiQunMingChenRuCanModifyGroupNameReq {
   /**群昵称*/
   groupName: string
   /**imGroupId*/
@@ -988,7 +2144,7 @@ export interface ResResultXiuGaiQunMingChenRuCanModifyGroupNameReq {
   /**im用户id*/
   imUserId: number
 }
-export interface ResResultRuQunQingQiuAddGroupReq {
+export interface RuQunQingQiuAddGroupReq {
   /**申请人id*/
   applyId: number
   /**群id*/
@@ -998,7 +2154,7 @@ export interface ResResultRuQunQingQiuAddGroupReq {
   /**请求类型：2主动入群请求 3邀请入群请求*/
   type: number
 }
-export interface ResResultChuangJianHuiHua {
+export interface ChuangJianHuiHua {
   /**终端类型*/
   channel: string
   checkCache: boolean
@@ -1008,7 +2164,7 @@ export interface ResResultChuangJianHuiHua {
   receiverIdList: []
   updateGroupChat: boolean
 }
-export interface ResResultChuangJianGengXinDuiXiangGroupSaveReq {
+export interface ChuangJianGengXinDuiXiangGroupSaveReq {
   /**群描述(可空)*/
   desc: string
   /**群成员id*/
@@ -1018,7 +2174,7 @@ export interface ResResultChuangJianGengXinDuiXiangGroupSaveReq {
   /**群主id*/
   ownerId: number
 }
-export interface ResResultLiShiXiaoXiMessageHistoryReq {
+export interface LiShiXiaoXiMessageHistoryReq {
   /**im群ID*/
   imGroupId: number
   /**1 查更新的数据  0 查更老的数据*/
@@ -1028,7 +2184,7 @@ export interface ResResultLiShiXiaoXiMessageHistoryReq {
   sequence: number
   size: number
 }
-export interface ResResultHaoYouFriendshipReq {
+export interface HaoYouFriendshipReq {
   /**imFriendId*/
   imFriendId: number
   /**im用户id*/
@@ -1038,7 +2194,7 @@ export interface ResResultHaoYouFriendshipReq {
   /**是否置顶*/
   isTop: boolean
 }
-export interface ResResultHaoYouLieBiaoChaXunFriendshipQueryReq {
+export interface HaoYouLieBiaoChaXunFriendshipQueryReq {
   /**非某个群成员*/
   excludeMemberImGroupId: number
   /**im用户id*/
@@ -1048,13 +2204,13 @@ export interface ResResultHaoYouLieBiaoChaXunFriendshipQueryReq {
   page: number
   size: number
 }
-export interface ResResultXiaoXiack {
+export interface XiaoXiack {
   /**会话ID*/
   imGroupId: number
   /**消息ID*/
   imUserId: number
 }
-export interface ResResultXiaoXiShanChu {
+export interface XiaoXiShanChu {
   /**im群组ID*/
   imGroupId: number
   /**im用户id*/
@@ -1062,7 +2218,7 @@ export interface ResResultXiaoXiShanChu {
   /**消息ID*/
   messageIdList: []
 }
-export interface ResResultXiaoXiDuiXiang {
+export interface XiaoXiDuiXiang {
   /**消息类型：FORWARD转发 REPLY引用回复*/
   applyType: string
   /**引用/转发消息*/
@@ -1102,7 +2258,7 @@ export interface ResResultXiaoXiDuiXiang {
   /**序号*/
   sequence: number
 }
-export interface ResResultXiaoXiSouSuoShiTi {
+export interface XiaoXiSouSuoShiTi {
   /**搜索群组*/
   groupId: number
   /**搜索关键字*/
@@ -1114,11 +2270,11 @@ export interface ResResultXiaoXiSouSuoShiTi {
   /**用户ID*/
   userId: number
 }
-export interface ResResultXiaoXiXiangQingMessageDetailReq {
+export interface XiaoXiXiangQingMessageDetailReq {
   /**要查询的消息id*/
   messageId: number
 }
-export interface ResResultTianJiaHaoYouAddFriendReq {
+export interface TianJiaHaoYouAddFriendReq {
   /**添加好友方式 群聊GROUP, 手机号PHONE, 名片BUSINESS_CARD，二维码QR_CODE, 姓名USER_NAME*/
   channel: string
   /**内容*/
@@ -1134,18 +2290,18 @@ export interface ResResultTianJiaHaoYouAddFriendReq {
   /**手机号*/
   phone: string
 }
-export interface ResResultTianJiaWoWeiHaoYouDeFangShi {
+export interface TianJiaWoWeiHaoYouDeFangShi {
   imUserId: number
   /**群组GROUP, 手机号PHONE, 姓名USER_NAME，二维码QR_CODE*/
   requestChannels: []
 }
-export interface ResResultQingKongXiaoXiRuCan {
+export interface QingKongXiaoXiRuCan {
   /**群id*/
   imGroupId: number
   /**im用户id*/
   imUserId: number
 }
-export interface ResResultQingKongXiaoXiJiLu {
+export interface QingKongXiaoXiJiLu {
   /**终端类型*/
   channel: string
   /**im群id*/
@@ -1153,7 +2309,7 @@ export interface ResResultQingKongXiaoXiJiLu {
   /**im用户id*/
   imUserId: number
 }
-export interface ResResultBanBen {
+export interface BanBen {
   /**应用类型 ANDROID：安卓 IOS：苹果*/
   appType: string
   /**强制更新*/
@@ -1167,7 +2323,7 @@ export interface ResResultBanBen {
   /**版本链接*/
   versionUrl: string
 }
-export interface ResResultYongHuSuoYouZuHuUserListAllTenantReq {
+export interface YongHuSuoYouZuHuUserListAllTenantReq {
   /**非某个群成员*/
   excludeMemberImGroupId: number
   /**用户id*/
@@ -1175,7 +2331,7 @@ export interface ResResultYongHuSuoYouZuHuUserListAllTenantReq {
   /**关键字*/
   keyword: string
 }
-export interface ResResultDengLuXiangYingShiTi {
+export interface DengLuXiangYingShiTi {
   /**客户端类型ChannelEnum: IOS ANDROID WEB*/
   channel: string
   code: number
@@ -1192,7 +2348,7 @@ export interface ResResultDengLuXiangYingShiTi {
   /**用户中心侧用户id*/
   userId: number
 }
-export interface ResResultZuHuXinXi {
+export interface ZuHuXinXi {
   /**租户头像*/
   avatar: string
   /**客户端类型*/
@@ -1212,7 +2368,7 @@ export interface ResResultZuHuXinXi {
   /**姓名*/
   userName: string
 }
-export interface ResResultQunXinXiGroupDetailReq {
+export interface QunXinXiGroupDetailReq {
   /**imGroupId*/
   imGroupId: number
   /**im用户id*/
@@ -1222,7 +2378,7 @@ export interface ResResultQunXinXiGroupDetailReq {
   /**是否置顶*/
   isTop: boolean
 }
-export interface ResResultQunFenYeGroupPageListReq {
+export interface QunFenYeGroupPageListReq {
   /**im用户id*/
   imUserId: number
   /**成员名称/phone*/
@@ -1232,7 +2388,7 @@ export interface ResResultQunFenYeGroupPageListReq {
   page: number
   size: number
 }
-export interface ResResultQunDuiXiangGroupDetailResp {
+export interface QunDuiXiangGroupDetailResp {
   /**头像*/
   avatar: string
   /**创建类型 AUTO, MANUAL*/
@@ -1276,7 +2432,7 @@ export interface ResResultQunDuiXiangGroupDetailResp {
   /**群成员数量*/
   total: number
 }
-export interface ResResultQunDuiXiangGroupResp {
+export interface QunDuiXiangGroupResp {
   /**头像*/
   avatar: string
   /**CHAT单聊 GROUP群聊*/
@@ -1296,7 +2452,7 @@ export interface ResResultQunDuiXiangGroupResp {
   /**群成员数量*/
   total: number
 }
-export interface ResResultQunChengYuanXinXiDuiXiangGroupMemberResp {
+export interface QunChengYuanXinXiDuiXiangGroupMemberResp {
   /**群id*/
   imGroupId: number
   /**im用户id*/
@@ -1318,7 +2474,7 @@ export interface ResResultQunChengYuanXinXiDuiXiangGroupMemberResp {
   /**LEADER:群主MANAGER:管理员MEMBER:普通成员*/
   memberType: string
 }
-export interface ResResultQunChengYuanFenYeGroupMemberPageReq {
+export interface QunChengYuanFenYeGroupMemberPageReq {
   /**群id*/
   imGroupId: number
   /**当前人*/
@@ -1332,7 +2488,7 @@ export interface ResResultQunChengYuanFenYeGroupMemberPageReq {
   page: number
   size: number
 }
-export interface ResResultQunChengYuanShanChuGroupMemberDelReq {
+export interface QunChengYuanShanChuGroupMemberDelReq {
   /**群id*/
   imGroupId: number
   /**退群的成员id列表*/
@@ -1340,7 +2496,7 @@ export interface ResResultQunChengYuanShanChuGroupMemberDelReq {
   /**当前操作人*/
   imUserId: number
 }
-export interface ResResultQunChengYuanXinZengGroupMemberSaveReq {
+export interface QunChengYuanXinZengGroupMemberSaveReq {
   /**群id*/
   imGroupId: number
   /**当前操作人id*/
@@ -1348,7 +2504,7 @@ export interface ResResultQunChengYuanXinZengGroupMemberSaveReq {
   /**加群的成员id列表*/
   imUserIdList: []
 }
-export interface ResResultQunSheZhiZhiNenYiGeZhiBuWeiNullGroupSetReq {
+export interface QunSheZhiZhiNenYiGeZhiBuWeiNullGroupSetReq {
   /**群ID*/
   imGroupId: number
   /**im用户id*/
@@ -1366,7 +2522,7 @@ export interface ResResultQunSheZhiZhiNenYiGeZhiBuWeiNullGroupSetReq {
   /**允许私聊 1允许 0禁止*/
   isPrivate: boolean
 }
-export interface ResResultSheZhiMoRenQiYe {
+export interface SheZhiMoRenQiYe {
   /**默认企业名称*/
   kind: string
   /**默认企业id*/
@@ -1374,7 +2530,7 @@ export interface ResResultSheZhiMoRenQiYe {
   /**默认企业名称*/
   tenantName: string
 }
-export interface ResResultQingQiuHuiFuXiaoXiLieBiaoReqMsgDetailResp {
+export interface QingQiuHuiFuXiaoXiLieBiaoReqMsgDetailResp {
   /**内容*/
   content: string
   /**创建时间*/
@@ -1394,7 +2550,7 @@ export interface ResResultQingQiuHuiFuXiaoXiLieBiaoReqMsgDetailResp {
   /**发送者姓名*/
   senderName: string
 }
-export interface ResResultQingQiuXiaoXiLieBiaoRequestPageListReq {
+export interface QingQiuXiaoXiLieBiaoRequestPageListReq {
   /**用户id*/
   imUserId: number
   /**申请人姓名/手机号*/
@@ -1404,7 +2560,7 @@ export interface ResResultQingQiuXiaoXiLieBiaoRequestPageListReq {
   /**请求类型 1好友请求 2主动入群请求 3邀请入群请求 4个人验证*/
   type: number
 }
-export interface ResResultQingQiuXiaoXiDuBaoKuoYanZhengJiHuiFuXiaoXiDuRequestReadReq {
+export interface QingQiuXiaoXiDuBaoKuoYanZhengJiHuiFuXiaoXiDuRequestReadReq {
   /**用户id*/
   imUserId: number
   /**请求id*/
@@ -1412,7 +2568,7 @@ export interface ResResultQingQiuXiaoXiDuBaoKuoYanZhengJiHuiFuXiaoXiDuRequestRea
   /**请求回复消息id*/
   requestMsgIdList: []
 }
-export interface ResResultZhuanFaXiaoXiDuiXiang {
+export interface ZhuanFaXiaoXiDuiXiang {
   /**消息类型：FORWARD转发 REPLY引用回复*/
   applyType: string
   /**消息内容*/
@@ -1448,7 +2604,7 @@ export interface ResResultZhuanFaXiaoXiDuiXiang {
   /**序号*/
   sequence: number
 }
-export interface ResResultTongGuoJuJueApproveReq {
+export interface TongGuoJuJueApproveReq {
   /**im用户id*/
   imUserId: number
   /**消息是否通知*/
@@ -1460,7 +2616,7 @@ export interface ResResultTongGuoJuJueApproveReq {
   /**请求id*/
   requestId: number
 }
-export interface ResResultYaoQingRuQunXiangYing {
+export interface YaoQingRuQunXiangYing {
   /**需要个人验证的成员id集合*/
   checkUserIds: []
   /**需要验证的成员集合*/
@@ -1468,7 +2624,7 @@ export interface ResResultYaoQingRuQunXiangYing {
   /**响应信息*/
   inviteMsg: string
 }
-export interface ResResultBuMenXinXiDeptResp {
+export interface BuMenXinXiDeptResp {
   /**部门id*/
   deptId: number
   /**部门名称*/
@@ -1476,7 +2632,7 @@ export interface ResResultBuMenXinXiDeptResp {
   /**群id*/
   imGroupId: number
 }
-export interface ResResultBuMenLieBiaoDeptListReq {
+export interface BuMenLieBiaoDeptListReq {
   /**是否获取对应群id(通讯录需要)*/
   getImGroupId: boolean
   /**父部门id/0获取顶级部门*/
@@ -1484,13 +2640,13 @@ export interface ResResultBuMenLieBiaoDeptListReq {
   /**租户id*/
   tenantId: number
 }
-export interface ResResultBuMenChaXunRuCan {
+export interface BuMenChaXunRuCan {
   /**部门id*/
   deptId: number
   /**租户id*/
   tenantId: number
 }
-export interface ResResultBuMenYongHuFenYeUserPageReq {
+export interface BuMenYongHuFenYeUserPageReq {
   /**部门id*/
   deptId: number
   /**非某个群成员*/
@@ -1504,13 +2660,13 @@ export interface ResResultBuMenYongHuFenYeUserPageReq {
   /**租户id*/
   tenantId: number
 }
-export interface ResResultBuMenYongHuLieBiaoDeptListReq {
+export interface BuMenYongHuLieBiaoDeptListReq {
   /**是否获取对应群id(通讯录需要)*/
   getImGroupId: boolean
   /**租户id*/
   tenantId: number
 }
-export interface ResResultBuMenYongHuLieBiaoDeptUserResp {
+export interface BuMenYongHuLieBiaoDeptUserResp {
   /**头像*/
   avatar: string
   /**头像*/
@@ -1526,7 +2682,7 @@ export interface ResResultBuMenYongHuLieBiaoDeptUserResp {
   /**姓名*/
   userName: string
 }
-export interface ResResultYanZhengXiaoXiFenYeRequestPageListResp {
+export interface YanZhengXiaoXiFenYeRequestPageListResp {
   /**申请人头像*/
   applyAvatar: number
   /**申请人头像url*/
@@ -1570,7 +2726,7 @@ export interface ResResultYanZhengXiaoXiFenYeRequestPageListResp {
   /**姓名*/
   userName: string
 }
-export interface ResResultYanZhengXiaoXiXiangQingRequestDetailResp {
+export interface YanZhengXiaoXiXiangQingRequestDetailResp {
   /**申请者头像*/
   applyAvatar: string
   /**申请人id*/

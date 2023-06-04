@@ -1,9 +1,11 @@
-import {ResResultApiResponse,} from './_interfaces'
+
 import {Http} from '../../httpTs/index';
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 
 
+import {ResOfApiAppVersionList} from './_interfaces'
+
 /** 获取当前版本后的版本列表 */
-export function appVersionList  (data:any, config?: AxiosRequestConfig) :AxiosPromise<ResResultApiResponse>{
+export function apiAppVersionList  (data:any, config?: AxiosRequestConfig) :AxiosPromise<ResOfApiAppVersionList>{
   return Http.get('/api/appVersion/list', data, config)
 }
