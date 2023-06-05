@@ -4,6 +4,7 @@ const { exec } = require('node:child_process')
 const axios = require('axios')
 const apiConfig = require('./apiConfig')
 const handleDefinitions = require('./definitions').handleDefinitions
+const handleKey = require('./definitions').handleKey
 
 const CWD = process.cwd()
 
@@ -42,9 +43,9 @@ apiList.forEach(item => {
 
 function parseData(jsonData, { absOutputDir, ignoreReg, prefix }) {
   const apiList = handlePaths(jsonData.paths, ignoreReg)
-  allResInterfaces = handleDefinitions(jsonData.definitions || {}).allInterfaces
-  uniQueResInterfaces = handleDefinitions(jsonData.definitions || {}).uniqueInterfaces
-  // writeDeinitionToFile(uniQueResInterfaces, absOutputDir)
+  allResInterfaces = handleDefinitions(jsonData.definitions || {})
+  // uniQueResInterfaces = handleDefinitions(jsonData.definitions || {}).uniqueInterfaces
+  writeDeinitionToFile(allResInterfaces, absOutputDir)
   const count = apiList.reduce((pre, cur) => {
     return pre + cur.apis.length
   }, 0)
@@ -66,6 +67,9 @@ function handlePaths(paths, ignoreReg) {
       const parameters = obj[method].parameters // 入参
       const idx = apiList.findIndex(item => item.namespace === namespace)
       const resSchemeOriginalRef = obj[method]?.responses['200']?.schema?.originalRef // 出参模型
+      if (!resSchemeOriginalRef) {
+        console.log(url)
+      }
       const apiModel = { name, url, method, summary, parameters, resSchemeOriginalRef }
       if (idx > -1) apiList[idx].apis.push(apiModel)
       else apiList.push({ namespace, apis: [apiModel] })
@@ -87,17 +91,20 @@ function writeToFile(apiList, options) {
     let fileUsedInterface = [] // 当前文件用到的 interface
     item.apis.forEach(api => {
       const { name, url, method, summary, parameters, resSchemeOriginalRef } = api
-      const resInterface = getResInterface(resSchemeOriginalRef)
-      if (resInterface && !fileUsedInterface.includes(resInterface)) {
-        fileUsedInterface.push(resInterface)
+      let resInterface = getResInterface(resSchemeOriginalRef) // ApiResponse<ComPage<YanZhengXiaoXiFenYeRequestPageListResp>>
+      if (resInterface) {
+        const itfc = resInterface.replace(/>/g, '').split('<') // [ApiResponse, ComPage, YanZhengXiaoXiFenYeRequestPageListResp]
+        itfc.forEach(it => {
+          !fileUsedInterface.includes(it) && fileUsedInterface.push(it)
+        })
       }
 
-      const _resInterfece = `${resInterface ? resInterface : 'any'}` // 接口出参类型
+      const _resInterface = `${resInterface ? resInterface : 'any'}` // 接口出参类型
       // 有入参
       if (parameters && parameters.length) {
         apiStr += `
 /** ${summary} */
-export function ${name}  (data:any, config?: AxiosRequestConfig) :AxiosPromise<${_resInterfece}>{
+export function ${name}  (data:any, config?: AxiosRequestConfig) :AxiosPromise<${_resInterface}>{
   return ${httpFn}.${method}('${prefix}${url}', data, config)
 }\n`
       }
@@ -105,7 +112,7 @@ export function ${name}  (data:any, config?: AxiosRequestConfig) :AxiosPromise<$
       else {
         apiStr += `
 /** ${summary} */
-export function ${name}(config?: AxiosRequestConfig):AxiosPromise<${_resInterfece}>{
+export function ${name}(config?: AxiosRequestConfig):AxiosPromise<${_resInterface}>{
   return ${httpFn}.${method}('${prefix}${url}', config)
 }\n`
       }
@@ -115,8 +122,8 @@ export function ${name}(config?: AxiosRequestConfig):AxiosPromise<${_resInterfec
     // interface 引入
     if (fileUsedInterface.length) {
       interfaceStr += `import {`
-      fileUsedInterface.forEach(item => {
-        interfaceStr += `${item},`
+      fileUsedInterface.forEach((item, index) => {
+        interfaceStr += index === 0 ? item : `,${item}`
       })
       interfaceStr += `} from './_interfaces'`
     }
@@ -175,11 +182,21 @@ function getUrl(url) {
   return url.replace(/{/g, '${')
 }
 
-/** 获取出参 interface  */
+/** 获取出参 interface
+ * 将 ApiResponse«ComPage«验证消息分页RequestPageListResp»»
+ * 转化为 ApiResponse<ComPage<YanZhengXiaoXiFenYeRequestPageListResp>>
+ */
 function getResInterface(resSchemeOriginalRef) {
-  const find = allResInterfaces.find(item => item.originName === resSchemeOriginalRef)
-  return !!find ? find.name : ''
+  if (!resSchemeOriginalRef) {
+    return ''
+  }
+  var arr = resSchemeOriginalRef.split('«')
+  arr.forEach((item, index) => {
+    arr[index] = handleKey(item)
+  })
+  return arr.join('<').replace(/»/g, '>')
 }
+
 /**
  * 获取接口名称, 需要处理一些特殊的路径
  * /api/variable/create 处理成 variableCreate
@@ -189,7 +206,8 @@ function getResInterface(resSchemeOriginalRef) {
  * /api/enterprise/identification/inner/enterprise/v1/{enterpriseId}/openAcct/callback
  */
 function getApiName(url) {
-  let url2 = url.replace(/^\/api/, '') // 去除开头的 /api
+  // let url2 = url.replace(/^\/api/, '') // 去除开头的 /api
+  let url2 = url
   url2 = url2.replace(/[\$\{\}-]/g, '') // 去除可能存在的短杠、左右花括号和$
   return url2.replace(/\/\w/g, (matched, index) => {
     const letter = matched.replace('/', '')

@@ -1,4 +1,5 @@
 let pinyin = require('js-pinyin')
+const Tarr = ['T', 'U', 'K', 'V', 'A']
 function handleDefinitions(definitions) {
   /**
    * [
@@ -24,23 +25,29 @@ function handleDefinitions(definitions) {
   let defs = []
   Object.keys(definitions).forEach(key => {
     const obj = definitions[key]
-    const properties = handleProperties(obj.properties || {})
-    const interfaceName = 'ResResult' + handleKey(key) // 为防止和入参的 interface 重复，拼上一个 ResResult
-    const exist = defs.find(item => item.originName === key)
+    const propertiesObj = handleProperties(obj.properties || {})
+    const properties = propertiesObj.arr
+    const tCount = propertiesObj.tCount
+    const interfaceName = handleKey(key)
+    const exist = defs.find(item => item.name.replace(/<.*>/g, '') === key)
     if (!exist) {
+      if (tCount) {
+        console.log(`${interfaceName}<${Tarr.slice(0, tCount)}>`)
+      }
       defs.push({
         originName: key,
-        name: interfaceName,
+        name: !tCount ? interfaceName : `${interfaceName}<${Tarr.slice(0, tCount)}>`,
         type: handleType(obj.type),
         properties,
       })
     }
   })
-  const uniqueInterfaces = uniqueByName(defs)
-  return {
-    allInterfaces: defs,
-    uniqueInterfaces,
-  }
+  return defs
+  // const uniqueInterfaces = uniqueByName(defs)
+  // return {
+  //   allInterfaces: defs,
+  //   // uniqueInterfaces,
+  // }
 }
 
 /** 根据name去重 */
@@ -63,15 +70,22 @@ function uniqueByName(defs) {
  */
 function handleProperties(properties) {
   let arr = []
+  let tCount = 0 // 属性中是泛型的属性数量
   Object.keys(properties).forEach(key => {
     const obj = properties[key]
+    let type = handleType(obj.type)
+    if (type === 'object') {
+      console.log(type)
+      type = Tarr[tCount]
+      tCount += 1
+    }
     arr.push({
       name: key,
       type: handleType(obj.type),
       description: obj.description || '',
     })
   })
-  return arr
+  return { arr, tCount }
 }
 /**
  * 处理一些奇奇怪怪的 interface
@@ -86,7 +100,7 @@ function handleKey(originKey) {
   }
   str = str.replace(/-/g, '') // 去除短杠 -
   str = str.replace(/\[|\]/g, '') // 去除中括号 []
-  str = str.replace(/\(|\)/g, '') // 去除圆括号括号 ()
+  str = str.replace(/\(|\)/g, '') // 去除圆括号 ()
   str = str.replace(/\//g, '') // 去除斜杠 /
   if (hasChinese(str)) {
     str = pinyin.getFullChars(str) // 汉字转拼音 历史消息=>LiShiXiaoXi
@@ -117,4 +131,5 @@ function hasChinese(str) {
 }
 module.exports = {
   handleDefinitions,
+  handleKey,
 }
