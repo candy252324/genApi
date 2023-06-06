@@ -19,9 +19,9 @@
 //   },
 // }
 
-import { groupMemberDeleteAdmin } from './outputTs/swagger3/groupMember'
+import { apiGroupMemberDeleteAdmin, apiGroupMemberDetail } from './outputTs/swagger3/groupMember'
 
-groupMemberDeleteAdmin({
+apiGroupMemberDeleteAdmin({
   pageSize: 1,
   pageIndex: 2,
   query: '',
@@ -29,9 +29,16 @@ groupMemberDeleteAdmin({
   console.log(res)
 })
 
-const res1 = await groupMemberDeleteAdmin({
+const res1 = await apiGroupMemberDeleteAdmin({
   pageSize: 1,
   pageIndex: 2,
   query: '',
 })
 console.log(res1.data.data)
+
+const res2 = await apiGroupMemberDetail({
+  pageSize: 1,
+  pageIndex: 2,
+  query: '',
+})
+console.log(res2.data.data)
