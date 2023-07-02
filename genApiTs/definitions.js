@@ -96,6 +96,7 @@ function handleInterfaceName(originKey) {
   str = str.replace(/\[|\]/g, '') // 去除中括号 []
   str = str.replace(/\(|\)/g, '') // 去除圆括号括号 ()
   str = str.replace(/\//g, '') // 去除斜杠 /
+  str = str.replace(/\s/g, '') // 去除空格
   if (hasChinese(str)) {
     str = pinyin.getFullChars(str) // 汉字转拼音 历史消息=>LiShiXiaoXi
   }
