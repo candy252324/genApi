@@ -1,21 +1,26 @@
-
-import {Http} from '../../httpTs/index';
+import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 
-
-import {ResOfTokenAddTokenToShangyunCache,ResOfTokenCheckToken,ResOfTokenRemoveSessionInShangyun} from './_interfaces'
-
 /** 添加token到缓存 */
-export function tokenAddTokenToShangyunCache  (data:any, config?: AxiosRequestConfig) :AxiosPromise<ResOfTokenAddTokenToShangyunCache>{
+export function tokenAddTokenToShangyunCache(
+  data: any,
+  config?: AxiosRequestConfig
+): AxiosPromise {
   return Http.post('/token/addTokenToShangyunCache', data, config)
 }
 
 /** 校验token */
-export function tokenCheckToken  (data:any, config?: AxiosRequestConfig) :AxiosPromise<ResOfTokenCheckToken>{
+export function tokenCheckToken(
+  data: any,
+  config?: AxiosRequestConfig
+): AxiosPromise<boolean> {
   return Http.post('/token/checkToken', data, config)
 }
 
 /** 删除session */
-export function tokenRemoveSessionInShangyun  (data:any, config?: AxiosRequestConfig) :AxiosPromise<ResOfTokenRemoveSessionInShangyun>{
+export function tokenRemoveSessionInShangyun(
+  data: any,
+  config?: AxiosRequestConfig
+): AxiosPromise {
   return Http.post('/token/removeSessionInShangyun', data, config)
 }
