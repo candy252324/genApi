@@ -1,0 +1,3694 @@
+{
+  "swagger": "2.0",
+  "info": { "description": "种子项目接口文档", "version": "1.0", "title": "种子项目接口文档" },
+  "host": "gatewaytest.wygtech.com:9080",
+  "basePath": "/",
+  "tags": [
+    { "name": "test-controller", "x-order": "2147483647" },
+    { "name": "个人客户管理", "x-order": "2147483647" },
+    { "name": "人才商机 FeignController", "x-order": "2147483647" },
+    { "name": "企业商机 FeignController", "x-order": "2147483647" },
+    { "name": "企业客户管理", "x-order": "2147483647" },
+    { "name": "商机", "x-order": "2147483647" },
+    { "name": "商机跟进接口", "x-order": "2147483647" },
+    { "name": "导入任务接口", "x-order": "2147483647" },
+    { "name": "操作记录", "x-order": "2147483647" },
+    { "name": "文件操作接口", "x-order": "2147483647" },
+    { "name": "签约", "x-order": "2147483647" },
+    { "name": "联系人操作接口", "x-order": "2147483647" },
+    { "name": "配置", "x-order": "2147483647" },
+    { "name": "项目商机 FeignController", "x-order": "2147483647" }
+  ],
+  "paths": {
+    "/wygtech-crm/api/business/addBusinessEnterprise": {
+      "post": {
+        "tags": ["商机"],
+        "summary": "新增企业商机",
+        "operationId": "addBusinessEnterpriseUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/AddBusinessEnterpriseReq", "originalRef": "AddBusinessEnterpriseReq" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«AddBusinessResp»",
+              "originalRef": "ApiResponse«AddBusinessResp»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xhj",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/business/addBusinessPerson": {
+      "post": {
+        "tags": ["商机"],
+        "summary": "新增人才商机",
+        "operationId": "addBusinessPersonUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/AddBusinessPersonReq", "originalRef": "AddBusinessPersonReq" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«AddBusinessResp»",
+              "originalRef": "ApiResponse«AddBusinessResp»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xhj",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/business/addBusinessProject": {
+      "post": {
+        "tags": ["商机"],
+        "summary": "新增项目商机",
+        "operationId": "addBusinessProjectUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/AddBusinessProjectReq", "originalRef": "AddBusinessProjectReq" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«AddBusinessResp»",
+              "originalRef": "ApiResponse«AddBusinessResp»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xhj",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/business/assignBusiness": {
+      "post": {
+        "tags": ["商机"],
+        "summary": "分派商机",
+        "operationId": "assignBusinessUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/AssignBusinessReq", "originalRef": "AssignBusinessReq" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«BusinessReceiveResp»",
+              "originalRef": "ApiResponse«BusinessReceiveResp»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xhj",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/business/editBusinessEnterprise": {
+      "post": {
+        "tags": ["商机"],
+        "summary": "修改企业商机",
+        "operationId": "editBusinessEnterpriseUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/AddBusinessEnterpriseReq", "originalRef": "AddBusinessEnterpriseReq" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse", "originalRef": "ApiResponse" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xhj",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/business/editBusinessPerson": {
+      "post": {
+        "tags": ["商机"],
+        "summary": "修改人才商机",
+        "operationId": "editBusinessPersonUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/AddBusinessPersonReq", "originalRef": "AddBusinessPersonReq" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse", "originalRef": "ApiResponse" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xhj",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/business/editBusinessProject": {
+      "post": {
+        "tags": ["商机"],
+        "summary": "修改项目商机",
+        "operationId": "editBusinessProjectUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/AddBusinessProjectReq", "originalRef": "AddBusinessProjectReq" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse", "originalRef": "ApiResponse" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xhj",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/business/enterprise/get": {
+      "get": {
+        "tags": ["企业商机 FeignController"],
+        "summary": "企业商机详情",
+        "operationId": "getUsingGET",
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "req.signId",
+            "in": "query",
+            "description": "签约记录ID",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«EnterpriseResp»",
+              "originalRef": "ApiResponse«EnterpriseResp»"
+            }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/business/enterprise/search": {
+      "post": {
+        "tags": ["商机"],
+        "summary": "搜索企业（关联工商信息）",
+        "operationId": "searchLinkEnterpriseUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/搜索企业商机 request", "originalRef": "搜索企业商机 request" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«ComPage«搜索关联企业商机 response»»",
+              "originalRef": "ApiResponse«ComPage«搜索关联企业商机 response»»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "tengfei",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/business/enterpriseInfo": {
+      "get": {
+        "tags": ["商机"],
+        "summary": "企业商机详情",
+        "operationId": "enterpriseInfoUsingGET",
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "商机id",
+            "required": true,
+            "type": "integer",
+            "minimum": 1,
+            "exclusiveMinimum": false,
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«BusinessEnterpriseInfoResp»",
+              "originalRef": "ApiResponse«BusinessEnterpriseInfoResp»"
+            }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xukai",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/business/link": {
+      "post": {
+        "tags": ["商机"],
+        "summary": "关联工商/人才库/项目库信息",
+        "operationId": "linkUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/关联商机 Request", "originalRef": "关联商机 Request" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«关联商机 Response»",
+              "originalRef": "ApiResponse«关联商机 Response»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "tengfei",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/business/pageEnterpriseBusinessPool": {
+      "post": {
+        "tags": ["商机"],
+        "summary": "企业商机列表",
+        "operationId": "pageEnterpriseBusinessPoolUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/分页查询企业商机公海", "originalRef": "分页查询企业商机公海" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«ComPage«PageEnterpriseBusinessPoolResp»»",
+              "originalRef": "ApiResponse«ComPage«PageEnterpriseBusinessPoolResp»»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xukai",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/business/pagePersonBusinessPool": {
+      "post": {
+        "tags": ["商机"],
+        "summary": "人才商机列表",
+        "operationId": "pagePersonBusinessPoolUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/分页查询人才商机公海", "originalRef": "分页查询人才商机公海" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«ComPage«PagePersonBusinessPoolResp»»",
+              "originalRef": "ApiResponse«ComPage«PagePersonBusinessPoolResp»»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xukai",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/business/pageProjectBusinessPool": {
+      "post": {
+        "tags": ["商机"],
+        "summary": "项目商机列表",
+        "operationId": "pageProjectBusinessPoolUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/项目商机公海查询", "originalRef": "项目商机公海查询" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«ComPage«PageProjectBusinessPoolResp»»",
+              "originalRef": "ApiResponse«ComPage«PageProjectBusinessPoolResp»»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xukai",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/business/person/get": {
+      "get": {
+        "tags": ["人才商机 FeignController"],
+        "summary": "人才商机详情",
+        "operationId": "getUsingGET_1",
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "req.signId",
+            "in": "query",
+            "description": "签约记录ID",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse«PersonResp»", "originalRef": "ApiResponse«PersonResp»" }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/business/person/search": {
+      "post": {
+        "tags": ["商机"],
+        "summary": "搜索人才（关联人才库信息）",
+        "operationId": "searchLinkPersonUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/搜索人才商机 request", "originalRef": "搜索人才商机 request" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«ComPage«搜索关联人才商机 response»»",
+              "originalRef": "ApiResponse«ComPage«搜索关联人才商机 response»»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "tengfei",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/business/personInfo": {
+      "get": {
+        "tags": ["商机"],
+        "summary": "人才商机详情",
+        "operationId": "personInfoUsingGET",
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "商机id",
+            "required": true,
+            "type": "integer",
+            "minimum": 1,
+            "exclusiveMinimum": false,
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«BusinessPersonInfoResp»",
+              "originalRef": "ApiResponse«BusinessPersonInfoResp»"
+            }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xukai",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/business/project/get": {
+      "get": {
+        "tags": ["项目商机 FeignController"],
+        "summary": "项目商机详情",
+        "operationId": "getUsingGET_2",
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "req.signId",
+            "in": "query",
+            "description": "签约记录ID",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse«ProjectResp»", "originalRef": "ApiResponse«ProjectResp»" }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/business/project/search": {
+      "post": {
+        "tags": ["商机"],
+        "summary": "搜索项目（关联项目库信息）",
+        "operationId": "searchLinkProjectUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/搜索项目商机 request", "originalRef": "搜索项目商机 request" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«ComPage«搜索关联项目商机 response»»",
+              "originalRef": "ApiResponse«ComPage«搜索关联项目商机 response»»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "tengfei",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/business/projectInfo": {
+      "get": {
+        "tags": ["商机"],
+        "summary": "项目商机详情",
+        "operationId": "projectInfoUsingGET",
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "商机id",
+            "required": true,
+            "type": "integer",
+            "minimum": 1,
+            "exclusiveMinimum": false,
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«BusinessProjectInfoResp»",
+              "originalRef": "ApiResponse«BusinessProjectInfoResp»"
+            }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xukai",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/business/receiveAndCreateBusiness": {
+      "post": {
+        "tags": ["商机"],
+        "summary": "领取并创建商机",
+        "operationId": "receiveAndCreateBusinessUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/AddBusinessReq", "originalRef": "AddBusinessReq" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«BusinessReceiveResp»",
+              "originalRef": "ApiResponse«BusinessReceiveResp»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xhj",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/business/receiveBusiness": {
+      "post": {
+        "tags": ["商机"],
+        "summary": "领取商机",
+        "operationId": "receiveBusinessUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/ReceiveBusinessReq", "originalRef": "ReceiveBusinessReq" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«BusinessReceiveResp»",
+              "originalRef": "ApiResponse«BusinessReceiveResp»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xhj",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/business/verifyRepeatBusiness": {
+      "post": {
+        "tags": ["商机"],
+        "summary": "校验重复商机",
+        "operationId": "verifyRepeatBusinessUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/VerifyRepeatBusinessReq", "originalRef": "VerifyRepeatBusinessReq" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«AddBusinessResp»",
+              "originalRef": "ApiResponse«AddBusinessResp»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xhj",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/businessContact/add": {
+      "post": {
+        "tags": ["联系人操作接口"],
+        "summary": "添加联系人",
+        "operationId": "addUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/添加联系人请求", "originalRef": "添加联系人请求" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse«boolean»", "originalRef": "ApiResponse«boolean»" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/businessContact/deleteById": {
+      "post": {
+        "tags": ["联系人操作接口"],
+        "summary": "删除联系人",
+        "operationId": "deleteByIdUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/DelReq", "originalRef": "DelReq" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse«boolean»", "originalRef": "ApiResponse«boolean»" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/businessContact/list": {
+      "post": {
+        "tags": ["联系人操作接口"],
+        "summary": "联系人列表",
+        "operationId": "listUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/联系人列表请求", "originalRef": "联系人列表请求" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«ComPage«联系人列表»»",
+              "originalRef": "ApiResponse«ComPage«联系人列表»»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/businessFollow/employeeList": {
+      "post": {
+        "tags": ["商机跟进接口"],
+        "summary": "员工列表",
+        "operationId": "employeeListUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/BasePageReq", "originalRef": "BasePageReq" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«ComPage«EmployeeListResp»»",
+              "originalRef": "ApiResponse«ComPage«EmployeeListResp»»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xukai",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/businessFollow/follow": {
+      "post": {
+        "tags": ["商机跟进接口"],
+        "summary": "跟进",
+        "operationId": "followUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/FollowReq", "originalRef": "FollowReq" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse«boolean»", "originalRef": "ApiResponse«boolean»" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xukai",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/businessFollow/followAgain": {
+      "post": {
+        "tags": ["商机跟进接口"],
+        "summary": "重新跟进",
+        "operationId": "followAgainUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/FollowAgainReq", "originalRef": "FollowAgainReq" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse«boolean»", "originalRef": "ApiResponse«boolean»" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xukai",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/businessFollow/giveUp": {
+      "post": {
+        "tags": ["商机跟进接口"],
+        "summary": "不再跟进",
+        "operationId": "giveUpUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/不再跟进", "originalRef": "不再跟进" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse«boolean»", "originalRef": "ApiResponse«boolean»" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xukai",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/businessFollow/list": {
+      "post": {
+        "tags": ["商机跟进接口"],
+        "summary": "跟进记录",
+        "operationId": "listUsingPOST_1",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "listReq",
+            "description": "listReq",
+            "required": true,
+            "schema": { "$ref": "#/definitions/列表请求0", "originalRef": "列表请求0" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«ComPage«列表请求»»",
+              "originalRef": "ApiResponse«ComPage«列表请求»»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xukai",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/businessFollow/transfer": {
+      "post": {
+        "tags": ["商机跟进接口"],
+        "summary": "转让",
+        "operationId": "transferUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/转让请求", "originalRef": "转让请求" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse«boolean»", "originalRef": "ApiResponse«boolean»" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xukai",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/config/getPersonTitleLabel": {
+      "post": {
+        "tags": ["配置"],
+        "summary": "人才职称下拉框",
+        "operationId": "getPersonTitleLabelUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«List«Tree«string»»»",
+              "originalRef": "ApiResponse«List«Tree«string»»»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xhj",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/customer/enterprise/add": {
+      "post": {
+        "tags": ["企业客户管理"],
+        "summary": "企业客户新增",
+        "operationId": "addUsingPOST_1",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "enterpriseAddReq",
+            "description": "enterpriseAddReq",
+            "required": true,
+            "schema": { "$ref": "#/definitions/CustomerEnterpriseAddReq", "originalRef": "CustomerEnterpriseAddReq" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse", "originalRef": "ApiResponse" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/customer/enterprise/detail": {
+      "get": {
+        "tags": ["企业客户管理"],
+        "summary": "企业客户详情",
+        "operationId": "detailUsingGET",
+        "produces": ["*/*"],
+        "parameters": [
+          { "name": "id", "in": "query", "description": "id", "required": true, "type": "integer", "format": "int64" }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«CustomerEnterpriseDetailResp»",
+              "originalRef": "ApiResponse«CustomerEnterpriseDetailResp»"
+            }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/customer/enterprise/pageList": {
+      "post": {
+        "tags": ["企业客户管理"],
+        "summary": "企业客户分页列表",
+        "operationId": "pageListUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "enterpriseReq",
+            "description": "enterpriseReq",
+            "required": true,
+            "schema": { "$ref": "#/definitions/PageCustomerEnterpriseReq", "originalRef": "PageCustomerEnterpriseReq" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«ComPage«CustomerEnterpriseInfoResp»»",
+              "originalRef": "ApiResponse«ComPage«CustomerEnterpriseInfoResp»»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/customer/enterprise/search": {
+      "post": {
+        "tags": ["企业客户管理"],
+        "summary": "搜索企业客户",
+        "operationId": "searchUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          { "name": "enterpriseName", "in": "query", "description": "企业名称", "required": false, "type": "string" }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«List«搜索企业客户 response»»",
+              "originalRef": "ApiResponse«List«搜索企业客户 response»»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "tengfei",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/customer/enterprise/update": {
+      "post": {
+        "tags": ["企业客户管理"],
+        "summary": "企业客户编辑",
+        "operationId": "updateUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "enterpriseUpReq",
+            "description": "enterpriseUpReq",
+            "required": true,
+            "schema": { "$ref": "#/definitions/CustomerEnterpriseUpReq", "originalRef": "CustomerEnterpriseUpReq" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse", "originalRef": "ApiResponse" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/customer/person/add": {
+      "post": {
+        "tags": ["个人客户管理"],
+        "summary": "个人客户新增",
+        "operationId": "addUsingPOST_2",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "personAddReq",
+            "description": "personAddReq",
+            "required": true,
+            "schema": { "$ref": "#/definitions/CustomerPersonAddReq", "originalRef": "CustomerPersonAddReq" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse", "originalRef": "ApiResponse" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/customer/person/addCertificate": {
+      "post": {
+        "tags": ["个人客户管理"],
+        "summary": "新增执业资格证",
+        "operationId": "addCertificateUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "personCertificateReq",
+            "description": "personCertificateReq",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CustomerPersonCertificateReq",
+              "originalRef": "CustomerPersonCertificateReq"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse", "originalRef": "ApiResponse" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/customer/person/addTitle": {
+      "post": {
+        "tags": ["个人客户管理"],
+        "summary": "新增职称",
+        "operationId": "addTitleUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "personTitleReq",
+            "description": "personTitleReq",
+            "required": true,
+            "schema": { "$ref": "#/definitions/CustomerPersonTitleReq", "originalRef": "CustomerPersonTitleReq" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse", "originalRef": "ApiResponse" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/customer/person/deleteCertificate": {
+      "get": {
+        "tags": ["个人客户管理"],
+        "summary": "删除执业资格证",
+        "operationId": "deleteCertificateUsingGET",
+        "produces": ["*/*"],
+        "parameters": [
+          { "name": "id", "in": "query", "description": "id", "required": true, "type": "integer", "format": "int64" }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse", "originalRef": "ApiResponse" }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/customer/person/deleteTitle": {
+      "get": {
+        "tags": ["个人客户管理"],
+        "summary": "删除职称",
+        "operationId": "deleteTitleUsingGET",
+        "produces": ["*/*"],
+        "parameters": [
+          { "name": "id", "in": "query", "description": "id", "required": true, "type": "integer", "format": "int64" }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse", "originalRef": "ApiResponse" }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/customer/person/detail": {
+      "get": {
+        "tags": ["个人客户管理"],
+        "summary": "个人客户详情",
+        "operationId": "detailUsingGET_1",
+        "produces": ["*/*"],
+        "parameters": [
+          { "name": "id", "in": "query", "description": "id", "required": true, "type": "integer", "format": "int64" }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«CustomerPersonDetailResp»",
+              "originalRef": "ApiResponse«CustomerPersonDetailResp»"
+            }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/customer/person/pageList": {
+      "post": {
+        "tags": ["个人客户管理"],
+        "summary": "个人客户分页列表",
+        "operationId": "pageListUsingPOST_1",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "personReq",
+            "description": "personReq",
+            "required": true,
+            "schema": { "$ref": "#/definitions/PageCustomerPersonReq", "originalRef": "PageCustomerPersonReq" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«ComPage«CustomerPersonInfoResp»»",
+              "originalRef": "ApiResponse«ComPage«CustomerPersonInfoResp»»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/customer/person/search": {
+      "post": {
+        "tags": ["个人客户管理"],
+        "summary": "搜索人才客户",
+        "operationId": "searchUsingPOST_1",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/搜索人才客户 request", "originalRef": "搜索人才客户 request" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«List«搜索人才客户 response»»",
+              "originalRef": "ApiResponse«List«搜索人才客户 response»»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "tengfei",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/customer/person/update": {
+      "post": {
+        "tags": ["个人客户管理"],
+        "summary": "编辑个人客户",
+        "operationId": "updateUsingPOST_1",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "personUpReq",
+            "description": "personUpReq",
+            "required": true,
+            "schema": { "$ref": "#/definitions/CustomerPersonUpReq", "originalRef": "CustomerPersonUpReq" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse", "originalRef": "ApiResponse" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/file/uploadFile": {
+      "post": {
+        "tags": ["文件操作接口"],
+        "summary": "上传文件",
+        "operationId": "uploadFileUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "relId",
+            "in": "query",
+            "description": "业务id",
+            "required": false,
+            "type": "integer",
+            "minimum": 1,
+            "exclusiveMinimum": false,
+            "format": "int64"
+          },
+          {
+            "name": "relType",
+            "in": "query",
+            "description": "业务类型 1：跟进",
+            "required": false,
+            "type": "integer",
+            "minimum": 1,
+            "exclusiveMinimum": false,
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse«上传文件返回»", "originalRef": "ApiResponse«上传文件返回»" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xukai",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/importTask/importExcel": {
+      "post": {
+        "tags": ["导入任务接口"],
+        "summary": "导入excel文件操作",
+        "operationId": "importExcelUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "taskType",
+            "in": "query",
+            "description": "业务类型 1:企业商机 2:人才商机 3:项目商机 4:企业客户 5:个人客户",
+            "required": false,
+            "type": "integer",
+            "minimum": 1,
+            "exclusiveMinimum": false,
+            "format": "int32"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse«读入文件响应»", "originalRef": "ApiResponse«读入文件响应»" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xukai",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/importTask/importList": {
+      "post": {
+        "tags": ["导入任务接口"],
+        "summary": "查询导入列表",
+        "operationId": "importListUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/导入列表请求", "originalRef": "导入列表请求" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«ComPage«导入列表响应»»",
+              "originalRef": "ApiResponse«ComPage«导入列表响应»»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "xukai",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/operateLog/pageList": {
+      "post": {
+        "tags": ["操作记录"],
+        "summary": "分页查询",
+        "operationId": "pageListUsingPOST_2",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/操作日志分页 request", "originalRef": "操作日志分页 request" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«ComPage«操作日志分页 response»»",
+              "originalRef": "ApiResponse«ComPage«操作日志分页 response»»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "tengfei",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/signing/pageList": {
+      "post": {
+        "tags": ["签约"],
+        "summary": "签约记录",
+        "operationId": "pageListUsingPOST_3",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/签约记录分页 request", "originalRef": "签约记录分页 request" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«ComPage«签约记录分页 response»»",
+              "originalRef": "ApiResponse«ComPage«签约记录分页 response»»"
+            }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "tengfei",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/signing/remove": {
+      "post": {
+        "tags": ["签约"],
+        "summary": "解除关联",
+        "operationId": "removeUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/解除签约 request", "originalRef": "解除签约 request" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse«Void»", "originalRef": "ApiResponse«Void»" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "tengfei",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/signing/save": {
+      "post": {
+        "tags": ["签约"],
+        "summary": "新增签约",
+        "operationId": "saveUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/签约Request", "originalRef": "签约Request" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse«Void»", "originalRef": "ApiResponse«Void»" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-author": "tengfei",
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/test/check": {
+      "get": {
+        "tags": ["test-controller"],
+        "summary": "check",
+        "operationId": "checkUsingGET",
+        "produces": ["*/*"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse«object»", "originalRef": "ApiResponse«object»" }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/test/login": {
+      "get": {
+        "tags": ["test-controller"],
+        "summary": "login",
+        "operationId": "loginUsingGET",
+        "produces": ["*/*"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse«object»", "originalRef": "ApiResponse«object»" }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-order": "2147483647"
+      }
+    },
+    "/wygtech-crm/api/test/uuid": {
+      "get": {
+        "tags": ["test-controller"],
+        "summary": "uuid",
+        "operationId": "uuidUsingGET",
+        "produces": ["*/*"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse«object»", "originalRef": "ApiResponse«object»" }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }],
+        "x-order": "2147483647"
+      }
+    }
+  },
+  "securityDefinitions": { "satoken": { "type": "apiKey", "name": "satoken", "in": "header" } },
+  "definitions": {
+    "AddBusinessEnterpriseReq": {
+      "type": "object",
+      "required": ["enterpriseName"],
+      "properties": {
+        "addr": { "type": "string", "description": "企业地址" },
+        "businessType": { "type": "string", "description": "商机类型 ENTERPRISE PERSON PROJECT" },
+        "categoryName": { "type": "string", "description": "行业名称" },
+        "coordinate": { "type": "string", "description": "坐标" },
+        "corporateName": { "type": "string", "description": "法人名称" },
+        "createId": { "type": "integer", "format": "int64" },
+        "createName": { "type": "string" },
+        "created": { "type": "string", "format": "date-time" },
+        "enterpriseCode": { "type": "string", "description": "企业信用代码" },
+        "enterpriseName": { "type": "string", "description": "企业名称" },
+        "enterpriseStatus": { "type": "string", "description": "企业状态" },
+        "establishmentTime": { "type": "string", "format": "date-time", "description": "成立时间" },
+        "id": { "type": "integer", "format": "int64" },
+        "isDelete": { "type": "integer", "format": "int64" },
+        "licenseId": { "type": "integer", "format": "int64", "description": "工商信息id" },
+        "modified": { "type": "string", "format": "date-time" },
+        "phone": { "type": "string", "description": "电话" },
+        "regPersonCnt": { "type": "integer", "format": "int64", "description": "注册人员数" },
+        "registeredCapital": { "type": "integer", "format": "int64", "description": "注册资本" },
+        "skAchievementCnt": { "type": "integer", "format": "int64", "description": "四库业绩数" },
+        "skQualificationCnt": { "type": "integer", "format": "int64", "description": "四库资质数" },
+        "step": { "type": "integer", "format": "int32", "description": "步骤   1需要验证  2直接新增" },
+        "thirdId": { "type": "integer", "format": "int64", "description": "三方id" },
+        "updateId": { "type": "integer", "format": "int64" },
+        "updateName": { "type": "string" }
+      },
+      "title": "AddBusinessEnterpriseReq"
+    },
+    "AddBusinessPersonCertificateReq": {
+      "type": "object",
+      "properties": {
+        "major": { "type": "string", "description": "证书专业" },
+        "name": { "type": "string", "description": "证书名称" }
+      },
+      "title": "AddBusinessPersonCertificateReq"
+    },
+    "AddBusinessPersonReq": {
+      "type": "object",
+      "properties": {
+        "achievementCnt": { "type": "integer", "format": "int64", "description": "个人业绩" },
+        "addr": { "type": "string", "description": "地址" },
+        "businessType": { "type": "string", "description": "商机类型 ENTERPRISE PERSON PROJECT" },
+        "certificateList": {
+          "type": "array",
+          "description": "执业资格证列表",
+          "items": {
+            "$ref": "#/definitions/AddBusinessPersonCertificateReq",
+            "originalRef": "AddBusinessPersonCertificateReq"
+          }
+        },
+        "coordinate": { "type": "string", "description": "坐标" },
+        "createId": { "type": "integer", "format": "int64" },
+        "createName": { "type": "string" },
+        "created": { "type": "string", "format": "date-time" },
+        "education": { "type": "string", "description": "学历" },
+        "gender": { "type": "string", "description": "性别 男 女" },
+        "id": { "type": "integer", "format": "int64" },
+        "isDelete": { "type": "integer", "format": "int64" },
+        "licenseId": { "type": "integer", "format": "int64", "description": "工商信息id" },
+        "modified": { "type": "string", "format": "date-time" },
+        "personName": { "type": "string", "description": "人才名称" },
+        "phone": { "type": "string", "description": "手机号" },
+        "step": { "type": "integer", "format": "int32", "description": "步骤   1需要验证  2直接新增" },
+        "thirdId": { "type": "integer", "format": "int64", "description": "三方id" },
+        "titleList": {
+          "type": "array",
+          "description": "职称列表",
+          "items": { "$ref": "#/definitions/AddBusinessPersonTitleReq", "originalRef": "AddBusinessPersonTitleReq" }
+        },
+        "updateId": { "type": "integer", "format": "int64" },
+        "updateName": { "type": "string" }
+      },
+      "title": "AddBusinessPersonReq"
+    },
+    "AddBusinessPersonTitleReq": {
+      "type": "object",
+      "properties": {
+        "level": { "type": "string", "description": "职称级别" },
+        "major": { "type": "string", "description": "职称专业" }
+      },
+      "title": "AddBusinessPersonTitleReq"
+    },
+    "AddBusinessProjectReq": {
+      "type": "object",
+      "properties": {
+        "agencies": { "type": "string", "description": "代理机构" },
+        "agenciesAddr": { "type": "string", "description": "代理机构地址" },
+        "agenciesPhone": { "type": "string", "description": "代理机构电话" },
+        "biddingCorpAddr": { "type": "string", "description": "招标单位地址" },
+        "biddingCorpName": { "type": "string", "description": "招标单位名称" },
+        "biddingCorpPhone": { "type": "string", "description": "招标单位电话" },
+        "biddingType": { "type": "string", "description": "招标类型" },
+        "businessType": { "type": "string", "description": "商机类型 ENTERPRISE PERSON PROJECT" },
+        "coordinate": { "type": "string", "description": "坐标" },
+        "createId": { "type": "integer", "format": "int64" },
+        "createName": { "type": "string" },
+        "created": { "type": "string", "format": "date-time" },
+        "fileDownloadTime": { "type": "string", "format": "date-time", "description": "文件下载时间" },
+        "id": { "type": "integer", "format": "int64" },
+        "industryType": { "type": "integer", "format": "int64", "description": "行业类型" },
+        "isDelete": { "type": "integer", "format": "int64" },
+        "licenseId": { "type": "integer", "format": "int64", "description": "工商信息id" },
+        "modified": { "type": "string", "format": "date-time" },
+        "phone": { "type": "string", "description": "项目联系方式" },
+        "projectBudget": { "type": "integer", "format": "int64", "description": "招标预算" },
+        "projectName": { "type": "string", "description": "项目名称" },
+        "projectNum": { "type": "string", "description": "项目编码" },
+        "projectType": { "type": "string", "description": "项目类型" },
+        "step": { "type": "integer", "format": "int32", "description": "步骤   1需要验证  2直接新增" },
+        "thirdId": { "type": "integer", "format": "int64", "description": "三方id" },
+        "updateId": { "type": "integer", "format": "int64" },
+        "updateName": { "type": "string" }
+      },
+      "title": "AddBusinessProjectReq"
+    },
+    "AddBusinessReq": {
+      "type": "object",
+      "properties": {
+        "businessType": { "type": "string", "description": "商机类型 ENTERPRISE PERSON PROJECT" },
+        "coordinate": { "type": "string", "description": "坐标" },
+        "createId": { "type": "integer", "format": "int64" },
+        "createName": { "type": "string" },
+        "created": { "type": "string", "format": "date-time" },
+        "id": { "type": "integer", "format": "int64" },
+        "isDelete": { "type": "integer", "format": "int64" },
+        "modified": { "type": "string", "format": "date-time" },
+        "step": { "type": "integer", "format": "int32", "description": "步骤   1需要验证  2直接新增" },
+        "updateId": { "type": "integer", "format": "int64" },
+        "updateName": { "type": "string" }
+      },
+      "title": "AddBusinessReq"
+    },
+    "AddBusinessResp": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer", "format": "int64" },
+        "list": { "type": "array", "description": "重复校验的列表", "items": { "type": "object" } }
+      },
+      "title": "AddBusinessResp"
+    },
+    "ApiResponse": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "type": "object" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse"
+    },
+    "ApiResponse«AddBusinessResp»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "$ref": "#/definitions/AddBusinessResp", "originalRef": "AddBusinessResp" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«AddBusinessResp»"
+    },
+    "ApiResponse«BusinessEnterpriseInfoResp»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "$ref": "#/definitions/BusinessEnterpriseInfoResp", "originalRef": "BusinessEnterpriseInfoResp" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«BusinessEnterpriseInfoResp»"
+    },
+    "ApiResponse«BusinessPersonInfoResp»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "$ref": "#/definitions/BusinessPersonInfoResp", "originalRef": "BusinessPersonInfoResp" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«BusinessPersonInfoResp»"
+    },
+    "ApiResponse«BusinessProjectInfoResp»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "$ref": "#/definitions/BusinessProjectInfoResp", "originalRef": "BusinessProjectInfoResp" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«BusinessProjectInfoResp»"
+    },
+    "ApiResponse«BusinessReceiveResp»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "$ref": "#/definitions/BusinessReceiveResp", "originalRef": "BusinessReceiveResp" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«BusinessReceiveResp»"
+    },
+    "ApiResponse«ComPage«CustomerEnterpriseInfoResp»»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": {
+          "$ref": "#/definitions/ComPage«CustomerEnterpriseInfoResp»",
+          "originalRef": "ComPage«CustomerEnterpriseInfoResp»"
+        },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«ComPage«CustomerEnterpriseInfoResp»»"
+    },
+    "ApiResponse«ComPage«CustomerPersonInfoResp»»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": {
+          "$ref": "#/definitions/ComPage«CustomerPersonInfoResp»",
+          "originalRef": "ComPage«CustomerPersonInfoResp»"
+        },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«ComPage«CustomerPersonInfoResp»»"
+    },
+    "ApiResponse«ComPage«EmployeeListResp»»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "$ref": "#/definitions/ComPage«EmployeeListResp»", "originalRef": "ComPage«EmployeeListResp»" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«ComPage«EmployeeListResp»»"
+    },
+    "ApiResponse«ComPage«PageEnterpriseBusinessPoolResp»»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": {
+          "$ref": "#/definitions/ComPage«PageEnterpriseBusinessPoolResp»",
+          "originalRef": "ComPage«PageEnterpriseBusinessPoolResp»"
+        },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«ComPage«PageEnterpriseBusinessPoolResp»»"
+    },
+    "ApiResponse«ComPage«PagePersonBusinessPoolResp»»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": {
+          "$ref": "#/definitions/ComPage«PagePersonBusinessPoolResp»",
+          "originalRef": "ComPage«PagePersonBusinessPoolResp»"
+        },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«ComPage«PagePersonBusinessPoolResp»»"
+    },
+    "ApiResponse«ComPage«PageProjectBusinessPoolResp»»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": {
+          "$ref": "#/definitions/ComPage«PageProjectBusinessPoolResp»",
+          "originalRef": "ComPage«PageProjectBusinessPoolResp»"
+        },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«ComPage«PageProjectBusinessPoolResp»»"
+    },
+    "ApiResponse«ComPage«列表请求»»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "$ref": "#/definitions/ComPage«列表请求»", "originalRef": "ComPage«列表请求»" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«ComPage«列表请求»»"
+    },
+    "ApiResponse«ComPage«导入列表响应»»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "$ref": "#/definitions/ComPage«导入列表响应»", "originalRef": "ComPage«导入列表响应»" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«ComPage«导入列表响应»»"
+    },
+    "ApiResponse«ComPage«搜索关联人才商机 response»»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": {
+          "$ref": "#/definitions/ComPage«搜索关联人才商机 response»",
+          "originalRef": "ComPage«搜索关联人才商机 response»"
+        },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«ComPage«搜索关联人才商机 response»»"
+    },
+    "ApiResponse«ComPage«搜索关联企业商机 response»»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": {
+          "$ref": "#/definitions/ComPage«搜索关联企业商机 response»",
+          "originalRef": "ComPage«搜索关联企业商机 response»"
+        },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«ComPage«搜索关联企业商机 response»»"
+    },
+    "ApiResponse«ComPage«搜索关联项目商机 response»»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": {
+          "$ref": "#/definitions/ComPage«搜索关联项目商机 response»",
+          "originalRef": "ComPage«搜索关联项目商机 response»"
+        },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«ComPage«搜索关联项目商机 response»»"
+    },
+    "ApiResponse«ComPage«操作日志分页 response»»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": {
+          "$ref": "#/definitions/ComPage«操作日志分页 response»",
+          "originalRef": "ComPage«操作日志分页 response»"
+        },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«ComPage«操作日志分页 response»»"
+    },
+    "ApiResponse«ComPage«签约记录分页 response»»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": {
+          "$ref": "#/definitions/ComPage«签约记录分页 response»",
+          "originalRef": "ComPage«签约记录分页 response»"
+        },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«ComPage«签约记录分页 response»»"
+    },
+    "ApiResponse«ComPage«联系人列表»»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "$ref": "#/definitions/ComPage«联系人列表»", "originalRef": "ComPage«联系人列表»" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«ComPage«联系人列表»»"
+    },
+    "ApiResponse«CustomerEnterpriseDetailResp»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "$ref": "#/definitions/CustomerEnterpriseDetailResp", "originalRef": "CustomerEnterpriseDetailResp" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«CustomerEnterpriseDetailResp»"
+    },
+    "ApiResponse«CustomerPersonDetailResp»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "$ref": "#/definitions/CustomerPersonDetailResp", "originalRef": "CustomerPersonDetailResp" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«CustomerPersonDetailResp»"
+    },
+    "ApiResponse«EnterpriseResp»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "$ref": "#/definitions/EnterpriseResp", "originalRef": "EnterpriseResp" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«EnterpriseResp»"
+    },
+    "ApiResponse«List«Tree«string»»»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "type": "array", "items": { "type": "object", "additionalProperties": { "type": "object" } } },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«List«Tree«string»»»"
+    },
+    "ApiResponse«List«搜索人才客户 response»»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/搜索人才客户 response", "originalRef": "搜索人才客户 response" }
+        },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«List«搜索人才客户 response»»"
+    },
+    "ApiResponse«List«搜索企业客户 response»»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/搜索企业客户 response", "originalRef": "搜索企业客户 response" }
+        },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«List«搜索企业客户 response»»"
+    },
+    "ApiResponse«PersonResp»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "$ref": "#/definitions/PersonResp", "originalRef": "PersonResp" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«PersonResp»"
+    },
+    "ApiResponse«ProjectResp»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "$ref": "#/definitions/ProjectResp", "originalRef": "ProjectResp" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«ProjectResp»"
+    },
+    "ApiResponse«Void»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«Void»"
+    },
+    "ApiResponse«boolean»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "type": "boolean" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«boolean»"
+    },
+    "ApiResponse«object»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "type": "object" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«object»"
+    },
+    "ApiResponse«上传文件返回»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "$ref": "#/definitions/上传文件返回", "originalRef": "上传文件返回" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«上传文件返回»"
+    },
+    "ApiResponse«关联商机 Response»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "$ref": "#/definitions/关联商机 Response", "originalRef": "关联商机 Response" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«关联商机 Response»"
+    },
+    "ApiResponse«读入文件响应»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "$ref": "#/definitions/读入文件响应", "originalRef": "读入文件响应" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«读入文件响应»"
+    },
+    "AssignBusinessReq": {
+      "type": "object",
+      "properties": {
+        "businessType": { "type": "string", "description": "商机类型 enterprise project person" },
+        "followerId": { "type": "integer", "format": "int64", "description": "跟进人id" },
+        "ids": { "type": "array", "description": "列表id", "items": { "type": "integer", "format": "int64" } }
+      },
+      "title": "AssignBusinessReq"
+    },
+    "BasePageReq": {
+      "type": "object",
+      "properties": {
+        "page": { "type": "integer", "format": "int32" },
+        "size": { "type": "integer", "format": "int32" }
+      },
+      "title": "BasePageReq"
+    },
+    "BusinessEnterpriseInfoResp": {
+      "type": "object",
+      "properties": {
+        "addr": { "type": "string", "description": "地址" },
+        "businessStatus": { "type": "string", "description": "商机状态 " },
+        "categoryName": { "type": "string", "description": "行业名称" },
+        "coordinate": { "type": "array", "description": "坐标", "items": { "type": "string" } },
+        "corporateName": { "type": "string", "description": "法人名称" },
+        "created": { "type": "integer", "format": "int64", "description": "创建时间" },
+        "customerId": { "type": "integer", "format": "int64", "description": "客户id" },
+        "enterpriseCode": { "type": "string", "description": "企业信用代码" },
+        "enterpriseName": { "type": "string", "description": "企业名称" },
+        "enterpriseStatus": { "type": "string", "description": "企业状态  存续   吊销" },
+        "establishmentTime": { "type": "string", "description": "成立时间" },
+        "followId": { "type": "integer", "format": "int64", "description": "跟进人id" },
+        "id": { "type": "integer", "format": "int64" },
+        "isRead": { "type": "integer", "format": "int64", "description": "是否阅读" },
+        "lastFollowTime": { "type": "integer", "format": "int64", "description": "最近跟进时间" },
+        "licenseId": { "type": "integer", "format": "int64", "description": "工商信息id" },
+        "phone": { "type": "string", "description": "电话" },
+        "regPersonCnt": { "type": "integer", "format": "int64", "description": "注册人员数" },
+        "registeredCapital": { "type": "integer", "format": "int64", "description": "注册资本(单位元)" },
+        "score": { "type": "integer", "format": "int32", "description": "评分" },
+        "skAchievementCnt": { "type": "integer", "format": "int64", "description": "四库业绩数" },
+        "skQualificationCnt": { "type": "integer", "format": "int64", "description": "四库资质数" },
+        "source": { "type": "string", "description": "来源 " },
+        "tenantId": { "type": "integer", "format": "int64" },
+        "thirdId": { "type": "integer", "format": "int64", "description": "三方id" }
+      },
+      "title": "BusinessEnterpriseInfoResp"
+    },
+    "BusinessPersonCertificateResp": {
+      "type": "object",
+      "properties": {
+        "createName": { "type": "string", "description": "添加人" },
+        "created": { "type": "string", "format": "date-time", "description": "添加时间" },
+        "major": { "type": "string", "description": "专业" },
+        "name": { "type": "string", "description": "证书名称" },
+        "registered": { "type": "string", "description": "是否注册" }
+      },
+      "title": "BusinessPersonCertificateResp"
+    },
+    "BusinessPersonInfoResp": {
+      "type": "object",
+      "properties": {
+        "achievementCnt": { "type": "integer", "format": "int64", "description": "个人业绩" },
+        "addr": { "type": "string", "description": "地址" },
+        "badBehaviorCnt": { "type": "integer", "format": "int64", "description": "不良行为数" },
+        "blacklistRecordCnt": { "type": "integer", "format": "int64", "description": "黑名单数" },
+        "businessStatus": { "type": "string", "description": "商机状态 " },
+        "certificateList": {
+          "type": "array",
+          "description": "执业资格证",
+          "items": {
+            "$ref": "#/definitions/BusinessPersonCertificateResp",
+            "originalRef": "BusinessPersonCertificateResp"
+          }
+        },
+        "coordinate": { "type": "array", "description": "坐标", "items": { "type": "string" } },
+        "created": { "type": "integer", "format": "int64", "description": "创建时间" },
+        "customerId": { "type": "integer", "format": "int64", "description": "客户id" },
+        "education": { "type": "string", "description": "学历" },
+        "followId": { "type": "integer", "format": "int64", "description": "跟进人id" },
+        "gender": { "type": "string", "description": "性别 男 女" },
+        "goodBehaviorCnt": { "type": "integer", "format": "int64", "description": "良好行为数" },
+        "id": { "type": "integer", "format": "int64" },
+        "isRead": { "type": "integer", "format": "int64", "description": "是否阅读" },
+        "lastFollowTime": { "type": "integer", "format": "int64", "description": "最近跟进时间" },
+        "licenseId": { "type": "integer", "format": "int64", "description": "工商信息id" },
+        "personName": { "type": "string", "description": "人才名称" },
+        "phone": { "type": "string", "description": "电话" },
+        "skCertificateCnt": { "type": "integer", "format": "int64", "description": "四库证书数" },
+        "source": { "type": "string", "description": "来源" },
+        "tenantId": { "type": "integer", "format": "int64" },
+        "thirdId": { "type": "integer", "format": "int64", "description": "三方id" },
+        "titleList": {
+          "type": "array",
+          "description": "职称",
+          "items": { "$ref": "#/definitions/BusinessPersonTitleResp", "originalRef": "BusinessPersonTitleResp" }
+        }
+      },
+      "title": "BusinessPersonInfoResp"
+    },
+    "BusinessPersonTitleResp": {
+      "type": "object",
+      "properties": {
+        "level": { "type": "string", "description": "级别" },
+        "major": { "type": "string", "description": "专业" }
+      },
+      "title": "BusinessPersonTitleResp"
+    },
+    "BusinessProjectInfoResp": {
+      "type": "object",
+      "properties": {
+        "agencies": { "type": "string", "description": "代理机构" },
+        "agenciesAddr": { "type": "string", "description": "代理机构地址" },
+        "agenciesPhone": { "type": "string", "description": "代理机构电话" },
+        "biddingCorpAddr": { "type": "string", "description": "招标单位地址" },
+        "biddingCorpName": { "type": "string", "description": "招标单位名称" },
+        "biddingCorpPhone": { "type": "string", "description": "招标单位电话" },
+        "biddingTime": { "type": "integer", "format": "int64", "description": "投标时间" },
+        "businessStatus": { "type": "string", "description": "商机状态 " },
+        "coordinate": { "type": "array", "description": "坐标", "items": { "type": "string" } },
+        "created": { "type": "integer", "format": "int64", "description": "创建时间" },
+        "customerId": { "type": "integer", "format": "int64", "description": "客户id" },
+        "fileDownloadTime": { "type": "integer", "format": "int64", "description": "文件下载时间" },
+        "followId": { "type": "integer", "format": "int64", "description": "跟进人id" },
+        "id": { "type": "integer", "format": "int64" },
+        "isRead": { "type": "integer", "format": "int64", "description": "是否阅读" },
+        "lastFollowTime": { "type": "integer", "format": "int64", "description": "最近跟进时间" },
+        "licenseId": { "type": "integer", "format": "int64", "description": "工商信息id" },
+        "phone": { "type": "string", "description": "电话" },
+        "projectBudget": { "type": "integer", "format": "int64", "description": "招标预算(单位元)" },
+        "projectName": { "type": "string", "description": "项目名称" },
+        "projectNum": { "type": "string", "description": "项目编码" },
+        "projectType": { "type": "string", "description": "项目类型" },
+        "source": { "type": "string", "description": "来源 " },
+        "tenantId": { "type": "integer", "format": "int64" },
+        "thirdId": { "type": "integer", "format": "int64", "description": "三方id" },
+        "webPageUrl": { "type": "string", "description": "原网页url" }
+      },
+      "title": "BusinessProjectInfoResp"
+    },
+    "BusinessReceiveResp": {
+      "type": "object",
+      "properties": {
+        "failCnt": { "type": "integer", "format": "int32", "description": "失败数量" },
+        "receiveName": { "type": "string", "description": "领取人姓名" },
+        "successCnt": { "type": "integer", "format": "int32", "description": "成功数量" }
+      },
+      "title": "BusinessReceiveResp"
+    },
+    "CharSequence": { "type": "object", "title": "CharSequence" },
+    "ComPage«CustomerEnterpriseInfoResp»": {
+      "type": "object",
+      "properties": {
+        "current": { "type": "integer", "format": "int64" },
+        "records": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/CustomerEnterpriseInfoResp", "originalRef": "CustomerEnterpriseInfoResp" }
+        },
+        "size": { "type": "integer", "format": "int64" },
+        "total": { "type": "integer", "format": "int64" }
+      },
+      "title": "ComPage«CustomerEnterpriseInfoResp»"
+    },
+    "ComPage«CustomerPersonInfoResp»": {
+      "type": "object",
+      "properties": {
+        "current": { "type": "integer", "format": "int64" },
+        "records": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/CustomerPersonInfoResp", "originalRef": "CustomerPersonInfoResp" }
+        },
+        "size": { "type": "integer", "format": "int64" },
+        "total": { "type": "integer", "format": "int64" }
+      },
+      "title": "ComPage«CustomerPersonInfoResp»"
+    },
+    "ComPage«EmployeeListResp»": {
+      "type": "object",
+      "properties": {
+        "current": { "type": "integer", "format": "int64" },
+        "records": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/EmployeeListResp", "originalRef": "EmployeeListResp" }
+        },
+        "size": { "type": "integer", "format": "int64" },
+        "total": { "type": "integer", "format": "int64" }
+      },
+      "title": "ComPage«EmployeeListResp»"
+    },
+    "ComPage«PageEnterpriseBusinessPoolResp»": {
+      "type": "object",
+      "properties": {
+        "current": { "type": "integer", "format": "int64" },
+        "records": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PageEnterpriseBusinessPoolResp",
+            "originalRef": "PageEnterpriseBusinessPoolResp"
+          }
+        },
+        "size": { "type": "integer", "format": "int64" },
+        "total": { "type": "integer", "format": "int64" }
+      },
+      "title": "ComPage«PageEnterpriseBusinessPoolResp»"
+    },
+    "ComPage«PagePersonBusinessPoolResp»": {
+      "type": "object",
+      "properties": {
+        "current": { "type": "integer", "format": "int64" },
+        "records": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/PagePersonBusinessPoolResp", "originalRef": "PagePersonBusinessPoolResp" }
+        },
+        "size": { "type": "integer", "format": "int64" },
+        "total": { "type": "integer", "format": "int64" }
+      },
+      "title": "ComPage«PagePersonBusinessPoolResp»"
+    },
+    "ComPage«PageProjectBusinessPoolResp»": {
+      "type": "object",
+      "properties": {
+        "current": { "type": "integer", "format": "int64" },
+        "records": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/PageProjectBusinessPoolResp", "originalRef": "PageProjectBusinessPoolResp" }
+        },
+        "size": { "type": "integer", "format": "int64" },
+        "total": { "type": "integer", "format": "int64" }
+      },
+      "title": "ComPage«PageProjectBusinessPoolResp»"
+    },
+    "ComPage«列表请求»": {
+      "type": "object",
+      "properties": {
+        "current": { "type": "integer", "format": "int64" },
+        "records": { "type": "array", "items": { "$ref": "#/definitions/列表请求", "originalRef": "列表请求" } },
+        "size": { "type": "integer", "format": "int64" },
+        "total": { "type": "integer", "format": "int64" }
+      },
+      "title": "ComPage«列表请求»"
+    },
+    "ComPage«导入列表响应»": {
+      "type": "object",
+      "properties": {
+        "current": { "type": "integer", "format": "int64" },
+        "records": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/导入列表响应", "originalRef": "导入列表响应" }
+        },
+        "size": { "type": "integer", "format": "int64" },
+        "total": { "type": "integer", "format": "int64" }
+      },
+      "title": "ComPage«导入列表响应»"
+    },
+    "ComPage«搜索关联人才商机 response»": {
+      "type": "object",
+      "properties": {
+        "current": { "type": "integer", "format": "int64" },
+        "records": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/搜索关联人才商机 response", "originalRef": "搜索关联人才商机 response" }
+        },
+        "size": { "type": "integer", "format": "int64" },
+        "total": { "type": "integer", "format": "int64" }
+      },
+      "title": "ComPage«搜索关联人才商机 response»"
+    },
+    "ComPage«搜索关联企业商机 response»": {
+      "type": "object",
+      "properties": {
+        "current": { "type": "integer", "format": "int64" },
+        "records": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/搜索关联企业商机 response", "originalRef": "搜索关联企业商机 response" }
+        },
+        "size": { "type": "integer", "format": "int64" },
+        "total": { "type": "integer", "format": "int64" }
+      },
+      "title": "ComPage«搜索关联企业商机 response»"
+    },
+    "ComPage«搜索关联项目商机 response»": {
+      "type": "object",
+      "properties": {
+        "current": { "type": "integer", "format": "int64" },
+        "records": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/搜索关联项目商机 response", "originalRef": "搜索关联项目商机 response" }
+        },
+        "size": { "type": "integer", "format": "int64" },
+        "total": { "type": "integer", "format": "int64" }
+      },
+      "title": "ComPage«搜索关联项目商机 response»"
+    },
+    "ComPage«操作日志分页 response»": {
+      "type": "object",
+      "properties": {
+        "current": { "type": "integer", "format": "int64" },
+        "records": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/操作日志分页 response", "originalRef": "操作日志分页 response" }
+        },
+        "size": { "type": "integer", "format": "int64" },
+        "total": { "type": "integer", "format": "int64" }
+      },
+      "title": "ComPage«操作日志分页 response»"
+    },
+    "ComPage«签约记录分页 response»": {
+      "type": "object",
+      "properties": {
+        "current": { "type": "integer", "format": "int64" },
+        "records": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/签约记录分页 response", "originalRef": "签约记录分页 response" }
+        },
+        "size": { "type": "integer", "format": "int64" },
+        "total": { "type": "integer", "format": "int64" }
+      },
+      "title": "ComPage«签约记录分页 response»"
+    },
+    "ComPage«联系人列表»": {
+      "type": "object",
+      "properties": {
+        "current": { "type": "integer", "format": "int64" },
+        "records": { "type": "array", "items": { "$ref": "#/definitions/联系人列表", "originalRef": "联系人列表" } },
+        "size": { "type": "integer", "format": "int64" },
+        "total": { "type": "integer", "format": "int64" }
+      },
+      "title": "ComPage«联系人列表»"
+    },
+    "Comparable«object»": { "type": "object", "title": "Comparable«object»" },
+    "CustomerEnterpriseAddReq": {
+      "type": "object",
+      "properties": {
+        "address": { "type": "string", "description": "地址" },
+        "area": { "type": "string", "description": "区县" },
+        "city": { "type": "string", "description": "市" },
+        "coordinate": { "type": "string", "description": "坐标" },
+        "country": { "type": "string", "description": "国家" },
+        "creditCode": { "type": "string", "description": "企业信用代码" },
+        "industry": { "type": "string", "description": "所属行业" },
+        "labels": { "type": "array", "description": "标签", "items": { "type": "string" } },
+        "legalPerson": { "type": "string", "description": "企业法人" },
+        "location": { "type": "string", "description": "住址" },
+        "name": { "type": "string", "description": "企业名称" },
+        "performance": { "type": "integer", "format": "int32", "description": "四库业绩" },
+        "phone": { "type": "string", "description": "联系电话" },
+        "province": { "type": "string", "description": "省份" },
+        "qualifications": { "type": "integer", "format": "int32", "description": "四库资质" },
+        "registeredCapital": { "type": "number", "description": "注册资金" },
+        "registeredMember": { "type": "integer", "format": "int32", "description": "注册人员" },
+        "registeredTime": { "type": "string", "format": "date-time", "description": "成立时间" }
+      },
+      "title": "CustomerEnterpriseAddReq"
+    },
+    "CustomerEnterpriseDetailResp": {
+      "type": "object",
+      "properties": {
+        "address": { "type": "string", "description": "地址" },
+        "createName": { "type": "string", "format": "date-time", "description": "创建人" },
+        "created": { "type": "string", "format": "date-time", "description": "创建时间" },
+        "creditCode": { "type": "string", "description": "企业信用代码" },
+        "industry": { "type": "string", "description": "所属行业" },
+        "labels": {
+          "type": "array",
+          "description": "标签",
+          "items": { "$ref": "#/definitions/CustomerLabelResp", "originalRef": "CustomerLabelResp" }
+        },
+        "legalPerson": { "type": "string", "description": "企业法人" },
+        "name": { "type": "string", "description": "企业名称" },
+        "phone": { "type": "string", "description": "联系电话" },
+        "registeredCapital": { "type": "number", "description": "注册资金" },
+        "registeredTime": { "type": "string", "format": "date-time", "description": "成立时间" }
+      },
+      "title": "CustomerEnterpriseDetailResp"
+    },
+    "CustomerEnterpriseInfoResp": {
+      "type": "object",
+      "properties": {
+        "address": { "type": "string", "description": "地址" },
+        "id": { "type": "integer", "format": "int64", "description": "主键Id" },
+        "label": { "type": "string", "description": "标签" },
+        "name": { "type": "string", "description": "企业名称" },
+        "performance": { "type": "integer", "format": "int32", "description": "四库业绩" },
+        "phone": { "type": "string", "description": "联系电话" },
+        "qualifications": { "type": "integer", "format": "int32", "description": "四库资质" },
+        "registeredCapital": { "type": "number", "description": "注册资金" },
+        "registeredMember": { "type": "integer", "format": "int32", "description": "注册人员" },
+        "registeredTime": { "type": "string", "format": "date-time", "description": "成立时间" },
+        "score": { "type": "integer", "format": "int32", "description": "评分" },
+        "status": { "type": "string", "description": "企业状态" }
+      },
+      "title": "CustomerEnterpriseInfoResp"
+    },
+    "CustomerEnterpriseUpReq": {
+      "type": "object",
+      "properties": {
+        "address": { "type": "string", "description": "地址" },
+        "area": { "type": "string", "description": "区县" },
+        "city": { "type": "string", "description": "市" },
+        "coordinate": { "type": "string", "description": "坐标" },
+        "country": { "type": "string", "description": "国家" },
+        "creditCode": { "type": "string", "description": "企业信用代码" },
+        "id": { "type": "integer", "format": "int64", "description": "主键 Id" },
+        "industry": { "type": "string", "description": "所属行业" },
+        "labels": {
+          "type": "array",
+          "description": "标签",
+          "items": { "$ref": "#/definitions/CustomerLabelReq", "originalRef": "CustomerLabelReq" }
+        },
+        "legalPerson": { "type": "string", "description": "企业法人" },
+        "location": { "type": "string", "description": "住址" },
+        "name": { "type": "string", "description": "企业名称" },
+        "performance": { "type": "integer", "format": "int32", "description": "四库业绩" },
+        "phone": { "type": "string", "description": "联系电话" },
+        "province": { "type": "string", "description": "省份" },
+        "qualifications": { "type": "integer", "format": "int32", "description": "四库资质" },
+        "registeredCapital": { "type": "number", "description": "注册资金" },
+        "registeredMember": { "type": "integer", "format": "int32", "description": "注册人员" },
+        "registeredTime": { "type": "string", "format": "date-time", "description": "成立时间" }
+      },
+      "title": "CustomerEnterpriseUpReq"
+    },
+    "CustomerLabelReq": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer", "format": "int64", "description": "标签主键 Id" },
+        "labelName": { "type": "string", "description": "标签名称" }
+      },
+      "title": "CustomerLabelReq"
+    },
+    "CustomerLabelResp": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer", "format": "int64", "description": "主键 Id" },
+        "labelName": { "type": "string", "description": "标签名称" }
+      },
+      "title": "CustomerLabelResp"
+    },
+    "CustomerPersonAddReq": {
+      "type": "object",
+      "properties": {
+        "address": { "type": "string", "description": "地址" },
+        "area": { "type": "string", "description": "区县" },
+        "certificateList": {
+          "type": "array",
+          "description": "执业资格证",
+          "items": {
+            "$ref": "#/definitions/CustomerPersonCertificateReq",
+            "originalRef": "CustomerPersonCertificateReq"
+          }
+        },
+        "city": { "type": "string", "description": "市" },
+        "coordinate": { "type": "string", "description": "坐标" },
+        "country": { "type": "string", "description": "国家" },
+        "education": { "type": "string", "description": "学历" },
+        "email": { "type": "string", "description": "邮箱" },
+        "labels": { "type": "array", "description": "标签", "items": { "type": "string" } },
+        "location": { "type": "string", "description": "住址" },
+        "name": { "type": "string", "description": "姓名" },
+        "phone": { "type": "string", "description": "手机号" },
+        "province": { "type": "string", "description": "省份" },
+        "sex": { "type": "string", "description": "性别" },
+        "titleList": {
+          "type": "array",
+          "description": "职称",
+          "items": { "$ref": "#/definitions/CustomerPersonTitleReq", "originalRef": "CustomerPersonTitleReq" }
+        }
+      },
+      "title": "CustomerPersonAddReq"
+    },
+    "CustomerPersonCertificateInfoResp": {
+      "type": "object",
+      "properties": {
+        "createName": { "type": "string", "format": "date-time", "description": "创建人" },
+        "created": { "type": "string", "format": "date-time", "description": "创建时间" },
+        "customerId": { "type": "integer", "format": "int64", "description": " 客户 Id" },
+        "id": { "type": "integer", "format": "int64", "description": "主键 Id" },
+        "major": { "type": "string", "description": "专业" },
+        "name": { "type": "string", "description": "证书名称" },
+        "registered": { "type": "string", "description": "是否注册" }
+      },
+      "title": "CustomerPersonCertificateInfoResp"
+    },
+    "CustomerPersonCertificateReq": {
+      "type": "object",
+      "properties": {
+        "customerId": { "type": "integer", "format": "int64", "description": " 客户 Id，新增客户时不用传" },
+        "major": { "type": "string", "description": "专业" },
+        "name": { "type": "string", "description": "证书名称" }
+      },
+      "title": "CustomerPersonCertificateReq"
+    },
+    "CustomerPersonDetailResp": {
+      "type": "object",
+      "properties": {
+        "address": { "type": "string", "description": "地址" },
+        "careerType": { "type": "string", "description": "职业类型" },
+        "certificateList": {
+          "type": "array",
+          "description": "执业资格证",
+          "items": {
+            "$ref": "#/definitions/CustomerPersonCertificateInfoResp",
+            "originalRef": "CustomerPersonCertificateInfoResp"
+          }
+        },
+        "createName": { "type": "string", "format": "date-time", "description": "创建人" },
+        "created": { "type": "string", "format": "date-time", "description": "创建时间" },
+        "education": { "type": "string", "description": "学历" },
+        "labels": {
+          "type": "array",
+          "description": "标签",
+          "items": { "$ref": "#/definitions/CustomerLabelResp", "originalRef": "CustomerLabelResp" }
+        },
+        "name": { "type": "string", "description": "姓名" },
+        "performance": { "type": "integer", "format": "int32", "description": "业绩" },
+        "phone": { "type": "string", "description": "手机号" },
+        "sex": { "type": "string", "description": "性别" },
+        "titleList": {
+          "type": "array",
+          "description": "职称级别",
+          "items": { "$ref": "#/definitions/CustomerPersonTitleInfoResp", "originalRef": "CustomerPersonTitleInfoResp" }
+        }
+      },
+      "title": "CustomerPersonDetailResp"
+    },
+    "CustomerPersonInfoResp": {
+      "type": "object",
+      "properties": {
+        "area": { "type": "string", "description": "区" },
+        "badBehavior": { "type": "integer", "format": "int32", "description": "不良行为" },
+        "blacklistRecords": { "type": "integer", "format": "int32", "description": "黑名单记录" },
+        "certificate": { "type": "string", "description": "职业资格证" },
+        "certificateNum": { "type": "integer", "format": "int32", "description": "四库证书数量" },
+        "city": { "type": "string", "description": "市" },
+        "education": { "type": "string", "description": "学历" },
+        "goodBehavior": { "type": "integer", "format": "int32", "description": "良好行为" },
+        "id": { "type": "integer", "format": "int64", "description": "主键" },
+        "label": { "type": "string", "description": "标签" },
+        "name": { "type": "string", "description": "姓名" },
+        "performance": { "type": "integer", "format": "int32", "description": "业绩" },
+        "phone": { "type": "string", "description": "手机号" },
+        "province": { "type": "string", "description": "省" },
+        "title": { "type": "string", "description": "职称" }
+      },
+      "title": "CustomerPersonInfoResp"
+    },
+    "CustomerPersonTitleInfoResp": {
+      "type": "object",
+      "properties": {
+        "customerId": { "type": "integer", "format": "int64", "description": " 客户 Id" },
+        "id": { "type": "integer", "format": "int64", "description": "主键 Id" },
+        "level": { "type": "string", "description": "级别" },
+        "major": { "type": "string", "description": "专业" }
+      },
+      "title": "CustomerPersonTitleInfoResp"
+    },
+    "CustomerPersonTitleReq": {
+      "type": "object",
+      "properties": {
+        "customerId": { "type": "integer", "format": "int64", "description": " 客户 Id，新增客户时不用传" },
+        "level": { "type": "string", "description": "级别" },
+        "major": { "type": "string", "description": "专业" }
+      },
+      "title": "CustomerPersonTitleReq"
+    },
+    "CustomerPersonUpReq": {
+      "type": "object",
+      "properties": {
+        "address": { "type": "string", "description": "地址" },
+        "area": { "type": "string", "description": "区县" },
+        "city": { "type": "string", "description": "市" },
+        "coordinate": { "type": "string", "description": "坐标" },
+        "country": { "type": "string", "description": "国家" },
+        "education": { "type": "string", "description": "学历" },
+        "email": { "type": "string", "description": "姓名" },
+        "id": { "type": "integer", "format": "int64", "description": "主键 Id" },
+        "labels": {
+          "type": "array",
+          "description": "标签",
+          "items": { "$ref": "#/definitions/CustomerLabelReq", "originalRef": "CustomerLabelReq" }
+        },
+        "location": { "type": "string", "description": "住址" },
+        "name": { "type": "string", "description": "姓名" },
+        "phone": { "type": "string", "description": "手机号" },
+        "province": { "type": "string", "description": "省份" },
+        "sex": { "type": "string", "description": "性别" }
+      },
+      "title": "CustomerPersonUpReq"
+    },
+    "DelReq": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer", "format": "int64", "description": "删除id", "minimum": 1, "exclusiveMinimum": false }
+      },
+      "title": "DelReq"
+    },
+    "EmployeeListResp": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer", "format": "int64", "description": "员工id" },
+        "name": { "type": "string", "description": "名称" }
+      },
+      "title": "EmployeeListResp"
+    },
+    "EnterpriseResp": {
+      "type": "object",
+      "properties": {
+        "addr": { "type": "string" },
+        "categoryName": { "type": "string" },
+        "corporateName": { "type": "string" },
+        "enterpriseCode": { "type": "string" },
+        "enterpriseId": { "type": "integer", "format": "int64" },
+        "enterpriseName": { "type": "string" },
+        "enterpriseStatus": { "type": "string" },
+        "establishmentTime": { "type": "string", "format": "date-time" },
+        "phone": { "type": "string" },
+        "regPersonCnt": { "type": "integer", "format": "int64" },
+        "registeredCapital": { "type": "integer", "format": "int64" },
+        "score": { "type": "integer", "format": "int32" },
+        "skAchievementCnt": { "type": "integer", "format": "int64" },
+        "skQualificationCnt": { "type": "integer", "format": "int64" },
+        "thirdId": { "type": "integer", "format": "int64" }
+      },
+      "title": "EnterpriseResp"
+    },
+    "FailData": {
+      "type": "object",
+      "properties": {
+        "excelNum": { "type": "integer", "format": "int32", "description": "excel行数" },
+        "firstName": { "type": "string", "description": "第一列名称" },
+        "reason": { "type": "string", "description": "失败原因" }
+      },
+      "title": "FailData"
+    },
+    "FollowAgainReq": {
+      "type": "object",
+      "properties": {
+        "businessId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "商机id",
+          "minimum": 1,
+          "exclusiveMinimum": false
+        },
+        "businessType": { "type": "string", "description": "商机类型  enterprise project person" }
+      },
+      "title": "FollowAgainReq"
+    },
+    "FollowReq": {
+      "type": "object",
+      "properties": {
+        "addr": { "type": "string", "description": "地址" },
+        "businessId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "商机id",
+          "minimum": 1,
+          "exclusiveMinimum": false
+        },
+        "businessType": { "type": "string", "description": "商机类型  enterprise project person" },
+        "content": { "type": "string", "description": "沟通内容" },
+        "coordinate": { "type": "array", "description": "坐标,经度-纬度", "items": { "type": "string" } },
+        "fileIdList": {
+          "type": "array",
+          "description": "图片文件id列表",
+          "items": { "type": "integer", "format": "int64" }
+        },
+        "followResult": { "type": "string", "description": "跟进结果" },
+        "followType": { "type": "string", "description": "跟进方式" },
+        "receiverId": { "type": "integer", "format": "int64", "description": "接收人id" }
+      },
+      "title": "FollowReq"
+    },
+    "PageCustomerEnterpriseReq": {
+      "type": "object",
+      "properties": {
+        "enterprise": { "type": "string", "description": "企业查询：企业名称/法人/信用代码" },
+        "labelList": { "type": "array", "description": "标签", "items": { "type": "string" } },
+        "own": { "type": "boolean", "description": "是否是我的:true 是，false 否" },
+        "page": { "type": "integer", "format": "int32" },
+        "performance": { "type": "integer", "format": "int32", "description": "四库业绩：0正序，1倒序" },
+        "qualifications": { "type": "integer", "format": "int32", "description": "四库资质：0正序，1倒序" },
+        "registeredCapitalEnd": { "type": "number", "description": "注册资本结束" },
+        "registeredCapitalStart": { "type": "number", "description": "注册资本开始" },
+        "registeredMember": { "type": "integer", "format": "int32", "description": "注册人员：0正序，1倒序" },
+        "registeredTimeEnd": { "type": "string", "format": "date-time", "description": "成立时间结束" },
+        "registeredTimeStart": { "type": "string", "format": "date-time", "description": "成立时间开始" },
+        "score": { "type": "integer", "format": "int32", "description": "评分：0正序，1倒序" },
+        "sign": { "type": "integer", "format": "int32", "description": "签约/未签约：0未签约，1已签约" },
+        "size": { "type": "integer", "format": "int32" },
+        "status": { "type": "string", "description": "企业状态" }
+      },
+      "title": "PageCustomerEnterpriseReq"
+    },
+    "PageCustomerPersonReq": {
+      "type": "object",
+      "properties": {
+        "badBehavior": { "type": "integer", "format": "int32", "description": "不良行为：0正序，1倒序" },
+        "blacklistRecords": { "type": "integer", "format": "int32", "description": "黑名单记录：0正序，1倒序" },
+        "certificate": { "type": "string", "description": "职业资格证" },
+        "certificateNum": { "type": "integer", "format": "int32", "description": "四库证书数量，0正序，1倒序" },
+        "goodBehavior": { "type": "integer", "format": "int32", "description": "良好行为：0正序，1倒序" },
+        "labelList": { "type": "array", "description": "标签", "items": { "type": "string" } },
+        "level": { "type": "string", "description": "职称" },
+        "major": { "type": "string", "description": "职称专业" },
+        "own": { "type": "boolean", "description": "是否是我的:true 是，false 否" },
+        "page": { "type": "integer", "format": "int32" },
+        "performance": { "type": "integer", "format": "int32", "description": "业绩：0正序，1倒序" },
+        "person": { "type": "string", "description": "人才查询" },
+        "size": { "type": "integer", "format": "int32" }
+      },
+      "title": "PageCustomerPersonReq"
+    },
+    "PageEnterpriseBusinessPoolResp": {
+      "type": "object",
+      "properties": {
+        "addr": { "type": "string", "description": "地址" },
+        "businessStatus": { "type": "string", "description": "商机状态 " },
+        "coordinate": { "type": "array", "description": "坐标", "items": { "type": "string" } },
+        "created": { "type": "integer", "format": "int64", "description": "创建时间" },
+        "enterpriseName": { "type": "string", "description": "企业名称" },
+        "enterpriseStatus": { "type": "string", "description": "企业状态  存续   吊销" },
+        "establishmentTime": { "type": "string", "description": "成立时间" },
+        "followId": { "type": "integer", "format": "int64", "description": "跟进人id" },
+        "id": { "type": "integer", "format": "int64" },
+        "isRead": { "type": "integer", "format": "int64", "description": "是否阅读" },
+        "lastFollowTime": { "type": "integer", "format": "int64", "description": "最近跟进时间" },
+        "phone": { "type": "string", "description": "电话" },
+        "regPersonCnt": { "type": "integer", "format": "int64", "description": "注册人员数" },
+        "registeredCapital": { "type": "integer", "format": "int64", "description": "注册资本(单位元)" },
+        "score": { "type": "integer", "format": "int32", "description": "评分" },
+        "skAchievementCnt": { "type": "integer", "format": "int64", "description": "四库业绩数" },
+        "skQualificationCnt": { "type": "integer", "format": "int64", "description": "四库资质数" },
+        "source": { "type": "string", "description": "来源  雷达 公海 高级搜索 小程序历史数据" },
+        "tenantId": { "type": "integer", "format": "int64" }
+      },
+      "title": "PageEnterpriseBusinessPoolResp"
+    },
+    "PagePersonBusinessPoolResp": {
+      "type": "object",
+      "properties": {
+        "achievementCnt": { "type": "integer", "format": "int64", "description": "个人业绩" },
+        "addr": { "type": "string", "description": "地址" },
+        "badBehaviorCnt": { "type": "integer", "format": "int64", "description": "不良行为数" },
+        "blacklistRecordCnt": { "type": "integer", "format": "int64", "description": "黑名单数" },
+        "businessStatus": { "type": "string", "description": "商机状态 " },
+        "certificateName": { "type": "string", "description": "执业资格证" },
+        "coordinate": { "type": "array", "description": "坐标", "items": { "type": "string" } },
+        "created": { "type": "integer", "format": "int64", "description": "最近获取时间" },
+        "education": { "type": "string", "description": "学历" },
+        "followId": { "type": "integer", "format": "int64", "description": "跟进人id" },
+        "gender": { "type": "string", "description": "性别 男 女" },
+        "goodBehaviorCnt": { "type": "integer", "format": "int64", "description": "良好行为数" },
+        "id": { "type": "integer", "format": "int64" },
+        "isRead": { "type": "integer", "format": "int64", "description": "是否阅读" },
+        "lastFollowTime": { "type": "integer", "format": "int64", "description": "最近跟进时间" },
+        "licenseId": { "type": "integer", "format": "int64", "description": "客户id" },
+        "personName": { "type": "string", "description": "人才名称" },
+        "phone": { "type": "string", "description": "电话" },
+        "skCertificateCnt": { "type": "integer", "format": "int64", "description": "四库证书数" },
+        "source": { "type": "string", "description": "来源  雷达 公海 高级搜索 小程序历史数据" },
+        "tenantId": { "type": "integer", "format": "int64" },
+        "title": { "type": "string", "description": "职称" }
+      },
+      "title": "PagePersonBusinessPoolResp"
+    },
+    "PageProjectBusinessPoolResp": {
+      "type": "object",
+      "properties": {
+        "biddingCorpAddr": { "type": "string", "description": "招标单位地址" },
+        "biddingCorpName": { "type": "string", "description": "招标单位名称" },
+        "biddingCorpPhone": { "type": "string", "description": "招标单位电话" },
+        "biddingTime": { "type": "integer", "format": "int64", "description": "投标时间" },
+        "biddingType": {
+          "type": "string",
+          "description": "招标类型 all:全部,public:公开招标,invite:邀请招标),inquiry:询价,single:单一来源,negotiation:竞争性谈判,consultation :竞争性磋商,bidding：竞价"
+        },
+        "businessStatus": { "type": "string", "description": "商机状态 " },
+        "coordinate": { "type": "array", "description": "坐标", "items": { "type": "string" } },
+        "created": { "type": "integer", "format": "int64", "description": "创建时间" },
+        "fileDownloadTime": { "type": "integer", "format": "int64", "description": "文件下载时间" },
+        "followId": { "type": "integer", "format": "int64", "description": "跟进人id" },
+        "id": { "type": "integer", "format": "int64" },
+        "isRead": { "type": "integer", "format": "int64", "description": "是否阅读" },
+        "lastFollowTime": { "type": "integer", "format": "int64", "description": "最近跟进时间" },
+        "phone": { "type": "string", "description": "电话" },
+        "projectName": { "type": "string", "description": "项目名称" },
+        "projectType": { "type": "string", "description": "项目类型" },
+        "source": { "type": "string", "description": "来源  雷达 公海 高级搜索 小程序历史数据" },
+        "tenantId": { "type": "integer", "format": "int64" }
+      },
+      "title": "PageProjectBusinessPoolResp"
+    },
+    "PersonResp": {
+      "type": "object",
+      "properties": {
+        "achievementCnt": { "type": "integer", "format": "int64" },
+        "addr": { "type": "string" },
+        "badBehaviorCnt": { "type": "integer", "format": "int64" },
+        "blacklistRecordCnt": { "type": "integer", "format": "int64" },
+        "certificateName": { "type": "string" },
+        "education": { "type": "string" },
+        "gender": { "type": "string" },
+        "goodBehaviorCnt": { "type": "integer", "format": "int64" },
+        "personId": { "type": "integer", "format": "int64" },
+        "personName": { "type": "string" },
+        "phone": { "type": "string" },
+        "skCertificateCnt": { "type": "integer", "format": "int64" },
+        "thirdId": { "type": "integer", "format": "int64" }
+      },
+      "title": "PersonResp"
+    },
+    "ProjectResp": {
+      "type": "object",
+      "properties": {
+        "agencies": { "type": "string" },
+        "agenciesAddr": { "type": "string" },
+        "agenciesPhone": { "type": "string" },
+        "biddingCorpAddr": { "type": "string" },
+        "biddingCorpName": { "type": "string" },
+        "biddingCorpPhone": { "type": "string" },
+        "biddingTime": { "type": "string", "format": "date-time" },
+        "biddingType": { "type": "string" },
+        "fileDownloadTime": { "type": "string", "format": "date-time" },
+        "industryType": { "type": "integer", "format": "int64" },
+        "phone": { "type": "string" },
+        "projectBudget": { "type": "integer", "format": "int64" },
+        "projectId": { "type": "integer", "format": "int64" },
+        "projectName": { "type": "string" },
+        "projectNum": { "type": "string" },
+        "projectType": { "type": "string" },
+        "thirdId": { "type": "integer", "format": "int64" }
+      },
+      "title": "ProjectResp"
+    },
+    "ReceiveBusinessReq": {
+      "type": "object",
+      "properties": {
+        "businessType": { "type": "string", "description": "商机类型 enterprise project person" },
+        "ids": { "type": "array", "description": "三方id列表", "items": { "type": "integer", "format": "int64" } }
+      },
+      "title": "ReceiveBusinessReq"
+    },
+    "TreeNodeConfig": {
+      "type": "object",
+      "properties": {
+        "childrenKey": { "type": "string" },
+        "deep": { "type": "integer", "format": "int32" },
+        "idKey": { "type": "string" },
+        "nameKey": { "type": "string" },
+        "parentIdKey": { "type": "string" },
+        "weightKey": { "type": "string" }
+      },
+      "title": "TreeNodeConfig"
+    },
+    "VerifyRepeatBusinessReq": {
+      "type": "object",
+      "required": ["businessType"],
+      "properties": {
+        "businessType": { "type": "string", "description": "商机类型  ENTERPRISE  PERSON  PROJECT" },
+        "code": { "type": "string", "description": "代码" },
+        "name": { "type": "string", "description": "名称" }
+      },
+      "title": "VerifyRepeatBusinessReq"
+    },
+    "上传文件返回": {
+      "type": "object",
+      "properties": {
+        "fileUrl": { "type": "string", "description": "生成的文件访问链接" },
+        "id": { "type": "integer", "format": "int64", "description": "上传文件id" }
+      },
+      "title": "上传文件返回"
+    },
+    "不再跟进": {
+      "type": "object",
+      "required": ["businessId", "flowType"],
+      "properties": {
+        "businessId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "商机id",
+          "minimum": 1,
+          "exclusiveMinimum": false
+        },
+        "businessType": {
+          "type": "string",
+          "description": "商机类型 ENTERPRISE:企业商机 PERSON:人才商机 PROJECT:项目商机"
+        },
+        "flowType": { "type": "string", "description": "跟进方式,BACK:放回,INVALID:无效" },
+        "noFollowReason": { "type": "string", "description": "不再跟进理由" }
+      },
+      "title": "不再跟进"
+    },
+    "关联商机 Request": {
+      "type": "object",
+      "properties": {
+        "businessId": { "type": "integer", "format": "int64", "description": "商机ID" },
+        "businessType": { "type": "string", "description": "商机类型  enterprise project person" },
+        "thirdId": { "type": "integer", "format": "int64", "description": "三方信息ID" }
+      },
+      "title": "关联商机 Request"
+    },
+    "关联商机 Response": { "type": "object", "title": "关联商机 Response" },
+    "分页查询人才商机公海": {
+      "type": "object",
+      "properties": {
+        "businessStatus": { "type": "string", "description": "商机状态" },
+        "certificateName": { "type": "string", "description": "执业资格证" },
+        "level": { "type": "string", "description": "职称" },
+        "major": { "type": "string", "description": "职称专业" },
+        "name": { "type": "string", "description": "主查询" },
+        "orderColumn": { "type": "string", "description": "排序字段 字段参数名" },
+        "orderType": { "type": "integer", "format": "int32", "description": "排序规则 1：倒叙,2：正序" },
+        "page": { "type": "integer", "format": "int32" },
+        "size": { "type": "integer", "format": "int32" },
+        "type": { "type": "integer", "format": "int32", "description": "查询类型 1：我的商机 2：公海" }
+      },
+      "title": "分页查询人才商机公海"
+    },
+    "分页查询企业商机公海": {
+      "type": "object",
+      "properties": {
+        "businessStatus": { "type": "string", "description": "商机状态" },
+        "endTime": { "type": "integer", "format": "int64", "description": "成立结束时间" },
+        "enterpriseStatus": { "type": "string", "description": "企业状态 " },
+        "name": { "type": "string", "description": "主查询" },
+        "orderColumn": { "type": "string", "description": "排序字段 字段参数名" },
+        "orderType": { "type": "integer", "format": "int32", "description": "排序规则 1：倒叙,2：正序" },
+        "page": { "type": "integer", "format": "int32" },
+        "registeredCapitalMax": { "type": "integer", "format": "int64", "description": "注册资本最大值" },
+        "registeredCapitalMin": { "type": "integer", "format": "int64", "description": "注册资本最小值" },
+        "size": { "type": "integer", "format": "int32" },
+        "startTime": { "type": "integer", "format": "int64", "description": "成立开始时间" },
+        "type": { "type": "integer", "format": "int32", "description": "查询类型 1：我的商机 2：公海" }
+      },
+      "title": "分页查询企业商机公海"
+    },
+    "列表请求": {
+      "type": "object",
+      "properties": {
+        "addr": { "type": "string", "description": "地址" },
+        "businessId": { "type": "integer", "format": "int64", "description": "商机id" },
+        "businessStatus": { "type": "string", "description": "商机状态" },
+        "businessType": { "type": "string", "description": "商机类型" },
+        "content": { "type": "string", "description": "沟通内容" },
+        "coordinate": { "type": "array", "description": "坐标,经度-纬度", "items": { "type": "string" } },
+        "followResult": { "type": "string", "description": "跟进结果" },
+        "followTime": { "type": "integer", "format": "int64", "description": "跟进时间" },
+        "followType": {
+          "type": "string",
+          "description": "跟进方式 PHONE：电话,WECHAT：微信,VISIT：登门拜访,OFFLINE_MEETING：线下会谈OTHER：其他"
+        },
+        "follower": { "type": "string", "description": "跟进人" },
+        "imageUrlList": { "type": "array", "description": "图片列表", "items": { "type": "string" } }
+      },
+      "title": "列表请求"
+    },
+    "列表请求0": {
+      "type": "object",
+      "required": ["businessId", "businessType"],
+      "properties": {
+        "businessId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "商机id",
+          "minimum": 0,
+          "exclusiveMinimum": false
+        },
+        "businessType": { "type": "string", "description": "商机类型" },
+        "followType": {
+          "type": "array",
+          "description": "跟进类型 FOLLOW:跟进 TRANSFER:转让,BACK:放回,INVALID:无效",
+          "items": { "type": "string" }
+        },
+        "page": { "type": "integer", "format": "int32" },
+        "size": { "type": "integer", "format": "int32" }
+      },
+      "title": "列表请求0"
+    },
+    "导入列表响应": {
+      "type": "object",
+      "properties": {
+        "failData": {
+          "type": "array",
+          "description": "失败数据",
+          "items": { "$ref": "#/definitions/FailData", "originalRef": "FailData" }
+        },
+        "failNum": { "type": "integer", "format": "int32", "description": "失败数" },
+        "fileName": { "type": "string", "description": "文件名称" },
+        "fileUrl": { "type": "string", "description": "文件链接 为空则为已失效" },
+        "importTime": { "type": "integer", "format": "int64", "description": "导入时间" },
+        "operator": { "type": "string", "description": "操作人" },
+        "page": { "type": "integer", "format": "int32" },
+        "size": { "type": "integer", "format": "int32" },
+        "status": { "type": "integer", "format": "int32", "description": "状态 1：进行中 2：已结束  3：发生异常" },
+        "successNum": { "type": "integer", "format": "int32", "description": "成功数" }
+      },
+      "title": "导入列表响应"
+    },
+    "导入列表请求": {
+      "type": "object",
+      "properties": {
+        "endTime": { "type": "integer", "format": "int64", "description": "结束时间" },
+        "page": { "type": "integer", "format": "int32" },
+        "size": { "type": "integer", "format": "int32" },
+        "startTime": { "type": "integer", "format": "int64", "description": "开始时间" },
+        "taskType": {
+          "type": "integer",
+          "format": "int32",
+          "description": "业务类型 1:企业商机 2:人才商机 3:项目商机 4:企业客户 5:个人客户",
+          "minimum": 1,
+          "exclusiveMinimum": false
+        }
+      },
+      "title": "导入列表请求"
+    },
+    "搜索人才商机 request": {
+      "type": "object",
+      "properties": {
+        "page": { "type": "integer", "format": "int32" },
+        "personMobile": { "type": "string", "description": "人才联系方式" },
+        "personName": { "type": "string", "description": "人才名称" },
+        "size": { "type": "integer", "format": "int32" }
+      },
+      "title": "搜索人才商机 request"
+    },
+    "搜索人才客户 request": {
+      "type": "object",
+      "properties": { "personName": { "type": "string", "description": "人才名称" } },
+      "title": "搜索人才客户 request"
+    },
+    "搜索人才客户 response": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer", "format": "int64", "description": "人才ID" },
+        "personName": { "type": "string", "description": "人才名称" }
+      },
+      "title": "搜索人才客户 response"
+    },
+    "搜索企业商机 request": {
+      "type": "object",
+      "properties": {
+        "enterpriseCode": { "type": "string", "description": "企业信用代码" },
+        "enterpriseName": { "type": "string", "description": "企业名称" },
+        "page": { "type": "integer", "format": "int32" },
+        "size": { "type": "integer", "format": "int32" }
+      },
+      "title": "搜索企业商机 request"
+    },
+    "搜索企业客户 response": {
+      "type": "object",
+      "properties": {
+        "enterpriseName": { "type": "string", "description": "企业名称" },
+        "id": { "type": "integer", "format": "int64", "description": "主键 ID" }
+      },
+      "title": "搜索企业客户 response"
+    },
+    "搜索关联人才商机 response": {
+      "type": "object",
+      "properties": {
+        "achievementCnt": { "type": "integer", "format": "int64", "description": "个人业绩" },
+        "addr": { "type": "string", "description": "地址" },
+        "badBehaviorCnt": { "type": "integer", "format": "int64", "description": "不良行为数" },
+        "blacklistRecordCnt": { "type": "integer", "format": "int64", "description": "黑名单数" },
+        "certificateName": { "type": "string", "description": "执业资格证" },
+        "customerId": { "type": "integer", "format": "int64", "description": "客户id" },
+        "education": { "type": "string", "description": "学历" },
+        "gender": { "type": "string", "description": "性别 男 女" },
+        "goodBehaviorCnt": { "type": "integer", "format": "int64", "description": "良好行为数" },
+        "licenseId": { "type": "integer", "format": "int64", "description": "工商信息id" },
+        "personId": { "type": "integer", "format": "int64", "description": "人才ID" },
+        "personName": { "type": "string", "description": "人才名称" },
+        "phone": { "type": "string", "description": "手机号" },
+        "skCertificateCnt": { "type": "integer", "format": "int64", "description": "四库证书数" },
+        "title": { "type": "string", "description": "资质" }
+      },
+      "title": "搜索关联人才商机 response"
+    },
+    "搜索关联企业商机 response": {
+      "type": "object",
+      "properties": {
+        "addr": { "type": "string", "description": "地址" },
+        "enterpriseCode": { "type": "string", "description": "企业信用代码" },
+        "enterpriseId": { "type": "integer", "format": "int64", "description": "企业ID" },
+        "enterpriseName": { "type": "string", "description": "企业名称" },
+        "enterpriseStatus": { "type": "string", "description": "企业状态" },
+        "enterpriseThirdId": { "type": "integer", "format": "int64", "description": "企业客户三方ID" },
+        "establishmentTime": { "type": "string", "format": "date-time", "description": "成立时间" },
+        "regPersonCnt": { "type": "integer", "format": "int64", "description": "注册人员数" },
+        "registeredCapital": { "type": "string", "description": "注册资本" },
+        "score": { "type": "integer", "format": "int32", "description": "评分" },
+        "skAchievementCnt": { "type": "integer", "format": "int64", "description": "四库业绩数" },
+        "skQualificationCnt": { "type": "integer", "format": "int64", "description": "四库资质数" },
+        "tell": { "type": "string", "description": "电话" }
+      },
+      "title": "搜索关联企业商机 response"
+    },
+    "搜索关联项目商机 response": {
+      "type": "object",
+      "properties": {
+        "agencies": { "type": "string", "description": "代理机构" },
+        "agenciesAddr": { "type": "string", "description": "代理机构地址" },
+        "agenciesPhone": { "type": "string", "description": "代理机构电话" },
+        "biddingCorpAddr": { "type": "string", "description": "招标单位地址" },
+        "biddingCorpName": { "type": "string", "description": "招标单位名称" },
+        "biddingCorpPhone": { "type": "string", "description": "招标单位电话" },
+        "biddingTime": { "type": "string", "format": "date-time", "description": "投标时间" },
+        "businessStatus": { "type": "string", "description": "商机状态   跟进中  已成交  无效" },
+        "coordinate": { "type": "string", "description": "坐标" },
+        "customerId": { "type": "integer", "format": "int64", "description": "客户id" },
+        "fileDownloadTime": { "type": "string", "format": "date-time", "description": "文件下载时间" },
+        "followerId": { "type": "integer", "format": "int64", "description": "跟进人" },
+        "isRead": { "type": "integer", "format": "int32", "description": "是否阅读 0未读 1已读" },
+        "lastFollowTime": { "type": "string", "format": "date-time", "description": "最近跟进时间" },
+        "licenseId": { "type": "integer", "format": "int64", "description": "工商信息id" },
+        "phone": { "type": "string", "description": "联系方式" },
+        "projectBudget": { "type": "integer", "format": "int64", "description": "招标预算(元)" },
+        "projectId": { "type": "integer", "format": "int64", "description": "项目ID" },
+        "projectName": { "type": "string", "description": "项目名称" },
+        "projectNum": { "type": "string", "description": "项目编码" },
+        "projectType": { "type": "string", "description": "项目类型" },
+        "source": { "type": "string", "description": "来源  雷达 公海 高级搜索 小程序历史数据" },
+        "webPageUrl": { "type": "string", "description": "原网页url" }
+      },
+      "title": "搜索关联项目商机 response"
+    },
+    "搜索项目商机 request": {
+      "type": "object",
+      "properties": {
+        "page": { "type": "integer", "format": "int32" },
+        "projectName": { "type": "string", "description": "项目名称" },
+        "size": { "type": "integer", "format": "int32" }
+      },
+      "title": "搜索项目商机 request"
+    },
+    "操作日志分页 request": {
+      "type": "object",
+      "properties": {
+        "bizId": { "type": "integer", "format": "int64", "description": "业务ID" },
+        "page": { "type": "integer", "format": "int32" },
+        "size": { "type": "integer", "format": "int32" }
+      },
+      "title": "操作日志分页 request"
+    },
+    "操作日志分页 response": {
+      "type": "object",
+      "properties": {
+        "content": { "type": "string", "description": "操作内容" },
+        "logId": { "type": "integer", "format": "int64", "description": "日志ID" },
+        "operateTime": { "type": "string", "format": "date-time", "description": "操作时间" },
+        "operateType": { "type": "string", "description": "操作类型" },
+        "operator": { "type": "string", "description": "操作人" }
+      },
+      "title": "操作日志分页 response"
+    },
+    "添加联系人请求": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "联系人姓名" },
+        "relId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "关联业务id",
+          "minimum": 1,
+          "exclusiveMinimum": false
+        },
+        "relType": {
+          "type": "integer",
+          "format": "int32",
+          "description": "联系人关联类型 1:企业商机 2:人才商机 3:项目商机 4:企业客户 5:个人客户"
+        },
+        "remark": { "type": "string", "description": "备注" },
+        "type": {
+          "type": "integer",
+          "format": "int32",
+          "description": "联系方式 1：电话 2：邮箱 3：微信",
+          "minimum": 1,
+          "exclusiveMinimum": false
+        },
+        "value": { "type": "string", "description": "联系号码" }
+      },
+      "title": "添加联系人请求"
+    },
+    "签约Request": {
+      "type": "object",
+      "properties": {
+        "businessId": { "type": "integer", "format": "int64", "description": "商机ID" },
+        "businessType": { "type": "string", "description": "商机类型" },
+        "customerId": { "type": "integer", "format": "int64", "description": "客户ID" },
+        "customerType": { "type": "string", "description": "客户类型" },
+        "signType": { "type": "string", "description": "签约类型" }
+      },
+      "title": "签约Request"
+    },
+    "签约记录分页 request": {
+      "type": "object",
+      "properties": {
+        "businessId": { "type": "integer", "format": "int64", "description": "商机ID" },
+        "page": { "type": "integer", "format": "int32" },
+        "size": { "type": "integer", "format": "int32" }
+      },
+      "title": "签约记录分页 request"
+    },
+    "签约记录分页 response": {
+      "type": "object",
+      "properties": {
+        "businessId": { "type": "integer", "format": "int64", "description": "商机ID" },
+        "businessType": { "type": "string", "description": "商机类型" },
+        "content": { "type": "string", "description": "成交内容" },
+        "customerId": { "type": "integer", "format": "int64", "description": "客户ID" },
+        "customerType": { "type": "string", "description": "客户类型" },
+        "dealTime": { "type": "string", "format": "date-time", "description": "成交时间" },
+        "dealType": { "type": "string", "description": "成交方式" },
+        "handler": { "type": "string", "description": "负责人" },
+        "handlerId": { "type": "integer", "format": "int64", "description": "负责人" },
+        "id": { "type": "integer", "format": "int64", "description": "签约记录ID" },
+        "schedule": { "type": "string", "description": "进度" },
+        "signingType": { "type": "string", "description": "签约类型" },
+        "thirdId": { "type": "integer", "format": "int64", "description": "三方ID" }
+      },
+      "title": "签约记录分页 response"
+    },
+    "联系人列表": {
+      "type": "object",
+      "properties": {
+        "addDate": { "type": "string", "description": "添加日期" },
+        "addName": { "type": "string", "description": "添加人" },
+        "id": { "type": "integer", "format": "int64", "description": "联系人id" },
+        "name": { "type": "string", "description": "联系人姓名" },
+        "remark": { "type": "string", "description": "备注" },
+        "type": { "type": "integer", "format": "int32", "description": "联系方式 1：电话 2：邮箱 3：微信" },
+        "value": { "type": "string", "description": "联系号码" }
+      },
+      "title": "联系人列表"
+    },
+    "联系人列表请求": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "联系人名称" },
+        "page": { "type": "integer", "format": "int32" },
+        "relId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "关联业务id",
+          "minimum": 1,
+          "exclusiveMinimum": false
+        },
+        "relType": {
+          "type": "integer",
+          "format": "int32",
+          "description": "联系人关联类型 1:企业商机 2:人才商机 3:项目商机 4:企业客户 5:个人客户"
+        },
+        "size": { "type": "integer", "format": "int32" }
+      },
+      "title": "联系人列表请求"
+    },
+    "解除签约 request": {
+      "type": "object",
+      "properties": {
+        "businessId": { "type": "integer", "format": "int64", "description": "商机ID" },
+        "businessType": { "type": "string", "description": "商机类型" }
+      },
+      "title": "解除签约 request"
+    },
+    "读入文件响应": {
+      "type": "object",
+      "properties": {
+        "fileUrl": { "type": "string", "description": "文件链接" },
+        "id": { "type": "integer", "format": "int64", "description": "id" }
+      },
+      "title": "读入文件响应"
+    },
+    "转让请求": {
+      "type": "object",
+      "required": ["businessId", "businessType", "followerId"],
+      "properties": {
+        "businessId": { "type": "array", "description": "商机id", "items": { "type": "integer", "format": "int64" } },
+        "businessType": { "type": "string", "description": "商机类型" },
+        "followerId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "转让跟进者id",
+          "minimum": 1,
+          "exclusiveMinimum": false
+        }
+      },
+      "title": "转让请求"
+    },
+    "项目商机公海查询": {
+      "type": "object",
+      "properties": {
+        "bidingType": { "type": "string", "description": "招标类型" },
+        "businessStatus": { "type": "string", "description": "商机状态" },
+        "name": { "type": "string", "description": "主查询" },
+        "orderColumn": { "type": "string", "description": "排序字段 字段参数名" },
+        "orderType": { "type": "integer", "format": "int32", "description": "排序规则 1：倒叙,2：正序" },
+        "page": { "type": "integer", "format": "int32" },
+        "size": { "type": "integer", "format": "int32" },
+        "type": { "type": "integer", "format": "int32", "description": "查询类型 1：我的商机 2：公海" }
+      },
+      "title": "项目商机公海查询"
+    }
+  }
+}
