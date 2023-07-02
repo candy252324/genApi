@@ -5,9 +5,11 @@ const axios = require('axios')
 const apiConfig = require('./apiConfig')
 const upperCaseFirseLetter = require('./utils').upperCaseFirseLetter
 const handleDefinitions = require('./definitions').handleDefinitions
+const handleJsType = require('./definitions').handleJsType
 
 const CWD = process.cwd()
-let _definitions = {}
+let _rawDefinitions = {}  // swagger 中 definitions
+let _cookedDefinitions=[]  // 处理过的 definitions
 
 const httpFn = apiConfig.httpFn
 const httpTpl = apiConfig.httpTpl
@@ -43,10 +45,10 @@ apiList.forEach(item => {
 })
 
 function parseData(jsonData, { absOutputDir, ignoreReg, prefix }) {
-  _definitions = jsonData.definitions || {}
+  _rawDefinitions = jsonData.definitions || {}
   const apiList = handlePaths(jsonData.paths, ignoreReg)
-  const finalDefinitions = handleDefinitions(_definitions)
-  writeDeinitionToFile(finalDefinitions, absOutputDir)
+   _cookedDefinitions = handleDefinitions(_rawDefinitions)
+  writeDeinitionToFile(_cookedDefinitions, absOutputDir)
   const count = apiList.reduce((pre, cur) => {
     return pre + cur.apis.length
   }, 0)
@@ -66,11 +68,28 @@ function handlePaths(paths, ignoreReg) {
       const method = getMethod(obj)
       const summary = obj[method].summary // 接口注释
       const parameters = obj[method].parameters // 入参
-      const idx = apiList.findIndex(item => item.namespace === namespace)
-      const resSchemeOriginalRef = obj[method]?.responses['200']?.schema?.originalRef // 出参模型
-      const outputInterface = `ResOf${upperCaseFirseLetter(name)}` // 出参 interface
-      outputInterfaceRelatedDefinition(resSchemeOriginalRef, outputInterface)
-      const apiModel = { name, url, method, summary, parameters, outputInterface }
+      const idx = apiList.findIndex((item) => item.namespace === namespace)
+      const resScheme = obj[method]?.responses['200']?.schema // 出参模型
+      let outputInterface = '' // 出参 interface
+      // 如果存在出参模型
+      if (resScheme?.originalRef) {
+        outputInterface = `ResOf${upperCaseFirseLetter(name)}`
+        outputInterfaceRelatedDefinition(resScheme.originalRef, outputInterface)
+      }
+      // 出参是个简单类型
+      else if (resScheme?.type) {
+        outputInterface = handleJsType(resScheme.type)
+      }else{
+        // console.log('该接口不存在出参')
+      }
+      const apiModel = {
+        name,
+        url,
+        method,
+        summary,
+        parameters,
+        outputInterface,
+      }
       if (idx > -1) apiList[idx].apis.push(apiModel)
       else apiList.push({ namespace, apis: [apiModel] })
     }
@@ -95,12 +114,13 @@ function writeToFile(apiList, options) {
       if (!fileUsedInterface.includes(outputInterface)) {
         fileUsedInterface.push(outputInterface)
       }
+      const _outputInterface=outputInterface?`<${outputInterface}>`:''
 
       // 有入参
       if (parameters && parameters.length) {
         apiStr += `
 /** ${summary} */
-export function ${name}  (data:any, config?: AxiosRequestConfig) :AxiosPromise<${outputInterface}>{
+export function ${name}  (data:any, config?: AxiosRequestConfig) :AxiosPromise${_outputInterface}{
   return ${httpFn}.${method}('${prefix}${url}', data, config)
 }\n`
       }
@@ -108,7 +128,7 @@ export function ${name}  (data:any, config?: AxiosRequestConfig) :AxiosPromise<$
       else {
         apiStr += `
 /** ${summary} */
-export function ${name}(config?: AxiosRequestConfig):AxiosPromise<${outputInterface}>{
+export function ${name}(config?: AxiosRequestConfig):AxiosPromise${_outputInterface}{
   return ${httpFn}.${method}('${prefix}${url}', config)
 }\n`
       }
@@ -116,7 +136,7 @@ export function ${name}(config?: AxiosRequestConfig):AxiosPromise<${outputInterf
 
     // interface 引入
     let importStr = ''
-    if (fileUsedInterface.length) {
+    if (needImportInterface(fileUsedInterface)) {
       importStr += `import {`
       fileUsedInterface.forEach((item, index) => {
         importStr += index === 0 ? `${item}` : `,${item}`
@@ -138,6 +158,17 @@ export function ${name}(config?: AxiosRequestConfig):AxiosPromise<${outputInterf
       exec(`prettier --write ${targetFile}`)
     })
   })
+}
+
+/** 判断是否需要引入interface */
+function needImportInterface(fileUsedInterface = []) {
+  let has = false
+  fileUsedInterface.forEach((usedInterfaceName) => {
+    if (!has) {
+      has = _cookedDefinitions.some((it) => it.name === usedInterfaceName)
+    }
+  })
+  return has
 }
 
 /** 写入所有 interface */
@@ -189,12 +220,12 @@ function getUrl(url) {
     },
  */
 function outputInterfaceRelatedDefinition(resSchemeOriginalRef, outputInterface) {
-  Object.keys(_definitions).forEach(key => {
+  Object.keys(_rawDefinitions).forEach(key => {
     if (key === resSchemeOriginalRef) {
-      if (_definitions[key].relationInterface) {
-        _definitions[key].relationInterface.push(outputInterface)
+      if (_rawDefinitions[key].relationInterface) {
+        _rawDefinitions[key].relationInterface.push(outputInterface)
       } else {
-        _definitions[key].relationInterface = [outputInterface]
+        _rawDefinitions[key].relationInterface = [outputInterface]
       }
     }
   })

@@ -161,4 +161,5 @@ function hasChinese(str) {
 }
 module.exports = {
   handleDefinitions,
+  handleJsType,
 }
