@@ -1,4 +1,5 @@
 let pinyin = require('js-pinyin')
+let _pageModelName=''
 
 /** 入参格式
  * "ApiResponse«AddGroupResp»": {
@@ -12,7 +13,7 @@ let pinyin = require('js-pinyin')
  *   },
  * },
  */
-function handleDefinitions(definitions) {
+function handleDefinitions(definitions, { pageModelName }) {
   /**
    * [{
    *    name:"",   // 原始 key 处理后结果，如： ApiResponse
@@ -25,15 +26,16 @@ function handleDefinitions(definitions) {
    *    }]
    *  }]
    */
+  _pageModelName = pageModelName
   let defs = []
-  Object.keys(definitions).forEach(key => {
+  Object.keys(definitions).forEach((key) => {
     const obj = definitions[key]
     const properties = handleProperties(obj.properties || {})
     const relationInterface = obj.relationInterface
     // 接口直接出参
     if (relationInterface && relationInterface.length) {
-      relationInterface.forEach(interfaceName => {
-        const exist = defs.find(item => item.name === interfaceName)
+      relationInterface.forEach((interfaceName) => {
+        const exist = defs.find((item) => item.name === interfaceName)
         if (!exist) {
           defs.push({
             name: interfaceName,
@@ -42,16 +44,15 @@ function handleDefinitions(definitions) {
           })
         }
       })
-    }
-    else {
+    } else {
       const interfaceName = handleInterfaceName(key)
-      const exist = defs.find(item => item.name === interfaceName)
+      const exist = defs.find((item) => item.name === interfaceName)
       // if (!exist) {
-        defs.push({
-          name: interfaceName,
-          type: handleItemsType(obj) + handleJsType(obj.type),
-          properties,
-        })
+      defs.push({
+        name: interfaceName,
+        type: handleItemsType(obj) + handleJsType(obj.type),
+        properties,
+      })
       // }
     }
   })
@@ -81,12 +82,20 @@ function handleProperties(properties) {
  * 处理一些奇奇怪怪的 interface
  * 如： ApiResponse«List«群成员信息对象GroupMemberResp»»， 返回第一个 « 符号左边的内容， 最终处理处理成 "ApiResponse"
  * 再如： 历史消息-MessageHistoryReq , 去除特殊字符 - , 并将中文转化成拼音，最终处理成 "LiShiXiaoXiMessageHistoryReq"
+ * 更奇葩的："个人认证信息 - 开户信息,新增时只需要传入individualBankCardNo、individualReservedPhoneNo、individualVocation，其他信息从redis缓存中获取"
  */
 function handleInterfaceName(originKey) {
   // 处理特殊的类型 ComPage ， 将 "ComPage«CommonSearchResp»" 处理成 “ComPageCommonSearchResp”
-  if (originKey.startsWith("ComPage")) {
-    originKey = originKey.replace('«', '').replace('»', '')
-  }
+  let pageModalArr=[]
+  pageModalArr = Array.isArray(_pageModelName) ? _pageModelName : [_pageModelName]
+  pageModalArr.forEach(pageModalName=>{
+    // 从 "ComPage«CommonSearchResp»" 取出  "ComPage", 判断是否属于后端的分页模型
+    const idx = originKey.indexOf('«')
+    if (idx > -1 && originKey.slice(0, idx) === pageModalName) {
+      originKey = originKey.replace('«', '').replace('»', '')
+    }
+  })
+
   const idx = originKey.indexOf('«')
   let str = originKey
   if (idx > -1) {
@@ -94,9 +103,10 @@ function handleInterfaceName(originKey) {
   }
   str = str.replace(/-/g, '') // 去除短杠 -
   str = str.replace(/\[|\]/g, '') // 去除中括号 []
-  str = str.replace(/\(|\)/g, '') // 去除圆括号括号 ()
+  str = str.replace(/\(|\)/g, '') // 去除圆括号 ()
   str = str.replace(/\//g, '') // 去除斜杠 /
   str = str.replace(/\s/g, '') // 去除空格
+  str = str.replace(/(,|，|、)/g, '')  // 去除中英文逗号，顿号
   if (hasChinese(str)) {
     str = pinyin.getFullChars(str) // 汉字转拼音 历史消息=>LiShiXiaoXi
   }

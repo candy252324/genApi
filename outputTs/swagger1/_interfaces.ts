@@ -795,7 +795,7 @@ export interface ResOfApiSuperList {
 }
 export interface ResOfApiSysdictV1TypeListFilter {
   code: number
-  data: SysDictDuiXiang nullZhiBuXuLieHua[]
+  data: SysDictDuiXiangnullZhiBuXuLieHua[]
   msg: string
   success: boolean
   timestamp: number
@@ -803,7 +803,7 @@ export interface ResOfApiSysdictV1TypeListFilter {
 }
 export interface ResOfApiSysdictV1TypeListTree {
   code: number
-  data: SysDictDuiXiang nullZhiBuXuLieHua[]
+  data: SysDictDuiXiangnullZhiBuXuLieHua[]
   msg: string
   success: boolean
   timestamp: number
@@ -1027,7 +1027,7 @@ export interface ResOfApiPersonCertificationIdCardFront {
 }
 export interface ResOfApiSysdictV1TypeListPage {
   code: number
-  data: Page
+  data: PageSysDictDuiXiangnullZhiBuXuLieHua
   msg: string
   success: boolean
   timestamp: number
@@ -1035,7 +1035,7 @@ export interface ResOfApiSysdictV1TypeListPage {
 }
 export interface ResOfApiEnterpriseIdentificationEnterpriseV1PageEnterpriseName {
   code: number
-  data: Page
+  data: PageQiYeKaiHuXinXi
   msg: string
   success: boolean
   timestamp: number
@@ -1794,7 +1794,7 @@ export interface ResOfApiTenantPersonAcquireInfo {
 }
 export interface ResOfApiPersonCertificationWalletQueryInfo {
   code: number
-  data: GeRenRenZhengXinXi  KaiHuXinXi,XinZengShiZhiXuYaoChuanRuindividualBankCardNo、individualReservedPhoneNo、individualVocation，QiTaXinXiCongredisHuanCunZhongHuoQu
+  data: GeRenRenZhengXinXiKaiHuXinXiXinZengShiZhiXuYaoChuanRuindividualBankCardNoindividualReservedPhoneNoindividualVocationQiTaXinXiCongredisHuanCunZhongHuoQu
   msg: string
   success: boolean
   timestamp: number
@@ -2848,7 +2848,7 @@ export interface EnterpriseBeneficiaryResp {
   enterpriseBeneficiaryIdCardNo: string
   enterpriseBeneficiaryIdCardType: string
   /**(只读)受益人证件类型 字典值，用于反显*/
-  enterpriseBeneficiaryIdCardTypeDict: SysDictDuiXiang nullZhiBuXuLieHua
+  enterpriseBeneficiaryIdCardTypeDict: SysDictDuiXiangnullZhiBuXuLieHua
   enterpriseBeneficiaryIdCardValidDate: string
   enterpriseBeneficiaryIdCardValidStartDate: string
   enterpriseBeneficiaryIncomeType: string
@@ -2981,7 +2981,7 @@ export interface EnterpriseShareholderResp {
   enterpriseShareholderIdCardNo: string
   enterpriseShareholderIdCardType: string
   /**(只读)企业控股股东证件类型 字典值，用于反显*/
-  enterpriseShareholderIdCardTypeSysDict: SysDictDuiXiang nullZhiBuXuLieHua
+  enterpriseShareholderIdCardTypeSysDict: SysDictDuiXiangnullZhiBuXuLieHua
   enterpriseShareholderIdCardValidDate: string
   enterpriseShareholderIdCardValidStartDate: string
   enterpriseShareholderName: string
@@ -3094,7 +3094,7 @@ export interface ExtDeptResp {
 }
 export interface ResOfApiEmployeeAddRecordExport {
   description: string
-  file: 
+  file: File
   filename: string
   inputStream: InputStream
   open: boolean
@@ -3107,7 +3107,7 @@ export interface ResOfApiEmployeeAddRecordExport {
 }
 export interface ResOfApiExcelExport {
   description: string
-  file: 
+  file: File
   filename: string
   inputStream: InputStream
   open: boolean
@@ -3120,7 +3120,7 @@ export interface ResOfApiExcelExport {
 }
 export interface ResOfApiExcelTemplate {
   description: string
-  file: 
+  file: File
   filename: string
   inputStream: InputStream
   open: boolean
@@ -3133,7 +3133,7 @@ export interface ResOfApiExcelTemplate {
 }
 export interface ResOfApiInviteExport {
   description: string
-  file: 
+  file: File
   filename: string
   inputStream: InputStream
   open: boolean
@@ -3539,19 +3539,19 @@ export interface PageInvoiceReq {
   /**发票抬头-模糊匹配*/
   title: string
 }
-export interface Page {
+export interface PageSysDictDuiXiangnullZhiBuXuLieHua {
   countId: string
   current: number
   maxLimit: number
   optimizeCountSql: boolean
   orders: OrderItem[]
   pages: number
-  records: SysDictDuiXiang nullZhiBuXuLieHua[]
+  records: SysDictDuiXiangnullZhiBuXuLieHua[]
   searchCount: boolean
   size: number
   total: number
 }
-export interface Page {
+export interface PageQiYeKaiHuXinXi {
   countId: string
   current: number
   maxLimit: number
@@ -4041,13 +4041,13 @@ export interface SuperManResp {
   /**员工角色*/
   superRole: string
 }
-export interface SysDictDuiXiang nullZhiBuXuLieHua {
+export interface SysDictDuiXiangnullZhiBuXuLieHua {
   /**所有层级名称-搜索时，返回此值展示便于区分*/
   allLevelKindName: string[]
   /**是否有子集标志*/
   childFlag: number
   /**子集列表（可能为空）*/
-  childList: SysDictDuiXiang nullZhiBuXuLieHua[]
+  childList: SysDictDuiXiangnullZhiBuXuLieHua[]
   /**逻辑删除标志，默认0，0-未删除，1-删除。*/
   deleted: boolean
   id: number
@@ -4172,7 +4172,7 @@ export interface GeRenRenZhengXinXi {
   /**是否永久有效 0-否 1-是*/
   validStatus: boolean
 }
-export interface GeRenRenZhengXinXi  KaiHuXinXi,XinZengShiZhiXuYaoChuanRuindividualBankCardNo、individualReservedPhoneNo、individualVocation，QiTaXinXiCongredisHuanCunZhongHuoQu {
+export interface GeRenRenZhengXinXiKaiHuXinXiXinZengShiZhiXuYaoChuanRuindividualBankCardNoindividualReservedPhoneNoindividualVocationQiTaXinXiCongredisHuanCunZhongHuoQu {
   /**地址*/
   address: string
   /**出生年月*/
@@ -4383,7 +4383,7 @@ export interface QiYeKaiHuXinXi {
   enterpriseStorePictureId: string
   enterpriseTrade: string
   /**(只读)行业类型-字典值 反显级联名称*/
-  enterpriseTradeName: SysDictDuiXiang nullZhiBuXuLieHua
+  enterpriseTradeName: SysDictDuiXiangnullZhiBuXuLieHua
   enterpriseUnifiedCode: string
   enterpriseUpEnterpriseId: number
   /**(只读)母公司enterpriseId对应的企业名称，反显的时候才有*/
@@ -4452,7 +4452,7 @@ export interface QiYeKaiHuXinXi0 {
   enterpriseStorePictureId: string
   enterpriseTrade: string
   /**(只读)行业类型-字典值 反显级联名称*/
-  enterpriseTradeName: SysDictDuiXiang nullZhiBuXuLieHua
+  enterpriseTradeName: SysDictDuiXiangnullZhiBuXuLieHua
   enterpriseUnifiedCode: string
   enterpriseUpEnterpriseId: number
   /**(只读)母公司enterpriseId对应的企业名称，反显的时候才有*/

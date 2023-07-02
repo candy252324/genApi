@@ -393,7 +393,7 @@ export interface ResOfWygtechcrmApiImportTaskImportList {
 }
 export interface ResOfWygtechcrmApiBusinessPersonSearch {
   code: number
-  data: ComPageSouSuoGuanLianRenCaiShangJi response
+  data: ComPageSouSuoGuanLianRenCaiShangJiresponse
   msg: string
   success: boolean
   timestamp: number
@@ -401,7 +401,7 @@ export interface ResOfWygtechcrmApiBusinessPersonSearch {
 }
 export interface ResOfWygtechcrmApiBusinessEnterpriseSearch {
   code: number
-  data: ComPageSouSuoGuanLianQiYeShangJi response
+  data: ComPageSouSuoGuanLianQiYeShangJiresponse
   msg: string
   success: boolean
   timestamp: number
@@ -409,7 +409,7 @@ export interface ResOfWygtechcrmApiBusinessEnterpriseSearch {
 }
 export interface ResOfWygtechcrmApiBusinessProjectSearch {
   code: number
-  data: ComPageSouSuoGuanLianXiangMuShangJi response
+  data: ComPageSouSuoGuanLianXiangMuShangJiresponse
   msg: string
   success: boolean
   timestamp: number
@@ -417,7 +417,7 @@ export interface ResOfWygtechcrmApiBusinessProjectSearch {
 }
 export interface ResOfWygtechcrmApiOperateLogPageList {
   code: number
-  data: ComPageCaoZuoRiZhiFenYe response
+  data: ComPageCaoZuoRiZhiFenYeresponse
   msg: string
   success: boolean
   timestamp: number
@@ -425,7 +425,7 @@ export interface ResOfWygtechcrmApiOperateLogPageList {
 }
 export interface ResOfWygtechcrmApiSigningPageList {
   code: number
-  data: ComPageQianYueJiLuFenYe response
+  data: ComPageQianYueJiLuFenYeresponse
   msg: string
   success: boolean
   timestamp: number
@@ -473,7 +473,7 @@ export interface ResOfWygtechcrmApiConfigGetPersonTitleLabel {
 }
 export interface ResOfWygtechcrmApiCustomerPersonSearch {
   code: number
-  data: SouSuoRenCaiKeHu response[]
+  data: SouSuoRenCaiKeHuresponse[]
   msg: string
   success: boolean
   timestamp: number
@@ -481,7 +481,7 @@ export interface ResOfWygtechcrmApiCustomerPersonSearch {
 }
 export interface ResOfWygtechcrmApiCustomerEnterpriseSearch {
   code: number
-  data: SouSuoQiYeKeHu response[]
+  data: SouSuoQiYeKeHuresponse[]
   msg: string
   success: boolean
   timestamp: number
@@ -599,7 +599,7 @@ export interface ResOfWygtechcrmApiFileUploadFile {
 }
 export interface ResOfWygtechcrmApiBusinessLink {
   code: number
-  data: GuanLianShangJi Response
+  data: GuanLianShangJiResponse
   msg: string
   success: boolean
   timestamp: number
@@ -851,33 +851,33 @@ export interface ComPageDaoRuLieBiaoXiangYing {
   size: number
   total: number
 }
-export interface ComPageSouSuoGuanLianRenCaiShangJi response {
+export interface ComPageSouSuoGuanLianRenCaiShangJiresponse {
   current: number
-  records: SouSuoGuanLianRenCaiShangJi response[]
+  records: SouSuoGuanLianRenCaiShangJiresponse[]
   size: number
   total: number
 }
-export interface ComPageSouSuoGuanLianQiYeShangJi response {
+export interface ComPageSouSuoGuanLianQiYeShangJiresponse {
   current: number
-  records: SouSuoGuanLianQiYeShangJi response[]
+  records: SouSuoGuanLianQiYeShangJiresponse[]
   size: number
   total: number
 }
-export interface ComPageSouSuoGuanLianXiangMuShangJi response {
+export interface ComPageSouSuoGuanLianXiangMuShangJiresponse {
   current: number
-  records: SouSuoGuanLianXiangMuShangJi response[]
+  records: SouSuoGuanLianXiangMuShangJiresponse[]
   size: number
   total: number
 }
-export interface ComPageCaoZuoRiZhiFenYe response {
+export interface ComPageCaoZuoRiZhiFenYeresponse {
   current: number
-  records: CaoZuoRiZhiFenYe response[]
+  records: CaoZuoRiZhiFenYeresponse[]
   size: number
   total: number
 }
-export interface ComPageQianYueJiLuFenYe response {
+export interface ComPageQianYueJiLuFenYeresponse {
   current: number
-  records: QianYueJiLuFenYe response[]
+  records: QianYueJiLuFenYeresponse[]
   size: number
   total: number
 }
@@ -1498,7 +1498,7 @@ export interface BuZaiGenJin {
   /**不再跟进理由*/
   noFollowReason: string
 }
-export interface GuanLianShangJi Request {
+export interface GuanLianShangJiRequest {
   /**商机ID*/
   businessId: number
   /**商机类型  enterprise project person*/
@@ -1506,7 +1506,7 @@ export interface GuanLianShangJi Request {
   /**三方信息ID*/
   thirdId: number
 }
-export interface GuanLianShangJi Response {
+export interface GuanLianShangJiResponse {
 }
 export interface FenYeChaXunRenCaiShangJiGongHai {
   /**商机状态*/
@@ -1616,7 +1616,7 @@ export interface DaoRuLieBiaoQingQiu {
   /**业务类型 1:企业商机 2:人才商机 3:项目商机 4:企业客户 5:个人客户*/
   taskType: number
 }
-export interface SouSuoRenCaiShangJi request {
+export interface SouSuoRenCaiShangJirequest {
   page: number
   /**人才联系方式*/
   personMobile: string
@@ -1624,17 +1624,17 @@ export interface SouSuoRenCaiShangJi request {
   personName: string
   size: number
 }
-export interface SouSuoRenCaiKeHu request {
+export interface SouSuoRenCaiKeHurequest {
   /**人才名称*/
   personName: string
 }
-export interface SouSuoRenCaiKeHu response {
+export interface SouSuoRenCaiKeHuresponse {
   /**人才ID*/
   id: number
   /**人才名称*/
   personName: string
 }
-export interface SouSuoQiYeShangJi request {
+export interface SouSuoQiYeShangJirequest {
   /**企业信用代码*/
   enterpriseCode: string
   /**企业名称*/
@@ -1642,13 +1642,13 @@ export interface SouSuoQiYeShangJi request {
   page: number
   size: number
 }
-export interface SouSuoQiYeKeHu response {
+export interface SouSuoQiYeKeHuresponse {
   /**企业名称*/
   enterpriseName: string
   /**主键 ID*/
   id: number
 }
-export interface SouSuoGuanLianRenCaiShangJi response {
+export interface SouSuoGuanLianRenCaiShangJiresponse {
   /**个人业绩*/
   achievementCnt: number
   /**地址*/
@@ -1680,7 +1680,7 @@ export interface SouSuoGuanLianRenCaiShangJi response {
   /**资质*/
   title: string
 }
-export interface SouSuoGuanLianQiYeShangJi response {
+export interface SouSuoGuanLianQiYeShangJiresponse {
   /**地址*/
   addr: string
   /**企业信用代码*/
@@ -1708,7 +1708,7 @@ export interface SouSuoGuanLianQiYeShangJi response {
   /**电话*/
   tell: string
 }
-export interface SouSuoGuanLianXiangMuShangJi response {
+export interface SouSuoGuanLianXiangMuShangJiresponse {
   /**代理机构*/
   agencies: string
   /**代理机构地址*/
@@ -1756,19 +1756,19 @@ export interface SouSuoGuanLianXiangMuShangJi response {
   /**原网页url*/
   webPageUrl: string
 }
-export interface SouSuoXiangMuShangJi request {
+export interface SouSuoXiangMuShangJirequest {
   page: number
   /**项目名称*/
   projectName: string
   size: number
 }
-export interface CaoZuoRiZhiFenYe request {
+export interface CaoZuoRiZhiFenYerequest {
   /**业务ID*/
   bizId: number
   page: number
   size: number
 }
-export interface CaoZuoRiZhiFenYe response {
+export interface CaoZuoRiZhiFenYeresponse {
   /**操作内容*/
   content: string
   /**日志ID*/
@@ -1806,13 +1806,13 @@ export interface QianYueRequest {
   /**签约类型*/
   signType: string
 }
-export interface QianYueJiLuFenYe request {
+export interface QianYueJiLuFenYerequest {
   /**商机ID*/
   businessId: number
   page: number
   size: number
 }
-export interface QianYueJiLuFenYe response {
+export interface QianYueJiLuFenYeresponse {
   /**商机ID*/
   businessId: number
   /**商机类型*/
@@ -1866,7 +1866,7 @@ export interface LianXiRenLieBiaoQingQiu {
   relType: number
   size: number
 }
-export interface JieChuQianYue request {
+export interface JieChuQianYuerequest {
   /**商机ID*/
   businessId: number
   /**商机类型*/

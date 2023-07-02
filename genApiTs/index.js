@@ -23,12 +23,13 @@ apiList.forEach(item => {
   const absOutputDir = path.join(CWD, item.outputDir)
   const ignoreReg = item.ignore
   const prefix = item.prefix || ''
+  const pageModelName = item.pageModelName
   if (swaggerUrl.includes('http')) {
     // 从swagger url 读取数据
     axios
       .get(swaggerUrl)
       .then(res => {
-        if (res.status === 200) parseData(res.data, { absOutputDir, ignoreReg, prefix })
+        if (res.status === 200) parseData(res.data, { absOutputDir, ignoreReg, prefix, pageModelName })
       })
       .catch(() => {
         console.log('\x1B[31m%s\x1B[0m', '天! swagger 又挂了！！👿')
@@ -39,15 +40,20 @@ apiList.forEach(item => {
     fs.readFile(filePath, 'utf-8', (err, data) => {
       if (err) throw new Error(err)
 
-      parseData(JSON.parse(data), { absOutputDir, ignoreReg, prefix })
+      parseData(JSON.parse(data), {
+        absOutputDir,
+        ignoreReg,
+        prefix,
+        pageModelName,
+      })
     })
   }
 })
 
-function parseData(jsonData, { absOutputDir, ignoreReg, prefix }) {
+function parseData(jsonData, { absOutputDir, ignoreReg, prefix, pageModelName }) {
   _rawDefinitions = jsonData.definitions || {}
   const apiList = handlePaths(jsonData.paths, ignoreReg)
-   _cookedDefinitions = handleDefinitions(_rawDefinitions)
+   _cookedDefinitions = handleDefinitions(_rawDefinitions, { pageModelName })
   writeDeinitionToFile(_cookedDefinitions, absOutputDir)
   const count = apiList.reduce((pre, cur) => {
     return pre + cur.apis.length
