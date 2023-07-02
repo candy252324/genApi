@@ -119,7 +119,7 @@ export function ${name}(config){
       fs.writeFileSync(targetFile, apiStr)
 
       // 格式化
-      exec(`npx eslint --fix ${targetFile}`)
+      exec(`prettier --write ${targetFile}`)
     })
   })
 }
