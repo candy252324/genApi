@@ -152,6 +152,7 @@ function handleJsType(origintype) {
     Date: 'string',
     Boolean: 'boolean',
     Object: 'object',
+    file: 'File',
   }
   return typeEnmu[origintype] || ''
 }
