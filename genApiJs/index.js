@@ -119,6 +119,7 @@ export function ${name}(config){
       fs.writeFileSync(targetFile, apiStr)
 
       // 格式化
+      console.log(`格式化 ${targetFile}`)
       exec(`prettier --write ${targetFile}`)
     })
   })

@@ -9,5 +9,17 @@ module.exports = {
       prefix: '', // 前缀, 如 /abc, 则生成的接口将是  Http.post('/abc/xxx/xxx')
       ignore: /\/basePlatform\/|\/test\//, // 路径中带 /basePlatform/ 和 /test/ 的接口不用生成
     },
+    {
+      swaggerUrl: './testData/swagger3.json',
+      outputDir: '/outputJs/swagger3',
+      tag: true,
+      prefix: '',
+    },
+    {
+      swaggerUrl: './testData/swagger4.json',
+      outputDir: '/outputJs/swagger4',
+      tag: true,
+      prefix: '',
+    },
   ],
 }
