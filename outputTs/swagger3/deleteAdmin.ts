@@ -1,6 +1,5 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
-
 import { ResOfDeleteAdmin } from './_interfaces'
 
 /** 删除群管理员 */

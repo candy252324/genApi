@@ -1,6 +1,5 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
-
 import { ResOfListAdmin } from './_interfaces'
 
 /** 群管理员列表(含群主) */

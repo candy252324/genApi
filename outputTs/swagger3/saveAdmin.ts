@@ -1,6 +1,5 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
-
 import { ResOfSaveAdmin } from './_interfaces'
 
 /** 添加群管理员 */

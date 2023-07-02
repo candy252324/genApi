@@ -1,6 +1,5 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
-
 import { ResOfModifyRemark } from './_interfaces'
 
 /** 修改群成员在本群备注 */

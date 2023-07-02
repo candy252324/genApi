@@ -1,6 +1,5 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
-
 import {
   ResOfApiUserAttentionRemove,
   ResOfApiUserAttentionSave,

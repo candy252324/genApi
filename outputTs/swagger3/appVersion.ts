@@ -1,6 +1,5 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
-
 import { ResOfApiAppVersionList } from './_interfaces'
 
 /** 获取当前版本后的版本列表 */
