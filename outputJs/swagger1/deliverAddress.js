@@ -1,11 +1,11 @@
-import {Http} from '../../httpJs/index';
+import { Http } from '../../httpJs/index'
 
 /**
  * 添加地址
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function deliverAddressAddAddress  (data, config) {
+export function deliverAddressAddAddress(data, config) {
   return Http.post('/api/deliverAddress/addAddress', data, config)
 }
 
@@ -14,7 +14,7 @@ export function deliverAddressAddAddress  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function deliverAddressCheckDefaultAddress  (data, config) {
+export function deliverAddressCheckDefaultAddress(data, config) {
   return Http.post('/api/deliverAddress/checkDefaultAddress', data, config)
 }
 
@@ -23,7 +23,7 @@ export function deliverAddressCheckDefaultAddress  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function deliverAddressDeleteAddressId  (data, config) {
+export function deliverAddressDeleteAddressId(data, config) {
   return Http.get('/api/deliverAddress/deleteAddress/${id}', data, config)
 }
 
@@ -32,7 +32,7 @@ export function deliverAddressDeleteAddressId  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function deliverAddressPageAddress  (data, config) {
+export function deliverAddressPageAddress(data, config) {
   return Http.post('/api/deliverAddress/pageAddress', data, config)
 }
 
@@ -41,6 +41,6 @@ export function deliverAddressPageAddress  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function deliverAddressUpdateAddress  (data, config) {
+export function deliverAddressUpdateAddress(data, config) {
   return Http.post('/api/deliverAddress/updateAddress', data, config)
 }

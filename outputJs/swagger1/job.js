@@ -1,11 +1,11 @@
-import {Http} from '../../httpJs/index';
+import { Http } from '../../httpJs/index'
 
 /**
  * 添加成员
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function jobAddEmployee  (data, config) {
+export function jobAddEmployee(data, config) {
   return Http.post('/api/job/addEmployee', data, config)
 }
 
@@ -14,7 +14,7 @@ export function jobAddEmployee  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function jobAddJob  (data, config) {
+export function jobAddJob(data, config) {
   return Http.post('/api/job/addJob', data, config)
 }
 
@@ -23,7 +23,7 @@ export function jobAddJob  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function jobDelJob  (data, config) {
+export function jobDelJob(data, config) {
   return Http.get('/api/job/delJob', data, config)
 }
 
@@ -32,7 +32,7 @@ export function jobDelJob  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function jobEmployeeSelector  (data, config) {
+export function jobEmployeeSelector(data, config) {
   return Http.post('/api/job/employeeSelector', data, config)
 }
 
@@ -41,7 +41,7 @@ export function jobEmployeeSelector  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function jobQueryEmployeeByPhoneOrName  (data, config) {
+export function jobQueryEmployeeByPhoneOrName(data, config) {
   return Http.post('/api/job/queryEmployeeByPhoneOrName', data, config)
 }
 
@@ -50,7 +50,7 @@ export function jobQueryEmployeeByPhoneOrName  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function jobQueryTree  (data, config) {
+export function jobQueryTree(data, config) {
   return Http.post('/api/job/queryTree', data, config)
 }
 
@@ -59,7 +59,7 @@ export function jobQueryTree  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function jobRemoveEmployee  (data, config) {
+export function jobRemoveEmployee(data, config) {
   return Http.post('/api/job/removeEmployee', data, config)
 }
 
@@ -68,6 +68,6 @@ export function jobRemoveEmployee  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function jobUpdateJob  (data, config) {
+export function jobUpdateJob(data, config) {
   return Http.post('/api/job/updateJob', data, config)
 }

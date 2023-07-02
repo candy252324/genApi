@@ -1,11 +1,11 @@
-import {Http} from '../../httpJs/index';
+import { Http } from '../../httpJs/index'
 
 /**
  * 登录绑定
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function channelEmployeeComLoginAndBind  (data, config) {
+export function channelEmployeeComLoginAndBind(data, config) {
   return Http.post('/api/channel/employee/comLoginAndBind', data, config)
 }
 
@@ -14,7 +14,7 @@ export function channelEmployeeComLoginAndBind  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function channelTenantConfigAdd  (data, config) {
+export function channelTenantConfigAdd(data, config) {
   return Http.post('/api/channel/tenantConfig/add', data, config)
 }
 
@@ -23,7 +23,7 @@ export function channelTenantConfigAdd  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function channelTenantConfigDetail  (data, config) {
+export function channelTenantConfigDetail(data, config) {
   return Http.get('/api/channel/tenantConfig/detail', data, config)
 }
 
@@ -32,6 +32,6 @@ export function channelTenantConfigDetail  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function channelTenantConfigUpdate  (data, config) {
+export function channelTenantConfigUpdate(data, config) {
   return Http.post('/api/channel/tenantConfig/update', data, config)
 }

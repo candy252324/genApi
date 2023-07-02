@@ -1,10 +1,10 @@
-import {Http} from '../../httpJs/index';
+import { Http } from '../../httpJs/index'
 
 /**
  * 查询用户密码未设置是否提醒
  * @param {*} config 可选，如：{headers:{}}
  */
-export function loginRegisterJudgePassWordIsSet(config){
+export function loginRegisterJudgePassWordIsSet(config) {
   return Http.get('/api/loginRegister/JudgePassWordIsSet', config)
 }
 
@@ -13,7 +13,7 @@ export function loginRegisterJudgePassWordIsSet(config){
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function loginRegisterAliMpAutoLogin  (data, config) {
+export function loginRegisterAliMpAutoLogin(data, config) {
   return Http.post('/api/loginRegister/aliMpAutoLogin', data, config)
 }
 
@@ -22,8 +22,12 @@ export function loginRegisterAliMpAutoLogin  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function loginRegisterClearCodeVerificationEnum  (data, config) {
-  return Http.get('/api/loginRegister/clearCode/${verificationEnum}', data, config)
+export function loginRegisterClearCodeVerificationEnum(data, config) {
+  return Http.get(
+    '/api/loginRegister/clearCode/${verificationEnum}',
+    data,
+    config
+  )
 }
 
 /**
@@ -31,8 +35,12 @@ export function loginRegisterClearCodeVerificationEnum  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function loginRegisterClearTimeLimitVerificationEnum  (data, config) {
-  return Http.get('/api/loginRegister/clearTimeLimit/${verificationEnum}', data, config)
+export function loginRegisterClearTimeLimitVerificationEnum(data, config) {
+  return Http.get(
+    '/api/loginRegister/clearTimeLimit/${verificationEnum}',
+    data,
+    config
+  )
 }
 
 /**
@@ -40,7 +48,7 @@ export function loginRegisterClearTimeLimitVerificationEnum  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function loginRegisterComLogin  (data, config) {
+export function loginRegisterComLogin(data, config) {
   return Http.post('/api/loginRegister/comLogin', data, config)
 }
 
@@ -48,7 +56,7 @@ export function loginRegisterComLogin  (data, config) {
  * 退出登录
  * @param {*} config 可选，如：{headers:{}}
  */
-export function loginRegisterLoginout(config){
+export function loginRegisterLoginout(config) {
   return Http.get('/api/loginRegister/loginout', config)
 }
 
@@ -57,7 +65,7 @@ export function loginRegisterLoginout(config){
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function loginRegisterPasswordCry  (data, config) {
+export function loginRegisterPasswordCry(data, config) {
   return Http.get('/api/loginRegister/passwordCry', data, config)
 }
 
@@ -66,7 +74,7 @@ export function loginRegisterPasswordCry  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function loginRegisterRegister  (data, config) {
+export function loginRegisterRegister(data, config) {
   return Http.post('/api/loginRegister/register', data, config)
 }
 
@@ -75,7 +83,7 @@ export function loginRegisterRegister  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function loginRegisterRetrievePassword  (data, config) {
+export function loginRegisterRetrievePassword(data, config) {
   return Http.post('/api/loginRegister/retrievePassword', data, config)
 }
 
@@ -84,8 +92,15 @@ export function loginRegisterRetrievePassword  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function loginRegisterSendPhoneValidateCodeVerificationEnum  (data, config) {
-  return Http.get('/api/loginRegister/sendPhoneValidateCode/${verificationEnum}', data, config)
+export function loginRegisterSendPhoneValidateCodeVerificationEnum(
+  data,
+  config
+) {
+  return Http.get(
+    '/api/loginRegister/sendPhoneValidateCode/${verificationEnum}',
+    data,
+    config
+  )
 }
 
 /**
@@ -93,6 +108,6 @@ export function loginRegisterSendPhoneValidateCodeVerificationEnum  (data, confi
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function loginRegisterSetPassWord  (data, config) {
+export function loginRegisterSetPassWord(data, config) {
   return Http.post('/api/loginRegister/setPassWord', data, config)
 }

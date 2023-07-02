@@ -1,10 +1,10 @@
-import {Http} from '../../httpJs/index';
+import { Http } from '../../httpJs/index'
 
 /**
  * 获取应用授权链接
  * @param {*} config 可选，如：{headers:{}}
  */
-export function corpWechatAppAuthLink(config){
+export function corpWechatAppAuthLink(config) {
   return Http.get('/api/corpWechat/appAuthLink', config)
 }
 
@@ -13,7 +13,7 @@ export function corpWechatAppAuthLink(config){
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function corpWechatAuthUser  (data, config) {
+export function corpWechatAuthUser(data, config) {
   return Http.post('/api/corpWechat/authUser', data, config)
 }
 
@@ -22,7 +22,7 @@ export function corpWechatAuthUser  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function corpWechatInitAgent  (data, config) {
+export function corpWechatInitAgent(data, config) {
   return Http.post('/api/corpWechat/initAgent', data, config)
 }
 
@@ -31,7 +31,7 @@ export function corpWechatInitAgent  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function corpWechatOauth2  (data, config) {
+export function corpWechatOauth2(data, config) {
   return Http.post('/api/corpWechat/oauth2', data, config)
 }
 
@@ -39,6 +39,6 @@ export function corpWechatOauth2  (data, config) {
  * 同步组织架构
  * @param {*} config 可选，如：{headers:{}}
  */
-export function corpWechatSyncDoc(config){
+export function corpWechatSyncDoc(config) {
   return Http.get('/api/corpWechat/syncDoc', config)
 }

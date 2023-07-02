@@ -1,11 +1,11 @@
-import {Http} from '../../httpJs/index';
+import { Http } from '../../httpJs/index'
 
 /**
  * 分页查询个人资质
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function personCredentialPagePersonCredential  (data, config) {
+export function personCredentialPagePersonCredential(data, config) {
   return Http.post('/api/personCredential/PagePersonCredential', data, config)
 }
 
@@ -14,7 +14,7 @@ export function personCredentialPagePersonCredential  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function personCredentialAddPersonCredential  (data, config) {
+export function personCredentialAddPersonCredential(data, config) {
   return Http.post('/api/personCredential/addPersonCredential', data, config)
 }
 
@@ -23,7 +23,7 @@ export function personCredentialAddPersonCredential  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function personCredentialDeleteId  (data, config) {
+export function personCredentialDeleteId(data, config) {
   return Http.get('/api/personCredential/delete/${id}', data, config)
 }
 
@@ -32,7 +32,7 @@ export function personCredentialDeleteId  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function personCredentialDeleteMajorId  (data, config) {
+export function personCredentialDeleteMajorId(data, config) {
   return Http.get('/api/personCredential/deleteMajor/${id}', data, config)
 }
 
@@ -40,7 +40,7 @@ export function personCredentialDeleteMajorId  (data, config) {
  * 获取注册专业树
  * @param {*} config 可选，如：{headers:{}}
  */
-export function personCredentialGetMajorCodeTree(config){
+export function personCredentialGetMajorCodeTree(config) {
   return Http.get('/api/personCredential/getMajorCodeTree', config)
 }
 
@@ -49,6 +49,6 @@ export function personCredentialGetMajorCodeTree(config){
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function personCredentialUpdatePersonCredential  (data, config) {
+export function personCredentialUpdatePersonCredential(data, config) {
   return Http.post('/api/personCredential/updatePersonCredential', data, config)
 }

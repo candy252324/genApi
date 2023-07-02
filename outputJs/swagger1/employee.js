@@ -1,11 +1,11 @@
-import {Http} from '../../httpJs/index';
+import { Http } from '../../httpJs/index'
 
 /**
  * 新增员工
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function employeeAdd  (data, config) {
+export function employeeAdd(data, config) {
   return Http.post('/api/employee/add', data, config)
 }
 
@@ -14,7 +14,7 @@ export function employeeAdd  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function employeeChangeStatus  (data, config) {
+export function employeeChangeStatus(data, config) {
   return Http.get('/api/employee/changeStatus', data, config)
 }
 
@@ -23,7 +23,7 @@ export function employeeChangeStatus  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function employeeDelConfirm  (data, config) {
+export function employeeDelConfirm(data, config) {
   return Http.post('/api/employee/del/confirm', data, config)
 }
 
@@ -32,7 +32,7 @@ export function employeeDelConfirm  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function employeeDelEmployeeIds  (data, config) {
+export function employeeDelEmployeeIds(data, config) {
   return Http.get('/api/employee/del/${employeeIds}', data, config)
 }
 
@@ -41,7 +41,7 @@ export function employeeDelEmployeeIds  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function employeeDeptTreeCount  (data, config) {
+export function employeeDeptTreeCount(data, config) {
   return Http.get('/api/employee/deptTreeCount', data, config)
 }
 
@@ -50,7 +50,7 @@ export function employeeDeptTreeCount  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function employeeEdit  (data, config) {
+export function employeeEdit(data, config) {
   return Http.post('/api/employee/edit', data, config)
 }
 
@@ -58,7 +58,7 @@ export function employeeEdit  (data, config) {
  * 员工 所在部门
  * @param {*} config 可选，如：{headers:{}}
  */
-export function employeeEmployeeDept(config){
+export function employeeEmployeeDept(config) {
   return Http.get('/api/employee/employeeDept', config)
 }
 
@@ -67,7 +67,7 @@ export function employeeEmployeeDept(config){
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function employeeGetEmployeeByEmployeeId  (data, config) {
+export function employeeGetEmployeeByEmployeeId(data, config) {
   return Http.get('/api/employee/getEmployeeByEmployeeId', data, config)
 }
 
@@ -75,7 +75,7 @@ export function employeeGetEmployeeByEmployeeId  (data, config) {
  * 获取部门树_我的部门
  * @param {*} config 可选，如：{headers:{}}
  */
-export function employeeMyDeptTreeCount(config){
+export function employeeMyDeptTreeCount(config) {
   return Http.get('/api/employee/myDeptTreeCount', config)
 }
 
@@ -84,7 +84,7 @@ export function employeeMyDeptTreeCount(config){
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function employeePageList  (data, config) {
+export function employeePageList(data, config) {
   return Http.get('/api/employee/pageList', data, config)
 }
 
@@ -93,7 +93,7 @@ export function employeePageList  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function employeePageSelectList  (data, config) {
+export function employeePageSelectList(data, config) {
   return Http.get('/api/employee/pageSelectList', data, config)
 }
 
@@ -102,7 +102,7 @@ export function employeePageSelectList  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function employeeShiftEmployeeId  (data, config) {
+export function employeeShiftEmployeeId(data, config) {
   return Http.get('/api/employee/shift/${employeeId}', data, config)
 }
 
@@ -111,7 +111,7 @@ export function employeeShiftEmployeeId  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function employeeStartDelEmployeeId  (data, config) {
+export function employeeStartDelEmployeeId(data, config) {
   return Http.get('/api/employee/start/del/${employeeId}', data, config)
 }
 
@@ -120,7 +120,7 @@ export function employeeStartDelEmployeeId  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function employeeStopStartEmployeeId  (data, config) {
+export function employeeStopStartEmployeeId(data, config) {
   return Http.get('/api/employee/stop/start/${employeeId}', data, config)
 }
 
@@ -129,6 +129,6 @@ export function employeeStopStartEmployeeId  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function employeeStopEmployeeConfirm  (data, config) {
+export function employeeStopEmployeeConfirm(data, config) {
   return Http.post('/api/employee/stopEmployee/confirm', data, config)
 }

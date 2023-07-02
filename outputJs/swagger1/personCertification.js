@@ -1,11 +1,11 @@
-import {Http} from '../../httpJs/index';
+import { Http } from '../../httpJs/index'
 
 /**
  * 查询认证结果
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function personCertificationDescribeFaceVerify  (data, config) {
+export function personCertificationDescribeFaceVerify(data, config) {
   return Http.get('/api/personCertification/describeFaceVerify', data, config)
 }
 
@@ -14,7 +14,7 @@ export function personCertificationDescribeFaceVerify  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function personCertificationIdCardBack  (data, config) {
+export function personCertificationIdCardBack(data, config) {
   return Http.post('/api/personCertification/idCardBack', data, config)
 }
 
@@ -23,7 +23,7 @@ export function personCertificationIdCardBack  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function personCertificationIdCardFront  (data, config) {
+export function personCertificationIdCardFront(data, config) {
   return Http.post('/api/personCertification/idCardFront', data, config)
 }
 
@@ -32,15 +32,22 @@ export function personCertificationIdCardFront  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function personCertificationInitFaceVerifyWithCertifyIdType  (data, config) {
-  return Http.post('/api/personCertification/initFaceVerifyWithCertifyId/${type}', data, config)
+export function personCertificationInitFaceVerifyWithCertifyIdType(
+  data,
+  config
+) {
+  return Http.post(
+    '/api/personCertification/initFaceVerifyWithCertifyId/${type}',
+    data,
+    config
+  )
 }
 
 /**
  * 查询个人租户认证信息
  * @param {*} config 可选，如：{headers:{}}
  */
-export function personCertificationPersonAuthInfo(config){
+export function personCertificationPersonAuthInfo(config) {
   return Http.post('/api/personCertification/person/auth/info', config)
 }
 
@@ -48,7 +55,7 @@ export function personCertificationPersonAuthInfo(config){
  * 认证列表
  * @param {*} config 可选，如：{headers:{}}
  */
-export function personCertificationPersonList(config){
+export function personCertificationPersonList(config) {
   return Http.post('/api/personCertification/person/list', config)
 }
 
@@ -57,8 +64,12 @@ export function personCertificationPersonList(config){
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function personCertificationPersonV1UserIdOpenAcctExecute  (data, config) {
-  return Http.post('/api/personCertification/person/v1/${userId}/openAcct/execute', data, config)
+export function personCertificationPersonV1UserIdOpenAcctExecute(data, config) {
+  return Http.post(
+    '/api/personCertification/person/v1/${userId}/openAcct/execute',
+    data,
+    config
+  )
 }
 
 /**
@@ -66,7 +77,7 @@ export function personCertificationPersonV1UserIdOpenAcctExecute  (data, config)
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function personCertificationQueryCertInfo  (data, config) {
+export function personCertificationQueryCertInfo(data, config) {
   return Http.get('/api/personCertification/queryCertInfo', data, config)
 }
 
@@ -74,7 +85,7 @@ export function personCertificationQueryCertInfo  (data, config) {
  * 查询个人普通认证唯一id
  * @param {*} config 可选，如：{headers:{}}
  */
-export function personCertificationQueryCommonCertifyId(config){
+export function personCertificationQueryCommonCertifyId(config) {
   return Http.get('/api/personCertification/queryCommonCertifyId', config)
 }
 
@@ -83,7 +94,7 @@ export function personCertificationQueryCommonCertifyId(config){
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function personCertificationWalletInfo  (data, config) {
+export function personCertificationWalletInfo(data, config) {
   return Http.post('/api/personCertification/wallet/info', data, config)
 }
 
@@ -91,6 +102,6 @@ export function personCertificationWalletInfo  (data, config) {
  * 菜花钱包- 个人信息查询
  * @param {*} config 可选，如：{headers:{}}
  */
-export function personCertificationWalletQueryInfo(config){
+export function personCertificationWalletQueryInfo(config) {
   return Http.get('/api/personCertification/wallet/queryInfo', config)
 }

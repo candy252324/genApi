@@ -1,11 +1,11 @@
-import {Http} from '../../httpJs/index';
+import { Http } from '../../httpJs/index'
 
 /**
  * 提醒审核
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReAlertAudit  (data, config) {
+export function empowerEnterpriseReAlertAudit(data, config) {
   return Http.get('/api/empower/enterpriseRe/alertAudit', data, config)
 }
 
@@ -14,7 +14,7 @@ export function empowerEnterpriseReAlertAudit  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReApplyScanAgreeRe  (data, config) {
+export function empowerEnterpriseReApplyScanAgreeRe(data, config) {
   return Http.get('/api/empower/enterpriseRe/applyScanAgreeRe', data, config)
 }
 
@@ -23,7 +23,7 @@ export function empowerEnterpriseReApplyScanAgreeRe  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReBathAuth  (data, config) {
+export function empowerEnterpriseReBathAuth(data, config) {
   return Http.post('/api/empower/enterpriseRe/bathAuth', data, config)
 }
 
@@ -32,7 +32,7 @@ export function empowerEnterpriseReBathAuth  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReBathCancelAuth  (data, config) {
+export function empowerEnterpriseReBathCancelAuth(data, config) {
   return Http.post('/api/empower/enterpriseRe/bathCancelAuth', data, config)
 }
 
@@ -41,7 +41,7 @@ export function empowerEnterpriseReBathCancelAuth  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReDeptTree  (data, config) {
+export function empowerEnterpriseReDeptTree(data, config) {
   return Http.get('/api/empower/enterpriseRe/deptTree', data, config)
 }
 
@@ -50,7 +50,7 @@ export function empowerEnterpriseReDeptTree  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReDetail  (data, config) {
+export function empowerEnterpriseReDetail(data, config) {
   return Http.get('/api/empower/enterpriseRe/detail', data, config)
 }
 
@@ -59,8 +59,12 @@ export function empowerEnterpriseReDetail  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReDetailGenReLinkOrQr  (data, config) {
-  return Http.get('/api/empower/enterpriseRe/detail/genReLinkOrQr', data, config)
+export function empowerEnterpriseReDetailGenReLinkOrQr(data, config) {
+  return Http.get(
+    '/api/empower/enterpriseRe/detail/genReLinkOrQr',
+    data,
+    config
+  )
 }
 
 /**
@@ -68,15 +72,22 @@ export function empowerEnterpriseReDetailGenReLinkOrQr  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReDetailGetEnterpriseListByPhone  (data, config) {
-  return Http.get('/api/empower/enterpriseRe/detail/getEnterpriseListByPhone', data, config)
+export function empowerEnterpriseReDetailGetEnterpriseListByPhone(
+  data,
+  config
+) {
+  return Http.get(
+    '/api/empower/enterpriseRe/detail/getEnterpriseListByPhone',
+    data,
+    config
+  )
 }
 
 /**
  * 获取平台公司列表
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReDetailListEnterprise(config){
+export function empowerEnterpriseReDetailListEnterprise(config) {
   return Http.get('/api/empower/enterpriseRe/detail/listEnterprise', config)
 }
 
@@ -85,8 +96,12 @@ export function empowerEnterpriseReDetailListEnterprise(config){
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReEmployeeOperEmType  (data, config) {
-  return Http.get('/api/empower/enterpriseRe/employeeOper/em/${type}', data, config)
+export function empowerEnterpriseReEmployeeOperEmType(data, config) {
+  return Http.get(
+    '/api/empower/enterpriseRe/employeeOper/em/${type}',
+    data,
+    config
+  )
 }
 
 /**
@@ -94,7 +109,7 @@ export function empowerEnterpriseReEmployeeOperEmType  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReEntReSetListRole  (data, config) {
+export function empowerEnterpriseReEntReSetListRole(data, config) {
   return Http.get('/api/empower/enterpriseRe/entReSet/listRole', data, config)
 }
 
@@ -103,8 +118,12 @@ export function empowerEnterpriseReEntReSetListRole  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReFranchiseOperOper  (data, config) {
-  return Http.get('/api/empower/enterpriseRe/franchiseOper/${oper}', data, config)
+export function empowerEnterpriseReFranchiseOperOper(data, config) {
+  return Http.get(
+    '/api/empower/enterpriseRe/franchiseOper/${oper}',
+    data,
+    config
+  )
 }
 
 /**
@@ -112,7 +131,7 @@ export function empowerEnterpriseReFranchiseOperOper  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReGetAccByMobile  (data, config) {
+export function empowerEnterpriseReGetAccByMobile(data, config) {
   return Http.get('/api/empower/enterpriseRe/getAccByMobile', data, config)
 }
 
@@ -121,8 +140,12 @@ export function empowerEnterpriseReGetAccByMobile  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReGetEmEmployeeInfoLinkCode  (data, config) {
-  return Http.get('/api/empower/enterpriseRe/getEmEmployeeInfo/${linkCode}', data, config)
+export function empowerEnterpriseReGetEmEmployeeInfoLinkCode(data, config) {
+  return Http.get(
+    '/api/empower/enterpriseRe/getEmEmployeeInfo/${linkCode}',
+    data,
+    config
+  )
 }
 
 /**
@@ -130,7 +153,7 @@ export function empowerEnterpriseReGetEmEmployeeInfoLinkCode  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReGetEmpowerInfo  (data, config) {
+export function empowerEnterpriseReGetEmpowerInfo(data, config) {
   return Http.get('/api/empower/enterpriseRe/getEmpowerInfo', data, config)
 }
 
@@ -139,7 +162,7 @@ export function empowerEnterpriseReGetEmpowerInfo  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReGetEntReSet  (data, config) {
+export function empowerEnterpriseReGetEntReSet(data, config) {
   return Http.get('/api/empower/enterpriseRe/getEntReSet', data, config)
 }
 
@@ -148,8 +171,12 @@ export function empowerEnterpriseReGetEntReSet  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReGetInviteReInfoLinkCode  (data, config) {
-  return Http.get('/api/empower/enterpriseRe/getInviteReInfo/${linkCode}', data, config)
+export function empowerEnterpriseReGetInviteReInfoLinkCode(data, config) {
+  return Http.get(
+    '/api/empower/enterpriseRe/getInviteReInfo/${linkCode}',
+    data,
+    config
+  )
 }
 
 /**
@@ -157,8 +184,12 @@ export function empowerEnterpriseReGetInviteReInfoLinkCode  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReInviteRePlateFromOrg  (data, config) {
-  return Http.post('/api/empower/enterpriseRe/inviteRePlateFromOrg', data, config)
+export function empowerEnterpriseReInviteRePlateFromOrg(data, config) {
+  return Http.post(
+    '/api/empower/enterpriseRe/inviteRePlateFromOrg',
+    data,
+    config
+  )
 }
 
 /**
@@ -166,7 +197,7 @@ export function empowerEnterpriseReInviteRePlateFromOrg  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReList  (data, config) {
+export function empowerEnterpriseReList(data, config) {
   return Http.get('/api/empower/enterpriseRe/list', data, config)
 }
 
@@ -175,7 +206,7 @@ export function empowerEnterpriseReList  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReListRoleList  (data, config) {
+export function empowerEnterpriseReListRoleList(data, config) {
   return Http.get('/api/empower/enterpriseRe/listRoleList', data, config)
 }
 
@@ -184,7 +215,7 @@ export function empowerEnterpriseReListRoleList  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseRePageEmployeeList  (data, config) {
+export function empowerEnterpriseRePageEmployeeList(data, config) {
   return Http.get('/api/empower/enterpriseRe/pageEmployeeList', data, config)
 }
 
@@ -193,7 +224,7 @@ export function empowerEnterpriseRePageEmployeeList  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReReReEntTree  (data, config) {
+export function empowerEnterpriseReReReEntTree(data, config) {
   return Http.get('/api/empower/enterpriseRe/re/reEntTree', data, config)
 }
 
@@ -202,7 +233,7 @@ export function empowerEnterpriseReReReEntTree  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReReEntTree  (data, config) {
+export function empowerEnterpriseReReEntTree(data, config) {
   return Http.get('/api/empower/enterpriseRe/reEntTree', data, config)
 }
 
@@ -211,7 +242,7 @@ export function empowerEnterpriseReReEntTree  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReRefreshApplyRe  (data, config) {
+export function empowerEnterpriseReRefreshApplyRe(data, config) {
   return Http.get('/api/empower/enterpriseRe/refreshApplyRe', data, config)
 }
 
@@ -220,7 +251,7 @@ export function empowerEnterpriseReRefreshApplyRe  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReRelationCancel  (data, config) {
+export function empowerEnterpriseReRelationCancel(data, config) {
   return Http.get('/api/empower/enterpriseRe/relation/cancel', data, config)
 }
 
@@ -229,7 +260,7 @@ export function empowerEnterpriseReRelationCancel  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReRelationRefresh  (data, config) {
+export function empowerEnterpriseReRelationRefresh(data, config) {
   return Http.get('/api/empower/enterpriseRe/relation/refresh', data, config)
 }
 
@@ -238,7 +269,7 @@ export function empowerEnterpriseReRelationRefresh  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReScanGetOrgInfo  (data, config) {
+export function empowerEnterpriseReScanGetOrgInfo(data, config) {
   return Http.get('/api/empower/enterpriseRe/scan/getOrgInfo', data, config)
 }
 
@@ -247,7 +278,7 @@ export function empowerEnterpriseReScanGetOrgInfo  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReSendEmpowerSms  (data, config) {
+export function empowerEnterpriseReSendEmpowerSms(data, config) {
   return Http.post('/api/empower/enterpriseRe/sendEmpowerSms', data, config)
 }
 
@@ -256,6 +287,10 @@ export function empowerEnterpriseReSendEmpowerSms  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function empowerEnterpriseReUpEntReSetEnterpriseId  (data, config) {
-  return Http.post('/api/empower/enterpriseRe/upEntReSet/${enterpriseId}', data, config)
+export function empowerEnterpriseReUpEntReSetEnterpriseId(data, config) {
+  return Http.post(
+    '/api/empower/enterpriseRe/upEntReSet/${enterpriseId}',
+    data,
+    config
+  )
 }

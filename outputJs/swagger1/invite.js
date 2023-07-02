@@ -1,11 +1,11 @@
-import {Http} from '../../httpJs/index';
+import { Http } from '../../httpJs/index'
 
 /**
  * 取消屏蔽用户
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function inviteAuditCancelShieldId  (data, config) {
+export function inviteAuditCancelShieldId(data, config) {
   return Http.get('/api/invite/audit/cancelShield/${id}', data, config)
 }
 
@@ -14,7 +14,7 @@ export function inviteAuditCancelShieldId  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function inviteAuditPass  (data, config) {
+export function inviteAuditPass(data, config) {
   return Http.post('/api/invite/audit/pass', data, config)
 }
 
@@ -23,7 +23,7 @@ export function inviteAuditPass  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function inviteAuditRefuse  (data, config) {
+export function inviteAuditRefuse(data, config) {
   return Http.post('/api/invite/audit/refuse', data, config)
 }
 
@@ -32,7 +32,7 @@ export function inviteAuditRefuse  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function inviteAuditShieldId  (data, config) {
+export function inviteAuditShieldId(data, config) {
   return Http.get('/api/invite/audit/shield/${id}', data, config)
 }
 
@@ -41,7 +41,7 @@ export function inviteAuditShieldId  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function inviteCheckInviteCode  (data, config) {
+export function inviteCheckInviteCode(data, config) {
   return Http.get('/api/invite/checkInviteCode', data, config)
 }
 
@@ -50,7 +50,7 @@ export function inviteCheckInviteCode  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function inviteExport  (data, config) {
+export function inviteExport(data, config) {
   return Http.post('/api/invite/export', data, config)
 }
 
@@ -59,7 +59,7 @@ export function inviteExport  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function inviteGenerateInviteShare  (data, config) {
+export function inviteGenerateInviteShare(data, config) {
   return Http.post('/api/invite/generateInviteShare', data, config)
 }
 
@@ -68,7 +68,7 @@ export function inviteGenerateInviteShare  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function inviteInviteJoinEchoData  (data, config) {
+export function inviteInviteJoinEchoData(data, config) {
   return Http.get('/api/invite/inviteJoinEchoData', data, config)
 }
 
@@ -77,7 +77,7 @@ export function inviteInviteJoinEchoData  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function inviteInviteLogin  (data, config) {
+export function inviteInviteLogin(data, config) {
   return Http.post('/api/invite/inviteLogin', data, config)
 }
 
@@ -86,7 +86,7 @@ export function inviteInviteLogin  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function inviteInviteRegister  (data, config) {
+export function inviteInviteRegister(data, config) {
   return Http.post('/api/invite/inviteRegister', data, config)
 }
 
@@ -95,7 +95,7 @@ export function inviteInviteRegister  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function invitePageApplyType  (data, config) {
+export function invitePageApplyType(data, config) {
   return Http.post('/api/invite/page/${applyType}', data, config)
 }
 
@@ -103,7 +103,7 @@ export function invitePageApplyType  (data, config) {
  * 邀请设置查询
  * @param {*} config 可选，如：{headers:{}}
  */
-export function inviteQuerySetting(config){
+export function inviteQuerySetting(config) {
   return Http.get('/api/invite/querySetting', config)
 }
 
@@ -112,6 +112,6 @@ export function inviteQuerySetting(config){
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function inviteUpdatesetting  (data, config) {
+export function inviteUpdatesetting(data, config) {
   return Http.post('/api/invite/updatesetting', data, config)
 }

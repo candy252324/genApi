@@ -1,12 +1,16 @@
-import {Http} from '../../httpJs/index';
+import { Http } from '../../httpJs/index'
 
 /**
  * 钱包临时使用，后面切换版本。分页查询员工信息【租户id, 姓名，手机号，状态】
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function enterpriseIdentificationBaseInfoEmployeeList  (data, config) {
-  return Http.post('/api/enterprise/identification/baseInfo/employeeList', data, config)
+export function enterpriseIdentificationBaseInfoEmployeeList(data, config) {
+  return Http.post(
+    '/api/enterprise/identification/baseInfo/employeeList',
+    data,
+    config
+  )
 }
 
 /**
@@ -14,8 +18,15 @@ export function enterpriseIdentificationBaseInfoEmployeeList  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function enterpriseIdentificationEnterpriseV1OpenAcctCallback  (data, config) {
-  return Http.put('/api/enterprise/identification/enterprise/v1/openAcct/callback', data, config)
+export function enterpriseIdentificationEnterpriseV1OpenAcctCallback(
+  data,
+  config
+) {
+  return Http.put(
+    '/api/enterprise/identification/enterprise/v1/openAcct/callback',
+    data,
+    config
+  )
 }
 
 /**
@@ -23,8 +34,15 @@ export function enterpriseIdentificationEnterpriseV1OpenAcctCallback  (data, con
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function enterpriseIdentificationEnterpriseV1PageEnterpriseName  (data, config) {
-  return Http.post('/api/enterprise/identification/enterprise/v1/page/enterpriseName', data, config)
+export function enterpriseIdentificationEnterpriseV1PageEnterpriseName(
+  data,
+  config
+) {
+  return Http.post(
+    '/api/enterprise/identification/enterprise/v1/page/enterpriseName',
+    data,
+    config
+  )
 }
 
 /**
@@ -32,8 +50,12 @@ export function enterpriseIdentificationEnterpriseV1PageEnterpriseName  (data, c
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function enterpriseIdentificationPersonV1OpenAcctCallback  (data, config) {
-  return Http.put('/api/enterprise/identification/person/v1/openAcct/callback', data, config)
+export function enterpriseIdentificationPersonV1OpenAcctCallback(data, config) {
+  return Http.put(
+    '/api/enterprise/identification/person/v1/openAcct/callback',
+    data,
+    config
+  )
 }
 
 /**
@@ -41,7 +63,7 @@ export function enterpriseIdentificationPersonV1OpenAcctCallback  (data, config)
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function enterpriseIdentificationV1OpenAcct  (data, config) {
+export function enterpriseIdentificationV1OpenAcct(data, config) {
   return Http.get('/api/enterprise/identification/v1/openAcct', data, config)
 }
 
@@ -50,7 +72,7 @@ export function enterpriseIdentificationV1OpenAcct  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function enterpriseIdentificationV1SimpleAuth  (data, config) {
+export function enterpriseIdentificationV1SimpleAuth(data, config) {
   return Http.get('/api/enterprise/identification/v1/simple/auth', data, config)
 }
 
@@ -59,8 +81,12 @@ export function enterpriseIdentificationV1SimpleAuth  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function enterpriseIdentificationV1TicketAuth  (data, config) {
-  return Http.post('/api/enterprise/identification/v1/ticket/auth', data, config)
+export function enterpriseIdentificationV1TicketAuth(data, config) {
+  return Http.post(
+    '/api/enterprise/identification/v1/ticket/auth',
+    data,
+    config
+  )
 }
 
 /**
@@ -68,8 +94,15 @@ export function enterpriseIdentificationV1TicketAuth  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function enterpriseIdentificationV1EnterpriseIdOpenAcctAppend  (data, config) {
-  return Http.post('/api/enterprise/identification/v1/${enterpriseId}/openAcct/append', data, config)
+export function enterpriseIdentificationV1EnterpriseIdOpenAcctAppend(
+  data,
+  config
+) {
+  return Http.post(
+    '/api/enterprise/identification/v1/${enterpriseId}/openAcct/append',
+    data,
+    config
+  )
 }
 
 /**
@@ -77,15 +110,22 @@ export function enterpriseIdentificationV1EnterpriseIdOpenAcctAppend  (data, con
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function enterpriseIdentificationV1EnterpriseIdOpenAcctExecute  (data, config) {
-  return Http.put('/api/enterprise/identification/v1/${enterpriseId}/openAcct/execute', data, config)
+export function enterpriseIdentificationV1EnterpriseIdOpenAcctExecute(
+  data,
+  config
+) {
+  return Http.put(
+    '/api/enterprise/identification/v1/${enterpriseId}/openAcct/execute',
+    data,
+    config
+  )
 }
 
 /**
  * 是否可以操作切换主企业
  * @param {*} config 可选，如：{headers:{}}
  */
-export function enterpriseIdentificationcenterAddEnterprise(config){
+export function enterpriseIdentificationcenterAddEnterprise(config) {
   return Http.get('/api/enterprise/identificationcenter/addEnterprise', config)
 }
 
@@ -94,8 +134,12 @@ export function enterpriseIdentificationcenterAddEnterprise(config){
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function enterpriseIdentificationcenterDelEnterprise  (data, config) {
-  return Http.get('/api/enterprise/identificationcenter/delEnterprise', data, config)
+export function enterpriseIdentificationcenterDelEnterprise(data, config) {
+  return Http.get(
+    '/api/enterprise/identificationcenter/delEnterprise',
+    data,
+    config
+  )
 }
 
 /**
@@ -103,8 +147,12 @@ export function enterpriseIdentificationcenterDelEnterprise  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function enterpriseIdentificationcenterListEnterprise  (data, config) {
-  return Http.post('/api/enterprise/identificationcenter/listEnterprise', data, config)
+export function enterpriseIdentificationcenterListEnterprise(data, config) {
+  return Http.post(
+    '/api/enterprise/identificationcenter/listEnterprise',
+    data,
+    config
+  )
 }
 
 /**
@@ -112,8 +160,15 @@ export function enterpriseIdentificationcenterListEnterprise  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function enterpriseIdentificationcenterSwitchMainEnterprise  (data, config) {
-  return Http.get('/api/enterprise/identificationcenter/switchMainEnterprise', data, config)
+export function enterpriseIdentificationcenterSwitchMainEnterprise(
+  data,
+  config
+) {
+  return Http.get(
+    '/api/enterprise/identificationcenter/switchMainEnterprise',
+    data,
+    config
+  )
 }
 
 /**
@@ -121,8 +176,15 @@ export function enterpriseIdentificationcenterSwitchMainEnterprise  (data, confi
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function enterpriseIdentificationcenterEnterpriseIdMainAuthInfo  (data, config) {
-  return Http.get('/api/enterprise/identificationcenter/${enterpriseId}/mainAuthInfo', data, config)
+export function enterpriseIdentificationcenterEnterpriseIdMainAuthInfo(
+  data,
+  config
+) {
+  return Http.get(
+    '/api/enterprise/identificationcenter/${enterpriseId}/mainAuthInfo',
+    data,
+    config
+  )
 }
 
 /**
@@ -130,7 +192,7 @@ export function enterpriseIdentificationcenterEnterpriseIdMainAuthInfo  (data, c
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function enterpriseLinkDept  (data, config) {
+export function enterpriseLinkDept(data, config) {
   return Http.post('/api/enterprise/link/dept', data, config)
 }
 
@@ -139,7 +201,7 @@ export function enterpriseLinkDept  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function enterprisePageHomeClaimCompanyId  (data, config) {
+export function enterprisePageHomeClaimCompanyId(data, config) {
   return Http.get('/api/enterprise/pageHome/claim/${companyId}', data, config)
 }
 
@@ -148,7 +210,7 @@ export function enterprisePageHomeClaimCompanyId  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function enterprisePageHomeExcludeClaimId  (data, config) {
+export function enterprisePageHomeExcludeClaimId(data, config) {
   return Http.get('/api/enterprise/pageHome/exclude/${claimId}', data, config)
 }
 
@@ -156,7 +218,7 @@ export function enterprisePageHomeExcludeClaimId  (data, config) {
  * 查询认领操作结果
  * @param {*} config 可选，如：{headers:{}}
  */
-export function enterprisePageHomeJudge(config){
+export function enterprisePageHomeJudge(config) {
   return Http.get('/api/enterprise/pageHome/judge', config)
 }
 
@@ -164,7 +226,7 @@ export function enterprisePageHomeJudge(config){
  * 查询企业信息
  * @param {*} config 可选，如：{headers:{}}
  */
-export function enterprisePageHomeQuery(config){
+export function enterprisePageHomeQuery(config) {
   return Http.get('/api/enterprise/pageHome/query', config)
 }
 
@@ -173,6 +235,6 @@ export function enterprisePageHomeQuery(config){
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function enterpriseIdLinkDept  (data, config) {
+export function enterpriseIdLinkDept(data, config) {
   return Http.get('/api/enterprise/${id}/link/dept', data, config)
 }

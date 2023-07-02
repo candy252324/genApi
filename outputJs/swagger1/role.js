@@ -1,11 +1,11 @@
-import {Http} from '../../httpJs/index';
+import { Http } from '../../httpJs/index'
 
 /**
  * 新增角色
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function roleAddRole  (data, config) {
+export function roleAddRole(data, config) {
   return Http.post('/api/role/addRole', data, config)
 }
 
@@ -14,7 +14,7 @@ export function roleAddRole  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function roleAuthEmployeeCancelAll  (data, config) {
+export function roleAuthEmployeeCancelAll(data, config) {
   return Http.get('/api/role/authEmployee/cancelAll', data, config)
 }
 
@@ -23,7 +23,7 @@ export function roleAuthEmployeeCancelAll  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function roleAuthEmployeeSelectAll  (data, config) {
+export function roleAuthEmployeeSelectAll(data, config) {
   return Http.get('/api/role/authEmployee/selectAll', data, config)
 }
 
@@ -32,7 +32,7 @@ export function roleAuthEmployeeSelectAll  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function roleChangeStatus  (data, config) {
+export function roleChangeStatus(data, config) {
   return Http.get('/api/role/changeStatus', data, config)
 }
 
@@ -40,7 +40,7 @@ export function roleChangeStatus  (data, config) {
  * 获取当前登录员工可分配给用户的角色
  * @param {*} config 可选，如：{headers:{}}
  */
-export function roleCurCanAllotEmployeeRoleList(config){
+export function roleCurCanAllotEmployeeRoleList(config) {
   return Http.get('/api/role/curCanAllotEmployeeRoleList', config)
 }
 
@@ -48,7 +48,7 @@ export function roleCurCanAllotEmployeeRoleList(config){
  * 获取当前登录员工可分配权限的角色[加载上级角色]
  * @param {*} config 可选，如：{headers:{}}
  */
-export function roleCurCanAllotRoleList(config){
+export function roleCurCanAllotRoleList(config) {
   return Http.get('/api/role/curCanAllotRoleList', config)
 }
 
@@ -56,7 +56,7 @@ export function roleCurCanAllotRoleList(config){
  * 获取当前登录员工含有角色
  * @param {*} config 可选，如：{headers:{}}
  */
-export function roleCurEmployeeRoleList(config){
+export function roleCurEmployeeRoleList(config) {
   return Http.get('/api/role/curEmployeeRoleList', config)
 }
 
@@ -65,7 +65,7 @@ export function roleCurEmployeeRoleList(config){
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function roleEditRoleBase  (data, config) {
+export function roleEditRoleBase(data, config) {
   return Http.post('/api/role/editRoleBase', data, config)
 }
 
@@ -74,7 +74,7 @@ export function roleEditRoleBase  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function roleEditRoleMenu  (data, config) {
+export function roleEditRoleMenu(data, config) {
   return Http.post('/api/role/editRoleMenu', data, config)
 }
 
@@ -83,7 +83,7 @@ export function roleEditRoleMenu  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function roleGetCanAllotRoleListEmployeeId  (data, config) {
+export function roleGetCanAllotRoleListEmployeeId(data, config) {
   return Http.get('/api/role/getCanAllotRoleList/${employeeId}', data, config)
 }
 
@@ -92,7 +92,7 @@ export function roleGetCanAllotRoleListEmployeeId  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function rolePageRoleEmployeeRoleId  (data, config) {
+export function rolePageRoleEmployeeRoleId(data, config) {
   return Http.get('/api/role/pageRoleEmployee/${roleId}', data, config)
 }
 
@@ -101,7 +101,7 @@ export function rolePageRoleEmployeeRoleId  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function roleQueryEmployeeByDeptId  (data, config) {
+export function roleQueryEmployeeByDeptId(data, config) {
   return Http.get('/api/role/queryEmployeeByDeptId', data, config)
 }
 
@@ -110,7 +110,7 @@ export function roleQueryEmployeeByDeptId  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function roleQueryEmployeeByPhoneOrName  (data, config) {
+export function roleQueryEmployeeByPhoneOrName(data, config) {
   return Http.get('/api/role/queryEmployeeByPhoneOrName', data, config)
 }
 
@@ -119,7 +119,7 @@ export function roleQueryEmployeeByPhoneOrName  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function roleRemoveRoleRoleIds  (data, config) {
+export function roleRemoveRoleRoleIds(data, config) {
   return Http.get('/api/role/removeRole/${roleIds}', data, config)
 }
 
@@ -128,7 +128,7 @@ export function roleRemoveRoleRoleIds  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function roleRoleInfoRoleId  (data, config) {
+export function roleRoleInfoRoleId(data, config) {
   return Http.get('/api/role/roleInfo/${roleId}', data, config)
 }
 
@@ -137,7 +137,7 @@ export function roleRoleInfoRoleId  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function roleRoleList  (data, config) {
+export function roleRoleList(data, config) {
   return Http.get('/api/role/roleList', data, config)
 }
 
@@ -146,7 +146,7 @@ export function roleRoleList  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function roleRoleMenuTreeRoleId  (data, config) {
+export function roleRoleMenuTreeRoleId(data, config) {
   return Http.get('/api/role/roleMenuTree/${roleId}', data, config)
 }
 
@@ -155,7 +155,7 @@ export function roleRoleMenuTreeRoleId  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function roleRoleMenuTreeCheckedRoleId  (data, config) {
+export function roleRoleMenuTreeCheckedRoleId(data, config) {
   return Http.get('/api/role/roleMenuTreeChecked/${roleId}', data, config)
 }
 
@@ -164,6 +164,6 @@ export function roleRoleMenuTreeCheckedRoleId  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function roleRoleTree  (data, config) {
+export function roleRoleTree(data, config) {
   return Http.get('/api/role/roleTree', data, config)
 }

@@ -1,11 +1,11 @@
-import {Http} from '../../httpJs/index';
+import { Http } from '../../httpJs/index'
 
 /**
  * 添加成员
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function postAddEmployee  (data, config) {
+export function postAddEmployee(data, config) {
   return Http.get('/api/post/addEmployee', data, config)
 }
 
@@ -14,7 +14,7 @@ export function postAddEmployee  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function postAddPost  (data, config) {
+export function postAddPost(data, config) {
   return Http.post('/api/post/addPost', data, config)
 }
 
@@ -23,7 +23,7 @@ export function postAddPost  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function postDelEmployee  (data, config) {
+export function postDelEmployee(data, config) {
   return Http.get('/api/post/delEmployee', data, config)
 }
 
@@ -32,7 +32,7 @@ export function postDelEmployee  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function postDelPostPostId  (data, config) {
+export function postDelPostPostId(data, config) {
   return Http.get('/api/post/delPost/${postId}', data, config)
 }
 
@@ -41,7 +41,7 @@ export function postDelPostPostId  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function postEditPost  (data, config) {
+export function postEditPost(data, config) {
   return Http.post('/api/post/editPost', data, config)
 }
 
@@ -50,7 +50,7 @@ export function postEditPost  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function postList  (data, config) {
+export function postList(data, config) {
   return Http.get('/api/post/list', data, config)
 }
 
@@ -59,7 +59,7 @@ export function postList  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function postQueryEmployeeByDeptId  (data, config) {
+export function postQueryEmployeeByDeptId(data, config) {
   return Http.get('/api/post/queryEmployeeByDeptId', data, config)
 }
 
@@ -68,6 +68,6 @@ export function postQueryEmployeeByDeptId  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function postQueryEmployeeByPhoneOrName  (data, config) {
+export function postQueryEmployeeByPhoneOrName(data, config) {
   return Http.get('/api/post/queryEmployeeByPhoneOrName', data, config)
 }

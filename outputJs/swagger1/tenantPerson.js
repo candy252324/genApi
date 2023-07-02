@@ -1,10 +1,10 @@
-import {Http} from '../../httpJs/index';
+import { Http } from '../../httpJs/index'
 
 /**
  * 获取个人租户信息详情
  * @param {*} config 可选，如：{headers:{}}
  */
-export function tenantPersonAcquireInfo(config){
+export function tenantPersonAcquireInfo(config) {
   return Http.get('/api/tenantPerson/acquireInfo', config)
 }
 
@@ -13,7 +13,7 @@ export function tenantPersonAcquireInfo(config){
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function tenantPersonUpdateAccPassword  (data, config) {
+export function tenantPersonUpdateAccPassword(data, config) {
   return Http.post('/api/tenantPerson/updateAccPassword', data, config)
 }
 
@@ -22,6 +22,6 @@ export function tenantPersonUpdateAccPassword  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function tenantPersonUpdateInfo  (data, config) {
+export function tenantPersonUpdateInfo(data, config) {
   return Http.post('/api/tenantPerson/updateInfo', data, config)
 }

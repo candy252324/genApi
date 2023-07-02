@@ -1,10 +1,10 @@
-import {Http} from '../../httpJs/index';
+import { Http } from '../../httpJs/index'
 
 /**
  * 账号信息
  * @param {*} config 可选，如：{headers:{}}
  */
-export function accountAccQueryAcc(config){
+export function accountAccQueryAcc(config) {
   return Http.post('/api/account/acc/queryAcc', config)
 }
 
@@ -13,7 +13,7 @@ export function accountAccQueryAcc(config){
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function accountEnterpriseAddEnterprise  (data, config) {
+export function accountEnterpriseAddEnterprise(data, config) {
   return Http.post('/api/account/enterprise/addEnterprise', data, config)
 }
 
@@ -22,7 +22,7 @@ export function accountEnterpriseAddEnterprise  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function accountEnterpriseCreateEnterprise  (data, config) {
+export function accountEnterpriseCreateEnterprise(data, config) {
   return Http.post('/api/account/enterprise/createEnterprise', data, config)
 }
 
@@ -30,7 +30,7 @@ export function accountEnterpriseCreateEnterprise  (data, config) {
  * 用户是否加入/拥有企业
  * @param {*} config 可选，如：{headers:{}}
  */
-export function accountEnterpriseListUserEnterprise(config){
+export function accountEnterpriseListUserEnterprise(config) {
   return Http.get('/api/account/enterprise/listUserEnterprise', config)
 }
 
@@ -39,6 +39,6 @@ export function accountEnterpriseListUserEnterprise(config){
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function accountEnterprisePageAllEnterprise  (data, config) {
+export function accountEnterprisePageAllEnterprise(data, config) {
   return Http.post('/api/account/enterprise/pageAllEnterprise', data, config)
 }

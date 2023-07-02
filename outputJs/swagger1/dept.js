@@ -1,11 +1,11 @@
-import {Http} from '../../httpJs/index';
+import { Http } from '../../httpJs/index'
 
 /**
  * 新增部门
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function deptAddDept  (data, config) {
+export function deptAddDept(data, config) {
   return Http.post('/api/dept/addDept', data, config)
 }
 
@@ -14,7 +14,7 @@ export function deptAddDept  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function deptDelDeptConfirm  (data, config) {
+export function deptDelDeptConfirm(data, config) {
   return Http.post('/api/dept/delDept/confirm', data, config)
 }
 
@@ -23,7 +23,7 @@ export function deptDelDeptConfirm  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function deptDelDeptDeptId  (data, config) {
+export function deptDelDeptDeptId(data, config) {
   return Http.get('/api/dept/delDept/${deptId}', data, config)
 }
 
@@ -32,7 +32,7 @@ export function deptDelDeptDeptId  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function deptDeptTree  (data, config) {
+export function deptDeptTree(data, config) {
   return Http.get('/api/dept/deptTree', data, config)
 }
 
@@ -41,7 +41,7 @@ export function deptDeptTree  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function deptDeptTreeComplex  (data, config) {
+export function deptDeptTreeComplex(data, config) {
   return Http.get('/api/dept/deptTreeComplex', data, config)
 }
 
@@ -50,7 +50,7 @@ export function deptDeptTreeComplex  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function deptDeptTreeInfo  (data, config) {
+export function deptDeptTreeInfo(data, config) {
   return Http.get('/api/dept/deptTreeInfo', data, config)
 }
 
@@ -59,7 +59,7 @@ export function deptDeptTreeInfo  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function deptEditDept  (data, config) {
+export function deptEditDept(data, config) {
   return Http.post('/api/dept/editDept', data, config)
 }
 
@@ -68,7 +68,7 @@ export function deptEditDept  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function deptGetDeptId  (data, config) {
+export function deptGetDeptId(data, config) {
   return Http.get('/api/dept/get/${deptId}', data, config)
 }
 
@@ -77,7 +77,7 @@ export function deptGetDeptId  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function deptList  (data, config) {
+export function deptList(data, config) {
   return Http.get('/api/dept/list', data, config)
 }
 
@@ -86,7 +86,7 @@ export function deptList  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function deptListExcludeChildDeptId  (data, config) {
+export function deptListExcludeChildDeptId(data, config) {
   return Http.get('/api/dept/list/excludeChild/${deptId}', data, config)
 }
 
@@ -95,7 +95,7 @@ export function deptListExcludeChildDeptId  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function deptQueryEmployeeByDeptId  (data, config) {
+export function deptQueryEmployeeByDeptId(data, config) {
   return Http.get('/api/dept/queryEmployeeByDeptId', data, config)
 }
 
@@ -104,7 +104,7 @@ export function deptQueryEmployeeByDeptId  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function deptQueryEmployeeByPhoneOrName  (data, config) {
+export function deptQueryEmployeeByPhoneOrName(data, config) {
   return Http.get('/api/dept/queryEmployeeByPhoneOrName', data, config)
 }
 
@@ -113,7 +113,7 @@ export function deptQueryEmployeeByPhoneOrName  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function deptStartDelDeptDeptId  (data, config) {
+export function deptStartDelDeptDeptId(data, config) {
   return Http.get('/api/dept/start/delDept/${deptId}', data, config)
 }
 
@@ -122,6 +122,6 @@ export function deptStartDelDeptDeptId  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function deptUpDeptStatus  (data, config) {
+export function deptUpDeptStatus(data, config) {
   return Http.get('/api/dept/upDeptStatus', data, config)
 }

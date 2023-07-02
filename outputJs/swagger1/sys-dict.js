@@ -1,10 +1,10 @@
-import {Http} from '../../httpJs/index';
+import { Http } from '../../httpJs/index'
 
 /**
  * 区域查询
  * @param {*} config 可选，如：{headers:{}}
  */
-export function sysdictV1AreaInfo(config){
+export function sysdictV1AreaInfo(config) {
   return Http.get('/api/sys-dict/v1/areaInfo', config)
 }
 
@@ -12,7 +12,7 @@ export function sysdictV1AreaInfo(config){
  * 查询字典列表-查询当前数据类型列表
  * @param {*} config 可选，如：{headers:{}}
  */
-export function sysdictV1Types(config){
+export function sysdictV1Types(config) {
   return Http.get('/api/sys-dict/v1/types', config)
 }
 
@@ -21,7 +21,7 @@ export function sysdictV1Types(config){
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function sysdictV1TypeListFilter  (data, config) {
+export function sysdictV1TypeListFilter(data, config) {
   return Http.get('/api/sys-dict/v1/${type}/list/filter', data, config)
 }
 
@@ -30,7 +30,7 @@ export function sysdictV1TypeListFilter  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function sysdictV1TypeListPage  (data, config) {
+export function sysdictV1TypeListPage(data, config) {
   return Http.post('/api/sys-dict/v1/${type}/list/page', data, config)
 }
 
@@ -39,6 +39,6 @@ export function sysdictV1TypeListPage  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function sysdictV1TypeListTree  (data, config) {
+export function sysdictV1TypeListTree(data, config) {
   return Http.get('/api/sys-dict/v1/${type}/list/tree', data, config)
 }

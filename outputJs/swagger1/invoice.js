@@ -1,11 +1,11 @@
-import {Http} from '../../httpJs/index';
+import { Http } from '../../httpJs/index'
 
 /**
  * 添加开票
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function invoiceAdd  (data, config) {
+export function invoiceAdd(data, config) {
   return Http.post('/api/invoice/add', data, config)
 }
 
@@ -14,7 +14,7 @@ export function invoiceAdd  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function invoiceCompanyTaxList  (data, config) {
+export function invoiceCompanyTaxList(data, config) {
   return Http.get('/api/invoice/companyTaxList', data, config)
 }
 
@@ -23,7 +23,7 @@ export function invoiceCompanyTaxList  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function invoiceDel  (data, config) {
+export function invoiceDel(data, config) {
   return Http.get('/api/invoice/del', data, config)
 }
 
@@ -32,7 +32,7 @@ export function invoiceDel  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function invoicePage  (data, config) {
+export function invoicePage(data, config) {
   return Http.post('/api/invoice/page', data, config)
 }
 
@@ -41,6 +41,6 @@ export function invoicePage  (data, config) {
  * @param {*} data 接口入参
  * @param {*} config 可选，如：{headers:{}}
  */
-export function invoiceUpdate  (data, config) {
+export function invoiceUpdate(data, config) {
   return Http.post('/api/invoice/update', data, config)
 }
