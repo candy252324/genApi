@@ -13,7 +13,8 @@ let _pageModelName=''
  *   },
  * },
  */
-function handleDefinitions(definitions, { pageModelName }) {
+function handleDefinitions(  definitions, { pageModelName } = { pageModelName: '' }
+) {
   /**
    * [{
    *    name:"",   // 原始 key 处理后结果，如： ApiResponse
