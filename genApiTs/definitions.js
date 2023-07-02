@@ -14,7 +14,7 @@ let _pageModelName = ''
  *   },
  * },
  */
-function handleDefinitions(definitions, { pageModelName, apiBigModal }) {
+function handleDefinitions(definitions, { connectWithBehindInterface, unnecessaryInterface }) {
   /**
    * [{
    *    name:"",   // 原始 key 处理后结果，如： ApiResponse
@@ -27,7 +27,7 @@ function handleDefinitions(definitions, { pageModelName, apiBigModal }) {
    *    }]
    *  }]
    */
-  _pageModelName = pageModelName
+  _pageModelName = connectWithBehindInterface
   const defs = []
   Object.keys(definitions).forEach((key) => {
     const obj = definitions[key]
@@ -48,7 +48,7 @@ function handleDefinitions(definitions, { pageModelName, apiBigModal }) {
     } else {
       const interfaceName = handleInterfaceName(key)
       // 特殊类型，不写入
-      if (interfaceName === apiBigModal) return
+      if (interfaceName === unnecessaryInterface) return
 
       const exist = defs.find((item) => item.name === interfaceName)
       // if (!exist) {

@@ -20,8 +20,8 @@ apiList.forEach(item => {
   const absOutputDir = path.join(CWD, item.outputDir)
   const ignoreReg = item.ignore
   const prefix = item.prefix || ''
-  const pageModelName = item.pageModelName || ''
-  const apiBigModal = item.apiBigModal || ''
+  const connectWithBehindInterface = item.connectWithBehindInterface || ''
+  const unnecessaryInterface = item.unnecessaryInterface || ''
   if (swaggerUrl.includes('http')) {
     // 从swagger url 读取数据
     axios
@@ -31,8 +31,8 @@ apiList.forEach(item => {
           absOutputDir,
           ignoreReg,
           prefix,
-          pageModelName,
-          apiBigModal,
+          connectWithBehindInterface,
+          unnecessaryInterface,
         })
       })
       .catch(() => {
@@ -48,8 +48,8 @@ apiList.forEach(item => {
         absOutputDir,
         ignoreReg,
         prefix,
-        pageModelName,
-        apiBigModal,
+        connectWithBehindInterface,
+        unnecessaryInterface,
       })
     })
   }
@@ -57,11 +57,11 @@ apiList.forEach(item => {
 
 function parseData(
   jsonData,
-  { absOutputDir, ignoreReg, prefix, pageModelName, apiBigModal }
+  { absOutputDir, ignoreReg, prefix, connectWithBehindInterface, unnecessaryInterface }
 ) {
   _rawDefinitions = jsonData.definitions || {}
   const apiList = handlePaths(jsonData.paths, ignoreReg)
-  _cookedDefinitions = handleDefinitions(_rawDefinitions, { pageModelName,apiBigModal })
+  _cookedDefinitions = handleDefinitions(_rawDefinitions, { connectWithBehindInterface,unnecessaryInterface })
   writeDeinitionToFile(_cookedDefinitions, absOutputDir)
   const count = apiList.reduce((pre, cur) => {
     return pre + cur.apis.length
@@ -168,7 +168,7 @@ export function ${name}(config?: AxiosRequestConfig):AxiosPromise${_outputInterf
       fs.writeFileSync(targetFile, `${tplStr}\n${importStr}\n${apiStr}`)
 
       // 格式化
-      console.log(`文件格式化 ${targetFile}`)
+      console.log(`格式化 ${targetFile}`)
       exec(`prettier --write ${targetFile}`)
     })
   })
