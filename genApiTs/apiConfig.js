@@ -2,8 +2,7 @@ module.exports = {
   httpFn: 'Http', // 封装的 axios 请求方法
   httpTpl: `
 import {Http} from '../../httpTs/index';
-import { AxiosPromise, AxiosRequestConfig } from 'axios'
-`, // 文件头部引入内容
+import { AxiosPromise, AxiosRequestConfig } from 'axios'`, // 文件头部引入内容
   apiList: [
     {
       swaggerUrl: './testData/swagger3.json',

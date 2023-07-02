@@ -105,7 +105,7 @@ function writeToFile(apiList, options) {
   const outputDir = options.absOutputDir
   const prefix = options.prefix
   apiList.forEach(item => {
-    let tplStr = `${httpTpl}\n`
+    let tplStr = `${httpTpl}`
     let apiStr = ''
     const namespace = item.namespace
     let fileUsedInterface = [] // 当前文件用到的 interface
