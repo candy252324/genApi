@@ -27,13 +27,19 @@ apiList.forEach(item => {
     axios
       .get(swaggerUrl)
       .then(res => {
-        if (res.status === 200) parseData(res.data, {
-          absOutputDir,
-          ignoreReg,
-          prefix,
-          connectWithBehindInterface,
-          unnecessaryInterface,
-        })
+        if (res.status === 200){
+          try {
+            parseData(res.data, {
+              absOutputDir,
+              ignoreReg,
+              prefix,
+              connectWithBehindInterface,
+              unnecessaryInterface,
+            })
+          } catch (error) {
+            console.log(error)
+          }
+        } 
       })
       .catch(() => {
         console.log('\x1B[31m%s\x1B[0m', '天! swagger 又挂了！！👿')
