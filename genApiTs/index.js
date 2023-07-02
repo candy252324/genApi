@@ -154,7 +154,7 @@ export function ${name}(config?: AxiosRequestConfig):AxiosPromise${_outputInterf
       fs.writeFileSync(targetFile, `${tplStr}\n${importStr}\n${apiStr}`)
 
       // 格式化
-      console.log("正在进行文件格式化...")
+      console.log(`文件格式化 ${targetFile}`)
       exec(`prettier --write ${targetFile}`)
     })
   })
@@ -199,7 +199,14 @@ function writeDeinitionToFile(definitions, absOutputDir) {
     }
   })
   const targetFile = path.join(absOutputDir, `_interfaces.ts`)
-  fs.writeFileSync(targetFile, str)
+  fs.access(absOutputDir, (err) => {
+    if (err) {
+      // 若目标目录不存在，则创建
+      fs.mkdirSync(absOutputDir, { recursive: true })
+    }
+    fs.writeFileSync(targetFile, str)
+  })
+
 }
 /**
  * 获取接口地址
