@@ -14,22 +14,26 @@ let _cookedDefinitions=[]  // 处理过的 definitions
 const httpFn = apiConfig.httpFn
 const httpTpl = apiConfig.httpTpl
 
-let allResInterfaces = [] // 所有出参的 interface
-let uniQueResInterfaces = [] // 所有出参的 interface(已去重)
-
 const apiList = apiConfig.apiList.filter(item => item.tag)
 apiList.forEach(item => {
   const swaggerUrl = item.swaggerUrl
   const absOutputDir = path.join(CWD, item.outputDir)
   const ignoreReg = item.ignore
   const prefix = item.prefix || ''
-  const pageModelName = item.pageModelName
+  const pageModelName = item.pageModelName || ''
+  const apiBigModal = item.apiBigModal || ''
   if (swaggerUrl.includes('http')) {
     // 从swagger url 读取数据
     axios
       .get(swaggerUrl)
       .then(res => {
-        if (res.status === 200) parseData(res.data, { absOutputDir, ignoreReg, prefix, pageModelName })
+        if (res.status === 200) parseData(res.data, {
+          absOutputDir,
+          ignoreReg,
+          prefix,
+          pageModelName,
+          apiBigModal,
+        })
       })
       .catch(() => {
         console.log('\x1B[31m%s\x1B[0m', '天! swagger 又挂了！！👿')
@@ -45,15 +49,19 @@ apiList.forEach(item => {
         ignoreReg,
         prefix,
         pageModelName,
+        apiBigModal,
       })
     })
   }
 })
 
-function parseData(jsonData, { absOutputDir, ignoreReg, prefix, pageModelName }) {
+function parseData(
+  jsonData,
+  { absOutputDir, ignoreReg, prefix, pageModelName, apiBigModal }
+) {
   _rawDefinitions = jsonData.definitions || {}
   const apiList = handlePaths(jsonData.paths, ignoreReg)
-   _cookedDefinitions = handleDefinitions(_rawDefinitions, { pageModelName })
+  _cookedDefinitions = handleDefinitions(_rawDefinitions, { pageModelName,apiBigModal })
   writeDeinitionToFile(_cookedDefinitions, absOutputDir)
   const count = apiList.reduce((pre, cur) => {
     return pre + cur.apis.length
@@ -185,7 +193,7 @@ function writeDeinitionToFile(definitions, absOutputDir) {
       str += `export interface ${item.name} {`
       if (item.properties && item.properties.length) {
         item.properties.forEach(it => {
-          const description = it.description ? `/**${it.description}*/` : ''
+          const description = it.description ? `/** ${it.description} */` : ''
           // 有注释
           if (description) {
             str += `

@@ -1,5 +1,6 @@
-let pinyin = require('js-pinyin')
-let _pageModelName=''
+const pinyin = require('js-pinyin')
+
+let _pageModelName = ''
 
 /** 入参格式
  * "ApiResponse«AddGroupResp»": {
@@ -13,8 +14,7 @@ let _pageModelName=''
  *   },
  * },
  */
-function handleDefinitions(  definitions, { pageModelName } = { pageModelName: '' }
-) {
+function handleDefinitions(definitions, { pageModelName, apiBigModal }) {
   /**
    * [{
    *    name:"",   // 原始 key 处理后结果，如： ApiResponse
@@ -28,7 +28,7 @@ function handleDefinitions(  definitions, { pageModelName } = { pageModelName: '
    *  }]
    */
   _pageModelName = pageModelName
-  let defs = []
+  const defs = []
   Object.keys(definitions).forEach((key) => {
     const obj = definitions[key]
     const properties = handleProperties(obj.properties || {})
@@ -37,16 +37,19 @@ function handleDefinitions(  definitions, { pageModelName } = { pageModelName: '
     if (relationInterface && relationInterface.length) {
       relationInterface.forEach((interfaceName) => {
         const exist = defs.find((item) => item.name === interfaceName)
-        if (!exist) {
-          defs.push({
-            name: interfaceName,
-            type: handleItemsType(obj) + handleJsType(obj.type),
-            properties,
-          })
-        }
+        // if (!exist) {
+        defs.push({
+          name: interfaceName,
+          type: handleItemsType(obj) + handleJsType(obj.type),
+          properties,
+        })
+        // }
       })
     } else {
       const interfaceName = handleInterfaceName(key)
+      // 特殊类型，不写入
+      if (interfaceName === apiBigModal) return
+
       const exist = defs.find((item) => item.name === interfaceName)
       // if (!exist) {
       defs.push({
@@ -68,8 +71,8 @@ function handleDefinitions(  definitions, { pageModelName } = { pageModelName: '
    },
  */
 function handleProperties(properties) {
-  let arr = []
-  Object.keys(properties).forEach(key => {
+  const arr = []
+  Object.keys(properties).forEach((key) => {
     const obj = properties[key]
     arr.push({
       name: key,
@@ -87,33 +90,31 @@ function handleProperties(properties) {
  */
 function handleInterfaceName(originKey) {
   // 处理特殊的类型 ComPage ， 将 "ComPage«CommonSearchResp»" 处理成 “ComPageCommonSearchResp”
-  let pageModalArr=[]
-  pageModalArr = Array.isArray(_pageModelName) ? _pageModelName : [_pageModelName]
-  pageModalArr.forEach(pageModalName=>{
+  let pageModalArr = []
+  pageModalArr = Array.isArray(_pageModelName)
+    ? _pageModelName
+    : [_pageModelName]
+  pageModalArr.forEach((pageModalName) => {
     // 从 "ComPage«CommonSearchResp»" 取出  "ComPage", 判断是否属于后端的分页模型
     const idx = originKey.indexOf('«')
-    if (idx > -1 && originKey.slice(0, idx) === pageModalName) {
+    if (idx > -1 && originKey.slice(0, idx) === pageModalName)
       originKey = originKey.replace('«', '').replace('»', '')
-    }
   })
 
   const idx = originKey.indexOf('«')
   let str = originKey
-  if (idx > -1) {
-    str = originKey.slice(0, idx)
-  }
+  if (idx > -1) str = originKey.slice(0, idx)
+
   str = str.replace(/-/g, '') // 去除短杠 -
   str = str.replace(/\[|\]/g, '') // 去除中括号 []
   str = str.replace(/\(|\)/g, '') // 去除圆括号 ()
   str = str.replace(/\//g, '') // 去除斜杠 /
   str = str.replace(/\s/g, '') // 去除空格
-  str = str.replace(/(,|，|、)/g, '')  // 去除中英文逗号，顿号
-  if (hasChinese(str)) {
-    str = pinyin.getFullChars(str) // 汉字转拼音 历史消息=>LiShiXiaoXi
-  }
+  str = str.replace(/(,|，|、)/g, '') // 去除中英文逗号，顿号
+  if (hasChinese(str)) str = pinyin.getFullChars(str) // 汉字转拼音 历史消息=>LiShiXiaoXi
+
   return str
 }
-
 
 /** 处理以下数据格式
  * "certificateList": {
@@ -131,18 +132,16 @@ function handleInterfaceName(originKey) {
       "items": { "type": "integer", "format": "int64" }
     },
   或者
-  "data": { 
-    "$ref": "#/definitions/AddGroupResp", "originalRef": "AddGroupResp" 
+  "data": {
+    "$ref": "#/definitions/AddGroupResp", "originalRef": "AddGroupResp"
   },
  */
 function handleItemsType(obj) {
   if (obj.type === 'array') {
-    if (obj?.items?.originalRef){
+    if (obj?.items?.originalRef)
       return handleInterfaceName(obj.items.originalRef)
-    } else {
-      return handleJsType(obj.items.type)
-    }
-  }else if (obj?.originalRef) {
+    else return handleJsType(obj.items.type)
+  } else if (obj?.originalRef) {
     return handleInterfaceName(obj?.originalRef)
   } else {
     return ''
