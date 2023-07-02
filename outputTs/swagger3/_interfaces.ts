@@ -324,7 +324,7 @@ export interface ResOfSaveAdmin {
 }
 export interface ResOfApiRequestAddGroup {
   code: number
-  data: undefined
+  data: AddGroupResp
   msg: string
   success: boolean
   timestamp: number
@@ -332,7 +332,7 @@ export interface ResOfApiRequestAddGroup {
 }
 export interface ResOfApiCommonSearchType {
   code: number
-  data: undefined
+  data: ComPageCommonSearchResp
   msg: string
   success: boolean
   timestamp: number
@@ -340,7 +340,7 @@ export interface ResOfApiCommonSearchType {
 }
 export interface ResOfApiForwardSearch {
   code: number
-  data: undefined
+  data: ComPageCommonSearchResp
   msg: string
   success: boolean
   timestamp: number
@@ -348,7 +348,7 @@ export interface ResOfApiForwardSearch {
 }
 export interface ResOfCommonSearchType {
   code: number
-  data: undefined
+  data: ComPageCommonSearchResp
   msg: string
   success: boolean
   timestamp: number
@@ -356,7 +356,7 @@ export interface ResOfCommonSearchType {
 }
 export interface ResOfForwardSearch {
   code: number
-  data: undefined
+  data: ComPageCommonSearchResp
   msg: string
   success: boolean
   timestamp: number
@@ -364,7 +364,7 @@ export interface ResOfForwardSearch {
 }
 export interface ResOfApiChatOftenContact {
   code: number
-  data: undefined
+  data: ComPageContactResp
   msg: string
   success: boolean
   timestamp: number
@@ -372,7 +372,7 @@ export interface ResOfApiChatOftenContact {
 }
 export interface ResOfApiChatRecentContact {
   code: number
-  data: undefined
+  data: ComPageContactResp
   msg: string
   success: boolean
   timestamp: number
@@ -380,7 +380,7 @@ export interface ResOfApiChatRecentContact {
 }
 export interface ResOfChatOftenContact {
   code: number
-  data: undefined
+  data: ComPageContactResp
   msg: string
   success: boolean
   timestamp: number
@@ -388,7 +388,7 @@ export interface ResOfChatOftenContact {
 }
 export interface ResOfChatRecentContact {
   code: number
-  data: undefined
+  data: ComPageContactResp
   msg: string
   success: boolean
   timestamp: number
@@ -396,7 +396,7 @@ export interface ResOfChatRecentContact {
 }
 export interface ResOfBasePlatformQueryEnterpriseAll {
   code: number
-  data: undefined
+  data: ComPageEnterpriseMainInfoResp
   msg: string
   success: boolean
   timestamp: number
@@ -404,7 +404,7 @@ export interface ResOfBasePlatformQueryEnterpriseAll {
 }
 export interface ResOfApiFriendshipPageList {
   code: number
-  data: undefined
+  data: ComPageFriendshipResp
   msg: string
   success: boolean
   timestamp: number
@@ -412,7 +412,7 @@ export interface ResOfApiFriendshipPageList {
 }
 export interface ResOfFriendshipPageList {
   code: number
-  data: undefined
+  data: ComPageFriendshipResp
   msg: string
   success: boolean
   timestamp: number
@@ -420,7 +420,7 @@ export interface ResOfFriendshipPageList {
 }
 export interface ResOfApiCommonSearchBeforeAddFriend {
   code: number
-  data: undefined
+  data: ComPageSearchBeforeAddFriendResp
   msg: string
   success: boolean
   timestamp: number
@@ -428,7 +428,7 @@ export interface ResOfApiCommonSearchBeforeAddFriend {
 }
 export interface ResOfCommonSearchBeforeAddFriend {
   code: number
-  data: undefined
+  data: ComPageSearchBeforeAddFriendResp
   msg: string
   success: boolean
   timestamp: number
@@ -436,7 +436,7 @@ export interface ResOfCommonSearchBeforeAddFriend {
 }
 export interface ResOfApiChatPageList {
   code: number
-  data: undefined
+  data: ComPageHuiHuaLieBiaoXiangYing
   msg: string
   success: boolean
   timestamp: number
@@ -444,7 +444,7 @@ export interface ResOfApiChatPageList {
 }
 export interface ResOfApiChatUnreadList {
   code: number
-  data: undefined
+  data: ComPageHuiHuaLieBiaoXiangYing
   msg: string
   success: boolean
   timestamp: number
@@ -452,7 +452,7 @@ export interface ResOfApiChatUnreadList {
 }
 export interface ResOfChatPageList {
   code: number
-  data: undefined
+  data: ComPageHuiHuaLieBiaoXiangYing
   msg: string
   success: boolean
   timestamp: number
@@ -460,7 +460,7 @@ export interface ResOfChatPageList {
 }
 export interface ResOfApiMessageHistoryPageList {
   code: number
-  data: undefined
+  data: ComPageXiaoXiDuiXiang
   msg: string
   success: boolean
   timestamp: number
@@ -468,7 +468,7 @@ export interface ResOfApiMessageHistoryPageList {
 }
 export interface ResOfApiMessageSearchPageList {
   code: number
-  data: undefined
+  data: ComPageXiaoXiDuiXiang
   msg: string
   success: boolean
   timestamp: number
@@ -476,7 +476,7 @@ export interface ResOfApiMessageSearchPageList {
 }
 export interface ResOfApiGroupPageList {
   code: number
-  data: undefined
+  data: ComPageQunDuiXiangGroupResp
   msg: string
   success: boolean
   timestamp: number
@@ -484,7 +484,7 @@ export interface ResOfApiGroupPageList {
 }
 export interface ResOfGroupPageList {
   code: number
-  data: undefined
+  data: ComPageQunDuiXiangGroupResp
   msg: string
   success: boolean
   timestamp: number
@@ -492,7 +492,7 @@ export interface ResOfGroupPageList {
 }
 export interface ResOfApiGroupMemberPageList {
   code: number
-  data: undefined
+  data: ComPageQunChengYuanXinXiDuiXiangGroupMemberResp
   msg: string
   success: boolean
   timestamp: number
@@ -500,7 +500,7 @@ export interface ResOfApiGroupMemberPageList {
 }
 export interface ResOfPageList {
   code: number
-  data: undefined
+  data: ComPageQunChengYuanXinXiDuiXiangGroupMemberResp
   msg: string
   success: boolean
   timestamp: number
@@ -508,7 +508,7 @@ export interface ResOfPageList {
 }
 export interface ResOfApiDeptUserPage {
   code: number
-  data: undefined
+  data: ComPageBuMenYongHuLieBiaoDeptUserResp
   msg: string
   success: boolean
   timestamp: number
@@ -516,7 +516,7 @@ export interface ResOfApiDeptUserPage {
 }
 export interface ResOfDeptUserPage {
   code: number
-  data: undefined
+  data: ComPageBuMenYongHuLieBiaoDeptUserResp
   msg: string
   success: boolean
   timestamp: number
@@ -524,7 +524,7 @@ export interface ResOfDeptUserPage {
 }
 export interface ResOfApiRequestPageList {
   code: number
-  data: undefined
+  data: ComPageYanZhengXiaoXiFenYeRequestPageListResp
   msg: string
   success: boolean
   timestamp: number
@@ -532,7 +532,7 @@ export interface ResOfApiRequestPageList {
 }
 export interface ResOfBasePlatformGetEmployeeAllByUserAndTenant {
   code: number
-  data: undefined
+  data: EmployeeAllInfoResp
   msg: string
   success: boolean
   timestamp: number
@@ -540,7 +540,7 @@ export interface ResOfBasePlatformGetEmployeeAllByUserAndTenant {
 }
 export interface ResOfApiFriendshipDetail {
   code: number
-  data: undefined
+  data: FriendshipDetailResp
   msg: string
   success: boolean
   timestamp: number
@@ -548,7 +548,7 @@ export interface ResOfApiFriendshipDetail {
 }
 export interface ResOfFriendshipDetail {
   code: number
-  data: undefined
+  data: FriendshipDetailResp
   msg: string
   success: boolean
   timestamp: number
@@ -556,7 +556,7 @@ export interface ResOfFriendshipDetail {
 }
 export interface ResOfAddressBookListTenantInfo {
   code: number
-  data: []
+  data: AddressBookTenantInfoResp[]
   msg: string
   success: boolean
   timestamp: number
@@ -564,7 +564,7 @@ export interface ResOfAddressBookListTenantInfo {
 }
 export interface ResOfApiAddressBookListTenantInfo {
   code: number
-  data: []
+  data: AddressBookTenantInfoResp[]
   msg: string
   success: boolean
   timestamp: number
@@ -572,7 +572,7 @@ export interface ResOfApiAddressBookListTenantInfo {
 }
 export interface ResOfBasePlatformListDeptByParent {
   code: number
-  data: []
+  data: DeptNoteResp[]
   msg: string
   success: boolean
   timestamp: number
@@ -580,7 +580,7 @@ export interface ResOfBasePlatformListDeptByParent {
 }
 export interface ResOfApiForwardList {
   code: number
-  data: []
+  data: ForwardListResp[]
   msg: string
   success: boolean
   timestamp: number
@@ -588,7 +588,7 @@ export interface ResOfApiForwardList {
 }
 export interface ResOfForwardList {
   code: number
-  data: []
+  data: ForwardListResp[]
   msg: string
   success: boolean
   timestamp: number
@@ -596,7 +596,7 @@ export interface ResOfForwardList {
 }
 export interface ResOfApiGroupf2fList {
   code: number
-  data: []
+  data: GroupF2fUserListResp[]
   msg: string
   success: boolean
   timestamp: number
@@ -604,7 +604,7 @@ export interface ResOfApiGroupf2fList {
 }
 export interface ResOfApiPhoneList {
   code: number
-  data: []
+  data: PhoneFriendshipResp[]
   msg: string
   success: boolean
   timestamp: number
@@ -612,7 +612,7 @@ export interface ResOfApiPhoneList {
 }
 export interface ResOfApiCommonSwitchUserList {
   code: number
-  data: []
+  data: SwitchUserListResp[]
   msg: string
   success: boolean
   timestamp: number
@@ -620,7 +620,7 @@ export interface ResOfApiCommonSwitchUserList {
 }
 export interface ResOfCommonSwitchUserList {
   code: number
-  data: []
+  data: SwitchUserListResp[]
   msg: string
   success: boolean
   timestamp: number
@@ -628,7 +628,7 @@ export interface ResOfCommonSwitchUserList {
 }
 export interface ResOfApiRequestGetUnreadAttr {
   code: number
-  data: []
+  data: UnreadResp[]
   msg: string
   success: boolean
   timestamp: number
@@ -636,7 +636,7 @@ export interface ResOfApiRequestGetUnreadAttr {
 }
 export interface ResOfApiDeptUserListAllTenant {
   code: number
-  data: []
+  data: UserListAllTenantResp[]
   msg: string
   success: boolean
   timestamp: number
@@ -644,7 +644,7 @@ export interface ResOfApiDeptUserListAllTenant {
 }
 export interface ResOfDeptUserListAllTenant {
   code: number
-  data: []
+  data: UserListAllTenantResp[]
   msg: string
   success: boolean
   timestamp: number
@@ -652,7 +652,7 @@ export interface ResOfDeptUserListAllTenant {
 }
 export interface ResOfApiAppVersionList {
   code: number
-  data: []
+  data: BanBen[]
   msg: string
   success: boolean
   timestamp: number
@@ -660,7 +660,7 @@ export interface ResOfApiAppVersionList {
 }
 export interface ResOfApiUserListTenantInfo {
   code: number
-  data: []
+  data: ZuHuXinXi[]
   msg: string
   success: boolean
   timestamp: number
@@ -668,7 +668,7 @@ export interface ResOfApiUserListTenantInfo {
 }
 export interface ResOfBasePlatformListTenantInfo {
   code: number
-  data: []
+  data: ZuHuXinXi[]
   msg: string
   success: boolean
   timestamp: number
@@ -676,7 +676,7 @@ export interface ResOfBasePlatformListTenantInfo {
 }
 export interface ResOfApiGroupMemberListAdmin {
   code: number
-  data: []
+  data: QunChengYuanXinXiDuiXiangGroupMemberResp[]
   msg: string
   success: boolean
   timestamp: number
@@ -684,7 +684,7 @@ export interface ResOfApiGroupMemberListAdmin {
 }
 export interface ResOfListAdmin {
   code: number
-  data: []
+  data: QunChengYuanXinXiDuiXiangGroupMemberResp[]
   msg: string
   success: boolean
   timestamp: number
@@ -692,7 +692,7 @@ export interface ResOfListAdmin {
 }
 export interface ResOfApiDeptList {
   code: number
-  data: []
+  data: BuMenXinXiDeptResp[]
   msg: string
   success: boolean
   timestamp: number
@@ -700,7 +700,7 @@ export interface ResOfApiDeptList {
 }
 export interface ResOfApiDeptUserDeptList {
   code: number
-  data: []
+  data: BuMenXinXiDeptResp[]
   msg: string
   success: boolean
   timestamp: number
@@ -708,7 +708,7 @@ export interface ResOfApiDeptUserDeptList {
 }
 export interface ResOfDeptList {
   code: number
-  data: []
+  data: BuMenXinXiDeptResp[]
   msg: string
   success: boolean
   timestamp: number
@@ -716,7 +716,7 @@ export interface ResOfDeptList {
 }
 export interface ResOfDeptUserDeptList {
   code: number
-  data: []
+  data: BuMenXinXiDeptResp[]
   msg: string
   success: boolean
   timestamp: number
@@ -740,7 +740,7 @@ export interface ResOfCommonSearch {
 }
 export interface ResOfApiGroupMemberGroupStatus {
   code: number
-  data: undefined
+  data: MemberGroupStatusResp
   msg: string
   success: boolean
   timestamp: number
@@ -748,7 +748,7 @@ export interface ResOfApiGroupMemberGroupStatus {
 }
 export interface ResOfGroupStatus {
   code: number
-  data: undefined
+  data: MemberGroupStatusResp
   msg: string
   success: boolean
   timestamp: number
@@ -756,7 +756,7 @@ export interface ResOfGroupStatus {
 }
 export interface ResOfApiAdminPutAppVersionFile {
   code: number
-  data: undefined
+  data: PutFileResp
   msg: string
   success: boolean
   timestamp: number
@@ -764,7 +764,7 @@ export interface ResOfApiAdminPutAppVersionFile {
 }
 export interface ResOfApiFilePutOssFile {
   code: number
-  data: undefined
+  data: PutFileResp
   msg: string
   success: boolean
   timestamp: number
@@ -772,7 +772,7 @@ export interface ResOfApiFilePutOssFile {
 }
 export interface ResOfApiUserQueryAppVersion {
   code: number
-  data: undefined
+  data: QueryLastMessageResp
   msg: string
   success: boolean
   timestamp: number
@@ -780,7 +780,7 @@ export interface ResOfApiUserQueryAppVersion {
 }
 export interface ResOfApiCommonBind {
   code: number
-  data: undefined
+  data: UserBindResp
   msg: string
   success: boolean
   timestamp: number
@@ -788,7 +788,7 @@ export interface ResOfApiCommonBind {
 }
 export interface ResOfApiCommonSwitchChannel {
   code: number
-  data: undefined
+  data: UserBindResp
   msg: string
   success: boolean
   timestamp: number
@@ -796,7 +796,7 @@ export interface ResOfApiCommonSwitchChannel {
 }
 export interface ResOfCommonBind {
   code: number
-  data: undefined
+  data: UserBindResp
   msg: string
   success: boolean
   timestamp: number
@@ -804,7 +804,7 @@ export interface ResOfCommonBind {
 }
 export interface ResOfCommonSwitchChannel {
   code: number
-  data: undefined
+  data: UserBindResp
   msg: string
   success: boolean
   timestamp: number
@@ -812,7 +812,7 @@ export interface ResOfCommonSwitchChannel {
 }
 export interface ResOfApiFriendshipGetUserDetail {
   code: number
-  data: undefined
+  data: UserDetailResp
   msg: string
   success: boolean
   timestamp: number
@@ -820,7 +820,7 @@ export interface ResOfApiFriendshipGetUserDetail {
 }
 export interface ResOfFriendshipGetUserDetail {
   code: number
-  data: undefined
+  data: UserDetailResp
   msg: string
   success: boolean
   timestamp: number
@@ -828,7 +828,7 @@ export interface ResOfFriendshipGetUserDetail {
 }
 export interface ResOfApiUserPersonInfo {
   code: number
-  data: undefined
+  data: UserRespDuiXiang
   msg: string
   success: boolean
   timestamp: number
@@ -1012,7 +1012,7 @@ export interface ResOfLoginSendPhoneValidateCode {
 }
 export interface ResOfApiForwardCheckAndCreate {
   code: number
-  data: undefined
+  data: HuiHua
   msg: string
   success: boolean
   timestamp: number
@@ -1020,7 +1020,7 @@ export interface ResOfApiForwardCheckAndCreate {
 }
 export interface ResOfChatCreate {
   code: number
-  data: undefined
+  data: HuiHua
   msg: string
   success: boolean
   timestamp: number
@@ -1028,7 +1028,7 @@ export interface ResOfChatCreate {
 }
 export interface ResOfApiMessageDetail {
   code: number
-  data: undefined
+  data: XiaoXiDuiXiang
   msg: string
   success: boolean
   timestamp: number
@@ -1036,7 +1036,7 @@ export interface ResOfApiMessageDetail {
 }
 export interface ResOfApiLoginDoLogin {
   code: number
-  data: undefined
+  data: DengLuXiangYingShiTi
   msg: string
   success: boolean
   timestamp: number
@@ -1044,7 +1044,7 @@ export interface ResOfApiLoginDoLogin {
 }
 export interface ResOfLoginDoLogin {
   code: number
-  data: undefined
+  data: DengLuXiangYingShiTi
   msg: string
   success: boolean
   timestamp: number
@@ -1052,7 +1052,7 @@ export interface ResOfLoginDoLogin {
 }
 export interface ResOfApiGroupDetail {
   code: number
-  data: undefined
+  data: QunDuiXiangGroupDetailResp
   msg: string
   success: boolean
   timestamp: number
@@ -1060,7 +1060,7 @@ export interface ResOfApiGroupDetail {
 }
 export interface ResOfGroupDetail {
   code: number
-  data: undefined
+  data: QunDuiXiangGroupDetailResp
   msg: string
   success: boolean
   timestamp: number
@@ -1068,7 +1068,7 @@ export interface ResOfGroupDetail {
 }
 export interface ResOfApiGroupSave {
   code: number
-  data: undefined
+  data: QunDuiXiangGroupResp
   msg: string
   success: boolean
   timestamp: number
@@ -1076,7 +1076,7 @@ export interface ResOfApiGroupSave {
 }
 export interface ResOfGroupSave {
   code: number
-  data: undefined
+  data: QunDuiXiangGroupResp
   msg: string
   success: boolean
   timestamp: number
@@ -1084,7 +1084,7 @@ export interface ResOfGroupSave {
 }
 export interface ResOfApiGroupMemberDetail {
   code: number
-  data: undefined
+  data: QunChengYuanXinXiDuiXiangGroupMemberResp
   msg: string
   success: boolean
   timestamp: number
@@ -1092,7 +1092,7 @@ export interface ResOfApiGroupMemberDetail {
 }
 export interface ResOfDetail {
   code: number
-  data: undefined
+  data: QunChengYuanXinXiDuiXiangGroupMemberResp
   msg: string
   success: boolean
   timestamp: number
@@ -1100,7 +1100,7 @@ export interface ResOfDetail {
 }
 export interface ResOfApiRequestInvite {
   code: number
-  data: undefined
+  data: YaoQingRuQunXiangYing
   msg: string
   success: boolean
   timestamp: number
@@ -1108,7 +1108,7 @@ export interface ResOfApiRequestInvite {
 }
 export interface ResOfApiRequestTryInvite {
   code: number
-  data: undefined
+  data: YaoQingRuQunXiangYing
   msg: string
   success: boolean
   timestamp: number
@@ -1116,7 +1116,7 @@ export interface ResOfApiRequestTryInvite {
 }
 export interface ResOfApiRequestDetail {
   code: number
-  data: undefined
+  data: YanZhengXiaoXiXiangQingRequestDetailResp
   msg: string
   success: boolean
   timestamp: number
@@ -1141,69 +1141,69 @@ export interface ComLoginReq {
   /**滑块验证唯一标示*/
   uuid: string
 }
-export interface ComPage {
+export interface ComPageCommonSearchResp {
   current: number
-  records: []
+  records: CommonSearchResp[]
   size: number
   total: number
 }
-export interface ComPage {
+export interface ComPageContactResp {
   current: number
-  records: []
+  records: ContactResp[]
   size: number
   total: number
 }
-export interface ComPage {
+export interface ComPageEnterpriseMainInfoResp {
   current: number
-  records: []
+  records: EnterpriseMainInfoResp[]
   size: number
   total: number
 }
-export interface ComPage {
+export interface ComPageFriendshipResp {
   current: number
-  records: []
+  records: FriendshipResp[]
   size: number
   total: number
 }
-export interface ComPage {
+export interface ComPageSearchBeforeAddFriendResp {
   current: number
-  records: []
+  records: SearchBeforeAddFriendResp[]
   size: number
   total: number
 }
-export interface ComPage {
+export interface ComPageHuiHuaLieBiaoXiangYing {
   current: number
-  records: []
+  records: HuiHuaLieBiaoXiangYing[]
   size: number
   total: number
 }
-export interface ComPage {
+export interface ComPageXiaoXiDuiXiang {
   current: number
-  records: []
+  records: XiaoXiDuiXiang[]
   size: number
   total: number
 }
-export interface ComPage {
+export interface ComPageQunDuiXiangGroupResp {
   current: number
-  records: []
+  records: QunDuiXiangGroupResp[]
   size: number
   total: number
 }
-export interface ComPage {
+export interface ComPageQunChengYuanXinXiDuiXiangGroupMemberResp {
   current: number
-  records: []
+  records: QunChengYuanXinXiDuiXiangGroupMemberResp[]
   size: number
   total: number
 }
-export interface ComPage {
+export interface ComPageBuMenYongHuLieBiaoDeptUserResp {
   current: number
-  records: []
+  records: BuMenYongHuLieBiaoDeptUserResp[]
   size: number
   total: number
 }
-export interface ComPage {
+export interface ComPageYanZhengXiaoXiFenYeRequestPageListResp {
   current: number
-  records: []
+  records: YanZhengXiaoXiFenYeRequestPageListResp[]
   size: number
   total: number
 }
@@ -1316,7 +1316,7 @@ export interface ContactResp {
 }
 export interface DeptNoteResp {
   employeeCount: number
-  info: undefined
+  info: DeptResp
 }
 export interface DeptResp {
   /**祖级列表*/
@@ -1365,15 +1365,15 @@ export interface DeptResp {
 }
 export interface EmployeeAllInfoResp {
   /**部门信息*/
-  deptRespList: []
+  deptRespList: ExtDeptResp[]
   /**员工信息*/
-  employeeResp: undefined
+  employeeResp: EmployeeResp
   /**职务信息*/
-  jobRespList: []
+  jobRespList: JobResp[]
   /**岗位信息*/
-  postRespList: []
+  postRespList: PostResp[]
   /**角色信息*/
-  roleRespList: []
+  roleRespList: RoleResq[]
 }
 export interface EmployeeResp {
   createId: number
@@ -1590,7 +1590,7 @@ export interface GetUnreadPageReq {
   /**用户id*/
   imUserId: number
   /**用户id*/
-  requestIdList: []
+  requestIdList: number[]
 }
 export interface GroupF2fUserListResp {
   /**头像id*/
@@ -1612,7 +1612,7 @@ export interface GroupTransferReq {
 }
 export interface InviteToGroupReq {
   /**被邀请人*/
-  applyIds: []
+  applyIds: number[]
   /**群描述(可空)*/
   desc: string
   /**群名称*/
@@ -1657,16 +1657,16 @@ export interface MemberGroupStatusResp {
 }
 export interface MessageSyncDTO {
   applyType: string
-  cardMessageIdList: []
+  cardMessageIdList: number[]
   channel: string
   clientMessageId: string
   content: string
   contentType: string
-  excludeUserIds: []
+  excludeUserIds: number[]
   fileId: number
   forwardMessageId: number
-  groupIdList: []
-  receiverList: []
+  groupIdList: number[]
+  receiverList: number[]
   sender: number
 }
 export interface PhoneFriendshipResp {
@@ -1691,7 +1691,7 @@ export interface PhoneListReq {
   /**用户ID*/
   imUserId: number
   /**手机号列表*/
-  phoneList: []
+  phoneList: string[]
 }
 export interface PostResp {
   createId: number
@@ -1825,7 +1825,7 @@ export interface SearchBeforeAddFriendResp {
 }
 export interface SearchMapResp {
   hasMore: boolean
-  userList: []
+  userList: SearchResp[]
 }
 export interface SearchReq {
   /**用户ID*/
@@ -1930,7 +1930,7 @@ export interface UserListAllTenantResp {
   /**租户名称*/
   tenantName: string
   /**租户下对应的人员*/
-  userList: []
+  userList: BuMenYongHuLieBiaoDeptUserResp[]
 }
 export interface UserRespDuiXiang {
   /**头像*/
@@ -1999,7 +1999,7 @@ export interface HuiHua {
   chatType: string
   groupAttr: string
   /**会话群ID*/
-  groupIdList: []
+  groupIdList: number[]
   /**群状态*/
   groupStatus: boolean
   groupType: string
@@ -2044,7 +2044,7 @@ export interface HuiHuaLieBiao {
   /**终端设备类型*/
   channel: string
   /**群ID列表*/
-  groupIdList: []
+  groupIdList: number[]
   /**im用户id*/
   imUserId: number
   /**分页数量*/
@@ -2159,16 +2159,16 @@ export interface ChuangJianHuiHua {
   channel: string
   checkCache: boolean
   /**群ID*/
-  groupIdList: []
+  groupIdList: number[]
   /**接收人*/
-  receiverIdList: []
+  receiverIdList: number[]
   updateGroupChat: boolean
 }
 export interface ChuangJianGengXinDuiXiangGroupSaveReq {
   /**群描述(可空)*/
   desc: string
   /**群成员id*/
-  memberIdList: []
+  memberIdList: number[]
   /**群名称(可空)*/
   name: string
   /**群主id*/
@@ -2216,13 +2216,13 @@ export interface XiaoXiShanChu {
   /**im用户id*/
   imUserId: number
   /**消息ID*/
-  messageIdList: []
+  messageIdList: number[]
 }
 export interface XiaoXiDuiXiang {
   /**消息类型：FORWARD转发 REPLY引用回复*/
   applyType: string
   /**引用/转发消息*/
-  cardMessageList: []
+  cardMessageList: ZhuanFaXiaoXiDuiXiang[]
   /**消息内容*/
   content: string
   /**content类型：TEXT文本 TIP提示消息 IMG图片 AUDIO语音 VIDEO视频 FILE文件*/
@@ -2293,7 +2293,7 @@ export interface TianJiaHaoYouAddFriendReq {
 export interface TianJiaWoWeiHaoYouDeFangShi {
   imUserId: number
   /**群组GROUP, 手机号PHONE, 姓名USER_NAME，二维码QR_CODE*/
-  requestChannels: []
+  requestChannels: string[]
 }
 export interface QingKongXiaoXiRuCan {
   /**群id*/
@@ -2492,7 +2492,7 @@ export interface QunChengYuanShanChuGroupMemberDelReq {
   /**群id*/
   imGroupId: number
   /**退群的成员id列表*/
-  imMemberIdList: []
+  imMemberIdList: number[]
   /**当前操作人*/
   imUserId: number
 }
@@ -2502,7 +2502,7 @@ export interface QunChengYuanXinZengGroupMemberSaveReq {
   /**当前操作人id*/
   imUserId: number
   /**加群的成员id列表*/
-  imUserIdList: []
+  imUserIdList: number[]
 }
 export interface QunSheZhiZhiNenYiGeZhiBuWeiNullGroupSetReq {
   /**群ID*/
@@ -2566,7 +2566,7 @@ export interface QingQiuXiaoXiDuBaoKuoYanZhengJiHuiFuXiaoXiDuRequestReadReq {
   /**请求id*/
   requestId: number
   /**请求回复消息id*/
-  requestMsgIdList: []
+  requestMsgIdList: number[]
 }
 export interface ZhuanFaXiaoXiDuiXiang {
   /**消息类型：FORWARD转发 REPLY引用回复*/
@@ -2618,9 +2618,9 @@ export interface TongGuoJuJueApproveReq {
 }
 export interface YaoQingRuQunXiangYing {
   /**需要个人验证的成员id集合*/
-  checkUserIds: []
+  checkUserIds: number[]
   /**需要验证的成员集合*/
-  checkUsers: []
+  checkUsers: UserRespDuiXiang[]
   /**响应信息*/
   inviteMsg: string
 }
@@ -2750,7 +2750,7 @@ export interface YanZhengXiaoXiXiangQingRequestDetailResp {
   /**是否好友或同租户*/
   isFriendshipOrHasSameTenant: boolean
   /**回复消息列表*/
-  msgList: []
+  msgList: QingQiuHuiFuXiaoXiLieBiaoReqMsgDetailResp[]
   /**接收者头像/群头像*/
   receiverAvatar: string
   /**接收者id/群id*/

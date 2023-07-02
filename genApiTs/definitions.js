@@ -37,23 +37,22 @@ function handleDefinitions(definitions) {
         if (!exist) {
           defs.push({
             name: interfaceName,
-            type: handleType(obj.type),
+            type: handleItemsType(obj) + handleJsType(obj.type),
             properties,
           })
         }
       })
     }
-    // 直接出参中嵌的 interface
     else {
-      const interfaceName = handleKey(key)
-      const exist = defs.find(item => item.name === key)
-      if (!exist) {
+      const interfaceName = handleInterfaceName(key)
+      const exist = defs.find(item => item.name === interfaceName)
+      // if (!exist) {
         defs.push({
           name: interfaceName,
-          type: handleType(obj.type),
+          type: handleItemsType(obj) + handleJsType(obj.type),
           properties,
         })
-      }
+      // }
     }
   })
   return defs
@@ -72,7 +71,7 @@ function handleProperties(properties) {
     const obj = properties[key]
     arr.push({
       name: key,
-      type: handleType(obj.type),
+      type: handleItemsType(obj) + handleJsType(obj.type),
       description: obj.description || '',
     })
   })
@@ -83,7 +82,11 @@ function handleProperties(properties) {
  * 如： ApiResponse«List«群成员信息对象GroupMemberResp»»， 返回第一个 « 符号左边的内容， 最终处理处理成 "ApiResponse"
  * 再如： 历史消息-MessageHistoryReq , 去除特殊字符 - , 并将中文转化成拼音，最终处理成 "LiShiXiaoXiMessageHistoryReq"
  */
-function handleKey(originKey) {
+function handleInterfaceName(originKey) {
+  // 处理特殊的类型 ComPage ， 将 "ComPage«CommonSearchResp»" 处理成 “ComPageCommonSearchResp”
+  if (originKey.startsWith("ComPage")) {
+    originKey = originKey.replace('«', '').replace('»', '')
+  }
   const idx = originKey.indexOf('«')
   let str = originKey
   if (idx > -1) {
@@ -98,7 +101,43 @@ function handleKey(originKey) {
   }
   return str
 }
-function handleType(origintype) {
+
+
+/** 处理以下数据格式
+ * "certificateList": {
+      "type": "array",
+      "description": "执业资格证",
+      "items": {
+        "$ref": "#/definitions/CrmCustomerPersonCertificateInfoResp",
+        "originalRef": "CrmCustomerPersonCertificateInfoResp"
+      }
+    }
+  或者
+  "fileIdList": {
+      "type": "array",
+      "description": "图片文件id列表",
+      "items": { "type": "integer", "format": "int64" }
+    },
+  或者
+  "data": { 
+    "$ref": "#/definitions/AddGroupResp", "originalRef": "AddGroupResp" 
+  },
+ */
+function handleItemsType(obj) {
+  if (obj.type === 'array') {
+    if (obj?.items?.originalRef){
+      return handleInterfaceName(obj.items.originalRef)
+    } else {
+      return handleJsType(obj.items.type)
+    }
+  }else if (obj?.originalRef) {
+    return handleInterfaceName(obj?.originalRef)
+  } else {
+    return ''
+  }
+}
+
+function handleJsType(origintype) {
   const typeEnmu = {
     integer: 'number',
     string: 'string',
@@ -113,7 +152,7 @@ function handleType(origintype) {
     Boolean: 'boolean',
     Object: 'object',
   }
-  return typeEnmu[origintype]
+  return typeEnmu[origintype] || ''
 }
 
 // 判断字符串是否包含中文

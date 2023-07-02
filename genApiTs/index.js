@@ -134,7 +134,8 @@ export function ${name}(config?: AxiosRequestConfig):AxiosPromise<${outputInterf
       fs.writeFileSync(targetFile, `${tplStr}\n${importStr}\n${apiStr}`)
 
       // 格式化
-      exec(`npx eslint --fix ${targetFile}`)
+      console.log("正在进行文件格式化...")
+      exec(`prettier --write ${targetFile}`)
     })
   })
 }
