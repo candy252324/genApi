@@ -19,19 +19,23 @@
 //   },
 // }
 
-import { groupMemberDeleteAdmin } from './outputTs/swagger3/groupMember'
+import { apiGroupMemberDeleteAdmin } from './outputTs/swagger3/groupMember'
+import {wygtechcrmApiBusinessEditBusinessProject} from './outputTs/swagger4/wygtech-crm'
 
-groupMemberDeleteAdmin({
+apiGroupMemberDeleteAdmin({
   pageSize: 1,
   pageIndex: 2,
   query: '',
-}).then(res => {
+}).then((res) => {
   console.log(res)
 })
 
-const res1 = await groupMemberDeleteAdmin({
+const res1 = await apiGroupMemberDeleteAdmin({
   pageSize: 1,
   pageIndex: 2,
   query: '',
 })
 console.log(res1.data.data)
+
+const res2 = await wygtechcrmApiBusinessEditBusinessProject({})
+console.log(res2.data.code)
