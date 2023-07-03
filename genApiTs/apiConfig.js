@@ -9,7 +9,7 @@ import { AxiosPromise, AxiosRequestConfig } from 'axios'`, // 文件头部引入
       outputDir: '/outputTs/swagger1', // 输出到哪个目录中
       tag: true, // 是否生成
       prefix: '', // 前缀, 如 /abc, 则生成的接口将是  Http.post('/abc/xxx/xxx')
-      unnecessaryInterface: '', // 不需要生成的 interface ，这个类型最终不会生成在_interface中，如 ApiResponse
+      excludeBigModel: '', // 不需要生成的 interface ，这个类型最终不会生成在_interface中，如 ApiResponse
       // ignore: /\/basePlatform\/|\/test\//, // 路径中带 /basePlatform/ 和 /test/ 的接口不用生成
     },
     // {
@@ -17,21 +17,21 @@ import { AxiosPromise, AxiosRequestConfig } from 'axios'`, // 文件头部引入
     //   outputDir: '/outputTs/swagger2',
     //   tag: true,
     //   prefix: '',
-    //   unnecessaryInterface: '',
+    //   excludeBigModel: '',
     // },
     {
       swaggerUrl: './testData/swagger3.json',
       outputDir: '/outputTs/swagger3',
       tag: true,
       prefix: '',
-      unnecessaryInterface: '',
+      excludeBigModel: '',
     },
     {
       swaggerUrl: './testData/swagger4.json',
       outputDir: '/outputTs/swagger4',
       tag: true,
       prefix: '',
-      unnecessaryInterface: '',
+      excludeBigModel: '',
     },
   ],
 }
