@@ -19,8 +19,10 @@
 //   },
 // }
 
-import { apiGroupMemberDeleteAdmin } from './outputTs/swagger3/groupMember'
-import {wygtechcrmApiBusinessEditBusinessProject} from './outputTs/swagger4/wygtech-crm'
+import {
+  apiGroupMemberDeleteAdmin,
+  apiGroupMemberDetail,
+} from './outputTs/swagger3/groupMember'
 
 apiGroupMemberDeleteAdmin({
   pageSize: 1,
@@ -37,5 +39,5 @@ const res1 = await apiGroupMemberDeleteAdmin({
 })
 console.log(res1.data.data)
 
-const res2 = await wygtechcrmApiBusinessEditBusinessProject({})
-console.log(res2.data.code)
+const res2 = await apiGroupMemberDetail({})
+console.log(res2.data.data.imGroupId)

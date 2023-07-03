@@ -1,27 +1,22 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiCustomerEnterpriseAdd,
-  ResOfApiCustomerEnterpriseDetail,
-  ResOfApiCustomerEnterprisePageList,
-  ResOfApiCustomerEnterpriseSampleList,
-  ResOfApiCustomerEnterpriseUpdate,
-  ResOfApiCustomerPersonAdd,
-  ResOfApiCustomerPersonAddCertificate,
-  ResOfApiCustomerPersonAddTitle,
-  ResOfApiCustomerPersonDeleteCertificate,
-  ResOfApiCustomerPersonDeleteTitle,
-  ResOfApiCustomerPersonDetail,
-  ResOfApiCustomerPersonPageList,
-  ResOfApiCustomerPersonSampleList,
-  ResOfApiCustomerPersonUpdate,
+  ApiResponseCustomerEnterpriseAddResp,
+  ApiResponseCustomerEnterpriseDetailResp,
+  ApiResponseComPageCustomerEnterpriseInfoResp,
+  ApiResponseComPageSouSuoQiYeKeHuresponse,
+  ApiResponse,
+  ApiResponseCustomerPersonAddResp,
+  ApiResponseCustomerPersonDetailResp,
+  ApiResponseComPageCustomerPersonInfoResp,
+  ApiResponseComPageSouSuoRenCaiKeHuresponse,
 } from './_interfaces'
 
 /** 企业客户新增 */
 export function apiCustomerEnterpriseAdd(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCustomerEnterpriseAdd> {
+): AxiosPromise<ApiResponseCustomerEnterpriseAddResp> {
   return Http.post('/api/customer/enterprise/add', data, config)
 }
 
@@ -29,7 +24,7 @@ export function apiCustomerEnterpriseAdd(
 export function apiCustomerEnterpriseDetail(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCustomerEnterpriseDetail> {
+): AxiosPromise<ApiResponseCustomerEnterpriseDetailResp> {
   return Http.get('/api/customer/enterprise/detail', data, config)
 }
 
@@ -37,7 +32,7 @@ export function apiCustomerEnterpriseDetail(
 export function apiCustomerEnterprisePageList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCustomerEnterprisePageList> {
+): AxiosPromise<ApiResponseComPageCustomerEnterpriseInfoResp> {
   return Http.post('/api/customer/enterprise/pageList', data, config)
 }
 
@@ -45,7 +40,7 @@ export function apiCustomerEnterprisePageList(
 export function apiCustomerEnterpriseSampleList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCustomerEnterpriseSampleList> {
+): AxiosPromise<ApiResponseComPageSouSuoQiYeKeHuresponse> {
   return Http.post('/api/customer/enterprise/sampleList', data, config)
 }
 
@@ -53,7 +48,7 @@ export function apiCustomerEnterpriseSampleList(
 export function apiCustomerEnterpriseUpdate(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCustomerEnterpriseUpdate> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/customer/enterprise/update', data, config)
 }
 
@@ -61,7 +56,7 @@ export function apiCustomerEnterpriseUpdate(
 export function apiCustomerPersonAdd(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCustomerPersonAdd> {
+): AxiosPromise<ApiResponseCustomerPersonAddResp> {
   return Http.post('/api/customer/person/add', data, config)
 }
 
@@ -69,7 +64,7 @@ export function apiCustomerPersonAdd(
 export function apiCustomerPersonAddCertificate(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCustomerPersonAddCertificate> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/customer/person/addCertificate', data, config)
 }
 
@@ -77,7 +72,7 @@ export function apiCustomerPersonAddCertificate(
 export function apiCustomerPersonAddTitle(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCustomerPersonAddTitle> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/customer/person/addTitle', data, config)
 }
 
@@ -85,7 +80,7 @@ export function apiCustomerPersonAddTitle(
 export function apiCustomerPersonDeleteCertificate(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCustomerPersonDeleteCertificate> {
+): AxiosPromise<ApiResponse> {
   return Http.get('/api/customer/person/deleteCertificate', data, config)
 }
 
@@ -93,7 +88,7 @@ export function apiCustomerPersonDeleteCertificate(
 export function apiCustomerPersonDeleteTitle(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCustomerPersonDeleteTitle> {
+): AxiosPromise<ApiResponse> {
   return Http.get('/api/customer/person/deleteTitle', data, config)
 }
 
@@ -101,7 +96,7 @@ export function apiCustomerPersonDeleteTitle(
 export function apiCustomerPersonDetail(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCustomerPersonDetail> {
+): AxiosPromise<ApiResponseCustomerPersonDetailResp> {
   return Http.get('/api/customer/person/detail', data, config)
 }
 
@@ -109,7 +104,7 @@ export function apiCustomerPersonDetail(
 export function apiCustomerPersonPageList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCustomerPersonPageList> {
+): AxiosPromise<ApiResponseComPageCustomerPersonInfoResp> {
   return Http.post('/api/customer/person/pageList', data, config)
 }
 
@@ -117,7 +112,7 @@ export function apiCustomerPersonPageList(
 export function apiCustomerPersonSampleList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCustomerPersonSampleList> {
+): AxiosPromise<ApiResponseComPageSouSuoRenCaiKeHuresponse> {
   return Http.post('/api/customer/person/sampleList', data, config)
 }
 
@@ -125,6 +120,6 @@ export function apiCustomerPersonSampleList(
 export function apiCustomerPersonUpdate(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCustomerPersonUpdate> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/customer/person/update', data, config)
 }

@@ -1,25 +1,19 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiGroupMemberDelete,
-  ResOfApiGroupMemberDeleteAdmin,
-  ResOfApiGroupMemberDetail,
-  ResOfApiGroupMemberExistInGroup,
-  ResOfApiGroupMemberGroupStatus,
-  ResOfApiGroupMemberLeaveGroup,
-  ResOfApiGroupMemberListAdmin,
-  ResOfApiGroupMemberModifyRemark,
-  ResOfApiGroupMemberPageList,
-  ResOfApiGroupMemberSave,
-  ResOfApiGroupMemberSaveAdmin,
-  ResOfApiGroupMemberSetNoticeAndTop,
+  ApiResponse,
+  ApiResponseQunChengYuanXinXiDuiXiangGroupMemberResp,
+  ApiResponseboolean,
+  ApiResponseMemberGroupStatusResp,
+  ApiResponseListQunChengYuanXinXiDuiXiangGroupMemberResp,
+  ApiResponseComPageQunChengYuanXinXiDuiXiangGroupMemberResp,
 } from './_interfaces'
 
 /** 管理员删除群成员 */
 export function apiGroupMemberDelete(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiGroupMemberDelete> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/groupMember/delete', data, config)
 }
 
@@ -27,7 +21,7 @@ export function apiGroupMemberDelete(
 export function apiGroupMemberDeleteAdmin(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiGroupMemberDeleteAdmin> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/groupMember/deleteAdmin', data, config)
 }
 
@@ -35,7 +29,7 @@ export function apiGroupMemberDeleteAdmin(
 export function apiGroupMemberDetail(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiGroupMemberDetail> {
+): AxiosPromise<ApiResponseQunChengYuanXinXiDuiXiangGroupMemberResp> {
   return Http.post('/api/groupMember/detail', data, config)
 }
 
@@ -43,7 +37,7 @@ export function apiGroupMemberDetail(
 export function apiGroupMemberExistInGroup(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiGroupMemberExistInGroup> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/groupMember/existInGroup', data, config)
 }
 
@@ -51,7 +45,7 @@ export function apiGroupMemberExistInGroup(
 export function apiGroupMemberGroupStatus(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiGroupMemberGroupStatus> {
+): AxiosPromise<ApiResponseMemberGroupStatusResp> {
   return Http.post('/api/groupMember/groupStatus', data, config)
 }
 
@@ -59,7 +53,7 @@ export function apiGroupMemberGroupStatus(
 export function apiGroupMemberLeaveGroup(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiGroupMemberLeaveGroup> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/groupMember/leaveGroup', data, config)
 }
 
@@ -67,7 +61,7 @@ export function apiGroupMemberLeaveGroup(
 export function apiGroupMemberListAdmin(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiGroupMemberListAdmin> {
+): AxiosPromise<ApiResponseListQunChengYuanXinXiDuiXiangGroupMemberResp> {
   return Http.get('/api/groupMember/listAdmin', data, config)
 }
 
@@ -75,7 +69,7 @@ export function apiGroupMemberListAdmin(
 export function apiGroupMemberModifyRemark(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiGroupMemberModifyRemark> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/groupMember/modifyRemark', data, config)
 }
 
@@ -83,7 +77,7 @@ export function apiGroupMemberModifyRemark(
 export function apiGroupMemberPageList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiGroupMemberPageList> {
+): AxiosPromise<ApiResponseComPageQunChengYuanXinXiDuiXiangGroupMemberResp> {
   return Http.post('/api/groupMember/pageList', data, config)
 }
 
@@ -91,7 +85,7 @@ export function apiGroupMemberPageList(
 export function apiGroupMemberSave(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiGroupMemberSave> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/groupMember/save', data, config)
 }
 
@@ -99,7 +93,7 @@ export function apiGroupMemberSave(
 export function apiGroupMemberSaveAdmin(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiGroupMemberSaveAdmin> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/groupMember/saveAdmin', data, config)
 }
 
@@ -107,6 +101,6 @@ export function apiGroupMemberSaveAdmin(
 export function apiGroupMemberSetNoticeAndTop(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiGroupMemberSetNoticeAndTop> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/groupMember/setNoticeAndTop', data, config)
 }

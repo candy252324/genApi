@@ -1,23 +1,17 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiLoginRegisterJudgePassWordIsSet,
-  ResOfApiLoginRegisterAliMpAutoLogin,
-  ResOfApiLoginRegisterClearCodeVerificationEnum,
-  ResOfApiLoginRegisterClearTimeLimitVerificationEnum,
-  ResOfApiLoginRegisterComLogin,
-  ResOfApiLoginRegisterLoginout,
-  ResOfApiLoginRegisterPasswordCry,
-  ResOfApiLoginRegisterRegister,
-  ResOfApiLoginRegisterRetrievePassword,
-  ResOfApiLoginRegisterSendPhoneValidateCodeVerificationEnum,
-  ResOfApiLoginRegisterSetPassWord,
+  ApiResponseboolean,
+  ApiResponseComLoginResp,
+  ApiResponseVoid,
+  ApiResponsestring,
+  ApiResponseRegisterResultResp,
 } from './_interfaces'
 
 /** 查询用户密码未设置是否提醒 */
 export function apiLoginRegisterJudgePassWordIsSet(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiLoginRegisterJudgePassWordIsSet> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.get('/api/loginRegister/JudgePassWordIsSet', config)
 }
 
@@ -25,7 +19,7 @@ export function apiLoginRegisterJudgePassWordIsSet(
 export function apiLoginRegisterAliMpAutoLogin(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiLoginRegisterAliMpAutoLogin> {
+): AxiosPromise<ApiResponseComLoginResp> {
   return Http.post('/api/loginRegister/aliMpAutoLogin', data, config)
 }
 
@@ -33,7 +27,7 @@ export function apiLoginRegisterAliMpAutoLogin(
 export function apiLoginRegisterClearCodeVerificationEnum(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiLoginRegisterClearCodeVerificationEnum> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.get(
     '/api/loginRegister/clearCode/${verificationEnum}',
     data,
@@ -45,7 +39,7 @@ export function apiLoginRegisterClearCodeVerificationEnum(
 export function apiLoginRegisterClearTimeLimitVerificationEnum(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiLoginRegisterClearTimeLimitVerificationEnum> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.get(
     '/api/loginRegister/clearTimeLimit/${verificationEnum}',
     data,
@@ -57,14 +51,14 @@ export function apiLoginRegisterClearTimeLimitVerificationEnum(
 export function apiLoginRegisterComLogin(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiLoginRegisterComLogin> {
+): AxiosPromise<ApiResponseComLoginResp> {
   return Http.post('/api/loginRegister/comLogin', data, config)
 }
 
 /** 退出登录 */
 export function apiLoginRegisterLoginout(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiLoginRegisterLoginout> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.get('/api/loginRegister/loginout', config)
 }
 
@@ -72,7 +66,7 @@ export function apiLoginRegisterLoginout(
 export function apiLoginRegisterPasswordCry(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiLoginRegisterPasswordCry> {
+): AxiosPromise<ApiResponsestring> {
   return Http.get('/api/loginRegister/passwordCry', data, config)
 }
 
@@ -80,7 +74,7 @@ export function apiLoginRegisterPasswordCry(
 export function apiLoginRegisterRegister(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiLoginRegisterRegister> {
+): AxiosPromise<ApiResponseRegisterResultResp> {
   return Http.post('/api/loginRegister/register', data, config)
 }
 
@@ -88,7 +82,7 @@ export function apiLoginRegisterRegister(
 export function apiLoginRegisterRetrievePassword(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiLoginRegisterRetrievePassword> {
+): AxiosPromise<ApiResponsestring> {
   return Http.post('/api/loginRegister/retrievePassword', data, config)
 }
 
@@ -96,7 +90,7 @@ export function apiLoginRegisterRetrievePassword(
 export function apiLoginRegisterSendPhoneValidateCodeVerificationEnum(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiLoginRegisterSendPhoneValidateCodeVerificationEnum> {
+): AxiosPromise<ApiResponsestring> {
   return Http.get(
     '/api/loginRegister/sendPhoneValidateCode/${verificationEnum}',
     data,
@@ -108,6 +102,6 @@ export function apiLoginRegisterSendPhoneValidateCodeVerificationEnum(
 export function apiLoginRegisterSetPassWord(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiLoginRegisterSetPassWord> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/loginRegister/setPassWord', data, config)
 }

@@ -1,26 +1,18 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiUserCancel,
-  ResOfApiUserGetCancelSmsCode,
-  ResOfApiUserHasSelectTenant,
-  ResOfApiUserListTenantInfo,
-  ResOfApiUserModifyAvatar,
-  ResOfApiUserModifyEmail,
-  ResOfApiUserPersonInfo,
-  ResOfApiUserQueryAppVersion,
-  ResOfApiUserSetDefaultEnterprise,
-  ResOfApiUserSetIsApprove,
-  ResOfApiUserSetIsGroupApprove,
-  ResOfApiUserSetIsNotice,
-  ResOfApiUserSetRequestChannel,
+  ApiResponse,
+  ApiResponseboolean,
+  ApiResponseListZuHuXinXi,
+  ApiResponseUserRespDuiXiang,
+  ApiResponseQueryLastMessageResp,
 } from './_interfaces'
 
 /** 注销账号 */
 export function apiUserCancel(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiUserCancel> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/user/cancel', data, config)
 }
 
@@ -28,7 +20,7 @@ export function apiUserCancel(
 export function apiUserGetCancelSmsCode(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiUserGetCancelSmsCode> {
+): AxiosPromise<ApiResponse> {
   return Http.get('/api/user/getCancelSmsCode', data, config)
 }
 
@@ -36,7 +28,7 @@ export function apiUserGetCancelSmsCode(
 export function apiUserHasSelectTenant(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiUserHasSelectTenant> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.get('/api/user/hasSelectTenant', data, config)
 }
 
@@ -44,7 +36,7 @@ export function apiUserHasSelectTenant(
 export function apiUserListTenantInfo(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiUserListTenantInfo> {
+): AxiosPromise<ApiResponseListZuHuXinXi> {
   return Http.get('/api/user/listTenantInfo', data, config)
 }
 
@@ -52,7 +44,7 @@ export function apiUserListTenantInfo(
 export function apiUserModifyAvatar(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiUserModifyAvatar> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/user/modifyAvatar', data, config)
 }
 
@@ -60,7 +52,7 @@ export function apiUserModifyAvatar(
 export function apiUserModifyEmail(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiUserModifyEmail> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/user/modifyEmail', data, config)
 }
 
@@ -68,7 +60,7 @@ export function apiUserModifyEmail(
 export function apiUserPersonInfo(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiUserPersonInfo> {
+): AxiosPromise<ApiResponseUserRespDuiXiang> {
   return Http.get('/api/user/personInfo', data, config)
 }
 
@@ -76,7 +68,7 @@ export function apiUserPersonInfo(
 export function apiUserQueryAppVersion(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiUserQueryAppVersion> {
+): AxiosPromise<ApiResponseQueryLastMessageResp> {
   return Http.get('/api/user/queryAppVersion', data, config)
 }
 
@@ -84,7 +76,7 @@ export function apiUserQueryAppVersion(
 export function apiUserSetDefaultEnterprise(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiUserSetDefaultEnterprise> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/user/setDefaultEnterprise', data, config)
 }
 
@@ -92,7 +84,7 @@ export function apiUserSetDefaultEnterprise(
 export function apiUserSetIsApprove(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiUserSetIsApprove> {
+): AxiosPromise<ApiResponse> {
   return Http.get('/api/user/setIsApprove', data, config)
 }
 
@@ -100,7 +92,7 @@ export function apiUserSetIsApprove(
 export function apiUserSetIsGroupApprove(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiUserSetIsGroupApprove> {
+): AxiosPromise<ApiResponse> {
   return Http.get('/api/user/setIsGroupApprove', data, config)
 }
 
@@ -108,7 +100,7 @@ export function apiUserSetIsGroupApprove(
 export function apiUserSetIsNotice(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiUserSetIsNotice> {
+): AxiosPromise<ApiResponse> {
   return Http.get('/api/user/setIsNotice', data, config)
 }
 
@@ -116,6 +108,6 @@ export function apiUserSetIsNotice(
 export function apiUserSetRequestChannel(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiUserSetRequestChannel> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/user/setRequestChannel', data, config)
 }

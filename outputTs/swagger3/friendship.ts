@@ -1,26 +1,19 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiFriendshipDelete,
-  ResOfApiFriendshipDetail,
-  ResOfApiFriendshipGetIsFriend,
-  ResOfApiFriendshipGetUserDetail,
-  ResOfApiFriendshipModifyRemark,
-  ResOfApiFriendshipPageList,
-  ResOfApiFriendshipSetNoticeAndTop,
-  ResOfFriendshipDelete,
-  ResOfFriendshipDetail,
-  ResOfFriendshipGetIsFriend,
-  ResOfFriendshipGetUserDetail,
-  ResOfFriendshipModifyRemark,
-  ResOfFriendshipPageList,
+  ApiResponse,
+  ApiResponseFriendshipDetailResp,
+  ApiResponseboolean,
+  ApiResponseUserDetailResp,
+  ApiResponseComPageFriendshipResp,
+  ApiResponsestring,
 } from './_interfaces'
 
 /** 删除好友 */
 export function apiFriendshipDelete(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiFriendshipDelete> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/friendship/delete', data, config)
 }
 
@@ -28,7 +21,7 @@ export function apiFriendshipDelete(
 export function apiFriendshipDetail(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiFriendshipDetail> {
+): AxiosPromise<ApiResponseFriendshipDetailResp> {
   return Http.post('/api/friendship/detail', data, config)
 }
 
@@ -36,7 +29,7 @@ export function apiFriendshipDetail(
 export function apiFriendshipGetIsFriend(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiFriendshipGetIsFriend> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/friendship/getIsFriend', data, config)
 }
 
@@ -44,7 +37,7 @@ export function apiFriendshipGetIsFriend(
 export function apiFriendshipGetUserDetail(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiFriendshipGetUserDetail> {
+): AxiosPromise<ApiResponseUserDetailResp> {
   return Http.post('/api/friendship/getUserDetail', data, config)
 }
 
@@ -52,7 +45,7 @@ export function apiFriendshipGetUserDetail(
 export function apiFriendshipModifyRemark(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiFriendshipModifyRemark> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/friendship/modifyRemark', data, config)
 }
 
@@ -60,7 +53,7 @@ export function apiFriendshipModifyRemark(
 export function apiFriendshipPageList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiFriendshipPageList> {
+): AxiosPromise<ApiResponseComPageFriendshipResp> {
   return Http.post('/api/friendship/pageList', data, config)
 }
 
@@ -68,7 +61,7 @@ export function apiFriendshipPageList(
 export function apiFriendshipSetNoticeAndTop(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiFriendshipSetNoticeAndTop> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/friendship/setNoticeAndTop', data, config)
 }
 
@@ -76,7 +69,7 @@ export function apiFriendshipSetNoticeAndTop(
 export function friendshipDelete(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfFriendshipDelete> {
+): AxiosPromise<ApiResponsestring> {
   return Http.post('/friendship/delete', data, config)
 }
 
@@ -84,7 +77,7 @@ export function friendshipDelete(
 export function friendshipDetail(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfFriendshipDetail> {
+): AxiosPromise<ApiResponseFriendshipDetailResp> {
   return Http.post('/friendship/detail', data, config)
 }
 
@@ -92,7 +85,7 @@ export function friendshipDetail(
 export function friendshipGetIsFriend(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfFriendshipGetIsFriend> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/friendship/getIsFriend', data, config)
 }
 
@@ -100,7 +93,7 @@ export function friendshipGetIsFriend(
 export function friendshipGetUserDetail(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfFriendshipGetUserDetail> {
+): AxiosPromise<ApiResponseUserDetailResp> {
   return Http.post('/friendship/getUserDetail', data, config)
 }
 
@@ -108,7 +101,7 @@ export function friendshipGetUserDetail(
 export function friendshipModifyRemark(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfFriendshipModifyRemark> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/friendship/modifyRemark', data, config)
 }
 
@@ -116,6 +109,6 @@ export function friendshipModifyRemark(
 export function friendshipPageList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfFriendshipPageList> {
+): AxiosPromise<ApiResponseComPageFriendshipResp> {
   return Http.post('/friendship/pageList', data, config)
 }

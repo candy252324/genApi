@@ -1,15 +1,12 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
-import {
-  ResOfAddressBookListTenantInfo,
-  ResOfApiAddressBookListTenantInfo,
-} from './_interfaces'
+import { ApiResponseListAddressBookTenantInfoResp } from './_interfaces'
 
 /** 获取租户列表 */
 export function addressBookListTenantInfo(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfAddressBookListTenantInfo> {
+): AxiosPromise<ApiResponseListAddressBookTenantInfoResp> {
   return Http.post('/addressBook/listTenantInfo', data, config)
 }
 
@@ -17,6 +14,6 @@ export function addressBookListTenantInfo(
 export function apiAddressBookListTenantInfo(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiAddressBookListTenantInfo> {
+): AxiosPromise<ApiResponseListAddressBookTenantInfoResp> {
   return Http.get('/api/addressBook/listTenantInfo', data, config)
 }

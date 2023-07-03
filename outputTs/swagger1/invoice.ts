@@ -1,18 +1,16 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiInvoiceAdd,
-  ResOfApiInvoiceCompanyTaxList,
-  ResOfApiInvoiceDel,
-  ResOfApiInvoicePage,
-  ResOfApiInvoiceUpdate,
+  ApiResponseboolean,
+  ApiResponseJSONArray,
+  ApiResponseComPageFaPiaoGuanLi,
 } from './_interfaces'
 
 /** 添加开票 */
 export function apiInvoiceAdd(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiInvoiceAdd> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/invoice/add', data, config)
 }
 
@@ -20,7 +18,7 @@ export function apiInvoiceAdd(
 export function apiInvoiceCompanyTaxList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiInvoiceCompanyTaxList> {
+): AxiosPromise<ApiResponseJSONArray> {
   return Http.get('/api/invoice/companyTaxList', data, config)
 }
 
@@ -28,7 +26,7 @@ export function apiInvoiceCompanyTaxList(
 export function apiInvoiceDel(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiInvoiceDel> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.get('/api/invoice/del', data, config)
 }
 
@@ -36,7 +34,7 @@ export function apiInvoiceDel(
 export function apiInvoicePage(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiInvoicePage> {
+): AxiosPromise<ApiResponseComPageFaPiaoGuanLi> {
   return Http.post('/api/invoice/page', data, config)
 }
 
@@ -44,6 +42,6 @@ export function apiInvoicePage(
 export function apiInvoiceUpdate(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiInvoiceUpdate> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/invoice/update', data, config)
 }

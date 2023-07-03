@@ -6,6 +6,7 @@ const apiConfig = require('./apiConfig')
 const upperCaseFirseLetter = require('./utils').upperCaseFirseLetter
 const handleDefinitions = require('./definitions').handleDefinitions
 const handleJsType = require('./definitions').handleJsType
+const handleInterfaceName = require('./definitions').handleInterfaceName
 
 const CWD = process.cwd()
 let _rawDefinitions = {}  // swagger 中 definitions
@@ -20,7 +21,6 @@ apiList.forEach(item => {
   const absOutputDir = path.join(CWD, item.outputDir)
   const ignoreReg = item.ignore
   const prefix = item.prefix || ''
-  const connectWithBehindInterface = item.connectWithBehindInterface || ''
   const unnecessaryInterface = item.unnecessaryInterface || ''
   if (swaggerUrl.includes('http')) {
     // 从swagger url 读取数据
@@ -33,7 +33,6 @@ apiList.forEach(item => {
               absOutputDir,
               ignoreReg,
               prefix,
-              connectWithBehindInterface,
               unnecessaryInterface,
             })
           } catch (error) {
@@ -54,7 +53,6 @@ apiList.forEach(item => {
         absOutputDir,
         ignoreReg,
         prefix,
-        connectWithBehindInterface,
         unnecessaryInterface,
       })
     })
@@ -63,11 +61,11 @@ apiList.forEach(item => {
 
 function parseData(
   jsonData,
-  { absOutputDir, ignoreReg, prefix, connectWithBehindInterface, unnecessaryInterface }
+  { absOutputDir, ignoreReg, prefix, unnecessaryInterface }
 ) {
   _rawDefinitions = jsonData.definitions || {}
   const apiList = handlePaths(jsonData.paths, ignoreReg)
-  _cookedDefinitions = handleDefinitions(_rawDefinitions, { connectWithBehindInterface,unnecessaryInterface })
+  _cookedDefinitions = handleDefinitions(_rawDefinitions, { unnecessaryInterface })
   writeDeinitionToFile(_cookedDefinitions, absOutputDir)
   const count = apiList.reduce((pre, cur) => {
     return pre + cur.apis.length
@@ -93,8 +91,9 @@ function handlePaths(paths, ignoreReg) {
       let outputInterface = '' // 出参 interface
       // 如果存在出参模型
       if (resScheme?.originalRef) {
-        outputInterface = `ResOf${upperCaseFirseLetter(name)}`
-        outputInterfaceRelatedDefinition(resScheme.originalRef, outputInterface)
+        outputInterface = handleInterfaceName(resScheme.originalRef)
+        // outputInterface = `ResOf${upperCaseFirseLetter(name)}`
+        // outputInterfaceRelatedDefinition(resScheme.originalRef, outputInterface)
       }
       // 出参是个简单类型
       else if (resScheme?.type) {

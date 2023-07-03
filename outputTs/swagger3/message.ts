@@ -1,20 +1,16 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiMessageAck,
-  ResOfApiMessageClear,
-  ResOfApiMessageDelete,
-  ResOfApiMessageDetail,
-  ResOfApiMessageHistoryPageList,
-  ResOfApiMessageSearchPageList,
-  ResOfApiMessageTestSendMQ,
+  ApiResponseobject,
+  ApiResponseXiaoXiDuiXiang,
+  ApiResponseComPageXiaoXiDuiXiang,
 } from './_interfaces'
 
 /** 确认收到消息 */
 export function apiMessageAck(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiMessageAck> {
+): AxiosPromise<ApiResponseobject> {
   return Http.post('/api/message/ack', data, config)
 }
 
@@ -22,7 +18,7 @@ export function apiMessageAck(
 export function apiMessageClear(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiMessageClear> {
+): AxiosPromise<ApiResponseobject> {
   return Http.post('/api/message/clear', data, config)
 }
 
@@ -30,7 +26,7 @@ export function apiMessageClear(
 export function apiMessageDelete(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiMessageDelete> {
+): AxiosPromise<ApiResponseobject> {
   return Http.post('/api/message/delete', data, config)
 }
 
@@ -38,7 +34,7 @@ export function apiMessageDelete(
 export function apiMessageDetail(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiMessageDetail> {
+): AxiosPromise<ApiResponseXiaoXiDuiXiang> {
   return Http.post('/api/message/detail', data, config)
 }
 
@@ -46,7 +42,7 @@ export function apiMessageDetail(
 export function apiMessageHistoryPageList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiMessageHistoryPageList> {
+): AxiosPromise<ApiResponseComPageXiaoXiDuiXiang> {
   return Http.post('/api/message/history/pageList', data, config)
 }
 
@@ -54,7 +50,7 @@ export function apiMessageHistoryPageList(
 export function apiMessageSearchPageList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiMessageSearchPageList> {
+): AxiosPromise<ApiResponseComPageXiaoXiDuiXiang> {
   return Http.post('/api/message/search/pageList', data, config)
 }
 
@@ -62,6 +58,6 @@ export function apiMessageSearchPageList(
 export function apiMessageTestSendMQ(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiMessageTestSendMQ> {
+): AxiosPromise<ApiResponseobject> {
   return Http.post('/api/message/testSendMQ', data, config)
 }

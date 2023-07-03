@@ -1,24 +1,23 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiPersonCertificationDescribeFaceVerify,
-  ResOfApiPersonCertificationIdCardBack,
-  ResOfApiPersonCertificationIdCardFront,
-  ResOfApiPersonCertificationInitFaceVerifyWithCertifyIdType,
-  ResOfApiPersonCertificationPersonAuthInfo,
-  ResOfApiPersonCertificationPersonList,
-  ResOfApiPersonCertificationPersonV1UserIdOpenAcctExecute,
-  ResOfApiPersonCertificationQueryCertInfo,
-  ResOfApiPersonCertificationQueryCommonCertifyId,
-  ResOfApiPersonCertificationWalletInfo,
-  ResOfApiPersonCertificationWalletQueryInfo,
+  ApiResponseDescribeFaceVerifyResponse,
+  ApiResponseOcrIdCardBackResp,
+  ApiResponseOcrIdCardFrontResp,
+  ApiResponseVerificationResp,
+  ApiResponseGeRenRenZhengXinXi,
+  ApiResponseListRenZhengQuDaoZhuangTaiChaXun,
+  ApiResponseVoid,
+  ApiResponseQueryCertFormResp,
+  ApiResponsestring,
+  ApiResponseGeRenRenZhengXinXiKaiHuXinXiXinZengShiZhiXuYaoChuanRuindividualBankCardNoindividualReservedPhoneNoindividualVocationQiTaXinXiCongredisHuanCunZhongHuoQu,
 } from './_interfaces'
 
 /** 查询认证结果 */
 export function apiPersonCertificationDescribeFaceVerify(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPersonCertificationDescribeFaceVerify> {
+): AxiosPromise<ApiResponseDescribeFaceVerifyResponse> {
   return Http.get('/api/personCertification/describeFaceVerify', data, config)
 }
 
@@ -26,7 +25,7 @@ export function apiPersonCertificationDescribeFaceVerify(
 export function apiPersonCertificationIdCardBack(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPersonCertificationIdCardBack> {
+): AxiosPromise<ApiResponseOcrIdCardBackResp> {
   return Http.post('/api/personCertification/idCardBack', data, config)
 }
 
@@ -34,7 +33,7 @@ export function apiPersonCertificationIdCardBack(
 export function apiPersonCertificationIdCardFront(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPersonCertificationIdCardFront> {
+): AxiosPromise<ApiResponseOcrIdCardFrontResp> {
   return Http.post('/api/personCertification/idCardFront', data, config)
 }
 
@@ -42,7 +41,7 @@ export function apiPersonCertificationIdCardFront(
 export function apiPersonCertificationInitFaceVerifyWithCertifyIdType(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPersonCertificationInitFaceVerifyWithCertifyIdType> {
+): AxiosPromise<ApiResponseVerificationResp> {
   return Http.post(
     '/api/personCertification/initFaceVerifyWithCertifyId/${type}',
     data,
@@ -53,14 +52,14 @@ export function apiPersonCertificationInitFaceVerifyWithCertifyIdType(
 /** 查询个人租户认证信息 */
 export function apiPersonCertificationPersonAuthInfo(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPersonCertificationPersonAuthInfo> {
+): AxiosPromise<ApiResponseGeRenRenZhengXinXi> {
   return Http.post('/api/personCertification/person/auth/info', config)
 }
 
 /** 认证列表 */
 export function apiPersonCertificationPersonList(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPersonCertificationPersonList> {
+): AxiosPromise<ApiResponseListRenZhengQuDaoZhuangTaiChaXun> {
   return Http.post('/api/personCertification/person/list', config)
 }
 
@@ -68,7 +67,7 @@ export function apiPersonCertificationPersonList(
 export function apiPersonCertificationPersonV1UserIdOpenAcctExecute(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPersonCertificationPersonV1UserIdOpenAcctExecute> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.post(
     '/api/personCertification/person/v1/${userId}/openAcct/execute',
     data,
@@ -80,14 +79,14 @@ export function apiPersonCertificationPersonV1UserIdOpenAcctExecute(
 export function apiPersonCertificationQueryCertInfo(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPersonCertificationQueryCertInfo> {
+): AxiosPromise<ApiResponseQueryCertFormResp> {
   return Http.get('/api/personCertification/queryCertInfo', data, config)
 }
 
 /** 查询个人普通认证唯一id */
 export function apiPersonCertificationQueryCommonCertifyId(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPersonCertificationQueryCommonCertifyId> {
+): AxiosPromise<ApiResponsestring> {
   return Http.get('/api/personCertification/queryCommonCertifyId', config)
 }
 
@@ -95,13 +94,13 @@ export function apiPersonCertificationQueryCommonCertifyId(
 export function apiPersonCertificationWalletInfo(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPersonCertificationWalletInfo> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.post('/api/personCertification/wallet/info', data, config)
 }
 
 /** 菜花钱包- 个人信息查询 */
 export function apiPersonCertificationWalletQueryInfo(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPersonCertificationWalletQueryInfo> {
+): AxiosPromise<ApiResponseGeRenRenZhengXinXiKaiHuXinXiXinZengShiZhiXuYaoChuanRuindividualBankCardNoindividualReservedPhoneNoindividualVocationQiTaXinXiCongredisHuanCunZhongHuoQu> {
   return Http.get('/api/personCertification/wallet/queryInfo', config)
 }

@@ -1,17 +1,16 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiCorpWechatAppAuthLink,
-  ResOfApiCorpWechatAuthUser,
-  ResOfApiCorpWechatInitAgent,
-  ResOfApiCorpWechatOauth2,
-  ResOfApiCorpWechatSyncDoc,
+  ApiResponseCorpWechatAuthUrlResp,
+  ApiResponseChannelUserResp,
+  ApiResponseAgentConfigResp,
+  ApiResponse,
 } from './_interfaces'
 
 /** 获取应用授权链接 */
 export function apiCorpWechatAppAuthLink(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCorpWechatAppAuthLink> {
+): AxiosPromise<ApiResponseCorpWechatAuthUrlResp> {
   return Http.get('/api/corpWechat/appAuthLink', config)
 }
 
@@ -19,7 +18,7 @@ export function apiCorpWechatAppAuthLink(
 export function apiCorpWechatAuthUser(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCorpWechatAuthUser> {
+): AxiosPromise<ApiResponseChannelUserResp> {
   return Http.post('/api/corpWechat/authUser', data, config)
 }
 
@@ -27,7 +26,7 @@ export function apiCorpWechatAuthUser(
 export function apiCorpWechatInitAgent(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCorpWechatInitAgent> {
+): AxiosPromise<ApiResponseAgentConfigResp> {
   return Http.post('/api/corpWechat/initAgent', data, config)
 }
 
@@ -35,13 +34,13 @@ export function apiCorpWechatInitAgent(
 export function apiCorpWechatOauth2(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCorpWechatOauth2> {
+): AxiosPromise<ApiResponseCorpWechatAuthUrlResp> {
   return Http.post('/api/corpWechat/oauth2', data, config)
 }
 
 /** 同步组织架构 */
 export function apiCorpWechatSyncDoc(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCorpWechatSyncDoc> {
+): AxiosPromise<ApiResponse> {
   return Http.get('/api/corpWechat/syncDoc', config)
 }

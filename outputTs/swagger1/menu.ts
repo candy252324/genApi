@@ -1,16 +1,16 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiMenuEmployeeMenuList,
-  ResOfApiMenuGetMenuMenuId,
-  ResOfApiMenuTreeSelect,
+  ApiResponseListMenuResp,
+  ApiResponseMenuResp,
+  ApiResponseListTreelong,
 } from './_interfaces'
 
 /** 获取当前员工的可见菜单列表 */
 export function apiMenuEmployeeMenuList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiMenuEmployeeMenuList> {
+): AxiosPromise<ApiResponseListMenuResp> {
   return Http.get('/api/menu/employeeMenuList', data, config)
 }
 
@@ -18,7 +18,7 @@ export function apiMenuEmployeeMenuList(
 export function apiMenuGetMenuMenuId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiMenuGetMenuMenuId> {
+): AxiosPromise<ApiResponseMenuResp> {
   return Http.get('/api/menu/getMenu/${menuId}', data, config)
 }
 
@@ -26,6 +26,6 @@ export function apiMenuGetMenuMenuId(
 export function apiMenuTreeSelect(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiMenuTreeSelect> {
+): AxiosPromise<ApiResponseListTreelong> {
   return Http.get('/api/menu/treeSelect', data, config)
 }

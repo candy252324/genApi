@@ -1,18 +1,15 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiDeliverAddressAddAddress,
-  ResOfApiDeliverAddressCheckDefaultAddress,
-  ResOfApiDeliverAddressDeleteAddressId,
-  ResOfApiDeliverAddressPageAddress,
-  ResOfApiDeliverAddressUpdateAddress,
+  ApiResponseboolean,
+  ApiResponseComPageZuHuShouHuoDiZhiTianJia,
 } from './_interfaces'
 
 /** 添加地址 */
 export function apiDeliverAddressAddAddress(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiDeliverAddressAddAddress> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/deliverAddress/addAddress', data, config)
 }
 
@@ -20,7 +17,7 @@ export function apiDeliverAddressAddAddress(
 export function apiDeliverAddressCheckDefaultAddress(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiDeliverAddressCheckDefaultAddress> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/deliverAddress/checkDefaultAddress', data, config)
 }
 
@@ -28,7 +25,7 @@ export function apiDeliverAddressCheckDefaultAddress(
 export function apiDeliverAddressDeleteAddressId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiDeliverAddressDeleteAddressId> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.get('/api/deliverAddress/deleteAddress/${id}', data, config)
 }
 
@@ -36,7 +33,7 @@ export function apiDeliverAddressDeleteAddressId(
 export function apiDeliverAddressPageAddress(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiDeliverAddressPageAddress> {
+): AxiosPromise<ApiResponseComPageZuHuShouHuoDiZhiTianJia> {
   return Http.post('/api/deliverAddress/pageAddress', data, config)
 }
 
@@ -44,6 +41,6 @@ export function apiDeliverAddressPageAddress(
 export function apiDeliverAddressUpdateAddress(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiDeliverAddressUpdateAddress> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/deliverAddress/updateAddress', data, config)
 }

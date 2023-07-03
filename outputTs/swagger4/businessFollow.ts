@@ -1,19 +1,16 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiBusinessFollowEmployeeList,
-  ResOfApiBusinessFollowFollow,
-  ResOfApiBusinessFollowFollowAgain,
-  ResOfApiBusinessFollowGiveUp,
-  ResOfApiBusinessFollowList,
-  ResOfApiBusinessFollowTransfer,
+  ApiResponseComPageEmployeeListResp,
+  ApiResponseboolean,
+  ApiResponseComPageLieBiaoQingQiu,
 } from './_interfaces'
 
 /** 员工列表 */
 export function apiBusinessFollowEmployeeList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessFollowEmployeeList> {
+): AxiosPromise<ApiResponseComPageEmployeeListResp> {
   return Http.post('/api/businessFollow/employeeList', data, config)
 }
 
@@ -21,7 +18,7 @@ export function apiBusinessFollowEmployeeList(
 export function apiBusinessFollowFollow(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessFollowFollow> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/businessFollow/follow', data, config)
 }
 
@@ -29,7 +26,7 @@ export function apiBusinessFollowFollow(
 export function apiBusinessFollowFollowAgain(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessFollowFollowAgain> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/businessFollow/followAgain', data, config)
 }
 
@@ -37,7 +34,7 @@ export function apiBusinessFollowFollowAgain(
 export function apiBusinessFollowGiveUp(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessFollowGiveUp> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/businessFollow/giveUp', data, config)
 }
 
@@ -45,7 +42,7 @@ export function apiBusinessFollowGiveUp(
 export function apiBusinessFollowList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessFollowList> {
+): AxiosPromise<ApiResponseComPageLieBiaoQingQiu> {
   return Http.post('/api/businessFollow/list', data, config)
 }
 
@@ -53,6 +50,6 @@ export function apiBusinessFollowList(
 export function apiBusinessFollowTransfer(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessFollowTransfer> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/businessFollow/transfer', data, config)
 }

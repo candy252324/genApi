@@ -1,21 +1,16 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiDeptList,
-  ResOfApiDeptUserDeptList,
-  ResOfApiDeptUserListAllTenant,
-  ResOfApiDeptUserPage,
-  ResOfDeptList,
-  ResOfDeptUserDeptList,
-  ResOfDeptUserListAllTenant,
-  ResOfDeptUserPage,
+  ApiResponseListBuMenXinXiDeptResp,
+  ApiResponseListUserListAllTenantResp,
+  ApiResponseComPageBuMenYongHuLieBiaoDeptUserResp,
 } from './_interfaces'
 
 /** 获取子部门列表+组织架构imgrouid */
 export function apiDeptList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiDeptList> {
+): AxiosPromise<ApiResponseListBuMenXinXiDeptResp> {
   return Http.post('/api/dept/list', data, config)
 }
 
@@ -23,7 +18,7 @@ export function apiDeptList(
 export function apiDeptUserDeptList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiDeptUserDeptList> {
+): AxiosPromise<ApiResponseListBuMenXinXiDeptResp> {
   return Http.post('/api/dept/userDeptList', data, config)
 }
 
@@ -31,7 +26,7 @@ export function apiDeptUserDeptList(
 export function apiDeptUserListAllTenant(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiDeptUserListAllTenant> {
+): AxiosPromise<ApiResponseListUserListAllTenantResp> {
   return Http.post('/api/dept/userListAllTenant', data, config)
 }
 
@@ -39,7 +34,7 @@ export function apiDeptUserListAllTenant(
 export function apiDeptUserPage(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiDeptUserPage> {
+): AxiosPromise<ApiResponseComPageBuMenYongHuLieBiaoDeptUserResp> {
   return Http.post('/api/dept/userPage', data, config)
 }
 
@@ -47,7 +42,7 @@ export function apiDeptUserPage(
 export function deptList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfDeptList> {
+): AxiosPromise<ApiResponseListBuMenXinXiDeptResp> {
   return Http.post('/dept/list', data, config)
 }
 
@@ -55,7 +50,7 @@ export function deptList(
 export function deptUserDeptList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfDeptUserDeptList> {
+): AxiosPromise<ApiResponseListBuMenXinXiDeptResp> {
   return Http.post('/dept/userDeptList', data, config)
 }
 
@@ -63,7 +58,7 @@ export function deptUserDeptList(
 export function deptUserListAllTenant(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfDeptUserListAllTenant> {
+): AxiosPromise<ApiResponseListUserListAllTenantResp> {
   return Http.post('/dept/userListAllTenant', data, config)
 }
 
@@ -71,6 +66,6 @@ export function deptUserListAllTenant(
 export function deptUserPage(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfDeptUserPage> {
+): AxiosPromise<ApiResponseComPageBuMenYongHuLieBiaoDeptUserResp> {
   return Http.post('/dept/userPage', data, config)
 }

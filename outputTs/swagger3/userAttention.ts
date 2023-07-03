@@ -1,15 +1,12 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
-import {
-  ResOfApiUserAttentionRemove,
-  ResOfApiUserAttentionSave,
-} from './_interfaces'
+import { ApiResponseobject } from './_interfaces'
 
 /** 取消关注 */
 export function apiUserAttentionRemove(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiUserAttentionRemove> {
+): AxiosPromise<ApiResponseobject> {
   return Http.get('/api/userAttention/remove', data, config)
 }
 
@@ -17,6 +14,6 @@ export function apiUserAttentionRemove(
 export function apiUserAttentionSave(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiUserAttentionSave> {
+): AxiosPromise<ApiResponseobject> {
   return Http.get('/api/userAttention/save', data, config)
 }

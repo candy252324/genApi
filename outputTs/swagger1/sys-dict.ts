@@ -1,24 +1,23 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiSysdictV1AreaInfo,
-  ResOfApiSysdictV1Types,
-  ResOfApiSysdictV1TypeListFilter,
-  ResOfApiSysdictV1TypeListPage,
-  ResOfApiSysdictV1TypeListTree,
+  ApiResponseJSONArray,
+  ApiResponseMapstringobject,
+  ApiResponseListSysDictDuiXiangnullZhiBuXuLieHua,
+  ApiResponsePageSysDictDuiXiangnullZhiBuXuLieHua,
 } from './_interfaces'
 
 /** 区域查询 */
 export function apiSysdictV1AreaInfo(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiSysdictV1AreaInfo> {
+): AxiosPromise<ApiResponseJSONArray> {
   return Http.get('/api/sys-dict/v1/areaInfo', config)
 }
 
 /** 查询字典列表-查询当前数据类型列表 */
 export function apiSysdictV1Types(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiSysdictV1Types> {
+): AxiosPromise<ApiResponseMapstringobject> {
   return Http.get('/api/sys-dict/v1/types', config)
 }
 
@@ -26,7 +25,7 @@ export function apiSysdictV1Types(
 export function apiSysdictV1TypeListFilter(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiSysdictV1TypeListFilter> {
+): AxiosPromise<ApiResponseListSysDictDuiXiangnullZhiBuXuLieHua> {
   return Http.get('/api/sys-dict/v1/${type}/list/filter', data, config)
 }
 
@@ -34,7 +33,7 @@ export function apiSysdictV1TypeListFilter(
 export function apiSysdictV1TypeListPage(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiSysdictV1TypeListPage> {
+): AxiosPromise<ApiResponsePageSysDictDuiXiangnullZhiBuXuLieHua> {
   return Http.post('/api/sys-dict/v1/${type}/list/page', data, config)
 }
 
@@ -42,6 +41,6 @@ export function apiSysdictV1TypeListPage(
 export function apiSysdictV1TypeListTree(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiSysdictV1TypeListTree> {
+): AxiosPromise<ApiResponseListSysDictDuiXiangnullZhiBuXuLieHua> {
   return Http.get('/api/sys-dict/v1/${type}/list/tree', data, config)
 }

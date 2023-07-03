@@ -1,19 +1,16 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiPersonCredentialPagePersonCredential,
-  ResOfApiPersonCredentialAddPersonCredential,
-  ResOfApiPersonCredentialDeleteId,
-  ResOfApiPersonCredentialDeleteMajorId,
-  ResOfApiPersonCredentialGetMajorCodeTree,
-  ResOfApiPersonCredentialUpdatePersonCredential,
+  ApiResponseComPageTianJiaGeRenZiZhi,
+  ApiResponseboolean,
+  ApiResponse,
 } from './_interfaces'
 
 /** 分页查询个人资质 */
 export function apiPersonCredentialPagePersonCredential(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPersonCredentialPagePersonCredential> {
+): AxiosPromise<ApiResponseComPageTianJiaGeRenZiZhi> {
   return Http.post('/api/personCredential/PagePersonCredential', data, config)
 }
 
@@ -21,7 +18,7 @@ export function apiPersonCredentialPagePersonCredential(
 export function apiPersonCredentialAddPersonCredential(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPersonCredentialAddPersonCredential> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/personCredential/addPersonCredential', data, config)
 }
 
@@ -29,7 +26,7 @@ export function apiPersonCredentialAddPersonCredential(
 export function apiPersonCredentialDeleteId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPersonCredentialDeleteId> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.get('/api/personCredential/delete/${id}', data, config)
 }
 
@@ -37,14 +34,14 @@ export function apiPersonCredentialDeleteId(
 export function apiPersonCredentialDeleteMajorId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPersonCredentialDeleteMajorId> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.get('/api/personCredential/deleteMajor/${id}', data, config)
 }
 
 /** 获取注册专业树 */
 export function apiPersonCredentialGetMajorCodeTree(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPersonCredentialGetMajorCodeTree> {
+): AxiosPromise<ApiResponse> {
   return Http.get('/api/personCredential/getMajorCodeTree', config)
 }
 
@@ -52,6 +49,6 @@ export function apiPersonCredentialGetMajorCodeTree(
 export function apiPersonCredentialUpdatePersonCredential(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPersonCredentialUpdatePersonCredential> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/personCredential/updatePersonCredential', data, config)
 }

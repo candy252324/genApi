@@ -1,7 +1,5 @@
 const pinyin = require('js-pinyin')
 
-let _pageModelName = ''
-
 /** 入参格式
  * "ApiResponse«AddGroupResp»": {
  *    "type": "object",
@@ -14,7 +12,7 @@ let _pageModelName = ''
  *   },
  * },
  */
-function handleDefinitions(definitions, { connectWithBehindInterface, unnecessaryInterface }) {
+function handleDefinitions(definitions, {  unnecessaryInterface }) {
   /**
    * [{
    *    name:"",   // 原始 key 处理后结果，如： ApiResponse
@@ -27,7 +25,6 @@ function handleDefinitions(definitions, { connectWithBehindInterface, unnecessar
    *    }]
    *  }]
    */
-  _pageModelName = connectWithBehindInterface
   const defs = []
   Object.keys(definitions).forEach((key) => {
     const obj = definitions[key]
@@ -90,21 +87,22 @@ function handleProperties(properties) {
  */
 function handleInterfaceName(originKey) {
   // 处理特殊的类型 ComPage ， 将 "ComPage«CommonSearchResp»" 处理成 “ComPageCommonSearchResp”
-  let pageModalArr = []
-  pageModalArr = Array.isArray(_pageModelName)
-    ? _pageModelName
-    : [_pageModelName]
-  pageModalArr.forEach((pageModalName) => {
-    // 从 "ComPage«CommonSearchResp»" 取出  "ComPage", 判断是否属于后端的分页模型
-    const idx = originKey.indexOf('«')
-    if (idx > -1 && originKey.slice(0, idx) === pageModalName)
-      originKey = originKey.replace('«', '').replace('»', '')
-  })
+  // let pageModalArr = []
+  // pageModalArr = Array.isArray(_pageModelName)
+  //   ? _pageModelName
+  //   : [_pageModelName]
+  // pageModalArr.forEach((pageModalName) => {
+  //   // 从 "ComPage«CommonSearchResp»" 取出  "ComPage", 判断是否属于后端的分页模型
+  //   const idx = originKey.indexOf('«')
+  //   if (idx > -1 && originKey.slice(0, idx) === pageModalName)
+  //     originKey = originKey.replace('«', '').replace('»', '')
+  // })
 
-  const idx = originKey.indexOf('«')
+  // const idx = originKey.indexOf('«')
+  // let str = originKey
+  // if (idx > -1) str = originKey.slice(0, idx)
   let str = originKey
-  if (idx > -1) str = originKey.slice(0, idx)
-
+  str = str.replace(/«|»/g, '') // 去除 « 和 »
   str = str.replace(/-/g, '') // 去除短杠 -
   str = str.replace(/\[|\]/g, '') // 去除中括号 []
   str = str.replace(/\(|\)/g, '') // 去除圆括号 ()
@@ -174,4 +172,5 @@ function hasChinese(str) {
 module.exports = {
   handleDefinitions,
   handleJsType,
+  handleInterfaceName,
 }

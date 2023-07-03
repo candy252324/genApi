@@ -81,7 +81,7 @@ export interface AliMpLoginReq {
   /** 签名 */
   sign: string
 }
-export interface ResOfApiChannelTenantConfigAdd {
+export interface ApiResponse {
   code: number
   data: object
   msg: string
@@ -89,127 +89,7 @@ export interface ResOfApiChannelTenantConfigAdd {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiChannelTenantConfigUpdate {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiCorpWechatSyncDoc {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiDeptAddDept {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiDeptEditDept {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiDeptUpDeptStatus {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmployeeAdd {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmployeeChangeStatus {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmployeeDelConfirm {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmployeeDelEmployeeIds {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmployeeEdit {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiPersonCredentialGetMajorCodeTree {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiPostAddPost {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiPostEditPost {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRoleChangeStatus {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiSuperTransfer {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmpowerEnterpriseReGetAccByMobile {
+export interface ApiResponseAccInfoResp {
   code: number
   data: AccInfoResp
   msg: string
@@ -217,7 +97,7 @@ export interface ResOfApiEmpowerEnterpriseReGetAccByMobile {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiCorpWechatInitAgent {
+export interface ApiResponseAgentConfigResp {
   code: number
   data: AgentConfigResp
   msg: string
@@ -225,7 +105,7 @@ export interface ResOfApiCorpWechatInitAgent {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiChannelTenantConfigDetail {
+export interface ApiResponseChannelAppTenantConfigResp {
   code: number
   data: ChannelAppTenantConfigResp
   msg: string
@@ -233,7 +113,7 @@ export interface ResOfApiChannelTenantConfigDetail {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiClientCorpWechatAuthUser {
+export interface ApiResponseChannelUserResp {
   code: number
   data: ChannelUserResp
   msg: string
@@ -241,15 +121,7 @@ export interface ResOfApiClientCorpWechatAuthUser {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiCorpWechatAuthUser {
-  code: number
-  data: ChannelUserResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiChannelEmployeeComLoginAndBind {
+export interface ApiResponseComLoginResp {
   code: number
   data: ComLoginResp
   msg: string
@@ -257,23 +129,7 @@ export interface ResOfApiChannelEmployeeComLoginAndBind {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiLoginRegisterAliMpAutoLogin {
-  code: number
-  data: ComLoginResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiLoginRegisterComLogin {
-  code: number
-  data: ComLoginResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmployeeAddRecordPageRecord {
+export interface ApiResponseComPageEmployeeAddRecordResp {
   code: number
   data: ComPageEmployeeAddRecordResp
   msg: string
@@ -281,7 +137,7 @@ export interface ResOfApiEmployeeAddRecordPageRecord {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEmployeePageList {
+export interface ApiResponseComPageEmployeeComplexResp {
   code: number
   data: ComPageEmployeeComplexResp
   msg: string
@@ -289,23 +145,7 @@ export interface ResOfApiEmployeePageList {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEmployeePageSelectList {
-  code: number
-  data: ComPageEmployeeComplexResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRolePageRoleEmployeeRoleId {
-  code: number
-  data: ComPageEmployeeComplexResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEnterpriseIdentificationBaseInfoEmployeeList {
+export interface ApiResponseComPageEmployeeResp {
   code: number
   data: ComPageEmployeeResp
   msg: string
@@ -313,7 +153,7 @@ export interface ResOfApiEnterpriseIdentificationBaseInfoEmployeeList {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEnterCredentialPage {
+export interface ApiResponseComPageEnterpriseCredentialResp {
   code: number
   data: ComPageEnterpriseCredentialResp
   msg: string
@@ -321,7 +161,7 @@ export interface ResOfApiEnterCredentialPage {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEnterpriseIdentificationcenterListEnterprise {
+export interface ApiResponseComPageEnterpriseIdentificationResp {
   code: number
   data: ComPageEnterpriseIdentificationResp
   msg: string
@@ -329,7 +169,7 @@ export interface ResOfApiEnterpriseIdentificationcenterListEnterprise {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEmpowerEnterpriseRePageEmployeeList {
+export interface ApiResponseComPageEpEmployeeResp {
   code: number
   data: ComPageEpEmployeeResp
   msg: string
@@ -337,7 +177,7 @@ export interface ResOfApiEmpowerEnterpriseRePageEmployeeList {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiInvitePageApplyType {
+export interface ApiResponseComPageInviteEmployeeResp {
   code: number
   data: ComPageInviteEmployeeResp
   msg: string
@@ -345,7 +185,7 @@ export interface ResOfApiInvitePageApplyType {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiLogList {
+export interface ApiResponseComPageLogLoginResp {
   code: number
   data: ComPageLogLoginResp
   msg: string
@@ -353,7 +193,7 @@ export interface ResOfApiLogList {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiAccountEnterprisePageAllEnterprise {
+export interface ApiResponseComPageQiYeChaXun {
   code: number
   data: ComPageQiYeChaXun
   msg: string
@@ -361,7 +201,7 @@ export interface ResOfApiAccountEnterprisePageAllEnterprise {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiV1AuditRelationPage {
+export interface ApiResponseComPageGuanLianShenHeXinXi {
   code: number
   data: ComPageGuanLianShenHeXinXi
   msg: string
@@ -369,7 +209,7 @@ export interface ResOfApiV1AuditRelationPage {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiInvoicePage {
+export interface ApiResponseComPageFaPiaoGuanLi {
   code: number
   data: ComPageFaPiaoGuanLi
   msg: string
@@ -377,7 +217,7 @@ export interface ResOfApiInvoicePage {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiAuditAuthList {
+export interface ApiResponseComPageShouQuanShenHeLieBiao {
   code: number
   data: ComPageShouQuanShenHeLieBiao
   msg: string
@@ -385,7 +225,7 @@ export interface ResOfApiAuditAuthList {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiPersonCredentialPagePersonCredential {
+export interface ApiResponseComPageTianJiaGeRenZiZhi {
   code: number
   data: ComPageTianJiaGeRenZiZhi
   msg: string
@@ -393,7 +233,7 @@ export interface ResOfApiPersonCredentialPagePersonCredential {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiDeliverAddressPageAddress {
+export interface ApiResponseComPageZuHuShouHuoDiZhiTianJia {
   code: number
   data: ComPageZuHuShouHuoDiZhiTianJia
   msg: string
@@ -401,7 +241,7 @@ export interface ResOfApiDeliverAddressPageAddress {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiClientCorpWechatOauth2 {
+export interface ApiResponseCorpWechatAuthUrlResp {
   code: number
   data: CorpWechatAuthUrlResp
   msg: string
@@ -409,23 +249,7 @@ export interface ResOfApiClientCorpWechatOauth2 {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiCorpWechatAppAuthLink {
-  code: number
-  data: CorpWechatAuthUrlResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiCorpWechatOauth2 {
-  code: number
-  data: CorpWechatAuthUrlResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiIndexGetCurrentAuth {
+export interface ApiResponseCurrentAuthResp {
   code: number
   data: CurrentAuthResp
   msg: string
@@ -433,7 +257,7 @@ export interface ResOfApiIndexGetCurrentAuth {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiDeptGetDeptId {
+export interface ApiResponseDeptDetailResp {
   code: number
   data: DeptDetailResp
   msg: string
@@ -441,7 +265,7 @@ export interface ResOfApiDeptGetDeptId {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEnterpriseIdLinkDept {
+export interface ApiResponseDeptLinkEnterpriseResp {
   code: number
   data: DeptLinkEnterpriseResp
   msg: string
@@ -449,7 +273,7 @@ export interface ResOfApiEnterpriseIdLinkDept {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiPersonCertificationDescribeFaceVerify {
+export interface ApiResponseDescribeFaceVerifyResponse {
   code: number
   data: DescribeFaceVerifyResponse
   msg: string
@@ -457,7 +281,7 @@ export interface ResOfApiPersonCertificationDescribeFaceVerify {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEmployeeGetEmployeeByEmployeeId {
+export interface ApiResponseEmployeeAllInfoResp {
   code: number
   data: EmployeeAllInfoResp
   msg: string
@@ -465,15 +289,7 @@ export interface ResOfApiEmployeeGetEmployeeByEmployeeId {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiIndexGetCurrentEmployeeAll {
-  code: number
-  data: EmployeeAllInfoResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiActiveNoActiveList {
+export interface ApiResponseEmployeeNoActiveResp {
   code: number
   data: EmployeeNoActiveResp
   msg: string
@@ -481,7 +297,7 @@ export interface ResOfApiActiveNoActiveList {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiIndexGetCurrentEmployee {
+export interface ApiResponseEmployeeResp {
   code: number
   data: EmployeeResp
   msg: string
@@ -489,7 +305,7 @@ export interface ResOfApiIndexGetCurrentEmployee {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEmpowerEnterpriseReGetEntReSet {
+export interface ApiResponseEntReSetResp {
   code: number
   data: EntReSetResp
   msg: string
@@ -497,7 +313,7 @@ export interface ResOfApiEmpowerEnterpriseReGetEntReSet {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEmpowerEnterpriseReGetEmpowerInfo {
+export interface ApiResponseHeaderEmpowerSmsInfo {
   code: number
   data: HeaderEmpowerSmsInfo
   msg: string
@@ -505,7 +321,7 @@ export interface ResOfApiEmpowerEnterpriseReGetEmpowerInfo {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiExcelImport {
+export interface ApiResponseImportEmployeeResp {
   code: number
   data: ImportEmployeeResp
   msg: string
@@ -513,7 +329,7 @@ export interface ResOfApiExcelImport {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEmpowerEnterpriseReGetInviteReInfoLinkCode {
+export interface ApiResponseInviteEnterpriseReInfo {
   code: number
   data: InviteEnterpriseReInfo
   msg: string
@@ -521,7 +337,7 @@ export interface ResOfApiEmpowerEnterpriseReGetInviteReInfoLinkCode {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiInviteInviteJoinEchoData {
+export interface ApiResponseInviteJoinEchoResp {
   code: number
   data: InviteJoinEchoResp
   msg: string
@@ -529,7 +345,7 @@ export interface ResOfApiInviteInviteJoinEchoData {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiInviteInviteLogin {
+export interface ApiResponseInviteLoginResp {
   code: number
   data: InviteLoginResp
   msg: string
@@ -537,7 +353,7 @@ export interface ResOfApiInviteInviteLogin {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiInviteQuerySetting {
+export interface ApiResponseInviteSetResp {
   code: number
   data: InviteSetResp
   msg: string
@@ -545,7 +361,7 @@ export interface ResOfApiInviteQuerySetting {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEnterCredentialGetCodeList {
+export interface ApiResponseJSONArray {
   code: number
   data: object[]
   msg: string
@@ -553,23 +369,7 @@ export interface ResOfApiEnterCredentialGetCodeList {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiInvoiceCompanyTaxList {
-  code: number
-  data: object[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiSysdictV1AreaInfo {
-  code: number
-  data: object[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEnterpriseIdentificationcenterAddEnterprise {
+export interface ApiResponseJudgeSwitchEnterpriseLimitResp {
   code: number
   data: JudgeSwitchEnterpriseLimitResp
   msg: string
@@ -577,7 +377,7 @@ export interface ResOfApiEnterpriseIdentificationcenterAddEnterprise {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiAuthEnterpriseAuthOrgInfos {
+export interface ApiResponseListAuthEnterpriseOrgInfoResp {
   code: number
   data: AuthEnterpriseOrgInfoResp[]
   msg: string
@@ -585,7 +385,7 @@ export interface ResOfApiAuthEnterpriseAuthOrgInfos {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiDeptList {
+export interface ApiResponseListDeptResp {
   code: number
   data: DeptResp[]
   msg: string
@@ -593,15 +393,7 @@ export interface ResOfApiDeptList {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiDeptListExcludeChildDeptId {
-  code: number
-  data: DeptResp[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmpowerEnterpriseReDeptTree {
+export interface ApiResponseListEmpowerDeptResp {
   code: number
   data: EmpowerDeptResp[]
   msg: string
@@ -609,7 +401,7 @@ export interface ResOfApiEmpowerEnterpriseReDeptTree {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEmpowerEnterpriseReReReEntTree {
+export interface ApiResponseListEpEntTreeResp {
   code: number
   data: EpEntTreeResp[]
   msg: string
@@ -617,15 +409,7 @@ export interface ResOfApiEmpowerEnterpriseReReReEntTree {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEmpowerEnterpriseReReEntTree {
-  code: number
-  data: EpEntTreeResp[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmployeeEmployeeDept {
+export interface ApiResponseListExtDeptResp {
   code: number
   data: ExtDeptResp[]
   msg: string
@@ -633,7 +417,7 @@ export interface ResOfApiEmployeeEmployeeDept {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiExcelHistory {
+export interface ApiResponseListImportEmployeeResp {
   code: number
   data: ImportEmployeeResp[]
   msg: string
@@ -641,7 +425,7 @@ export interface ResOfApiExcelHistory {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiMenuEmployeeMenuList {
+export interface ApiResponseListMenuResp {
   code: number
   data: MenuResp[]
   msg: string
@@ -649,7 +433,7 @@ export interface ResOfApiMenuEmployeeMenuList {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiPostList {
+export interface ApiResponseListPostResp {
   code: number
   data: PostResp[]
   msg: string
@@ -657,7 +441,7 @@ export interface ResOfApiPostList {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiPageHomeQuery {
+export interface ApiResponseListQueryPersonPageHomeResp {
   code: number
   data: QueryPersonPageHomeResp[]
   msg: string
@@ -665,7 +449,7 @@ export interface ResOfApiPageHomeQuery {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEmpowerEnterpriseReEntReSetListRole {
+export interface ApiResponseListRoleInfo {
   code: number
   data: RoleInfo[]
   msg: string
@@ -673,15 +457,7 @@ export interface ResOfApiEmpowerEnterpriseReEntReSetListRole {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEmpowerEnterpriseReListRoleList {
-  code: number
-  data: RoleInfo[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRoleCurCanAllotEmployeeRoleList {
+export interface ApiResponseListRoleResq {
   code: number
   data: RoleResq[]
   msg: string
@@ -689,39 +465,7 @@ export interface ResOfApiRoleCurCanAllotEmployeeRoleList {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiRoleCurCanAllotRoleList {
-  code: number
-  data: RoleResq[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRoleCurEmployeeRoleList {
-  code: number
-  data: RoleResq[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRoleGetCanAllotRoleListEmployeeId {
-  code: number
-  data: RoleResq[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRoleRoleList {
-  code: number
-  data: RoleResq[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiDeptQueryEmployeeByDeptId {
+export interface ApiResponseListSelectorEmployeeResp {
   code: number
   data: SelectorEmployeeResp[]
   msg: string
@@ -729,63 +473,7 @@ export interface ResOfApiDeptQueryEmployeeByDeptId {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiDeptQueryEmployeeByPhoneOrName {
-  code: number
-  data: SelectorEmployeeResp[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiJobEmployeeSelector {
-  code: number
-  data: SelectorEmployeeResp[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiJobQueryEmployeeByPhoneOrName {
-  code: number
-  data: SelectorEmployeeResp[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiPostQueryEmployeeByDeptId {
-  code: number
-  data: SelectorEmployeeResp[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiPostQueryEmployeeByPhoneOrName {
-  code: number
-  data: SelectorEmployeeResp[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRoleQueryEmployeeByDeptId {
-  code: number
-  data: SelectorEmployeeResp[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRoleQueryEmployeeByPhoneOrName {
-  code: number
-  data: SelectorEmployeeResp[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiSuperList {
+export interface ApiResponseListSuperManResp {
   code: number
   data: SuperManResp[]
   msg: string
@@ -793,7 +481,7 @@ export interface ResOfApiSuperList {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiSysdictV1TypeListFilter {
+export interface ApiResponseListSysDictDuiXiangnullZhiBuXuLieHua {
   code: number
   data: SysDictDuiXiangnullZhiBuXuLieHua[]
   msg: string
@@ -801,15 +489,7 @@ export interface ResOfApiSysdictV1TypeListFilter {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiSysdictV1TypeListTree {
-  code: number
-  data: SysDictDuiXiangnullZhiBuXuLieHua[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiDeptDeptTree {
+export interface ApiResponseListTreelong {
   code: number
   data: object[]
   msg: string
@@ -817,71 +497,7 @@ export interface ResOfApiDeptDeptTree {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiDeptDeptTreeComplex {
-  code: number
-  data: object[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiDeptDeptTreeInfo {
-  code: number
-  data: object[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmployeeDeptTreeCount {
-  code: number
-  data: object[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmployeeMyDeptTreeCount {
-  code: number
-  data: object[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiJobQueryTree {
-  code: number
-  data: object[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiMenuTreeSelect {
-  code: number
-  data: object[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRoleRoleMenuTreeRoleId {
-  code: number
-  data: object[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRoleRoleTree {
-  code: number
-  data: object[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiAuthEnterpriseAuthUsersAuthstatus {
+export interface ApiResponseListlong {
   code: number
   data: number[]
   msg: string
@@ -889,7 +505,7 @@ export interface ResOfApiAuthEnterpriseAuthUsersAuthstatus {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiDictQueryType {
+export interface ApiResponseListstring {
   code: number
   data: string[]
   msg: string
@@ -897,7 +513,15 @@ export interface ResOfApiDictQueryType {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEmpowerEnterpriseReDetailGetEnterpriseListByPhone {
+export interface ApiResponseListQiYeChaXun {
+  code: number
+  data: QiYeChaXun[]
+  msg: string
+  success: boolean
+  timestamp: number
+  traceId: string
+}
+export interface ApiResponseListQiYeZuHuXinXi {
   code: number
   data: QiYeZuHuXinXi[]
   msg: string
@@ -905,15 +529,7 @@ export interface ResOfApiEmpowerEnterpriseReDetailGetEnterpriseListByPhone {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEmpowerEnterpriseReDetailListEnterprise {
-  code: number
-  data: QiYeZuHuXinXi[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiFileUpload {
+export interface ApiResponseListWenJianShangChuanXiangYing {
   code: number
   data: WenJianShangChuanXiangYing[]
   msg: string
@@ -921,7 +537,7 @@ export interface ResOfApiFileUpload {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiInviteGenerateInviteShare {
+export interface ApiResponseListShengChengYaoQing {
   code: number
   data: ShengChengYaoQing0[]
   msg: string
@@ -929,7 +545,7 @@ export interface ResOfApiInviteGenerateInviteShare {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiTenantAcquireTenantList {
+export interface ApiResponseListZuHuXinXi {
   code: number
   data: ZuHuXinXi[]
   msg: string
@@ -937,15 +553,7 @@ export interface ResOfApiTenantAcquireTenantList {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiTenantUnboundList {
-  code: number
-  data: ZuHuXinXi[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiPersonCertificationPersonList {
+export interface ApiResponseListRenZhengQuDaoZhuangTaiChaXun {
   code: number
   data: RenZhengQuDaoZhuangTaiChaXun[]
   msg: string
@@ -953,7 +561,7 @@ export interface ResOfApiPersonCertificationPersonList {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiSliderCreateVerificationEnum {
+export interface ApiResponseMapstringobject {
   code: number
   data: object
   msg: string
@@ -961,7 +569,7 @@ export interface ResOfApiSliderCreateVerificationEnum {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiSysdictV1Types {
+export interface ApiResponseMapstringstring {
   code: number
   data: object
   msg: string
@@ -969,15 +577,7 @@ export interface ResOfApiSysdictV1Types {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEmpowerEnterpriseReGetEmEmployeeInfoLinkCode {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRoleRoleMenuTreeCheckedRoleId {
+export interface ApiResponseMenuCheckedResp {
   code: number
   data: MenuCheckedResp
   msg: string
@@ -985,7 +585,7 @@ export interface ResOfApiRoleRoleMenuTreeCheckedRoleId {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiMenuGetMenuMenuId {
+export interface ApiResponseMenuResp {
   code: number
   data: MenuResp
   msg: string
@@ -993,7 +593,7 @@ export interface ResOfApiMenuGetMenuMenuId {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEnterCredentialV1OcrBusinessLicense {
+export interface ApiResponseOcrBusinessLicenseBO {
   code: number
   data: OcrBusinessLicenseBO
   msg: string
@@ -1001,7 +601,7 @@ export interface ResOfApiEnterCredentialV1OcrBusinessLicense {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiPersonCertificationIdCardBack {
+export interface ApiResponseOcrIdCardBackResp {
   code: number
   data: OcrIdCardBackResp
   msg: string
@@ -1009,7 +609,7 @@ export interface ResOfApiPersonCertificationIdCardBack {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiPersonCertificationIdCardFront {
+export interface ApiResponseOcrIdCardFrontResp {
   code: number
   data: OcrIdCardFrontResp
   msg: string
@@ -1017,7 +617,7 @@ export interface ResOfApiPersonCertificationIdCardFront {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiSysdictV1TypeListPage {
+export interface ApiResponsePageSysDictDuiXiangnullZhiBuXuLieHua {
   code: number
   data: PageSysDictDuiXiangnullZhiBuXuLieHua
   msg: string
@@ -1025,7 +625,7 @@ export interface ResOfApiSysdictV1TypeListPage {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEnterpriseIdentificationEnterpriseV1PageEnterpriseName {
+export interface ApiResponsePageQiYeKaiHuXinXi {
   code: number
   data: PageQiYeKaiHuXinXi
   msg: string
@@ -1033,7 +633,7 @@ export interface ResOfApiEnterpriseIdentificationEnterpriseV1PageEnterpriseName 
   timestamp: number
   traceId: string
 }
-export interface ResOfApiAccountAccQueryAcc {
+export interface ApiResponseQueryAccInfoResp {
   code: number
   data: QueryAccInfoResp
   msg: string
@@ -1041,7 +641,7 @@ export interface ResOfApiAccountAccQueryAcc {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiPersonCertificationQueryCertInfo {
+export interface ApiResponseQueryCertFormResp {
   code: number
   data: QueryCertFormResp
   msg: string
@@ -1049,7 +649,7 @@ export interface ResOfApiPersonCertificationQueryCertInfo {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEnterprisePageHomeQuery {
+export interface ApiResponseQueryEnterprisePageHomeResp {
   code: number
   data: QueryEnterprisePageHomeResp
   msg: string
@@ -1057,7 +657,7 @@ export interface ResOfApiEnterprisePageHomeQuery {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEnterprisePageHomeJudge {
+export interface ApiResponseQueryJudgeClaimResp {
   code: number
   data: QueryJudgeClaimResp
   msg: string
@@ -1065,15 +665,7 @@ export interface ResOfApiEnterprisePageHomeJudge {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiPageHomeJudge {
-  code: number
-  data: QueryJudgeClaimResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiWalletBalance {
+export interface ApiResponseQueryWalletBalanceResp {
   code: number
   data: QueryWalletBalanceResp
   msg: string
@@ -1081,7 +673,7 @@ export interface ResOfApiWalletBalance {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiLoginRegisterRegister {
+export interface ApiResponseRegisterResultResp {
   code: number
   data: RegisterResultResp
   msg: string
@@ -1089,7 +681,7 @@ export interface ResOfApiLoginRegisterRegister {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiRoleRoleInfoRoleId {
+export interface ApiResponseRoleInfoResq {
   code: number
   data: RoleInfoResq
   msg: string
@@ -1097,7 +689,7 @@ export interface ResOfApiRoleRoleInfoRoleId {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEmpowerEnterpriseReScanGetOrgInfo {
+export interface ApiResponseScanReQrResp {
   code: number
   data: ScanReQrResp
   msg: string
@@ -1105,7 +697,7 @@ export interface ResOfApiEmpowerEnterpriseReScanGetOrgInfo {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiActiveSendActiveMessage {
+export interface ApiResponseSendActiveMessageResp {
   code: number
   data: SendActiveMessageResp
   msg: string
@@ -1113,7 +705,7 @@ export interface ResOfApiActiveSendActiveMessage {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEmployeeShiftEmployeeId {
+export interface ApiResponseShiftEmployeeResp {
   code: number
   data: ShiftEmployeeResp
   msg: string
@@ -1121,7 +713,7 @@ export interface ResOfApiEmployeeShiftEmployeeId {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiPersonCertificationInitFaceVerifyWithCertifyIdType {
+export interface ApiResponseVerificationResp {
   code: number
   data: VerificationResp
   msg: string
@@ -1129,238 +721,14 @@ export interface ResOfApiPersonCertificationInitFaceVerifyWithCertifyIdType {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiAuditAuthExecute {
+export interface ApiResponseVoid {
   code: number
   msg: string
   success: boolean
   timestamp: number
   traceId: string
 }
-export interface ResOfApiAuthEnterpriseAuthUsers {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiDeptDelDeptDeptId {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmployeeStopEmployeeConfirm {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmpowerEnterpriseReAlertAudit {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmpowerEnterpriseReApplyScanAgreeRe {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmpowerEnterpriseReBathAuth {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmpowerEnterpriseReBathCancelAuth {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmpowerEnterpriseReEmployeeOperEmType {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmpowerEnterpriseReFranchiseOperOper {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmpowerEnterpriseReInviteRePlateFromOrg {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmpowerEnterpriseReRefreshApplyRe {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmpowerEnterpriseReRelationCancel {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmpowerEnterpriseReRelationRefresh {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmpowerEnterpriseReSendEmpowerSms {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmpowerEnterpriseReUpEntReSetEnterpriseId {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEnterpriseIdentificationEnterpriseV1OpenAcctCallback {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEnterpriseIdentificationPersonV1OpenAcctCallback {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEnterpriseIdentificationV1TicketAuth {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEnterpriseIdentificationV1EnterpriseIdOpenAcctExecute {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEnterpriseLinkDept {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiLoginRegisterClearCodeVerificationEnum {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiLoginRegisterClearTimeLimitVerificationEnum {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiPersonCertificationPersonV1UserIdOpenAcctExecute {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiPersonCertificationWalletInfo {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiPostAddEmployee {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiPostDelEmployee {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiPostDelPostPostId {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRoleAuthEmployeeCancelAll {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRoleAuthEmployeeSelectAll {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRoleEditRoleBase {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRoleEditRoleMenu {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRoleRemoveRoleRoleIds {
-  code: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiAccountEnterpriseCreateEnterprise {
+export interface ApiResponseboolean {
   code: number
   data: boolean
   msg: string
@@ -1368,303 +736,7 @@ export interface ResOfApiAccountEnterpriseCreateEnterprise {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiAccountEnterpriseListUserEnterprise {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiDeliverAddressAddAddress {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiDeliverAddressCheckDefaultAddress {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiDeliverAddressDeleteAddressId {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiDeliverAddressUpdateAddress {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEnterCredentialAdd {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEnterCredentialDel {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEnterCredentialUpdate {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEnterprisePageHomeClaimCompanyId {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEnterprisePageHomeExcludeClaimId {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiInviteUpdatesetting {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiInvoiceAdd {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiInvoiceDel {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiInvoiceUpdate {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiJobAddEmployee {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiJobAddJob {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiJobDelJob {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiJobRemoveEmployee {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiJobUpdateJob {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiLoginRegisterJudgePassWordIsSet {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiLoginRegisterLoginout {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiLoginRegisterSetPassWord {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiPageHomeClaimClaimId {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiPageHomeExcludeClaimId {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiPersonCredentialAddPersonCredential {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiPersonCredentialDeleteId {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiPersonCredentialDeleteMajorId {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiPersonCredentialUpdatePersonCredential {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiSliderAddImage {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiSliderPreCheckVerificationEnum {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiTenantChannelUnbind {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiTenantSwitchTenant {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiTenantEnterpriseUpdateInfo {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiTenantPersonUpdateAccPassword {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiTenantPersonUpdateInfo {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiV1AuditRelation {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiWalletJudgeStatus {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRoleAddRole {
+export interface ApiResponselong {
   code: number
   data: number
   msg: string
@@ -1672,7 +744,7 @@ export interface ResOfApiRoleAddRole {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiAccountEnterpriseAddEnterprise {
+export interface ApiResponsestring {
   code: number
   data: string
   msg: string
@@ -1680,103 +752,7 @@ export interface ResOfApiAccountEnterpriseAddEnterprise {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEmpowerEnterpriseReDetailGenReLinkOrQr {
-  code: number
-  data: string
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEnterpriseIdentificationcenterDelEnterprise {
-  code: number
-  data: string
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEnterpriseIdentificationcenterSwitchMainEnterprise {
-  code: number
-  data: string
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiInviteAuditCancelShieldId {
-  code: number
-  data: string
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiInviteAuditPass {
-  code: number
-  data: string
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiInviteAuditRefuse {
-  code: number
-  data: string
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiInviteAuditShieldId {
-  code: number
-  data: string
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiLoginRegisterPasswordCry {
-  code: number
-  data: string
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiLoginRegisterRetrievePassword {
-  code: number
-  data: string
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiLoginRegisterSendPhoneValidateCodeVerificationEnum {
-  code: number
-  data: string
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiPersonCertificationQueryCommonCertifyId {
-  code: number
-  data: string
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiSuperVerifyVerifyType {
-  code: number
-  data: string
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiTenantPersonAcquireInfo {
+export interface ApiResponseGeRenZuHuXinXiXiangQingBiao {
   code: number
   data: GeRenZuHuXinXiXiangQingBiao
   msg: string
@@ -1784,7 +760,7 @@ export interface ResOfApiTenantPersonAcquireInfo {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiPersonCertificationWalletQueryInfo {
+export interface ApiResponseGeRenRenZhengXinXiKaiHuXinXiXinZengShiZhiXuYaoChuanRuindividualBankCardNoindividualReservedPhoneNoindividualVocationQiTaXinXiCongredisHuanCunZhongHuoQu {
   code: number
   data: GeRenRenZhengXinXiKaiHuXinXiXinZengShiZhiXuYaoChuanRuindividualBankCardNoindividualReservedPhoneNoindividualVocationQiTaXinXiCongredisHuanCunZhongHuoQu
   msg: string
@@ -1792,7 +768,7 @@ export interface ResOfApiPersonCertificationWalletQueryInfo {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiPersonCertificationPersonAuthInfo {
+export interface ApiResponseGeRenRenZhengXinXi {
   code: number
   data: GeRenRenZhengXinXi
   msg: string
@@ -1800,7 +776,7 @@ export interface ResOfApiPersonCertificationPersonAuthInfo {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEnterpriseIdentificationV1SimpleAuth {
+export interface ApiResponseQiYeJianDanRenZheng {
   code: number
   data: QiYeJianDanRenZheng0
   msg: string
@@ -1808,7 +784,7 @@ export interface ResOfApiEnterpriseIdentificationV1SimpleAuth {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEnterpriseIdentificationcenterEnterpriseIdMainAuthInfo {
+export interface ApiResponseQiYeZhuTiXinXi {
   code: number
   data: QiYeZhuTiXinXi
   msg: string
@@ -1816,7 +792,7 @@ export interface ResOfApiEnterpriseIdentificationcenterEnterpriseIdMainAuthInfo 
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEnterpriseIdentificationV1OpenAcct {
+export interface ApiResponseQiYeKaiHuXinXi {
   code: number
   data: QiYeKaiHuXinXi0
   msg: string
@@ -1824,15 +800,7 @@ export interface ResOfApiEnterpriseIdentificationV1OpenAcct {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEnterpriseIdentificationV1EnterpriseIdOpenAcctAppend {
-  code: number
-  data: QiYeKaiHuXinXi0
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiTenantEnterpriseAcquireInfo {
+export interface ApiResponseQiYeZuHuXinXiXiangQing {
   code: number
   data: QiYeZuHuXinXiXiangQing0
   msg: string
@@ -1840,7 +808,7 @@ export interface ResOfApiTenantEnterpriseAcquireInfo {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEmpowerEnterpriseReList {
+export interface ApiResponseGuanLianGongSiLieBiao {
   code: number
   data: GuanLianGongSiLieBiao
   msg: string
@@ -1848,7 +816,7 @@ export interface ResOfApiEmpowerEnterpriseReList {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiEmpowerEnterpriseReDetail {
+export interface ApiResponseGuanLianGongSiXiangQing {
   code: number
   data: GuanLianGongSiXiangQing
   msg: string
@@ -1856,7 +824,7 @@ export interface ResOfApiEmpowerEnterpriseReDetail {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiV1AuditRelationTotal {
+export interface ApiResponseShenHeTongJiHuanCunSanShiMiao {
   code: number
   data: ShenHeTongJiHuanCunSanShiMiao
   msg: string
@@ -1864,7 +832,7 @@ export interface ResOfApiV1AuditRelationTotal {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiAuditAuthInfoList {
+export interface ApiResponseShouQuanShenHe {
   code: number
   data: ShouQuanShenHe0
   msg: string
@@ -1872,7 +840,7 @@ export interface ResOfApiAuditAuthInfoList {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiDataSyncCheckResult {
+export interface ApiResponseShuJuYiZhiXingCaoZuoFanHuiJieGuo {
   code: number
   data: ShuJuYiZhiXingCaoZuoFanHuiJieGuo
   msg: string
@@ -1880,39 +848,7 @@ export interface ResOfApiDataSyncCheckResult {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiDeptDelDeptConfirm {
-  code: number
-  data: ShuJuYiZhiXingCaoZuoFanHuiJieGuo
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiDeptStartDelDeptDeptId {
-  code: number
-  data: ShuJuYiZhiXingCaoZuoFanHuiJieGuo
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmployeeStartDelEmployeeId {
-  code: number
-  data: ShuJuYiZhiXingCaoZuoFanHuiJieGuo
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiEmployeeStopStartEmployeeId {
-  code: number
-  data: ShuJuYiZhiXingCaoZuoFanHuiJieGuo
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiInviteCheckInviteCode {
+export interface ApiResponseJianChaYaoQingMa {
   code: number
   data: JianChaYaoQingMa
   msg: string
@@ -1920,7 +856,7 @@ export interface ResOfApiInviteCheckInviteCode {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiTenantAcquirePresentTenantInfo {
+export interface ApiResponseZuHuXinXi {
   code: number
   data: ZuHuXinXi
   msg: string
@@ -1928,7 +864,7 @@ export interface ResOfApiTenantAcquirePresentTenantInfo {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiInviteInviteRegister {
+export interface ApiResponseYaoQingZhuCe {
   code: number
   data: YaoQingZhuCe
   msg: string
@@ -2287,7 +1223,7 @@ export interface CompanyInfo {
   /** 网址 */
   websites: string
 }
-export interface Comparable {
+export interface Comparableobject {
 }
 export interface CorpWechatAuthUrlResp {
   /** 授权链接 */
@@ -3084,46 +2020,7 @@ export interface ExtDeptResp {
   updateId: number
   updateName: string
 }
-export interface ResOfApiEmployeeAddRecordExport {
-  description: string
-  file: File
-  filename: string
-  inputStream: InputStream
-  open: boolean
-  outputStream: OutputStream
-  path: string
-  readable: boolean
-  uri: string
-  url: string
-  writable: boolean
-}
-export interface ResOfApiExcelExport {
-  description: string
-  file: File
-  filename: string
-  inputStream: InputStream
-  open: boolean
-  outputStream: OutputStream
-  path: string
-  readable: boolean
-  uri: string
-  url: string
-  writable: boolean
-}
-export interface ResOfApiExcelTemplate {
-  description: string
-  file: File
-  filename: string
-  inputStream: InputStream
-  open: boolean
-  outputStream: OutputStream
-  path: string
-  readable: boolean
-  uri: string
-  url: string
-  writable: boolean
-}
-export interface ResOfApiInviteExport {
+export interface FileSystemResource {
   description: string
   file: File
   filename: string

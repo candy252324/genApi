@@ -1,41 +1,31 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiBusinessAddBusinessEnterprise,
-  ResOfApiBusinessAddBusinessPerson,
-  ResOfApiBusinessAddBusinessProject,
-  ResOfApiBusinessAddSignBusinessEnterprise,
-  ResOfApiBusinessAddSignBusinessPerson,
-  ResOfApiBusinessAddSignBusinessProject,
-  ResOfApiBusinessAssignBusiness,
-  ResOfApiBusinessEditBusinessEnterprise,
-  ResOfApiBusinessEditBusinessPerson,
-  ResOfApiBusinessEditBusinessProject,
-  ResOfApiBusinessEnterpriseDetail,
-  ResOfApiBusinessEnterpriseInfo,
-  ResOfApiBusinessLink,
-  ResOfApiBusinessPageEnterpriseSampleList,
-  ResOfApiBusinessPageEnterpriseBusinessPool,
-  ResOfApiBusinessPagePersonSampleList,
-  ResOfApiBusinessPagePersonBusinessPool,
-  ResOfApiBusinessPageProjectSampleList,
-  ResOfApiBusinessPageProjectBusinessPool,
-  ResOfApiBusinessPersonNotifySign,
-  ResOfApiBusinessPersonInfo,
-  ResOfApiBusinessProjectAdd,
-  ResOfApiBusinessProjectGet,
-  ResOfApiBusinessProjectModified,
-  ResOfApiBusinessProjectPageList,
-  ResOfApiBusinessProjectInfo,
-  ResOfApiBusinessReceiveBusiness,
-  ResOfApiBusinessVerifyRepeatBusiness,
+  ApiResponseBusinessReceiveResp,
+  ApiResponseAddSignBusinessResp,
+  ApiResponse,
+  ApiResponseQiYeShangJiXiangQingrpcresponse,
+  ApiResponseBusinessEnterpriseInfoResp,
+  ApiResponseGuanLianShangJiResponse,
+  ApiResponseComPageFenYeChaXunQiYeShangJiresponseJianDanShuJu,
+  ApiResponseComPagePageEnterpriseBusinessPoolResp,
+  ApiResponseComPageFenYeChaXunRenCaiShangJiresponseJianDanShuJu,
+  ApiResponseComPagePagePersonBusinessPoolResp,
+  ApiResponseComPageFenYeChaXunXiangMuShangJiresponseJianDanShuJu,
+  ApiResponseComPagePageProjectBusinessPoolResp,
+  ApiResponseVoid,
+  ApiResponseBusinessPersonInfoResp,
+  ApiResponseXiangMuShangJiXiangQingrpcresponse,
+  ApiResponseComPageXiangMuShangJiXiangQingrpcresponse,
+  ApiResponseBusinessProjectInfoResp,
+  ApiResponseAddBusinessResp,
 } from './_interfaces'
 
 /** 新增企业商机 */
 export function apiBusinessAddBusinessEnterprise(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessAddBusinessEnterprise> {
+): AxiosPromise<ApiResponseBusinessReceiveResp> {
   return Http.post('/api/business/addBusinessEnterprise', data, config)
 }
 
@@ -43,7 +33,7 @@ export function apiBusinessAddBusinessEnterprise(
 export function apiBusinessAddBusinessPerson(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessAddBusinessPerson> {
+): AxiosPromise<ApiResponseBusinessReceiveResp> {
   return Http.post('/api/business/addBusinessPerson', data, config)
 }
 
@@ -51,7 +41,7 @@ export function apiBusinessAddBusinessPerson(
 export function apiBusinessAddBusinessProject(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessAddBusinessProject> {
+): AxiosPromise<ApiResponseBusinessReceiveResp> {
   return Http.post('/api/business/addBusinessProject', data, config)
 }
 
@@ -59,7 +49,7 @@ export function apiBusinessAddBusinessProject(
 export function apiBusinessAddSignBusinessEnterprise(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessAddSignBusinessEnterprise> {
+): AxiosPromise<ApiResponseAddSignBusinessResp> {
   return Http.post('/api/business/addSignBusinessEnterprise', data, config)
 }
 
@@ -67,7 +57,7 @@ export function apiBusinessAddSignBusinessEnterprise(
 export function apiBusinessAddSignBusinessPerson(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessAddSignBusinessPerson> {
+): AxiosPromise<ApiResponseAddSignBusinessResp> {
   return Http.post('/api/business/addSignBusinessPerson', data, config)
 }
 
@@ -75,7 +65,7 @@ export function apiBusinessAddSignBusinessPerson(
 export function apiBusinessAddSignBusinessProject(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessAddSignBusinessProject> {
+): AxiosPromise<ApiResponseAddSignBusinessResp> {
   return Http.post('/api/business/addSignBusinessProject', data, config)
 }
 
@@ -83,7 +73,7 @@ export function apiBusinessAddSignBusinessProject(
 export function apiBusinessAssignBusiness(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessAssignBusiness> {
+): AxiosPromise<ApiResponseBusinessReceiveResp> {
   return Http.post('/api/business/assignBusiness', data, config)
 }
 
@@ -91,7 +81,7 @@ export function apiBusinessAssignBusiness(
 export function apiBusinessEditBusinessEnterprise(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessEditBusinessEnterprise> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/business/editBusinessEnterprise', data, config)
 }
 
@@ -99,7 +89,7 @@ export function apiBusinessEditBusinessEnterprise(
 export function apiBusinessEditBusinessPerson(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessEditBusinessPerson> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/business/editBusinessPerson', data, config)
 }
 
@@ -107,7 +97,7 @@ export function apiBusinessEditBusinessPerson(
 export function apiBusinessEditBusinessProject(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessEditBusinessProject> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/business/editBusinessProject', data, config)
 }
 
@@ -115,7 +105,7 @@ export function apiBusinessEditBusinessProject(
 export function apiBusinessEnterpriseDetail(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessEnterpriseDetail> {
+): AxiosPromise<ApiResponseQiYeShangJiXiangQingrpcresponse> {
   return Http.post('/api/business/enterprise/detail', data, config)
 }
 
@@ -123,7 +113,7 @@ export function apiBusinessEnterpriseDetail(
 export function apiBusinessEnterpriseInfo(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessEnterpriseInfo> {
+): AxiosPromise<ApiResponseBusinessEnterpriseInfoResp> {
   return Http.get('/api/business/enterpriseInfo', data, config)
 }
 
@@ -131,7 +121,7 @@ export function apiBusinessEnterpriseInfo(
 export function apiBusinessLink(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessLink> {
+): AxiosPromise<ApiResponseGuanLianShangJiResponse> {
   return Http.post('/api/business/link', data, config)
 }
 
@@ -139,7 +129,7 @@ export function apiBusinessLink(
 export function apiBusinessPageEnterpriseSampleList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessPageEnterpriseSampleList> {
+): AxiosPromise<ApiResponseComPageFenYeChaXunQiYeShangJiresponseJianDanShuJu> {
   return Http.post('/api/business/pageEnterprise/sampleList', data, config)
 }
 
@@ -147,7 +137,7 @@ export function apiBusinessPageEnterpriseSampleList(
 export function apiBusinessPageEnterpriseBusinessPool(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessPageEnterpriseBusinessPool> {
+): AxiosPromise<ApiResponseComPagePageEnterpriseBusinessPoolResp> {
   return Http.post('/api/business/pageEnterpriseBusinessPool', data, config)
 }
 
@@ -155,7 +145,7 @@ export function apiBusinessPageEnterpriseBusinessPool(
 export function apiBusinessPagePersonSampleList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessPagePersonSampleList> {
+): AxiosPromise<ApiResponseComPageFenYeChaXunRenCaiShangJiresponseJianDanShuJu> {
   return Http.post('/api/business/pagePerson/sampleList', data, config)
 }
 
@@ -163,7 +153,7 @@ export function apiBusinessPagePersonSampleList(
 export function apiBusinessPagePersonBusinessPool(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessPagePersonBusinessPool> {
+): AxiosPromise<ApiResponseComPagePagePersonBusinessPoolResp> {
   return Http.post('/api/business/pagePersonBusinessPool', data, config)
 }
 
@@ -171,7 +161,7 @@ export function apiBusinessPagePersonBusinessPool(
 export function apiBusinessPageProjectSampleList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessPageProjectSampleList> {
+): AxiosPromise<ApiResponseComPageFenYeChaXunXiangMuShangJiresponseJianDanShuJu> {
   return Http.post('/api/business/pageProject/sampleList', data, config)
 }
 
@@ -179,7 +169,7 @@ export function apiBusinessPageProjectSampleList(
 export function apiBusinessPageProjectBusinessPool(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessPageProjectBusinessPool> {
+): AxiosPromise<ApiResponseComPagePageProjectBusinessPoolResp> {
   return Http.post('/api/business/pageProjectBusinessPool', data, config)
 }
 
@@ -187,7 +177,7 @@ export function apiBusinessPageProjectBusinessPool(
 export function apiBusinessPersonNotifySign(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessPersonNotifySign> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.get('/api/business/person/notifySign', data, config)
 }
 
@@ -195,7 +185,7 @@ export function apiBusinessPersonNotifySign(
 export function apiBusinessPersonInfo(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessPersonInfo> {
+): AxiosPromise<ApiResponseBusinessPersonInfoResp> {
   return Http.get('/api/business/personInfo', data, config)
 }
 
@@ -203,7 +193,7 @@ export function apiBusinessPersonInfo(
 export function apiBusinessProjectAdd(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessProjectAdd> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.post('/api/business/project/add', data, config)
 }
 
@@ -211,7 +201,7 @@ export function apiBusinessProjectAdd(
 export function apiBusinessProjectGet(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessProjectGet> {
+): AxiosPromise<ApiResponseXiangMuShangJiXiangQingrpcresponse> {
   return Http.get('/api/business/project/get', data, config)
 }
 
@@ -219,7 +209,7 @@ export function apiBusinessProjectGet(
 export function apiBusinessProjectModified(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessProjectModified> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.post('/api/business/project/modified', data, config)
 }
 
@@ -227,7 +217,7 @@ export function apiBusinessProjectModified(
 export function apiBusinessProjectPageList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessProjectPageList> {
+): AxiosPromise<ApiResponseComPageXiangMuShangJiXiangQingrpcresponse> {
   return Http.post('/api/business/project/pageList', data, config)
 }
 
@@ -235,7 +225,7 @@ export function apiBusinessProjectPageList(
 export function apiBusinessProjectInfo(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessProjectInfo> {
+): AxiosPromise<ApiResponseBusinessProjectInfoResp> {
   return Http.get('/api/business/projectInfo', data, config)
 }
 
@@ -243,7 +233,7 @@ export function apiBusinessProjectInfo(
 export function apiBusinessReceiveBusiness(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessReceiveBusiness> {
+): AxiosPromise<ApiResponseBusinessReceiveResp> {
   return Http.post('/api/business/receiveBusiness', data, config)
 }
 
@@ -251,6 +241,6 @@ export function apiBusinessReceiveBusiness(
 export function apiBusinessVerifyRepeatBusiness(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessVerifyRepeatBusiness> {
+): AxiosPromise<ApiResponseAddBusinessResp> {
   return Http.post('/api/business/verifyRepeatBusiness', data, config)
 }

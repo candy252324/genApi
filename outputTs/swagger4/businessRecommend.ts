@@ -1,16 +1,16 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiBusinessRecommendPageEnterpriseBusiness,
-  ResOfApiBusinessRecommendPagePersonBusiness,
-  ResOfApiBusinessRecommendPageProjectBusiness,
+  ApiResponseComPagePageEnterpriseBusinessPoolResp,
+  ApiResponseComPagePagePersonBusinessPoolResp,
+  ApiResponseComPagePageProjectBusinessPoolResp,
 } from './_interfaces'
 
 /** 企业商机列表 */
 export function apiBusinessRecommendPageEnterpriseBusiness(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessRecommendPageEnterpriseBusiness> {
+): AxiosPromise<ApiResponseComPagePageEnterpriseBusinessPoolResp> {
   return Http.post(
     '/api/businessRecommend/pageEnterpriseBusiness',
     data,
@@ -22,7 +22,7 @@ export function apiBusinessRecommendPageEnterpriseBusiness(
 export function apiBusinessRecommendPagePersonBusiness(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessRecommendPagePersonBusiness> {
+): AxiosPromise<ApiResponseComPagePagePersonBusinessPoolResp> {
   return Http.post('/api/businessRecommend/pagePersonBusiness', data, config)
 }
 
@@ -30,6 +30,6 @@ export function apiBusinessRecommendPagePersonBusiness(
 export function apiBusinessRecommendPageProjectBusiness(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessRecommendPageProjectBusiness> {
+): AxiosPromise<ApiResponseComPagePageProjectBusinessPoolResp> {
   return Http.post('/api/businessRecommend/pageProjectBusiness', data, config)
 }

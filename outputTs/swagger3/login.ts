@@ -1,19 +1,16 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiLoginDoLogin,
-  ResOfApiLoginDoLogout,
-  ResOfApiLoginSendPhoneValidateCode,
-  ResOfLoginDoLogin,
-  ResOfLoginDoLogout,
-  ResOfLoginSendPhoneValidateCode,
+  ApiResponseDengLuXiangYingShiTi,
+  ApiResponse,
+  ApiResponsestring,
 } from './_interfaces'
 
 /** 通用登录 */
 export function apiLoginDoLogin(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiLoginDoLogin> {
+): AxiosPromise<ApiResponseDengLuXiangYingShiTi> {
   return Http.post('/api/login/doLogin', data, config)
 }
 
@@ -21,7 +18,7 @@ export function apiLoginDoLogin(
 export function apiLoginDoLogout(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiLoginDoLogout> {
+): AxiosPromise<ApiResponse> {
   return Http.get('/api/login/doLogout', data, config)
 }
 
@@ -29,7 +26,7 @@ export function apiLoginDoLogout(
 export function apiLoginSendPhoneValidateCode(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiLoginSendPhoneValidateCode> {
+): AxiosPromise<ApiResponsestring> {
   return Http.get('/api/login/sendPhoneValidateCode', data, config)
 }
 
@@ -37,7 +34,7 @@ export function apiLoginSendPhoneValidateCode(
 export function loginDoLogin(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfLoginDoLogin> {
+): AxiosPromise<ApiResponseDengLuXiangYingShiTi> {
   return Http.post('/login/doLogin', data, config)
 }
 
@@ -45,7 +42,7 @@ export function loginDoLogin(
 export function loginDoLogout(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfLoginDoLogout> {
+): AxiosPromise<ApiResponse> {
   return Http.get('/login/doLogout', data, config)
 }
 
@@ -53,6 +50,6 @@ export function loginDoLogout(
 export function loginSendPhoneValidateCode(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfLoginSendPhoneValidateCode> {
+): AxiosPromise<ApiResponsestring> {
   return Http.get('/login/sendPhoneValidateCode', data, config)
 }

@@ -1,11 +1,11 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
-import { ResOfLeaveGroup } from './_interfaces'
+import { ApiResponse } from './_interfaces'
 
 /** 退出群聊 */
 export function leaveGroup(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfLeaveGroup> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/leaveGroup', data, config)
 }

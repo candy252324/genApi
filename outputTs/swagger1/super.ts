@@ -1,15 +1,15 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiSuperList,
-  ResOfApiSuperTransfer,
-  ResOfApiSuperVerifyVerifyType,
+  ApiResponseListSuperManResp,
+  ApiResponse,
+  ApiResponsestring,
 } from './_interfaces'
 
 /** 列表 */
 export function apiSuperList(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiSuperList> {
+): AxiosPromise<ApiResponseListSuperManResp> {
   return Http.get('/api/super/list', config)
 }
 
@@ -17,7 +17,7 @@ export function apiSuperList(
 export function apiSuperTransfer(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiSuperTransfer> {
+): AxiosPromise<ApiResponse> {
   return Http.get('/api/super/transfer', data, config)
 }
 
@@ -25,6 +25,6 @@ export function apiSuperTransfer(
 export function apiSuperVerifyVerifyType(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiSuperVerifyVerifyType> {
+): AxiosPromise<ApiResponsestring> {
   return Http.post('/api/super/verify/${verifyType}', data, config)
 }

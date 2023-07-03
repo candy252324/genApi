@@ -1,17 +1,17 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfBasePlatformGetEmployeeAllByUserAndTenant,
-  ResOfBasePlatformListDeptByParent,
-  ResOfBasePlatformListTenantInfo,
-  ResOfBasePlatformQueryEnterpriseAll,
+  ApiResponseEmployeeAllInfoResp,
+  ApiResponseListDeptNoteResp,
+  ApiResponseListZuHuXinXi,
+  ApiResponseComPageEnterpriseMainInfoResp,
 } from './_interfaces'
 
 /** 查询员工信息 */
 export function basePlatformGetEmployeeAllByUserAndTenant(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfBasePlatformGetEmployeeAllByUserAndTenant> {
+): AxiosPromise<ApiResponseEmployeeAllInfoResp> {
   return Http.post('/basePlatform/getEmployeeAllByUserAndTenant', data, config)
 }
 
@@ -19,7 +19,7 @@ export function basePlatformGetEmployeeAllByUserAndTenant(
 export function basePlatformListDeptByParent(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfBasePlatformListDeptByParent> {
+): AxiosPromise<ApiResponseListDeptNoteResp> {
   return Http.post('/basePlatform/listDeptByParent', data, config)
 }
 
@@ -27,7 +27,7 @@ export function basePlatformListDeptByParent(
 export function basePlatformListTenantInfo(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfBasePlatformListTenantInfo> {
+): AxiosPromise<ApiResponseListZuHuXinXi> {
   return Http.post('/basePlatform/listTenantInfo', data, config)
 }
 
@@ -35,6 +35,6 @@ export function basePlatformListTenantInfo(
 export function basePlatformQueryEnterpriseAll(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfBasePlatformQueryEnterpriseAll> {
+): AxiosPromise<ApiResponseComPageEnterpriseMainInfoResp> {
   return Http.post('/basePlatform/queryEnterpriseAll', data, config)
 }

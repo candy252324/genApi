@@ -1,15 +1,15 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiEmployeeAddRecordExport,
-  ResOfApiEmployeeAddRecordPageRecord,
+  FileSystemResource,
+  ApiResponseComPageEmployeeAddRecordResp,
 } from './_interfaces'
 
 /** 导出未激活成员列表 */
 export function apiEmployeeAddRecordExport(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmployeeAddRecordExport> {
+): AxiosPromise<FileSystemResource> {
   return Http.post('/api/employeeAddRecord/export', data, config)
 }
 
@@ -17,6 +17,6 @@ export function apiEmployeeAddRecordExport(
 export function apiEmployeeAddRecordPageRecord(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmployeeAddRecordPageRecord> {
+): AxiosPromise<ApiResponseComPageEmployeeAddRecordResp> {
   return Http.get('/api/employeeAddRecord/pageRecord', data, config)
 }

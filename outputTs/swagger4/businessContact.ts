@@ -1,16 +1,15 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiBusinessContactAdd,
-  ResOfApiBusinessContactDeleteById,
-  ResOfApiBusinessContactList,
+  ApiResponseboolean,
+  ApiResponseComPageLianXiRenLieBiao,
 } from './_interfaces'
 
 /** 添加联系人 */
 export function apiBusinessContactAdd(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessContactAdd> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/businessContact/add', data, config)
 }
 
@@ -18,7 +17,7 @@ export function apiBusinessContactAdd(
 export function apiBusinessContactDeleteById(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessContactDeleteById> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/businessContact/deleteById', data, config)
 }
 
@@ -26,6 +25,6 @@ export function apiBusinessContactDeleteById(
 export function apiBusinessContactList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiBusinessContactList> {
+): AxiosPromise<ApiResponseComPageLianXiRenLieBiao> {
   return Http.post('/api/businessContact/list', data, config)
 }

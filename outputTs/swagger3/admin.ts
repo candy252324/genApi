@@ -1,15 +1,12 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
-import {
-  ResOfApiAdminGetAvatar,
-  ResOfApiAdminPutAppVersionFile,
-} from './_interfaces'
+import { ApiResponse, ApiResponsePutFileResp } from './_interfaces'
 
 /** isEmpty=false会重新生成群头像 */
 export function apiAdminGetAvatar(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiAdminGetAvatar> {
+): AxiosPromise<ApiResponse> {
   return Http.get('/api/admin/getAvatar', data, config)
 }
 
@@ -17,6 +14,6 @@ export function apiAdminGetAvatar(
 export function apiAdminPutAppVersionFile(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiAdminPutAppVersionFile> {
+): AxiosPromise<ApiResponsePutFileResp> {
   return Http.post('/api/admin/putAppVersionFile', data, config)
 }

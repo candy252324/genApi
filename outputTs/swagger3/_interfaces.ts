@@ -18,7 +18,7 @@ export interface AddressBookTenantInfoResp {
   /** 租户名称 */
   tenantName: string
 }
-export interface ResOfApiAdminGetAvatar {
+export interface ApiResponse {
   code: number
   data: object
   msg: string
@@ -26,303 +26,7 @@ export interface ResOfApiAdminGetAvatar {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiFriendshipDelete {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiFriendshipModifyRemark {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiFriendshipSetNoticeAndTop {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiGroupDissolve {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiGroupGroupSetting {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiGroupModifyGroupName {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiGroupTransfer {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiGroupMemberDelete {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiGroupMemberDeleteAdmin {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiGroupMemberLeaveGroup {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiGroupMemberModifyRemark {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiGroupMemberSave {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiGroupMemberSaveAdmin {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiGroupMemberSetNoticeAndTop {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiGroupf2fSaveRandom {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiLoginDoLogout {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRequestAddFriend {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRequestApprove {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRequestRead {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRequestMsgSave {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiUserCancel {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiUserGetCancelSmsCode {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiUserSetDefaultEnterprise {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiUserSetIsApprove {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiUserSetIsGroupApprove {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiUserSetIsNotice {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiUserSetRequestChannel {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfDelete {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfDeleteAdmin {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfFriendshipModifyRemark {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfGroupGroupSetting {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfGroupModifyGroupName {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfLeaveGroup {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfLoginDoLogout {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfModifyRemark {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfSave {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfSaveAdmin {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRequestAddGroup {
+export interface ApiResponseAddGroupResp {
   code: number
   data: AddGroupResp
   msg: string
@@ -330,7 +34,7 @@ export interface ResOfApiRequestAddGroup {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiCommonSearchType {
+export interface ApiResponseComPageCommonSearchResp {
   code: number
   data: ComPageCommonSearchResp
   msg: string
@@ -338,31 +42,7 @@ export interface ResOfApiCommonSearchType {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiForwardSearch {
-  code: number
-  data: ComPageCommonSearchResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfCommonSearchType {
-  code: number
-  data: ComPageCommonSearchResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfForwardSearch {
-  code: number
-  data: ComPageCommonSearchResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiChatOftenContact {
+export interface ApiResponseComPageContactResp {
   code: number
   data: ComPageContactResp
   msg: string
@@ -370,31 +50,7 @@ export interface ResOfApiChatOftenContact {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiChatRecentContact {
-  code: number
-  data: ComPageContactResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfChatOftenContact {
-  code: number
-  data: ComPageContactResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfChatRecentContact {
-  code: number
-  data: ComPageContactResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfBasePlatformQueryEnterpriseAll {
+export interface ApiResponseComPageEnterpriseMainInfoResp {
   code: number
   data: ComPageEnterpriseMainInfoResp
   msg: string
@@ -402,7 +58,7 @@ export interface ResOfBasePlatformQueryEnterpriseAll {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiFriendshipPageList {
+export interface ApiResponseComPageFriendshipResp {
   code: number
   data: ComPageFriendshipResp
   msg: string
@@ -410,15 +66,7 @@ export interface ResOfApiFriendshipPageList {
   timestamp: number
   traceId: string
 }
-export interface ResOfFriendshipPageList {
-  code: number
-  data: ComPageFriendshipResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiCommonSearchBeforeAddFriend {
+export interface ApiResponseComPageSearchBeforeAddFriendResp {
   code: number
   data: ComPageSearchBeforeAddFriendResp
   msg: string
@@ -426,15 +74,7 @@ export interface ResOfApiCommonSearchBeforeAddFriend {
   timestamp: number
   traceId: string
 }
-export interface ResOfCommonSearchBeforeAddFriend {
-  code: number
-  data: ComPageSearchBeforeAddFriendResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiChatPageList {
+export interface ApiResponseComPageHuiHuaLieBiaoXiangYing {
   code: number
   data: ComPageHuiHuaLieBiaoXiangYing
   msg: string
@@ -442,23 +82,7 @@ export interface ResOfApiChatPageList {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiChatUnreadList {
-  code: number
-  data: ComPageHuiHuaLieBiaoXiangYing
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfChatPageList {
-  code: number
-  data: ComPageHuiHuaLieBiaoXiangYing
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiMessageHistoryPageList {
+export interface ApiResponseComPageXiaoXiDuiXiang {
   code: number
   data: ComPageXiaoXiDuiXiang
   msg: string
@@ -466,15 +90,7 @@ export interface ResOfApiMessageHistoryPageList {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiMessageSearchPageList {
-  code: number
-  data: ComPageXiaoXiDuiXiang
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiGroupPageList {
+export interface ApiResponseComPageQunDuiXiangGroupResp {
   code: number
   data: ComPageQunDuiXiangGroupResp
   msg: string
@@ -482,15 +98,7 @@ export interface ResOfApiGroupPageList {
   timestamp: number
   traceId: string
 }
-export interface ResOfGroupPageList {
-  code: number
-  data: ComPageQunDuiXiangGroupResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiGroupMemberPageList {
+export interface ApiResponseComPageQunChengYuanXinXiDuiXiangGroupMemberResp {
   code: number
   data: ComPageQunChengYuanXinXiDuiXiangGroupMemberResp
   msg: string
@@ -498,15 +106,7 @@ export interface ResOfApiGroupMemberPageList {
   timestamp: number
   traceId: string
 }
-export interface ResOfPageList {
-  code: number
-  data: ComPageQunChengYuanXinXiDuiXiangGroupMemberResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiDeptUserPage {
+export interface ApiResponseComPageBuMenYongHuLieBiaoDeptUserResp {
   code: number
   data: ComPageBuMenYongHuLieBiaoDeptUserResp
   msg: string
@@ -514,15 +114,7 @@ export interface ResOfApiDeptUserPage {
   timestamp: number
   traceId: string
 }
-export interface ResOfDeptUserPage {
-  code: number
-  data: ComPageBuMenYongHuLieBiaoDeptUserResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRequestPageList {
+export interface ApiResponseComPageYanZhengXiaoXiFenYeRequestPageListResp {
   code: number
   data: ComPageYanZhengXiaoXiFenYeRequestPageListResp
   msg: string
@@ -530,7 +122,7 @@ export interface ResOfApiRequestPageList {
   timestamp: number
   traceId: string
 }
-export interface ResOfBasePlatformGetEmployeeAllByUserAndTenant {
+export interface ApiResponseEmployeeAllInfoResp {
   code: number
   data: EmployeeAllInfoResp
   msg: string
@@ -538,7 +130,7 @@ export interface ResOfBasePlatformGetEmployeeAllByUserAndTenant {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiFriendshipDetail {
+export interface ApiResponseFriendshipDetailResp {
   code: number
   data: FriendshipDetailResp
   msg: string
@@ -546,15 +138,7 @@ export interface ResOfApiFriendshipDetail {
   timestamp: number
   traceId: string
 }
-export interface ResOfFriendshipDetail {
-  code: number
-  data: FriendshipDetailResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfAddressBookListTenantInfo {
+export interface ApiResponseListAddressBookTenantInfoResp {
   code: number
   data: AddressBookTenantInfoResp[]
   msg: string
@@ -562,15 +146,7 @@ export interface ResOfAddressBookListTenantInfo {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiAddressBookListTenantInfo {
-  code: number
-  data: AddressBookTenantInfoResp[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfBasePlatformListDeptByParent {
+export interface ApiResponseListDeptNoteResp {
   code: number
   data: DeptNoteResp[]
   msg: string
@@ -578,7 +154,7 @@ export interface ResOfBasePlatformListDeptByParent {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiForwardList {
+export interface ApiResponseListForwardListResp {
   code: number
   data: ForwardListResp[]
   msg: string
@@ -586,15 +162,7 @@ export interface ResOfApiForwardList {
   timestamp: number
   traceId: string
 }
-export interface ResOfForwardList {
-  code: number
-  data: ForwardListResp[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiGroupf2fList {
+export interface ApiResponseListGroupF2fUserListResp {
   code: number
   data: GroupF2fUserListResp[]
   msg: string
@@ -602,7 +170,7 @@ export interface ResOfApiGroupf2fList {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiPhoneList {
+export interface ApiResponseListPhoneFriendshipResp {
   code: number
   data: PhoneFriendshipResp[]
   msg: string
@@ -610,7 +178,7 @@ export interface ResOfApiPhoneList {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiCommonSwitchUserList {
+export interface ApiResponseListSwitchUserListResp {
   code: number
   data: SwitchUserListResp[]
   msg: string
@@ -618,15 +186,7 @@ export interface ResOfApiCommonSwitchUserList {
   timestamp: number
   traceId: string
 }
-export interface ResOfCommonSwitchUserList {
-  code: number
-  data: SwitchUserListResp[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRequestGetUnreadAttr {
+export interface ApiResponseListUnreadResp {
   code: number
   data: UnreadResp[]
   msg: string
@@ -634,7 +194,7 @@ export interface ResOfApiRequestGetUnreadAttr {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiDeptUserListAllTenant {
+export interface ApiResponseListUserListAllTenantResp {
   code: number
   data: UserListAllTenantResp[]
   msg: string
@@ -642,15 +202,7 @@ export interface ResOfApiDeptUserListAllTenant {
   timestamp: number
   traceId: string
 }
-export interface ResOfDeptUserListAllTenant {
-  code: number
-  data: UserListAllTenantResp[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiAppVersionList {
+export interface ApiResponseListBanBen {
   code: number
   data: BanBen[]
   msg: string
@@ -658,7 +210,7 @@ export interface ResOfApiAppVersionList {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiUserListTenantInfo {
+export interface ApiResponseListZuHuXinXi {
   code: number
   data: ZuHuXinXi[]
   msg: string
@@ -666,15 +218,7 @@ export interface ResOfApiUserListTenantInfo {
   timestamp: number
   traceId: string
 }
-export interface ResOfBasePlatformListTenantInfo {
-  code: number
-  data: ZuHuXinXi[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiGroupMemberListAdmin {
+export interface ApiResponseListQunChengYuanXinXiDuiXiangGroupMemberResp {
   code: number
   data: QunChengYuanXinXiDuiXiangGroupMemberResp[]
   msg: string
@@ -682,15 +226,7 @@ export interface ResOfApiGroupMemberListAdmin {
   timestamp: number
   traceId: string
 }
-export interface ResOfListAdmin {
-  code: number
-  data: QunChengYuanXinXiDuiXiangGroupMemberResp[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiDeptList {
+export interface ApiResponseListBuMenXinXiDeptResp {
   code: number
   data: BuMenXinXiDeptResp[]
   msg: string
@@ -698,31 +234,7 @@ export interface ResOfApiDeptList {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiDeptUserDeptList {
-  code: number
-  data: BuMenXinXiDeptResp[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfDeptList {
-  code: number
-  data: BuMenXinXiDeptResp[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfDeptUserDeptList {
-  code: number
-  data: BuMenXinXiDeptResp[]
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiCommonSearch {
+export interface ApiResponseMapstringSearchMapResp {
   code: number
   data: object
   msg: string
@@ -730,15 +242,7 @@ export interface ResOfApiCommonSearch {
   timestamp: number
   traceId: string
 }
-export interface ResOfCommonSearch {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiGroupMemberGroupStatus {
+export interface ApiResponseMemberGroupStatusResp {
   code: number
   data: MemberGroupStatusResp
   msg: string
@@ -746,15 +250,7 @@ export interface ResOfApiGroupMemberGroupStatus {
   timestamp: number
   traceId: string
 }
-export interface ResOfGroupStatus {
-  code: number
-  data: MemberGroupStatusResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiAdminPutAppVersionFile {
+export interface ApiResponsePutFileResp {
   code: number
   data: PutFileResp
   msg: string
@@ -762,15 +258,7 @@ export interface ResOfApiAdminPutAppVersionFile {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiFilePutOssFile {
-  code: number
-  data: PutFileResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiUserQueryAppVersion {
+export interface ApiResponseQueryLastMessageResp {
   code: number
   data: QueryLastMessageResp
   msg: string
@@ -778,7 +266,7 @@ export interface ResOfApiUserQueryAppVersion {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiCommonBind {
+export interface ApiResponseUserBindResp {
   code: number
   data: UserBindResp
   msg: string
@@ -786,31 +274,7 @@ export interface ResOfApiCommonBind {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiCommonSwitchChannel {
-  code: number
-  data: UserBindResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfCommonBind {
-  code: number
-  data: UserBindResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfCommonSwitchChannel {
-  code: number
-  data: UserBindResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiFriendshipGetUserDetail {
+export interface ApiResponseUserDetailResp {
   code: number
   data: UserDetailResp
   msg: string
@@ -818,15 +282,7 @@ export interface ResOfApiFriendshipGetUserDetail {
   timestamp: number
   traceId: string
 }
-export interface ResOfFriendshipGetUserDetail {
-  code: number
-  data: UserDetailResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiUserPersonInfo {
+export interface ApiResponseUserRespDuiXiang {
   code: number
   data: UserRespDuiXiang
   msg: string
@@ -834,7 +290,7 @@ export interface ResOfApiUserPersonInfo {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiFriendshipGetIsFriend {
+export interface ApiResponseboolean {
   code: number
   data: boolean
   msg: string
@@ -842,55 +298,7 @@ export interface ResOfApiFriendshipGetIsFriend {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiGroupMemberExistInGroup {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiUserHasSelectTenant {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiUserModifyAvatar {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiUserModifyEmail {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfExistInGroup {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfFriendshipGetIsFriend {
-  code: number
-  data: boolean
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiGroupf2fEnterGroup {
+export interface ApiResponselong {
   code: number
   data: number
   msg: string
@@ -898,15 +306,7 @@ export interface ResOfApiGroupf2fEnterGroup {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiRequestGetUnreadCount {
-  code: number
-  data: number
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiChatClearChat {
+export interface ApiResponseobject {
   code: number
   data: object
   msg: string
@@ -914,71 +314,7 @@ export interface ResOfApiChatClearChat {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiChatCreate {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiMessageAck {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiMessageClear {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiMessageDelete {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiMessageTestSendMQ {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiUserAttentionRemove {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiUserAttentionSave {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfChatClearChat {
-  code: number
-  data: object
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiLoginSendPhoneValidateCode {
+export interface ApiResponsestring {
   code: number
   data: string
   msg: string
@@ -986,31 +322,7 @@ export interface ResOfApiLoginSendPhoneValidateCode {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiQrcodeGetImg {
-  code: number
-  data: string
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfFriendshipDelete {
-  code: number
-  data: string
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfLoginSendPhoneValidateCode {
-  code: number
-  data: string
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiForwardCheckAndCreate {
+export interface ApiResponseHuiHua {
   code: number
   data: HuiHua
   msg: string
@@ -1018,15 +330,7 @@ export interface ResOfApiForwardCheckAndCreate {
   timestamp: number
   traceId: string
 }
-export interface ResOfChatCreate {
-  code: number
-  data: HuiHua
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiMessageDetail {
+export interface ApiResponseXiaoXiDuiXiang {
   code: number
   data: XiaoXiDuiXiang
   msg: string
@@ -1034,7 +338,7 @@ export interface ResOfApiMessageDetail {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiLoginDoLogin {
+export interface ApiResponseDengLuXiangYingShiTi {
   code: number
   data: DengLuXiangYingShiTi
   msg: string
@@ -1042,15 +346,7 @@ export interface ResOfApiLoginDoLogin {
   timestamp: number
   traceId: string
 }
-export interface ResOfLoginDoLogin {
-  code: number
-  data: DengLuXiangYingShiTi
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiGroupDetail {
+export interface ApiResponseQunDuiXiangGroupDetailResp {
   code: number
   data: QunDuiXiangGroupDetailResp
   msg: string
@@ -1058,15 +354,7 @@ export interface ResOfApiGroupDetail {
   timestamp: number
   traceId: string
 }
-export interface ResOfGroupDetail {
-  code: number
-  data: QunDuiXiangGroupDetailResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiGroupSave {
+export interface ApiResponseQunDuiXiangGroupResp {
   code: number
   data: QunDuiXiangGroupResp
   msg: string
@@ -1074,15 +362,7 @@ export interface ResOfApiGroupSave {
   timestamp: number
   traceId: string
 }
-export interface ResOfGroupSave {
-  code: number
-  data: QunDuiXiangGroupResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiGroupMemberDetail {
+export interface ApiResponseQunChengYuanXinXiDuiXiangGroupMemberResp {
   code: number
   data: QunChengYuanXinXiDuiXiangGroupMemberResp
   msg: string
@@ -1090,15 +370,7 @@ export interface ResOfApiGroupMemberDetail {
   timestamp: number
   traceId: string
 }
-export interface ResOfDetail {
-  code: number
-  data: QunChengYuanXinXiDuiXiangGroupMemberResp
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRequestInvite {
+export interface ApiResponseYaoQingRuQunXiangYing {
   code: number
   data: YaoQingRuQunXiangYing
   msg: string
@@ -1106,15 +378,7 @@ export interface ResOfApiRequestInvite {
   timestamp: number
   traceId: string
 }
-export interface ResOfApiRequestTryInvite {
-  code: number
-  data: YaoQingRuQunXiangYing
-  msg: string
-  success: boolean
-  timestamp: number
-  traceId: string
-}
-export interface ResOfApiRequestDetail {
+export interface ApiResponseYanZhengXiaoXiXiangQingRequestDetailResp {
   code: number
   data: YanZhengXiaoXiXiangQingRequestDetailResp
   msg: string

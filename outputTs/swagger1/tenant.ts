@@ -1,24 +1,22 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiTenantAcquirePresentTenantInfo,
-  ResOfApiTenantAcquireTenantList,
-  ResOfApiTenantChannelUnbind,
-  ResOfApiTenantSwitchTenant,
-  ResOfApiTenantUnboundList,
+  ApiResponseZuHuXinXi,
+  ApiResponseListZuHuXinXi,
+  ApiResponseboolean,
 } from './_interfaces'
 
 /** 获取当前的租户信息 */
 export function apiTenantAcquirePresentTenantInfo(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiTenantAcquirePresentTenantInfo> {
+): AxiosPromise<ApiResponseZuHuXinXi> {
   return Http.get('/api/tenant/acquirePresentTenantInfo', config)
 }
 
 /** 查询当前用户的租户列表 */
 export function apiTenantAcquireTenantList(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiTenantAcquireTenantList> {
+): AxiosPromise<ApiResponseListZuHuXinXi> {
   return Http.get('/api/tenant/acquireTenantList', config)
 }
 
@@ -26,7 +24,7 @@ export function apiTenantAcquireTenantList(
 export function apiTenantChannelUnbind(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiTenantChannelUnbind> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/tenant/channel/unbind', data, config)
 }
 
@@ -34,13 +32,13 @@ export function apiTenantChannelUnbind(
 export function apiTenantSwitchTenant(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiTenantSwitchTenant> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.get('/api/tenant/switchTenant', data, config)
 }
 
 /** 查询当前用户未绑定的企业租户列表 */
 export function apiTenantUnboundList(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiTenantUnboundList> {
+): AxiosPromise<ApiResponseListZuHuXinXi> {
   return Http.get('/api/tenant/unbound/list', config)
 }

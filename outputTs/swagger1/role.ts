@@ -1,32 +1,22 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiRoleAddRole,
-  ResOfApiRoleAuthEmployeeCancelAll,
-  ResOfApiRoleAuthEmployeeSelectAll,
-  ResOfApiRoleChangeStatus,
-  ResOfApiRoleCurCanAllotEmployeeRoleList,
-  ResOfApiRoleCurCanAllotRoleList,
-  ResOfApiRoleCurEmployeeRoleList,
-  ResOfApiRoleEditRoleBase,
-  ResOfApiRoleEditRoleMenu,
-  ResOfApiRoleGetCanAllotRoleListEmployeeId,
-  ResOfApiRolePageRoleEmployeeRoleId,
-  ResOfApiRoleQueryEmployeeByDeptId,
-  ResOfApiRoleQueryEmployeeByPhoneOrName,
-  ResOfApiRoleRemoveRoleRoleIds,
-  ResOfApiRoleRoleInfoRoleId,
-  ResOfApiRoleRoleList,
-  ResOfApiRoleRoleMenuTreeRoleId,
-  ResOfApiRoleRoleMenuTreeCheckedRoleId,
-  ResOfApiRoleRoleTree,
+  ApiResponselong,
+  ApiResponseVoid,
+  ApiResponse,
+  ApiResponseListRoleResq,
+  ApiResponseComPageEmployeeComplexResp,
+  ApiResponseListSelectorEmployeeResp,
+  ApiResponseRoleInfoResq,
+  ApiResponseListTreelong,
+  ApiResponseMenuCheckedResp,
 } from './_interfaces'
 
 /** 新增角色 */
 export function apiRoleAddRole(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRoleAddRole> {
+): AxiosPromise<ApiResponselong> {
   return Http.post('/api/role/addRole', data, config)
 }
 
@@ -34,7 +24,7 @@ export function apiRoleAddRole(
 export function apiRoleAuthEmployeeCancelAll(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRoleAuthEmployeeCancelAll> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.get('/api/role/authEmployee/cancelAll', data, config)
 }
 
@@ -42,7 +32,7 @@ export function apiRoleAuthEmployeeCancelAll(
 export function apiRoleAuthEmployeeSelectAll(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRoleAuthEmployeeSelectAll> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.get('/api/role/authEmployee/selectAll', data, config)
 }
 
@@ -50,28 +40,28 @@ export function apiRoleAuthEmployeeSelectAll(
 export function apiRoleChangeStatus(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRoleChangeStatus> {
+): AxiosPromise<ApiResponse> {
   return Http.get('/api/role/changeStatus', data, config)
 }
 
 /** 获取当前登录员工可分配给用户的角色 */
 export function apiRoleCurCanAllotEmployeeRoleList(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRoleCurCanAllotEmployeeRoleList> {
+): AxiosPromise<ApiResponseListRoleResq> {
   return Http.get('/api/role/curCanAllotEmployeeRoleList', config)
 }
 
 /** 获取当前登录员工可分配权限的角色[加载上级角色] */
 export function apiRoleCurCanAllotRoleList(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRoleCurCanAllotRoleList> {
+): AxiosPromise<ApiResponseListRoleResq> {
   return Http.get('/api/role/curCanAllotRoleList', config)
 }
 
 /** 获取当前登录员工含有角色 */
 export function apiRoleCurEmployeeRoleList(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRoleCurEmployeeRoleList> {
+): AxiosPromise<ApiResponseListRoleResq> {
   return Http.get('/api/role/curEmployeeRoleList', config)
 }
 
@@ -79,7 +69,7 @@ export function apiRoleCurEmployeeRoleList(
 export function apiRoleEditRoleBase(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRoleEditRoleBase> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.post('/api/role/editRoleBase', data, config)
 }
 
@@ -87,7 +77,7 @@ export function apiRoleEditRoleBase(
 export function apiRoleEditRoleMenu(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRoleEditRoleMenu> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.post('/api/role/editRoleMenu', data, config)
 }
 
@@ -95,7 +85,7 @@ export function apiRoleEditRoleMenu(
 export function apiRoleGetCanAllotRoleListEmployeeId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRoleGetCanAllotRoleListEmployeeId> {
+): AxiosPromise<ApiResponseListRoleResq> {
   return Http.get('/api/role/getCanAllotRoleList/${employeeId}', data, config)
 }
 
@@ -103,7 +93,7 @@ export function apiRoleGetCanAllotRoleListEmployeeId(
 export function apiRolePageRoleEmployeeRoleId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRolePageRoleEmployeeRoleId> {
+): AxiosPromise<ApiResponseComPageEmployeeComplexResp> {
   return Http.get('/api/role/pageRoleEmployee/${roleId}', data, config)
 }
 
@@ -111,7 +101,7 @@ export function apiRolePageRoleEmployeeRoleId(
 export function apiRoleQueryEmployeeByDeptId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRoleQueryEmployeeByDeptId> {
+): AxiosPromise<ApiResponseListSelectorEmployeeResp> {
   return Http.get('/api/role/queryEmployeeByDeptId', data, config)
 }
 
@@ -119,7 +109,7 @@ export function apiRoleQueryEmployeeByDeptId(
 export function apiRoleQueryEmployeeByPhoneOrName(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRoleQueryEmployeeByPhoneOrName> {
+): AxiosPromise<ApiResponseListSelectorEmployeeResp> {
   return Http.get('/api/role/queryEmployeeByPhoneOrName', data, config)
 }
 
@@ -127,7 +117,7 @@ export function apiRoleQueryEmployeeByPhoneOrName(
 export function apiRoleRemoveRoleRoleIds(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRoleRemoveRoleRoleIds> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.get('/api/role/removeRole/${roleIds}', data, config)
 }
 
@@ -135,7 +125,7 @@ export function apiRoleRemoveRoleRoleIds(
 export function apiRoleRoleInfoRoleId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRoleRoleInfoRoleId> {
+): AxiosPromise<ApiResponseRoleInfoResq> {
   return Http.get('/api/role/roleInfo/${roleId}', data, config)
 }
 
@@ -143,7 +133,7 @@ export function apiRoleRoleInfoRoleId(
 export function apiRoleRoleList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRoleRoleList> {
+): AxiosPromise<ApiResponseListRoleResq> {
   return Http.get('/api/role/roleList', data, config)
 }
 
@@ -151,7 +141,7 @@ export function apiRoleRoleList(
 export function apiRoleRoleMenuTreeRoleId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRoleRoleMenuTreeRoleId> {
+): AxiosPromise<ApiResponseListTreelong> {
   return Http.get('/api/role/roleMenuTree/${roleId}', data, config)
 }
 
@@ -159,7 +149,7 @@ export function apiRoleRoleMenuTreeRoleId(
 export function apiRoleRoleMenuTreeCheckedRoleId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRoleRoleMenuTreeCheckedRoleId> {
+): AxiosPromise<ApiResponseMenuCheckedResp> {
   return Http.get('/api/role/roleMenuTreeChecked/${roleId}', data, config)
 }
 
@@ -167,6 +157,6 @@ export function apiRoleRoleMenuTreeCheckedRoleId(
 export function apiRoleRoleTree(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRoleRoleTree> {
+): AxiosPromise<ApiResponseListTreelong> {
   return Http.get('/api/role/roleTree', data, config)
 }

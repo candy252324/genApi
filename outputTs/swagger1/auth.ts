@@ -1,16 +1,16 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiAuthEnterpriseAuthOrgInfos,
-  ResOfApiAuthEnterpriseAuthUsers,
-  ResOfApiAuthEnterpriseAuthUsersAuthstatus,
+  ApiResponseListAuthEnterpriseOrgInfoResp,
+  ApiResponseVoid,
+  ApiResponseListlong,
 } from './_interfaces'
 
 /** 授权中心 查询当前租户的企业组织授权简略信息列表 */
 export function apiAuthEnterpriseAuthOrgInfos(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiAuthEnterpriseAuthOrgInfos> {
+): AxiosPromise<ApiResponseListAuthEnterpriseOrgInfoResp> {
   return Http.post('/api/auth/enterprise/auth/org/infos', data, config)
 }
 
@@ -18,7 +18,7 @@ export function apiAuthEnterpriseAuthOrgInfos(
 export function apiAuthEnterpriseAuthUsers(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiAuthEnterpriseAuthUsers> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.post('/api/auth/enterprise/auth/users', data, config)
 }
 
@@ -26,6 +26,6 @@ export function apiAuthEnterpriseAuthUsers(
 export function apiAuthEnterpriseAuthUsersAuthstatus(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiAuthEnterpriseAuthUsersAuthstatus> {
+): AxiosPromise<ApiResponseListlong> {
   return Http.post('/api/auth/enterprise/auth/users/auth-status', data, config)
 }

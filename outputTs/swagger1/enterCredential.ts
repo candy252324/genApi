@@ -1,19 +1,17 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiEnterCredentialAdd,
-  ResOfApiEnterCredentialDel,
-  ResOfApiEnterCredentialGetCodeList,
-  ResOfApiEnterCredentialPage,
-  ResOfApiEnterCredentialUpdate,
-  ResOfApiEnterCredentialV1OcrBusinessLicense,
+  ApiResponseboolean,
+  ApiResponseJSONArray,
+  ApiResponseComPageEnterpriseCredentialResp,
+  ApiResponseOcrBusinessLicenseBO,
 } from './_interfaces'
 
 /** 添加企业资质 */
 export function apiEnterCredentialAdd(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterCredentialAdd> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/enterCredential/add', data, config)
 }
 
@@ -21,14 +19,14 @@ export function apiEnterCredentialAdd(
 export function apiEnterCredentialDel(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterCredentialDel> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.get('/api/enterCredential/del', data, config)
 }
 
 /** 资质级联 */
 export function apiEnterCredentialGetCodeList(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterCredentialGetCodeList> {
+): AxiosPromise<ApiResponseJSONArray> {
   return Http.get('/api/enterCredential/getCodeList', config)
 }
 
@@ -36,7 +34,7 @@ export function apiEnterCredentialGetCodeList(
 export function apiEnterCredentialPage(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterCredentialPage> {
+): AxiosPromise<ApiResponseComPageEnterpriseCredentialResp> {
   return Http.post('/api/enterCredential/page', data, config)
 }
 
@@ -44,7 +42,7 @@ export function apiEnterCredentialPage(
 export function apiEnterCredentialUpdate(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterCredentialUpdate> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/enterCredential/update', data, config)
 }
 
@@ -52,6 +50,6 @@ export function apiEnterCredentialUpdate(
 export function apiEnterCredentialV1OcrBusinessLicense(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterCredentialV1OcrBusinessLicense> {
+): AxiosPromise<ApiResponseOcrBusinessLicenseBO> {
   return Http.post('/api/enterCredential/v1/ocr/businessLicense', data, config)
 }

@@ -1,28 +1,21 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiEmployeeAdd,
-  ResOfApiEmployeeChangeStatus,
-  ResOfApiEmployeeDelConfirm,
-  ResOfApiEmployeeDelEmployeeIds,
-  ResOfApiEmployeeDeptTreeCount,
-  ResOfApiEmployeeEdit,
-  ResOfApiEmployeeEmployeeDept,
-  ResOfApiEmployeeGetEmployeeByEmployeeId,
-  ResOfApiEmployeeMyDeptTreeCount,
-  ResOfApiEmployeePageList,
-  ResOfApiEmployeePageSelectList,
-  ResOfApiEmployeeShiftEmployeeId,
-  ResOfApiEmployeeStartDelEmployeeId,
-  ResOfApiEmployeeStopStartEmployeeId,
-  ResOfApiEmployeeStopEmployeeConfirm,
+  ApiResponse,
+  ApiResponseListTreelong,
+  ApiResponseListExtDeptResp,
+  ApiResponseEmployeeAllInfoResp,
+  ApiResponseComPageEmployeeComplexResp,
+  ApiResponseShiftEmployeeResp,
+  ApiResponseShuJuYiZhiXingCaoZuoFanHuiJieGuo,
+  ApiResponseVoid,
 } from './_interfaces'
 
 /** 新增员工 */
 export function apiEmployeeAdd(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmployeeAdd> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/employee/add', data, config)
 }
 
@@ -30,7 +23,7 @@ export function apiEmployeeAdd(
 export function apiEmployeeChangeStatus(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmployeeChangeStatus> {
+): AxiosPromise<ApiResponse> {
   return Http.get('/api/employee/changeStatus', data, config)
 }
 
@@ -38,7 +31,7 @@ export function apiEmployeeChangeStatus(
 export function apiEmployeeDelConfirm(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmployeeDelConfirm> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/employee/del/confirm', data, config)
 }
 
@@ -46,7 +39,7 @@ export function apiEmployeeDelConfirm(
 export function apiEmployeeDelEmployeeIds(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmployeeDelEmployeeIds> {
+): AxiosPromise<ApiResponse> {
   return Http.get('/api/employee/del/${employeeIds}', data, config)
 }
 
@@ -54,7 +47,7 @@ export function apiEmployeeDelEmployeeIds(
 export function apiEmployeeDeptTreeCount(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmployeeDeptTreeCount> {
+): AxiosPromise<ApiResponseListTreelong> {
   return Http.get('/api/employee/deptTreeCount', data, config)
 }
 
@@ -62,14 +55,14 @@ export function apiEmployeeDeptTreeCount(
 export function apiEmployeeEdit(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmployeeEdit> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/employee/edit', data, config)
 }
 
 /** 员工 所在部门 */
 export function apiEmployeeEmployeeDept(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmployeeEmployeeDept> {
+): AxiosPromise<ApiResponseListExtDeptResp> {
   return Http.get('/api/employee/employeeDept', config)
 }
 
@@ -77,14 +70,14 @@ export function apiEmployeeEmployeeDept(
 export function apiEmployeeGetEmployeeByEmployeeId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmployeeGetEmployeeByEmployeeId> {
+): AxiosPromise<ApiResponseEmployeeAllInfoResp> {
   return Http.get('/api/employee/getEmployeeByEmployeeId', data, config)
 }
 
 /** 获取部门树_我的部门 */
 export function apiEmployeeMyDeptTreeCount(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmployeeMyDeptTreeCount> {
+): AxiosPromise<ApiResponseListTreelong> {
   return Http.get('/api/employee/myDeptTreeCount', config)
 }
 
@@ -92,7 +85,7 @@ export function apiEmployeeMyDeptTreeCount(
 export function apiEmployeePageList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmployeePageList> {
+): AxiosPromise<ApiResponseComPageEmployeeComplexResp> {
   return Http.get('/api/employee/pageList', data, config)
 }
 
@@ -100,7 +93,7 @@ export function apiEmployeePageList(
 export function apiEmployeePageSelectList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmployeePageSelectList> {
+): AxiosPromise<ApiResponseComPageEmployeeComplexResp> {
   return Http.get('/api/employee/pageSelectList', data, config)
 }
 
@@ -108,7 +101,7 @@ export function apiEmployeePageSelectList(
 export function apiEmployeeShiftEmployeeId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmployeeShiftEmployeeId> {
+): AxiosPromise<ApiResponseShiftEmployeeResp> {
   return Http.get('/api/employee/shift/${employeeId}', data, config)
 }
 
@@ -116,7 +109,7 @@ export function apiEmployeeShiftEmployeeId(
 export function apiEmployeeStartDelEmployeeId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmployeeStartDelEmployeeId> {
+): AxiosPromise<ApiResponseShuJuYiZhiXingCaoZuoFanHuiJieGuo> {
   return Http.get('/api/employee/start/del/${employeeId}', data, config)
 }
 
@@ -124,7 +117,7 @@ export function apiEmployeeStartDelEmployeeId(
 export function apiEmployeeStopStartEmployeeId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmployeeStopStartEmployeeId> {
+): AxiosPromise<ApiResponseShuJuYiZhiXingCaoZuoFanHuiJieGuo> {
   return Http.get('/api/employee/stop/start/${employeeId}', data, config)
 }
 
@@ -132,6 +125,6 @@ export function apiEmployeeStopStartEmployeeId(
 export function apiEmployeeStopEmployeeConfirm(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmployeeStopEmployeeConfirm> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.post('/api/employee/stopEmployee/confirm', data, config)
 }

@@ -1,33 +1,26 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiEnterpriseIdentificationBaseInfoEmployeeList,
-  ResOfApiEnterpriseIdentificationEnterpriseV1OpenAcctCallback,
-  ResOfApiEnterpriseIdentificationEnterpriseV1PageEnterpriseName,
-  ResOfApiEnterpriseIdentificationPersonV1OpenAcctCallback,
-  ResOfApiEnterpriseIdentificationV1OpenAcct,
-  ResOfApiEnterpriseIdentificationV1SimpleAuth,
-  ResOfApiEnterpriseIdentificationV1TicketAuth,
-  ResOfApiEnterpriseIdentificationV1EnterpriseIdOpenAcctAppend,
-  ResOfApiEnterpriseIdentificationV1EnterpriseIdOpenAcctExecute,
-  ResOfApiEnterpriseIdentificationcenterAddEnterprise,
-  ResOfApiEnterpriseIdentificationcenterDelEnterprise,
-  ResOfApiEnterpriseIdentificationcenterListEnterprise,
-  ResOfApiEnterpriseIdentificationcenterSwitchMainEnterprise,
-  ResOfApiEnterpriseIdentificationcenterEnterpriseIdMainAuthInfo,
-  ResOfApiEnterpriseLinkDept,
-  ResOfApiEnterprisePageHomeClaimCompanyId,
-  ResOfApiEnterprisePageHomeExcludeClaimId,
-  ResOfApiEnterprisePageHomeJudge,
-  ResOfApiEnterprisePageHomeQuery,
-  ResOfApiEnterpriseIdLinkDept,
+  ApiResponseComPageEmployeeResp,
+  ApiResponseVoid,
+  ApiResponsePageQiYeKaiHuXinXi,
+  ApiResponseQiYeKaiHuXinXi,
+  ApiResponseQiYeJianDanRenZheng,
+  ApiResponseJudgeSwitchEnterpriseLimitResp,
+  ApiResponsestring,
+  ApiResponseComPageEnterpriseIdentificationResp,
+  ApiResponseQiYeZhuTiXinXi,
+  ApiResponseboolean,
+  ApiResponseQueryJudgeClaimResp,
+  ApiResponseQueryEnterprisePageHomeResp,
+  ApiResponseDeptLinkEnterpriseResp,
 } from './_interfaces'
 
 /** 钱包临时使用，后面切换版本。分页查询员工信息【租户id, 姓名，手机号，状态】 */
 export function apiEnterpriseIdentificationBaseInfoEmployeeList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterpriseIdentificationBaseInfoEmployeeList> {
+): AxiosPromise<ApiResponseComPageEmployeeResp> {
   return Http.post(
     '/api/enterprise/identification/baseInfo/employeeList',
     data,
@@ -39,7 +32,7 @@ export function apiEnterpriseIdentificationBaseInfoEmployeeList(
 export function apiEnterpriseIdentificationEnterpriseV1OpenAcctCallback(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterpriseIdentificationEnterpriseV1OpenAcctCallback> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.put(
     '/api/enterprise/identification/enterprise/v1/openAcct/callback',
     data,
@@ -51,7 +44,7 @@ export function apiEnterpriseIdentificationEnterpriseV1OpenAcctCallback(
 export function apiEnterpriseIdentificationEnterpriseV1PageEnterpriseName(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterpriseIdentificationEnterpriseV1PageEnterpriseName> {
+): AxiosPromise<ApiResponsePageQiYeKaiHuXinXi> {
   return Http.post(
     '/api/enterprise/identification/enterprise/v1/page/enterpriseName',
     data,
@@ -63,7 +56,7 @@ export function apiEnterpriseIdentificationEnterpriseV1PageEnterpriseName(
 export function apiEnterpriseIdentificationPersonV1OpenAcctCallback(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterpriseIdentificationPersonV1OpenAcctCallback> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.put(
     '/api/enterprise/identification/person/v1/openAcct/callback',
     data,
@@ -75,7 +68,7 @@ export function apiEnterpriseIdentificationPersonV1OpenAcctCallback(
 export function apiEnterpriseIdentificationV1OpenAcct(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterpriseIdentificationV1OpenAcct> {
+): AxiosPromise<ApiResponseQiYeKaiHuXinXi> {
   return Http.get('/api/enterprise/identification/v1/openAcct', data, config)
 }
 
@@ -83,7 +76,7 @@ export function apiEnterpriseIdentificationV1OpenAcct(
 export function apiEnterpriseIdentificationV1SimpleAuth(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterpriseIdentificationV1SimpleAuth> {
+): AxiosPromise<ApiResponseQiYeJianDanRenZheng> {
   return Http.get('/api/enterprise/identification/v1/simple/auth', data, config)
 }
 
@@ -91,7 +84,7 @@ export function apiEnterpriseIdentificationV1SimpleAuth(
 export function apiEnterpriseIdentificationV1TicketAuth(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterpriseIdentificationV1TicketAuth> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.post(
     '/api/enterprise/identification/v1/ticket/auth',
     data,
@@ -103,7 +96,7 @@ export function apiEnterpriseIdentificationV1TicketAuth(
 export function apiEnterpriseIdentificationV1EnterpriseIdOpenAcctAppend(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterpriseIdentificationV1EnterpriseIdOpenAcctAppend> {
+): AxiosPromise<ApiResponseQiYeKaiHuXinXi> {
   return Http.post(
     '/api/enterprise/identification/v1/${enterpriseId}/openAcct/append',
     data,
@@ -115,7 +108,7 @@ export function apiEnterpriseIdentificationV1EnterpriseIdOpenAcctAppend(
 export function apiEnterpriseIdentificationV1EnterpriseIdOpenAcctExecute(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterpriseIdentificationV1EnterpriseIdOpenAcctExecute> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.put(
     '/api/enterprise/identification/v1/${enterpriseId}/openAcct/execute',
     data,
@@ -126,7 +119,7 @@ export function apiEnterpriseIdentificationV1EnterpriseIdOpenAcctExecute(
 /** 是否可以操作切换主企业 */
 export function apiEnterpriseIdentificationcenterAddEnterprise(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterpriseIdentificationcenterAddEnterprise> {
+): AxiosPromise<ApiResponseJudgeSwitchEnterpriseLimitResp> {
   return Http.get('/api/enterprise/identificationcenter/addEnterprise', config)
 }
 
@@ -134,7 +127,7 @@ export function apiEnterpriseIdentificationcenterAddEnterprise(
 export function apiEnterpriseIdentificationcenterDelEnterprise(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterpriseIdentificationcenterDelEnterprise> {
+): AxiosPromise<ApiResponsestring> {
   return Http.get(
     '/api/enterprise/identificationcenter/delEnterprise',
     data,
@@ -146,7 +139,7 @@ export function apiEnterpriseIdentificationcenterDelEnterprise(
 export function apiEnterpriseIdentificationcenterListEnterprise(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterpriseIdentificationcenterListEnterprise> {
+): AxiosPromise<ApiResponseComPageEnterpriseIdentificationResp> {
   return Http.post(
     '/api/enterprise/identificationcenter/listEnterprise',
     data,
@@ -158,7 +151,7 @@ export function apiEnterpriseIdentificationcenterListEnterprise(
 export function apiEnterpriseIdentificationcenterSwitchMainEnterprise(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterpriseIdentificationcenterSwitchMainEnterprise> {
+): AxiosPromise<ApiResponsestring> {
   return Http.get(
     '/api/enterprise/identificationcenter/switchMainEnterprise',
     data,
@@ -170,7 +163,7 @@ export function apiEnterpriseIdentificationcenterSwitchMainEnterprise(
 export function apiEnterpriseIdentificationcenterEnterpriseIdMainAuthInfo(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterpriseIdentificationcenterEnterpriseIdMainAuthInfo> {
+): AxiosPromise<ApiResponseQiYeZhuTiXinXi> {
   return Http.get(
     '/api/enterprise/identificationcenter/${enterpriseId}/mainAuthInfo',
     data,
@@ -182,7 +175,7 @@ export function apiEnterpriseIdentificationcenterEnterpriseIdMainAuthInfo(
 export function apiEnterpriseLinkDept(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterpriseLinkDept> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.post('/api/enterprise/link/dept', data, config)
 }
 
@@ -190,7 +183,7 @@ export function apiEnterpriseLinkDept(
 export function apiEnterprisePageHomeClaimCompanyId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterprisePageHomeClaimCompanyId> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.get('/api/enterprise/pageHome/claim/${companyId}', data, config)
 }
 
@@ -198,21 +191,21 @@ export function apiEnterprisePageHomeClaimCompanyId(
 export function apiEnterprisePageHomeExcludeClaimId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterprisePageHomeExcludeClaimId> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.get('/api/enterprise/pageHome/exclude/${claimId}', data, config)
 }
 
 /** 查询认领操作结果 */
 export function apiEnterprisePageHomeJudge(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterprisePageHomeJudge> {
+): AxiosPromise<ApiResponseQueryJudgeClaimResp> {
   return Http.get('/api/enterprise/pageHome/judge', config)
 }
 
 /** 查询企业信息 */
 export function apiEnterprisePageHomeQuery(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterprisePageHomeQuery> {
+): AxiosPromise<ApiResponseQueryEnterprisePageHomeResp> {
   return Http.get('/api/enterprise/pageHome/query', config)
 }
 
@@ -220,6 +213,6 @@ export function apiEnterprisePageHomeQuery(
 export function apiEnterpriseIdLinkDept(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEnterpriseIdLinkDept> {
+): AxiosPromise<ApiResponseDeptLinkEnterpriseResp> {
   return Http.get('/api/enterprise/${id}/link/dept', data, config)
 }

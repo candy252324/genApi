@@ -1,14 +1,14 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiTenantEnterpriseAcquireInfo,
-  ResOfApiTenantEnterpriseUpdateInfo,
+  ApiResponseQiYeZuHuXinXiXiangQing,
+  ApiResponseboolean,
 } from './_interfaces'
 
 /** 获取企业租户信息详情 */
 export function apiTenantEnterpriseAcquireInfo(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiTenantEnterpriseAcquireInfo> {
+): AxiosPromise<ApiResponseQiYeZuHuXinXiXiangQing> {
   return Http.get('/api/tenantEnterprise/acquireInfo', config)
 }
 
@@ -16,6 +16,6 @@ export function apiTenantEnterpriseAcquireInfo(
 export function apiTenantEnterpriseUpdateInfo(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiTenantEnterpriseUpdateInfo> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/tenantEnterprise/updateInfo', data, config)
 }

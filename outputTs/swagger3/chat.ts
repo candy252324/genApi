@@ -1,24 +1,17 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiChatClearChat,
-  ResOfApiChatCreate,
-  ResOfApiChatOftenContact,
-  ResOfApiChatPageList,
-  ResOfApiChatRecentContact,
-  ResOfApiChatUnreadList,
-  ResOfChatClearChat,
-  ResOfChatCreate,
-  ResOfChatOftenContact,
-  ResOfChatPageList,
-  ResOfChatRecentContact,
+  ApiResponseobject,
+  ApiResponseComPageContactResp,
+  ApiResponseComPageHuiHuaLieBiaoXiangYing,
+  ApiResponseHuiHua,
 } from './_interfaces'
 
 /** 清空会话 */
 export function apiChatClearChat(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiChatClearChat> {
+): AxiosPromise<ApiResponseobject> {
   return Http.post('/api/chat/clearChat', data, config)
 }
 
@@ -26,7 +19,7 @@ export function apiChatClearChat(
 export function apiChatCreate(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiChatCreate> {
+): AxiosPromise<ApiResponseobject> {
   return Http.post('/api/chat/create', data, config)
 }
 
@@ -34,7 +27,7 @@ export function apiChatCreate(
 export function apiChatOftenContact(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiChatOftenContact> {
+): AxiosPromise<ApiResponseComPageContactResp> {
   return Http.post('/api/chat/oftenContact', data, config)
 }
 
@@ -42,7 +35,7 @@ export function apiChatOftenContact(
 export function apiChatPageList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiChatPageList> {
+): AxiosPromise<ApiResponseComPageHuiHuaLieBiaoXiangYing> {
   return Http.post('/api/chat/pageList', data, config)
 }
 
@@ -50,7 +43,7 @@ export function apiChatPageList(
 export function apiChatRecentContact(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiChatRecentContact> {
+): AxiosPromise<ApiResponseComPageContactResp> {
   return Http.post('/api/chat/recentContact', data, config)
 }
 
@@ -58,7 +51,7 @@ export function apiChatRecentContact(
 export function apiChatUnreadList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiChatUnreadList> {
+): AxiosPromise<ApiResponseComPageHuiHuaLieBiaoXiangYing> {
   return Http.post('/api/chat/unreadList', data, config)
 }
 
@@ -66,7 +59,7 @@ export function apiChatUnreadList(
 export function chatClearChat(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfChatClearChat> {
+): AxiosPromise<ApiResponseobject> {
   return Http.post('/chat/clearChat', data, config)
 }
 
@@ -74,7 +67,7 @@ export function chatClearChat(
 export function chatCreate(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfChatCreate> {
+): AxiosPromise<ApiResponseHuiHua> {
   return Http.post('/chat/create', data, config)
 }
 
@@ -82,7 +75,7 @@ export function chatCreate(
 export function chatOftenContact(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfChatOftenContact> {
+): AxiosPromise<ApiResponseComPageContactResp> {
   return Http.post('/chat/oftenContact', data, config)
 }
 
@@ -90,7 +83,7 @@ export function chatOftenContact(
 export function chatPageList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfChatPageList> {
+): AxiosPromise<ApiResponseComPageHuiHuaLieBiaoXiangYing> {
   return Http.post('/chat/pageList', data, config)
 }
 
@@ -98,6 +91,6 @@ export function chatPageList(
 export function chatRecentContact(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfChatRecentContact> {
+): AxiosPromise<ApiResponseComPageContactResp> {
   return Http.post('/chat/recentContact', data, config)
 }

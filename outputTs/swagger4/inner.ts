@@ -1,18 +1,18 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfInnerCustomerEnterpriseAdd,
-  ResOfInnerCustomerEnterpriseContactPageList,
-  ResOfInnerCustomerEnterpriseDetail,
-  ResOfInnerCustomerEnterprisePageList,
-  ResOfInnerCustomerEnterpriseUpdate,
+  ApiResponseCustomerEnterpriseAddResp,
+  ApiResponseComPageLianXiRenLieBiao,
+  ApiResponseCustomerEnterpriseDetailResp,
+  ApiResponseComPageCustomerEnterpriseInfoResp,
+  ApiResponselong,
 } from './_interfaces'
 
 /** add */
 export function innerCustomerEnterpriseAdd(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfInnerCustomerEnterpriseAdd> {
+): AxiosPromise<ApiResponseCustomerEnterpriseAddResp> {
   return Http.post('/inner/customer/enterprise/add', data, config)
 }
 
@@ -20,7 +20,7 @@ export function innerCustomerEnterpriseAdd(
 export function innerCustomerEnterpriseContactPageList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfInnerCustomerEnterpriseContactPageList> {
+): AxiosPromise<ApiResponseComPageLianXiRenLieBiao> {
   return Http.post('/inner/customer/enterprise/contact/pageList', data, config)
 }
 
@@ -28,7 +28,7 @@ export function innerCustomerEnterpriseContactPageList(
 export function innerCustomerEnterpriseDetail(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfInnerCustomerEnterpriseDetail> {
+): AxiosPromise<ApiResponseCustomerEnterpriseDetailResp> {
   return Http.post('/inner/customer/enterprise/detail', data, config)
 }
 
@@ -36,7 +36,7 @@ export function innerCustomerEnterpriseDetail(
 export function innerCustomerEnterprisePageList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfInnerCustomerEnterprisePageList> {
+): AxiosPromise<ApiResponseComPageCustomerEnterpriseInfoResp> {
   return Http.post('/inner/customer/enterprise/pageList', data, config)
 }
 
@@ -44,6 +44,6 @@ export function innerCustomerEnterprisePageList(
 export function innerCustomerEnterpriseUpdate(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfInnerCustomerEnterpriseUpdate> {
+): AxiosPromise<ApiResponselong> {
   return Http.post('/inner/customer/enterprise/update', data, config)
 }

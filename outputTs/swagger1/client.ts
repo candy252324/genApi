@@ -1,15 +1,15 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiClientCorpWechatAuthUser,
-  ResOfApiClientCorpWechatOauth2,
+  ApiResponseChannelUserResp,
+  ApiResponseCorpWechatAuthUrlResp,
 } from './_interfaces'
 
 /** 获取渠道用户信息 */
 export function apiClientCorpWechatAuthUser(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiClientCorpWechatAuthUser> {
+): AxiosPromise<ApiResponseChannelUserResp> {
   return Http.post('/api/client/corpWechat/authUser', data, config)
 }
 
@@ -17,6 +17,6 @@ export function apiClientCorpWechatAuthUser(
 export function apiClientCorpWechatOauth2(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiClientCorpWechatOauth2> {
+): AxiosPromise<ApiResponseCorpWechatAuthUrlResp> {
   return Http.post('/api/client/corpWechat/oauth2', data, config)
 }

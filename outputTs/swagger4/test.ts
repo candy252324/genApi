@@ -1,21 +1,15 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiTestCheck,
-  ResOfApiTestGet,
-  ResOfApiTestGetCustomer,
-  ResOfApiTestGetEnterprise,
-  ResOfApiTestInsert,
-  ResOfApiTestLogin,
-  ResOfApiTestPost,
-  ResOfApiTestSent,
-  ResOfApiTestSubscribeBusiness,
+  ApiResponseobject,
+  ApiResponse,
+  ApiResponsestring,
 } from './_interfaces'
 
 /** check */
 export function apiTestCheck(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiTestCheck> {
+): AxiosPromise<ApiResponseobject> {
   return Http.get('/api/test/check', config)
 }
 
@@ -23,35 +17,35 @@ export function apiTestCheck(
 export function apiTestGet(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiTestGet> {
+): AxiosPromise<ApiResponseobject> {
   return Http.get('/api/test/get', data, config)
 }
 
 /** getCustomer */
 export function apiTestGetCustomer(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiTestGetCustomer> {
+): AxiosPromise<ApiResponseobject> {
   return Http.get('/api/test/getCustomer', config)
 }
 
 /** getEnterprise */
 export function apiTestGetEnterprise(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiTestGetEnterprise> {
+): AxiosPromise<ApiResponseobject> {
   return Http.get('/api/test/getEnterprise', config)
 }
 
 /** insert */
 export function apiTestInsert(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiTestInsert> {
+): AxiosPromise<ApiResponse> {
   return Http.get('/api/test/insert', config)
 }
 
 /** login */
 export function apiTestLogin(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiTestLogin> {
+): AxiosPromise<ApiResponseobject> {
   return Http.get('/api/test/login', config)
 }
 
@@ -59,7 +53,7 @@ export function apiTestLogin(
 export function apiTestPost(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiTestPost> {
+): AxiosPromise<ApiResponseobject> {
   return Http.post('/api/test/post', data, config)
 }
 
@@ -67,13 +61,13 @@ export function apiTestPost(
 export function apiTestSent(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiTestSent> {
+): AxiosPromise<ApiResponseobject> {
   return Http.post('/api/test/sent', data, config)
 }
 
 /** subscribeBusiness */
 export function apiTestSubscribeBusiness(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiTestSubscribeBusiness> {
+): AxiosPromise<ApiResponsestring> {
   return Http.get('/api/test/subscribeBusiness', config)
 }

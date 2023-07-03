@@ -1,27 +1,20 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiDeptAddDept,
-  ResOfApiDeptDelDeptConfirm,
-  ResOfApiDeptDelDeptDeptId,
-  ResOfApiDeptDeptTree,
-  ResOfApiDeptDeptTreeComplex,
-  ResOfApiDeptDeptTreeInfo,
-  ResOfApiDeptEditDept,
-  ResOfApiDeptGetDeptId,
-  ResOfApiDeptList,
-  ResOfApiDeptListExcludeChildDeptId,
-  ResOfApiDeptQueryEmployeeByDeptId,
-  ResOfApiDeptQueryEmployeeByPhoneOrName,
-  ResOfApiDeptStartDelDeptDeptId,
-  ResOfApiDeptUpDeptStatus,
+  ApiResponse,
+  ApiResponseShuJuYiZhiXingCaoZuoFanHuiJieGuo,
+  ApiResponseVoid,
+  ApiResponseListTreelong,
+  ApiResponseDeptDetailResp,
+  ApiResponseListDeptResp,
+  ApiResponseListSelectorEmployeeResp,
 } from './_interfaces'
 
 /** 新增部门 */
 export function apiDeptAddDept(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiDeptAddDept> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/dept/addDept', data, config)
 }
 
@@ -29,7 +22,7 @@ export function apiDeptAddDept(
 export function apiDeptDelDeptConfirm(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiDeptDelDeptConfirm> {
+): AxiosPromise<ApiResponseShuJuYiZhiXingCaoZuoFanHuiJieGuo> {
   return Http.post('/api/dept/delDept/confirm', data, config)
 }
 
@@ -37,7 +30,7 @@ export function apiDeptDelDeptConfirm(
 export function apiDeptDelDeptDeptId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiDeptDelDeptDeptId> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.get('/api/dept/delDept/${deptId}', data, config)
 }
 
@@ -45,7 +38,7 @@ export function apiDeptDelDeptDeptId(
 export function apiDeptDeptTree(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiDeptDeptTree> {
+): AxiosPromise<ApiResponseListTreelong> {
   return Http.get('/api/dept/deptTree', data, config)
 }
 
@@ -53,7 +46,7 @@ export function apiDeptDeptTree(
 export function apiDeptDeptTreeComplex(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiDeptDeptTreeComplex> {
+): AxiosPromise<ApiResponseListTreelong> {
   return Http.get('/api/dept/deptTreeComplex', data, config)
 }
 
@@ -61,7 +54,7 @@ export function apiDeptDeptTreeComplex(
 export function apiDeptDeptTreeInfo(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiDeptDeptTreeInfo> {
+): AxiosPromise<ApiResponseListTreelong> {
   return Http.get('/api/dept/deptTreeInfo', data, config)
 }
 
@@ -69,7 +62,7 @@ export function apiDeptDeptTreeInfo(
 export function apiDeptEditDept(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiDeptEditDept> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/dept/editDept', data, config)
 }
 
@@ -77,7 +70,7 @@ export function apiDeptEditDept(
 export function apiDeptGetDeptId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiDeptGetDeptId> {
+): AxiosPromise<ApiResponseDeptDetailResp> {
   return Http.get('/api/dept/get/${deptId}', data, config)
 }
 
@@ -85,7 +78,7 @@ export function apiDeptGetDeptId(
 export function apiDeptList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiDeptList> {
+): AxiosPromise<ApiResponseListDeptResp> {
   return Http.get('/api/dept/list', data, config)
 }
 
@@ -93,7 +86,7 @@ export function apiDeptList(
 export function apiDeptListExcludeChildDeptId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiDeptListExcludeChildDeptId> {
+): AxiosPromise<ApiResponseListDeptResp> {
   return Http.get('/api/dept/list/excludeChild/${deptId}', data, config)
 }
 
@@ -101,7 +94,7 @@ export function apiDeptListExcludeChildDeptId(
 export function apiDeptQueryEmployeeByDeptId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiDeptQueryEmployeeByDeptId> {
+): AxiosPromise<ApiResponseListSelectorEmployeeResp> {
   return Http.get('/api/dept/queryEmployeeByDeptId', data, config)
 }
 
@@ -109,7 +102,7 @@ export function apiDeptQueryEmployeeByDeptId(
 export function apiDeptQueryEmployeeByPhoneOrName(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiDeptQueryEmployeeByPhoneOrName> {
+): AxiosPromise<ApiResponseListSelectorEmployeeResp> {
   return Http.get('/api/dept/queryEmployeeByPhoneOrName', data, config)
 }
 
@@ -117,7 +110,7 @@ export function apiDeptQueryEmployeeByPhoneOrName(
 export function apiDeptStartDelDeptDeptId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiDeptStartDelDeptDeptId> {
+): AxiosPromise<ApiResponseShuJuYiZhiXingCaoZuoFanHuiJieGuo> {
   return Http.get('/api/dept/start/delDept/${deptId}', data, config)
 }
 
@@ -125,6 +118,6 @@ export function apiDeptStartDelDeptDeptId(
 export function apiDeptUpDeptStatus(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiDeptUpDeptStatus> {
+): AxiosPromise<ApiResponse> {
   return Http.get('/api/dept/upDeptStatus', data, config)
 }

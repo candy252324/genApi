@@ -1,25 +1,18 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiCommonBind,
-  ResOfApiCommonSearch,
-  ResOfApiCommonSearchType,
-  ResOfApiCommonSearchBeforeAddFriend,
-  ResOfApiCommonSwitchChannel,
-  ResOfApiCommonSwitchUserList,
-  ResOfCommonBind,
-  ResOfCommonSearch,
-  ResOfCommonSearchType,
-  ResOfCommonSearchBeforeAddFriend,
-  ResOfCommonSwitchChannel,
-  ResOfCommonSwitchUserList,
+  ApiResponseUserBindResp,
+  ApiResponseMapstringSearchMapResp,
+  ApiResponseComPageCommonSearchResp,
+  ApiResponseComPageSearchBeforeAddFriendResp,
+  ApiResponseListSwitchUserListResp,
 } from './_interfaces'
 
 /** 绑定设备 */
 export function apiCommonBind(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCommonBind> {
+): AxiosPromise<ApiResponseUserBindResp> {
   return Http.post('/api/common/bind', data, config)
 }
 
@@ -27,7 +20,7 @@ export function apiCommonBind(
 export function apiCommonSearch(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCommonSearch> {
+): AxiosPromise<ApiResponseMapstringSearchMapResp> {
   return Http.post('/api/common/search', data, config)
 }
 
@@ -35,7 +28,7 @@ export function apiCommonSearch(
 export function apiCommonSearchType(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCommonSearchType> {
+): AxiosPromise<ApiResponseComPageCommonSearchResp> {
   return Http.post('/api/common/search/type', data, config)
 }
 
@@ -43,7 +36,7 @@ export function apiCommonSearchType(
 export function apiCommonSearchBeforeAddFriend(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCommonSearchBeforeAddFriend> {
+): AxiosPromise<ApiResponseComPageSearchBeforeAddFriendResp> {
   return Http.post('/api/common/searchBeforeAddFriend', data, config)
 }
 
@@ -51,7 +44,7 @@ export function apiCommonSearchBeforeAddFriend(
 export function apiCommonSwitchChannel(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCommonSwitchChannel> {
+): AxiosPromise<ApiResponseUserBindResp> {
   return Http.post('/api/common/switchChannel', data, config)
 }
 
@@ -59,7 +52,7 @@ export function apiCommonSwitchChannel(
 export function apiCommonSwitchUserList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiCommonSwitchUserList> {
+): AxiosPromise<ApiResponseListSwitchUserListResp> {
   return Http.post('/api/common/switchUserList', data, config)
 }
 
@@ -67,7 +60,7 @@ export function apiCommonSwitchUserList(
 export function commonBind(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfCommonBind> {
+): AxiosPromise<ApiResponseUserBindResp> {
   return Http.post('/common/bind', data, config)
 }
 
@@ -75,7 +68,7 @@ export function commonBind(
 export function commonSearch(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfCommonSearch> {
+): AxiosPromise<ApiResponseMapstringSearchMapResp> {
   return Http.post('/common/search', data, config)
 }
 
@@ -83,7 +76,7 @@ export function commonSearch(
 export function commonSearchType(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfCommonSearchType> {
+): AxiosPromise<ApiResponseComPageCommonSearchResp> {
   return Http.post('/common/search/type', data, config)
 }
 
@@ -91,7 +84,7 @@ export function commonSearchType(
 export function commonSearchBeforeAddFriend(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfCommonSearchBeforeAddFriend> {
+): AxiosPromise<ApiResponseComPageSearchBeforeAddFriendResp> {
   return Http.post('/common/searchBeforeAddFriend', data, config)
 }
 
@@ -99,7 +92,7 @@ export function commonSearchBeforeAddFriend(
 export function commonSwitchChannel(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfCommonSwitchChannel> {
+): AxiosPromise<ApiResponseUserBindResp> {
   return Http.post('/common/switchChannel', data, config)
 }
 
@@ -107,6 +100,6 @@ export function commonSwitchChannel(
 export function commonSwitchUserList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfCommonSwitchUserList> {
+): AxiosPromise<ApiResponseListSwitchUserListResp> {
   return Http.post('/common/switchUserList', data, config)
 }

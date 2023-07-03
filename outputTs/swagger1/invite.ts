@@ -1,26 +1,23 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiInviteAuditCancelShieldId,
-  ResOfApiInviteAuditPass,
-  ResOfApiInviteAuditRefuse,
-  ResOfApiInviteAuditShieldId,
-  ResOfApiInviteCheckInviteCode,
-  ResOfApiInviteExport,
-  ResOfApiInviteGenerateInviteShare,
-  ResOfApiInviteInviteJoinEchoData,
-  ResOfApiInviteInviteLogin,
-  ResOfApiInviteInviteRegister,
-  ResOfApiInvitePageApplyType,
-  ResOfApiInviteQuerySetting,
-  ResOfApiInviteUpdatesetting,
+  ApiResponsestring,
+  ApiResponseJianChaYaoQingMa,
+  FileSystemResource,
+  ApiResponseListShengChengYaoQing,
+  ApiResponseInviteJoinEchoResp,
+  ApiResponseInviteLoginResp,
+  ApiResponseYaoQingZhuCe,
+  ApiResponseComPageInviteEmployeeResp,
+  ApiResponseInviteSetResp,
+  ApiResponseboolean,
 } from './_interfaces'
 
 /** 取消屏蔽用户 */
 export function apiInviteAuditCancelShieldId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiInviteAuditCancelShieldId> {
+): AxiosPromise<ApiResponsestring> {
   return Http.get('/api/invite/audit/cancelShield/${id}', data, config)
 }
 
@@ -28,7 +25,7 @@ export function apiInviteAuditCancelShieldId(
 export function apiInviteAuditPass(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiInviteAuditPass> {
+): AxiosPromise<ApiResponsestring> {
   return Http.post('/api/invite/audit/pass', data, config)
 }
 
@@ -36,7 +33,7 @@ export function apiInviteAuditPass(
 export function apiInviteAuditRefuse(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiInviteAuditRefuse> {
+): AxiosPromise<ApiResponsestring> {
   return Http.post('/api/invite/audit/refuse', data, config)
 }
 
@@ -44,7 +41,7 @@ export function apiInviteAuditRefuse(
 export function apiInviteAuditShieldId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiInviteAuditShieldId> {
+): AxiosPromise<ApiResponsestring> {
   return Http.get('/api/invite/audit/shield/${id}', data, config)
 }
 
@@ -52,7 +49,7 @@ export function apiInviteAuditShieldId(
 export function apiInviteCheckInviteCode(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiInviteCheckInviteCode> {
+): AxiosPromise<ApiResponseJianChaYaoQingMa> {
   return Http.get('/api/invite/checkInviteCode', data, config)
 }
 
@@ -60,7 +57,7 @@ export function apiInviteCheckInviteCode(
 export function apiInviteExport(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiInviteExport> {
+): AxiosPromise<FileSystemResource> {
   return Http.post('/api/invite/export', data, config)
 }
 
@@ -68,7 +65,7 @@ export function apiInviteExport(
 export function apiInviteGenerateInviteShare(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiInviteGenerateInviteShare> {
+): AxiosPromise<ApiResponseListShengChengYaoQing> {
   return Http.post('/api/invite/generateInviteShare', data, config)
 }
 
@@ -76,7 +73,7 @@ export function apiInviteGenerateInviteShare(
 export function apiInviteInviteJoinEchoData(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiInviteInviteJoinEchoData> {
+): AxiosPromise<ApiResponseInviteJoinEchoResp> {
   return Http.get('/api/invite/inviteJoinEchoData', data, config)
 }
 
@@ -84,7 +81,7 @@ export function apiInviteInviteJoinEchoData(
 export function apiInviteInviteLogin(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiInviteInviteLogin> {
+): AxiosPromise<ApiResponseInviteLoginResp> {
   return Http.post('/api/invite/inviteLogin', data, config)
 }
 
@@ -92,7 +89,7 @@ export function apiInviteInviteLogin(
 export function apiInviteInviteRegister(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiInviteInviteRegister> {
+): AxiosPromise<ApiResponseYaoQingZhuCe> {
   return Http.post('/api/invite/inviteRegister', data, config)
 }
 
@@ -100,14 +97,14 @@ export function apiInviteInviteRegister(
 export function apiInvitePageApplyType(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiInvitePageApplyType> {
+): AxiosPromise<ApiResponseComPageInviteEmployeeResp> {
   return Http.post('/api/invite/page/${applyType}', data, config)
 }
 
 /** 邀请设置查询 */
 export function apiInviteQuerySetting(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiInviteQuerySetting> {
+): AxiosPromise<ApiResponseInviteSetResp> {
   return Http.get('/api/invite/querySetting', config)
 }
 
@@ -115,6 +112,6 @@ export function apiInviteQuerySetting(
 export function apiInviteUpdatesetting(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiInviteUpdatesetting> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/invite/updatesetting', data, config)
 }

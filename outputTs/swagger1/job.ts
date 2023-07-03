@@ -1,21 +1,16 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiJobAddEmployee,
-  ResOfApiJobAddJob,
-  ResOfApiJobDelJob,
-  ResOfApiJobEmployeeSelector,
-  ResOfApiJobQueryEmployeeByPhoneOrName,
-  ResOfApiJobQueryTree,
-  ResOfApiJobRemoveEmployee,
-  ResOfApiJobUpdateJob,
+  ApiResponseboolean,
+  ApiResponseListSelectorEmployeeResp,
+  ApiResponseListTreelong,
 } from './_interfaces'
 
 /** 添加成员 */
 export function apiJobAddEmployee(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiJobAddEmployee> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/job/addEmployee', data, config)
 }
 
@@ -23,7 +18,7 @@ export function apiJobAddEmployee(
 export function apiJobAddJob(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiJobAddJob> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/job/addJob', data, config)
 }
 
@@ -31,7 +26,7 @@ export function apiJobAddJob(
 export function apiJobDelJob(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiJobDelJob> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.get('/api/job/delJob', data, config)
 }
 
@@ -39,7 +34,7 @@ export function apiJobDelJob(
 export function apiJobEmployeeSelector(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiJobEmployeeSelector> {
+): AxiosPromise<ApiResponseListSelectorEmployeeResp> {
   return Http.post('/api/job/employeeSelector', data, config)
 }
 
@@ -47,7 +42,7 @@ export function apiJobEmployeeSelector(
 export function apiJobQueryEmployeeByPhoneOrName(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiJobQueryEmployeeByPhoneOrName> {
+): AxiosPromise<ApiResponseListSelectorEmployeeResp> {
   return Http.post('/api/job/queryEmployeeByPhoneOrName', data, config)
 }
 
@@ -55,7 +50,7 @@ export function apiJobQueryEmployeeByPhoneOrName(
 export function apiJobQueryTree(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiJobQueryTree> {
+): AxiosPromise<ApiResponseListTreelong> {
   return Http.post('/api/job/queryTree', data, config)
 }
 
@@ -63,7 +58,7 @@ export function apiJobQueryTree(
 export function apiJobRemoveEmployee(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiJobRemoveEmployee> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/job/removeEmployee', data, config)
 }
 
@@ -71,6 +66,6 @@ export function apiJobRemoveEmployee(
 export function apiJobUpdateJob(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiJobUpdateJob> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/job/updateJob', data, config)
 }

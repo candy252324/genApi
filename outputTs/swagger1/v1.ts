@@ -1,16 +1,16 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiV1AuditRelation,
-  ResOfApiV1AuditRelationPage,
-  ResOfApiV1AuditRelationTotal,
+  ApiResponseboolean,
+  ApiResponseComPageGuanLianShenHeXinXi,
+  ApiResponseShenHeTongJiHuanCunSanShiMiao,
 } from './_interfaces'
 
 /** 审核-执行审核 */
 export function apiV1AuditRelation(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiV1AuditRelation> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.put('/api/v1/audit/relation', data, config)
 }
 
@@ -18,7 +18,7 @@ export function apiV1AuditRelation(
 export function apiV1AuditRelationPage(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiV1AuditRelationPage> {
+): AxiosPromise<ApiResponseComPageGuanLianShenHeXinXi> {
   return Http.post('/api/v1/audit/relation/page', data, config)
 }
 
@@ -26,6 +26,6 @@ export function apiV1AuditRelationPage(
 export function apiV1AuditRelationTotal(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiV1AuditRelationTotal> {
+): AxiosPromise<ApiResponseShenHeTongJiHuanCunSanShiMiao> {
   return Http.post('/api/v1/audit/relation/total', data, config)
 }

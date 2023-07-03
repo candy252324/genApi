@@ -1,23 +1,20 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiRequestAddFriend,
-  ResOfApiRequestAddGroup,
-  ResOfApiRequestApprove,
-  ResOfApiRequestDetail,
-  ResOfApiRequestGetUnreadAttr,
-  ResOfApiRequestGetUnreadCount,
-  ResOfApiRequestInvite,
-  ResOfApiRequestPageList,
-  ResOfApiRequestRead,
-  ResOfApiRequestTryInvite,
+  ApiResponse,
+  ApiResponseAddGroupResp,
+  ApiResponseYanZhengXiaoXiXiangQingRequestDetailResp,
+  ApiResponseListUnreadResp,
+  ApiResponselong,
+  ApiResponseYaoQingRuQunXiangYing,
+  ApiResponseComPageYanZhengXiaoXiFenYeRequestPageListResp,
 } from './_interfaces'
 
 /** 添加好友申请 */
 export function apiRequestAddFriend(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRequestAddFriend> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/request/addFriend', data, config)
 }
 
@@ -25,7 +22,7 @@ export function apiRequestAddFriend(
 export function apiRequestAddGroup(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRequestAddGroup> {
+): AxiosPromise<ApiResponseAddGroupResp> {
   return Http.post('/api/request/addGroup', data, config)
 }
 
@@ -33,7 +30,7 @@ export function apiRequestAddGroup(
 export function apiRequestApprove(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRequestApprove> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/request/approve', data, config)
 }
 
@@ -41,7 +38,7 @@ export function apiRequestApprove(
 export function apiRequestDetail(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRequestDetail> {
+): AxiosPromise<ApiResponseYanZhengXiaoXiXiangQingRequestDetailResp> {
   return Http.get('/api/request/detail', data, config)
 }
 
@@ -49,7 +46,7 @@ export function apiRequestDetail(
 export function apiRequestGetUnreadAttr(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRequestGetUnreadAttr> {
+): AxiosPromise<ApiResponseListUnreadResp> {
   return Http.post('/api/request/getUnreadAttr', data, config)
 }
 
@@ -57,7 +54,7 @@ export function apiRequestGetUnreadAttr(
 export function apiRequestGetUnreadCount(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRequestGetUnreadCount> {
+): AxiosPromise<ApiResponselong> {
   return Http.get('/api/request/getUnreadCount', data, config)
 }
 
@@ -65,7 +62,7 @@ export function apiRequestGetUnreadCount(
 export function apiRequestInvite(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRequestInvite> {
+): AxiosPromise<ApiResponseYaoQingRuQunXiangYing> {
   return Http.post('/api/request/invite', data, config)
 }
 
@@ -73,7 +70,7 @@ export function apiRequestInvite(
 export function apiRequestPageList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRequestPageList> {
+): AxiosPromise<ApiResponseComPageYanZhengXiaoXiFenYeRequestPageListResp> {
   return Http.post('/api/request/pageList', data, config)
 }
 
@@ -81,7 +78,7 @@ export function apiRequestPageList(
 export function apiRequestRead(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRequestRead> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/request/read', data, config)
 }
 
@@ -89,6 +86,6 @@ export function apiRequestRead(
 export function apiRequestTryInvite(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiRequestTryInvite> {
+): AxiosPromise<ApiResponseYaoQingRuQunXiangYing> {
   return Http.post('/api/request/tryInvite', data, config)
 }

@@ -1,21 +1,17 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiPostAddEmployee,
-  ResOfApiPostAddPost,
-  ResOfApiPostDelEmployee,
-  ResOfApiPostDelPostPostId,
-  ResOfApiPostEditPost,
-  ResOfApiPostList,
-  ResOfApiPostQueryEmployeeByDeptId,
-  ResOfApiPostQueryEmployeeByPhoneOrName,
+  ApiResponseVoid,
+  ApiResponse,
+  ApiResponseListPostResp,
+  ApiResponseListSelectorEmployeeResp,
 } from './_interfaces'
 
 /** 添加成员 */
 export function apiPostAddEmployee(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPostAddEmployee> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.get('/api/post/addEmployee', data, config)
 }
 
@@ -23,7 +19,7 @@ export function apiPostAddEmployee(
 export function apiPostAddPost(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPostAddPost> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/post/addPost', data, config)
 }
 
@@ -31,7 +27,7 @@ export function apiPostAddPost(
 export function apiPostDelEmployee(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPostDelEmployee> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.get('/api/post/delEmployee', data, config)
 }
 
@@ -39,7 +35,7 @@ export function apiPostDelEmployee(
 export function apiPostDelPostPostId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPostDelPostPostId> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.get('/api/post/delPost/${postId}', data, config)
 }
 
@@ -47,7 +43,7 @@ export function apiPostDelPostPostId(
 export function apiPostEditPost(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPostEditPost> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/post/editPost', data, config)
 }
 
@@ -55,7 +51,7 @@ export function apiPostEditPost(
 export function apiPostList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPostList> {
+): AxiosPromise<ApiResponseListPostResp> {
   return Http.get('/api/post/list', data, config)
 }
 
@@ -63,7 +59,7 @@ export function apiPostList(
 export function apiPostQueryEmployeeByDeptId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPostQueryEmployeeByDeptId> {
+): AxiosPromise<ApiResponseListSelectorEmployeeResp> {
   return Http.get('/api/post/queryEmployeeByDeptId', data, config)
 }
 
@@ -71,6 +67,6 @@ export function apiPostQueryEmployeeByDeptId(
 export function apiPostQueryEmployeeByPhoneOrName(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiPostQueryEmployeeByPhoneOrName> {
+): AxiosPromise<ApiResponseListSelectorEmployeeResp> {
   return Http.get('/api/post/queryEmployeeByPhoneOrName', data, config)
 }

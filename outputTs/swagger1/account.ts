@@ -1,17 +1,16 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiAccountAccQueryAcc,
-  ResOfApiAccountEnterpriseAddEnterprise,
-  ResOfApiAccountEnterpriseCreateEnterprise,
-  ResOfApiAccountEnterpriseListUserEnterprise,
-  ResOfApiAccountEnterprisePageAllEnterprise,
+  ApiResponseQueryAccInfoResp,
+  ApiResponsestring,
+  ApiResponseboolean,
+  ApiResponseComPageQiYeChaXun,
 } from './_interfaces'
 
 /** 账号信息 */
 export function apiAccountAccQueryAcc(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiAccountAccQueryAcc> {
+): AxiosPromise<ApiResponseQueryAccInfoResp> {
   return Http.post('/api/account/acc/queryAcc', config)
 }
 
@@ -19,7 +18,7 @@ export function apiAccountAccQueryAcc(
 export function apiAccountEnterpriseAddEnterprise(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiAccountEnterpriseAddEnterprise> {
+): AxiosPromise<ApiResponsestring> {
   return Http.post('/api/account/enterprise/addEnterprise', data, config)
 }
 
@@ -27,14 +26,14 @@ export function apiAccountEnterpriseAddEnterprise(
 export function apiAccountEnterpriseCreateEnterprise(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiAccountEnterpriseCreateEnterprise> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/account/enterprise/createEnterprise', data, config)
 }
 
 /** 用户是否加入/拥有企业 */
 export function apiAccountEnterpriseListUserEnterprise(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiAccountEnterpriseListUserEnterprise> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.get('/api/account/enterprise/listUserEnterprise', config)
 }
 
@@ -42,6 +41,6 @@ export function apiAccountEnterpriseListUserEnterprise(
 export function apiAccountEnterprisePageAllEnterprise(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiAccountEnterprisePageAllEnterprise> {
+): AxiosPromise<ApiResponseComPageQiYeChaXun> {
   return Http.post('/api/account/enterprise/pageAllEnterprise', data, config)
 }

@@ -1,15 +1,14 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiTenantPersonAcquireInfo,
-  ResOfApiTenantPersonUpdateAccPassword,
-  ResOfApiTenantPersonUpdateInfo,
+  ApiResponseGeRenZuHuXinXiXiangQingBiao,
+  ApiResponseboolean,
 } from './_interfaces'
 
 /** 获取个人租户信息详情 */
 export function apiTenantPersonAcquireInfo(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiTenantPersonAcquireInfo> {
+): AxiosPromise<ApiResponseGeRenZuHuXinXiXiangQingBiao> {
   return Http.get('/api/tenantPerson/acquireInfo', config)
 }
 
@@ -17,7 +16,7 @@ export function apiTenantPersonAcquireInfo(
 export function apiTenantPersonUpdateAccPassword(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiTenantPersonUpdateAccPassword> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/tenantPerson/updateAccPassword', data, config)
 }
 
@@ -25,6 +24,6 @@ export function apiTenantPersonUpdateAccPassword(
 export function apiTenantPersonUpdateInfo(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiTenantPersonUpdateInfo> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/tenantPerson/updateInfo', data, config)
 }

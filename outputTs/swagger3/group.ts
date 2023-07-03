@@ -1,25 +1,17 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiGroupDetail,
-  ResOfApiGroupDissolve,
-  ResOfApiGroupGroupSetting,
-  ResOfApiGroupModifyGroupName,
-  ResOfApiGroupPageList,
-  ResOfApiGroupSave,
-  ResOfApiGroupTransfer,
-  ResOfGroupDetail,
-  ResOfGroupGroupSetting,
-  ResOfGroupModifyGroupName,
-  ResOfGroupPageList,
-  ResOfGroupSave,
+  ApiResponseQunDuiXiangGroupDetailResp,
+  ApiResponse,
+  ApiResponseComPageQunDuiXiangGroupResp,
+  ApiResponseQunDuiXiangGroupResp,
 } from './_interfaces'
 
 /** 群信息详情 */
 export function apiGroupDetail(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiGroupDetail> {
+): AxiosPromise<ApiResponseQunDuiXiangGroupDetailResp> {
   return Http.post('/api/group/detail', data, config)
 }
 
@@ -27,7 +19,7 @@ export function apiGroupDetail(
 export function apiGroupDissolve(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiGroupDissolve> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/group/dissolve', data, config)
 }
 
@@ -35,7 +27,7 @@ export function apiGroupDissolve(
 export function apiGroupGroupSetting(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiGroupGroupSetting> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/group/groupSetting', data, config)
 }
 
@@ -43,7 +35,7 @@ export function apiGroupGroupSetting(
 export function apiGroupModifyGroupName(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiGroupModifyGroupName> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/group/modifyGroupName', data, config)
 }
 
@@ -51,7 +43,7 @@ export function apiGroupModifyGroupName(
 export function apiGroupPageList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiGroupPageList> {
+): AxiosPromise<ApiResponseComPageQunDuiXiangGroupResp> {
   return Http.post('/api/group/pageList', data, config)
 }
 
@@ -59,7 +51,7 @@ export function apiGroupPageList(
 export function apiGroupSave(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiGroupSave> {
+): AxiosPromise<ApiResponseQunDuiXiangGroupResp> {
   return Http.post('/api/group/save', data, config)
 }
 
@@ -67,7 +59,7 @@ export function apiGroupSave(
 export function apiGroupTransfer(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiGroupTransfer> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/group/transfer', data, config)
 }
 
@@ -75,7 +67,7 @@ export function apiGroupTransfer(
 export function groupDetail(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfGroupDetail> {
+): AxiosPromise<ApiResponseQunDuiXiangGroupDetailResp> {
   return Http.post('/group/detail', data, config)
 }
 
@@ -83,7 +75,7 @@ export function groupDetail(
 export function groupGroupSetting(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfGroupGroupSetting> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/group/groupSetting', data, config)
 }
 
@@ -91,7 +83,7 @@ export function groupGroupSetting(
 export function groupModifyGroupName(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfGroupModifyGroupName> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/group/modifyGroupName', data, config)
 }
 
@@ -99,7 +91,7 @@ export function groupModifyGroupName(
 export function groupPageList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfGroupPageList> {
+): AxiosPromise<ApiResponseComPageQunDuiXiangGroupResp> {
   return Http.post('/group/pageList', data, config)
 }
 
@@ -107,6 +99,6 @@ export function groupPageList(
 export function groupSave(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfGroupSave> {
+): AxiosPromise<ApiResponseQunDuiXiangGroupResp> {
   return Http.post('/group/save', data, config)
 }

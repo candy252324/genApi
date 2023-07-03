@@ -1,16 +1,12 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
-import {
-  ResOfApiSliderAddImage,
-  ResOfApiSliderCreateVerificationEnum,
-  ResOfApiSliderPreCheckVerificationEnum,
-} from './_interfaces'
+import { ApiResponseboolean, ApiResponseMapstringobject } from './_interfaces'
 
 /** 添加验证图片 */
 export function apiSliderAddImage(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiSliderAddImage> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/slider/addImage', data, config)
 }
 
@@ -18,7 +14,7 @@ export function apiSliderAddImage(
 export function apiSliderCreateVerificationEnum(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiSliderCreateVerificationEnum> {
+): AxiosPromise<ApiResponseMapstringobject> {
   return Http.get('/api/slider/create/${verificationEnum}', data, config)
 }
 
@@ -26,6 +22,6 @@ export function apiSliderCreateVerificationEnum(
 export function apiSliderPreCheckVerificationEnum(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiSliderPreCheckVerificationEnum> {
+): AxiosPromise<ApiResponseboolean> {
   return Http.get('/api/slider/preCheck/${verificationEnum}', data, config)
 }

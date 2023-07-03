@@ -1,42 +1,28 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiEmpowerEnterpriseReAlertAudit,
-  ResOfApiEmpowerEnterpriseReApplyScanAgreeRe,
-  ResOfApiEmpowerEnterpriseReBathAuth,
-  ResOfApiEmpowerEnterpriseReBathCancelAuth,
-  ResOfApiEmpowerEnterpriseReDeptTree,
-  ResOfApiEmpowerEnterpriseReDetail,
-  ResOfApiEmpowerEnterpriseReDetailGenReLinkOrQr,
-  ResOfApiEmpowerEnterpriseReDetailGetEnterpriseListByPhone,
-  ResOfApiEmpowerEnterpriseReDetailListEnterprise,
-  ResOfApiEmpowerEnterpriseReEmployeeOperEmType,
-  ResOfApiEmpowerEnterpriseReEntReSetListRole,
-  ResOfApiEmpowerEnterpriseReFranchiseOperOper,
-  ResOfApiEmpowerEnterpriseReGetAccByMobile,
-  ResOfApiEmpowerEnterpriseReGetEmEmployeeInfoLinkCode,
-  ResOfApiEmpowerEnterpriseReGetEmpowerInfo,
-  ResOfApiEmpowerEnterpriseReGetEntReSet,
-  ResOfApiEmpowerEnterpriseReGetInviteReInfoLinkCode,
-  ResOfApiEmpowerEnterpriseReInviteRePlateFromOrg,
-  ResOfApiEmpowerEnterpriseReList,
-  ResOfApiEmpowerEnterpriseReListRoleList,
-  ResOfApiEmpowerEnterpriseRePageEmployeeList,
-  ResOfApiEmpowerEnterpriseReReReEntTree,
-  ResOfApiEmpowerEnterpriseReReEntTree,
-  ResOfApiEmpowerEnterpriseReRefreshApplyRe,
-  ResOfApiEmpowerEnterpriseReRelationCancel,
-  ResOfApiEmpowerEnterpriseReRelationRefresh,
-  ResOfApiEmpowerEnterpriseReScanGetOrgInfo,
-  ResOfApiEmpowerEnterpriseReSendEmpowerSms,
-  ResOfApiEmpowerEnterpriseReUpEntReSetEnterpriseId,
+  ApiResponseVoid,
+  ApiResponseListEmpowerDeptResp,
+  ApiResponseGuanLianGongSiXiangQing,
+  ApiResponsestring,
+  ApiResponseListQiYeZuHuXinXi,
+  ApiResponseListRoleInfo,
+  ApiResponseAccInfoResp,
+  ApiResponseMapstringstring,
+  ApiResponseHeaderEmpowerSmsInfo,
+  ApiResponseEntReSetResp,
+  ApiResponseInviteEnterpriseReInfo,
+  ApiResponseGuanLianGongSiLieBiao,
+  ApiResponseComPageEpEmployeeResp,
+  ApiResponseListEpEntTreeResp,
+  ApiResponseScanReQrResp,
 } from './_interfaces'
 
 /** 提醒审核 */
 export function apiEmpowerEnterpriseReAlertAudit(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReAlertAudit> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.get('/api/empower/enterpriseRe/alertAudit', data, config)
 }
 
@@ -44,7 +30,7 @@ export function apiEmpowerEnterpriseReAlertAudit(
 export function apiEmpowerEnterpriseReApplyScanAgreeRe(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReApplyScanAgreeRe> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.get('/api/empower/enterpriseRe/applyScanAgreeRe', data, config)
 }
 
@@ -52,7 +38,7 @@ export function apiEmpowerEnterpriseReApplyScanAgreeRe(
 export function apiEmpowerEnterpriseReBathAuth(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReBathAuth> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.post('/api/empower/enterpriseRe/bathAuth', data, config)
 }
 
@@ -60,7 +46,7 @@ export function apiEmpowerEnterpriseReBathAuth(
 export function apiEmpowerEnterpriseReBathCancelAuth(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReBathCancelAuth> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.post('/api/empower/enterpriseRe/bathCancelAuth', data, config)
 }
 
@@ -68,7 +54,7 @@ export function apiEmpowerEnterpriseReBathCancelAuth(
 export function apiEmpowerEnterpriseReDeptTree(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReDeptTree> {
+): AxiosPromise<ApiResponseListEmpowerDeptResp> {
   return Http.get('/api/empower/enterpriseRe/deptTree', data, config)
 }
 
@@ -76,7 +62,7 @@ export function apiEmpowerEnterpriseReDeptTree(
 export function apiEmpowerEnterpriseReDetail(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReDetail> {
+): AxiosPromise<ApiResponseGuanLianGongSiXiangQing> {
   return Http.get('/api/empower/enterpriseRe/detail', data, config)
 }
 
@@ -84,7 +70,7 @@ export function apiEmpowerEnterpriseReDetail(
 export function apiEmpowerEnterpriseReDetailGenReLinkOrQr(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReDetailGenReLinkOrQr> {
+): AxiosPromise<ApiResponsestring> {
   return Http.get(
     '/api/empower/enterpriseRe/detail/genReLinkOrQr',
     data,
@@ -96,7 +82,7 @@ export function apiEmpowerEnterpriseReDetailGenReLinkOrQr(
 export function apiEmpowerEnterpriseReDetailGetEnterpriseListByPhone(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReDetailGetEnterpriseListByPhone> {
+): AxiosPromise<ApiResponseListQiYeZuHuXinXi> {
   return Http.get(
     '/api/empower/enterpriseRe/detail/getEnterpriseListByPhone',
     data,
@@ -107,7 +93,7 @@ export function apiEmpowerEnterpriseReDetailGetEnterpriseListByPhone(
 /** 获取平台公司列表 */
 export function apiEmpowerEnterpriseReDetailListEnterprise(
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReDetailListEnterprise> {
+): AxiosPromise<ApiResponseListQiYeZuHuXinXi> {
   return Http.get('/api/empower/enterpriseRe/detail/listEnterprise', config)
 }
 
@@ -115,7 +101,7 @@ export function apiEmpowerEnterpriseReDetailListEnterprise(
 export function apiEmpowerEnterpriseReEmployeeOperEmType(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReEmployeeOperEmType> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.get(
     '/api/empower/enterpriseRe/employeeOper/em/${type}',
     data,
@@ -127,7 +113,7 @@ export function apiEmpowerEnterpriseReEmployeeOperEmType(
 export function apiEmpowerEnterpriseReEntReSetListRole(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReEntReSetListRole> {
+): AxiosPromise<ApiResponseListRoleInfo> {
   return Http.get('/api/empower/enterpriseRe/entReSet/listRole', data, config)
 }
 
@@ -135,7 +121,7 @@ export function apiEmpowerEnterpriseReEntReSetListRole(
 export function apiEmpowerEnterpriseReFranchiseOperOper(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReFranchiseOperOper> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.get(
     '/api/empower/enterpriseRe/franchiseOper/${oper}',
     data,
@@ -147,7 +133,7 @@ export function apiEmpowerEnterpriseReFranchiseOperOper(
 export function apiEmpowerEnterpriseReGetAccByMobile(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReGetAccByMobile> {
+): AxiosPromise<ApiResponseAccInfoResp> {
   return Http.get('/api/empower/enterpriseRe/getAccByMobile', data, config)
 }
 
@@ -155,7 +141,7 @@ export function apiEmpowerEnterpriseReGetAccByMobile(
 export function apiEmpowerEnterpriseReGetEmEmployeeInfoLinkCode(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReGetEmEmployeeInfoLinkCode> {
+): AxiosPromise<ApiResponseMapstringstring> {
   return Http.get(
     '/api/empower/enterpriseRe/getEmEmployeeInfo/${linkCode}',
     data,
@@ -167,7 +153,7 @@ export function apiEmpowerEnterpriseReGetEmEmployeeInfoLinkCode(
 export function apiEmpowerEnterpriseReGetEmpowerInfo(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReGetEmpowerInfo> {
+): AxiosPromise<ApiResponseHeaderEmpowerSmsInfo> {
   return Http.get('/api/empower/enterpriseRe/getEmpowerInfo', data, config)
 }
 
@@ -175,7 +161,7 @@ export function apiEmpowerEnterpriseReGetEmpowerInfo(
 export function apiEmpowerEnterpriseReGetEntReSet(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReGetEntReSet> {
+): AxiosPromise<ApiResponseEntReSetResp> {
   return Http.get('/api/empower/enterpriseRe/getEntReSet', data, config)
 }
 
@@ -183,7 +169,7 @@ export function apiEmpowerEnterpriseReGetEntReSet(
 export function apiEmpowerEnterpriseReGetInviteReInfoLinkCode(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReGetInviteReInfoLinkCode> {
+): AxiosPromise<ApiResponseInviteEnterpriseReInfo> {
   return Http.get(
     '/api/empower/enterpriseRe/getInviteReInfo/${linkCode}',
     data,
@@ -195,7 +181,7 @@ export function apiEmpowerEnterpriseReGetInviteReInfoLinkCode(
 export function apiEmpowerEnterpriseReInviteRePlateFromOrg(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReInviteRePlateFromOrg> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.post(
     '/api/empower/enterpriseRe/inviteRePlateFromOrg',
     data,
@@ -207,7 +193,7 @@ export function apiEmpowerEnterpriseReInviteRePlateFromOrg(
 export function apiEmpowerEnterpriseReList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReList> {
+): AxiosPromise<ApiResponseGuanLianGongSiLieBiao> {
   return Http.get('/api/empower/enterpriseRe/list', data, config)
 }
 
@@ -215,7 +201,7 @@ export function apiEmpowerEnterpriseReList(
 export function apiEmpowerEnterpriseReListRoleList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReListRoleList> {
+): AxiosPromise<ApiResponseListRoleInfo> {
   return Http.get('/api/empower/enterpriseRe/listRoleList', data, config)
 }
 
@@ -223,7 +209,7 @@ export function apiEmpowerEnterpriseReListRoleList(
 export function apiEmpowerEnterpriseRePageEmployeeList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseRePageEmployeeList> {
+): AxiosPromise<ApiResponseComPageEpEmployeeResp> {
   return Http.get('/api/empower/enterpriseRe/pageEmployeeList', data, config)
 }
 
@@ -231,7 +217,7 @@ export function apiEmpowerEnterpriseRePageEmployeeList(
 export function apiEmpowerEnterpriseReReReEntTree(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReReReEntTree> {
+): AxiosPromise<ApiResponseListEpEntTreeResp> {
   return Http.get('/api/empower/enterpriseRe/re/reEntTree', data, config)
 }
 
@@ -239,7 +225,7 @@ export function apiEmpowerEnterpriseReReReEntTree(
 export function apiEmpowerEnterpriseReReEntTree(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReReEntTree> {
+): AxiosPromise<ApiResponseListEpEntTreeResp> {
   return Http.get('/api/empower/enterpriseRe/reEntTree', data, config)
 }
 
@@ -247,7 +233,7 @@ export function apiEmpowerEnterpriseReReEntTree(
 export function apiEmpowerEnterpriseReRefreshApplyRe(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReRefreshApplyRe> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.get('/api/empower/enterpriseRe/refreshApplyRe', data, config)
 }
 
@@ -255,7 +241,7 @@ export function apiEmpowerEnterpriseReRefreshApplyRe(
 export function apiEmpowerEnterpriseReRelationCancel(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReRelationCancel> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.get('/api/empower/enterpriseRe/relation/cancel', data, config)
 }
 
@@ -263,7 +249,7 @@ export function apiEmpowerEnterpriseReRelationCancel(
 export function apiEmpowerEnterpriseReRelationRefresh(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReRelationRefresh> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.get('/api/empower/enterpriseRe/relation/refresh', data, config)
 }
 
@@ -271,7 +257,7 @@ export function apiEmpowerEnterpriseReRelationRefresh(
 export function apiEmpowerEnterpriseReScanGetOrgInfo(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReScanGetOrgInfo> {
+): AxiosPromise<ApiResponseScanReQrResp> {
   return Http.get('/api/empower/enterpriseRe/scan/getOrgInfo', data, config)
 }
 
@@ -279,7 +265,7 @@ export function apiEmpowerEnterpriseReScanGetOrgInfo(
 export function apiEmpowerEnterpriseReSendEmpowerSms(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReSendEmpowerSms> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.post('/api/empower/enterpriseRe/sendEmpowerSms', data, config)
 }
 
@@ -287,7 +273,7 @@ export function apiEmpowerEnterpriseReSendEmpowerSms(
 export function apiEmpowerEnterpriseReUpEntReSetEnterpriseId(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiEmpowerEnterpriseReUpEntReSetEnterpriseId> {
+): AxiosPromise<ApiResponseVoid> {
   return Http.post(
     '/api/empower/enterpriseRe/upEntReSet/${enterpriseId}',
     data,

@@ -1,18 +1,16 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiForwardCheckAndCreate,
-  ResOfApiForwardList,
-  ResOfApiForwardSearch,
-  ResOfForwardList,
-  ResOfForwardSearch,
+  ApiResponseHuiHua,
+  ApiResponseListForwardListResp,
+  ApiResponseComPageCommonSearchResp,
 } from './_interfaces'
 
 /** 转发 创建会话/发起聊天/进入群聊 */
 export function apiForwardCheckAndCreate(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiForwardCheckAndCreate> {
+): AxiosPromise<ApiResponseHuiHua> {
   return Http.post('/api/forward/checkAndCreate', data, config)
 }
 
@@ -20,7 +18,7 @@ export function apiForwardCheckAndCreate(
 export function apiForwardList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiForwardList> {
+): AxiosPromise<ApiResponseListForwardListResp> {
   return Http.post('/api/forward/list', data, config)
 }
 
@@ -28,7 +26,7 @@ export function apiForwardList(
 export function apiForwardSearch(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiForwardSearch> {
+): AxiosPromise<ApiResponseComPageCommonSearchResp> {
   return Http.post('/api/forward/search', data, config)
 }
 
@@ -36,7 +34,7 @@ export function apiForwardSearch(
 export function forwardList(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfForwardList> {
+): AxiosPromise<ApiResponseListForwardListResp> {
   return Http.post('/forward/list', data, config)
 }
 
@@ -44,6 +42,6 @@ export function forwardList(
 export function forwardSearch(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfForwardSearch> {
+): AxiosPromise<ApiResponseComPageCommonSearchResp> {
   return Http.post('/forward/search', data, config)
 }

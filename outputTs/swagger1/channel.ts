@@ -1,17 +1,16 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
-  ResOfApiChannelEmployeeComLoginAndBind,
-  ResOfApiChannelTenantConfigAdd,
-  ResOfApiChannelTenantConfigDetail,
-  ResOfApiChannelTenantConfigUpdate,
+  ApiResponseComLoginResp,
+  ApiResponse,
+  ApiResponseChannelAppTenantConfigResp,
 } from './_interfaces'
 
 /** 登录绑定 */
 export function apiChannelEmployeeComLoginAndBind(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiChannelEmployeeComLoginAndBind> {
+): AxiosPromise<ApiResponseComLoginResp> {
   return Http.post('/api/channel/employee/comLoginAndBind', data, config)
 }
 
@@ -19,7 +18,7 @@ export function apiChannelEmployeeComLoginAndBind(
 export function apiChannelTenantConfigAdd(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiChannelTenantConfigAdd> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/channel/tenantConfig/add', data, config)
 }
 
@@ -27,7 +26,7 @@ export function apiChannelTenantConfigAdd(
 export function apiChannelTenantConfigDetail(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiChannelTenantConfigDetail> {
+): AxiosPromise<ApiResponseChannelAppTenantConfigResp> {
   return Http.get('/api/channel/tenantConfig/detail', data, config)
 }
 
@@ -35,6 +34,6 @@ export function apiChannelTenantConfigDetail(
 export function apiChannelTenantConfigUpdate(
   data: any,
   config?: AxiosRequestConfig
-): AxiosPromise<ResOfApiChannelTenantConfigUpdate> {
+): AxiosPromise<ApiResponse> {
   return Http.post('/api/channel/tenantConfig/update', data, config)
 }
