@@ -236,7 +236,7 @@ export interface ApiResponseListBuMenXinXiDeptResp {
 }
 export interface ApiResponseMapstringSearchMapResp {
   code: number
-  data: object
+  data: SearchMapResp
   msg: string
   success: boolean
   timestamp: number
