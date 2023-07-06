@@ -41,7 +41,7 @@ apiList.forEach(item => {
         } 
       })
       .catch(() => {
-        console.log('\x1B[31m%s\x1B[0m', '天! swagger 又挂了！！👿')
+        console.log('\x1B[31m%s\x1B[0m', 'swagger地址访问异常👿')
       })
   } else {
     // 从本地读取数据
@@ -65,12 +65,13 @@ function parseData(
 ) {
   const apiList = genApi(jsonData.paths, ignoreReg)
   const interfaces = genInterface(jsonData.definitions || {}, { excludeBigModel })
-  writeDeinitionToFile(interfaces, absOutputDir)
+
   const count = apiList.reduce((pre, cur) => {
     return pre + cur.apis.length
   }, 0)
   console.log(`总共 ${count} 个接口生成中...`)
-  writeToFile(apiList, { absOutputDir, prefix })
+  writeApiToFile(apiList, { absOutputDir, prefix })
+  writeInterfaceToFile(interfaces, absOutputDir)
 }
 
 function handlePaths(paths, ignoreReg) {
@@ -91,14 +92,15 @@ function handlePaths(paths, ignoreReg) {
       // 如果存在出参模型
       if (resScheme?.originalRef) {
         outputInterface = handleInterfaceName(resScheme.originalRef)
-        // outputInterface = `ResOf${upperCaseFirseLetter(name)}`
-        // outputInterfaceRelatedDefinition(resScheme.originalRef, outputInterface)
       }
       // 出参是个简单类型
       else if (resScheme?.type) {
         outputInterface = handleJsType(resScheme.type)
+        if(!outputInterface){
+          console.log('该类型没有对应转化对象 =>', resScheme.type)
+        }
       }else{
-        // console.log('该接口不存在出参')
+        console.log('该接口不存在出参')
       }
       const apiModel = {
         name,
@@ -116,10 +118,10 @@ function handlePaths(paths, ignoreReg) {
 }
 
 /**
- * 写入目标目录
+ * 接口写入
  * @param {*} apiList  [{namespace:"", apis:[]}]
  */
-function writeToFile(apiList, options) {
+function writeApiToFile(apiList, options) {
   const outputDir = options.absOutputDir
   const prefix = options.prefix
   apiList.forEach(item => {
@@ -127,12 +129,17 @@ function writeToFile(apiList, options) {
     let apiStr = ''
     const namespace = item.namespace
     let fileUsedInterface = [] // 当前文件用到的 interface
-    item.apis.forEach(api => {
+    item.apis.forEach((api) => {
       const { name, url, method, summary, parameters, outputInterface } = api
-      if (!fileUsedInterface.includes(outputInterface)) {
+      // 存在且不是简单类型
+      if (
+        outputInterface &&
+        !fileUsedInterface.includes(outputInterface) &&
+        !handleJsType(outputInterface)
+      ) {
         fileUsedInterface.push(outputInterface)
       }
-      const _outputInterface=outputInterface?`<${outputInterface}>`:''
+      const _outputInterface = outputInterface ? `<${outputInterface}>` : ''
 
       // 有入参
       if (parameters && parameters.length) {
@@ -154,7 +161,7 @@ export function ${name}(config?: AxiosRequestConfig):AxiosPromise${_outputInterf
 
     // interface 引入
     let importStr = ''
-    if (needImportInterface(fileUsedInterface)) {
+    if (fileUsedInterface.length) {
       importStr += `import {`
       fileUsedInterface.forEach((item, index) => {
         importStr += index === 0 ? `${item}` : `,${item}`
@@ -162,7 +169,7 @@ export function ${name}(config?: AxiosRequestConfig):AxiosPromise${_outputInterf
       importStr += `} from './_interfaces'`
     }
 
-    fs.access(outputDir, err => {
+    fs.access(outputDir, (err) => {
       if (err) {
         // 若目标目录不存在，则创建
         fs.mkdirSync(outputDir, { recursive: true })
@@ -172,25 +179,15 @@ export function ${name}(config?: AxiosRequestConfig):AxiosPromise${_outputInterf
       fs.writeFileSync(targetFile, `${tplStr}\n${importStr}\n${apiStr}`)
 
       // 格式化
-      console.log(`格式化 ${targetFile}`)
+      // console.log(`格式化 ${targetFile}`)
       exec(`prettier --write ${targetFile}`)
     })
   })
 }
 
-/** 判断是否需要引入interface */
-function needImportInterface(fileUsedInterface = []) {
-  let has = false
-  fileUsedInterface.forEach((usedInterfaceName) => {
-    if (!has) {
-      has = !handleJsType(usedInterfaceName)
-    }
-  })
-  return has
-}
 
-/** 写入所有 interface */
-function writeDeinitionToFile(definitions, absOutputDir) {
+/** interface 写入 */
+function writeInterfaceToFile(definitions, absOutputDir) {
   let str = ''
   definitions.forEach(item => {
     if (item.type === 'object') {

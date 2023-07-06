@@ -61,20 +61,15 @@ function getMethod(obj) {
 }
 
 /**
- * 处理一些奇奇怪怪的 interface
- * 如： ApiResponse«List«群成员信息对象GroupMemberResp»»， 返回第一个 « 符号左边的内容， 最终处理处理成 "ApiResponse"
- * 再如： 历史消息-MessageHistoryReq , 去除特殊字符 - , 并将中文转化成拼音，最终处理成 "LiShiXiaoXiMessageHistoryReq"
- * 更奇葩的："个人认证信息 - 开户信息,新增时只需要传入individualBankCardNo、individualReservedPhoneNo、individualVocation，其他信息从redis缓存中获取"
+ * 处理一些奇奇怪怪的 interface，去除特殊字符，并将中文转英文
+ * 如： ApiResponse«List«群成员信息对象GroupMemberResp»»， 将被处理成 ApiResponseQunChengYuanXinXiDuiXiangGroupMemberResp
  */
 function handleInterfaceName(originKey) {
   let str = originKey
-  str = str.replace(/«|»/g, '') // 去除 « 和 »
-  str = str.replace(/-/g, '') // 去除短杠 -
-  str = str.replace(/\[|\]/g, '') // 去除中括号 []
-  str = str.replace(/\(|\)/g, '') // 去除圆括号 ()
-  str = str.replace(/\//g, '') // 去除斜杠 /
+  str = str.replace(/\[|\]|\(|\)|«|»/g, '') // 去除各种括号 [] () «»
+  str = str.replace(/-|\//g, '') // 去除短杠 - 斜杠 /
+  str = str.replace(/(,|，|、|；|;)/g, '') // 去除中英文逗号，顿号，分号
   str = str.replace(/\s/g, '') // 去除空格
-  str = str.replace(/(,|，|、)/g, '') // 去除中英文逗号，顿号
   // 汉字转拼音 历史消息=>LiShiXiaoXi
   if (hasChinese(str)) {
     str = pinyin.getFullChars(str)
@@ -96,6 +91,7 @@ function handleJsType(origintype) {
     integer: 'number',
     string: 'string',
     boolean: 'boolean',
+    Boolean: 'boolean',
     number: 'number',
     array: '[]',
     object: 'object',
@@ -103,7 +99,6 @@ function handleJsType(origintype) {
     Int32: 'number',
     String: 'string',
     Date: 'string',
-    Boolean: 'boolean',
     Object: 'object',
     file: 'File',
   }

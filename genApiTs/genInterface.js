@@ -4,7 +4,6 @@ const { handleInterfaceName, hasChinese, handleJsType } = require('./utils')
 /** 入参格式
  * "ApiResponse«AddGroupResp»": {
  *    "type": "object",
- *    "relationInterface":[ "ResOfGetUserList", "ResOfCommonSearch" ]
  *    "properties": {
  *     "code": { "type": "integer", "format": "int32" },
  *     "data": { "$ref": "#/definitions/AddGroupResp", "originalRef": "AddGroupResp" },
@@ -35,9 +34,12 @@ function genInterface(definitions, { excludeBigModel }) {
     // if (interfaceName === excludeBigModel) return
     const exist = defs.find((item) => item.name === interfaceName)
     // if (!exist) {
+    const additionalProperties = obj.type === 'object' && obj.additionalProperties?.originalRef
     defs.push({
       name: interfaceName,
-      type: handleItemsType(obj) + handleJsType(obj.type),
+      type: additionalProperties
+        ? handleInterfaceName(additionalProperties)
+        : handleItemsType(obj) + handleJsType(obj.type),
       properties,
     })
     // }
@@ -56,9 +58,12 @@ function handleProperties(properties) {
   const arr = []
   Object.keys(properties).forEach((key) => {
     const obj = properties[key]
+    const additionalProperties = obj.type === 'object' && obj.additionalProperties?.originalRef
     arr.push({
       name: key,
-      type: handleItemsType(obj) + handleJsType(obj.type),
+      type: additionalProperties
+        ? handleInterfaceName(additionalProperties)
+        : handleItemsType(obj) + handleJsType(obj.type),
       description: obj.description || '',
     })
   })
