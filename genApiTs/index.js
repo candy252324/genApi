@@ -65,7 +65,6 @@ function parseData(
 ) {
   const apiList = genApi(jsonData.paths, ignoreReg)
   const interfaces = genInterface(jsonData.definitions || {}, { excludeBigModel })
-
   const count = apiList.reduce((pre, cur) => {
     return pre + cur.apis.length
   }, 0)
@@ -73,6 +72,7 @@ function parseData(
   writeApiToFile(apiList, { absOutputDir, prefix })
   writeInterfaceToFile(interfaces, absOutputDir)
 }
+
 
 /**
  * 接口写入
@@ -88,7 +88,7 @@ function writeApiToFile(apiList, options) {
     let fileUsedInterface = [] // 当前文件用到的 interface
     item.apis.forEach((api) => {
       const { name, url, method, summary, parameters, outputInterface } = api
-      // 存在且不是简单类型
+      // 出参存在且不是简单类型
       if (
         outputInterface &&
         !fileUsedInterface.includes(outputInterface) &&
@@ -96,13 +96,22 @@ function writeApiToFile(apiList, options) {
       ) {
         fileUsedInterface.push(outputInterface)
       }
+      // 入参存在且不是简单类型
+       if (
+         parameters && 
+         parameters!=='any' &&
+         !fileUsedInterface.includes(parameters) &&
+         !handleJsType(parameters)
+       ) {
+         fileUsedInterface.push(parameters)
+       }
       const _outputInterface = outputInterface ? `<${outputInterface}>` : ''
 
       // 有入参
       if (parameters && parameters.length) {
         apiStr += `
 /** ${summary} */
-export function ${name}  (data:any, config?: AxiosRequestConfig) :AxiosPromise${_outputInterface}{
+export function ${name}  (data:${parameters}, config?: AxiosRequestConfig) :AxiosPromise${_outputInterface}{
   return ${httpFn}.${method}('${prefix}${url}', data, config)
 }\n`
       }

@@ -20,7 +20,6 @@ function genInterface(definitions, { excludeBigModel }) {
    *    properties:[{
    *      name:"",
    *      type:"",        // 类型，如 string
-   *      type:"",        // 类型，如 string
    *      description:""  // 注释
    *    }]
    *  }]

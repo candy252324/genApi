@@ -19,7 +19,7 @@ function genApi(paths, ignoreReg) {
       const namespace = getNamespace(url)
       const method = getMethod(obj)
       const summary = obj[method].summary // 接口注释
-      const parameters = obj[method].parameters // 入参
+      const parameters = getParameters(obj[method].parameters)  // 入参
       const idx = apiList.findIndex((item) => item.namespace === namespace)
       const resScheme = obj[method]?.responses['200']?.schema // 出参模型
       let outputInterface = '' // 出参 interface
@@ -48,6 +48,38 @@ function genApi(paths, ignoreReg) {
   return apiList
 }
 
+function getParameters(parameters) {
+  // 入参只处理了这一种情况
+  // "parameters": [
+  //   {
+  //     "in": "body",
+  //     "name": "req",
+  //     "description": "req",
+  //     "required": true,
+  //     "schema": {
+  //       "$ref": "#/definitions/AddBusinessEnterpriseReq",
+  //       "originalRef": "AddBusinessEnterpriseReq"
+  //     }
+  //   }
+  // ],
+  // 有入参
+  if(parameters && parameters.length){
+    if (
+      parameters.length === 1 &&
+      parameters[0].in === 'body' &&
+      parameters[0].schema?.originalRef
+    ) {
+      return handleInterfaceName(parameters[0].schema?.originalRef)
+    } else {
+      return 'any'
+    }
+  }
+  // 没入参
+  else{
+    return ''
+  }
+
+}
 module.exports = {
   genApi,
 }
