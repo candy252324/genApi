@@ -33,10 +33,13 @@ function genInterface(definitions, { excludeBigModel }) {
   Object.keys(definitions).forEach((key) => {
     const obj = definitions[key]
     const properties = handleProperties(obj.properties || {})
+    // 不生成最外层那层
      if (excludeBigModel) {
-       key=removeBigModel(key)
+       key = removeBigModel(key, excludeBigModel)
      }
     const interfaceName = handleInterfaceName(key)
+    // 不存在或者是简单类型
+    if (!interfaceName || handleJsType(interfaceName)) return
     const exist = defs.find((item) => item.name === interfaceName)
     // if (!exist) {
     const additionalProperties = obj.type === 'object' && obj.additionalProperties?.originalRef
