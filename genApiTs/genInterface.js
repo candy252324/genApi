@@ -1,5 +1,10 @@
 const pinyin = require('js-pinyin')
-const { handleInterfaceName, hasChinese, handleJsType } = require('./utils')
+const {
+  handleInterfaceName,
+  hasChinese,
+  handleJsType,
+  removeBigModel,
+} = require('./utils')
 
 /** 入参格式
  * "ApiResponse«AddGroupResp»": {
@@ -28,9 +33,10 @@ function genInterface(definitions, { excludeBigModel }) {
   Object.keys(definitions).forEach((key) => {
     const obj = definitions[key]
     const properties = handleProperties(obj.properties || {})
+     if (excludeBigModel) {
+       key=removeBigModel(key)
+     }
     const interfaceName = handleInterfaceName(key)
-    // 特殊类型，不写入，cjh todo
-    // if (interfaceName === excludeBigModel) return
     const exist = defs.find((item) => item.name === interfaceName)
     // if (!exist) {
     const additionalProperties = obj.type === 'object' && obj.additionalProperties?.originalRef

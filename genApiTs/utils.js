@@ -65,6 +65,7 @@ function getMethod(obj) {
  * 如： ApiResponse«List«群成员信息对象GroupMemberResp»»， 将被处理成 ApiResponseQunChengYuanXinXiDuiXiangGroupMemberResp
  */
 function handleInterfaceName(originKey) {
+  if (!originKey) return ''
   let str = originKey
   str = str.replace(/\[|\]|\(|\)|«|»/g, '') // 去除各种括号 [] () «»
   str = str.replace(/-|\//g, '') // 去除短杠 - 斜杠 /
@@ -105,6 +106,18 @@ function handleJsType(origintype) {
   return typeEnmu[origintype] || ''
 }
 
+// ApiResponse«AddBusinessResp«UserData»» 处理成 AddBusinessResp«UserData»
+function removeBigModel(originalRef,excludeBigModel) {
+  if (originalRef === excludeBigModel) {
+    return ''
+  }
+  if (originalRef.startsWith(`${excludeBigModel}«`)) {
+    return originalRef.replace(`${excludeBigModel}«`, '').replace(/»$/g, '')
+  }else {
+    return originalRef
+  }
+}
+
 module.exports = {
   getUrl,
   getApiName,
@@ -114,4 +127,5 @@ module.exports = {
   upperCaseFirseLetter,
   hasChinese,
   handleJsType,
+  removeBigModel,
 }

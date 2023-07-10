@@ -6,9 +6,10 @@ const {
   upperCaseFirseLetter,
   handleInterfaceName,
   handleJsType,
+  removeBigModel,
 } = require('./utils.js') 
 /** 生成 api */
-function genApi(paths, ignoreReg) {
+function genApi(paths, { ignoreReg, excludeBigModel }) {
   const apiList = [] // [{namespace:"", apis:[]}]
   for (const key in paths) {
     const isIgnore = ignoreReg && ignoreReg.test(key) // 不需要生成的 api
@@ -19,13 +20,20 @@ function genApi(paths, ignoreReg) {
       const namespace = getNamespace(url)
       const method = getMethod(obj)
       const summary = obj[method].summary // 接口注释
-      const parameters = getParameters(obj[method].parameters)  // 入参
+      const parameters = getParameters(obj[method].parameters) // 入参
       const idx = apiList.findIndex((item) => item.namespace === namespace)
       const resScheme = obj[method]?.responses['200']?.schema // 出参模型
+     
       let outputInterface = '' // 出参 interface
       // 如果存在出参模型
       if (resScheme?.originalRef) {
-        outputInterface = handleInterfaceName(resScheme.originalRef)
+        // 不要生成最外层那层
+         if (excludeBigModel) {
+          refWithoutBigModel = removeBigModel(resScheme?.originalRef,excludeBigModel)
+          outputInterface = handleInterfaceName(refWithoutBigModel)
+         }else{
+           outputInterface = handleInterfaceName(resScheme.originalRef)
+        }
       }
       // 出参是个简单类型
       else if (resScheme?.type) {

@@ -63,7 +63,7 @@ function parseData(
   jsonData,
   { absOutputDir, ignoreReg, prefix, excludeBigModel }
 ) {
-  const apiList = genApi(jsonData.paths, ignoreReg)
+  const apiList = genApi(jsonData.paths, { ignoreReg, excludeBigModel })
   const interfaces = genInterface(jsonData.definitions || {}, { excludeBigModel })
   const count = apiList.reduce((pre, cur) => {
     return pre + cur.apis.length
