@@ -3,9 +3,14 @@ import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponseboolean,
   ApiResponseComLoginResp,
+  AliMpLoginReq,
   ApiResponseVoid,
+  ComLoginReq,
   ApiResponsestring,
   ApiResponseRegisterResultResp,
+  ZhuCeQingQiu,
+  ZhaoHuiMiMa,
+  SetPassWordReq,
 } from './_interfaces'
 
 /** 查询用户密码未设置是否提醒 */
@@ -17,7 +22,7 @@ export function apiLoginRegisterJudgePassWordIsSet(
 
 /** 支付小程序手机号授权登录 */
 export function apiLoginRegisterAliMpAutoLogin(
-  data: any,
+  data: AliMpLoginReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComLoginResp> {
   return Http.post('/api/loginRegister/aliMpAutoLogin', data, config)
@@ -49,7 +54,7 @@ export function apiLoginRegisterClearTimeLimitVerificationEnum(
 
 /** 通用登录 */
 export function apiLoginRegisterComLogin(
-  data: any,
+  data: ComLoginReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComLoginResp> {
   return Http.post('/api/loginRegister/comLogin', data, config)
@@ -72,7 +77,7 @@ export function apiLoginRegisterPasswordCry(
 
 /** 注册用户-手机号密码注册 */
 export function apiLoginRegisterRegister(
-  data: any,
+  data: ZhuCeQingQiu,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseRegisterResultResp> {
   return Http.post('/api/loginRegister/register', data, config)
@@ -80,7 +85,7 @@ export function apiLoginRegisterRegister(
 
 /** 找回密码 */
 export function apiLoginRegisterRetrievePassword(
-  data: any,
+  data: ZhaoHuiMiMa,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponsestring> {
   return Http.post('/api/loginRegister/retrievePassword', data, config)
@@ -100,7 +105,7 @@ export function apiLoginRegisterSendPhoneValidateCodeVerificationEnum(
 
 /** 设置密码 */
 export function apiLoginRegisterSetPassWord(
-  data: any,
+  data: SetPassWordReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/loginRegister/setPassWord', data, config)

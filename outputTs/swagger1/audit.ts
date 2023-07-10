@@ -2,13 +2,14 @@ import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponseVoid,
+  ShouQuanShenHe,
   ApiResponseShouQuanShenHe,
   ApiResponseComPageShouQuanShenHeLieBiao,
 } from './_interfaces'
 
 /** 执行审核 */
 export function apiAuditAuthExecute(
-  data: any,
+  data: ShouQuanShenHe,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseVoid> {
   return Http.put('/api/audit/auth/execute', data, config)

@@ -2,13 +2,15 @@ import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponseboolean,
+  FaPiaoGuanLi,
   ApiResponseJSONArray,
   ApiResponseComPageFaPiaoGuanLi,
+  PageInvoiceReq,
 } from './_interfaces'
 
 /** 添加开票 */
 export function apiInvoiceAdd(
-  data: any,
+  data: FaPiaoGuanLi,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/invoice/add', data, config)
@@ -32,7 +34,7 @@ export function apiInvoiceDel(
 
 /** 分页查询开票抬头-查租户中心录入的 */
 export function apiInvoicePage(
-  data: any,
+  data: PageInvoiceReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComPageFaPiaoGuanLi> {
   return Http.post('/api/invoice/page', data, config)
@@ -40,7 +42,7 @@ export function apiInvoicePage(
 
 /** 更新开票 */
 export function apiInvoiceUpdate(
-  data: any,
+  data: FaPiaoGuanLi,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/invoice/update', data, config)

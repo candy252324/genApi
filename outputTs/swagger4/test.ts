@@ -3,6 +3,7 @@ import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponseobject,
   ApiResponse,
+  PostDTO,
   ApiResponsestring,
 } from './_interfaces'
 
@@ -51,7 +52,7 @@ export function apiTestLogin(
 
 /** post */
 export function apiTestPost(
-  data: any,
+  data: PostDTO,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseobject> {
   return Http.post('/api/test/post', data, config)

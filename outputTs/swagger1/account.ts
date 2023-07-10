@@ -3,8 +3,11 @@ import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponseQueryAccInfoResp,
   ApiResponsestring,
+  UserJoinEnterpriseReq,
   ApiResponseboolean,
+  ChuangJianQiYe,
   ApiResponseComPageQiYeChaXun,
+  FenYeChaXunSuoYouQiYe,
 } from './_interfaces'
 
 /** 账号信息 */
@@ -16,7 +19,7 @@ export function apiAccountAccQueryAcc(
 
 /** 加入公司 */
 export function apiAccountEnterpriseAddEnterprise(
-  data: any,
+  data: UserJoinEnterpriseReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponsestring> {
   return Http.post('/api/account/enterprise/addEnterprise', data, config)
@@ -24,7 +27,7 @@ export function apiAccountEnterpriseAddEnterprise(
 
 /** 创建企业 */
 export function apiAccountEnterpriseCreateEnterprise(
-  data: any,
+  data: ChuangJianQiYe,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/account/enterprise/createEnterprise', data, config)
@@ -39,7 +42,7 @@ export function apiAccountEnterpriseListUserEnterprise(
 
 /** 分页查询全部企业列表 */
 export function apiAccountEnterprisePageAllEnterprise(
-  data: any,
+  data: FenYeChaXunSuoYouQiYe,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComPageQiYeChaXun> {
   return Http.post('/api/account/enterprise/pageAllEnterprise', data, config)

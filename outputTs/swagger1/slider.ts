@@ -1,10 +1,14 @@
 import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
-import { ApiResponseboolean, ApiResponseMapstringobject } from './_interfaces'
+import {
+  ApiResponseboolean,
+  AddVerificationImageReq,
+  ApiResponseMapstringobject,
+} from './_interfaces'
 
 /** 添加验证图片 */
 export function apiSliderAddImage(
-  data: any,
+  data: AddVerificationImageReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/slider/addImage', data, config)

@@ -3,6 +3,7 @@ import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponseDescribeFaceVerifyResponse,
   ApiResponseOcrIdCardBackResp,
+  OcrImageReq,
   ApiResponseOcrIdCardFrontResp,
   ApiResponseVerificationResp,
   ApiResponseGeRenRenZhengXinXi,
@@ -23,7 +24,7 @@ export function apiPersonCertificationDescribeFaceVerify(
 
 /** ocr身份证背面识别，传入base64或图片URL地址 */
 export function apiPersonCertificationIdCardBack(
-  data: any,
+  data: OcrImageReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseOcrIdCardBackResp> {
   return Http.post('/api/personCertification/idCardBack', data, config)
@@ -31,7 +32,7 @@ export function apiPersonCertificationIdCardBack(
 
 /** ocr身份证正面识别，传入base64或图片URL地址 */
 export function apiPersonCertificationIdCardFront(
-  data: any,
+  data: OcrImageReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseOcrIdCardFrontResp> {
   return Http.post('/api/personCertification/idCardFront', data, config)

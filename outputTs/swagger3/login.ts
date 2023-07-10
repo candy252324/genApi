@@ -2,13 +2,14 @@ import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponseDengLuXiangYingShiTi,
+  ComLoginReq,
   ApiResponse,
   ApiResponsestring,
 } from './_interfaces'
 
 /** 通用登录 */
 export function apiLoginDoLogin(
-  data: any,
+  data: ComLoginReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseDengLuXiangYingShiTi> {
   return Http.post('/api/login/doLogin', data, config)
@@ -32,7 +33,7 @@ export function apiLoginSendPhoneValidateCode(
 
 /** 通用登录 */
 export function loginDoLogin(
-  data: any,
+  data: ComLoginReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseDengLuXiangYingShiTi> {
   return Http.post('/login/doLogin', data, config)

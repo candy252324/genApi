@@ -2,13 +2,16 @@ import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponseComPageQianYueJiLuFenYeresponse,
+  QianYueJiLuFenYerequest,
   ApiResponseVoid,
+  JieChuQianYuerequest,
   ApiResponseQianYueJieGuoresponse,
+  QianYueRequest,
 } from './_interfaces'
 
 /** 签约记录 */
 export function apiSigningPageList(
-  data: any,
+  data: QianYueJiLuFenYerequest,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComPageQianYueJiLuFenYeresponse> {
   return Http.post('/api/signing/pageList', data, config)
@@ -16,7 +19,7 @@ export function apiSigningPageList(
 
 /** 解除关联 */
 export function apiSigningRemove(
-  data: any,
+  data: JieChuQianYuerequest,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseVoid> {
   return Http.post('/api/signing/remove', data, config)
@@ -24,7 +27,7 @@ export function apiSigningRemove(
 
 /** 新增签约 */
 export function apiSigningSave(
-  data: any,
+  data: QianYueRequest,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseQianYueJieGuoresponse> {
   return Http.post('/api/signing/save', data, config)

@@ -2,7 +2,10 @@ import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponse,
+  EmployeeAddReq,
+  ShuJuYiZhiXingErCiQueRenCanShu,
   ApiResponseListTreelong,
+  EmployeeUpReq,
   ApiResponseListExtDeptResp,
   ApiResponseEmployeeAllInfoResp,
   ApiResponseComPageEmployeeComplexResp,
@@ -13,7 +16,7 @@ import {
 
 /** 新增员工 */
 export function apiEmployeeAdd(
-  data: any,
+  data: EmployeeAddReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/employee/add', data, config)
@@ -29,7 +32,7 @@ export function apiEmployeeChangeStatus(
 
 /** 确认删除员工 */
 export function apiEmployeeDelConfirm(
-  data: any,
+  data: ShuJuYiZhiXingErCiQueRenCanShu,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/employee/del/confirm', data, config)
@@ -53,7 +56,7 @@ export function apiEmployeeDeptTreeCount(
 
 /** 修改员工 */
 export function apiEmployeeEdit(
-  data: any,
+  data: EmployeeUpReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/employee/edit', data, config)
@@ -123,7 +126,7 @@ export function apiEmployeeStopStartEmployeeId(
 
 /** 确认停用员工-走数据一致性流程 */
 export function apiEmployeeStopEmployeeConfirm(
-  data: any,
+  data: ShuJuYiZhiXingErCiQueRenCanShu,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseVoid> {
   return Http.post('/api/employee/stopEmployee/confirm', data, config)

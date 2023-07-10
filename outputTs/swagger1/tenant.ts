@@ -4,6 +4,7 @@ import {
   ApiResponseZuHuXinXi,
   ApiResponseListZuHuXinXi,
   ApiResponseboolean,
+  QuDaoQiYeBangDingQingQiuRuCan,
 } from './_interfaces'
 
 /** 获取当前的租户信息 */
@@ -22,7 +23,7 @@ export function apiTenantAcquireTenantList(
 
 /** 渠道企业解绑租户 */
 export function apiTenantChannelUnbind(
-  data: any,
+  data: QuDaoQiYeBangDingQingQiuRuCan,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/tenant/channel/unbind', data, config)

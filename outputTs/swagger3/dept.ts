@@ -2,13 +2,14 @@ import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponseListBuMenXinXiDeptResp,
+  BuMenLieBiaoDeptListReq,
   ApiResponseListUserListAllTenantResp,
   ApiResponseComPageBuMenYongHuLieBiaoDeptUserResp,
 } from './_interfaces'
 
 /** 获取子部门列表+组织架构imgrouid */
 export function apiDeptList(
-  data: any,
+  data: BuMenLieBiaoDeptListReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseListBuMenXinXiDeptResp> {
   return Http.post('/api/dept/list', data, config)
@@ -40,7 +41,7 @@ export function apiDeptUserPage(
 
 /** 获取子部门列表+组织架构imgrouid */
 export function deptList(
-  data: any,
+  data: BuMenLieBiaoDeptListReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseListBuMenXinXiDeptResp> {
   return Http.post('/dept/list', data, config)

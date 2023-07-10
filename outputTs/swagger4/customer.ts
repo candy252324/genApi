@@ -2,19 +2,29 @@ import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponseCustomerEnterpriseAddResp,
+  CustomerEnterpriseAddReq,
   ApiResponseCustomerEnterpriseDetailResp,
   ApiResponseComPageCustomerEnterpriseInfoResp,
+  PageCustomerEnterpriseReq,
   ApiResponseComPageSouSuoQiYeKeHuresponse,
+  SouSuoQiYeKeHurequest,
   ApiResponse,
+  CustomerEnterpriseUpReq,
   ApiResponseCustomerPersonAddResp,
+  CustomerPersonAddReq,
+  CustomerPersonCertificateReq,
+  CustomerPersonTitleReq,
   ApiResponseCustomerPersonDetailResp,
   ApiResponseComPageCustomerPersonInfoResp,
+  PageCustomerPersonReq,
   ApiResponseComPageSouSuoRenCaiKeHuresponse,
+  SouSuoRenCaiKeHurequest,
+  CustomerPersonUpReq,
 } from './_interfaces'
 
 /** 企业客户新增 */
 export function apiCustomerEnterpriseAdd(
-  data: any,
+  data: CustomerEnterpriseAddReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseCustomerEnterpriseAddResp> {
   return Http.post('/api/customer/enterprise/add', data, config)
@@ -30,7 +40,7 @@ export function apiCustomerEnterpriseDetail(
 
 /** 企业客户分页列表 */
 export function apiCustomerEnterprisePageList(
-  data: any,
+  data: PageCustomerEnterpriseReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComPageCustomerEnterpriseInfoResp> {
   return Http.post('/api/customer/enterprise/pageList', data, config)
@@ -38,7 +48,7 @@ export function apiCustomerEnterprisePageList(
 
 /** 搜索企业客户(下拉框数据) */
 export function apiCustomerEnterpriseSampleList(
-  data: any,
+  data: SouSuoQiYeKeHurequest,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComPageSouSuoQiYeKeHuresponse> {
   return Http.post('/api/customer/enterprise/sampleList', data, config)
@@ -46,7 +56,7 @@ export function apiCustomerEnterpriseSampleList(
 
 /** 企业客户编辑 */
 export function apiCustomerEnterpriseUpdate(
-  data: any,
+  data: CustomerEnterpriseUpReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/customer/enterprise/update', data, config)
@@ -54,7 +64,7 @@ export function apiCustomerEnterpriseUpdate(
 
 /** 个人客户新增 */
 export function apiCustomerPersonAdd(
-  data: any,
+  data: CustomerPersonAddReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseCustomerPersonAddResp> {
   return Http.post('/api/customer/person/add', data, config)
@@ -62,7 +72,7 @@ export function apiCustomerPersonAdd(
 
 /** 新增执业资格证 */
 export function apiCustomerPersonAddCertificate(
-  data: any,
+  data: CustomerPersonCertificateReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/customer/person/addCertificate', data, config)
@@ -70,7 +80,7 @@ export function apiCustomerPersonAddCertificate(
 
 /** 新增职称 */
 export function apiCustomerPersonAddTitle(
-  data: any,
+  data: CustomerPersonTitleReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/customer/person/addTitle', data, config)
@@ -102,7 +112,7 @@ export function apiCustomerPersonDetail(
 
 /** 个人客户分页列表 */
 export function apiCustomerPersonPageList(
-  data: any,
+  data: PageCustomerPersonReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComPageCustomerPersonInfoResp> {
   return Http.post('/api/customer/person/pageList', data, config)
@@ -110,7 +120,7 @@ export function apiCustomerPersonPageList(
 
 /** 搜索人才客户(下拉框数据) */
 export function apiCustomerPersonSampleList(
-  data: any,
+  data: SouSuoRenCaiKeHurequest,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComPageSouSuoRenCaiKeHuresponse> {
   return Http.post('/api/customer/person/sampleList', data, config)
@@ -118,7 +128,7 @@ export function apiCustomerPersonSampleList(
 
 /** 编辑个人客户 */
 export function apiCustomerPersonUpdate(
-  data: any,
+  data: CustomerPersonUpReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/customer/person/update', data, config)

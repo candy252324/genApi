@@ -2,16 +2,19 @@ import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponse,
+  HaoYouFriendshipReq,
   ApiResponseFriendshipDetailResp,
   ApiResponseboolean,
+  FriendshipDetailReq,
   ApiResponseUserDetailResp,
+  XiuGaiBeiZhuModifyfriendRemarkReq,
   ApiResponseComPageFriendshipResp,
   ApiResponsestring,
 } from './_interfaces'
 
 /** 删除好友 */
 export function apiFriendshipDelete(
-  data: any,
+  data: HaoYouFriendshipReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/friendship/delete', data, config)
@@ -27,7 +30,7 @@ export function apiFriendshipDetail(
 
 /** 是否已经是好友 */
 export function apiFriendshipGetIsFriend(
-  data: any,
+  data: FriendshipDetailReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/friendship/getIsFriend', data, config)
@@ -35,7 +38,7 @@ export function apiFriendshipGetIsFriend(
 
 /** 获取用户信息 */
 export function apiFriendshipGetUserDetail(
-  data: any,
+  data: FriendshipDetailReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseUserDetailResp> {
   return Http.post('/api/friendship/getUserDetail', data, config)
@@ -43,7 +46,7 @@ export function apiFriendshipGetUserDetail(
 
 /** 修改[不一定是好友关系]他人备注 */
 export function apiFriendshipModifyRemark(
-  data: any,
+  data: XiuGaiBeiZhuModifyfriendRemarkReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/friendship/modifyRemark', data, config)
@@ -59,7 +62,7 @@ export function apiFriendshipPageList(
 
 /** 是否通知和免打扰 */
 export function apiFriendshipSetNoticeAndTop(
-  data: any,
+  data: HaoYouFriendshipReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/friendship/setNoticeAndTop', data, config)
@@ -67,7 +70,7 @@ export function apiFriendshipSetNoticeAndTop(
 
 /** 删除好友 */
 export function friendshipDelete(
-  data: any,
+  data: HaoYouFriendshipReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponsestring> {
   return Http.post('/friendship/delete', data, config)
@@ -75,7 +78,7 @@ export function friendshipDelete(
 
 /** 单聊会话，上部title */
 export function friendshipDetail(
-  data: any,
+  data: FriendshipDetailReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseFriendshipDetailResp> {
   return Http.post('/friendship/detail', data, config)
@@ -83,7 +86,7 @@ export function friendshipDetail(
 
 /** 是否已经是好友 */
 export function friendshipGetIsFriend(
-  data: any,
+  data: FriendshipDetailReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseboolean> {
   return Http.post('/friendship/getIsFriend', data, config)
@@ -91,7 +94,7 @@ export function friendshipGetIsFriend(
 
 /** 获取用户信息 */
 export function friendshipGetUserDetail(
-  data: any,
+  data: FriendshipDetailReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseUserDetailResp> {
   return Http.post('/friendship/getUserDetail', data, config)
@@ -99,7 +102,7 @@ export function friendshipGetUserDetail(
 
 /** 修改[不一定是好友关系]他人备注 */
 export function friendshipModifyRemark(
-  data: any,
+  data: XiuGaiBeiZhuModifyfriendRemarkReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/friendship/modifyRemark', data, config)

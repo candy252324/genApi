@@ -3,6 +3,7 @@ import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponseVoid,
   ApiResponse,
+  PostAddOrUpReq,
   ApiResponseListPostResp,
   ApiResponseListSelectorEmployeeResp,
 } from './_interfaces'
@@ -17,7 +18,7 @@ export function apiPostAddEmployee(
 
 /** 新增岗位 */
 export function apiPostAddPost(
-  data: any,
+  data: PostAddOrUpReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/post/addPost', data, config)
@@ -41,7 +42,7 @@ export function apiPostDelPostPostId(
 
 /** 修改岗位 */
 export function apiPostEditPost(
-  data: any,
+  data: PostAddOrUpReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/post/editPost', data, config)

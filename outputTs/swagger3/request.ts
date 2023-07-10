@@ -2,17 +2,22 @@ import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponse,
+  TianJiaHaoYouAddFriendReq,
   ApiResponseAddGroupResp,
+  RuQunQingQiuAddGroupReq,
+  TongGuoJuJueApproveReq,
   ApiResponseYanZhengXiaoXiXiangQingRequestDetailResp,
   ApiResponseListUnreadResp,
+  GetUnreadPageReq,
   ApiResponselong,
   ApiResponseYaoQingRuQunXiangYing,
   ApiResponseComPageYanZhengXiaoXiFenYeRequestPageListResp,
+  QingQiuXiaoXiDuBaoKuoYanZhengJiHuiFuXiaoXiDuRequestReadReq,
 } from './_interfaces'
 
 /** 添加好友申请 */
 export function apiRequestAddFriend(
-  data: any,
+  data: TianJiaHaoYouAddFriendReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/request/addFriend', data, config)
@@ -20,7 +25,7 @@ export function apiRequestAddFriend(
 
 /** 入群申请 */
 export function apiRequestAddGroup(
-  data: any,
+  data: RuQunQingQiuAddGroupReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseAddGroupResp> {
   return Http.post('/api/request/addGroup', data, config)
@@ -28,7 +33,7 @@ export function apiRequestAddGroup(
 
 /** 通过/拒绝 */
 export function apiRequestApprove(
-  data: any,
+  data: TongGuoJuJueApproveReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/request/approve', data, config)
@@ -44,7 +49,7 @@ export function apiRequestDetail(
 
 /** 获取未读标识(分页列表) */
 export function apiRequestGetUnreadAttr(
-  data: any,
+  data: GetUnreadPageReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseListUnreadResp> {
   return Http.post('/api/request/getUnreadAttr', data, config)
@@ -76,7 +81,7 @@ export function apiRequestPageList(
 
 /** 标识消息已读 */
 export function apiRequestRead(
-  data: any,
+  data: QingQiuXiaoXiDuBaoKuoYanZhengJiHuiFuXiaoXiDuRequestReadReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/request/read', data, config)

@@ -2,13 +2,15 @@ import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponseComPageTianJiaGeRenZiZhi,
+  FenYeChaXunGeRenZiZhi,
   ApiResponseboolean,
+  TianJiaGeRenZiZhi0,
   ApiResponse,
 } from './_interfaces'
 
 /** 分页查询个人资质 */
 export function apiPersonCredentialPagePersonCredential(
-  data: any,
+  data: FenYeChaXunGeRenZiZhi,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComPageTianJiaGeRenZiZhi> {
   return Http.post('/api/personCredential/PagePersonCredential', data, config)
@@ -16,7 +18,7 @@ export function apiPersonCredentialPagePersonCredential(
 
 /** 添加个人资质 */
 export function apiPersonCredentialAddPersonCredential(
-  data: any,
+  data: TianJiaGeRenZiZhi0,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/personCredential/addPersonCredential', data, config)
@@ -47,7 +49,7 @@ export function apiPersonCredentialGetMajorCodeTree(
 
 /** 修改个人资质 */
 export function apiPersonCredentialUpdatePersonCredential(
-  data: any,
+  data: TianJiaGeRenZiZhi0,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/personCredential/updatePersonCredential', data, config)

@@ -2,9 +2,12 @@ import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponselong,
+  RoleAddReq,
   ApiResponseVoid,
   ApiResponse,
   ApiResponseListRoleResq,
+  RoleBaseUpReq,
+  RoleMenuUpReq,
   ApiResponseComPageEmployeeComplexResp,
   ApiResponseListSelectorEmployeeResp,
   ApiResponseRoleInfoResq,
@@ -14,7 +17,7 @@ import {
 
 /** 新增角色 */
 export function apiRoleAddRole(
-  data: any,
+  data: RoleAddReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponselong> {
   return Http.post('/api/role/addRole', data, config)
@@ -67,7 +70,7 @@ export function apiRoleCurEmployeeRoleList(
 
 /** 修改角色基本信息 */
 export function apiRoleEditRoleBase(
-  data: any,
+  data: RoleBaseUpReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseVoid> {
   return Http.post('/api/role/editRoleBase', data, config)
@@ -75,7 +78,7 @@ export function apiRoleEditRoleBase(
 
 /** 修改角色菜单权限 */
 export function apiRoleEditRoleMenu(
-  data: any,
+  data: RoleMenuUpReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseVoid> {
   return Http.post('/api/role/editRoleMenu', data, config)

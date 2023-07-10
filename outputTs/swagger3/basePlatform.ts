@@ -2,14 +2,17 @@ import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponseEmployeeAllInfoResp,
+  UserTenantReq,
   ApiResponseListDeptNoteResp,
+  BuMenChaXunRuCan,
   ApiResponseListZuHuXinXi,
   ApiResponseComPageEnterpriseMainInfoResp,
+  BasePageReq,
 } from './_interfaces'
 
 /** 查询员工信息 */
 export function basePlatformGetEmployeeAllByUserAndTenant(
-  data: any,
+  data: UserTenantReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseEmployeeAllInfoResp> {
   return Http.post('/basePlatform/getEmployeeAllByUserAndTenant', data, config)
@@ -17,7 +20,7 @@ export function basePlatformGetEmployeeAllByUserAndTenant(
 
 /** 查询当前部门及子部门信息 */
 export function basePlatformListDeptByParent(
-  data: any,
+  data: BuMenChaXunRuCan,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseListDeptNoteResp> {
   return Http.post('/basePlatform/listDeptByParent', data, config)
@@ -33,7 +36,7 @@ export function basePlatformListTenantInfo(
 
 /** 查询所有企业 */
 export function basePlatformQueryEnterpriseAll(
-  data: any,
+  data: BasePageReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComPageEnterpriseMainInfoResp> {
   return Http.post('/basePlatform/queryEnterpriseAll', data, config)

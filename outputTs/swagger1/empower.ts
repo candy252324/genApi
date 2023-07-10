@@ -2,6 +2,7 @@ import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponseVoid,
+  PlatformEmployeeAuthReq,
   ApiResponseListEmpowerDeptResp,
   ApiResponseGuanLianGongSiXiangQing,
   ApiResponsestring,
@@ -12,6 +13,7 @@ import {
   ApiResponseHeaderEmpowerSmsInfo,
   ApiResponseEntReSetResp,
   ApiResponseInviteEnterpriseReInfo,
+  InviteRePlatFromOrgReq,
   ApiResponseGuanLianGongSiLieBiao,
   ApiResponseComPageEpEmployeeResp,
   ApiResponseListEpEntTreeResp,
@@ -36,7 +38,7 @@ export function apiEmpowerEnterpriseReApplyScanAgreeRe(
 
 /** 批量授权 */
 export function apiEmpowerEnterpriseReBathAuth(
-  data: any,
+  data: PlatformEmployeeAuthReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseVoid> {
   return Http.post('/api/empower/enterpriseRe/bathAuth', data, config)
@@ -44,7 +46,7 @@ export function apiEmpowerEnterpriseReBathAuth(
 
 /** 批量取消授权 */
 export function apiEmpowerEnterpriseReBathCancelAuth(
-  data: any,
+  data: PlatformEmployeeAuthReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseVoid> {
   return Http.post('/api/empower/enterpriseRe/bathCancelAuth', data, config)
@@ -179,7 +181,7 @@ export function apiEmpowerEnterpriseReGetInviteReInfoLinkCode(
 
 /** 邀请关联组织-发起邀请 */
 export function apiEmpowerEnterpriseReInviteRePlateFromOrg(
-  data: any,
+  data: InviteRePlatFromOrgReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseVoid> {
   return Http.post(

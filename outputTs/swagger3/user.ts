@@ -4,8 +4,10 @@ import {
   ApiResponse,
   ApiResponseboolean,
   ApiResponseListZuHuXinXi,
+  XiuGaiYongHuTouXiang,
   ApiResponseUserRespDuiXiang,
   ApiResponseQueryLastMessageResp,
+  TianJiaWoWeiHaoYouDeFangShi,
 } from './_interfaces'
 
 /** 注销账号 */
@@ -42,7 +44,7 @@ export function apiUserListTenantInfo(
 
 /** 修改用户头像 */
 export function apiUserModifyAvatar(
-  data: any,
+  data: XiuGaiYongHuTouXiang,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/user/modifyAvatar', data, config)
@@ -50,7 +52,7 @@ export function apiUserModifyAvatar(
 
 /** 修改用户邮箱 */
 export function apiUserModifyEmail(
-  data: any,
+  data: XiuGaiYongHuTouXiang,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/user/modifyEmail', data, config)
@@ -106,7 +108,7 @@ export function apiUserSetIsNotice(
 
 /** 添加我为好友的方式 */
 export function apiUserSetRequestChannel(
-  data: any,
+  data: TianJiaWoWeiHaoYouDeFangShi,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/user/setRequestChannel', data, config)

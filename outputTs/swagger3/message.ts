@@ -2,13 +2,20 @@ import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponseobject,
+  XiaoXiack,
+  QingKongXiaoXiRuCan,
+  XiaoXiShanChu,
   ApiResponseXiaoXiDuiXiang,
+  XiaoXiXiangQingMessageDetailReq,
   ApiResponseComPageXiaoXiDuiXiang,
+  LiShiXiaoXiMessageHistoryReq,
+  XiaoXiSouSuoShiTi,
+  MessageSyncDTO,
 } from './_interfaces'
 
 /** 确认收到消息 */
 export function apiMessageAck(
-  data: any,
+  data: XiaoXiack,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseobject> {
   return Http.post('/api/message/ack', data, config)
@@ -16,7 +23,7 @@ export function apiMessageAck(
 
 /** 清除历史消息 */
 export function apiMessageClear(
-  data: any,
+  data: QingKongXiaoXiRuCan,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseobject> {
   return Http.post('/api/message/clear', data, config)
@@ -24,7 +31,7 @@ export function apiMessageClear(
 
 /** 消息删除 */
 export function apiMessageDelete(
-  data: any,
+  data: XiaoXiShanChu,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseobject> {
   return Http.post('/api/message/delete', data, config)
@@ -32,7 +39,7 @@ export function apiMessageDelete(
 
 /** 消息详情 */
 export function apiMessageDetail(
-  data: any,
+  data: XiaoXiXiangQingMessageDetailReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseXiaoXiDuiXiang> {
   return Http.post('/api/message/detail', data, config)
@@ -40,7 +47,7 @@ export function apiMessageDetail(
 
 /** 分页查询历史消息 */
 export function apiMessageHistoryPageList(
-  data: any,
+  data: LiShiXiaoXiMessageHistoryReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComPageXiaoXiDuiXiang> {
   return Http.post('/api/message/history/pageList', data, config)
@@ -48,7 +55,7 @@ export function apiMessageHistoryPageList(
 
 /** 分页搜索消息 */
 export function apiMessageSearchPageList(
-  data: any,
+  data: XiaoXiSouSuoShiTi,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComPageXiaoXiDuiXiang> {
   return Http.post('/api/message/search/pageList', data, config)
@@ -56,7 +63,7 @@ export function apiMessageSearchPageList(
 
 /** [用户企业信息]获取用户(正常状态)租户信息列表 */
 export function apiMessageTestSendMQ(
-  data: any,
+  data: MessageSyncDTO,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseobject> {
   return Http.post('/api/message/testSendMQ', data, config)

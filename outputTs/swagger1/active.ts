@@ -3,6 +3,7 @@ import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponseEmployeeNoActiveResp,
   ApiResponseSendActiveMessageResp,
+  SendActiveMessageReq,
 } from './_interfaces'
 
 /** 根据部门code查询未激活员工列表 */
@@ -15,7 +16,7 @@ export function apiActiveNoActiveList(
 
 /** 发送激活消息提示 */
 export function apiActiveSendActiveMessage(
-  data: any,
+  data: SendActiveMessageReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseSendActiveMessageResp> {
   return Http.post('/api/active/sendActiveMessage', data, config)

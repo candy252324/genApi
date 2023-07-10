@@ -2,28 +2,49 @@ import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponseBusinessReceiveResp,
+  AddBusinessEnterpriseReq,
+  AddBusinessPersonReq,
+  AddBusinessProjectReq,
   ApiResponseAddSignBusinessResp,
+  AddSignBusinessEnterpriseReq,
+  AddSignBusinessPersonReq,
+  AddSignBusinessProjectReq,
+  AssignBusinessReq,
   ApiResponse,
   ApiResponseQiYeShangJiXiangQingrpcresponse,
+  InnerRpclong,
   ApiResponseBusinessEnterpriseInfoResp,
   ApiResponseGuanLianShangJiResponse,
+  GuanLianShangJiRequest,
   ApiResponseComPageFenYeChaXunQiYeShangJiresponseJianDanShuJu,
+  FenYeChaXunQiYeShangJiJianDanShuJu,
   ApiResponseComPagePageEnterpriseBusinessPoolResp,
+  FenYeChaXunQiYeShangJiGongHai,
   ApiResponseComPageFenYeChaXunRenCaiShangJiresponseJianDanShuJu,
+  FenYeChaXunRenCaiShangJiJianDanShuJu,
   ApiResponseComPagePagePersonBusinessPoolResp,
+  FenYeChaXunRenCaiShangJiGongHai,
   ApiResponseComPageFenYeChaXunXiangMuShangJiresponseJianDanShuJu,
+  FenYeChaXunXiangMuShangJiJianDanShuJu,
   ApiResponseComPagePageProjectBusinessPoolResp,
+  XiangMuShangJiGongHaiChaXun,
   ApiResponseVoid,
+  SignResultReq,
   ApiResponseBusinessPersonInfoResp,
+  InnerRpcXinZengXiangMuShangJirpcJieKou,
   ApiResponseXiangMuShangJiXiangQingrpcresponse,
+  XiangMuShangJiXiuGairpcrequest,
   ApiResponseComPageXiangMuShangJiXiangQingrpcresponse,
+  XiangMuShangJiFenYeChaXunrpcrequest,
   ApiResponseBusinessProjectInfoResp,
+  ReceiveBusinessReq,
   ApiResponseAddBusinessResp,
+  VerifyRepeatBusinessReq,
 } from './_interfaces'
 
 /** 新增企业商机 */
 export function apiBusinessAddBusinessEnterprise(
-  data: any,
+  data: AddBusinessEnterpriseReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseBusinessReceiveResp> {
   return Http.post('/api/business/addBusinessEnterprise', data, config)
@@ -31,7 +52,7 @@ export function apiBusinessAddBusinessEnterprise(
 
 /** 新增人才商机 */
 export function apiBusinessAddBusinessPerson(
-  data: any,
+  data: AddBusinessPersonReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseBusinessReceiveResp> {
   return Http.post('/api/business/addBusinessPerson', data, config)
@@ -39,7 +60,7 @@ export function apiBusinessAddBusinessPerson(
 
 /** 新增项目商机 */
 export function apiBusinessAddBusinessProject(
-  data: any,
+  data: AddBusinessProjectReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseBusinessReceiveResp> {
   return Http.post('/api/business/addBusinessProject', data, config)
@@ -47,7 +68,7 @@ export function apiBusinessAddBusinessProject(
 
 /** 新增企业商机(创建/领取/签约) */
 export function apiBusinessAddSignBusinessEnterprise(
-  data: any,
+  data: AddSignBusinessEnterpriseReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseAddSignBusinessResp> {
   return Http.post('/api/business/addSignBusinessEnterprise', data, config)
@@ -55,7 +76,7 @@ export function apiBusinessAddSignBusinessEnterprise(
 
 /** 新增人才商机(创建/领取/签约) */
 export function apiBusinessAddSignBusinessPerson(
-  data: any,
+  data: AddSignBusinessPersonReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseAddSignBusinessResp> {
   return Http.post('/api/business/addSignBusinessPerson', data, config)
@@ -63,7 +84,7 @@ export function apiBusinessAddSignBusinessPerson(
 
 /** 新增项目商机(创建/领取/签约) */
 export function apiBusinessAddSignBusinessProject(
-  data: any,
+  data: AddSignBusinessProjectReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseAddSignBusinessResp> {
   return Http.post('/api/business/addSignBusinessProject', data, config)
@@ -71,7 +92,7 @@ export function apiBusinessAddSignBusinessProject(
 
 /** 分派商机 */
 export function apiBusinessAssignBusiness(
-  data: any,
+  data: AssignBusinessReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseBusinessReceiveResp> {
   return Http.post('/api/business/assignBusiness', data, config)
@@ -79,7 +100,7 @@ export function apiBusinessAssignBusiness(
 
 /** 修改企业商机 */
 export function apiBusinessEditBusinessEnterprise(
-  data: any,
+  data: AddBusinessEnterpriseReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/business/editBusinessEnterprise', data, config)
@@ -87,7 +108,7 @@ export function apiBusinessEditBusinessEnterprise(
 
 /** 修改人才商机 */
 export function apiBusinessEditBusinessPerson(
-  data: any,
+  data: AddBusinessPersonReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/business/editBusinessPerson', data, config)
@@ -95,7 +116,7 @@ export function apiBusinessEditBusinessPerson(
 
 /** 修改项目商机 */
 export function apiBusinessEditBusinessProject(
-  data: any,
+  data: AddBusinessProjectReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/business/editBusinessProject', data, config)
@@ -103,7 +124,7 @@ export function apiBusinessEditBusinessProject(
 
 /** 企业商机详情 */
 export function apiBusinessEnterpriseDetail(
-  data: any,
+  data: InnerRpclong,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseQiYeShangJiXiangQingrpcresponse> {
   return Http.post('/api/business/enterprise/detail', data, config)
@@ -119,7 +140,7 @@ export function apiBusinessEnterpriseInfo(
 
 /** 关联工商/人才库/项目库信息 */
 export function apiBusinessLink(
-  data: any,
+  data: GuanLianShangJiRequest,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseGuanLianShangJiResponse> {
   return Http.post('/api/business/link', data, config)
@@ -127,7 +148,7 @@ export function apiBusinessLink(
 
 /** 企业商机列表(下拉框简单数据) */
 export function apiBusinessPageEnterpriseSampleList(
-  data: any,
+  data: FenYeChaXunQiYeShangJiJianDanShuJu,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComPageFenYeChaXunQiYeShangJiresponseJianDanShuJu> {
   return Http.post('/api/business/pageEnterprise/sampleList', data, config)
@@ -135,7 +156,7 @@ export function apiBusinessPageEnterpriseSampleList(
 
 /** 企业商机列表 */
 export function apiBusinessPageEnterpriseBusinessPool(
-  data: any,
+  data: FenYeChaXunQiYeShangJiGongHai,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComPagePageEnterpriseBusinessPoolResp> {
   return Http.post('/api/business/pageEnterpriseBusinessPool', data, config)
@@ -143,7 +164,7 @@ export function apiBusinessPageEnterpriseBusinessPool(
 
 /** 人才商机列表(下拉框简单数据) */
 export function apiBusinessPagePersonSampleList(
-  data: any,
+  data: FenYeChaXunRenCaiShangJiJianDanShuJu,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComPageFenYeChaXunRenCaiShangJiresponseJianDanShuJu> {
   return Http.post('/api/business/pagePerson/sampleList', data, config)
@@ -151,7 +172,7 @@ export function apiBusinessPagePersonSampleList(
 
 /** 人才商机列表 */
 export function apiBusinessPagePersonBusinessPool(
-  data: any,
+  data: FenYeChaXunRenCaiShangJiGongHai,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComPagePagePersonBusinessPoolResp> {
   return Http.post('/api/business/pagePersonBusinessPool', data, config)
@@ -159,7 +180,7 @@ export function apiBusinessPagePersonBusinessPool(
 
 /** 项目商机列表(下拉框简单数据) */
 export function apiBusinessPageProjectSampleList(
-  data: any,
+  data: FenYeChaXunXiangMuShangJiJianDanShuJu,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComPageFenYeChaXunXiangMuShangJiresponseJianDanShuJu> {
   return Http.post('/api/business/pageProject/sampleList', data, config)
@@ -167,7 +188,7 @@ export function apiBusinessPageProjectSampleList(
 
 /** 项目商机列表 */
 export function apiBusinessPageProjectBusinessPool(
-  data: any,
+  data: XiangMuShangJiGongHaiChaXun,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComPagePageProjectBusinessPoolResp> {
   return Http.post('/api/business/pageProjectBusinessPool', data, config)
@@ -175,7 +196,7 @@ export function apiBusinessPageProjectBusinessPool(
 
 /** notifySign */
 export function apiBusinessPersonNotifySign(
-  data: any,
+  data: SignResultReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseVoid> {
   return Http.get('/api/business/person/notifySign', data, config)
@@ -191,7 +212,7 @@ export function apiBusinessPersonInfo(
 
 /** 新增项目商机 */
 export function apiBusinessProjectAdd(
-  data: any,
+  data: InnerRpcXinZengXiangMuShangJirpcJieKou,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseVoid> {
   return Http.post('/api/business/project/add', data, config)
@@ -207,7 +228,7 @@ export function apiBusinessProjectGet(
 
 /** 修改项目商机 */
 export function apiBusinessProjectModified(
-  data: any,
+  data: XiangMuShangJiXiuGairpcrequest,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseVoid> {
   return Http.post('/api/business/project/modified', data, config)
@@ -215,7 +236,7 @@ export function apiBusinessProjectModified(
 
 /** 分页查询项目商机 */
 export function apiBusinessProjectPageList(
-  data: any,
+  data: XiangMuShangJiFenYeChaXunrpcrequest,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComPageXiangMuShangJiXiangQingrpcresponse> {
   return Http.post('/api/business/project/pageList', data, config)
@@ -231,7 +252,7 @@ export function apiBusinessProjectInfo(
 
 /** 领取商机 */
 export function apiBusinessReceiveBusiness(
-  data: any,
+  data: ReceiveBusinessReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseBusinessReceiveResp> {
   return Http.post('/api/business/receiveBusiness', data, config)
@@ -239,7 +260,7 @@ export function apiBusinessReceiveBusiness(
 
 /** 校验重复商机 */
 export function apiBusinessVerifyRepeatBusiness(
-  data: any,
+  data: VerifyRepeatBusinessReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseAddBusinessResp> {
   return Http.post('/api/business/verifyRepeatBusiness', data, config)

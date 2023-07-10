@@ -4,6 +4,7 @@ import {
   ApiResponseboolean,
   ApiResponseComPageGuanLianShenHeXinXi,
   ApiResponseShenHeTongJiHuanCunSanShiMiao,
+  AuditRelationTotalReq,
 } from './_interfaces'
 
 /** 审核-执行审核 */
@@ -24,7 +25,7 @@ export function apiV1AuditRelationPage(
 
 /** 关联审核-统计 */
 export function apiV1AuditRelationTotal(
-  data: any,
+  data: AuditRelationTotalReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseShenHeTongJiHuanCunSanShiMiao> {
   return Http.post('/api/v1/audit/relation/total', data, config)

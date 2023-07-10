@@ -2,15 +2,20 @@ import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponseCustomerEnterpriseAddResp,
+  InnerRpcCustomerEnterpriseAddReq,
   ApiResponseComPageLianXiRenLieBiao,
+  InnerRpcPageContactReq,
   ApiResponseCustomerEnterpriseDetailResp,
+  InnerRpclong,
   ApiResponseComPageCustomerEnterpriseInfoResp,
+  InnerRpcPageCustomerEnterpriseReq,
   ApiResponselong,
+  InnerRpcCustomerEnterpriseUpReq,
 } from './_interfaces'
 
 /** add */
 export function innerCustomerEnterpriseAdd(
-  data: any,
+  data: InnerRpcCustomerEnterpriseAddReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseCustomerEnterpriseAddResp> {
   return Http.post('/inner/customer/enterprise/add', data, config)
@@ -18,7 +23,7 @@ export function innerCustomerEnterpriseAdd(
 
 /** contactPageList */
 export function innerCustomerEnterpriseContactPageList(
-  data: any,
+  data: InnerRpcPageContactReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComPageLianXiRenLieBiao> {
   return Http.post('/inner/customer/enterprise/contact/pageList', data, config)
@@ -26,7 +31,7 @@ export function innerCustomerEnterpriseContactPageList(
 
 /** detail */
 export function innerCustomerEnterpriseDetail(
-  data: any,
+  data: InnerRpclong,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseCustomerEnterpriseDetailResp> {
   return Http.post('/inner/customer/enterprise/detail', data, config)
@@ -34,7 +39,7 @@ export function innerCustomerEnterpriseDetail(
 
 /** pageList */
 export function innerCustomerEnterprisePageList(
-  data: any,
+  data: InnerRpcPageCustomerEnterpriseReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComPageCustomerEnterpriseInfoResp> {
   return Http.post('/inner/customer/enterprise/pageList', data, config)
@@ -42,7 +47,7 @@ export function innerCustomerEnterprisePageList(
 
 /** update */
 export function innerCustomerEnterpriseUpdate(
-  data: any,
+  data: InnerRpcCustomerEnterpriseUpReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponselong> {
   return Http.post('/inner/customer/enterprise/update', data, config)

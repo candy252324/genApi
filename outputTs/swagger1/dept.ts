@@ -2,9 +2,12 @@ import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponse,
+  DeptAddReq,
   ApiResponseShuJuYiZhiXingCaoZuoFanHuiJieGuo,
+  ShuJuYiZhiXingErCiQueRenCanShu,
   ApiResponseVoid,
   ApiResponseListTreelong,
+  DeptUpReq,
   ApiResponseDeptDetailResp,
   ApiResponseListDeptResp,
   ApiResponseListSelectorEmployeeResp,
@@ -12,7 +15,7 @@ import {
 
 /** 新增部门 */
 export function apiDeptAddDept(
-  data: any,
+  data: DeptAddReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/dept/addDept', data, config)
@@ -20,7 +23,7 @@ export function apiDeptAddDept(
 
 /** 确认删除部门 */
 export function apiDeptDelDeptConfirm(
-  data: any,
+  data: ShuJuYiZhiXingErCiQueRenCanShu,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseShuJuYiZhiXingCaoZuoFanHuiJieGuo> {
   return Http.post('/api/dept/delDept/confirm', data, config)
@@ -60,7 +63,7 @@ export function apiDeptDeptTreeInfo(
 
 /** 修改部门 */
 export function apiDeptEditDept(
-  data: any,
+  data: DeptUpReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/dept/editDept', data, config)

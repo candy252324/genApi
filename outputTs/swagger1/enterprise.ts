@@ -6,10 +6,13 @@ import {
   ApiResponsePageQiYeKaiHuXinXi,
   ApiResponseQiYeKaiHuXinXi,
   ApiResponseQiYeJianDanRenZheng,
+  QiYeZhiNenPiaoJiaRenZheng,
   ApiResponseJudgeSwitchEnterpriseLimitResp,
   ApiResponsestring,
   ApiResponseComPageEnterpriseIdentificationResp,
+  EnterpriseIdentificationReq,
   ApiResponseQiYeZhuTiXinXi,
+  DeptLinkEnterpriseReq,
   ApiResponseboolean,
   ApiResponseQueryJudgeClaimResp,
   ApiResponseQueryEnterprisePageHomeResp,
@@ -82,7 +85,7 @@ export function apiEnterpriseIdentificationV1SimpleAuth(
 
 /** 企业的发票认证-录入发起（票据-智能票夹） */
 export function apiEnterpriseIdentificationV1TicketAuth(
-  data: any,
+  data: QiYeZhiNenPiaoJiaRenZheng,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseVoid> {
   return Http.post(
@@ -137,7 +140,7 @@ export function apiEnterpriseIdentificationcenterDelEnterprise(
 
 /** 查询租户企业列表 */
 export function apiEnterpriseIdentificationcenterListEnterprise(
-  data: any,
+  data: EnterpriseIdentificationReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComPageEnterpriseIdentificationResp> {
   return Http.post(
@@ -173,7 +176,7 @@ export function apiEnterpriseIdentificationcenterEnterpriseIdMainAuthInfo(
 
 /** 覆写-企业关联组织 */
 export function apiEnterpriseLinkDept(
-  data: any,
+  data: DeptLinkEnterpriseReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseVoid> {
   return Http.post('/api/enterprise/link/dept', data, config)

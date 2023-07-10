@@ -2,11 +2,15 @@ import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponse,
+  QunChengYuanShanChuGroupMemberDelReq,
   ApiResponseQunChengYuanXinXiDuiXiangGroupMemberResp,
+  QunXinXiGroupDetailReq,
   ApiResponseboolean,
   ApiResponseMemberGroupStatusResp,
   ApiResponseListQunChengYuanXinXiDuiXiangGroupMemberResp,
+  XiuGaiBeiZhuModifyRemarkGroupReq,
   ApiResponseComPageQunChengYuanXinXiDuiXiangGroupMemberResp,
+  QunChengYuanXinZengGroupMemberSaveReq,
 } from './_interfaces'
 
 /** 管理员删除群成员 */
@@ -19,7 +23,7 @@ export function apiGroupMemberDelete(
 
 /** 删除群管理员 */
 export function apiGroupMemberDeleteAdmin(
-  data: any,
+  data: QunChengYuanShanChuGroupMemberDelReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/groupMember/deleteAdmin', data, config)
@@ -27,7 +31,7 @@ export function apiGroupMemberDeleteAdmin(
 
 /** 我在本群信息详情 */
 export function apiGroupMemberDetail(
-  data: any,
+  data: QunXinXiGroupDetailReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseQunChengYuanXinXiDuiXiangGroupMemberResp> {
   return Http.post('/api/groupMember/detail', data, config)
@@ -35,7 +39,7 @@ export function apiGroupMemberDetail(
 
 /** 是否是群成员 */
 export function apiGroupMemberExistInGroup(
-  data: any,
+  data: QunXinXiGroupDetailReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/groupMember/existInGroup', data, config)
@@ -43,7 +47,7 @@ export function apiGroupMemberExistInGroup(
 
 /** 本群状态 */
 export function apiGroupMemberGroupStatus(
-  data: any,
+  data: QunXinXiGroupDetailReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseMemberGroupStatusResp> {
   return Http.post('/api/groupMember/groupStatus', data, config)
@@ -67,7 +71,7 @@ export function apiGroupMemberListAdmin(
 
 /** 修改群成员在本群备注 */
 export function apiGroupMemberModifyRemark(
-  data: any,
+  data: XiuGaiBeiZhuModifyRemarkGroupReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/groupMember/modifyRemark', data, config)
@@ -83,7 +87,7 @@ export function apiGroupMemberPageList(
 
 /** 添加群成员（自动创建的部门群不能添加删除成员） */
 export function apiGroupMemberSave(
-  data: any,
+  data: QunChengYuanXinZengGroupMemberSaveReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/groupMember/save', data, config)
@@ -91,7 +95,7 @@ export function apiGroupMemberSave(
 
 /** 添加群管理员 */
 export function apiGroupMemberSaveAdmin(
-  data: any,
+  data: QunChengYuanXinZengGroupMemberSaveReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/groupMember/saveAdmin', data, config)
@@ -99,7 +103,7 @@ export function apiGroupMemberSaveAdmin(
 
 /** 是否通知和免打扰 */
 export function apiGroupMemberSetNoticeAndTop(
-  data: any,
+  data: QunXinXiGroupDetailReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponse> {
   return Http.post('/api/groupMember/setNoticeAndTop', data, config)

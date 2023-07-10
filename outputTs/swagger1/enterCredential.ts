@@ -2,14 +2,17 @@ import { Http } from '../../httpTs/index'
 import { AxiosPromise, AxiosRequestConfig } from 'axios'
 import {
   ApiResponseboolean,
+  AddOrUpdateCredentialReq,
   ApiResponseJSONArray,
   ApiResponseComPageEnterpriseCredentialResp,
+  PageEnterpriseCredentialReq,
   ApiResponseOcrBusinessLicenseBO,
+  OcrImageReq,
 } from './_interfaces'
 
 /** 添加企业资质 */
 export function apiEnterCredentialAdd(
-  data: any,
+  data: AddOrUpdateCredentialReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/enterCredential/add', data, config)
@@ -32,7 +35,7 @@ export function apiEnterCredentialGetCodeList(
 
 /** 查询企业资质 */
 export function apiEnterCredentialPage(
-  data: any,
+  data: PageEnterpriseCredentialReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComPageEnterpriseCredentialResp> {
   return Http.post('/api/enterCredential/page', data, config)
@@ -40,7 +43,7 @@ export function apiEnterCredentialPage(
 
 /** 修改企业资质 */
 export function apiEnterCredentialUpdate(
-  data: any,
+  data: AddOrUpdateCredentialReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseboolean> {
   return Http.post('/api/enterCredential/update', data, config)
@@ -48,7 +51,7 @@ export function apiEnterCredentialUpdate(
 
 /** ocr营业执照识别 */
 export function apiEnterCredentialV1OcrBusinessLicense(
-  data: any,
+  data: OcrImageReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseOcrBusinessLicenseBO> {
   return Http.post('/api/enterCredential/v1/ocr/businessLicense', data, config)

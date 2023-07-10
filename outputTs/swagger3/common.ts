@@ -6,6 +6,9 @@ import {
   ApiResponseComPageCommonSearchResp,
   ApiResponseComPageSearchBeforeAddFriendResp,
   ApiResponseListSwitchUserListResp,
+  SearchReq,
+  CommonSearchReq,
+  SwitchUserReq,
 } from './_interfaces'
 
 /** 绑定设备 */
@@ -66,7 +69,7 @@ export function commonBind(
 
 /** 聚合搜索 */
 export function commonSearch(
-  data: any,
+  data: SearchReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseMapstringSearchMapResp> {
   return Http.post('/common/search', data, config)
@@ -74,7 +77,7 @@ export function commonSearch(
 
 /** 按照类型搜索 */
 export function commonSearchType(
-  data: any,
+  data: CommonSearchReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseComPageCommonSearchResp> {
   return Http.post('/common/search/type', data, config)
@@ -90,7 +93,7 @@ export function commonSearchBeforeAddFriend(
 
 /** 绑定设备 */
 export function commonSwitchChannel(
-  data: any,
+  data: SwitchUserReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseUserBindResp> {
   return Http.post('/common/switchChannel', data, config)
@@ -98,7 +101,7 @@ export function commonSwitchChannel(
 
 /** 切换用户时用户列表 */
 export function commonSwitchUserList(
-  data: any,
+  data: SwitchUserReq,
   config?: AxiosRequestConfig
 ): AxiosPromise<ApiResponseListSwitchUserListResp> {
   return Http.post('/common/switchUserList', data, config)
