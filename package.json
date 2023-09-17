@@ -1,0 +1,37 @@
+{
+  "name": "@cxxgo/genapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "genapi",
+  "scripts": {
+    "test": "node ./__test__/index.js"
+  },
+  "bin": {
+    "genapi": "bin/index.js"
+  },
+  "files": [
+    "bin",
+    "core",
+    ".prettierrc.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/candy252324/genApi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/candy252324/genApi/issues"
+  },
+  "homepage": "https://github.com/candy252324/genApi#readme",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "commander": "^11.0.0",
+    "js-pinyin": "^0.2.4",
+    "prettier": "^2.8.8"
+  }
+}
