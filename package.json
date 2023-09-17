@@ -4,7 +4,8 @@
   "description": "",
   "main": "genapi",
   "scripts": {
-    "test": "node ./__test__/index.js"
+    "test": "node ./__test__/index.js",
+    "replace": "node ./scripts/replaceStr.js"
   },
   "bin": {
     "genapi": "bin/index.js"
