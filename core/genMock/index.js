@@ -160,10 +160,8 @@ function writeMockToFile(apiList, { interfaces, absOutputDir }) {
       const { name, url, method, summary, parameters, outputInterface } = api
       const returnStr = getReturnStr(outputInterface, interfaces)
       const curStr = `
-export default {
-  ${name}:()=>{
-    return ${returnStr || ''}
-  }
+export function ${name} (){
+  return ${returnStr ? '{\n' + returnStr + '\n}' : '{}'}
 }
       `
       mockStr += curStr
@@ -199,11 +197,10 @@ export default {
 function getReturnStr(outputInterface, allInterfaces) {
   let find = allInterfaces.find((item) => item.name == outputInterface)
   if (find) {
-    const body = find.properties.reduce((pre, cur) => {
+    return find.properties.reduce((pre, cur) => {
       const mockStr = getMockStr({ type: cur.type, name: cur.name })
-      return `${pre} ${cur.name}:'${mockStr}'\n`
+      return `${pre} ${cur.name}:'${mockStr}',\n`
     }, '')
-    return `{${body}}`
   } else {
     return ''
   }
