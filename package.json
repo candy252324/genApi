@@ -33,6 +33,7 @@
     "axios": "^1.4.0",
     "commander": "^11.0.0",
     "js-pinyin": "^0.2.4",
+    "mockjs": "^1.1.0",
     "prettier": "^2.8.8"
   }
 }
