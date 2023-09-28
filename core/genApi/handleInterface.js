@@ -29,24 +29,15 @@ function genInterface(definitions) {
    */
   const defs = []
   Object.keys(definitions).forEach((key) => {
-    const obj = definitions[key]
-    const properties = handleProperties(obj.properties || {})
     const interfaceName = handleWeirdName(key)
     // 不存在或者是简单类型
     if (!interfaceName || handleJsType(interfaceName)) return
+
+    const obj = definitions[key]
+    const properties = handleProperties(obj.properties || {})
     const exist = defs.find((item) => item.name === interfaceName)
-    const additionalProperties = obj.type === 'object' && obj.additionalProperties?.originalRef
-
-    const isArray = obj.type === 'array'
-    const isSimpleJsType = !additionalProperties && !!handleJsType(obj.format || obj.type)
-
-    defs.push({
-      name: interfaceName,
-      isArray, // 是否是数组
-      isSimpleJsType, // 是否是简单的 js 类型
-      type: additionalProperties ? handleWeirdName(additionalProperties) : handleItemsType(obj),
-      properties,
-    })
+    const interfaceModal = handleInterfaceModal(obj)
+    defs.push({ name: interfaceName, ...interfaceModal, properties })
   })
   return defs
 }
@@ -62,20 +53,23 @@ function handleProperties(properties) {
   const arr = []
   Object.keys(properties).forEach((key) => {
     const obj = properties[key]
-    const additionalProperties = obj.type === 'object' && obj.additionalProperties?.originalRef
-
-    const isArray = obj.type === 'array'
-    const isSimpleJsType = !additionalProperties && !!handleJsType(obj.format || obj.type)
-
-    arr.push({
-      name: key,
-      isArray, // 是否是数组
-      isSimpleJsType,
-      type: additionalProperties ? handleWeirdName(additionalProperties) : handleItemsType(obj),
-      description: obj.description || '',
-    })
+    const interfaceModal = handleInterfaceModal(obj)
+    arr.push({ name: key, ...interfaceModal })
   })
   return arr
+}
+
+function handleInterfaceModal(obj) {
+  const additionalProperties = obj.type === 'object' && obj.additionalProperties?.originalRef
+  const isArray = obj.type === 'array'
+  const isSimpleJsType = !additionalProperties && !!handleJsType(obj.format || obj.type)
+
+  return {
+    isArray, // 是否是数组
+    isSimpleJsType, // 是否是简单数据 就是 js 类型
+    type: additionalProperties ? handleWeirdName(additionalProperties) : handleItemsType(obj),
+    description: obj.description || '',
+  }
 }
 
 /** 处理以下数据格式
