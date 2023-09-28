@@ -113,7 +113,7 @@ function handleJsType(origintype) {
     boolean: 'boolean',
     Boolean: 'boolean',
     number: 'number',
-    array: '[]',
+    // array: '[]',
     Object: 'object',
     object: 'object',
     double: 'string',

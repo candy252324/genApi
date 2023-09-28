@@ -20,7 +20,9 @@ function genInterface(definitions) {
    *    type:"",   // 类型，如 "object", 目前看到的都是 'object'
    *    properties:[{
    *      name:"",
-   *      type:"",        // 类型，如 string
+   *      isArray:false,  // 是否是数组
+   *      isSimpleJsType:false, // 是否是简单 js 类型, 如 number、string 等
+   *      type:"",        // 类型，如 string, number, boolean , UserInterface
    *      description:""  // 注释
    *    }]
    *  }]
@@ -33,16 +35,18 @@ function genInterface(definitions) {
     // 不存在或者是简单类型
     if (!interfaceName || handleJsType(interfaceName)) return
     const exist = defs.find((item) => item.name === interfaceName)
-    // if (!exist) {
     const additionalProperties = obj.type === 'object' && obj.additionalProperties?.originalRef
+
+    const isArray = obj.type === 'array'
+    const isSimpleJsType = !additionalProperties && !!handleJsType(obj.format || obj.type)
+
     defs.push({
       name: interfaceName,
-      type: additionalProperties
-        ? handleWeirdName(additionalProperties)
-        : handleItemsType(obj) + handleJsType(obj.format || obj.type),
+      isArray, // 是否是数组
+      isSimpleJsType, // 是否是简单的 js 类型
+      type: additionalProperties ? handleWeirdName(additionalProperties) : handleItemsType(obj),
       properties,
     })
-    // }
   })
   return defs
 }
@@ -59,11 +63,15 @@ function handleProperties(properties) {
   Object.keys(properties).forEach((key) => {
     const obj = properties[key]
     const additionalProperties = obj.type === 'object' && obj.additionalProperties?.originalRef
+
+    const isArray = obj.type === 'array'
+    const isSimpleJsType = !additionalProperties && !!handleJsType(obj.format || obj.type)
+
     arr.push({
       name: key,
-      type: additionalProperties
-        ? handleWeirdName(additionalProperties)
-        : handleItemsType(obj) + handleJsType(obj.format || obj.type),
+      isArray, // 是否是数组
+      isSimpleJsType,
+      type: additionalProperties ? handleWeirdName(additionalProperties) : handleItemsType(obj),
       description: obj.description || '',
     })
   })
@@ -93,11 +101,11 @@ function handleProperties(properties) {
 function handleItemsType(obj) {
   if (obj.type === 'array') {
     if (obj?.items?.originalRef) return handleWeirdName(obj.items.originalRef)
-    else return handleJsType(obj.items?.type || obj.items.type)
+    else return handleJsType(obj.items?.format || obj.items?.type)
   } else if (obj?.originalRef) {
     return handleWeirdName(obj?.originalRef)
   } else {
-    return ''
+    return handleJsType(obj.format || obj.type)
   }
 }
 

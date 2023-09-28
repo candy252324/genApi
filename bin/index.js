@@ -25,8 +25,8 @@ program.command('now').action(() => {
   }
   const { genApi } = require('../core/genApi/index')
   genApi(require(configFilePath))
-  const { genMock } = require('../core/genMock/index')
-  genMock(require(configFilePath))
+  // const { genMock } = require('../core/genMock/index')
+  // genMock(require(configFilePath))
 })
 
 program.helpInformation = () => {

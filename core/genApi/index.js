@@ -136,29 +136,25 @@ function writeApiToFile(apiList, options) {
 /** interface 写入 */
 function writeInterfaceToFile(definitions, absOutputDir) {
   let str = ''
-  definitions.forEach((item) => {
-    if (item.type === 'object') {
-      str += `export interface ${item.name} {`
-      if (item.properties && item.properties.length) {
-        item.properties.forEach((it) => {
-          const description = it.description ? `/** ${it.description} */` : ''
-          // 有注释
-          if (description) {
-            str += `
+  definitions.forEach((item, index) => {
+    str += `export interface ${item.name} {`
+    if (item?.properties && item.properties?.length) {
+      item.properties.forEach((it) => {
+        const description = it.description ? `/** ${it.description} */` : ''
+        // 有注释
+        if (description) {
+          str += `
   ${description ? description : ''}
-  ${it.name}?: ${it.type}`
-          }
-          // 没注释
-          else {
-            str += `
-  ${it.name}?: ${it.type}`
-          }
-        })
-      }
-      str += '\n}\n'
-    } else {
-      console.log('还有不是对象的？？')
+  ${it.name}?: ${it.type}${it.isArray ? '[]' : ''}`
+        }
+        // 没注释
+        else {
+          str += `
+  ${it.name}?: ${it.type}${it.isArray ? '[]' : ''}`
+        }
+      })
     }
+    str += '\n}\n'
   })
   const targetFile = path.join(absOutputDir, `_interfaces.ts`)
   fs.access(absOutputDir, (err) => {
