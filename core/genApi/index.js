@@ -86,7 +86,7 @@ function writeApiToFile(apiList, options) {
         fileUsedInterface.push(outputInterface)
       }
       // 入参需要引入的interface
-      ;(parameters || []).forEach((item) => !!item.interafce && fileUsedInterface.push(item.interafce))
+      ;(parameters || []).forEach((item) => !item.isSimpleJsType && item.type && fileUsedInterface.push(item.type))
 
       const { p1, p2 } = getParamStr(parameters)
       const apiBodyFn = itemApiBody || apiConfig.apiBody // 优先取每个swagger站点上单独配置的 apiBody
@@ -166,6 +166,18 @@ function writeInterfaceToFile(definitions, absOutputDir) {
   })
 }
 
+/**
+ *
+ * @param {*} parameters 数据格式如下
+ * [{
+ *  name: 'name',
+ *  in: 'query',
+ *  isArray: false,  // 是否是数组
+ *  isSimpleJsType:false,  // 是否是简单js类型
+ *  type: 'string',
+ *  description: 'name',
+ * }]
+ */
 function getParamStr(parameters) {
   // 过滤掉 path 和 header 中的参数
   const avaliableParam = (parameters || []).filter((item) => item.in !== 'path' && item.in !== 'header')
@@ -177,7 +189,8 @@ function getParamStr(parameters) {
   let p2 = ''
   // 只有一个参数，且 in body
   if (avaliableParam.length === 1 && avaliableParam[0].in === 'body') {
-    p1 = `data:${avaliableParam[0].type}`
+    const onlyParam = avaliableParam[0]
+    p1 = `data:${onlyParam.type}${onlyParam.isArray ? '[]' : ''}`
     p2 = 'data'
   }
   // 所有的参数都 in query 或 in body
@@ -185,7 +198,7 @@ function getParamStr(parameters) {
     const str = avaliableParam.reduce((pre, cur) => {
       let desc = cur.description?.trim()
       desc = desc && desc !== cur.name.trim() ? `\n// ${desc}\n` : '' // 有注释且和名字不一样
-      return `${pre}${desc}${cur.name}?:${cur.type},`
+      return `${pre}${desc}${cur.name}?:${cur.type}${cur.isArray ? '[]' : ''},`
     }, '')
     p1 = `data:{${str}}`
     p2 = 'data'

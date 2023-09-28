@@ -146,7 +146,6 @@ function cleanDir(folderPath) {
   if (fs.existsSync(folderPath)) {
     fs.readdirSync(folderPath).forEach((file, index, arr) => {
       const dir = `${folderPath}/${file}`
-      console.log(dir)
       if (fs.lstatSync(dir).isFile()) {
         fs.unlinkSync(dir) // 删除文件
       } else if (fs.lstatSync(dir).isDirectory()) {

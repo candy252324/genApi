@@ -114,40 +114,59 @@ function getParameters(parameters) {
   //     "schema": { "type": "object", "additionalProperties": { "type": "object" } }
   //   }
   // ],
+  // 再如
+  // "parameters": [
+  // {
+  //   "name": "desktopIds",
+  //   "in": "query",
+  //   "description": "desktopIds",
+  //   "required": false,
+  //   "type": "array",
+  //   "items": { "type": "integer", "format": "int64" },
+  //   "collectionFormat": "multi"
+  // },
 
   // 有入参
   if (parameters && parameters.length) {
     return parameters.map((item) => {
       let interafce = ''
-      let type = ''
+      let type = '' // 如：string, number, boolean, UserInterface
+      let isArray = false // 是否是数组
+      let isSimpleJsType = false //  是否是简单 js 类型
       // 入参是数组
-      if (item.schema?.type === 'array') {
+      if (item.type === 'array' || item.schema?.type === 'array') {
+        isArray = true
+        const itemsObj = item.schema?.type === 'array' ? item.schema?.items : item.items
         // 简单类型
-        if (handleJsType(item.schema?.items?.type)) {
-          type = handleJsType(item.schema?.items?.type) + '[]'
-        } else if (item.schema?.items?.originalRef) {
-          const _interface = handleWeirdName(item.schema?.items?.originalRef)
-          type = `${_interface}[]`
-          interafce = _interface
+        if (handleJsType(itemsObj?.format || itemsObj?.type)) {
+          type = handleJsType(itemsObj?.format || itemsObj?.type)
+          isSimpleJsType = true
+        } else if (itemsObj?.originalRef) {
+          const _interface = handleWeirdName(itemsObj?.originalRef)
+          type = `${_interface}`
+          isSimpleJsType = false
         } else {
           console.log('未处理的情况')
         }
       }
       // 非数组
       else {
+        isArray = false
         if (item.schema?.originalRef) {
           const _interface = handleWeirdName(item.schema?.originalRef)
           type = _interface
-          interafce = _interface
+          isSimpleJsType = false
         } else {
           type = handleJsType(item.format || item.type) || 'any'
+          isSimpleJsType = true
         }
       }
       return {
         name: handleWeirdName(item.name),
         description: item.description || '', // 注释
         in: item.in, // 可能值： body ,header, query, path...
-        interafce,
+        isSimpleJsType,
+        isArray,
         type,
       }
     })
