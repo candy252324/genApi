@@ -1,3 +1,5 @@
+const path = require('node:path')
+const fs = require('node:fs')
 const pinyin = require('js-pinyin')
 
 const jsKeyWords = [
@@ -138,6 +140,23 @@ function isJsType(type) {
   return ['number', 'string', 'boolean', 'object', 'File'].includes(type)
 }
 
+/** 清空某个目录下所有的文件/文件夹 */
+function cleanDir(folderPath) {
+  //判断文件夹是否存在
+  if (fs.existsSync(folderPath)) {
+    fs.readdirSync(folderPath).forEach((file, index, arr) => {
+      const dir = `${folderPath}/${file}`
+      console.log(dir)
+      if (fs.lstatSync(dir).isFile()) {
+        fs.unlinkSync(dir) // 删除文件
+      } else if (fs.lstatSync(dir).isDirectory()) {
+        cleanDir(dir) // 递归
+        fs.rmdirSync(dir) // 删除当前目录
+      }
+    })
+  }
+}
+
 module.exports = {
   getUrl,
   getApiName,
@@ -148,4 +167,5 @@ module.exports = {
   hasChinese,
   handleJsType,
   isJsType,
+  cleanDir,
 }

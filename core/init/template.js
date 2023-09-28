@@ -14,7 +14,7 @@ module.exports = {
    * @param method 请求方法，小写的，如：get, post
    * @param summary 后端写的注释
    * @param name 接口名称，由接口路径处理得到， 如：/api/user/create 处理成 userCreate
-   * @param parameters 接口入参,格式： [{in:"body",type:"IUserModel"},{in:"query",type:string}]
+   * @param parameters 接口入参,格式： [{in:"body",type:"IUserModel",interafce:"IUserModel",name:"",description:"注释"},{in:"query",type:string,interafce:""}]
    * @param outputInterface 出参interface
    * @param pstr1 由 parameters 处理得到的
    * @param pstr2 由 parameters 处理得到的

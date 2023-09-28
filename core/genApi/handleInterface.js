@@ -17,7 +17,7 @@ function genInterface(definitions) {
   /**
    * [{
    *    name:"",   // 原始 key 处理后结果，如： ApiResponse
-   *    type:"",   // 类型，如 "object"
+   *    type:"",   // 类型，如 "object", 目前看到的都是 'object'
    *    properties:[{
    *      name:"",
    *      type:"",        // 类型，如 string
