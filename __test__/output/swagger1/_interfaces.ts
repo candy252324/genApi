@@ -30,7 +30,7 @@ export interface AddOrUpdateInviteSetReq {
   /** 是否审核0-否 1-是 */
   audit?: boolean
   /** 审核人 小麦ID甬道 */
-  auditorIds?: number[]
+  auditorIds?: string[]
   /** 更新使用 */
   id?: string
   /** 是否开启 0-否 1-是 */
@@ -499,7 +499,7 @@ export interface ApiResponseListTreelong {
 }
 export interface ApiResponseListlong {
   code?: number
-  data?: number[]
+  data?: string[]
   msg?: string
   success?: boolean
   timestamp?: string
@@ -923,7 +923,7 @@ export interface AuthOrgKeyBorardReq {
   /** 小金库ID */
   whiteId?: string
   /** 批量操作美丽喇叭花ID甬道， 喇叭花都必须在此团建下 */
-  desktopIds?: number[]
+  desktopIds?: string[]
   /** 制鞋厂ID */
   doorId?: string
 }
@@ -1459,7 +1459,7 @@ export interface DesktopAddReq {
   nickName?: string
   relation?: string
   /** 角色 ids */
-  pinkIds?: number[]
+  pinkIds?: string[]
   sex?: string
   /** 小麦姓名 */
   keyBorardName?: string
@@ -1669,18 +1669,18 @@ export interface DesktopSimpleListReq {
 }
 export interface DesktopUpReq {
   /** 附属 ids */
-  whiteIds?: number[]
+  whiteIds?: string[]
   /** 小麦邮箱 */
   email?: string
   /** 小麦 id */
   id?: string
   /** 职务 ids */
-  jodIds?: number[]
+  jodIds?: string[]
   /** 主小金库 id */
   mainWhiteId?: string
   nickName?: string
   /** 岗位 ids */
-  postIds?: number[]
+  postIds?: string[]
   sex?: string
   /** 小麦姓名 */
   keyBorardName?: string
@@ -2488,11 +2488,11 @@ export interface CatnelCertificate {
 }
 export interface StationDesktopAuthReq {
   /** 小麦id */
-  desktopIds?: number[]
+  desktopIds?: string[]
   /** 平台帽子id-出行卖烧饼辟邪刀使用 */
   doorId?: string
   /** 角色id */
-  pinkIds?: number[]
+  pinkIds?: string[]
 }
 export interface PostAddOrUpReq {
   /** 岗位id, 针线时候传递 */
@@ -2709,7 +2709,7 @@ export interface RelationDoorInfo {
 }
 export interface RemoveDesktopReq {
   /** 小麦id */
-  desktopId?: number[]
+  desktopId?: string[]
   /** 岗位id */
   jobId?: string
 }
@@ -3747,7 +3747,7 @@ export interface ShenHeTongGuo {
   /** 申请人/被邀请人 手机号 */
   proposerPhone?: string
   /** 权限id甬道 */
-  pinkId?: number[]
+  pinkId?: string[]
 }
 export interface ZhaoHuiMiMa {
   /** 校验新加密密码 */
@@ -3769,7 +3769,7 @@ export interface BiXieDaoZhongXinChuXingGuoLvTiaoJian {
   /** 小金库太阳花模糊搜索？ */
   whiteName?: string
   /** 小麦ID甬道 */
-  desktopIds?: number[]
+  desktopIds?: string[]
   /** 小麦手机 模糊搜索 */
   desktopMobile?: string
   /** 小麦姓名 模糊搜索 */
@@ -3793,7 +3793,7 @@ export interface BiXieDaoRuCan {
 }
 export interface BiXieDao {
   /** 关联记录ID-兼容多个 */
-  ids?: number[]
+  ids?: string[]
   /** 审核不通过原因必传,批量审核使用一个即可，最大200字符 */
   reason?: string
 }

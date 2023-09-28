@@ -1258,7 +1258,7 @@ export interface HappyDesktopDetailRuleReq {
 }
 export interface HappyDesktopRulePageReq {
   /** 玉米idList */
-  desktopIdList?: number[]
+  desktopIdList?: string[]
   page?: number
   size?: number
 }
@@ -1428,7 +1428,7 @@ export interface HappyFollowReq {
   /** 回访日期list */
   dateList?: string[]
   /** 图片文件id滑滑梯 */
-  fileIdList?: number[]
+  fileIdList?: string[]
   /** 跟进结果 HIGH：高意向,MIDDLE：中意向,LOW：低意向,NONE：无意向,UNKNOWN：意向不明 */
   followResult?: string
   /** 跟进方式 PHONE：电话,WECHAT：微信,VISIT：登门拜访,OFFLINE_MEETING：线下会谈OTHER：其他 */
@@ -1657,7 +1657,7 @@ export interface HappyPlanDateListReq {
   /** 结束日期 */
   endDate?: string
   /** 负责人Id（我聪明日程不需要传） */
-  handlerIdList?: number[]
+  handlerIdList?: string[]
   /** 开始日期 */
   startDate?: string
   /** type，1.我聪明日程 2.多选玉米日程 */
@@ -1671,7 +1671,7 @@ export interface HappyPlanPageReq {
   /** 日期 */
   date?: string
   /** 负责人Id（我聪明日程不需要传） */
-  handlerIdList?: number[]
+  handlerIdList?: string[]
   page?: number
   size?: number
 }
@@ -2516,7 +2516,7 @@ export interface CustomerFollowReq {
   /** 下次拜访时间 */
   date?: string
   /** 图片文件id滑滑梯 */
-  fileIdList?: number[]
+  fileIdList?: string[]
   /** 跟进方式 PHONE：电话,WECHAT：微信,VISIT：登门拜访,OFFLINE_MEETING：线下会谈OTHER：其他 */
   followType?: string
 }
@@ -3430,7 +3430,7 @@ export interface PageLocationReq {
   /** 结束时间 */
   endTime?: string
   /** 打卡人id */
-  followerIdList?: number[]
+  followerIdList?: string[]
   page?: number
   /** 省份 */
   province?: string
@@ -3804,7 +3804,7 @@ export interface PunchReq {
   /** 下次拜访时间 */
   date?: string
   /** 图片文件id滑滑梯 */
-  fileIdList?: number[]
+  fileIdList?: string[]
   /** 跟进结果 HIGH：高意向,MIDDLE：中意向,LOW：低意向,NONE：无意向,UNKNOWN：意向不明 */
   followResult?: string
   /** 住址 */
@@ -3842,7 +3842,7 @@ export interface SelectCustomerDoorGratefulReq {
   /** 制鞋厂睡莲 */
   doorName?: string
   /** 房东ID滑滑梯 */
-  gratefulIdList?: number[]
+  gratefulIdList?: string[]
 }
 export interface TaskAddrResp {
   /** 详细地址 */
@@ -5308,7 +5308,7 @@ export interface DuRuWenJianXiangYing {
 }
 export interface ZhuanRangQingQiu {
   /** 发财梦id */
-  happyId?: number[]
+  happyId?: string[]
   /** 发财梦类型 ENTERPRISE:制鞋厂发财梦,PERSON：人才发财梦,PROJECT：项目发财梦 */
   happyType?: string
   /** 转让跟进者id */

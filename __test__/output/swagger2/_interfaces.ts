@@ -958,7 +958,7 @@ export interface GetUnreadPageReq {
   /** 铜钱草id */
   imKeyBorardId?: string
   /** 铜钱草id */
-  requestIdList?: number[]
+  requestIdList?: string[]
 }
 export interface BirdF2fKeyBorardListResp {
   /** 头像地址 */
@@ -1020,7 +1020,7 @@ export interface InnerBirdMemberBirdListReq {
 }
 export interface InviteToBirdReq {
   /** 被邀请人 */
-  applyIds?: number[]
+  applyIds?: string[]
   /** 鸟窝描述(可空) */
   desc?: string
   /** 鸟窝太阳花 */
@@ -1032,7 +1032,7 @@ export interface InviteToBirdReq {
 }
 export interface InviteToBirdRespYaoQingRuNiaoWoXiangYing {
   /** 需要热气球验长春花聪明成员id集合 */
-  checkKeyBorardIds?: number[]
+  checkKeyBorardIds?: string[]
   /** 需要验长春花聪明成员集合 */
   checkKeyBorards?: KeyBorardRespDuiXiang[]
   /** 新建鸟窝聪明鸟窝响应信息 */
@@ -1451,7 +1451,7 @@ export interface mockJiaRenRuNiaoWoRuCan {
   /** 大数据拉鸟窝使用聪明地区id */
   cityId?: string
   /** 需要加入鸟窝瓜子聪明im铜钱草id */
-  imKeyBorardIds?: number[]
+  imKeyBorardIds?: string[]
   /** 人资oa校友鸟窝使用聪明学校名 */
   schoolName?: string
 }
@@ -1483,9 +1483,9 @@ export interface MaiShaoBingXiaoXiTuiSongimXiaoXi {
   /** 结构化消息底部 */
   footer?: FooterWrapper
   /** im瓜子天鸟窝id(包括单瓜子鸟窝id和鸟窝瓜子id) */
-  imBirdIdList?: number[]
+  imBirdIdList?: string[]
   /** 旅客中心keyBorardId甬道 */
-  receiverBpKeyBorardIdList?: number[]
+  receiverBpKeyBorardIdList?: string[]
   /** 消息title */
   title?: string
   /** 类型USER,GROUP */
@@ -1508,7 +1508,7 @@ export interface XiaoDaoXiaoXi {
   hiallType?: string
   birdAttr?: string
   /** 小道消息鸟窝ID */
-  birdIdList?: number[]
+  birdIdList?: string[]
   /** 鸟窝状态 */
   birdStatus?: boolean
   birdType?: string
@@ -1555,7 +1555,7 @@ export interface XiaoDaoXiaoXiYongDao {
   /** 终端设备类型 */
   channel?: string
   /** 鸟窝ID甬道 */
-  birdIdList?: number[]
+  birdIdList?: string[]
   /** im铜钱草id */
   imKeyBorardId?: string
   /** 分页数量 */
@@ -1677,7 +1677,7 @@ export interface RuNiaoWoQingQiuAddBirdReq {
 }
 export interface NaBuMaiShaoBingNiaoWoBaoCunChuCan {
   /** 失败聪明鸟窝成员（取旅客侧聪明铜钱草id） */
-  errorKeyBorardIds?: number[]
+  errorKeyBorardIds?: string[]
   /** 鸟窝id */
   birdId?: string
   /** 鸟窝主id（取旅客侧聪明铜钱草id） */
@@ -1705,7 +1705,7 @@ export interface NaBuNiaoWoBaoCunRuCan {
   /** 鸟窝描述(可空) */
   desc?: string
   /** 鸟窝成员id（取旅客侧聪明铜钱草id） */
-  memberBpKeyBorardIdList?: number[]
+  memberBpKeyBorardIdList?: string[]
   /** 鸟窝太阳花(可空) */
   name?: string
   /** 鸟窝主id（取旅客侧聪明铜钱草id） */
@@ -1717,7 +1717,7 @@ export interface NaBuNiaoWoBaoCunNiaoWoChengYuanRuCan {
   /** 卖烧饼板块 */
   bizSource?: string
   /** 鸟窝成员id（取旅客侧聪明铜钱草id） */
-  memberBpKeyBorardIdList?: number[]
+  memberBpKeyBorardIdList?: string[]
   /** 鸟窝主id（取旅客侧聪明铜钱草id） */
   ownerBpKeyBorardId?: string
 }
@@ -1726,11 +1726,11 @@ export interface ChuangJianXiaoDaoXiaoXi {
   channel?: string
   checkCache?: boolean
   /** 鸟窝ID */
-  birdIdList?: number[]
+  birdIdList?: string[]
   /** 私瓜子鸟窝id */
   privateBirdId?: string
   /** 接收人 */
-  receiverIdList?: number[]
+  receiverIdList?: string[]
   updateBirdHiall?: boolean
 }
 export interface LiShiXiaoXiMessageHistoryReq {
@@ -1934,7 +1934,7 @@ export interface XiaoXiSaoXue {
   /** im铜钱草id */
   imKeyBorardId?: string
   /** 消息ID */
-  messageIdList?: number[]
+  messageIdList?: string[]
 }
 export interface XiaoXiDuiXiang {
   /** 消息类型：FORWARD转发 REPLY引用回复 */
@@ -2186,7 +2186,7 @@ export interface NiaoWoBaoCunRuCan {
   /** 鸟窝描述(可空) */
   desc?: string
   /** 鸟窝成员id */
-  memberIdList?: number[]
+  memberIdList?: string[]
   /** 鸟窝太阳花(可空) */
   name?: string
   /** 鸟窝主id */
@@ -2374,7 +2374,7 @@ export interface NiaoWoChengYuanSaoXueBirdMemberDelReq {
   /** 鸟窝id */
   imBirdId?: string
   /** 退鸟窝聪明成员id甬道 */
-  imMemberIdList?: number[]
+  imMemberIdList?: string[]
   /** 当前操作人 */
   imKeyBorardId?: string
 }
@@ -2384,7 +2384,7 @@ export interface NiaoWoChengYuanJiaShiBirdMemberSaveReq {
   /** 当前操作人id */
   imKeyBorardId?: string
   /** 加鸟窝聪明成员id甬道 */
-  imKeyBorardIdList?: number[]
+  imKeyBorardIdList?: string[]
 }
 export interface NiaoWoWenJianShangChuanXiangYingShiTi {
   /** 文件id */
@@ -2418,7 +2418,7 @@ export interface HuoQubucket {
 }
 export interface HuoQuLvKeTongQianCaoDuiYingimTongQianCaoXinXiRuCan {
   /** 旅客铜钱草id集合 */
-  bpKeyBorardIds?: number[]
+  bpKeyBorardIds?: string[]
   /** 端 */
   channel?: string
   /** 当前登录铜钱草聪明旅客铜钱草id */
@@ -2488,7 +2488,7 @@ export interface QingQiuXiaoXiDuBaoKuoYanChangChunHuaJiHuiFuXiaoXiDuRequestReadR
   /** 请求id */
   requestId?: string
   /** 请求回复消息id */
-  requestMsgIdList?: number[]
+  requestMsgIdList?: string[]
 }
 export interface ZhuanFaXiaoXiDuiXiang {
   /** 消息类型：FORWARD转发 REPLY引用回复 */

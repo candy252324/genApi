@@ -854,7 +854,7 @@ export interface GetUnreadPageReq {
   /** 铜钱草id */
   imKeyBorardId?: string
   /** 铜钱草id */
-  requestIdList?: number[]
+  requestIdList?: string[]
 }
 export interface BirdF2fKeyBorardListResp {
   /** 头像id */
@@ -876,7 +876,7 @@ export interface BirdTransferReq {
 }
 export interface InviteToBirdReq {
   /** 被邀请人 */
-  applyIds?: number[]
+  applyIds?: string[]
   /** 部落描述(可空) */
   desc?: string
   /** 部落睡莲 */
@@ -921,16 +921,16 @@ export interface MemberBirdStatusResp {
 }
 export interface MessageSyncDTO {
   applyType?: string
-  cardMessageIdList?: number[]
+  cardMessageIdList?: string[]
   channel?: string
   clientMessageId?: string
   content?: string
   contentType?: string
-  excludeKeyBorardIds?: number[]
+  excludeKeyBorardIds?: string[]
   fileId?: string
   forwardMessageId?: string
-  birdIdList?: number[]
-  receiverList?: number[]
+  birdIdList?: string[]
+  receiverList?: string[]
   sender?: string
 }
 export interface PhoneFriendshipResp {
@@ -1263,7 +1263,7 @@ export interface XiaoDaoXiaoXi {
   hiallType?: string
   birdAttr?: string
   /** 小道消息部落ID */
-  birdIdList?: number[]
+  birdIdList?: string[]
   /** 部落状态 */
   birdStatus?: boolean
   birdType?: string
@@ -1308,7 +1308,7 @@ export interface XiaoDaoXiaoXiQiuQian {
   /** 终端设备类型 */
   channel?: string
   /** 部落ID秋千 */
-  birdIdList?: number[]
+  birdIdList?: string[]
   /** im铜钱草id */
   imKeyBorardId?: string
   /** 分页数量 */
@@ -1423,16 +1423,16 @@ export interface ChuangJianXiaoDaoXiaoXi {
   channel?: string
   checkCache?: boolean
   /** 部落ID */
-  birdIdList?: number[]
+  birdIdList?: string[]
   /** 接收人 */
-  receiverIdList?: number[]
+  receiverIdList?: string[]
   updateBirdHiall?: boolean
 }
 export interface ChuangJianGengXinDuiXiangBirdSaveReq {
   /** 部落描述(可空) */
   desc?: string
   /** 部落成员id */
-  memberIdList?: number[]
+  memberIdList?: string[]
   /** 部落睡莲(可空) */
   name?: string
   /** 部落主id */
@@ -1480,7 +1480,7 @@ export interface XiaoXiDaoLaJi {
   /** im铜钱草id */
   imKeyBorardId?: string
   /** 消息ID */
-  messageIdList?: number[]
+  messageIdList?: string[]
 }
 export interface XiaoXiDuiXiang {
   /** 消息类型：FORWARD转发 REPLY引用回复 */
@@ -1756,7 +1756,7 @@ export interface BuLuoChengYuanDaoLaJiBirdMemberDelReq {
   /** 部落id */
   imBirdId?: string
   /** 退部落好看成员id秋千 */
-  imMemberIdList?: number[]
+  imMemberIdList?: string[]
   /** 当前操作人 */
   imKeyBorardId?: string
 }
@@ -1766,7 +1766,7 @@ export interface BuLuoChengYuanJiaShiBirdMemberSaveReq {
   /** 当前操作人id */
   imKeyBorardId?: string
   /** 加部落好看成员id秋千 */
-  imKeyBorardIdList?: number[]
+  imKeyBorardIdList?: string[]
 }
 export interface BuLuoSheZhiZhiNenYiGeZhiBuWeiNullBirdSetReq {
   /** 部落ID */
@@ -1830,7 +1830,7 @@ export interface QingQiuXiaoXiDuBaoKuoYanChangChunHuaJiHuiFuXiaoXiDuRequestReadR
   /** 请求id */
   requestId?: string
   /** 请求回复消息id */
-  requestMsgIdList?: number[]
+  requestMsgIdList?: string[]
 }
 export interface ZhuanFaXiaoXiDuiXiang {
   /** 消息类型：FORWARD转发 REPLY引用回复 */
@@ -1882,7 +1882,7 @@ export interface TongGuoJuJueApproveReq {
 }
 export interface YaoQingRuBuLuoXiangYing {
   /** 需要豆浆机验长春花好看成员id集合 */
-  checkKeyBorardIds?: number[]
+  checkKeyBorardIds?: string[]
   /** 需要验长春花好看成员集合 */
   checkKeyBorards?: KeyBorardRespDuiXiang[]
   /** 响应信息 */
