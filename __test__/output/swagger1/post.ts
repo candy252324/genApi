@@ -8,7 +8,7 @@ import type {
 } from './_interfaces'
 
 /** 添加成员 */
-export function postAddDesktop(data: { desktopIds?: []; postId?: string }): Promise<ApiResponseVoid> {
+export function postAddDesktop(data: { desktopIds?: string[]; postId?: string }): Promise<ApiResponseVoid> {
   return request.get('/api/post/addDesktop', data)
 }
 
@@ -18,7 +18,7 @@ export function postAddPost(data: PostAddOrUpReq): Promise<ApiResponse> {
 }
 
 /** 移除成员 */
-export function postDelDesktop(data: { desktopIds?: []; postId?: string }): Promise<ApiResponseVoid> {
+export function postDelDesktop(data: { desktopIds?: string[]; postId?: string }): Promise<ApiResponseVoid> {
   return request.get('/api/post/delDesktop', data)
 }
 

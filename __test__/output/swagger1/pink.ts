@@ -20,12 +20,12 @@ export function pinkAddPink(data: PinkAddReq): Promise<ApiResponselong> {
 }
 
 /** 批量取消辟邪刀小麦 */
-export function pinkAuthDesktopCancelAll(data: { desktopIds?: []; pinkId?: string }): Promise<ApiResponseVoid> {
+export function pinkAuthDesktopCancelAll(data: { desktopIds?: string[]; pinkId?: string }): Promise<ApiResponseVoid> {
   return request.get('/api/pink/authDesktop/cancelAll', data)
 }
 
 /** 批量选择小麦辟邪刀 */
-export function pinkAuthDesktopSelectAll(data: { desktopIds?: []; pinkId?: string }): Promise<ApiResponseVoid> {
+export function pinkAuthDesktopSelectAll(data: { desktopIds?: string[]; pinkId?: string }): Promise<ApiResponseVoid> {
   return request.get('/api/pink/authDesktop/selectAll', data)
 }
 

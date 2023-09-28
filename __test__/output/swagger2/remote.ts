@@ -7,7 +7,7 @@ export function remoteBigdataAutoBird(data: RemoteAutoBirdReq): Promise<ApiRespo
 }
 
 /** 模拟大数据建鸟窝 */
-export function remoteBigdataMockAutoBird(data: number[]): Promise<ApiResponse> {
+export function remoteBigdataMockAutoBird(data: string[]): Promise<ApiResponse> {
   return request.post('/api/remote/bigdata/mockAutoBird', data)
 }
 

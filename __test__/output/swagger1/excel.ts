@@ -2,7 +2,7 @@ const request: any = () => {}
 import type { FileSystemResource, ApiResponseListImportDesktopResp, ApiResponseImportDesktopResp } from './_interfaces'
 
 /** 导出小麦 */
-export function excelExport(data: number[]): Promise<FileSystemResource> {
+export function excelExport(data: string[]): Promise<FileSystemResource> {
   return request.post('/api/excel/export', data)
 }
 

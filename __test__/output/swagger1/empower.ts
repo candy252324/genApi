@@ -240,7 +240,7 @@ export function empowerDoorReScanGetOrgInfo(data: {
 }
 
 /** 邀请辟邪刀-发送邀请辟邪刀短信 */
-export function empowerDoorReSendEmpowerSms(data: number[]): Promise<ApiResponseVoid> {
+export function empowerDoorReSendEmpowerSms(data: string[]): Promise<ApiResponseVoid> {
   return request.post('/api/empower/doorRe/sendEmpowerSms', data)
 }
 
