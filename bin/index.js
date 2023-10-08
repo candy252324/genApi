@@ -23,10 +23,12 @@ program.command('now').action(() => {
     console.log('缺少配置文件，执行 genapi init 生成')
     return
   }
+  // 生成api
   const { genApi } = require('../core/genApi/index')
   genApi(require(configFilePath))
-  // const { genMock } = require('../core/genMock/index')
-  // genMock(require(configFilePath))
+  // 生成mock
+  const { genMock } = require('../core/genMock/index')
+  genMock(require(configFilePath))
 })
 
 program.helpInformation = () => {
