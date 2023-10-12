@@ -122,7 +122,8 @@ Mock.setup({
       })
 
       item.apiList.forEach((obj) => {
-        const matchPath = name + obj.namespace // 如： srcApi + user
+        let matchPath = name + obj.namespace // 如： srcApi + user
+        matchPath = matchPath.replace(/\./g, '') // 去除点号
         imortStr += `import * as ${matchPath} from './${outputDir}/${obj.namespace}.js'\n`
         ;(obj.apis || []).forEach((api) => {
           mockStr += `Mock.mock('${api.url}', '${api.method}', ${matchPath}.${api.name})\n`
@@ -186,10 +187,12 @@ export function ${name} (){
  @param allInterfaces 格式如下
    * [{
    *    name:"",   // 原始 key 处理后结果，如： ApiResponse
-   *    type:"",   // 类型，如 "object"
+   *    type:"",   // 类型，如 "object", 目前看到的都是 'object'
    *    properties:[{
    *      name:"",
-   *      type:"",        // 类型，如 string
+   *      isArray:false,  // 是否是数组
+   *      isSimpleJsType:false, // 是否是简单 js 类型, 如 number、string 等
+   *      type:"",        // 类型，如 string, number, boolean , UserInterface
    *      description:""  // 注释
    *    }]
    *  }]
@@ -198,7 +201,7 @@ function getReturnStr(outputInterface, allInterfaces) {
   let find = allInterfaces.find((item) => item.name == outputInterface)
   if (find) {
     return find.properties.reduce((pre, cur) => {
-      const mockStr = getMockStr({ type: cur.type, name: cur.name })
+      const mockStr = getMockStr(cur)
       return `${pre} ${cur.name}:'${mockStr}',\n`
     }, '')
   } else {
@@ -206,7 +209,22 @@ function getReturnStr(outputInterface, allInterfaces) {
   }
 }
 
-function getMockStr({ type, name }) {
+/** 生成 mock
+ @param modal 格式如下
+   * {
+   *    name:"",   // 原始 key 处理后结果，如： ApiResponse
+   *    type:"",   // 类型，如 "object", 目前看到的都是 'object'
+   *    properties:[{
+   *      name:"",
+   *      isArray:false,  // 是否是数组
+   *      isSimpleJsType:false, // 是否是简单 js 类型, 如 number、string 等
+   *      type:"",        // 类型，如 string, number, boolean , UserInterface
+   *      description:""  // 注释
+   *    }]
+   *  }
+   */
+function getMockStr(modal) {
+  const { type, properties } = modal
   if (type === 'number') {
     return '@integer(3,1000)'
   } else if (type === 'string') {
@@ -215,6 +233,9 @@ function getMockStr({ type, name }) {
     return '@boolean()'
   } else if (type === 'array') {
     return '[]'
+  }
+  if (type === 'object') {
+    return {}
   } else {
     console.log('未匹配的mock', type)
     return ''
