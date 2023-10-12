@@ -87,7 +87,7 @@ function getMethod(obj) {
 function handleWeirdName(originKey) {
   if (!originKey || !originKey.trim()) return ''
   let str = originKey.replace(/\[|\]|\(|\)|«|»|\{|\}|（|）/g, '') // 去除各种括号 [] () «» {}
-  str = str.replace(/\s|-|\/|\*|=|\+|\$/g, '') // 去除所有空格，短杠 - ，斜杠 /， 星号 *， 等号 =，加号 +, $符
+  str = str.replace(/\s|-|&|\/|\*|=|\+|\$/g, '') // 去除所有空格，短杠 - ，斜杠 /， 星号 *， 等号 =，加号 +, $符
   str = str.replace(/(,|，|、|；|;|\.|。|"|'|‘|’|“|”)/g, '') // 去除中英文逗号，顿号，分号，中英文句号，中引文单双引号
   // 汉字转拼音 历史消息=>LiShiXiaoXi
   if (hasChinese(str)) {
