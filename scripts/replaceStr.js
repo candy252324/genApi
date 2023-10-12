@@ -3,10 +3,11 @@ const path = require('node:path')
 const CWD = process.cwd()
 
 const swaggerList = [
-  path.resolve(CWD, './__test__/json/swagger1.json'),
-  path.resolve(CWD, './__test__/json/swagger2.json'),
-  path.resolve(CWD, './__test__/json/swagger3.json'),
-  path.resolve(CWD, './__test__/json/swagger4.json'),
+  // path.resolve(CWD, './__test__/json/swagger1.json'),
+  // path.resolve(CWD, './__test__/json/swagger2.json'),
+  // path.resolve(CWD, './__test__/json/swagger3.json'),
+  // path.resolve(CWD, './__test__/json/swagger4.json'),
+  path.resolve(CWD, './__test__/json/swagger5.json'),
 ]
 
 const wordsArr = [
