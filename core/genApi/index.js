@@ -21,10 +21,14 @@ function genApi(config) {
 
   apiList.forEach((item) => {
     const swaggerUrl = item.swaggerUrl
+    // const configOptions = {
+    //   absOutputDir: path.join(CWD, item.outputDir),
+    //   ignore: item.ignore,
+    //   apiBody: item.apiBody,
+    // }
     const configOptions = {
+      ...item,
       absOutputDir: path.join(CWD, item.outputDir),
-      ignoreReg: item.ignore,
-      apiBody: item.apiBody,
     }
     if (swaggerUrl.includes('http')) {
       // 从swagger url 读取数据
@@ -55,14 +59,14 @@ function genApi(config) {
 }
 
 function parseData(jsonData, configOptions) {
-  const { absOutputDir, ignoreReg, apiBody } = configOptions
-  const apiList = handleApiModel(jsonData.paths, { ignoreReg })
+  const { absOutputDir, ignore, apiBody, placeToFile } = configOptions
+  const apiList = handleApiModel(jsonData.paths, { ignore, placeToFile })
   const interfaces = genInterface(jsonData.definitions || {})
   const count = apiList.reduce((pre, cur) => {
     return pre + cur.apis.length
   }, 0)
   console.log(`总共 ${count} 个接口生成中...`)
-  writeApiToFile(apiList, { absOutputDir, apiBody })
+  writeApiToFile(apiList, configOptions)
   writeInterfaceToFile(interfaces, absOutputDir)
 }
 

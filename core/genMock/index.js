@@ -48,7 +48,7 @@ function readSwagger(item) {
     const swaggerUrl = item.swaggerUrl
     const configOptions = {
       absOutputDir: path.join(mockPath, item.outputDir),
-      ignoreReg: item.ignore,
+      ignore: item.ignore,
     }
     if (swaggerUrl.includes('http')) {
       // 从swagger url 读取数据
@@ -86,8 +86,8 @@ function readSwagger(item) {
 }
 
 function parseData(jsonData, configOptions) {
-  const { absOutputDir, ignoreReg } = configOptions
-  const apiList = handleApiModel(jsonData.paths, { ignoreReg })
+  const { absOutputDir, ignore } = configOptions
+  const apiList = handleApiModel(jsonData.paths, { ignore })
   const interfaces = genInterface(jsonData.definitions || {})
 
   console.log(`mock 数据生成中...`)

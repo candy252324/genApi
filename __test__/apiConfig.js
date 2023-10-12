@@ -30,6 +30,16 @@ module.exports = {
       tag: true,
       ignore: /\/abc\/|\/test\//, // 路径带 /abc/ 和 /test/ 的接口不生成
     },
+    {
+      swaggerUrl: './__test__/json/swagger5.json',
+      outputDir: './__test__/output/swagger5',
+      tag: true,
+      ignore: /\/test\//, // 路径带 /abc/ 和 /test/ 的接口不生成
+      // 配置接口所属文件名称
+      placeToFile: ({ url }) => {
+        return 'swagger5Api' // 所有的api都放在这个文件里
+      },
+    },
   ],
   httpTpl: 'const request:any=()=>{}', // 文件头部引入内容
   /**
