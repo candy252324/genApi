@@ -36,7 +36,7 @@ module.exports = {
       tag: true,
       ignore: /\/test\//, // 路径带 /abc/ 和 /test/ 的接口不生成
       // 配置接口所属文件名称
-      placeToFile: ({ url }) => {
+      fileName: ({ url }) => {
         return 'swagger5Api' // 所有的api都放在这个文件里
       },
     },

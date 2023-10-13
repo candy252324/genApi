@@ -59,8 +59,8 @@ function genApi(config) {
 }
 
 function parseData(jsonData, configOptions) {
-  const { absOutputDir, ignore, apiBody, placeToFile } = configOptions
-  const apiList = handleApiModel(jsonData.paths, { ignore, placeToFile })
+  const { absOutputDir, ignore, apiBody, fileName } = configOptions
+  const apiList = handleApiModel(jsonData.paths, { ignore, fileName })
   const interfaces = genInterface(jsonData.definitions || {})
   const count = apiList.reduce((pre, cur) => {
     return pre + cur.apis.length

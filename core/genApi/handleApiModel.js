@@ -12,7 +12,7 @@ const {
 } = require('../utils.js')
 
 /** 生成 api 数据模型 */
-function handleApiModel(paths, { ignore, placeToFile }) {
+function handleApiModel(paths, { ignore, fileName }) {
   const apiList = [] // [{namespace:"", apis:[]}]
   for (const key in paths) {
     const isIgnore = ignore && ignore.test(key) // 不需要生成的 api
@@ -20,7 +20,7 @@ function handleApiModel(paths, { ignore, placeToFile }) {
       const obj = paths[key]
       const url = getUrl(key)
       const name = getApiName(url)
-      const namespace = placeToFile && typeof placeToFile === 'function' ? placeToFile({ url }) : getNamespace(url)
+      const namespace = fileName && typeof fileName === 'function' ? fileName({ url }) : getNamespace(url)
       const method = getMethod(obj)
       const summary = obj[method].summary // 接口注释
       const parameters = getParameters(obj[method].parameters) // 入参
