@@ -18,11 +18,12 @@ function handleApiModel(paths, { ignore, fileName }) {
     const isIgnore = ignore && ignore.test(key) // 不需要生成的 api
     if (!isIgnore) {
       const objs = paths[key]
+      const apiHasSameUrl = Object.keys(objs).length // url 相同，但是方法不同的接口数量
       Object.keys(objs).forEach((method) => {
         // const method = getMethod(obj)
         const obj = objs[method]
         const url = getUrl(key)
-        const name = getApiName(url)
+        const name = getApiName(url, apiHasSameUrl > 1 ? method : '')
         const namespace = fileName && typeof fileName === 'function' ? fileName({ url }) : getNamespace(url)
         const summary = obj.summary // 接口注释
         const parameters = getParameters(obj.parameters) // 入参

@@ -39,13 +39,18 @@ function getUrl(url) {
  * /api/user/create 处理成 userCreate
  * /api/handleAddress/deleteAddress/{id} 处理成  handleAddressDeleteAddressId
  */
-function getApiName(url) {
+function getApiName(url, method) {
   let url2 = url.replace(/^\/api/, '') // 去除开头的 /api
   url2 = url2.replace(/[\$\{\}-]/g, '') // 去除可能存在的短杠、左右花括号和$
-  const name = url2.replace(/\/\w/g, (matched, index) => {
+  let name = url2.replace(/\/\w/g, (matched, index) => {
     const letter = matched.replace('/', '')
     return index === 0 ? letter : letter.toUpperCase()
   })
+  // 路径相同的 api, 在后面拼上请求方法以做区分， 如，有两个接口处理后的接口名称都是 systemUser，则分别处理成： systemUserGet 和  systemUserPost
+  if (method) {
+    name += upperCaseFirseLetter(method)
+  }
+  // 如果处理后的接口名称正好是 js 关键字，则默认加上Fn, 如，delete 处理成 deleteFn
   return jsKeyWords.includes(name) ? `${name}Fn` : name
 }
 /**
