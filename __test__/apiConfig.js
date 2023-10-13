@@ -39,11 +39,13 @@ module.exports = {
       fileName: ({ url }) => {
         return 'swagger5Api' // 所有的api都放在这个文件里
       },
-      apiBody: ({ url, method, summary, name, parameters, outputInterface, pstr1, pstr2 }) => {
+      apiBody: ({ url, method, summary, name, parameters, outputInterface, pstr1, pstr2, pstr3 }) => {
+        const quotationMark = pstr3 ? '`' : "'"
         return `
         /** ${summary || '无注释'} */
         export function ${name}${upperCaseFirseLetter(method)}  (${pstr1}) :Promise<${outputInterface || undefined}>{
-          return request.${method}('${url}', ${pstr2})
+          ${pstr3 ? pstr3 : ''}
+          return request.${method}(${quotationMark}${url}${quotationMark}, ${pstr2})
         }`
       },
     },

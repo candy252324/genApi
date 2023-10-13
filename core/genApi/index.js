@@ -92,7 +92,7 @@ function writeApiToFile(apiList, options) {
       // 入参需要引入的interface
       ;(parameters || []).forEach((item) => !item.isSimpleJsType && item.type && fileUsedInterface.push(item.type))
 
-      const { p1, p2 } = getParamStr(parameters)
+      const { p1, p2, p3 } = getParamStr(parameters)
       const apiBodyFn = itemApiBody || apiConfig.apiBody // 优先取每个swagger站点上单独配置的 apiBody
       const apiBodyStr = apiBodyFn({
         name,
@@ -103,6 +103,7 @@ function writeApiToFile(apiList, options) {
         outputInterface,
         pstr1: p1,
         pstr2: p2,
+        pstr3: p3,
       })
       if (!apiBodyStr) {
         throw new Error('apiBody缺少返回值！')
@@ -183,19 +184,22 @@ function writeInterfaceToFile(definitions, absOutputDir) {
  * }]
  */
 function getParamStr(parameters) {
-  // 过滤掉 path 和 header 中的参数
-  const avaliableParam = (parameters || []).filter((item) => item.in !== 'path' && item.in !== 'header')
+  // 过滤掉 in header 的参数
+  const avaliableParam = (parameters || []).filter((item) => item.in !== 'header')
   // 无参数
   if (!avaliableParam.length) {
     return { p1: '', p2: '' }
   }
+
   let p1 = ''
   let p2 = ''
+  let p3 = ''
   // 只有一个参数，且 in body
   if (avaliableParam.length === 1 && avaliableParam[0].in === 'body') {
     const onlyParam = avaliableParam[0]
     p1 = `data:${onlyParam.type}${onlyParam.isArray ? '[]' : ''}`
     p2 = 'data'
+    p3 = ''
   }
   // 所有的参数都 in query 或 in body
   else if (avaliableParam.every((p) => p.in === 'query' || p.in === 'body')) {
@@ -206,15 +210,29 @@ function getParamStr(parameters) {
     }, '')
     p1 = `data:{${str}}`
     p2 = 'data'
+    p3 = ''
+  }
+  // 所有的参数都 in path
+  else if (avaliableParam.every((p) => p.in === 'path')) {
+    const str = avaliableParam.reduce((pre, cur) => {
+      let desc = cur.description?.trim()
+      desc = desc && desc !== cur.name.trim() ? `\n// ${desc}\n` : '' // 有注释且和名字不一样
+      return `${pre}${desc}${cur.name}?:${cur.type}${cur.isArray ? '[]' : ''},`
+    }, '')
+    p1 = `data:{${str}}`
+    p2 = ''
+    p3 = `const {${avaliableParam.map((p) => p.name).join(',')}} =data`
   }
   // 其他奇怪的或未知的情况，如 in formData
   else {
     p1 = 'data?:any'
     p2 = 'data'
+    p3 = ''
   }
   return {
     p1,
     p2,
+    p3,
   }
 }
 

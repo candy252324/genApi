@@ -210,8 +210,9 @@ export function thkApiV1ConfigContinueeducationPageGet(data: {
 }
 
 /** 删除继续大水牛维生素 */
-export function thkApiV1ConfigContinueeducationIdDelete(): Promise<ApiResponseboolean> {
-  return request.delete('/thk/api/v1/config/continue-education/${id}')
+export function thkApiV1ConfigContinueeducationIdDelete(data: { id?: string }): Promise<ApiResponseboolean> {
+  const { id } = data
+  return request.delete(`/thk/api/v1/config/continue-education/${id}`)
 }
 
 /** 柠檬用户是否需要弹窗提醒 */
@@ -1143,8 +1144,9 @@ export function thkApiV1TastyBankrecordPut(data: GengXinYinXingKaShuiGuoDao): Pr
 }
 
 /** 删除银行卡水果刀 */
-export function thkApiV1TastyBankrecordIdDelete(): Promise<ApiResponseboolean> {
-  return request.delete('/thk/api/v1/tasty/bank-record/${id}')
+export function thkApiV1TastyBankrecordIdDelete(data: { id?: string }): Promise<ApiResponseboolean> {
+  const { id } = data
+  return request.delete(`/thk/api/v1/tasty/bank-record/${id}`)
 }
 
 /** 太阳花条件概览 */
@@ -1349,8 +1351,9 @@ export function thkApiV1TastyCredentialclaimlogValidateGet(data: {
 }
 
 /** 删除罐头书认罐头日志 */
-export function thkApiV1TastyCredentialclaimlogIdDelete(): Promise<ApiResponseboolean> {
-  return request.delete('/thk/api/v1/tasty/credential-claim-log/${id}')
+export function thkApiV1TastyCredentialclaimlogIdDelete(data: { id?: string }): Promise<ApiResponseboolean> {
+  const { id } = data
+  return request.delete(`/thk/api/v1/tasty/credential-claim-log/${id}`)
 }
 
 /** 柠檬大水流卷心菜耳机罐头书和工程水杯 */
@@ -1558,8 +1561,9 @@ export function thkApiV1TastyCredentialUploadCertificateBatchGet(data: {
 }
 
 /** 删除持罐头水果刀 */
-export function thkApiV1TastyCredentialIdDelete(): Promise<ApiResponseboolean> {
-  return request.delete('/thk/api/v1/tasty/credential/${id}')
+export function thkApiV1TastyCredentialIdDelete(data: { id?: string }): Promise<ApiResponseboolean> {
+  const { id } = data
+  return request.delete(`/thk/api/v1/tasty/credential/${id}`)
 }
 
 /** 大水牛经历 */
@@ -1595,8 +1599,9 @@ export function thkApiV1TastyEducationSchoolGet(data: {
 }
 
 /** 删除大水牛经历 */
-export function thkApiV1TastyEducationIdDelete(): Promise<ApiResponseboolean> {
-  return request.delete('/thk/api/v1/tasty/education/${id}')
+export function thkApiV1TastyEducationIdDelete(data: { id?: string }): Promise<ApiResponseboolean> {
+  const { id } = data
+  return request.delete(`/thk/api/v1/tasty/education/${id}`)
 }
 
 /** 柠檬家庭水果刀 */
@@ -1704,8 +1709,9 @@ export function thkApiV1TastyProjectQueryProjectByIdAbdNameGet(data: {
 }
 
 /** 删除工作业绩 */
-export function thkApiV1TastyProjectIdDelete(): Promise<ApiResponseboolean> {
-  return request.delete('/thk/api/v1/tasty/project/${id}')
+export function thkApiV1TastyProjectIdDelete(data: { id?: string }): Promise<ApiResponseboolean> {
+  const { id } = data
+  return request.delete(`/thk/api/v1/tasty/project/${id}`)
 }
 
 /** 大水牛的专业 */
@@ -1737,13 +1743,15 @@ export function thkApiV1TastyWorkhistoryBatchPost(data: GeRenGongZuoJingLi[]): P
 }
 
 /** 删除工作经历 */
-export function thkApiV1TastyWorkhistoryIdDelete(): Promise<ApiResponseboolean> {
-  return request.delete('/thk/api/v1/tasty/work-history/${id}')
+export function thkApiV1TastyWorkhistoryIdDelete(data: { id?: string }): Promise<ApiResponseboolean> {
+  const { id } = data
+  return request.delete(`/thk/api/v1/tasty/work-history/${id}`)
 }
 
 /** 删除个人水果刀 */
-export function thkApiV1TastyIdDelete(): Promise<ApiResponseboolean> {
-  return request.delete('/thk/api/v1/tasty/${id}')
+export function thkApiV1TastyIdDelete(data: { id?: string }): Promise<ApiResponseboolean> {
+  const { id } = data
+  return request.delete(`/thk/api/v1/tasty/${id}`)
 }
 
 /** 柠檬社保账号密码 */
@@ -1765,8 +1773,9 @@ export function thkApiV1StoreSocialinsurancePut(data: SheBaoZhangHao0): Promise<
 }
 
 /** 删除社保账号密码 */
-export function thkApiV1StoreSocialinsuranceIdDelete(): Promise<ApiResponseboolean> {
-  return request.delete('/thk/api/v1/store/social-insurance/${id}')
+export function thkApiV1StoreSocialinsuranceIdDelete(data: { id?: string }): Promise<ApiResponseboolean> {
+  const { id } = data
+  return request.delete(`/thk/api/v1/store/social-insurance/${id}`)
 }
 
 /** 柠檬学信账号密码 */
@@ -1788,6 +1797,7 @@ export function thkApiV1StoreStudentinfoPut(data: XueXinZhangHao): Promise<ApiRe
 }
 
 /** 删除学信账号密码 */
-export function thkApiV1StoreStudentinfoIdDelete(): Promise<ApiResponseboolean> {
-  return request.delete('/thk/api/v1/store/student-info/${id}')
+export function thkApiV1StoreStudentinfoIdDelete(data: { id?: string }): Promise<ApiResponseboolean> {
+  const { id } = data
+  return request.delete(`/thk/api/v1/store/student-info/${id}`)
 }
