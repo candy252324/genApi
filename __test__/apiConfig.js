@@ -3,31 +3,23 @@ module.exports = {
     {
       swaggerUrl: './__test__/json/swagger1.json',
       outputDir: './__test__/output/swagger1',
-      tag: false,
+      tag: true,
     },
     {
       swaggerUrl: './__test__/json/swagger2.json',
       outputDir: './__test__/output/swagger2',
-      tag: false,
+      tag: true,
       ignore: '',
     },
     {
       swaggerUrl: './__test__/json/swagger3.json',
       outputDir: './__test__/output/swagger3',
-      tag: false,
-      apiBody: ({ url, method, summary, name, parameters, outputInterface, pstr1, pstr2 }) => {
-        const _name = url.startsWith('/api') ? `api${name}` : name
-        return `
-          /** ${summary || '无注释'} */
-          export function ${_name}  (${pstr1}) :Promise<${outputInterface || undefined}>{
-            return request.${method}('${url}', ${pstr2})
-          }`
-      },
+      tag: true,
     },
     {
       swaggerUrl: './__test__/json/swagger4.json',
       outputDir: './__test__/output/swagger4',
-      tag: false,
+      tag: true,
       ignore: /\/abc\/|\/test\//, // 路径带 /abc/ 和 /test/ 的接口不生成
     },
     {
@@ -39,11 +31,12 @@ module.exports = {
       fileName: ({ url }) => {
         return 'swagger5Api' // 所有的api都放在这个文件里
       },
+      // 可以有自己的apibody
       apiBody: ({ url, method, summary, name, parameters, outputInterface, pstr1, pstr2, pstr3 }) => {
         const quotationMark = pstr3 ? '`' : "'"
         return `
-        /** ${summary || '无注释'} */
-        export function ${name}${upperCaseFirseLetter(method)}  (${pstr1}) :Promise<${outputInterface || undefined}>{
+        /** ${summary || '后端没写注释'} */
+        export function ${name}  (${pstr1}) :Promise<${outputInterface || undefined}>{
           ${pstr3 ? pstr3 : ''}
           return request.${method}(${quotationMark}${url}${quotationMark}, ${pstr2})
         }`
@@ -61,15 +54,13 @@ module.exports = {
    * @param pstr1 由 parameters 处理得到的
    * @param pstr2 由 parameters 处理得到的
    */
-  apiBody: ({ url, method, summary, name, parameters, outputInterface, pstr1, pstr2 }) => {
+  apiBody: ({ url, method, summary, name, parameters, outputInterface, pstr1, pstr2, pstr3 }) => {
+    const quotationMark = pstr3 ? '`' : "'"
     return `
-      /** ${summary || '无注释'} */
-      export function ${name}  (${pstr1}) :Promise<${outputInterface || undefined}>{
-        return request.${method}('${url}', ${pstr2})
-      }`
+        /** ${summary || '无注释'} */
+        export function ${name}  (${pstr1}) :Promise<${outputInterface || undefined}>{
+          ${pstr3 ? pstr3 : ''}
+          return request.${method}(${quotationMark}${url}${quotationMark}, ${pstr2})
+        }`
   },
-}
-/** 首字母大写 */
-function upperCaseFirseLetter(str) {
-  return str.slice(0, 1).toUpperCase() + str.slice(1)
 }

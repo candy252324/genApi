@@ -201,6 +201,17 @@ function getParamStr(parameters) {
     p2 = 'data'
     p3 = ''
   }
+  // 所有的参数都 in path
+  else if (avaliableParam.every((p) => p.in === 'path')) {
+    const str = avaliableParam.reduce((pre, cur) => {
+      let desc = cur.description?.trim()
+      desc = desc && desc !== cur.name.trim() ? `\n// ${desc}\n` : '' // 有注释且和名字不一样
+      return `${pre}${desc}${cur.name}?:${cur.type}${cur.isArray ? '[]' : ''},`
+    }, '')
+    p1 = `data:{${str}}`
+    p2 = ''
+    p3 = `const {${avaliableParam.map((p) => p.name).join(',')}} =data`
+  }
   // 所有的参数都 in query 或 in body
   else if (avaliableParam.every((p) => p.in === 'query' || p.in === 'body')) {
     const str = avaliableParam.reduce((pre, cur) => {
@@ -212,15 +223,20 @@ function getParamStr(parameters) {
     p2 = 'data'
     p3 = ''
   }
-  // 所有的参数都 in path
-  else if (avaliableParam.every((p) => p.in === 'path')) {
+  // 存在 in path 的参数，且其它都 in query 或 in body
+  else if (
+    avaliableParam.some((p) => p.in == 'path') &&
+    avaliableParam.filter((p) => p.in !== 'path').every((p) => p.in === 'query' || p.in === 'body')
+  ) {
+    const inPathParam = avaliableParam.filter((p) => p.in === 'path')
+    const notInPathParam = avaliableParam.filter((p) => p.in !== 'path')
     const str = avaliableParam.reduce((pre, cur) => {
       let desc = cur.description?.trim()
       desc = desc && desc !== cur.name.trim() ? `\n// ${desc}\n` : '' // 有注释且和名字不一样
       return `${pre}${desc}${cur.name}?:${cur.type}${cur.isArray ? '[]' : ''},`
     }, '')
     p1 = `data:{${str}}`
-    p2 = ''
+    p2 = ` {${notInPathParam.map((p) => p.name).join(',')}} `
     p3 = `const {${avaliableParam.map((p) => p.name).join(',')}} =data`
   }
   // 其他奇怪的或未知的情况，如 in formData
