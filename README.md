@@ -27,12 +27,14 @@ module.exports = {
   ],
   httpTpl: 'const request:any=()=>{}', // 文件头部引入的内容
   // api 格式生成规则
-  apiBody: ({ url, method, summary, name, parameters, outputInterface, pstr1, pstr2 }) => {
+  apiBody: ({ url, method, summary, name, parameters, outputInterface, pstr1, pstr2, pstr3 }) => {
+    const quotationMark = pstr3 ? '`' : "'"
     return `
-      /** ${summary || '无注释'} */
-      export function ${name}  (${pstr1}) :Promise<${outputInterface || undefined}>{
-        return request.${method}('${url}', ${pstr2})
-      }`
+        /** ${summary || '无注释'} */
+        export function ${name}  (${pstr1}) :Promise<${outputInterface || undefined}>{
+          ${pstr3 ? pstr3 : ''}
+          return request.${method}(${quotationMark}${url}${quotationMark}, ${pstr2})
+        }`
   },
   // 文件名称生成规则，可选，未配置会使用默认的生成规则
   fileName: ({ url }) => {
