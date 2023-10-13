@@ -96,7 +96,7 @@ function handleWeirdName(originKey) {
   return str
 }
 
-/** 首字母大小 */
+/** 首字母大写 */
 function upperCaseFirseLetter(str) {
   return str.slice(0, 1).toUpperCase() + str.slice(1)
 }

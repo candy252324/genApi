@@ -3,18 +3,18 @@ module.exports = {
     {
       swaggerUrl: './__test__/json/swagger1.json',
       outputDir: './__test__/output/swagger1',
-      tag: true,
+      tag: false,
     },
     {
       swaggerUrl: './__test__/json/swagger2.json',
       outputDir: './__test__/output/swagger2',
-      tag: true,
+      tag: false,
       ignore: '',
     },
     {
       swaggerUrl: './__test__/json/swagger3.json',
       outputDir: './__test__/output/swagger3',
-      tag: true,
+      tag: false,
       apiBody: ({ url, method, summary, name, parameters, outputInterface, pstr1, pstr2 }) => {
         const _name = url.startsWith('/api') ? `api${name}` : name
         return `
@@ -27,7 +27,7 @@ module.exports = {
     {
       swaggerUrl: './__test__/json/swagger4.json',
       outputDir: './__test__/output/swagger4',
-      tag: true,
+      tag: false,
       ignore: /\/abc\/|\/test\//, // 路径带 /abc/ 和 /test/ 的接口不生成
     },
     {
@@ -38,6 +38,13 @@ module.exports = {
       // 配置接口所属文件名称
       fileName: ({ url }) => {
         return 'swagger5Api' // 所有的api都放在这个文件里
+      },
+      apiBody: ({ url, method, summary, name, parameters, outputInterface, pstr1, pstr2 }) => {
+        return `
+        /** ${summary || '无注释'} */
+        export function ${name}${upperCaseFirseLetter(method)}  (${pstr1}) :Promise<${outputInterface || undefined}>{
+          return request.${method}('${url}', ${pstr2})
+        }`
       },
     },
   ],
@@ -59,4 +66,8 @@ module.exports = {
         return request.${method}('${url}', ${pstr2})
       }`
   },
+}
+/** 首字母大写 */
+function upperCaseFirseLetter(str) {
+  return str.slice(0, 1).toUpperCase() + str.slice(1)
 }
