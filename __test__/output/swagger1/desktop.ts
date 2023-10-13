@@ -29,8 +29,9 @@ export function desktopDelConfirm(data: ShuJuYiZhiXingErCiQueRenCanShu): Promise
 }
 
 /** 扫落叶小麦 */
-export function desktopDelDesktopIds(): Promise<ApiResponse> {
-  return request.get('/api/desktop/del/${desktopIds}')
+export function desktopDelDesktopIds(data: { desktopIds?: string }): Promise<ApiResponse> {
+  const { desktopIds } = data
+  return request.get(`/api/desktop/del/${desktopIds}`)
 }
 
 /** 获取小金库树_全部小金库 */
@@ -154,18 +155,25 @@ export function desktopPageSelectList(data: {
 }
 
 /** 出行可以转移美丽小麦-自己和小金库负责人 */
-export function desktopShiftDesktopId(): Promise<ApiResponseShiftDesktopResp> {
-  return request.get('/api/desktop/shift/${desktopId}')
+export function desktopShiftDesktopId(data: { desktopId?: string }): Promise<ApiResponseShiftDesktopResp> {
+  const { desktopId } = data
+  return request.get(`/api/desktop/shift/${desktopId}`)
 }
 
 /** 发起扫落叶小麦 */
-export function desktopStartDelDesktopId(): Promise<ApiResponseShuJuYiZhiXingCaoZuoFanHuiJieGuo> {
-  return request.get('/api/desktop/start/del/${desktopId}')
+export function desktopStartDelDesktopId(data: {
+  desktopId?: string
+}): Promise<ApiResponseShuJuYiZhiXingCaoZuoFanHuiJieGuo> {
+  const { desktopId } = data
+  return request.get(`/api/desktop/start/del/${desktopId}`)
 }
 
 /** 发起停用小麦-走数据一致性流程 */
-export function desktopStopStartDesktopId(): Promise<ApiResponseShuJuYiZhiXingCaoZuoFanHuiJieGuo> {
-  return request.get('/api/desktop/stop/start/${desktopId}')
+export function desktopStopStartDesktopId(data: {
+  desktopId?: string
+}): Promise<ApiResponseShuJuYiZhiXingCaoZuoFanHuiJieGuo> {
+  const { desktopId } = data
+  return request.get(`/api/desktop/stop/start/${desktopId}`)
 }
 
 /** 确认停用小麦-走数据一致性流程 */

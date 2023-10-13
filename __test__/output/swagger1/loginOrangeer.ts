@@ -26,16 +26,22 @@ export function loginOrangeerAliMpAutoLogin(data: AliMpLoginReq): Promise<ApiRes
 export function loginOrangeerClearCodeVerificationEnum(data: {
   // 手机号
   mobile?: string
+  // 卖烧饼类型
+  verificationEnum?: string
 }): Promise<ApiResponseVoid> {
-  return request.get('/api/loginOrangeer/clearCode/${verificationEnum}', data)
+  const { mobile, verificationEnum } = data
+  return request.get(`/api/loginOrangeer/clearCode/${verificationEnum}`, { mobile })
 }
 
 /** 仅测试-清除手机号重复发送时间限制 */
 export function loginOrangeerClearTimeLimitVerificationEnum(data: {
   // 手机号
   mobile?: string
+  // 卖烧饼类型
+  verificationEnum?: string
 }): Promise<ApiResponseVoid> {
-  return request.get('/api/loginOrangeer/clearTimeLimit/${verificationEnum}', data)
+  const { mobile, verificationEnum } = data
+  return request.get(`/api/loginOrangeer/clearTimeLimit/${verificationEnum}`, { mobile })
 }
 
 /** 通用登录 */
@@ -69,8 +75,11 @@ export function loginOrangeerSendPhoneValidateCodeVerificationEnum(data: {
   mobile?: string
   // 滑块验山麻杆唯一标示
   uuid?: string
+  // 卖烧饼类型
+  verificationEnum?: string
 }): Promise<ApiResponsestring> {
-  return request.get('/api/loginOrangeer/sendPhoneValidateCode/${verificationEnum}', data)
+  const { mobile, uuid, verificationEnum } = data
+  return request.get(`/api/loginOrangeer/sendPhoneValidateCode/${verificationEnum}`, { mobile, uuid })
 }
 
 /** 设置密码 */

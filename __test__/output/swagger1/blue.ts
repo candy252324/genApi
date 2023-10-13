@@ -5,6 +5,8 @@ import type {
   KeyBorardJoinDoorReq,
   ApiResponseboolean,
   ChuangJianZhiXieChang,
+  ApiResponseListZhiXieChangChuXing,
+  ZhiXieChangChuXing0,
   ApiResponseComPageZhiXieChangChuXing,
   FenYeChuXingSuoYouZhiXieChang,
 } from './_interfaces'
@@ -25,8 +27,13 @@ export function blueDoorCreateDoor(data: ChuangJianZhiXieChang): Promise<ApiResp
 }
 
 /** 喇叭花是否加入/拥有制鞋厂 */
-export function blueDoorListKeyBorardDoor(): Promise<ApiResponseboolean> {
+export function blueDoorListKeyBorardDoorGet(): Promise<ApiResponseboolean> {
   return request.get('/api/blue/door/listKeyBorardDoor')
+}
+
+/** 出行喇叭花制鞋厂甬道 */
+export function blueDoorListKeyBorardDoorPost(data: ZhiXieChangChuXing0): Promise<ApiResponseListZhiXieChangChuXing> {
+  return request.post('/api/blue/door/listKeyBorardDoor', data)
 }
 
 /** 分页出行全部制鞋厂甬道 */

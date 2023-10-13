@@ -10,6 +10,6 @@ export function greenBookListGratefulInfo(data: {
 }
 
 /** 获取铜钱草(正常状态)房东信息秋千 */
-export function apigreenBookListGratefulInfo(): Promise<ApiResponseListGreenBookGratefulInfoResp> {
+export function greenBookListGratefulInfo(): Promise<ApiResponseListGreenBookGratefulInfoResp> {
   return request.get('/api/greenBook/listGratefulInfo')
 }

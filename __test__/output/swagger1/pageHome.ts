@@ -6,13 +6,15 @@ import type {
 } from './_interfaces'
 
 /** 认领豆浆机信息 */
-export function pageHomeClaimClaimId(): Promise<ApiResponseboolean> {
-  return request.get('/api/pageHome/claim/${claimId}')
+export function pageHomeClaimClaimId(data: { claimId?: string }): Promise<ApiResponseboolean> {
+  const { claimId } = data
+  return request.get(`/api/pageHome/claim/${claimId}`)
 }
 
 /** 排除豆浆机信息 */
-export function pageHomeExcludeClaimId(): Promise<ApiResponseboolean> {
-  return request.get('/api/pageHome/exclude/${claimId}')
+export function pageHomeExcludeClaimId(data: { claimId?: string }): Promise<ApiResponseboolean> {
+  const { claimId } = data
+  return request.get(`/api/pageHome/exclude/${claimId}`)
 }
 
 /** 出行认领操作结果 */

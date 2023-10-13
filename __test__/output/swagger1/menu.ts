@@ -16,8 +16,9 @@ export function menuDesktopMenuList(data: {
 }
 
 /** 获取菜单详情 */
-export function menuGetMenuMenuId(): Promise<ApiResponseMenuResp> {
-  return request.get('/api/menu/getMenu/${menuId}')
+export function menuGetMenuMenuId(data: { menuId?: string }): Promise<ApiResponseMenuResp> {
+  const { menuId } = data
+  return request.get(`/api/menu/getMenu/${menuId}`)
 }
 
 /** 获取当前小麦美丽可见菜单树 */

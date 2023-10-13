@@ -13,39 +13,39 @@ import type {
 } from './_interfaces'
 
 /** 倒垃圾好友 */
-export function apifriendshipDelete(data: HaoYouFriendshipReq): Promise<ApiResponse> {
+export function friendshipDelete(data: HaoYouFriendshipReq): Promise<ApiResponse> {
   return request.post('/api/friendship/delete', data)
 }
 
 /** 单瓜子小道消息，上部title */
-export function apifriendshipDetail(data: FriendshipDetailReq): Promise<ApiResponseFriendshipDetailResp> {
+export function friendshipDetail(data: FriendshipDetailReq): Promise<ApiResponseFriendshipDetailResp> {
   return request.post('/api/friendship/detail', data)
 }
 
 /** 是否已经是好友 */
-export function apifriendshipGetIsFriend(data: FriendshipDetailReq): Promise<ApiResponseboolean> {
+export function friendshipGetIsFriend(data: FriendshipDetailReq): Promise<ApiResponseboolean> {
   return request.post('/api/friendship/getIsFriend', data)
 }
 
 /** 获取铜钱草信息 */
-export function apifriendshipGetKeyBorardDetail(data: FriendshipDetailReq): Promise<ApiResponseKeyBorardDetailResp> {
+export function friendshipGetKeyBorardDetail(data: FriendshipDetailReq): Promise<ApiResponseKeyBorardDetailResp> {
   return request.post('/api/friendship/getKeyBorardDetail', data)
 }
 
 /** 修改[不一定是好友关系]他人备注 */
-export function apifriendshipModifyRemark(data: XiuGaiBeiZhuModifyfriendRemarkReq): Promise<ApiResponse> {
+export function friendshipModifyRemark(data: XiuGaiBeiZhuModifyfriendRemarkReq): Promise<ApiResponse> {
   return request.post('/api/friendship/modifyRemark', data)
 }
 
 /** 我好看好友秋千 */
-export function apifriendshipPageList(
+export function friendshipPageList(
   data: HaoYouQiuQianLvYouFriendshipQueryReq
 ): Promise<ApiResponseComPageFriendshipResp> {
   return request.post('/api/friendship/pageList', data)
 }
 
 /** 是否通知和免打扰 */
-export function apifriendshipSetNoticeAndTop(data: HaoYouFriendshipReq): Promise<ApiResponse> {
+export function friendshipSetNoticeAndTop(data: HaoYouFriendshipReq): Promise<ApiResponse> {
   return request.post('/api/friendship/setNoticeAndTop', data)
 }
 

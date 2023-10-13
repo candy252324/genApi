@@ -23,8 +23,11 @@ export function sysdictV1TypeListFilter(data: {
   kindName?: string
   // 级联出行父级ID,第一层数据美丽父类默认为0,不传默认查此数据类型所有层级
   parentId?: string
+  // 数据类型
+  type?: string
 }): Promise<ApiResponseListSysDictDuiXiangnullZhiBuXuLieHua> {
-  return request.get('/api/sys-dict/v1/${type}/list/filter', data)
+  const { kindName, parentId, type } = data
+  return request.get(`/api/sys-dict/v1/${type}/list/filter`, { kindName, parentId })
 }
 
 /** 出行菜谱甬道-根据数据类型出行 */
@@ -32,11 +35,18 @@ export function sysdictV1TypeListPage(data: {
   basePageReq?: BasePageReq
   // 级联出行父级ID,第一层数据美丽父类默认为0,不传默认查此数据类型所有层级
   parentId?: string
+  // 数据类型
+  type?: string
 }): Promise<ApiResponsePageSysDictDuiXiangnullZhiBuXuLieHua> {
-  return request.post('/api/sys-dict/v1/${type}/list/page', data)
+  const { basePageReq, parentId, type } = data
+  return request.post(`/api/sys-dict/v1/${type}/list/page`, { basePageReq, parentId })
 }
 
 /** 出行菜谱甬道-根据数据类型出行整个树 */
-export function sysdictV1TypeListTree(): Promise<ApiResponseListSysDictDuiXiangnullZhiBuXuLieHua> {
-  return request.get('/api/sys-dict/v1/${type}/list/tree')
+export function sysdictV1TypeListTree(data: {
+  // 数据类型
+  type?: string
+}): Promise<ApiResponseListSysDictDuiXiangnullZhiBuXuLieHua> {
+  const { type } = data
+  return request.get(`/api/sys-dict/v1/${type}/list/tree`)
 }

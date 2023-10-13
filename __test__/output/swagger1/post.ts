@@ -23,8 +23,9 @@ export function postDelDesktop(data: { desktopIds?: string[]; postId?: string })
 }
 
 /** 扫落叶岗位 */
-export function postDelPostPostId(): Promise<ApiResponseVoid> {
-  return request.get('/api/post/delPost/${postId}')
+export function postDelPostPostId(data: { postId?: string }): Promise<ApiResponseVoid> {
+  const { postId } = data
+  return request.get(`/api/post/delPost/${postId}`)
 }
 
 /** 修改岗位 */

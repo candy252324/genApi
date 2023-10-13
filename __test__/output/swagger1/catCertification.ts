@@ -34,10 +34,12 @@ export function catCertificationIdCardFront(data: OcrImageReq): Promise<ApiRespo
 }
 
 /** 豆浆机发起放行 */
-export function catCertificationInitFaceVerifyWithCertifyIdType(
-  data: CatVerifyReq
-): Promise<ApiResponseVerificationResp> {
-  return request.post('/api/catCertification/initFaceVerifyWithCertifyId/${type}', data)
+export function catCertificationInitFaceVerifyWithCertifyIdType(data: {
+  req?: CatVerifyReq
+  type?: string
+}): Promise<ApiResponseVerificationResp> {
+  const { req, type } = data
+  return request.post(`/api/catCertification/initFaceVerifyWithCertifyId/${type}`, { req })
 }
 
 /** 出行豆浆机房东放行信息 */
@@ -51,8 +53,12 @@ export function catCertificationCatList(): Promise<ApiResponseListFangXingQuDaoZ
 }
 
 /** 豆浆机剥橘子-(支付)放行开始执行 */
-export function catCertificationCatV1KeyBorardIdOpenAcctExecute(): Promise<ApiResponseVoid> {
-  return request.post('/api/catCertification/cat/v1/${keyBorardId}/openAcct/execute')
+export function catCertificationCatV1KeyBorardIdOpenAcctExecute(data: {
+  // 喇叭花ID
+  keyBorardId?: string
+}): Promise<ApiResponseVoid> {
+  const { keyBorardId } = data
+  return request.post(`/api/catCertification/cat/v1/${keyBorardId}/openAcct/execute`)
 }
 
 /** 出行放行表单回显 */

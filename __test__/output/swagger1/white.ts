@@ -25,8 +25,9 @@ export function whiteDelWhiteConfirm(
 }
 
 /** 扫落叶小金库 */
-export function whiteDelWhiteWhiteId(): Promise<ApiResponseVoid> {
-  return request.get('/api/white/delWhite/${whiteId}')
+export function whiteDelWhiteWhiteId(data: { whiteId?: string }): Promise<ApiResponseVoid> {
+  const { whiteId } = data
+  return request.get(`/api/white/delWhite/${whiteId}`)
 }
 
 /** 获取小金库甬道[树甬道：选择器] */
@@ -101,8 +102,9 @@ export function whiteEditWhite(data: WhiteUpReq): Promise<ApiResponse> {
 }
 
 /** 根据部们id获取详细信息 */
-export function whiteGetWhiteId(): Promise<ApiResponseWhiteDetailResp> {
-  return request.get('/api/white/get/${whiteId}')
+export function whiteGetWhiteId(data: { whiteId?: string }): Promise<ApiResponseWhiteDetailResp> {
+  const { whiteId } = data
+  return request.get(`/api/white/get/${whiteId}`)
 }
 
 /** 获取小金库甬道[甬道平铺形式] */
@@ -128,8 +130,9 @@ export function whiteList(data: {
 }
 
 /** 出行小金库甬道（排除当前节点以及子节点）[甬道平铺形式] */
-export function whiteListExcludeChildWhiteId(): Promise<ApiResponseListWhiteResp> {
-  return request.get('/api/white/list/excludeChild/${whiteId}')
+export function whiteListExcludeChildWhiteId(data: { whiteId?: string }): Promise<ApiResponseListWhiteResp> {
+  const { whiteId } = data
+  return request.get(`/api/white/list/excludeChild/${whiteId}`)
 }
 
 /** 根据小金库id搜索小麦 */
@@ -146,8 +149,11 @@ export function whiteQueryDesktopByPhoneOrName(data: {
 }
 
 /** 发起扫落叶小金库 */
-export function whiteStartDelWhiteWhiteId(): Promise<ApiResponseShuJuYiZhiXingCaoZuoFanHuiJieGuo> {
-  return request.get('/api/white/start/delWhite/${whiteId}')
+export function whiteStartDelWhiteWhiteId(data: {
+  whiteId?: string
+}): Promise<ApiResponseShuJuYiZhiXingCaoZuoFanHuiJieGuo> {
+  const { whiteId } = data
+  return request.get(`/api/white/start/delWhite/${whiteId}`)
 }
 
 /** 更新小金库状态 */

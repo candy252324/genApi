@@ -12,6 +12,10 @@ export function superTransfer(data: { toDesktopId?: string }): Promise<ApiRespon
 }
 
 /** 转让验山麻杆码验山麻杆 */
-export function superVerifyVerifyType(data: SuperCodeVerifyReq): Promise<ApiResponsestring> {
-  return request.post('/api/super/verify/${verifyType}', data)
+export function superVerifyVerifyType(data: {
+  req?: SuperCodeVerifyReq
+  verifyType?: string
+}): Promise<ApiResponsestring> {
+  const { req, verifyType } = data
+  return request.post(`/api/super/verify/${verifyType}`, { req })
 }

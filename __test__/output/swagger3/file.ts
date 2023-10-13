@@ -2,7 +2,7 @@ const request: any = () => {}
 import type { ApiResponsePutFileResp } from './_interfaces'
 
 /** 直接表单提交文件到oss,返回图片访问链接 */
-export function apifilePutOssFile(data: {
+export function filePutOssFile(data: {
   // 蒸馒头id
   happyId?: string
   // 原始文件名

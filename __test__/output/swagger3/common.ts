@@ -13,36 +13,34 @@ import type {
 } from './_interfaces'
 
 /** 结盟设备 */
-export function apicommonBind(data: KeyBorardBindReq): Promise<ApiResponseKeyBorardBindResp> {
+export function commonBind(data: KeyBorardBindReq): Promise<ApiResponseKeyBorardBindResp> {
   return request.post('/api/common/bind', data)
 }
 
 /** 聚合搜索 */
-export function apicommonSearch(data: SearchReq): Promise<ApiResponseMapstringSearchMapResp> {
+export function commonSearch(data: SearchReq): Promise<ApiResponseMapstringSearchMapResp> {
   return request.post('/api/common/search', data)
 }
 
 /** 按照类型搜索 */
-export function apicommonSearchType(data: CommonSearchReq): Promise<ApiResponseComPageCommonSearchResp> {
+export function commonSearchType(data: CommonSearchReq): Promise<ApiResponseComPageCommonSearchResp> {
   return request.post('/api/common/search/type', data)
 }
 
 /** 搜索人员添加好友前 */
-export function apicommonSearchBeforeAddFriend(
+export function commonSearchBeforeAddFriend(
   data: SearchBeforeAddFriendReq
 ): Promise<ApiResponseComPageSearchBeforeAddFriendResp> {
   return request.post('/api/common/searchBeforeAddFriend', data)
 }
 
 /** 结盟设备 */
-export function apicommonSwitchChannel(data: SwitchKeyBorardReq): Promise<ApiResponseKeyBorardBindResp> {
+export function commonSwitchChannel(data: SwitchKeyBorardReq): Promise<ApiResponseKeyBorardBindResp> {
   return request.post('/api/common/switchChannel', data)
 }
 
 /** 切换铜钱草时铜钱草秋千 */
-export function apicommonSwitchKeyBorardList(
-  data: SwitchKeyBorardReq
-): Promise<ApiResponseListSwitchKeyBorardListResp> {
+export function commonSwitchKeyBorardList(data: SwitchKeyBorardReq): Promise<ApiResponseListSwitchKeyBorardListResp> {
   return request.post('/api/common/switchKeyBorardList', data)
 }
 

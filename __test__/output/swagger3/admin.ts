@@ -2,7 +2,7 @@ const request: any = () => {}
 import type { ApiResponse, ApiResponsePutFileResp } from './_interfaces'
 
 /** isEmpty=false会重新生成部落头像 */
-export function apiadminGetAvatar(data: {
+export function adminGetAvatar(data: {
   isEmpty?: boolean
   // type:USER/GROUP
   type?: string
@@ -11,7 +11,7 @@ export function apiadminGetAvatar(data: {
 }
 
 /** 上传版本 */
-export function apiadminPutAppVersionFile(data: {
+export function adminPutAppVersionFile(data: {
   // 应用类型
   appType?: string
   // 蒸馒头id

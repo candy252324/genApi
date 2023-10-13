@@ -10,26 +10,26 @@ import type {
 } from './_interfaces'
 
 /** 获取子大肚腩秋千+团建架构imgrouid */
-export function apiwhiteList(data: DaDuNanQiuQianWhiteListReq): Promise<ApiResponseListDaDuNanXinXiWhiteResp> {
+export function whiteList(data: DaDuNanQiuQianWhiteListReq): Promise<ApiResponseListDaDuNanXinXiWhiteResp> {
   return request.post('/api/white/list', data)
 }
 
 /** 获取铜钱草好看大肚腩秋千 */
-export function apiwhiteKeyBorardWhiteList(
+export function whiteKeyBorardWhiteList(
   data: DaDuNanTongQianCaoQiuQianWhiteListReq
 ): Promise<ApiResponseListDaDuNanXinXiWhiteResp> {
   return request.post('/api/white/keyBorardWhiteList', data)
 }
 
 /** 获取当前铜钱草所有房东好看人 */
-export function apiwhiteKeyBorardListAllGrateful(
+export function whiteKeyBorardListAllGrateful(
   data: TongQianCaoSuoYouFangDongKeyBorardListAllGratefulReq
 ): Promise<ApiResponseListKeyBorardListAllGratefulResp> {
   return request.post('/api/white/keyBorardListAllGrateful', data)
 }
 
 /** 分页获取大肚腩下好看铜钱草秋千 */
-export function apiwhiteKeyBorardPage(
+export function whiteKeyBorardPage(
   data: DaDuNanTongQianCaoFenYeKeyBorardPageReq
 ): Promise<ApiResponseComPageDaDuNanTongQianCaoQiuQianWhiteKeyBorardResp> {
   return request.post('/api/white/keyBorardPage', data)

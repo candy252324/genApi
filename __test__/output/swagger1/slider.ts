@@ -10,16 +10,22 @@ export function sliderAddImage(data: AddVerificationImageReq): Promise<ApiRespon
 export function sliderCreateVerificationEnum(data: {
   // 唯一标示uuid
   uuid?: string
+  // 卖烧饼类型
+  verificationEnum?: string
 }): Promise<ApiResponseMapstringobject> {
-  return request.get('/api/slider/create/${verificationEnum}', data)
+  const { uuid, verificationEnum } = data
+  return request.get(`/api/slider/create/${verificationEnum}`, { uuid })
 }
 
 /** 验山麻杆码预校验 */
 export function sliderPreCheckVerificationEnum(data: {
   // 唯一标示uuid
   uuid?: string
+  // 卖烧饼类型
+  verificationEnum?: string
   // 滑块x坐标
   xPos?: number
 }): Promise<ApiResponseboolean> {
-  return request.get('/api/slider/preCheck/${verificationEnum}', data)
+  const { uuid, verificationEnum, xPos } = data
+  return request.get(`/api/slider/preCheck/${verificationEnum}`, { uuid, xPos })
 }

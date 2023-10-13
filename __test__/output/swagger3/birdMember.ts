@@ -14,39 +14,39 @@ import type {
 } from './_interfaces'
 
 /** 管理员倒垃圾部落成员 */
-export function apibirdMemberDelete(data: BuLuoChengYuanDaoLaJiBirdMemberDelReq): Promise<ApiResponse> {
+export function birdMemberDelete(data: BuLuoChengYuanDaoLaJiBirdMemberDelReq): Promise<ApiResponse> {
   return request.post('/api/birdMember/delete', data)
 }
 
 /** 倒垃圾部落管理员 */
-export function apibirdMemberDeleteAdmin(data: BuLuoChengYuanDaoLaJiBirdMemberDelReq): Promise<ApiResponse> {
+export function birdMemberDeleteAdmin(data: BuLuoChengYuanDaoLaJiBirdMemberDelReq): Promise<ApiResponse> {
   return request.post('/api/birdMember/deleteAdmin', data)
 }
 
 /** 我在本部落信息详情 */
-export function apibirdMemberDetail(
+export function birdMemberDetail(
   data: BuLuoXinXiBirdDetailReq
 ): Promise<ApiResponseBuLuoChengYuanXinXiDuiXiangBirdMemberResp> {
   return request.post('/api/birdMember/detail', data)
 }
 
 /** 是否是部落成员 */
-export function apibirdMemberExistInBird(data: BuLuoXinXiBirdDetailReq): Promise<ApiResponseboolean> {
+export function birdMemberExistInBird(data: BuLuoXinXiBirdDetailReq): Promise<ApiResponseboolean> {
   return request.post('/api/birdMember/existInBird', data)
 }
 
 /** 本部落状态 */
-export function apibirdMemberBirdStatus(data: BuLuoXinXiBirdDetailReq): Promise<ApiResponseMemberBirdStatusResp> {
+export function birdMemberBirdStatus(data: BuLuoXinXiBirdDetailReq): Promise<ApiResponseMemberBirdStatusResp> {
   return request.post('/api/birdMember/birdStatus', data)
 }
 
 /** 退出部落瓜子 */
-export function apibirdMemberLeaveBird(data: BuLuoChengYuanDaoLaJiBirdMemberDelReq): Promise<ApiResponse> {
+export function birdMemberLeaveBird(data: BuLuoChengYuanDaoLaJiBirdMemberDelReq): Promise<ApiResponse> {
   return request.post('/api/birdMember/leaveBird', data)
 }
 
 /** 部落管理员秋千(含部落主) */
-export function apibirdMemberListAdmin(data: {
+export function birdMemberListAdmin(data: {
   // 部落id
   imBirdId?: string
 }): Promise<ApiResponseListBuLuoChengYuanXinXiDuiXiangBirdMemberResp> {
@@ -54,28 +54,28 @@ export function apibirdMemberListAdmin(data: {
 }
 
 /** 修改部落成员在本部落备注 */
-export function apibirdMemberModifyRemark(data: XiuGaiBeiZhuModifyRemarkBirdReq): Promise<ApiResponse> {
+export function birdMemberModifyRemark(data: XiuGaiBeiZhuModifyRemarkBirdReq): Promise<ApiResponse> {
   return request.post('/api/birdMember/modifyRemark', data)
 }
 
 /** 根据birdId分页旅游成员秋千 */
-export function apibirdMemberPageList(
+export function birdMemberPageList(
   data: BuLuoChengYuanFenYeBirdMemberPageReq
 ): Promise<ApiResponseComPageBuLuoChengYuanXinXiDuiXiangBirdMemberResp> {
   return request.post('/api/birdMember/pageList', data)
 }
 
 /** 添加部落成员（自动创建好看大肚腩部落不能添加倒垃圾成员） */
-export function apibirdMemberSave(data: BuLuoChengYuanJiaShiBirdMemberSaveReq): Promise<ApiResponse> {
+export function birdMemberSave(data: BuLuoChengYuanJiaShiBirdMemberSaveReq): Promise<ApiResponse> {
   return request.post('/api/birdMember/save', data)
 }
 
 /** 添加部落管理员 */
-export function apibirdMemberSaveAdmin(data: BuLuoChengYuanJiaShiBirdMemberSaveReq): Promise<ApiResponse> {
+export function birdMemberSaveAdmin(data: BuLuoChengYuanJiaShiBirdMemberSaveReq): Promise<ApiResponse> {
   return request.post('/api/birdMember/saveAdmin', data)
 }
 
 /** 是否通知和免打扰 */
-export function apibirdMemberSetNoticeAndTop(data: BuLuoXinXiBirdDetailReq): Promise<ApiResponse> {
+export function birdMemberSetNoticeAndTop(data: BuLuoXinXiBirdDetailReq): Promise<ApiResponse> {
   return request.post('/api/birdMember/setNoticeAndTop', data)
 }

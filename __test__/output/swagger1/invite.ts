@@ -20,8 +20,9 @@ import type {
 } from './_interfaces'
 
 /** 取消屏蔽喇叭花 */
-export function inviteAuditCancelShieldId(): Promise<ApiResponsestring> {
-  return request.get('/api/invite/audit/cancelShield/${id}')
+export function inviteAuditCancelShieldId(data: { id?: string }): Promise<ApiResponsestring> {
+  const { id } = data
+  return request.get(`/api/invite/audit/cancelShield/${id}`)
 }
 
 /** 审核通过 */
@@ -35,8 +36,9 @@ export function inviteAuditRefuse(data: RefuseJoinReq): Promise<ApiResponsestrin
 }
 
 /** 屏蔽喇叭花 */
-export function inviteAuditShieldId(): Promise<ApiResponsestring> {
-  return request.get('/api/invite/audit/shield/${id}')
+export function inviteAuditShieldId(data: { id?: string }): Promise<ApiResponsestring> {
+  const { id } = data
+  return request.get(`/api/invite/audit/shield/${id}`)
 }
 
 /** 检查邀请码 */
@@ -73,8 +75,12 @@ export function inviteInviteOrangeer(data: YaoQingZhuCe0): Promise<ApiResponseYa
 }
 
 /** 邀请记录出行 */
-export function invitePageApplyType(data: QueryInviteDesktopReq): Promise<ApiResponseComPageInviteDesktopResp> {
-  return request.post('/api/invite/page/${applyType}', data)
+export function invitePageApplyType(data: {
+  applyType?: string
+  req?: QueryInviteDesktopReq
+}): Promise<ApiResponseComPageInviteDesktopResp> {
+  const { applyType, req } = data
+  return request.post(`/api/invite/page/${applyType}`, { req })
 }
 
 /** 邀请设置出行 */

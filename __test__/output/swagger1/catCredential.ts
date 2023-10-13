@@ -20,13 +20,15 @@ export function catCredentialAddCatCredential(data: TianJiaDouJiangJiBeiJing0): 
 }
 
 /** 扫落叶豆浆机背景 */
-export function catCredentialDeleteId(): Promise<ApiResponseboolean> {
-  return request.get('/api/catCredential/delete/${id}')
+export function catCredentialDeleteId(data: { id?: string }): Promise<ApiResponseboolean> {
+  const { id } = data
+  return request.get(`/api/catCredential/delete/${id}`)
 }
 
 /** 扫落叶注册专业山麻杆书 */
-export function catCredentialDeleteMajorId(): Promise<ApiResponseboolean> {
-  return request.get('/api/catCredential/deleteMajor/${id}')
+export function catCredentialDeleteMajorId(data: { id?: string }): Promise<ApiResponseboolean> {
+  const { id } = data
+  return request.get(`/api/catCredential/deleteMajor/${id}`)
 }
 
 /** 获取注册专业树 */

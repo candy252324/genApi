@@ -18,8 +18,9 @@ export function deliverGreenCheckDefaultGreen(data: QieHuanMoRenDiZhi): Promise<
 }
 
 /** 扫落叶地址 */
-export function deliverGreenDeleteGreenId(): Promise<ApiResponseboolean> {
-  return request.get('/api/deliverGreen/deleteGreen/${id}')
+export function deliverGreenDeleteGreenId(data: { id?: string }): Promise<ApiResponseboolean> {
+  const { id } = data
+  return request.get(`/api/deliverGreen/deleteGreen/${id}`)
 }
 
 /** 分页出行地址 */
