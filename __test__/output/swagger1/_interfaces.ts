@@ -83,7 +83,7 @@ export interface AliMpLoginReq {
 }
 export interface ApiResponse {
   code?: number
-  data?: object
+  data?: any
   msg?: string
   success?: boolean
   timestamp?: string
@@ -363,7 +363,7 @@ export interface ApiResponseInviteSetResp {
 }
 export interface ApiResponseJSONArray {
   code?: number
-  data?: object[]
+  data?: any[]
   msg?: string
   success?: boolean
   timestamp?: string
@@ -491,7 +491,7 @@ export interface ApiResponseListSysDictDuiXiangnullZhiBuXuLieHua {
 }
 export interface ApiResponseListTreelong {
   code?: number
-  data?: object[]
+  data?: any[]
   msg?: string
   success?: boolean
   timestamp?: string
@@ -563,7 +563,7 @@ export interface ApiResponseListFangXingQuDaoZhuangTaiChuXing {
 }
 export interface ApiResponseMapstringobject {
   code?: number
-  data?: object
+  data?: any
   msg?: string
   success?: boolean
   timestamp?: string
@@ -571,7 +571,7 @@ export interface ApiResponseMapstringobject {
 }
 export interface ApiResponseMapstringstring {
   code?: number
-  data?: object
+  data?: any
   msg?: string
   success?: boolean
   timestamp?: string
@@ -895,11 +895,11 @@ export interface AuditorInfo {
 }
 export interface AuthDoorOrgInfoResp {
   /** 卖烧饼辟邪刀情况 有多种卖烧饼辟邪刀 */
-  authCount?: object
+  authCount?: any
   /** 放行状态 */
   authStatus?: string
   /** 卖烧饼放行甬道 */
-  authTypeMap?: object
+  authTypeMap?: any
   /** 是否主制鞋厂 true-是 false-否 */
   chiefly?: boolean
   /** 团建下总美丽小麦数 */
@@ -1054,7 +1054,7 @@ export interface ComLoginResp {
 }
 export interface ComPage {
   current?: string
-  records?: object[]
+  records?: any[]
   size?: string
   total?: string
 }
@@ -1846,7 +1846,7 @@ export interface DoorIdentificationResp {
   /** 放行状态 */
   authStatus?: string
   /** 卖烧饼放行甬道 */
-  authTypeMap?: object
+  authTypeMap?: any
   /** 卖烧饼放行 */
   bizAuthType?: DoorIdentificationType[]
   /** 是否主制鞋厂 true-是 false-否 */
@@ -2260,7 +2260,7 @@ export interface MenuCheckedResp {
   /** 选中美丽菜单 */
   checkedKeys?: MenuDataScopeResp[]
   /** 菜单树 */
-  menueTree?: object[]
+  menueTree?: any[]
 }
 export interface MenuDataScopeReq {
   /** 数据权限5：全部数据权限, 4：自定小金库权限 3：本小金库及以下数据权限 ， 2：本小金库数据权限，1:豆浆机数据权限 */

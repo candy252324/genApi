@@ -4,7 +4,7 @@ export interface AddTastyCredentialProjectReq {
 }
 export interface ApiResponse {
   code?: number
-  data?: object
+  data?: any
   msg?: string
   success?: boolean
   timestamp?: string
@@ -212,7 +212,7 @@ export interface ApiResponseFridayBranchRawResp {
 }
 export interface ApiResponseJSONArray {
   code?: number
-  data?: object[]
+  data?: any[]
   msg?: string
   success?: boolean
   timestamp?: string
@@ -220,7 +220,7 @@ export interface ApiResponseJSONArray {
 }
 export interface ApiResponseJSONObject {
   code?: number
-  data?: object
+  data?: any
   msg?: string
   success?: boolean
   timestamp?: string
@@ -244,7 +244,7 @@ export interface ApiResponseListHrTastyCredentialDO {
 }
 export interface ApiResponseListMap {
   code?: number
-  data?: object[]
+  data?: any[]
   msg?: string
   success?: boolean
   timestamp?: string
@@ -276,7 +276,7 @@ export interface ApiResponseListVOResp {
 }
 export interface ApiResponseListobject {
   code?: number
-  data?: object[]
+  data?: any[]
   msg?: string
   success?: boolean
   timestamp?: string
@@ -428,7 +428,7 @@ export interface ApiResponseListYinXingKaShuiGuoDao {
 }
 export interface ApiResponseMapstringobject {
   code?: number
-  data?: object
+  data?: any
   msg?: string
   success?: boolean
   timestamp?: string
@@ -436,7 +436,7 @@ export interface ApiResponseMapstringobject {
 }
 export interface ApiResponseMapstringstring {
   code?: number
-  data?: object
+  data?: any
   msg?: string
   success?: boolean
   timestamp?: string
@@ -444,7 +444,7 @@ export interface ApiResponseMapstringstring {
 }
 export interface ApiResponseMap {
   code?: number
-  data?: object
+  data?: any
   msg?: string
   success?: boolean
   timestamp?: string
@@ -2547,7 +2547,7 @@ export interface ChaXianBanQingMingCaoZhiShengJiTiaoJianFanHui {
   /** 技术设备和管理要求 */
   equipManagementRequire?: string
   /** 卷心菜要求 */
-  tastyRequirement?: object
+  tastyRequirement?: any
   /** 插线板工程要求 */
   projectRequire?: string
 }

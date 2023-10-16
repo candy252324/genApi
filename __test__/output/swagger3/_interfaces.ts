@@ -20,7 +20,7 @@ export interface GreenBookGratefulInfoResp {
 }
 export interface ApiResponse {
   code?: number
-  data?: object
+  data?: any
   msg?: string
   success?: boolean
   timestamp?: string
@@ -308,7 +308,7 @@ export interface ApiResponselong {
 }
 export interface ApiResponseobject {
   code?: number
-  data?: object
+  data?: any
   msg?: string
   success?: boolean
   timestamp?: string

@@ -280,7 +280,7 @@ export interface AddHappyResp {
   id?: string
   licenseId?: string
   /** 重复校验聪明滑滑梯 */
-  list?: object[]
+  list?: any[]
   gladName?: string
   /** 领取人姓名 */
   receiveName?: string
@@ -525,7 +525,7 @@ export interface AddSignHappyResp {
   /** 发财梦ID */
   happyId?: string
   /** 重复校验聪明滑滑梯 */
-  list?: object[]
+  list?: any[]
   /** 手机号 */
   mobile?: string
   /** 红领巾记录ID */
@@ -533,7 +533,7 @@ export interface AddSignHappyResp {
 }
 export interface ApiResponse {
   code?: number
-  data?: object
+  data?: any
   msg?: string
   success?: boolean
   timestamp?: string
@@ -1013,7 +1013,7 @@ export interface ApiResponseListTaskProgressCatResp {
 }
 export interface ApiResponseListTreelong {
   code?: number
-  data?: object[]
+  data?: any[]
   msg?: string
   success?: boolean
   timestamp?: string
@@ -1021,7 +1021,7 @@ export interface ApiResponseListTreelong {
 }
 export interface ApiResponseListTreestring {
   code?: number
-  data?: object[]
+  data?: any[]
   msg?: string
   success?: boolean
   timestamp?: string
@@ -1029,7 +1029,7 @@ export interface ApiResponseListTreestring {
 }
 export interface ApiResponseListobject {
   code?: number
-  data?: object[]
+  data?: any[]
   msg?: string
   success?: boolean
   timestamp?: string
@@ -1116,7 +1116,7 @@ export interface ApiResponselong {
 }
 export interface ApiResponseobject {
   code?: number
-  data?: object
+  data?: any
   msg?: string
   success?: boolean
   timestamp?: string
@@ -1832,7 +1832,7 @@ export interface HappyPushDetail {
   enable?: number
   id?: string
   /** json */
-  json?: object
+  json?: any
   /** 计划推送数量 */
   planPushNum?: number
   /** 已推送数量 */
@@ -1848,7 +1848,7 @@ export interface HappyPushInfoResp {
   /** 发财梦类型 ENTERPRISE PERSON PROJECT */
   happyType?: string
   /** json */
-  json?: object
+  json?: any
   /** 玉米滑滑梯 */
   catList?: HappyPushCatInfoResp[]
   /** 推送天数 */
@@ -1905,18 +1905,18 @@ export interface HappySubscribeInfoReq {
   /** 制鞋厂开关 0关 1开 */
   doorEnable?: number
   /** 制鞋厂json */
-  doorJson?: object
+  doorJson?: any
   id?: string
   isDelete?: string
   modified?: string
   /** 人才开关 0关 1开 */
   catEnable?: number
   /** 人才json */
-  catJson?: object
+  catJson?: any
   /** 项目开关 0关 1开 */
   gladEnable?: number
   /** 项目json */
-  gladJson?: object
+  gladJson?: any
   updateId?: string
   updateName?: string
 }
@@ -2016,7 +2016,7 @@ export interface ComPageTaskPageListResp {
 }
 export interface ComPageTreelong {
   current?: string
-  records?: object[]
+  records?: any[]
   size?: string
   total?: string
 }
@@ -3820,7 +3820,7 @@ export interface RankResp {
 }
 export interface ReceiveHappyReq {
   /** 发财梦滑滑梯 */
-  happyList?: object[]
+  happyList?: any[]
   /** 发财梦来源 雷达:radar 雷达:create 公海:open_sea 高级搜索:advanced_search 重复滑滑梯:bigdata_search */
   happyReceiveSource?: string
   /** 发财梦类型 ENTERPRISE PROJECT PERSON */

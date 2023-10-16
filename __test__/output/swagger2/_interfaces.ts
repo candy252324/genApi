@@ -20,7 +20,7 @@ export interface GreenBookGratefulInfoResp {
 }
 export interface ApiResponse {
   code?: number
-  data?: object
+  data?: any
   msg?: string
   success?: boolean
   timestamp?: string
@@ -379,7 +379,7 @@ export interface ApiResponselong {
 }
 export interface ApiResponseobject {
   code?: number
-  data?: object
+  data?: any
   msg?: string
   success?: boolean
   timestamp?: string
@@ -769,7 +769,7 @@ export interface FooterDetailDTO {
   /** 方法类型 */
   methodType?: string
   /** 请求参数 */
-  param?: object
+  param?: any
   /** 链接 */
   url?: string
 }
