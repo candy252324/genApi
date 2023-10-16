@@ -28,7 +28,7 @@ module.exports = {
   httpTpl: 'const request:any=()=>{}', // 文件头部引入的内容
   // api 格式生成规则
   apiBody: ({ url, method, summary, name, parameters, outputInterface, pstr1, pstr2, pstr3 }) => {
-    const quotationMark = pstr3 ? '`' : "'"
+    const quotationMark = pstr3 ? '`' : "'" // 引号
     return `
         /** ${summary || '无注释'} */
         export function ${name}  (${pstr1}) :Promise<${outputInterface || undefined}>{
