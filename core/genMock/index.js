@@ -92,6 +92,7 @@ function parseData(jsonData, configOptions) {
 
   console.log(`mock 数据生成中...`)
   writeMockToFile(apiList, { interfaces, absOutputDir })
+  writeInterfaceToFile(interfaces, absOutputDir)
   return apiList
 }
 
@@ -183,6 +184,30 @@ export function ${name} (){
   })
 }
 
+/** interface 写入 */
+function writeInterfaceToFile(definitions, absOutputDir) {
+  let str = ''
+  definitions.forEach((item, index) => {
+    str += `export function ${item.name}() {`
+    if (item?.properties && item.properties?.length) {
+      let mockRes = ''
+      item.properties.forEach((it) => {
+        mockRes += getMockStr(it)
+      })
+      str += `\nreturn ${mockRes ? '{\n' + mockRes + '\n}' : ''}`
+    }
+    str += '\n}\n'
+  })
+  const targetFile = path.join(absOutputDir, `_interfaces.ts`)
+  fs.access(absOutputDir, (err) => {
+    if (err) {
+      // 若目标目录不存在，则创建
+      fs.mkdirSync(absOutputDir, { recursive: true })
+    }
+    fs.writeFileSync(targetFile, str)
+  })
+}
+
 /** 处理出参
  @param allInterfaces 格式如下
    * [{
@@ -201,7 +226,7 @@ function getReturnStr(outputInterface, allInterfaces) {
   let find = allInterfaces.find((item) => item.name == outputInterface)
   if (find) {
     return find.properties.reduce((pre, cur) => {
-      const mockStr = getMockStr(cur)
+      const mockStr = getMockStr(cur, allInterfaces)
       return `${pre} ${cur.name}:'${mockStr}',\n`
     }, '')
   } else {
@@ -210,7 +235,7 @@ function getReturnStr(outputInterface, allInterfaces) {
 }
 
 /** 生成 mock
- @param modal 格式如下
+ @param model 格式如下
    * {
    *    name:"",   // 原始 key 处理后结果，如： ApiResponse
    *    type:"",   // 类型，如 "object", 目前看到的都是 'object'
@@ -223,22 +248,41 @@ function getReturnStr(outputInterface, allInterfaces) {
    *    }]
    *  }
    */
-function getMockStr(modal) {
-  const { type, properties } = modal
+function getMockStr(model) {
+  const { name, type, isSimpleJsType } = model
   if (type === 'number') {
-    return '@integer(3,1000)'
+    return `${name}: \"@integer(3,1000)\",\n`
   } else if (type === 'string') {
-    return '@string(5,1000)'
+    return `${name}: \"@string(5,1000)\",\n`
   } else if (type === 'boolean') {
-    return '@boolean()'
+    return `${name}: \"@boolean()\",\n`
+  } else if (type === 'File') {
+    return `${name}: \"file\",\n`
   } else if (type === 'array') {
-    return '[]'
+    return `${name}: \"[]\",\n`
   }
   if (type === 'object') {
     return {}
+  } else if (type === 'any') {
+    return `${name}: \"any\",\n`
   } else {
-    console.log('未匹配的mock', type)
-    return ''
+    return `${name}: ${type}(),\n`
+    // if (!isSimpleJsType) {
+    //   // if (type === 'CustomerCatDetailResp') {
+    //   //   const theInterface = allInterfaces.find((item) => item.name === type)
+    //   //   const properties = theInterface.properties || []
+    //   //   let str = ''
+    //   //   properties.forEach((pro) => {
+    //   //     const result = getMockStr(pro, allInterfaces)
+    //   //     str += `${pro.name}:\"${result}\",\n`
+    //   //   })
+    //   //   return str
+    //   // } else {
+    //   //   return ''
+    //   // }
+    // } else {
+    //   console.log('未处理，', type)
+    // }
   }
 }
 
