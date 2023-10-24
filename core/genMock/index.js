@@ -168,7 +168,18 @@ function writeMockToFile(apiList, { interfaces, absOutputDir }) {
         fileUsedInterface.push(outputInterface)
       }
       const _summary = summary ? `/** ${summary} */\n` : ''
-      const curStr = `${_summary}export const ${name} = () => ${outputInterface}()\n\n`
+      let _outputInterface = ''
+      // 不存在出参
+      if (!outputInterface) {
+        _outputInterface = '""'
+      }
+      // 出参是简单类型
+      else if (handleJsType(outputInterface)) {
+        _outputInterface = getFieldMockStr({ name, type: outputInterface })
+      } else {
+        _outputInterface = `${outputInterface}()`
+      }
+      const curStr = `${_summary}export const ${name} = () => ${_outputInterface}\n\n`
       mockStr += curStr
     })
 
@@ -207,7 +218,7 @@ function writeInterfaceToFile(definitions, absOutputDir) {
     if (item?.properties && item.properties?.length) {
       let mockRes = ''
       item.properties.forEach((it) => {
-        mockRes += getMockStr(it)
+        mockRes += getInterfaceMock(it)
       })
       str += `\nreturn ${mockRes ? '{\n' + mockRes + '\n}' : ''}`
     }
@@ -221,32 +232,6 @@ function writeInterfaceToFile(definitions, absOutputDir) {
     }
     fs.writeFileSync(targetFile, str)
   })
-}
-
-/** 处理出参
- @param allInterfaces 格式如下
-   * [{
-   *    name:"",   // 原始 key 处理后结果，如： ApiResponse
-   *    type:"",   // 类型，如 "object", 目前看到的都是 'object'
-   *    properties:[{
-   *      name:"",
-   *      isArray:false,  // 是否是数组
-   *      isSimpleJsType:false, // 是否是简单 js 类型, 如 number、string 等
-   *      type:"",        // 类型，如 string, number, boolean , UserInterface
-   *      description:""  // 注释
-   *    }]
-   *  }]
-   */
-function getReturnStr(outputInterface, allInterfaces) {
-  let find = allInterfaces.find((item) => item.name == outputInterface)
-  if (find) {
-    return find.properties.reduce((pre, cur) => {
-      const mockStr = getMockStr(cur, allInterfaces)
-      return `${pre} ${cur.name}:'${mockStr}',\n`
-    }, '')
-  } else {
-    return ''
-  }
 }
 
 /** 生成 mock
@@ -263,26 +248,37 @@ function getReturnStr(outputInterface, allInterfaces) {
    *    }]
    *  }
    */
-function getMockStr(model) {
+function getInterfaceMock(model) {
   const { name, type, isSimpleJsType } = model
-  if (type === 'number') {
-    return `${name}: \"@integer(3,1000)\",\n`
-  } else if (type === 'string') {
-    return `${name}: \"@string(5,1000)\",\n`
-  } else if (type === 'boolean') {
-    return `${name}: \"@boolean()\",\n`
-  } else if (type === 'File') {
-    return `${name}: \"file\",\n`
-  } else if (type === 'array') {
-    return `${name}: \"[]\",\n`
-  }
-  if (type === 'object') {
-    return {}
-  } else if (type === 'any') {
-    return `${name}: \"any\",\n`
+
+  let mockStr = ''
+  // 如果是简单类型
+  if (type === 'string' || type === 'number' || type === 'boolean' || type === 'any' || type === 'File') {
+    mockStr = getFieldMockStr({ name, type })
+  } else if (type === 'object') {
+    mockStr = '{}'
   } else {
-    return `${name}: ${type}(),\n`
+    mockStr = `${type}()`
   }
+  return `${name}: ${mockStr},\n`
+}
+
+/** 获取简单数据类型的 mock */
+function getFieldMockStr({ name, type }) {
+  let s = ''
+  if (type === 'number') {
+    s = '@integer(3,1000)'
+  } else if (type === 'string' || type === 'any') {
+    s = '@string(5,1000)'
+  } else if (type === 'boolean') {
+    s = '@boolean()'
+  } else if (type === 'File') {
+    s = 'file'
+  } else {
+    console.log('未处理的类型？')
+    s = '@string(5,1000)'
+  }
+  return `\"${s}\"`
 }
 
 module.exports = {

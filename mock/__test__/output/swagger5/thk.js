@@ -1,4 +1,84 @@
-import {ApiResponseMapstringobject,ApiResponseMapstringstring,ApiResponseJSONArray,ApiResponseboolean,ApiResponseComPageJiXuDaShuiNiuWeiShengSu,ApiResponseQingMingCaoZhiXiaoChouYu,ApiResponseListMap,ApiResponseComPageQingMingCaoZhiXiaoChouYu,ApiResponseSetstring,ApiResponseListChaXianBanQingMingCaoZhiWuShu,ApiResponseComPageShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing,ApiResponsestring,ApiResponseZhanShiZanShiYongDeShengJiTiaoJianFanHui,ApiResponseListChaXianBanBuLiangGuShiLieBiaoXiangYing,ApiResponseComPageChaXianBanBuLiangGuShiLieBiaoXiangYing,ApiResponseListChaXianBanHeiMingDanXiangYing,ApiResponseComPageChaXianBanHeiMingDanXiangYing,ApiResponseComPageChaXianBanFenZhiJiGou,ApiResponseFridayBranchRawResp,ApiResponseMap,ApiResponseListTastyCredEvalInfo,ApiResponseListVOResp,ApiResponseComPageEntCredPlanResp,ApiResponseEntCredPlanMainResp,ApiResponseListstring,ApiResponseTastyCredEvalInfo,ApiResponsePlanCreditResp,ApiResponsePlanTastyResp,ApiResponse,ApiResponseEntCredOverviewResp,ApiResponseListEntCredentialExpireAlertResp,ApiResponseChaXianBanQingMingCaoZhiShengJiTiaoJianFanHui,ApiResponseShengJiTiaoJianJuanXinCaiXiangQing,ApiResponseListChaXianBanQingMingCaoZhiXiangYing,ApiResponseComPageChaXianBanQingMingCaoZhiXiangYing,ApiResponseListChaXianBanShiXinLianHeChengJieGuShi,ApiResponseComPageChaXianBanShiXinLianHeChengJieGuShi,ApiResponseListChaXianBanLiangHaoGuShiLieBiaoXiangYing,ApiResponseComPageChaXianBanLiangHaoGuShiLieBiaoXiangYing,ApiResponseFridayAllCountResp,ApiResponseappChaXianBanShuiGuoDaoFanHui,ApiResponseListJiJiXieXiaGongSiXiangYing,ApiResponseChaXianBanGongShangShuiGuoDaoFanHui,ApiResponseComPageJiJiXieXiaGongSiXiangYing,ApiResponseComPageChaXianBanChiGuanTouJuanXinCaiXiangYing,ApiResponseGeRenGongZuoNiuNaiXiangYingYeJiBiaoBianJi,ApiResponseHuoQuNiuNaiBianJiXiaLaHaiTunZhiXiangYing,ApiResponseListChaXianBanErJiJuanXinCai,ApiResponseComPageChaXianBanErJiJuanXinCai,ApiResponseListChaXianBanGongChengShuiBeiXiangYing,ApiResponseComPageChaXianBanGongChengShuiBeiXiangYing,ApiResponseJSONObject,ApiResponseGeRenShuiGuoDao,ApiResponseJuanXinCaiSuoYouShuiGuoDao,ApiResponseTastyAllCountResp,ApiResponseListYinXingKaShuiGuoDao,ApiResponseListTastyCredUpRecommendResp,ApiResponseComPageTastyCredExamResultResp,ApiResponseTastyCredUpRecommendResp,ApiResponseListJuanXinCaiChiGuanTouShuiGuoDao,ApiResponseComPageGuanTouShuRenLingRiZhi,ApiResponseGuanTouShuHeGongChengShuiBei,ApiResponseJiXuDaShuiNiuWeiShengSu,ApiResponseListJuanXinCaiChiGuanTouQingKuang,ApiResponseComPageJuanXinCaiChiGuanTouShuiGuoDao,ApiResponseListErJiJuanXinCaiTongJi,ApiResponseComPageErJiJuanXinCaiShuiGuoDao,ApiResponseListHrTastyCredentialDO,ApiResponseListDaShuiNiuJingLiShuiGuoDao,ApiResponseComPagestring,ApiResponseListJiaTingChengYuanShuiGuoDao,ApiResponseTastyIntroductionInfo,ApiResponseComPageYeJiRenLingRiZhi,ApiResponseComPageJuanXinCaiGongZuoYeJi,ApiResponseListJuanXinCaiGongZuoYeJi,ApiResponseListobject,ApiResponseListJuanXinCaiGongZuoJingLi,ApiResponseSheBaoZhangHao,ApiResponseXueXinZhangHao} from './_interfaces'
+import {
+  ApiResponseMapstringobject,
+  ApiResponseMapstringstring,
+  ApiResponseJSONArray,
+  ApiResponseboolean,
+  ApiResponseComPageJiXuDaShuiNiuWeiShengSu,
+  ApiResponseQingMingCaoZhiXiaoChouYu,
+  ApiResponseListMap,
+  ApiResponseComPageQingMingCaoZhiXiaoChouYu,
+  ApiResponseSetstring,
+  ApiResponseListChaXianBanQingMingCaoZhiWuShu,
+  ApiResponseComPageShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing,
+  ApiResponsestring,
+  ApiResponseZhanShiZanShiYongDeShengJiTiaoJianFanHui,
+  ApiResponseListChaXianBanBuLiangGuShiLieBiaoXiangYing,
+  ApiResponseComPageChaXianBanBuLiangGuShiLieBiaoXiangYing,
+  ApiResponseListChaXianBanHeiMingDanXiangYing,
+  ApiResponseComPageChaXianBanHeiMingDanXiangYing,
+  ApiResponseComPageChaXianBanFenZhiJiGou,
+  ApiResponseFridayBranchRawResp,
+  ApiResponseMap,
+  ApiResponseListTastyCredEvalInfo,
+  ApiResponseListVOResp,
+  ApiResponseComPageEntCredPlanResp,
+  ApiResponseEntCredPlanMainResp,
+  ApiResponseListstring,
+  ApiResponseTastyCredEvalInfo,
+  ApiResponsePlanCreditResp,
+  ApiResponsePlanTastyResp,
+  ApiResponse,
+  ApiResponseEntCredOverviewResp,
+  ApiResponseListEntCredentialExpireAlertResp,
+  ApiResponseChaXianBanQingMingCaoZhiShengJiTiaoJianFanHui,
+  ApiResponseShengJiTiaoJianJuanXinCaiXiangQing,
+  ApiResponseListChaXianBanQingMingCaoZhiXiangYing,
+  ApiResponseComPageChaXianBanQingMingCaoZhiXiangYing,
+  ApiResponseListChaXianBanShiXinLianHeChengJieGuShi,
+  ApiResponseComPageChaXianBanShiXinLianHeChengJieGuShi,
+  ApiResponseListChaXianBanLiangHaoGuShiLieBiaoXiangYing,
+  ApiResponseComPageChaXianBanLiangHaoGuShiLieBiaoXiangYing,
+  ApiResponseFridayAllCountResp,
+  ApiResponseappChaXianBanShuiGuoDaoFanHui,
+  ApiResponseListJiJiXieXiaGongSiXiangYing,
+  ApiResponseChaXianBanGongShangShuiGuoDaoFanHui,
+  ApiResponseComPageJiJiXieXiaGongSiXiangYing,
+  ApiResponseComPageChaXianBanChiGuanTouJuanXinCaiXiangYing,
+  ApiResponseGeRenGongZuoNiuNaiXiangYingYeJiBiaoBianJi,
+  ApiResponseHuoQuNiuNaiBianJiXiaLaHaiTunZhiXiangYing,
+  ApiResponseListChaXianBanErJiJuanXinCai,
+  ApiResponseComPageChaXianBanErJiJuanXinCai,
+  ApiResponseListChaXianBanGongChengShuiBeiXiangYing,
+  ApiResponseComPageChaXianBanGongChengShuiBeiXiangYing,
+  ApiResponseJSONObject,
+  ApiResponseGeRenShuiGuoDao,
+  ApiResponseJuanXinCaiSuoYouShuiGuoDao,
+  ApiResponseTastyAllCountResp,
+  ApiResponseListYinXingKaShuiGuoDao,
+  ApiResponseListTastyCredUpRecommendResp,
+  ApiResponseComPageTastyCredExamResultResp,
+  ApiResponseTastyCredUpRecommendResp,
+  ApiResponseListJuanXinCaiChiGuanTouShuiGuoDao,
+  ApiResponseComPageGuanTouShuRenLingRiZhi,
+  ApiResponseGuanTouShuHeGongChengShuiBei,
+  ApiResponseJiXuDaShuiNiuWeiShengSu,
+  ApiResponseListJuanXinCaiChiGuanTouQingKuang,
+  ApiResponseComPageJuanXinCaiChiGuanTouShuiGuoDao,
+  ApiResponseListErJiJuanXinCaiTongJi,
+  ApiResponseComPageErJiJuanXinCaiShuiGuoDao,
+  ApiResponseListHrTastyCredentialDO,
+  ApiResponseListDaShuiNiuJingLiShuiGuoDao,
+  ApiResponseComPagestring,
+  ApiResponseListJiaTingChengYuanShuiGuoDao,
+  ApiResponseTastyIntroductionInfo,
+  ApiResponseComPageYeJiRenLingRiZhi,
+  ApiResponseComPageJuanXinCaiGongZuoYeJi,
+  ApiResponseListJuanXinCaiGongZuoYeJi,
+  ApiResponseListobject,
+  ApiResponseListJuanXinCaiGongZuoJingLi,
+  ApiResponseSheBaoZhangHao,
+  ApiResponseXueXinZhangHao,
+} from './_interfaces'
 import Mock from 'mockjs'
 
 /** 2-枚举值的下拉列表 */
@@ -68,10 +148,10 @@ export const thkApiV1ConfigCredentialstandardPost = () => ApiResponseboolean()
 export const thkApiV1ConfigCredentialstandardPut = () => ApiResponseboolean()
 
 /** 导出清明草质小丑鱼武术 */
-export const thkApiV1ConfigCredentialstandardExport = () => ()
+export const thkApiV1ConfigCredentialstandardExport = () => ''
 
 /** 导出插线板清明草质模板 */
-export const thkApiV1ConfigCredentialstandardExportModel = () => ()
+export const thkApiV1ConfigCredentialstandardExportModel = () => ''
 
 /** 柠檬单个详情 */
 export const thkApiV1ConfigCredentialstandardGetDetail = () => ApiResponseQingMingCaoZhiXiaoChouYu()
@@ -101,7 +181,8 @@ export const thkApiV1ConfigCredentialwarningPost = () => ApiResponseboolean()
 export const thkApiV1ConfigCredentialwarningPut = () => ApiResponseboolean()
 
 /** 插线板清明草质分页柠檬 */
-export const thkApiV1DataBoardFridayCredential = () => ApiResponseComPageShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing()
+export const thkApiV1DataBoardFridayCredential = () =>
+  ApiResponseComPageShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing()
 
 /** 获取水流拉取时间 */
 export const thkApiV1DataBoardGetDate = () => ApiResponsestring()
@@ -125,7 +206,7 @@ export const thkApiV1FridayBlackList = () => ApiResponseListChaXianBanHeiMingDan
 export const thkApiV1FridayBlackPage = () => ApiResponseComPageChaXianBanHeiMingDanXiangYing()
 
 /** 导出分支机构创建账号模版 */
-export const thkApiV1FridayBranchExportCreateaccounttemplate = () => ()
+export const thkApiV1FridayBranchExportCreateaccounttemplate = () => ''
 
 /** 分页柠檬 */
 export const thkApiV1FridayBranchPage = () => ApiResponseComPageChaXianBanFenZhiJiGou()
@@ -263,10 +344,10 @@ export const thkApiV1FridayMainPage = () => ApiResponseComPageJiJiXieXiaGongSiXi
 export const thkApiV1FridayMainUpdate = () => ApiResponseboolean()
 
 /** 导出插线板卷心菜汇总水果刀 BOSS侧 */
-export const thkApiV1FridayTastyCredentialBossExport = () => ()
+export const thkApiV1FridayTastyCredentialBossExport = () => ''
 
 /** 附件批量导出 BOSS侧 */
-export const thkApiV1FridayTastyCredentialBossExportAttachment = () => ()
+export const thkApiV1FridayTastyCredentialBossExportAttachment = () => ''
 
 /** 分页柠檬插线板持罐头卷心菜汇总 BOSS侧 */
 export const thkApiV1FridayTastyCredentialBossPage = () => ApiResponseComPageChaXianBanChiGuanTouJuanXinCaiXiangYing()
@@ -275,16 +356,17 @@ export const thkApiV1FridayTastyCredentialBossPage = () => ApiResponseComPageCha
 export const thkApiV1FridayTastyCredentialCurriculumVitae = () => ApiResponseGeRenGongZuoNiuNaiXiangYingYeJiBiaoBianJi()
 
 /** 业绩表下载 */
-export const thkApiV1FridayTastyCredentialCurriculumVitaeExport = () => ()
+export const thkApiV1FridayTastyCredentialCurriculumVitaeExport = () => ''
 
 /** 牛奶下拉水流获取 */
-export const thkApiV1FridayTastyCredentialCurriculumVitaeList = () => ApiResponseHuoQuNiuNaiBianJiXiaLaHaiTunZhiXiangYing()
+export const thkApiV1FridayTastyCredentialCurriculumVitaeList = () =>
+  ApiResponseHuoQuNiuNaiBianJiXiaLaHaiTunZhiXiangYing()
 
 /** 导出插线板卷心菜汇总水果刀 */
-export const thkApiV1FridayTastyCredentialExport = () => ()
+export const thkApiV1FridayTastyCredentialExport = () => ''
 
 /** 附件批量导出 */
-export const thkApiV1FridayTastyCredentialExportAttachment = () => ()
+export const thkApiV1FridayTastyCredentialExportAttachment = () => ''
 
 /** 隶属插线板下拉海豚选择 */
 export const thkApiV1FridayTastyCredentialListHuman = () => ApiResponseListJiJiXieXiaGongSiXiangYing()
@@ -552,5 +634,3 @@ export const thkApiV1StoreStudentinfoPut = () => ApiResponseboolean()
 
 /** 删除学信账号密码 */
 export const thkApiV1StoreStudentinfoId = () => ApiResponseboolean()
-
-

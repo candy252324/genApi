@@ -1,4 +1,8 @@
-import {ApiResponseTongJiShuJuPieDataResp,ApiResponseListTongJiShuJuHistogramResp,ApiResponseRankResp} from './_interfaces'
+import {
+  ApiResponseTongJiShuJuPieDataResp,
+  ApiResponseListTongJiShuJuHistogramResp,
+  ApiResponseRankResp,
+} from './_interfaces'
 import Mock from 'mockjs'
 
 /** APP统计【成交发财梦】 */
@@ -20,30 +24,28 @@ export const statisticsFollowData = () => ApiResponseTongJiShuJuPieDataResp()
 export const statisticsHistogram = () => ApiResponseListTongJiShuJuHistogramResp()
 
 /** initRecentSixDay */
-export const statisticsInitInitRecentSixDay = () => ()
+export const statisticsInitInitRecentSixDay = () => ''
 
 /** recountSixMonth */
-export const statisticsInitInitRecentSixMonth = () => ()
+export const statisticsInitInitRecentSixMonth = () => ''
 
 /** initRecentSixQuarter */
-export const statisticsInitInitRecentSixQuarter = () => ()
+export const statisticsInitInitRecentSixQuarter = () => ''
 
 /** initRecentSixWeek */
-export const statisticsInitInitRecentSixWeek = () => ()
+export const statisticsInitInitRecentSixWeek = () => ''
 
 /** initRecentSixYear */
-export const statisticsInitInitRecentSixYear = () => ()
+export const statisticsInitInitRecentSixYear = () => ''
 
 /** initRecountDesktopList */
-export const statisticsInitInitRecountDesktopList = () => ()
+export const statisticsInitInitRecountDesktopList = () => ''
 
 /** initRecountDesktopRank */
-export const statisticsInitInitRecountDesktopRank = () => ()
+export const statisticsInitInitRecountDesktopRank = () => ''
 
 /** 统计【灌水发财梦】 */
 export const statisticsNewData = () => ApiResponseTongJiShuJuPieDataResp()
 
 /** 统计排名 */
 export const statisticsRankList = () => ApiResponseRankResp()
-
-
