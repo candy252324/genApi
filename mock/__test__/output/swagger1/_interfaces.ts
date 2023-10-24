@@ -1,3556 +1,3868 @@
+import Mock from "mockjs"
 export function AccInfoResp() {
-  return {
-    mobile: '@string(5,1000)',
-    name: '@string(5,1000)',
-  }
+return {
+mobile: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+
+}
 }
 export function AddOrUpdateCredentialReq() {
-  return {
-    'attachments|5-20': [Attachment()],
-    credentialNo: '@string(5,1000)',
-    credentialType: '@string(5,1000)',
-    credentialTypeCode: '@string(5,1000)',
-    id: '@string(5,1000)',
-    issuingDate: '@string(5,1000)',
-    office: '@string(5,1000)',
-    scope: '@string(5,1000)',
-    scopeCode: '@string(5,1000)',
-    source: '@string(5,1000)',
-    validDate: '@string(5,1000)',
-  }
+return {
+"attachments": [Attachment(),Attachment(),Attachment()],
+credentialNo: Mock.mock("@string(5,100)"),
+credentialType: Mock.mock("@string(5,100)"),
+credentialTypeCode: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+issuingDate: Mock.mock("@datetime()"),
+office: Mock.mock("@string(5,100)"),
+scope: Mock.mock("@string(5,100)"),
+scopeCode: Mock.mock("@string(5,100)"),
+source: Mock.mock("@string(5,100)"),
+validDate: Mock.mock("@datetime()"),
+
+}
 }
 export function AddOrUpdateInviteSetReq() {
-  return {
-    audit: '@boolean()',
-    'auditorIds|5-20': ['@string(5,1000)'],
-    id: '@string(5,1000)',
-    open: '@boolean()',
-    shareType: '@string(5,1000)',
-  }
+return {
+audit: Mock.mock("@boolean()"),
+"auditorIds": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+id: Mock.mock("@string(5,100)"),
+open: Mock.mock("@boolean()"),
+shareType: Mock.mock("@string(5,100)"),
+
+}
 }
 export function AddOrUpdateJobReq() {
-  return {
-    id: '@string(5,1000)',
-    name: '@string(5,1000)',
-    orderNum: '@integer(3,1000)',
-    parentId: '@string(5,1000)',
-  }
+return {
+id: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+orderNum: Mock.mock("@integer(3,1000)"),
+parentId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function AddVerificationImageReq() {
-  return {
-    name: '@string(5,1000)',
-    resource: '@string(5,1000)',
-    sourceEnum: '@string(5,1000)',
-  }
+return {
+name: Mock.mock("@string(5,100)"),
+resource: Mock.mock("@string(5,100)"),
+sourceEnum: Mock.mock("@string(5,100)"),
+
+}
 }
 export function AgentConfigResp() {
-  return {
-    agentId: '@string(5,1000)',
-    corpId: '@string(5,1000)',
-    nonceStr: '@string(5,1000)',
-    signature: '@string(5,1000)',
-    timestamp: '@string(5,1000)',
-  }
+return {
+agentId: Mock.mock("@string(5,100)"),
+corpId: Mock.mock("@string(5,100)"),
+nonceStr: Mock.mock("@string(5,100)"),
+signature: Mock.mock("@string(5,100)"),
+timestamp: Mock.mock("@datetime()"),
+
+}
 }
 export function AliMpLoginReq() {
-  return {
-    appid: '@string(5,1000)',
-    clientType: '@string(5,1000)',
-    clientVersion: '@string(5,1000)',
-    deviceCode: '@string(5,1000)',
-    deviceManufacturer: '@string(5,1000)',
-    deviceModel: '@string(5,1000)',
-    phoneData: '@string(5,1000)',
-    sign: '@string(5,1000)',
-  }
+return {
+appid: Mock.mock("@string(5,100)"),
+clientType: Mock.mock("@string(5,100)"),
+clientVersion: Mock.mock("@string(5,100)"),
+deviceCode: Mock.mock("@string(5,100)"),
+deviceManufacturer: Mock.mock("@string(5,100)"),
+deviceModel: Mock.mock("@string(5,100)"),
+phoneData: Mock.mock("@string(5,100)"),
+sign: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponse() {
-  return {
-    code: '@integer(3,1000)',
-    data: '@string(5,1000)',
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: Mock.mock("@string(5,100)"),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseAccInfoResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: AccInfoResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: AccInfoResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseAgentConfigResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: AgentConfigResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: AgentConfigResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseChannelAppGratefulConfigResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: ChannelAppGratefulConfigResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ChannelAppGratefulConfigResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseChannelKeyBorardResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: ChannelKeyBorardResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ChannelKeyBorardResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComLoginResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComLoginResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComLoginResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageDesktopAddRecordResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageDesktopAddRecordResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageDesktopAddRecordResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageDesktopComplexResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageDesktopComplexResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageDesktopComplexResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageDesktopResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageDesktopResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageDesktopResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageDoorCredentialResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageDoorCredentialResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageDoorCredentialResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageDoorIdentificationResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageDoorIdentificationResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageDoorIdentificationResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageEpDesktopResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageEpDesktopResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageEpDesktopResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageInviteDesktopResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageInviteDesktopResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageInviteDesktopResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageLogLoginResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageLogLoginResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageLogLoginResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageZhiXieChangChuXing() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageZhiXieChangChuXing(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageZhiXieChangChuXing(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageGuanLianShenHeXinXi() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageGuanLianShenHeXinXi(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageGuanLianShenHeXinXi(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageXiaoYuanZhuoGuanLi() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageXiaoYuanZhuoGuanLi(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageXiaoYuanZhuoGuanLi(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageBiXieDaoYongDao() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageBiXieDaoYongDao(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageBiXieDaoYongDao(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageTianJiaDouJiangJiBeiJing() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageTianJiaDouJiangJiBeiJing(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageTianJiaDouJiangJiBeiJing(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageFangDongShouHuoDiZhiTianJia() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageFangDongShouHuoDiZhiTianJia(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageFangDongShouHuoDiZhiTianJia(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseCorpWehiallAuthUrlResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: CorpWehiallAuthUrlResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: CorpWehiallAuthUrlResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseCurrentAuthResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: CurrentAuthResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: CurrentAuthResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseWhiteDetailResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: WhiteDetailResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: WhiteDetailResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseWhiteLinkDoorResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: WhiteLinkDoorResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: WhiteLinkDoorResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseDescribeFaceVerifyResponse() {
-  return {
-    code: '@integer(3,1000)',
-    data: DescribeFaceVerifyResponse(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: DescribeFaceVerifyResponse(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseDesktopAllInfoResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: DesktopAllInfoResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: DesktopAllInfoResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseDesktopNoActiveResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: DesktopNoActiveResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: DesktopNoActiveResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseDesktopResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: DesktopResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: DesktopResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseEntReSetResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: EntReSetResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: EntReSetResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseHeaderEmpowerSmsInfo() {
-  return {
-    code: '@integer(3,1000)',
-    data: HeaderEmpowerSmsInfo(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: HeaderEmpowerSmsInfo(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseImportDesktopResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: ImportDesktopResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ImportDesktopResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseInviteDoorReInfo() {
-  return {
-    code: '@integer(3,1000)',
-    data: InviteDoorReInfo(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: InviteDoorReInfo(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseInviteJoinEchoResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: InviteJoinEchoResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: InviteJoinEchoResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseInviteLoginResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: InviteLoginResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: InviteLoginResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseInviteSetResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: InviteSetResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: InviteSetResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseJSONArray() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': ['@string(5,1000)'],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseJudgeSwitchDoorLimitResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: JudgeSwitchDoorLimitResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: JudgeSwitchDoorLimitResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListAuthDoorOrgInfoResp() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [AuthDoorOrgInfoResp()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [AuthDoorOrgInfoResp(),AuthDoorOrgInfoResp(),AuthDoorOrgInfoResp()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListWhiteResp() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [WhiteResp()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [WhiteResp(),WhiteResp(),WhiteResp()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListEmpowerWhiteResp() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [EmpowerWhiteResp()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [EmpowerWhiteResp(),EmpowerWhiteResp(),EmpowerWhiteResp()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListEpEntTreeResp() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [EpEntTreeResp()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [EpEntTreeResp(),EpEntTreeResp(),EpEntTreeResp()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListExtWhiteResp() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [ExtWhiteResp()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [ExtWhiteResp(),ExtWhiteResp(),ExtWhiteResp()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListImportDesktopResp() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [ImportDesktopResp()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [ImportDesktopResp(),ImportDesktopResp(),ImportDesktopResp()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListMenuResp() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [MenuResp()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [MenuResp(),MenuResp(),MenuResp()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListPostResp() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [PostResp()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [PostResp(),PostResp(),PostResp()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListQueryCatPageHomeResp() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [QueryCatPageHomeResp()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [QueryCatPageHomeResp(),QueryCatPageHomeResp(),QueryCatPageHomeResp()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListPinkInfo() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [PinkInfo()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [PinkInfo(),PinkInfo(),PinkInfo()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListPinkResq() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [PinkResq()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [PinkResq(),PinkResq(),PinkResq()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListSelectorDesktopResp() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [SelectorDesktopResp()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [SelectorDesktopResp(),SelectorDesktopResp(),SelectorDesktopResp()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListSuperManResp() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [SuperManResp()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [SuperManResp(),SuperManResp(),SuperManResp()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListSysDictDuiXiangnullZhiBuXuLieHua() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [SysDictDuiXiangnullZhiBuXuLieHua()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [SysDictDuiXiangnullZhiBuXuLieHua(),SysDictDuiXiangnullZhiBuXuLieHua(),SysDictDuiXiangnullZhiBuXuLieHua()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListTreelong() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': ['@string(5,1000)'],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListlong() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': ['@string(5,1000)'],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListstring() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': ['@string(5,1000)'],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListZhiXieChangChuXing() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [ZhiXieChangChuXing()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [ZhiXieChangChuXing(),ZhiXieChangChuXing(),ZhiXieChangChuXing()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListZhiXieChangFangDongXinXi() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [ZhiXieChangFangDongXinXi()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [ZhiXieChangFangDongXinXi(),ZhiXieChangFangDongXinXi(),ZhiXieChangFangDongXinXi()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListWenJianShangChuanXiangYing() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [WenJianShangChuanXiangYing()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [WenJianShangChuanXiangYing(),WenJianShangChuanXiangYing(),WenJianShangChuanXiangYing()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListShengChengYaoQing() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [ShengChengYaoQing0()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [ShengChengYaoQing0(),ShengChengYaoQing0(),ShengChengYaoQing0()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListFangDongXinXi() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [FangDongXinXi()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [FangDongXinXi(),FangDongXinXi(),FangDongXinXi()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListFangXingQuDaoZhuangTaiChuXing() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [FangXingQuDaoZhuangTaiChuXing()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [FangXingQuDaoZhuangTaiChuXing(),FangXingQuDaoZhuangTaiChuXing(),FangXingQuDaoZhuangTaiChuXing()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseMapstringobject() {
-  return {
-    code: '@integer(3,1000)',
-    data: '@string(5,1000)',
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: Mock.mock("@string(5,100)"),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseMapstringstring() {
-  return {
-    code: '@integer(3,1000)',
-    data: '@string(5,1000)',
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: Mock.mock("@string(5,100)"),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseMenuCheckedResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: MenuCheckedResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: MenuCheckedResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseMenuResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: MenuResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: MenuResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseOcrHappyLicenseBO() {
-  return {
-    code: '@integer(3,1000)',
-    data: OcrHappyLicenseBO(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: OcrHappyLicenseBO(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseOcrIdCardBackResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: OcrIdCardBackResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: OcrIdCardBackResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseOcrIdCardFrontResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: OcrIdCardFrontResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: OcrIdCardFrontResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponsePageSysDictDuiXiangnullZhiBuXuLieHua() {
-  return {
-    code: '@integer(3,1000)',
-    data: PageSysDictDuiXiangnullZhiBuXuLieHua(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: PageSysDictDuiXiangnullZhiBuXuLieHua(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponsePageZhiXieChangBoJuZiXinXi() {
-  return {
-    code: '@integer(3,1000)',
-    data: PageZhiXieChangBoJuZiXinXi(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: PageZhiXieChangBoJuZiXinXi(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseQueryAccInfoResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: QueryAccInfoResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: QueryAccInfoResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseQueryCertFormResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: QueryCertFormResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: QueryCertFormResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseQueryDoorPageHomeResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: QueryDoorPageHomeResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: QueryDoorPageHomeResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseQueryJudgeClaimResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: QueryJudgeClaimResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: QueryJudgeClaimResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseQueryWalletBalanceResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: QueryWalletBalanceResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: QueryWalletBalanceResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseOrangeerResultResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: OrangeerResultResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: OrangeerResultResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponsePinkInfoResq() {
-  return {
-    code: '@integer(3,1000)',
-    data: PinkInfoResq(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: PinkInfoResq(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseScanReQrResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: ScanReQrResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ScanReQrResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseSendActiveMessageResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: SendActiveMessageResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: SendActiveMessageResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseShiftDesktopResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: ShiftDesktopResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ShiftDesktopResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseVerificationResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: VerificationResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: VerificationResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseVoid() {
-  return {
-    code: '@integer(3,1000)',
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseboolean() {
-  return {
-    code: '@integer(3,1000)',
-    data: '@boolean()',
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: Mock.mock("@boolean()"),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponselong() {
-  return {
-    code: '@integer(3,1000)',
-    data: '@string(5,1000)',
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: Mock.mock("@string(5,100)"),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponsestring() {
-  return {
-    code: '@integer(3,1000)',
-    data: '@string(5,1000)',
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: Mock.mock("@string(5,100)"),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseDouJiangJiFangDongXinXiXiangQingBiao() {
-  return {
-    code: '@integer(3,1000)',
-    data: DouJiangJiFangDongXinXiXiangQingBiao(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: DouJiangJiFangDongXinXiXiangQingBiao(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseDouJiangJiFangXingXinXiBoJuZiXinXiJiaShiShiZhiXuYaoChuanRuindividualBankCardNoindividualReservedPhoneNoindividualVocationQiTaXinXiCongredisHuanCunZhongHuoQu() {
-  return {
-    code: '@integer(3,1000)',
-    data: DouJiangJiFangXingXinXiBoJuZiXinXiJiaShiShiZhiXuYaoChuanRuindividualBankCardNoindividualReservedPhoneNoindividualVocationQiTaXinXiCongredisHuanCunZhongHuoQu(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: DouJiangJiFangXingXinXiBoJuZiXinXiJiaShiShiZhiXuYaoChuanRuindividualBankCardNoindividualReservedPhoneNoindividualVocationQiTaXinXiCongredisHuanCunZhongHuoQu(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseDouJiangJiFangXingXinXi() {
-  return {
-    code: '@integer(3,1000)',
-    data: DouJiangJiFangXingXinXi(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: DouJiangJiFangXingXinXi(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseZhiXieChangJianDanFangXing() {
-  return {
-    code: '@integer(3,1000)',
-    data: ZhiXieChangJianDanFangXing0(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ZhiXieChangJianDanFangXing0(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseZhiXieChangZhuTiXinXi() {
-  return {
-    code: '@integer(3,1000)',
-    data: ZhiXieChangZhuTiXinXi(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ZhiXieChangZhuTiXinXi(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseZhiXieChangBoJuZiXinXi() {
-  return {
-    code: '@integer(3,1000)',
-    data: ZhiXieChangBoJuZiXinXi0(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ZhiXieChangBoJuZiXinXi0(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseZhiXieChangFangDongXinXiXiangQing() {
-  return {
-    code: '@integer(3,1000)',
-    data: ZhiXieChangFangDongXinXiXiangQing0(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ZhiXieChangFangDongXinXiXiangQing0(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseGuanLianMaoZiYongDao() {
-  return {
-    code: '@integer(3,1000)',
-    data: GuanLianMaoZiYongDao(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: GuanLianMaoZiYongDao(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseGuanLianMaoZiXiangQing() {
-  return {
-    code: '@integer(3,1000)',
-    data: GuanLianMaoZiXiangQing(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: GuanLianMaoZiXiangQing(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseShenHeTongJiHuanCunSanShiMiao() {
-  return {
-    code: '@integer(3,1000)',
-    data: ShenHeTongJiHuanCunSanShiMiao(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ShenHeTongJiHuanCunSanShiMiao(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseBiXieDao() {
-  return {
-    code: '@integer(3,1000)',
-    data: BiXieDao0(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: BiXieDao0(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseShuJuYiZhiXingCaoZuoFanHuiJieGuo() {
-  return {
-    code: '@integer(3,1000)',
-    data: ShuJuYiZhiXingCaoZuoFanHuiJieGuo(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ShuJuYiZhiXingCaoZuoFanHuiJieGuo(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseJianChaYaoQingMa() {
-  return {
-    code: '@integer(3,1000)',
-    data: JianChaYaoQingMa(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: JianChaYaoQingMa(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseFangDongXinXi() {
-  return {
-    code: '@integer(3,1000)',
-    data: FangDongXinXi(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: FangDongXinXi(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseYaoQingZhuCe() {
-  return {
-    code: '@integer(3,1000)',
-    data: YaoQingZhuCe(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: YaoQingZhuCe(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function Attachment() {
-  return {
-    id: '@string(5,1000)',
-    name: '@string(5,1000)',
-    type: '@string(5,1000)',
-    url: '@string(5,1000)',
-  }
+return {
+id: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+type: Mock.mock("@string(5,100)"),
+url: Mock.mock("@string(5,100)"),
+
+}
 }
 export function AuditRelationTotalReq() {
-  return {
-    endTime: '@string(5,1000)',
-    startTime: '@string(5,1000)',
-  }
+return {
+endTime: Mock.mock("@datetime()"),
+startTime: Mock.mock("@datetime()"),
+
+}
 }
 export function AuditorInfo() {
-  return {
-    id: '@string(5,1000)',
-    name: '@string(5,1000)',
-  }
+return {
+id: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+
+}
 }
 export function AuthDoorOrgInfoResp() {
-  return {
-    authCount: '@string(5,1000)',
-    authStatus: '@string(5,1000)',
-    authTypeMap: '@string(5,1000)',
-    chiefly: '@boolean()',
-    whiteChildrenDesktopCount: '@string(5,1000)',
-    whiteLinkDoorResp: WhiteLinkDoorResp(),
-    id: '@string(5,1000)',
-    licenseUnifiedCode: '@string(5,1000)',
-    name: '@string(5,1000)',
-    serialNum: '@string(5,1000)',
-  }
+return {
+authCount: Mock.mock("@string(5,100)"),
+authStatus: Mock.mock("@string(5,100)"),
+authTypeMap: Mock.mock("@string(5,100)"),
+chiefly: Mock.mock("@boolean()"),
+whiteChildrenDesktopCount: Mock.mock("@string(5,100)"),
+whiteLinkDoorResp: WhiteLinkDoorResp(),
+id: Mock.mock("@string(5,100)"),
+licenseUnifiedCode: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+serialNum: Mock.mock("@string(5,100)"),
+
+}
 }
 export function AuthOrgKeyBorardReq() {
-  return {
-    authFlag: '@boolean()',
-    certType: '@string(5,1000)',
-    whiteId: '@string(5,1000)',
-    'desktopIds|5-20': ['@string(5,1000)'],
-    doorId: '@string(5,1000)',
-  }
+return {
+authFlag: Mock.mock("@boolean()"),
+certType: Mock.mock("@string(5,100)"),
+whiteId: Mock.mock("@string(5,100)"),
+"desktopIds": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+doorId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function BasePageReq() {
-  return {
-    page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
-  }
+return {
+page: Mock.mock("@integer(3,1000)"),
+size: Mock.mock("@integer(20,50)"),
+
+}
 }
 export function ChannelAppGratefulConfigAddReq() {
-  return {
-    aesKey: '@string(5,1000)',
-    aesToken: '@string(5,1000)',
-    agentId: '@string(5,1000)',
-    appKey: '@string(5,1000)',
-    appSecret: '@string(5,1000)',
-    channelType: '@string(5,1000)',
-    corpId: '@string(5,1000)',
-  }
+return {
+aesKey: Mock.mock("@string(5,100)"),
+aesToken: Mock.mock("@string(5,100)"),
+agentId: Mock.mock("@string(5,100)"),
+appKey: Mock.mock("@string(5,100)"),
+appSecret: Mock.mock("@string(5,100)"),
+channelType: Mock.mock("@string(5,100)"),
+corpId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ChannelAppGratefulConfigResp() {
-  return {
-    aesKey: '@string(5,1000)',
-    aesToken: '@string(5,1000)',
-    agentId: '@string(5,1000)',
-    appKey: '@string(5,1000)',
-    appSecret: '@string(5,1000)',
-    appUrl: '@string(5,1000)',
-    channelType: '@string(5,1000)',
-    corpId: '@string(5,1000)',
-    id: '@string(5,1000)',
-    manUrl: '@string(5,1000)',
-    outIp: '@string(5,1000)',
-    pcUrl: '@string(5,1000)',
-    recUrl: '@string(5,1000)',
-    gratefulId: '@string(5,1000)',
-  }
+return {
+aesKey: Mock.mock("@string(5,100)"),
+aesToken: Mock.mock("@string(5,100)"),
+agentId: Mock.mock("@string(5,100)"),
+appKey: Mock.mock("@string(5,100)"),
+appSecret: Mock.mock("@string(5,100)"),
+appUrl: Mock.mock("@string(5,100)"),
+channelType: Mock.mock("@string(5,100)"),
+corpId: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+manUrl: Mock.mock("@string(5,100)"),
+outIp: Mock.mock("@string(5,100)"),
+pcUrl: Mock.mock("@string(5,100)"),
+recUrl: Mock.mock("@string(5,100)"),
+gratefulId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ChannelAppGratefulConfigUpReq() {
-  return {
-    aesKey: '@string(5,1000)',
-    aesToken: '@string(5,1000)',
-    agentId: '@string(5,1000)',
-    appKey: '@string(5,1000)',
-    appSecret: '@string(5,1000)',
-    channelType: '@string(5,1000)',
-    corpId: '@string(5,1000)',
-    id: '@string(5,1000)',
-    gratefulId: '@string(5,1000)',
-  }
+return {
+aesKey: Mock.mock("@string(5,100)"),
+aesToken: Mock.mock("@string(5,100)"),
+agentId: Mock.mock("@string(5,100)"),
+appKey: Mock.mock("@string(5,100)"),
+appSecret: Mock.mock("@string(5,100)"),
+channelType: Mock.mock("@string(5,100)"),
+corpId: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+gratefulId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ChannelComLoginReq() {
-  return {
-    blue: '@string(5,1000)',
-    certificate: '@string(5,1000)',
-    channelCorpId: '@string(5,1000)',
-    channelDesktopId: '@string(5,1000)',
-    channelType: '@string(5,1000)',
-    clientType: '@string(5,1000)',
-    clientVersion: '@string(5,1000)',
-    deviceCode: '@string(5,1000)',
-    deviceManufacturer: '@string(5,1000)',
-    deviceModel: '@string(5,1000)',
-    loginModeEnum: '@string(5,1000)',
-    uuid: '@string(5,1000)',
-  }
+return {
+blue: Mock.mock("@string(5,100)"),
+certificate: Mock.mock("@string(5,100)"),
+channelCorpId: Mock.mock("@string(5,100)"),
+channelDesktopId: Mock.mock("@string(5,100)"),
+channelType: Mock.mock("@string(5,100)"),
+clientType: Mock.mock("@string(5,100)"),
+clientVersion: Mock.mock("@string(5,100)"),
+deviceCode: Mock.mock("@string(5,100)"),
+deviceManufacturer: Mock.mock("@string(5,100)"),
+deviceModel: Mock.mock("@string(5,100)"),
+loginModeEnum: Mock.mock("@string(5,100)"),
+uuid: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ChannelKeyBorardResp() {
-  return {
-    channelCorpId: '@string(5,1000)',
-    channelDesktopId: '@string(5,1000)',
-    channelType: '@string(5,1000)',
-  }
+return {
+channelCorpId: Mock.mock("@string(5,100)"),
+channelDesktopId: Mock.mock("@string(5,100)"),
+channelType: Mock.mock("@string(5,100)"),
+
 }
-export function CharSequence() {}
+}
+export function CharSequence() {
+}
 export function ComLoginReq() {
-  return {
-    blue: '@string(5,1000)',
-    certificate: '@string(5,1000)',
-    clientType: '@string(5,1000)',
-    clientVersion: '@string(5,1000)',
-    deviceCode: '@string(5,1000)',
-    deviceManufacturer: '@string(5,1000)',
-    deviceModel: '@string(5,1000)',
-    loginModeEnum: '@string(5,1000)',
-    uuid: '@string(5,1000)',
-  }
+return {
+blue: Mock.mock("@string(5,100)"),
+certificate: Mock.mock("@string(5,100)"),
+clientType: Mock.mock("@string(5,100)"),
+clientVersion: Mock.mock("@string(5,100)"),
+deviceCode: Mock.mock("@string(5,100)"),
+deviceManufacturer: Mock.mock("@string(5,100)"),
+deviceModel: Mock.mock("@string(5,100)"),
+loginModeEnum: Mock.mock("@string(5,100)"),
+uuid: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ComLoginResp() {
-  return {
-    code: '@integer(3,1000)',
-    newKeyBorard: '@boolean()',
-    setPassWord: '@boolean()',
-    token: '@string(5,1000)',
-    tokenTimeOut: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+newKeyBorard: Mock.mock("@boolean()"),
+setPassWord: Mock.mock("@boolean()"),
+token: Mock.mock("@string(5,100)"),
+tokenTimeOut: Mock.mock("@datetime()"),
+
+}
 }
 export function ComPage() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': ['@string(5,1000)'],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageDesktopAddRecordResp() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [DesktopAddRecordResp()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [DesktopAddRecordResp(),DesktopAddRecordResp(),DesktopAddRecordResp()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageDesktopComplexResp() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [DesktopComplexResp()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [DesktopComplexResp(),DesktopComplexResp(),DesktopComplexResp()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageDesktopResp() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [DesktopResp()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [DesktopResp(),DesktopResp(),DesktopResp()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageDoorCredentialResp() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [DoorCredentialResp()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [DoorCredentialResp(),DoorCredentialResp(),DoorCredentialResp()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageDoorIdentificationResp() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [DoorIdentificationResp()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [DoorIdentificationResp(),DoorIdentificationResp(),DoorIdentificationResp()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageEpDesktopResp() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [EpDesktopResp()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [EpDesktopResp(),EpDesktopResp(),EpDesktopResp()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageInviteDesktopResp() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [InviteDesktopResp()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [InviteDesktopResp(),InviteDesktopResp(),InviteDesktopResp()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageLogLoginResp() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [LogLoginResp()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [LogLoginResp(),LogLoginResp(),LogLoginResp()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageRelationDoorInfo() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [RelationDoorInfo()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [RelationDoorInfo(),RelationDoorInfo(),RelationDoorInfo()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageZhiXieChangChuXing() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [ZhiXieChangChuXing()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [ZhiXieChangChuXing(),ZhiXieChangChuXing(),ZhiXieChangChuXing()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageGuanLianShenHeXinXi() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [GuanLianShenHeXinXi()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [GuanLianShenHeXinXi(),GuanLianShenHeXinXi(),GuanLianShenHeXinXi()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageXiaoYuanZhuoGuanLi() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [XiaoYuanZhuoGuanLi0()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [XiaoYuanZhuoGuanLi0(),XiaoYuanZhuoGuanLi0(),XiaoYuanZhuoGuanLi0()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageBiXieDao() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [BiXieDao1()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [BiXieDao1(),BiXieDao1(),BiXieDao1()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageBiXieDaoYongDao() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [BiXieDaoYongDao()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [BiXieDaoYongDao(),BiXieDaoYongDao(),BiXieDaoYongDao()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageTianJiaDouJiangJiBeiJing() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [TianJiaDouJiangJiBeiJing()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [TianJiaDouJiangJiBeiJing(),TianJiaDouJiangJiBeiJing(),TianJiaDouJiangJiBeiJing()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageFangDongShouHuoDiZhiTianJia() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [FangDongShouHuoDiZhiTianJia0()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [FangDongShouHuoDiZhiTianJia0(),FangDongShouHuoDiZhiTianJia0(),FangDongShouHuoDiZhiTianJia0()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function CompanyInfo() {
-  return {
-    belongOrg: '@string(5,1000)',
-    bondType: '@string(5,1000)',
-    happyScope: '@string(5,1000)',
-    happyTerm: '@string(5,1000)',
-    category: '@string(5,1000)',
-    checkDate: '@string(5,1000)',
-    city: '@string(5,1000)',
-    companyId: '@string(5,1000)',
-    companyName: '@string(5,1000)',
-    companyScore: '@string(5,1000)',
-    companyType: '@string(5,1000)',
-    contributedCapital: '@string(5,1000)',
-    createTime: '@string(5,1000)',
-    creditCode: '@string(5,1000)',
-    district: '@string(5,1000)',
-    emails: '@string(5,1000)',
-    estiblishTime: '@string(5,1000)',
-    firstPosition: '@string(5,1000)',
-    labelListV2: '@string(5,1000)',
-    logo: '@string(5,1000)',
-    nameen: '@string(5,1000)',
-    newtestName: '@string(5,1000)',
-    orgNumber: '@string(5,1000)',
-    phoneNum: '@string(5,1000)',
-    province: '@string(5,1000)',
-    regCapital: '@string(5,1000)',
-    regLocation: '@string(5,1000)',
-    regNumber: '@string(5,1000)',
-    regStatus: '@string(5,1000)',
-    socialStaffNum: '@string(5,1000)',
-    staffSize: '@string(5,1000)',
-    taxCode: '@string(5,1000)',
-    taxpayerQualification: '@string(5,1000)',
-    updateTime: '@string(5,1000)',
-    websites: '@string(5,1000)',
-  }
+return {
+belongOrg: Mock.mock("@string(5,100)"),
+bondType: Mock.mock("@string(5,100)"),
+happyScope: Mock.mock("@string(5,100)"),
+happyTerm: Mock.mock("@string(5,100)"),
+category: Mock.mock("@string(5,100)"),
+checkDate: Mock.mock("@datetime()"),
+city: Mock.mock("@string(5,100)"),
+companyId: Mock.mock("@string(5,100)"),
+companyName: Mock.mock("@string(5,100)"),
+companyScore: Mock.mock("@string(5,100)"),
+companyType: Mock.mock("@string(5,100)"),
+contributedCapital: Mock.mock("@string(5,100)"),
+createTime: Mock.mock("@datetime()"),
+creditCode: Mock.mock("@string(5,100)"),
+district: Mock.mock("@string(5,100)"),
+emails: Mock.mock("@string(5,100)"),
+estiblishTime: Mock.mock("@datetime()"),
+firstPosition: Mock.mock("@string(5,100)"),
+labelListV2: Mock.mock("@string(5,100)"),
+logo: Mock.mock("@string(5,100)"),
+nameen: Mock.mock("@string(5,100)"),
+newtestName: Mock.mock("@string(5,100)"),
+orgNumber: Mock.mock("@string(5,100)"),
+phoneNum: Mock.mock("@string(5,100)"),
+province: Mock.mock("@string(5,100)"),
+regCapital: Mock.mock("@string(5,100)"),
+regLocation: Mock.mock("@string(5,100)"),
+regNumber: Mock.mock("@string(5,100)"),
+regStatus: Mock.mock("@string(5,100)"),
+socialStaffNum: Mock.mock("@string(5,100)"),
+staffSize: Mock.mock("@string(5,100)"),
+taxCode: Mock.mock("@string(5,100)"),
+taxpayerQualification: Mock.mock("@string(5,100)"),
+updateTime: Mock.mock("@datetime()"),
+websites: Mock.mock("@string(5,100)"),
+
 }
-export function Comparableobject() {}
+}
+export function Comparableobject() {
+}
 export function CorpWehiallAuthUrlResp() {
-  return {
-    authUrl: '@string(5,1000)',
-  }
+return {
+authUrl: Mock.mock("@string(5,100)"),
+
+}
 }
 export function CurrentAuthResp() {
-  return {
-    'menuRoute|5-20': [RouterResp()],
-    'permission|5-20': ['@string(5,1000)'],
-  }
+return {
+"menuRoute": [RouterResp(),RouterResp(),RouterResp()],
+"permission": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+
+}
 }
 export function WhiteAddReq() {
-  return {
-    whiteName: '@string(5,1000)',
-    leaderDesktopId: '@string(5,1000)',
-    mark: '@string(5,1000)',
-    orderNum: '@integer(3,1000)',
-    parentId: '@string(5,1000)',
-    profile: '@string(5,1000)',
-    scaleType: '@string(5,1000)',
-  }
+return {
+whiteName: Mock.mock("@string(5,100)"),
+leaderDesktopId: Mock.mock("@string(5,100)"),
+mark: Mock.mock("@string(5,100)"),
+orderNum: Mock.mock("@integer(3,1000)"),
+parentId: Mock.mock("@string(5,100)"),
+profile: Mock.mock("@string(5,100)"),
+scaleType: Mock.mock("@string(5,100)"),
+
+}
 }
 export function WhiteDetailResp() {
-  return {
-    ancestors: '@string(5,1000)',
-    channelWhiteName: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    whiteCode: '@string(5,1000)',
-    whiteName: '@string(5,1000)',
-    email: '@string(5,1000)',
-    id: '@string(5,1000)',
-    leaderDesktopId: '@string(5,1000)',
-    leaderDesktopInfo: DesktopComplexResp(),
-    mark: '@string(5,1000)',
-    markDesc: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    orderNum: '@integer(3,1000)',
-    parentCode: '@string(5,1000)',
-    parentId: '@string(5,1000)',
-    parentName: '@string(5,1000)',
-    phone: '@string(5,1000)',
-    profile: '@string(5,1000)',
-    scaleType: '@string(5,1000)',
-    scaleTypeDesc: '@string(5,1000)',
-    status: '@string(5,1000)',
-    statusDesc: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+ancestors: Mock.mock("@string(5,100)"),
+channelWhiteName: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+whiteCode: Mock.mock("@string(5,100)"),
+whiteName: Mock.mock("@string(5,100)"),
+email: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+leaderDesktopId: Mock.mock("@string(5,100)"),
+leaderDesktopInfo: DesktopComplexResp(),
+mark: Mock.mock("@string(5,100)"),
+markDesc: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+orderNum: Mock.mock("@integer(3,1000)"),
+parentCode: Mock.mock("@string(5,100)"),
+parentId: Mock.mock("@string(5,100)"),
+parentName: Mock.mock("@string(5,100)"),
+phone: Mock.mock("@string(5,100)"),
+profile: Mock.mock("@string(5,100)"),
+scaleType: Mock.mock("@string(5,100)"),
+scaleTypeDesc: Mock.mock("@string(5,100)"),
+status: Mock.mock("@string(5,100)"),
+statusDesc: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function WhiteLinkDoorReq() {
-  return {
-    whiteId: '@string(5,1000)',
-    doorId: '@string(5,1000)',
-    overFlag: '@boolean()',
-  }
+return {
+whiteId: Mock.mock("@string(5,100)"),
+doorId: Mock.mock("@string(5,100)"),
+overFlag: Mock.mock("@boolean()"),
+
+}
 }
 export function WhiteLinkDoorResp() {
-  return {
-    ancestors: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    whiteCode: '@string(5,1000)',
-    whiteName: '@string(5,1000)',
-    email: '@string(5,1000)',
-    doorId: '@string(5,1000)',
-    id: '@string(5,1000)',
-    leaderDesktopId: '@string(5,1000)',
-    leaderKeyBorardId: '@string(5,1000)',
-    linkStatus: '@boolean()',
-    mark: '@string(5,1000)',
-    markDesc: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    orderNum: '@integer(3,1000)',
-    parentCode: '@string(5,1000)',
-    parentId: '@string(5,1000)',
-    phone: '@string(5,1000)',
-    profile: '@string(5,1000)',
-    scaleType: '@string(5,1000)',
-    scaleTypeDesc: '@string(5,1000)',
-    status: '@string(5,1000)',
-    statusDesc: '@string(5,1000)',
-    gratefulId: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+ancestors: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+whiteCode: Mock.mock("@string(5,100)"),
+whiteName: Mock.mock("@string(5,100)"),
+email: Mock.mock("@string(5,100)"),
+doorId: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+leaderDesktopId: Mock.mock("@string(5,100)"),
+leaderKeyBorardId: Mock.mock("@string(5,100)"),
+linkStatus: Mock.mock("@boolean()"),
+mark: Mock.mock("@string(5,100)"),
+markDesc: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+orderNum: Mock.mock("@integer(3,1000)"),
+parentCode: Mock.mock("@string(5,100)"),
+parentId: Mock.mock("@string(5,100)"),
+phone: Mock.mock("@string(5,100)"),
+profile: Mock.mock("@string(5,100)"),
+scaleType: Mock.mock("@string(5,100)"),
+scaleTypeDesc: Mock.mock("@string(5,100)"),
+status: Mock.mock("@string(5,100)"),
+statusDesc: Mock.mock("@string(5,100)"),
+gratefulId: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function WhiteResp() {
-  return {
-    ancestors: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    whiteCode: '@string(5,1000)',
-    whiteName: '@string(5,1000)',
-    email: '@string(5,1000)',
-    id: '@string(5,1000)',
-    leaderDesktopId: '@string(5,1000)',
-    leaderKeyBorardId: '@string(5,1000)',
-    linkStatus: '@boolean()',
-    mark: '@string(5,1000)',
-    markDesc: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    orderNum: '@integer(3,1000)',
-    parentCode: '@string(5,1000)',
-    parentId: '@string(5,1000)',
-    phone: '@string(5,1000)',
-    profile: '@string(5,1000)',
-    scaleType: '@string(5,1000)',
-    scaleTypeDesc: '@string(5,1000)',
-    status: '@string(5,1000)',
-    statusDesc: '@string(5,1000)',
-    gratefulId: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+ancestors: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+whiteCode: Mock.mock("@string(5,100)"),
+whiteName: Mock.mock("@string(5,100)"),
+email: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+leaderDesktopId: Mock.mock("@string(5,100)"),
+leaderKeyBorardId: Mock.mock("@string(5,100)"),
+linkStatus: Mock.mock("@boolean()"),
+mark: Mock.mock("@string(5,100)"),
+markDesc: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+orderNum: Mock.mock("@integer(3,1000)"),
+parentCode: Mock.mock("@string(5,100)"),
+parentId: Mock.mock("@string(5,100)"),
+phone: Mock.mock("@string(5,100)"),
+profile: Mock.mock("@string(5,100)"),
+scaleType: Mock.mock("@string(5,100)"),
+scaleTypeDesc: Mock.mock("@string(5,100)"),
+status: Mock.mock("@string(5,100)"),
+statusDesc: Mock.mock("@string(5,100)"),
+gratefulId: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function WhiteUpReq() {
-  return {
-    whiteName: '@string(5,1000)',
-    id: '@string(5,1000)',
-    leaderDesktopId: '@string(5,1000)',
-    orderNum: '@integer(3,1000)',
-    profile: '@string(5,1000)',
-    scaleType: '@string(5,1000)',
-  }
+return {
+whiteName: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+leaderDesktopId: Mock.mock("@string(5,100)"),
+orderNum: Mock.mock("@integer(3,1000)"),
+profile: Mock.mock("@string(5,100)"),
+scaleType: Mock.mock("@string(5,100)"),
+
+}
 }
 export function DescribeFaceVerifyResponse() {
-  return {
-    code: '@string(5,1000)',
-    message: '@string(5,1000)',
-    requestId: '@string(5,1000)',
-    resultObject: DescribeFaceVerifyResponseResultObject(),
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+message: Mock.mock("@string(5,100)"),
+requestId: Mock.mock("@string(5,100)"),
+resultObject: DescribeFaceVerifyResponseResultObject(),
+
+}
 }
 export function DescribeFaceVerifyResponseResultObject() {
-  return {
-    deviceToken: '@string(5,1000)',
-    identityInfo: '@string(5,1000)',
-    materialInfo: '@string(5,1000)',
-    passed: '@string(5,1000)',
-    subCode: '@string(5,1000)',
-  }
+return {
+deviceToken: Mock.mock("@string(5,100)"),
+identityInfo: Mock.mock("@string(5,100)"),
+materialInfo: Mock.mock("@string(5,100)"),
+passed: Mock.mock("@string(5,100)"),
+subCode: Mock.mock("@string(5,100)"),
+
+}
 }
 export function DesktopAddRecordResp() {
-  return {
-    addTime: '@string(5,1000)',
-    adderName: '@string(5,1000)',
-    adderPhone: '@string(5,1000)',
-    whiteName: '@string(5,1000)',
-    email: '@string(5,1000)',
-    desktopName: '@string(5,1000)',
-    desktopPhone: '@string(5,1000)',
-    desktopStatus: '@string(5,1000)',
-    id: '@string(5,1000)',
-    joinTime: '@string(5,1000)',
-    refuse: '@string(5,1000)',
-    'pink|5-20': ['@string(5,1000)'],
-  }
+return {
+addTime: Mock.mock("@datetime()"),
+adderName: Mock.mock("@string(5,100)"),
+adderPhone: Mock.mock("@string(5,100)"),
+whiteName: Mock.mock("@string(5,100)"),
+email: Mock.mock("@string(5,100)"),
+desktopName: Mock.mock("@string(5,100)"),
+desktopPhone: Mock.mock("@string(5,100)"),
+desktopStatus: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+joinTime: Mock.mock("@datetime()"),
+refuse: Mock.mock("@string(5,100)"),
+"pink": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+
+}
 }
 export function DesktopAddReq() {
-  return {
-    email: '@string(5,1000)',
-    mainWhiteId: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    nickName: '@string(5,1000)',
-    relation: '@string(5,1000)',
-    'pinkIds|5-20': ['@string(5,1000)'],
-    sex: '@string(5,1000)',
-    keyBorardName: '@string(5,1000)',
-  }
+return {
+email: Mock.mock("@string(5,100)"),
+mainWhiteId: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+nickName: Mock.mock("@string(5,100)"),
+relation: Mock.mock("@string(5,100)"),
+"pinkIds": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+sex: Mock.mock("@string(5,100)"),
+keyBorardName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function DesktopAllInfoResp() {
-  return {
-    'whiteRespList|5-20': [ExtWhiteResp()],
-    desktopResp: DesktopResp(),
-    'jobRespList|5-20': [JobResp()],
-    'postRespList|5-20': [PostResp()],
-    'pinkRespList|5-20': [PinkResq()],
-  }
+return {
+"whiteRespList": [ExtWhiteResp(),ExtWhiteResp(),ExtWhiteResp()],
+desktopResp: DesktopResp(),
+"jobRespList": [JobResp(),JobResp(),JobResp()],
+"postRespList": [PostResp(),PostResp(),PostResp()],
+"pinkRespList": [PinkResq(),PinkResq(),PinkResq()],
+
+}
 }
 export function DesktopComplexResp() {
-  return {
-    authStatus: '@boolean()',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    'whiteRespList|5-20': [DesktopWhiteResp()],
-    email: '@string(5,1000)',
-    id: '@string(5,1000)',
-    'jobRespList|5-20': [DesktopJobResp()],
-    mobile: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    nickName: '@string(5,1000)',
-    'postRespList|5-20': [DesktopPostResp()],
-    realAuth: '@boolean()',
-    relation: '@string(5,1000)',
-    sex: '@string(5,1000)',
-    sexDesc: '@string(5,1000)',
-    status: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    keyBorardId: '@string(5,1000)',
-    keyBorardName: '@string(5,1000)',
-  }
+return {
+authStatus: Mock.mock("@boolean()"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+"whiteRespList": [DesktopWhiteResp(),DesktopWhiteResp(),DesktopWhiteResp()],
+email: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+"jobRespList": [DesktopJobResp(),DesktopJobResp(),DesktopJobResp()],
+mobile: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+nickName: Mock.mock("@string(5,100)"),
+"postRespList": [DesktopPostResp(),DesktopPostResp(),DesktopPostResp()],
+realAuth: Mock.mock("@boolean()"),
+relation: Mock.mock("@string(5,100)"),
+sex: Mock.mock("@string(5,100)"),
+sexDesc: Mock.mock("@string(5,100)"),
+status: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+keyBorardId: Mock.mock("@string(5,100)"),
+keyBorardName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function DesktopWhiteResp() {
-  return {
-    whiteCode: '@string(5,1000)',
-    whiteId: '@string(5,1000)',
-    whiteName: '@string(5,1000)',
-    desktopId: '@string(5,1000)',
-    id: '@string(5,1000)',
-    mainWhite: '@boolean()',
-    gratefulId: '@string(5,1000)',
-  }
+return {
+whiteCode: Mock.mock("@string(5,100)"),
+whiteId: Mock.mock("@string(5,100)"),
+whiteName: Mock.mock("@string(5,100)"),
+desktopId: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+mainWhite: Mock.mock("@boolean()"),
+gratefulId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function DesktopJobResp() {
-  return {
-    desktopId: '@string(5,1000)',
-    id: '@string(5,1000)',
-    jobCode: '@string(5,1000)',
-    jobId: '@string(5,1000)',
-    jobName: '@string(5,1000)',
-    gratefulId: '@string(5,1000)',
-  }
+return {
+desktopId: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+jobCode: Mock.mock("@string(5,100)"),
+jobId: Mock.mock("@string(5,100)"),
+jobName: Mock.mock("@string(5,100)"),
+gratefulId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function DesktopNoActiveResp() {
-  return {
-    count: '@integer(3,1000)',
-    'desktopResp|5-20': [DesktopRespRes()],
-  }
+return {
+count: Mock.mock("@integer(3,1000)"),
+"desktopResp": [DesktopRespRes(),DesktopRespRes(),DesktopRespRes()],
+
+}
 }
 export function DesktopPostResp() {
-  return {
-    desktopId: '@string(5,1000)',
-    id: '@string(5,1000)',
-    postCode: '@string(5,1000)',
-    postId: '@string(5,1000)',
-    postName: '@string(5,1000)',
-    gratefulId: '@string(5,1000)',
-  }
+return {
+desktopId: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+postCode: Mock.mock("@string(5,100)"),
+postId: Mock.mock("@string(5,100)"),
+postName: Mock.mock("@string(5,100)"),
+gratefulId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function DesktopResp() {
-  return {
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    email: '@string(5,1000)',
-    id: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    nickName: '@string(5,1000)',
-    relation: '@string(5,1000)',
-    sex: '@string(5,1000)',
-    sexDesc: '@string(5,1000)',
-    status: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    keyBorardId: '@string(5,1000)',
-    keyBorardName: '@string(5,1000)',
-  }
+return {
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+email: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+nickName: Mock.mock("@string(5,100)"),
+relation: Mock.mock("@string(5,100)"),
+sex: Mock.mock("@string(5,100)"),
+sexDesc: Mock.mock("@string(5,100)"),
+status: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+keyBorardId: Mock.mock("@string(5,100)"),
+keyBorardName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function DesktopRespReq() {
-  return {
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    email: '@string(5,1000)',
-    id: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    nickName: '@string(5,1000)',
-    relation: '@string(5,1000)',
-    sex: '@string(5,1000)',
-    status: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    keyBorardId: '@string(5,1000)',
-    keyBorardName: '@string(5,1000)',
-  }
+return {
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+email: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+nickName: Mock.mock("@string(5,100)"),
+relation: Mock.mock("@string(5,100)"),
+sex: Mock.mock("@string(5,100)"),
+status: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+keyBorardId: Mock.mock("@string(5,100)"),
+keyBorardName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function DesktopRespRes() {
-  return {
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    email: '@string(5,1000)',
-    id: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    nickName: '@string(5,1000)',
-    relation: '@string(5,1000)',
-    sex: '@string(5,1000)',
-    sexDesc: '@string(5,1000)',
-    status: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    keyBorardId: '@string(5,1000)',
-    keyBorardName: '@string(5,1000)',
-  }
+return {
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+email: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+nickName: Mock.mock("@string(5,100)"),
+relation: Mock.mock("@string(5,100)"),
+sex: Mock.mock("@string(5,100)"),
+sexDesc: Mock.mock("@string(5,100)"),
+status: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+keyBorardId: Mock.mock("@string(5,100)"),
+keyBorardName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function DesktopSelectorReq() {
-  return {
-    whiteId: '@string(5,1000)',
-    jobId: '@string(5,1000)',
-  }
+return {
+whiteId: Mock.mock("@string(5,100)"),
+jobId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function DesktopSimpleListReq() {
-  return {
-    id: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
-    status: '@string(5,1000)',
-    keyBorardName: '@string(5,1000)',
-  }
+return {
+id: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+page: Mock.mock("@integer(3,1000)"),
+size: Mock.mock("@integer(20,50)"),
+status: Mock.mock("@string(5,100)"),
+keyBorardName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function DesktopUpReq() {
-  return {
-    'whiteIds|5-20': ['@string(5,1000)'],
-    email: '@string(5,1000)',
-    id: '@string(5,1000)',
-    'jodIds|5-20': ['@string(5,1000)'],
-    mainWhiteId: '@string(5,1000)',
-    nickName: '@string(5,1000)',
-    'postIds|5-20': ['@string(5,1000)'],
-    sex: '@string(5,1000)',
-    keyBorardName: '@string(5,1000)',
-  }
+return {
+"whiteIds": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+email: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+"jodIds": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+mainWhiteId: Mock.mock("@string(5,100)"),
+nickName: Mock.mock("@string(5,100)"),
+"postIds": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+sex: Mock.mock("@string(5,100)"),
+keyBorardName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function EmpowerWhiteResp() {
-  return {
-    'children|5-20': [EmpowerWhiteResp()],
-    id: '@string(5,1000)',
-    info: WhiteResp(),
-    label: '@string(5,1000)',
-    parentId: '@string(5,1000)',
-    weight: '@string(5,1000)',
-  }
+return {
+"children": [EmpowerWhiteResp(),EmpowerWhiteResp(),EmpowerWhiteResp()],
+id: Mock.mock("@string(5,100)"),
+info: WhiteResp(),
+label: Mock.mock("@string(5,100)"),
+parentId: Mock.mock("@string(5,100)"),
+weight: Mock.mock("@string(5,100)"),
+
+}
 }
 export function EntInviteConfig() {
-  return {
-    auditState: '@boolean()',
-    'auditor|5-20': [AuditorInfo()],
-    doorId: '@string(5,1000)',
-    id: '@string(5,1000)',
-    inviteType: '@string(5,1000)',
-    module: '@string(5,1000)',
-    openState: '@boolean()',
-  }
+return {
+auditState: Mock.mock("@boolean()"),
+"auditor": [AuditorInfo(),AuditorInfo(),AuditorInfo()],
+doorId: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+inviteType: Mock.mock("@string(5,100)"),
+module: Mock.mock("@string(5,100)"),
+openState: Mock.mock("@boolean()"),
+
+}
 }
 export function EntReSetReq() {
-  return {
-    emInviteConfig: EntInviteConfig(),
-    reInviteConfig: EntInviteConfig(),
-    pinkConfigInfo: PinkConfigInfo(),
-  }
+return {
+emInviteConfig: EntInviteConfig(),
+reInviteConfig: EntInviteConfig(),
+pinkConfigInfo: PinkConfigInfo(),
+
+}
 }
 export function EntReSetResp() {
-  return {
-    emInviteConfig: EntInviteConfig(),
-    reInviteConfig: EntInviteConfig(),
-    pinkConfigInfo: PinkConfigInfo(),
-  }
+return {
+emInviteConfig: EntInviteConfig(),
+reInviteConfig: EntInviteConfig(),
+pinkConfigInfo: PinkConfigInfo(),
+
+}
 }
 export function DoorAuditReq() {
-  return {
-    endTime: '@string(5,1000)',
-    franchiseDoorName: '@string(5,1000)',
-    page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
-    startTime: '@string(5,1000)',
-  }
+return {
+endTime: Mock.mock("@datetime()"),
+franchiseDoorName: Mock.mock("@string(5,100)"),
+page: Mock.mock("@integer(3,1000)"),
+size: Mock.mock("@integer(20,50)"),
+startTime: Mock.mock("@datetime()"),
+
+}
 }
 export function DoorBeneficiaryReq() {
-  return {
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    doorAcctId: '@string(5,1000)',
-    doorBeneficiaryGreen: '@string(5,1000)',
-    doorBeneficiaryConctactPhone: '@string(5,1000)',
-    doorBeneficiaryIdCardBackId: '@string(5,1000)',
-    doorBeneficiaryIdCardFileId: '@string(5,1000)',
-    doorBeneficiaryIdCardFrontId: '@string(5,1000)',
-    doorBeneficiaryIdCardNo: '@string(5,1000)',
-    doorBeneficiaryIdCardType: '@string(5,1000)',
-    doorBeneficiaryIdCardValidDate: '@string(5,1000)',
-    doorBeneficiaryIdCardValidStartDate: '@string(5,1000)',
-    doorBeneficiaryIncomeType: '@string(5,1000)',
-    doorBeneficiaryName: '@string(5,1000)',
-    doorBeneficiaryPost: '@string(5,1000)',
-    doorBeneficiaryShareRatio: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+doorAcctId: Mock.mock("@string(5,100)"),
+doorBeneficiaryGreen: Mock.mock("@string(5,100)"),
+doorBeneficiaryConctactPhone: Mock.mock("@string(5,100)"),
+doorBeneficiaryIdCardBackId: Mock.mock("@string(5,100)"),
+doorBeneficiaryIdCardFileId: Mock.mock("@string(5,100)"),
+doorBeneficiaryIdCardFrontId: Mock.mock("@string(5,100)"),
+doorBeneficiaryIdCardNo: Mock.mock("@string(5,100)"),
+doorBeneficiaryIdCardType: Mock.mock("@string(5,100)"),
+doorBeneficiaryIdCardValidDate: Mock.mock("@datetime()"),
+doorBeneficiaryIdCardValidStartDate: Mock.mock("@datetime()"),
+doorBeneficiaryIncomeType: Mock.mock("@string(5,100)"),
+doorBeneficiaryName: Mock.mock("@string(5,100)"),
+doorBeneficiaryPost: Mock.mock("@string(5,100)"),
+doorBeneficiaryShareRatio: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function DoorBeneficiaryResp() {
-  return {
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    doorAcctId: '@string(5,1000)',
-    doorBeneficiaryGreen: '@string(5,1000)',
-    doorBeneficiaryConctactPhone: '@string(5,1000)',
-    doorBeneficiaryIdCardBackId: '@string(5,1000)',
-    doorBeneficiaryIdCardFileId: '@string(5,1000)',
-    doorBeneficiaryIdCardFrontId: '@string(5,1000)',
-    doorBeneficiaryIdCardNo: '@string(5,1000)',
-    doorBeneficiaryIdCardType: '@string(5,1000)',
-    doorBeneficiaryIdCardTypeDict: SysDictDuiXiangnullZhiBuXuLieHua(),
-    doorBeneficiaryIdCardValidDate: '@string(5,1000)',
-    doorBeneficiaryIdCardValidStartDate: '@string(5,1000)',
-    doorBeneficiaryIncomeType: '@string(5,1000)',
-    doorBeneficiaryName: '@string(5,1000)',
-    doorBeneficiaryPost: '@string(5,1000)',
-    doorBeneficiaryShareRatio: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+doorAcctId: Mock.mock("@string(5,100)"),
+doorBeneficiaryGreen: Mock.mock("@string(5,100)"),
+doorBeneficiaryConctactPhone: Mock.mock("@string(5,100)"),
+doorBeneficiaryIdCardBackId: Mock.mock("@string(5,100)"),
+doorBeneficiaryIdCardFileId: Mock.mock("@string(5,100)"),
+doorBeneficiaryIdCardFrontId: Mock.mock("@string(5,100)"),
+doorBeneficiaryIdCardNo: Mock.mock("@string(5,100)"),
+doorBeneficiaryIdCardType: Mock.mock("@string(5,100)"),
+doorBeneficiaryIdCardTypeDict: SysDictDuiXiangnullZhiBuXuLieHua(),
+doorBeneficiaryIdCardValidDate: Mock.mock("@datetime()"),
+doorBeneficiaryIdCardValidStartDate: Mock.mock("@datetime()"),
+doorBeneficiaryIncomeType: Mock.mock("@string(5,100)"),
+doorBeneficiaryName: Mock.mock("@string(5,100)"),
+doorBeneficiaryPost: Mock.mock("@string(5,100)"),
+doorBeneficiaryShareRatio: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function DoorCredentialResp() {
-  return {
-    'attachments|5-20': [Attachment()],
-    credentialNo: '@string(5,1000)',
-    credentialType: '@string(5,1000)',
-    credentialTypeCode: '@string(5,1000)',
-    doorId: '@string(5,1000)',
-    id: '@string(5,1000)',
-    issuingDate: '@string(5,1000)',
-    office: '@string(5,1000)',
-    scope: '@string(5,1000)',
-    scopeCode: '@string(5,1000)',
-    source: '@string(5,1000)',
-    validDate: '@string(5,1000)',
-  }
+return {
+"attachments": [Attachment(),Attachment(),Attachment()],
+credentialNo: Mock.mock("@string(5,100)"),
+credentialType: Mock.mock("@string(5,100)"),
+credentialTypeCode: Mock.mock("@string(5,100)"),
+doorId: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+issuingDate: Mock.mock("@datetime()"),
+office: Mock.mock("@string(5,100)"),
+scope: Mock.mock("@string(5,100)"),
+scopeCode: Mock.mock("@string(5,100)"),
+source: Mock.mock("@string(5,100)"),
+validDate: Mock.mock("@datetime()"),
+
+}
 }
 export function DoorIdentificationReq() {
-  return {
-    alTicket: '@string(5,1000)',
-    allEInvoiceStatus: '@string(5,1000)',
-    authStatus: '@string(5,1000)',
-    commontStatus: '@string(5,1000)',
-    esignALlStatus: '@string(5,1000)',
-    esignOnlySignStatus: '@string(5,1000)',
-    id: '@string(5,1000)',
-    legalCat: '@string(5,1000)',
-    licenseUnifiedCode: '@string(5,1000)',
-    name: '@string(5,1000)',
-    page: '@integer(3,1000)',
-    serialNum: '@string(5,1000)',
-    size: '@integer(3,1000)',
-    walletStatus: '@string(5,1000)',
-  }
+return {
+alTicket: Mock.mock("@string(5,100)"),
+allEInvoiceStatus: Mock.mock("@string(5,100)"),
+authStatus: Mock.mock("@string(5,100)"),
+commontStatus: Mock.mock("@string(5,100)"),
+esignALlStatus: Mock.mock("@string(5,100)"),
+esignOnlySignStatus: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+legalCat: Mock.mock("@string(5,100)"),
+licenseUnifiedCode: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+page: Mock.mock("@integer(3,1000)"),
+serialNum: Mock.mock("@string(5,100)"),
+size: Mock.mock("@integer(20,50)"),
+walletStatus: Mock.mock("@string(5,100)"),
+
+}
 }
 export function DoorIdentificationResp() {
-  return {
-    authStatus: '@string(5,1000)',
-    authTypeMap: '@string(5,1000)',
-    'bizAuthType|5-20': [DoorIdentificationType()],
-    chiefly: '@boolean()',
-    whiteLinkDoorResp: WhiteLinkDoorResp(),
-    id: '@string(5,1000)',
-    licenseUnifiedCode: '@string(5,1000)',
-    name: '@string(5,1000)',
-    serialNum: '@string(5,1000)',
-  }
+return {
+authStatus: Mock.mock("@string(5,100)"),
+authTypeMap: Mock.mock("@string(5,100)"),
+"bizAuthType": [DoorIdentificationType(),DoorIdentificationType(),DoorIdentificationType()],
+chiefly: Mock.mock("@boolean()"),
+whiteLinkDoorResp: WhiteLinkDoorResp(),
+id: Mock.mock("@string(5,100)"),
+licenseUnifiedCode: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+serialNum: Mock.mock("@string(5,100)"),
+
+}
 }
 export function DoorIdentificationType() {
-  return {
-    clazz: '@string(5,1000)',
-    cost: '@string(5,1000)',
-    function: '@string(5,1000)',
-    institution: '@string(5,1000)',
-    interests: '@string(5,1000)',
-    name: '@string(5,1000)',
-    status: '@string(5,1000)',
-    type: '@string(5,1000)',
-  }
+return {
+clazz: Mock.mock("@string(5,100)"),
+cost: Mock.mock("@string(5,100)"),
+function: Mock.mock("@string(5,100)"),
+institution: Mock.mock("@string(5,100)"),
+interests: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+status: Mock.mock("@string(5,100)"),
+type: Mock.mock("@string(5,100)"),
+
+}
 }
 export function DoorShareholderReq() {
-  return {
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    doorAcctId: '@string(5,1000)',
-    doorShareholderIdCardBackFileId: '@string(5,1000)',
-    doorShareholderIdCardFileId: '@string(5,1000)',
-    doorShareholderIdCardNo: '@string(5,1000)',
-    doorShareholderIdCardType: '@string(5,1000)',
-    doorShareholderIdCardValidDate: '@string(5,1000)',
-    doorShareholderIdCardValidStartDate: '@string(5,1000)',
-    doorShareholderName: '@string(5,1000)',
-    doorShareholderShareRatio: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+doorAcctId: Mock.mock("@string(5,100)"),
+doorShareholderIdCardBackFileId: Mock.mock("@string(5,100)"),
+doorShareholderIdCardFileId: Mock.mock("@string(5,100)"),
+doorShareholderIdCardNo: Mock.mock("@string(5,100)"),
+doorShareholderIdCardType: Mock.mock("@string(5,100)"),
+doorShareholderIdCardValidDate: Mock.mock("@datetime()"),
+doorShareholderIdCardValidStartDate: Mock.mock("@datetime()"),
+doorShareholderName: Mock.mock("@string(5,100)"),
+doorShareholderShareRatio: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function DoorShareholderResp() {
-  return {
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    doorAcctId: '@string(5,1000)',
-    doorShareholderIdCardBackFileId: '@string(5,1000)',
-    doorShareholderIdCardFileId: '@string(5,1000)',
-    doorShareholderIdCardNo: '@string(5,1000)',
-    doorShareholderIdCardType: '@string(5,1000)',
-    doorShareholderIdCardTypeSysDict: SysDictDuiXiangnullZhiBuXuLieHua(),
-    doorShareholderIdCardValidDate: '@string(5,1000)',
-    doorShareholderIdCardValidStartDate: '@string(5,1000)',
-    doorShareholderName: '@string(5,1000)',
-    doorShareholderShareRatio: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+doorAcctId: Mock.mock("@string(5,100)"),
+doorShareholderIdCardBackFileId: Mock.mock("@string(5,100)"),
+doorShareholderIdCardFileId: Mock.mock("@string(5,100)"),
+doorShareholderIdCardNo: Mock.mock("@string(5,100)"),
+doorShareholderIdCardType: Mock.mock("@string(5,100)"),
+doorShareholderIdCardTypeSysDict: SysDictDuiXiangnullZhiBuXuLieHua(),
+doorShareholderIdCardValidDate: Mock.mock("@datetime()"),
+doorShareholderIdCardValidStartDate: Mock.mock("@datetime()"),
+doorShareholderName: Mock.mock("@string(5,100)"),
+doorShareholderShareRatio: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function EpDesktopResp() {
-  return {
-    authStatus: '@boolean()',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    'whiteRespList|5-20': [DesktopWhiteResp()],
-    email: '@string(5,1000)',
-    id: '@string(5,1000)',
-    jmAuthStatus: '@string(5,1000)',
-    'jobRespList|5-20': [DesktopJobResp()],
-    mobile: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    nickName: '@string(5,1000)',
-    'postRespList|5-20': [DesktopPostResp()],
-    realAuth: '@boolean()',
-    refuseReason: '@string(5,1000)',
-    relation: '@string(5,1000)',
-    pinkName: '@string(5,1000)',
-    sex: '@string(5,1000)',
-    sexDesc: '@string(5,1000)',
-    status: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    keyBorardId: '@string(5,1000)',
-    keyBorardName: '@string(5,1000)',
-  }
+return {
+authStatus: Mock.mock("@boolean()"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+"whiteRespList": [DesktopWhiteResp(),DesktopWhiteResp(),DesktopWhiteResp()],
+email: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+jmAuthStatus: Mock.mock("@string(5,100)"),
+"jobRespList": [DesktopJobResp(),DesktopJobResp(),DesktopJobResp()],
+mobile: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+nickName: Mock.mock("@string(5,100)"),
+"postRespList": [DesktopPostResp(),DesktopPostResp(),DesktopPostResp()],
+realAuth: Mock.mock("@boolean()"),
+refuseReason: Mock.mock("@string(5,100)"),
+relation: Mock.mock("@string(5,100)"),
+pinkName: Mock.mock("@string(5,100)"),
+sex: Mock.mock("@string(5,100)"),
+sexDesc: Mock.mock("@string(5,100)"),
+status: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+keyBorardId: Mock.mock("@string(5,100)"),
+keyBorardName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function EpEntTreeResp() {
-  return {
-    'entMetas|5-20': [ReEntMeta()],
-    id: '@string(5,1000)',
-    name: '@string(5,1000)',
-  }
+return {
+"entMetas": [ReEntMeta(),ReEntMeta(),ReEntMeta()],
+id: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ExtWhiteResp() {
-  return {
-    ancestors: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    whiteCode: '@string(5,1000)',
-    whiteName: '@string(5,1000)',
-    email: '@string(5,1000)',
-    desktopId: '@string(5,1000)',
-    id: '@string(5,1000)',
-    leaderDesktopId: '@string(5,1000)',
-    leaderKeyBorardId: '@string(5,1000)',
-    linkStatus: '@boolean()',
-    mainWhite: '@boolean()',
-    mark: '@string(5,1000)',
-    markDesc: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    orderNum: '@integer(3,1000)',
-    parentCode: '@string(5,1000)',
-    parentId: '@string(5,1000)',
-    phone: '@string(5,1000)',
-    profile: '@string(5,1000)',
-    scaleType: '@string(5,1000)',
-    scaleTypeDesc: '@string(5,1000)',
-    status: '@string(5,1000)',
-    statusDesc: '@string(5,1000)',
-    gratefulId: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+ancestors: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+whiteCode: Mock.mock("@string(5,100)"),
+whiteName: Mock.mock("@string(5,100)"),
+email: Mock.mock("@string(5,100)"),
+desktopId: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+leaderDesktopId: Mock.mock("@string(5,100)"),
+leaderKeyBorardId: Mock.mock("@string(5,100)"),
+linkStatus: Mock.mock("@boolean()"),
+mainWhite: Mock.mock("@boolean()"),
+mark: Mock.mock("@string(5,100)"),
+markDesc: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+orderNum: Mock.mock("@integer(3,1000)"),
+parentCode: Mock.mock("@string(5,100)"),
+parentId: Mock.mock("@string(5,100)"),
+phone: Mock.mock("@string(5,100)"),
+profile: Mock.mock("@string(5,100)"),
+scaleType: Mock.mock("@string(5,100)"),
+scaleTypeDesc: Mock.mock("@string(5,100)"),
+status: Mock.mock("@string(5,100)"),
+statusDesc: Mock.mock("@string(5,100)"),
+gratefulId: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function FileSystemResource() {
-  return {
-    description: '@string(5,1000)',
-    file: 'file',
-    filename: '@string(5,1000)',
-    inputStream: InputStream(),
-    open: '@boolean()',
-    outputStream: OutputStream(),
-    path: '@string(5,1000)',
-    readable: '@boolean()',
-    uri: '@string(5,1000)',
-    url: '@string(5,1000)',
-    writable: '@boolean()',
-  }
+return {
+description: Mock.mock("@string(5,100)"),
+file: Mock.mock("file"),
+filename: Mock.mock("@string(5,100)"),
+inputStream: InputStream(),
+open: Mock.mock("@boolean()"),
+outputStream: OutputStream(),
+path: Mock.mock("@string(5,100)"),
+readable: Mock.mock("@boolean()"),
+uri: Mock.mock("@string(5,100)"),
+url: Mock.mock("@string(5,100)"),
+writable: Mock.mock("@boolean()"),
+
+}
 }
 export function HeaderEmpowerSmsInfo() {
-  return {
-    doorId: '@string(5,1000)',
-    phone: '@string(5,1000)',
-    gratefulId: '@string(5,1000)',
-  }
+return {
+doorId: Mock.mock("@string(5,100)"),
+phone: Mock.mock("@string(5,100)"),
+gratefulId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ImportDesktopErrorData() {
-  return {
-    error: '@string(5,1000)',
-    id: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    name: '@string(5,1000)',
-  }
+return {
+error: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ImportDesktopResp() {
-  return {
-    'errorDataList|5-20': [ImportDesktopErrorData()],
-    errorNum: '@integer(3,1000)',
-    errorUrl: '@string(5,1000)',
-    importDate: '@string(5,1000)',
-    succNum: '@integer(3,1000)',
-  }
+return {
+"errorDataList": [ImportDesktopErrorData(),ImportDesktopErrorData(),ImportDesktopErrorData()],
+errorNum: Mock.mock("@integer(3,1000)"),
+errorUrl: Mock.mock("@string(5,100)"),
+importDate: Mock.mock("@datetime()"),
+succNum: Mock.mock("@integer(3,1000)"),
+
+}
 }
 export function InitAgengConfigReq() {
-  return {
-    initPage: '@string(5,1000)',
-  }
+return {
+initPage: Mock.mock("@string(5,100)"),
+
 }
-export function InputStream() {}
+}
+export function InputStream() {
+}
 export function InviteDesktopResp() {
-  return {
-    applyReason: '@string(5,1000)',
-    applyTime: '@string(5,1000)',
-    whiteCode: '@string(5,1000)',
-    whiteName: '@string(5,1000)',
-    desktopStatus: '@string(5,1000)',
-    id: '@string(5,1000)',
-    inviterName: '@string(5,1000)',
-    inviterPhone: '@string(5,1000)',
-    joinTime: '@string(5,1000)',
-    proposerId: '@string(5,1000)',
-    proposerName: '@string(5,1000)',
-    proposerPhone: '@string(5,1000)',
-    refuse: '@string(5,1000)',
-    shareTime: '@string(5,1000)',
-    shareType: '@string(5,1000)',
-    status: '@string(5,1000)',
-  }
+return {
+applyReason: Mock.mock("@string(5,100)"),
+applyTime: Mock.mock("@datetime()"),
+whiteCode: Mock.mock("@string(5,100)"),
+whiteName: Mock.mock("@string(5,100)"),
+desktopStatus: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+inviterName: Mock.mock("@string(5,100)"),
+inviterPhone: Mock.mock("@string(5,100)"),
+joinTime: Mock.mock("@datetime()"),
+proposerId: Mock.mock("@string(5,100)"),
+proposerName: Mock.mock("@string(5,100)"),
+proposerPhone: Mock.mock("@string(5,100)"),
+refuse: Mock.mock("@string(5,100)"),
+shareTime: Mock.mock("@datetime()"),
+shareType: Mock.mock("@string(5,100)"),
+status: Mock.mock("@string(5,100)"),
+
+}
 }
 export function InviteDoorReInfo() {
-  return {
-    entName: '@string(5,1000)',
-    doorId: '@string(5,1000)',
-    handleStatus: '@boolean()',
-    headerName: '@string(5,1000)',
-    headerPhone: '@string(5,1000)',
-    inviteCode: '@string(5,1000)',
-    isHandler: '@boolean()',
-    reId: '@string(5,1000)',
-    reGratefulId: '@string(5,1000)',
-  }
+return {
+entName: Mock.mock("@string(5,100)"),
+doorId: Mock.mock("@string(5,100)"),
+handleStatus: Mock.mock("@boolean()"),
+headerName: Mock.mock("@string(5,100)"),
+headerPhone: Mock.mock("@string(5,100)"),
+inviteCode: Mock.mock("@string(5,100)"),
+isHandler: Mock.mock("@boolean()"),
+reId: Mock.mock("@string(5,100)"),
+reGratefulId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function InviteJoinEchoResp() {
-  return {
-    applyType: '@string(5,1000)',
-    doorCertStatus: '@string(5,1000)',
-    doorName: '@string(5,1000)',
-    inviteName: '@string(5,1000)',
-    joinName: '@string(5,1000)',
-    key: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-  }
+return {
+applyType: Mock.mock("@string(5,100)"),
+doorCertStatus: Mock.mock("@string(5,100)"),
+doorName: Mock.mock("@string(5,100)"),
+inviteName: Mock.mock("@string(5,100)"),
+joinName: Mock.mock("@string(5,100)"),
+key: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+
+}
 }
 export function InviteLoginReq() {
-  return {
-    applyType: '@string(5,1000)',
-    certificate: '@string(5,1000)',
-    clientType: '@string(5,1000)',
-    clientVersion: '@string(5,1000)',
-    deviceCode: '@string(5,1000)',
-    deviceManufacturer: '@string(5,1000)',
-    deviceModel: '@string(5,1000)',
-    joinName: '@string(5,1000)',
-    key: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    uuid: '@string(5,1000)',
-  }
+return {
+applyType: Mock.mock("@string(5,100)"),
+certificate: Mock.mock("@string(5,100)"),
+clientType: Mock.mock("@string(5,100)"),
+clientVersion: Mock.mock("@string(5,100)"),
+deviceCode: Mock.mock("@string(5,100)"),
+deviceManufacturer: Mock.mock("@string(5,100)"),
+deviceModel: Mock.mock("@string(5,100)"),
+joinName: Mock.mock("@string(5,100)"),
+key: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+uuid: Mock.mock("@string(5,100)"),
+
+}
 }
 export function InviteLoginResp() {
-  return {
-    inviteStatus: '@integer(3,1000)',
-    mobile: '@string(5,1000)',
-    msg: '@string(5,1000)',
-    newKeyBorard: '@boolean()',
-    setPassWord: '@boolean()',
-    gratefulId: '@string(5,1000)',
-    token: '@string(5,1000)',
-    tokenTimeOut: '@string(5,1000)',
-  }
+return {
+inviteStatus: Mock.mock("@integer(3,1000)"),
+mobile: Mock.mock("@string(5,100)"),
+msg: Mock.mock("@string(5,100)"),
+newKeyBorard: Mock.mock("@boolean()"),
+setPassWord: Mock.mock("@boolean()"),
+gratefulId: Mock.mock("@string(5,100)"),
+token: Mock.mock("@string(5,100)"),
+tokenTimeOut: Mock.mock("@datetime()"),
+
+}
 }
 export function InviteRePlatFromOrgReq() {
-  return {
-    doorId: '@string(5,1000)',
-    headerName: '@string(5,1000)',
-    headerPhone: '@string(5,1000)',
-    reGratefulId: '@string(5,1000)',
-  }
+return {
+doorId: Mock.mock("@string(5,100)"),
+headerName: Mock.mock("@string(5,100)"),
+headerPhone: Mock.mock("@string(5,100)"),
+reGratefulId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function InviteSetResp() {
-  return {
-    audit: '@boolean()',
-    'auditorList|5-20': [AuditorInfo()],
-    id: '@string(5,1000)',
-    open: '@boolean()',
-    shareType: '@string(5,1000)',
-  }
+return {
+audit: Mock.mock("@boolean()"),
+"auditorList": [AuditorInfo(),AuditorInfo(),AuditorInfo()],
+id: Mock.mock("@string(5,100)"),
+open: Mock.mock("@boolean()"),
+shareType: Mock.mock("@string(5,100)"),
+
+}
 }
 export function JobAddDesktopReq() {
-  return {
-    desktopId: '@string(5,1000)',
-    jobCode: '@string(5,1000)',
-    jobId: '@string(5,1000)',
-    jobName: '@string(5,1000)',
-  }
+return {
+desktopId: Mock.mock("@string(5,100)"),
+jobCode: Mock.mock("@string(5,100)"),
+jobId: Mock.mock("@string(5,100)"),
+jobName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function JobResp() {
-  return {
-    ancestors: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    id: '@string(5,1000)',
-    jobCode: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    name: '@string(5,1000)',
-    orderNum: '@integer(3,1000)',
-    parentCode: '@string(5,1000)',
-    parentId: '@string(5,1000)',
-    status: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+ancestors: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+jobCode: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+orderNum: Mock.mock("@integer(3,1000)"),
+parentCode: Mock.mock("@string(5,100)"),
+parentId: Mock.mock("@string(5,100)"),
+status: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function JudgeSwitchDoorLimitResp() {
-  return {
-    judge: '@boolean()',
-    msg: '@string(5,1000)',
-  }
+return {
+judge: Mock.mock("@boolean()"),
+msg: Mock.mock("@string(5,100)"),
+
+}
 }
 export function LogLoginResp() {
-  return {
-    browser: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    id: '@string(5,1000)',
-    ipaddr: '@string(5,1000)',
-    loginLocation: '@string(5,1000)',
-    loginTime: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    os: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+browser: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+ipaddr: Mock.mock("@string(5,100)"),
+loginLocation: Mock.mock("@string(5,100)"),
+loginTime: Mock.mock("@datetime()"),
+mobile: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+os: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function MenuCheckedResp() {
-  return {
-    'checkedKeys|5-20': [MenuDataScopeResp()],
-    'menueTree|5-20': ['@string(5,1000)'],
-  }
+return {
+"checkedKeys": [MenuDataScopeResp(),MenuDataScopeResp(),MenuDataScopeResp()],
+"menueTree": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+
+}
 }
 export function MenuDataScopeReq() {
-  return {
-    dataScope: '@integer(3,1000)',
-    'whiteCodes|5-20': ['@string(5,1000)'],
-    menuId: '@string(5,1000)',
-  }
+return {
+dataScope: Mock.mock("@integer(3,1000)"),
+"whiteCodes": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+menuId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function MenuDataScopeResp() {
-  return {
-    dataScope: '@integer(3,1000)',
-    'whiteCodes|5-20': ['@string(5,1000)'],
-    menuId: '@string(5,1000)',
-  }
+return {
+dataScope: Mock.mock("@integer(3,1000)"),
+"whiteCodes": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+menuId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function MenuResp() {
-  return {
-    appName: '@string(5,1000)',
-    codeCatalog: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    dataPermissions: '@boolean()',
-    enable: '@boolean()',
-    iconUrl: '@string(5,1000)',
-    id: '@string(5,1000)',
-    level: '@integer(3,1000)',
-    loginRequired: '@boolean()',
-    menuCode: '@string(5,1000)',
-    menuLargeCategoryName: '@string(5,1000)',
-    menuName: '@string(5,1000)',
-    menuOutId: '@string(5,1000)',
-    menuShow: '@boolean()',
-    menuType: '@integer(3,1000)',
-    modified: '@string(5,1000)',
-    path: '@string(5,1000)',
-    permIdent: '@string(5,1000)',
-    pid: '@string(5,1000)',
-    productCode: '@string(5,1000)',
-    queryParam: '@string(5,1000)',
-    remarks: '@string(5,1000)',
-    sort: '@integer(3,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+appName: Mock.mock("@string(5,100)"),
+codeCatalog: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+dataPermissions: Mock.mock("@boolean()"),
+enable: Mock.mock("@boolean()"),
+iconUrl: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+level: Mock.mock("@integer(3,1000)"),
+loginRequired: Mock.mock("@boolean()"),
+menuCode: Mock.mock("@string(5,100)"),
+menuLargeCategoryName: Mock.mock("@string(5,100)"),
+menuName: Mock.mock("@string(5,100)"),
+menuOutId: Mock.mock("@string(5,100)"),
+menuShow: Mock.mock("@boolean()"),
+menuType: Mock.mock("@integer(3,1000)"),
+modified: Mock.mock("@string(5,100)"),
+path: Mock.mock("@string(5,100)"),
+permIdent: Mock.mock("@string(5,100)"),
+pid: Mock.mock("@string(5,100)"),
+productCode: Mock.mock("@string(5,100)"),
+queryParam: Mock.mock("@string(5,100)"),
+remarks: Mock.mock("@string(5,100)"),
+sort: Mock.mock("@integer(3,1000)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function OcrHappyLicenseBO() {
-  return {
-    green: '@string(5,1000)',
-    happy: '@string(5,1000)',
-    capital: '@string(5,1000)',
-    establishDate: '@string(5,1000)',
-    fake: '@boolean()',
-    name: '@string(5,1000)',
-    cat: '@string(5,1000)',
-    regNum: '@string(5,1000)',
-    requestId: '@string(5,1000)',
-    success: '@boolean()',
-    type: '@string(5,1000)',
-    validPeriod: '@string(5,1000)',
-  }
+return {
+green: Mock.mock("@string(5,100)"),
+happy: Mock.mock("@string(5,100)"),
+capital: Mock.mock("@string(5,100)"),
+establishDate: Mock.mock("@datetime()"),
+fake: Mock.mock("@boolean()"),
+name: Mock.mock("@string(5,100)"),
+cat: Mock.mock("@string(5,100)"),
+regNum: Mock.mock("@string(5,100)"),
+requestId: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+type: Mock.mock("@string(5,100)"),
+validPeriod: Mock.mock("@string(5,100)"),
+
+}
 }
 export function OcrIdCardBackResp() {
-  return {
-    endDate: '@string(5,1000)',
-    fake: '@boolean()',
-    issue: '@string(5,1000)',
-    startDate: '@string(5,1000)',
-    success: '@boolean()',
-  }
+return {
+endDate: Mock.mock("@datetime()"),
+fake: Mock.mock("@boolean()"),
+issue: Mock.mock("@string(5,100)"),
+startDate: Mock.mock("@datetime()"),
+success: Mock.mock("@boolean()"),
+
+}
 }
 export function OcrIdCardFrontResp() {
-  return {
-    green: '@string(5,1000)',
-    birth: '@string(5,1000)',
-    fake: '@boolean()',
-    name: '@string(5,1000)',
-    nationality: '@string(5,1000)',
-    num: '@string(5,1000)',
-    sex: '@string(5,1000)',
-    success: '@boolean()',
-  }
+return {
+green: Mock.mock("@string(5,100)"),
+birth: Mock.mock("@string(5,100)"),
+fake: Mock.mock("@boolean()"),
+name: Mock.mock("@string(5,100)"),
+nationality: Mock.mock("@string(5,100)"),
+num: Mock.mock("@string(5,100)"),
+sex: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+
+}
 }
 export function OcrImageReq() {
-  return {
-    image: '@string(5,1000)',
-  }
+return {
+image: Mock.mock("@string(5,100)"),
+
+}
 }
 export function OrderItem() {
-  return {
-    asc: '@boolean()',
-    column: '@string(5,1000)',
-  }
+return {
+asc: Mock.mock("@boolean()"),
+column: Mock.mock("@string(5,100)"),
+
 }
-export function OutputStream() {}
+}
+export function OutputStream() {
+}
 export function PageDesktopAddRecordReq() {
-  return {
-    adderNameOrPhone: '@string(5,1000)',
-    desktopNameOrPhone: '@string(5,1000)',
-    desktopStatus: '@string(5,1000)',
-    page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
-  }
+return {
+adderNameOrPhone: Mock.mock("@string(5,100)"),
+desktopNameOrPhone: Mock.mock("@string(5,100)"),
+desktopStatus: Mock.mock("@string(5,100)"),
+page: Mock.mock("@integer(3,1000)"),
+size: Mock.mock("@integer(20,50)"),
+
+}
 }
 export function PageDoorCredentialReq() {
-  return {
-    credentialNo: '@string(5,1000)',
-    credentialType: '@string(5,1000)',
-    doorId: '@string(5,1000)',
-    issuingDate: '@string(5,1000)',
-    office: '@string(5,1000)',
-    page: '@integer(3,1000)',
-    scope: '@string(5,1000)',
-    size: '@integer(3,1000)',
-    validDate: '@string(5,1000)',
-  }
+return {
+credentialNo: Mock.mock("@string(5,100)"),
+credentialType: Mock.mock("@string(5,100)"),
+doorId: Mock.mock("@string(5,100)"),
+issuingDate: Mock.mock("@datetime()"),
+office: Mock.mock("@string(5,100)"),
+page: Mock.mock("@integer(3,1000)"),
+scope: Mock.mock("@string(5,100)"),
+size: Mock.mock("@integer(20,50)"),
+validDate: Mock.mock("@datetime()"),
+
+}
 }
 export function PageInvoiceReq() {
-  return {
-    dutyNum: '@string(5,1000)',
-    page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
-    title: '@string(5,1000)',
-  }
+return {
+dutyNum: Mock.mock("@string(5,100)"),
+page: Mock.mock("@integer(3,1000)"),
+size: Mock.mock("@integer(20,50)"),
+title: Mock.mock("@string(5,100)"),
+
+}
 }
 export function PageSysDictDuiXiangnullZhiBuXuLieHua() {
-  return {
-    countId: '@string(5,1000)',
-    current: '@string(5,1000)',
-    maxLimit: '@string(5,1000)',
-    optimizeCountSql: '@boolean()',
-    'orders|5-20': [OrderItem()],
-    pages: '@string(5,1000)',
-    'records|5-20': [SysDictDuiXiangnullZhiBuXuLieHua()],
-    searchCount: '@boolean()',
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+countId: Mock.mock("@string(5,100)"),
+current: Mock.mock("@integer(1,1)"),
+maxLimit: Mock.mock("@string(5,100)"),
+optimizeCountSql: Mock.mock("@boolean()"),
+"orders": [OrderItem(),OrderItem(),OrderItem()],
+pages: Mock.mock("@string(5,100)"),
+"records": [SysDictDuiXiangnullZhiBuXuLieHua(),SysDictDuiXiangnullZhiBuXuLieHua(),SysDictDuiXiangnullZhiBuXuLieHua()],
+searchCount: Mock.mock("@boolean()"),
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function PageZhiXieChangBoJuZiXinXi() {
-  return {
-    countId: '@string(5,1000)',
-    current: '@string(5,1000)',
-    maxLimit: '@string(5,1000)',
-    optimizeCountSql: '@boolean()',
-    'orders|5-20': [OrderItem()],
-    pages: '@string(5,1000)',
-    'records|5-20': [ZhiXieChangBoJuZiXinXi0()],
-    searchCount: '@boolean()',
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+countId: Mock.mock("@string(5,100)"),
+current: Mock.mock("@integer(1,1)"),
+maxLimit: Mock.mock("@string(5,100)"),
+optimizeCountSql: Mock.mock("@boolean()"),
+"orders": [OrderItem(),OrderItem(),OrderItem()],
+pages: Mock.mock("@string(5,100)"),
+"records": [ZhiXieChangBoJuZiXinXi0(),ZhiXieChangBoJuZiXinXi0(),ZhiXieChangBoJuZiXinXi0()],
+searchCount: Mock.mock("@boolean()"),
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function CatVerifyReq() {
-  return {
-    cardNo: '@string(5,1000)',
-    cardValidData: '@string(5,1000)',
-    idNo: '@string(5,1000)',
-    metaInfo: '@string(5,1000)',
-    name: '@string(5,1000)',
-    ocrIdCardBack: '@string(5,1000)',
-    ocrIdCardFront: '@string(5,1000)',
-    openBank: '@string(5,1000)',
-    profession: '@string(5,1000)',
-    returnUrl: '@string(5,1000)',
-    validStatus: '@boolean()',
-  }
+return {
+cardNo: Mock.mock("@string(5,100)"),
+cardValidData: Mock.mock("@string(5,100)"),
+idNo: Mock.mock("@string(5,100)"),
+metaInfo: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+ocrIdCardBack: Mock.mock("@string(5,100)"),
+ocrIdCardFront: Mock.mock("@string(5,100)"),
+openBank: Mock.mock("@string(5,100)"),
+profession: Mock.mock("@string(5,100)"),
+returnUrl: Mock.mock("@string(5,100)"),
+validStatus: Mock.mock("@boolean()"),
+
+}
 }
 export function CatnelCertificate() {
-  return {
-    allTotalName: '@string(5,1000)',
-    reSDate: '@string(5,1000)',
-    regEDate: '@string(5,1000)',
-    zczyName: '@string(5,1000)',
-  }
+return {
+allTotalName: Mock.mock("@string(5,100)"),
+reSDate: Mock.mock("@datetime()"),
+regEDate: Mock.mock("@datetime()"),
+zczyName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function StationDesktopAuthReq() {
-  return {
-    'desktopIds|5-20': ['@string(5,1000)'],
-    doorId: '@string(5,1000)',
-    'pinkIds|5-20': ['@string(5,1000)'],
-  }
+return {
+"desktopIds": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+doorId: Mock.mock("@string(5,100)"),
+"pinkIds": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+
+}
 }
 export function PostAddOrUpReq() {
-  return {
-    id: '@string(5,1000)',
-    postName: '@string(5,1000)',
-    postSort: '@integer(3,1000)',
-    workflowKey: '@string(5,1000)',
-  }
+return {
+id: Mock.mock("@string(5,100)"),
+postName: Mock.mock("@string(5,100)"),
+postSort: Mock.mock("@integer(3,1000)"),
+workflowKey: Mock.mock("@string(5,100)"),
+
+}
 }
 export function PostResp() {
-  return {
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    id: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    postCode: '@string(5,1000)',
-    postName: '@string(5,1000)',
-    postSort: '@integer(3,1000)',
-    status: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+postCode: Mock.mock("@string(5,100)"),
+postName: Mock.mock("@string(5,100)"),
+postSort: Mock.mock("@integer(3,1000)"),
+status: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function QueryAccInfoResp() {
-  return {
-    mobile: '@string(5,1000)',
-    setPassWord: '@boolean()',
-    status: '@string(5,1000)',
-  }
+return {
+mobile: Mock.mock("@string(5,100)"),
+setPassWord: Mock.mock("@boolean()"),
+status: Mock.mock("@string(5,100)"),
+
+}
 }
 export function QueryCertFormResp() {
-  return {
-    cardNo: '@string(5,1000)',
-    cardValidData: '@string(5,1000)',
-    idNo: '@string(5,1000)',
-    name: '@string(5,1000)',
-    ocrIdCardBack: '@string(5,1000)',
-    ocrIdCardFront: '@string(5,1000)',
-    openBank: '@string(5,1000)',
-    profession: '@string(5,1000)',
-    validStatus: '@boolean()',
-  }
+return {
+cardNo: Mock.mock("@string(5,100)"),
+cardValidData: Mock.mock("@string(5,100)"),
+idNo: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+ocrIdCardBack: Mock.mock("@string(5,100)"),
+ocrIdCardFront: Mock.mock("@string(5,100)"),
+openBank: Mock.mock("@string(5,100)"),
+profession: Mock.mock("@string(5,100)"),
+validStatus: Mock.mock("@boolean()"),
+
+}
 }
 export function QueryDesktopByPhoneOrNameReq() {
-  return {
-    jobId: '@string(5,1000)',
-    phoneOrName: '@string(5,1000)',
-  }
+return {
+jobId: Mock.mock("@string(5,100)"),
+phoneOrName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function QueryDoorPageHomeResp() {
-  return {
-    companyInfo: CompanyInfo(),
-  }
+return {
+companyInfo: CompanyInfo(),
+
+}
 }
 export function QueryInviteDesktopReq() {
-  return {
-    applyTimeEnd: '@string(5,1000)',
-    applyTimeStart: '@string(5,1000)',
-    whiteName: '@string(5,1000)',
-    desktopStatus: '@string(5,1000)',
-    inviterPhoneOrName: '@string(5,1000)',
-    joinTimeEnd: '@string(5,1000)',
-    joinTimeStart: '@string(5,1000)',
-    page: '@integer(3,1000)',
-    proposerPhone: '@string(5,1000)',
-    proposerPhoneOrName: '@string(5,1000)',
-    shareType: '@string(5,1000)',
-    size: '@integer(3,1000)',
-    status: '@string(5,1000)',
-  }
+return {
+applyTimeEnd: Mock.mock("@datetime()"),
+applyTimeStart: Mock.mock("@datetime()"),
+whiteName: Mock.mock("@string(5,100)"),
+desktopStatus: Mock.mock("@string(5,100)"),
+inviterPhoneOrName: Mock.mock("@string(5,100)"),
+joinTimeEnd: Mock.mock("@datetime()"),
+joinTimeStart: Mock.mock("@datetime()"),
+page: Mock.mock("@integer(3,1000)"),
+proposerPhone: Mock.mock("@string(5,100)"),
+proposerPhoneOrName: Mock.mock("@string(5,100)"),
+shareType: Mock.mock("@string(5,100)"),
+size: Mock.mock("@integer(20,50)"),
+status: Mock.mock("@string(5,100)"),
+
+}
 }
 export function QueryJobReq() {
-  return {
-    ancestors: '@string(5,1000)',
-    jobCode: '@string(5,1000)',
-    name: '@string(5,1000)',
-    orderNum: '@integer(3,1000)',
-    parentCode: '@string(5,1000)',
-    parentId: '@string(5,1000)',
-    status: '@string(5,1000)',
-  }
+return {
+ancestors: Mock.mock("@string(5,100)"),
+jobCode: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+orderNum: Mock.mock("@integer(3,1000)"),
+parentCode: Mock.mock("@string(5,100)"),
+parentId: Mock.mock("@string(5,100)"),
+status: Mock.mock("@string(5,100)"),
+
+}
 }
 export function QueryJudgeClaimResp() {
-  return {
-    operResult: '@string(5,1000)',
-  }
+return {
+operResult: Mock.mock("@string(5,100)"),
+
+}
 }
 export function QueryCatPageHomeResp() {
-  return {
-    cardNo: '@string(5,1000)',
-    companyName: '@string(5,1000)',
-    name: '@string(5,1000)',
-    catRepetitionId: '@string(5,1000)',
-    sex: '@string(5,1000)',
-    'vosList|5-20': [OrangeerCertificateInfo()],
-  }
+return {
+cardNo: Mock.mock("@string(5,100)"),
+companyName: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+catRepetitionId: Mock.mock("@string(5,100)"),
+sex: Mock.mock("@string(5,100)"),
+"vosList": [OrangeerCertificateInfo(),OrangeerCertificateInfo(),OrangeerCertificateInfo()],
+
+}
 }
 export function QueryWalletBalanceResp() {
-  return {
-    blueId: '@string(5,1000)',
-    blueNumber: '@string(5,1000)',
-    availableAmount: '@string(5,1000)',
-    bankName: '@string(5,1000)',
-    bankcardNumber: '@string(5,1000)',
-    companyName: '@string(5,1000)',
-    frozenAmount: '@string(5,1000)',
-  }
+return {
+blueId: Mock.mock("@string(5,100)"),
+blueNumber: Mock.mock("@string(5,100)"),
+availableAmount: Mock.mock("@string(5,100)"),
+bankName: Mock.mock("@string(5,100)"),
+bankcardNumber: Mock.mock("@string(5,100)"),
+companyName: Mock.mock("@string(5,100)"),
+frozenAmount: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ReEntMeta() {
-  return {
-    whiteCode: '@string(5,1000)',
-    reDoorId: '@string(5,1000)',
-    reName: '@string(5,1000)',
-  }
+return {
+whiteCode: Mock.mock("@string(5,100)"),
+reDoorId: Mock.mock("@string(5,100)"),
+reName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ReDoorInfo() {
-  return {
-    happyLicenseCode: '@string(5,1000)',
-    doorName: '@string(5,1000)',
-    headerName: '@string(5,1000)',
-    headerPhone: '@string(5,1000)',
-    isAuth: '@string(5,1000)',
-    serialNo: '@string(5,1000)',
-  }
+return {
+happyLicenseCode: Mock.mock("@string(5,100)"),
+doorName: Mock.mock("@string(5,100)"),
+headerName: Mock.mock("@string(5,100)"),
+headerPhone: Mock.mock("@string(5,100)"),
+isAuth: Mock.mock("@string(5,100)"),
+serialNo: Mock.mock("@string(5,100)"),
+
+}
 }
 export function RefuseJoinReq() {
-  return {
-    id: '@string(5,1000)',
-    refuse: '@string(5,1000)',
-  }
+return {
+id: Mock.mock("@string(5,100)"),
+refuse: Mock.mock("@string(5,100)"),
+
+}
 }
 export function OrangeerCertificateInfo() {
-  return {
-    certificateNumber: '@string(5,1000)',
-    regNo: '@string(5,1000)',
-    regTypeName: '@string(5,1000)',
-    orangeeredCertificateCompany: '@string(5,1000)',
-    'voList|5-20': [CatnelCertificate()],
-  }
+return {
+certificateNumber: Mock.mock("@string(5,100)"),
+regNo: Mock.mock("@string(5,100)"),
+regTypeName: Mock.mock("@string(5,100)"),
+orangeeredCertificateCompany: Mock.mock("@string(5,100)"),
+"voList": [CatnelCertificate(),CatnelCertificate(),CatnelCertificate()],
+
+}
 }
 export function OrangeerResultResp() {
-  return {
-    mark: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    token: '@string(5,1000)',
-    tokenTimeOut: '@string(5,1000)',
-  }
+return {
+mark: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+token: Mock.mock("@string(5,100)"),
+tokenTimeOut: Mock.mock("@datetime()"),
+
+}
 }
 export function RelationHappyTypeInfo() {
-  return {
-    happyType: '@string(5,1000)',
-    initTime: '@string(5,1000)',
-    reSource: '@string(5,1000)',
-  }
+return {
+happyType: Mock.mock("@string(5,100)"),
+initTime: Mock.mock("@datetime()"),
+reSource: Mock.mock("@string(5,100)"),
+
+}
 }
 export function RelationDoorInfo() {
-  return {
-    auditStatus: '@string(5,1000)',
-    authCount: '@integer(3,1000)',
-    happyLicenseCode: '@string(5,1000)',
-    created: '@string(5,1000)',
-    id: '@string(5,1000)',
-    name: '@string(5,1000)',
-    preDoorName: '@string(5,1000)',
-    relationStatus: '@string(5,1000)',
-  }
+return {
+auditStatus: Mock.mock("@string(5,100)"),
+authCount: Mock.mock("@integer(3,1000)"),
+happyLicenseCode: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+preDoorName: Mock.mock("@string(5,100)"),
+relationStatus: Mock.mock("@string(5,100)"),
+
+}
 }
 export function RemoveDesktopReq() {
-  return {
-    'desktopId|5-20': ['@string(5,1000)'],
-    jobId: '@string(5,1000)',
-  }
+return {
+"desktopId": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+jobId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function PinkAddReq() {
-  return {
-    allowAllot: '@boolean()',
-    'menuDataScopeReqList|5-20': [MenuDataScopeReq()],
-    parentId: '@string(5,1000)',
-    remark: '@string(5,1000)',
-    pinkName: '@string(5,1000)',
-  }
+return {
+allowAllot: Mock.mock("@boolean()"),
+"menuDataScopeReqList": [MenuDataScopeReq(),MenuDataScopeReq(),MenuDataScopeReq()],
+parentId: Mock.mock("@string(5,100)"),
+remark: Mock.mock("@string(5,100)"),
+pinkName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function PinkBaseUpReq() {
-  return {
-    id: '@string(5,1000)',
-    remark: '@string(5,1000)',
-    pinkName: '@string(5,1000)',
-  }
+return {
+id: Mock.mock("@string(5,100)"),
+remark: Mock.mock("@string(5,100)"),
+pinkName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function PinkConfigInfo() {
-  return {
-    'desktopPink|5-20': [PinkInfo()],
-    'headerPink|5-20': [PinkInfo()],
-    id: '@string(5,1000)',
-    pinkRange: '@string(5,1000)',
-    syncWhiteId: '@string(5,1000)',
-  }
+return {
+"desktopPink": [PinkInfo(),PinkInfo(),PinkInfo()],
+"headerPink": [PinkInfo(),PinkInfo(),PinkInfo()],
+id: Mock.mock("@string(5,100)"),
+pinkRange: Mock.mock("@string(5,100)"),
+syncWhiteId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function PinkInfo() {
-  return {
-    id: '@string(5,1000)',
-    name: '@string(5,1000)',
-  }
+return {
+id: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+
+}
 }
 export function PinkInfoResq() {
-  return {
-    allowAllot: '@boolean()',
-    ancestors: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    whiteCheckStrictly: '@boolean()',
-    id: '@string(5,1000)',
-    level: '@integer(3,1000)',
-    menuCheckStrictly: '@boolean()',
-    menuNames: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    parentCode: '@string(5,1000)',
-    parentId: '@string(5,1000)',
-    parentName: '@string(5,1000)',
-    remark: '@string(5,1000)',
-    pinkCode: '@string(5,1000)',
-    pinkName: '@string(5,1000)',
-    pinkSort: '@integer(3,1000)',
-    status: '@string(5,1000)',
-    statusDesc: '@string(5,1000)',
-    type: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+allowAllot: Mock.mock("@boolean()"),
+ancestors: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+whiteCheckStrictly: Mock.mock("@boolean()"),
+id: Mock.mock("@string(5,100)"),
+level: Mock.mock("@integer(3,1000)"),
+menuCheckStrictly: Mock.mock("@boolean()"),
+menuNames: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+parentCode: Mock.mock("@string(5,100)"),
+parentId: Mock.mock("@string(5,100)"),
+parentName: Mock.mock("@string(5,100)"),
+remark: Mock.mock("@string(5,100)"),
+pinkCode: Mock.mock("@string(5,100)"),
+pinkName: Mock.mock("@string(5,100)"),
+pinkSort: Mock.mock("@integer(3,1000)"),
+status: Mock.mock("@string(5,100)"),
+statusDesc: Mock.mock("@string(5,100)"),
+type: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function PinkMenuUpReq() {
-  return {
-    'menuDataScopeList|5-20': [MenuDataScopeReq()],
-    pinkId: '@string(5,1000)',
-  }
+return {
+"menuDataScopeList": [MenuDataScopeReq(),MenuDataScopeReq(),MenuDataScopeReq()],
+pinkId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function PinkResq() {
-  return {
-    allowAllot: '@boolean()',
-    ancestors: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    whiteCheckStrictly: '@boolean()',
-    id: '@string(5,1000)',
-    level: '@integer(3,1000)',
-    menuCheckStrictly: '@boolean()',
-    menuNames: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    parentCode: '@string(5,1000)',
-    parentId: '@string(5,1000)',
-    remark: '@string(5,1000)',
-    pinkCode: '@string(5,1000)',
-    pinkKey: '@string(5,1000)',
-    pinkName: '@string(5,1000)',
-    pinkSort: '@integer(3,1000)',
-    status: '@string(5,1000)',
-    statusDesc: '@string(5,1000)',
-    type: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+allowAllot: Mock.mock("@boolean()"),
+ancestors: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+whiteCheckStrictly: Mock.mock("@boolean()"),
+id: Mock.mock("@string(5,100)"),
+level: Mock.mock("@integer(3,1000)"),
+menuCheckStrictly: Mock.mock("@boolean()"),
+menuNames: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+parentCode: Mock.mock("@string(5,100)"),
+parentId: Mock.mock("@string(5,100)"),
+remark: Mock.mock("@string(5,100)"),
+pinkCode: Mock.mock("@string(5,100)"),
+pinkKey: Mock.mock("@string(5,100)"),
+pinkName: Mock.mock("@string(5,100)"),
+pinkSort: Mock.mock("@integer(3,1000)"),
+status: Mock.mock("@string(5,100)"),
+statusDesc: Mock.mock("@string(5,100)"),
+type: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function RouterMetaResp() {
-  return {
-    hideInMenu: '@boolean()',
-    icon: '@string(5,1000)',
-    locale: '@string(5,1000)',
-    menuType: '@integer(3,1000)',
-    order: '@integer(3,1000)',
-    requiresAuth: '@boolean()',
-  }
+return {
+hideInMenu: Mock.mock("@boolean()"),
+icon: Mock.mock("@string(5,100)"),
+locale: Mock.mock("@string(5,100)"),
+menuType: Mock.mock("@integer(3,1000)"),
+order: Mock.mock("@integer(3,1000)"),
+requiresAuth: Mock.mock("@boolean()"),
+
+}
 }
 export function RouterResp() {
-  return {
-    'children|5-20': [RouterResp()],
-    id: '@string(5,1000)',
-    meta: RouterMetaResp(),
-    name: '@string(5,1000)',
-    path: '@string(5,1000)',
-    query: '@string(5,1000)',
-    redirect: '@string(5,1000)',
-  }
+return {
+"children": [RouterResp(),RouterResp(),RouterResp()],
+id: Mock.mock("@string(5,100)"),
+meta: RouterMetaResp(),
+name: Mock.mock("@string(5,100)"),
+path: Mock.mock("@string(5,100)"),
+query: Mock.mock("@string(5,100)"),
+redirect: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ScanReQrResp() {
-  return {
-    auditId: '@string(5,1000)',
-    entName: '@string(5,1000)',
-    status: '@string(5,1000)',
-  }
+return {
+auditId: Mock.mock("@string(5,100)"),
+entName: Mock.mock("@string(5,100)"),
+status: Mock.mock("@string(5,100)"),
+
+}
 }
 export function SelectorDesktopResp() {
-  return {
-    whiteName: '@string(5,1000)',
-    desktopId: '@string(5,1000)',
-    isJoin: '@boolean()',
-    mobile: '@string(5,1000)',
-    keyBorardName: '@string(5,1000)',
-  }
+return {
+whiteName: Mock.mock("@string(5,100)"),
+desktopId: Mock.mock("@string(5,100)"),
+isJoin: Mock.mock("@boolean()"),
+mobile: Mock.mock("@string(5,100)"),
+keyBorardName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function SendActiveMessageReq() {
-  return {
-    'sendDesktopList|5-20': [DesktopRespReq()],
-  }
+return {
+"sendDesktopList": [DesktopRespReq(),DesktopRespReq(),DesktopRespReq()],
+
+}
 }
 export function SendActiveMessageResp() {
-  return {
-    failedCount: '@string(5,1000)',
-    successCount: '@string(5,1000)',
-  }
+return {
+failedCount: Mock.mock("@string(5,100)"),
+successCount: Mock.mock("@string(5,100)"),
+
+}
 }
 export function SetPassWordReq() {
-  return {
-    checkPassWord: '@string(5,1000)',
-    passWord: '@string(5,1000)',
-  }
+return {
+checkPassWord: Mock.mock("@string(5,100)"),
+passWord: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ShiftDesktopResp() {
-  return {
-    desktopId: '@string(5,1000)',
-    desktopName: '@string(5,1000)',
-    'leaders|5-20': [ShiftLeader()],
-  }
+return {
+desktopId: Mock.mock("@string(5,100)"),
+desktopName: Mock.mock("@string(5,100)"),
+"leaders": [ShiftLeader(),ShiftLeader(),ShiftLeader()],
+
+}
 }
 export function ShiftLeader() {
-  return {
-    leaderDesktopId: '@string(5,1000)',
-    leaderDesktopName: '@string(5,1000)',
-  }
+return {
+leaderDesktopId: Mock.mock("@string(5,100)"),
+leaderDesktopName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function SuperCodeVerifyReq() {
-  return {
-    certificate: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    toMobile: '@string(5,1000)',
-    uuid: '@string(5,1000)',
-  }
+return {
+certificate: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+toMobile: Mock.mock("@string(5,100)"),
+uuid: Mock.mock("@string(5,100)"),
+
+}
 }
 export function SuperManResp() {
-  return {
-    authRange: '@string(5,1000)',
-    whiteCode: '@string(5,1000)',
-    whiteName: '@string(5,1000)',
-    desktopIsCreator: '@boolean()',
-    id: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    name: '@string(5,1000)',
-    superPink: '@string(5,1000)',
-  }
+return {
+authRange: Mock.mock("@string(5,100)"),
+whiteCode: Mock.mock("@string(5,100)"),
+whiteName: Mock.mock("@string(5,100)"),
+desktopIsCreator: Mock.mock("@boolean()"),
+id: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+superPink: Mock.mock("@string(5,100)"),
+
+}
 }
 export function SysDictDuiXiangnullZhiBuXuLieHua() {
-  return {
-    'allLevelKindName|5-20': ['@string(5,1000)'],
-    childFlag: '@integer(3,1000)',
-    'childList|5-20': [SysDictDuiXiangnullZhiBuXuLieHua()],
-    deleted: '@boolean()',
-    id: '@integer(3,1000)',
-    introduce: '@string(5,1000)',
-    kindCode: '@string(5,1000)',
-    kindName: '@string(5,1000)',
-    parentId: '@integer(3,1000)',
-    sortNum: '@integer(3,1000)',
-    type: '@integer(3,1000)',
-  }
+return {
+"allLevelKindName": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+childFlag: Mock.mock("@integer(3,1000)"),
+"childList": [SysDictDuiXiangnullZhiBuXuLieHua(),SysDictDuiXiangnullZhiBuXuLieHua(),SysDictDuiXiangnullZhiBuXuLieHua()],
+deleted: Mock.mock("@boolean()"),
+id: Mock.mock("@integer(3,1000)"),
+introduce: Mock.mock("@string(5,100)"),
+kindCode: Mock.mock("@string(5,100)"),
+kindName: Mock.mock("@string(5,100)"),
+parentId: Mock.mock("@integer(3,1000)"),
+sortNum: Mock.mock("@integer(3,1000)"),
+type: Mock.mock("@integer(3,1000)"),
+
+}
 }
 export function TreeNodeConfig() {
-  return {
-    childrenKey: '@string(5,1000)',
-    deep: '@integer(3,1000)',
-    idKey: '@string(5,1000)',
-    nameKey: '@string(5,1000)',
-    parentIdKey: '@string(5,1000)',
-    weightKey: '@string(5,1000)',
-  }
+return {
+childrenKey: Mock.mock("@string(5,100)"),
+deep: Mock.mock("@integer(3,1000)"),
+idKey: Mock.mock("@string(5,100)"),
+nameKey: Mock.mock("@string(5,100)"),
+parentIdKey: Mock.mock("@string(5,100)"),
+weightKey: Mock.mock("@string(5,100)"),
+
+}
 }
 export function Type() {
-  return {
-    typeName: '@string(5,1000)',
-  }
+return {
+typeName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function KeyBorardJoinDoorReq() {
-  return {
-    name: '@string(5,1000)',
-    reason: '@string(5,1000)',
-    gratefulId: '@string(5,1000)',
-  }
+return {
+name: Mock.mock("@string(5,100)"),
+reason: Mock.mock("@string(5,100)"),
+gratefulId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function VerificationResp() {
-  return {
-    bankCarkNo: '@string(5,1000)',
-    cardNo: '@string(5,1000)',
-    cardVaildDate: '@string(5,1000)',
-    certifyId: '@string(5,1000)',
-    certifyUrl: '@string(5,1000)',
-    code: '@string(5,1000)',
-    message: '@string(5,1000)',
-    ocrIdCardBack: '@string(5,1000)',
-    ocrIdCardFront: '@string(5,1000)',
-    openBank: '@string(5,1000)',
-    profession: '@string(5,1000)',
-    requestId: '@string(5,1000)',
-    keyBorardName: '@string(5,1000)',
-    vaildStatus: '@boolean()',
-  }
+return {
+bankCarkNo: Mock.mock("@string(5,100)"),
+cardNo: Mock.mock("@string(5,100)"),
+cardVaildDate: Mock.mock("@datetime()"),
+certifyId: Mock.mock("@string(5,100)"),
+certifyUrl: Mock.mock("@string(5,100)"),
+code: Mock.mock("@integer(200,200)"),
+message: Mock.mock("@string(5,100)"),
+ocrIdCardBack: Mock.mock("@string(5,100)"),
+ocrIdCardFront: Mock.mock("@string(5,100)"),
+openBank: Mock.mock("@string(5,100)"),
+profession: Mock.mock("@string(5,100)"),
+requestId: Mock.mock("@string(5,100)"),
+keyBorardName: Mock.mock("@string(5,100)"),
+vaildStatus: Mock.mock("@boolean()"),
+
+}
 }
 export function DouJiangJiFangDongXinXiXiangQingBiao() {
-  return {
-    area: '@string(5,1000)',
-    authStatus: '@string(5,1000)',
-    avatar: '@string(5,1000)',
-    city: '@string(5,1000)',
-    country: '@string(5,1000)',
-    init: '@boolean()',
-    location: '@string(5,1000)',
-    maxNameUpdateNum: '@integer(3,1000)',
-    mobile: '@string(5,1000)',
-    nameUpdateNum: '@integer(3,1000)',
-    nickname: '@string(5,1000)',
-    province: '@string(5,1000)',
-    sex: '@string(5,1000)',
-    gratefulId: '@string(5,1000)',
-    keyBorardname: '@string(5,1000)',
-    xmail: '@string(5,1000)',
-  }
+return {
+area: Mock.mock("@string(5,100)"),
+authStatus: Mock.mock("@string(5,100)"),
+avatar: Mock.mock("https://www.uviewui.com/common/logo.png"),
+city: Mock.mock("@string(5,100)"),
+country: Mock.mock("@string(5,100)"),
+init: Mock.mock("@boolean()"),
+location: Mock.mock("@string(5,100)"),
+maxNameUpdateNum: Mock.mock("@datetime()"),
+mobile: Mock.mock("@string(5,100)"),
+nameUpdateNum: Mock.mock("@datetime()"),
+nickname: Mock.mock("@string(5,100)"),
+province: Mock.mock("@string(5,100)"),
+sex: Mock.mock("@string(5,100)"),
+gratefulId: Mock.mock("@string(5,100)"),
+keyBorardname: Mock.mock("@string(5,100)"),
+xmail: Mock.mock("@string(5,100)"),
+
+}
 }
 export function DouJiangJiFangXingXinXi() {
-  return {
-    green: '@string(5,1000)',
-    bankCardNo: '@string(5,1000)',
-    cardNo: '@string(5,1000)',
-    cardStartDate: '@string(5,1000)',
-    cardValidDate: '@string(5,1000)',
-    issue: '@string(5,1000)',
-    nationality: '@string(5,1000)',
-    ocridCardBack: '@string(5,1000)',
-    ocridCardFront: '@string(5,1000)',
-    openBank: '@string(5,1000)',
-    profession: '@string(5,1000)',
-    sex: '@string(5,1000)',
-    keyBorardName: '@string(5,1000)',
-    validStatus: '@boolean()',
-  }
+return {
+green: Mock.mock("@string(5,100)"),
+bankCardNo: Mock.mock("@string(5,100)"),
+cardNo: Mock.mock("@string(5,100)"),
+cardStartDate: Mock.mock("@datetime()"),
+cardValidDate: Mock.mock("@datetime()"),
+issue: Mock.mock("@string(5,100)"),
+nationality: Mock.mock("@string(5,100)"),
+ocridCardBack: Mock.mock("@string(5,100)"),
+ocridCardFront: Mock.mock("@string(5,100)"),
+openBank: Mock.mock("@string(5,100)"),
+profession: Mock.mock("@string(5,100)"),
+sex: Mock.mock("@string(5,100)"),
+keyBorardName: Mock.mock("@string(5,100)"),
+validStatus: Mock.mock("@boolean()"),
+
+}
 }
 export function DouJiangJiFangXingXinXiBoJuZiXinXiJiaShiShiZhiXuYaoChuanRuindividualBankCardNoindividualReservedPhoneNoindividualVocationQiTaXinXiCongredisHuanCunZhongHuoQu() {
-  return {
-    green: '@string(5,1000)',
-    birth: '@string(5,1000)',
-    endDate: '@string(5,1000)',
-    idCardNum: '@string(5,1000)',
-    individualBankCardNo: '@string(5,1000)',
-    individualCompany: '@string(5,1000)',
-    individualMail: '@string(5,1000)',
-    individualReservedPhoneNo: '@string(5,1000)',
-    individualVocation: '@string(5,1000)',
-    issue: '@string(5,1000)',
-    name: '@string(5,1000)',
-    nationality: '@string(5,1000)',
-    posUrl: '@string(5,1000)',
-    revUrl: '@string(5,1000)',
-    sex: '@string(5,1000)',
-    startDate: '@string(5,1000)',
-    keyBorardId: '@string(5,1000)',
-  }
+return {
+green: Mock.mock("@string(5,100)"),
+birth: Mock.mock("@string(5,100)"),
+endDate: Mock.mock("@datetime()"),
+idCardNum: Mock.mock("@string(5,100)"),
+individualBankCardNo: Mock.mock("@string(5,100)"),
+individualCompany: Mock.mock("@string(5,100)"),
+individualMail: Mock.mock("@string(5,100)"),
+individualReservedPhoneNo: Mock.mock("@string(5,100)"),
+individualVocation: Mock.mock("@string(5,100)"),
+issue: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+nationality: Mock.mock("@string(5,100)"),
+posUrl: Mock.mock("@string(5,100)"),
+revUrl: Mock.mock("@string(5,100)"),
+sex: Mock.mock("@string(5,100)"),
+startDate: Mock.mock("@datetime()"),
+keyBorardId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function DouJiangJiBeiJingZhuCeZhuanYe() {
-  return {
-    endDate: '@string(5,1000)',
-    id: '@string(5,1000)',
-    major: '@string(5,1000)',
-    majorCode: '@string(5,1000)',
-    startDate: '@string(5,1000)',
-  }
+return {
+endDate: Mock.mock("@datetime()"),
+id: Mock.mock("@string(5,100)"),
+major: Mock.mock("@string(5,100)"),
+majorCode: Mock.mock("@string(5,100)"),
+startDate: Mock.mock("@datetime()"),
+
+}
 }
 export function ZhiXieChangZhiNenPiaoJiaFangXing() {
-  return {
-    clerkLoginPassword: '@string(5,1000)',
-    clerkPhone: '@string(5,1000)',
-    clerkPink: '@string(5,1000)',
-    contactNumber: '@string(5,1000)',
-    doorId: '@string(5,1000)',
-    id: '@string(5,1000)',
-    taxNum: '@string(5,1000)',
-    gratefulId: '@string(5,1000)',
-  }
+return {
+clerkLoginPassword: Mock.mock("@string(5,100)"),
+clerkPhone: Mock.mock("@string(5,100)"),
+clerkPink: Mock.mock("@string(5,100)"),
+contactNumber: Mock.mock("@string(5,100)"),
+doorId: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+taxNum: Mock.mock("@string(5,100)"),
+gratefulId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ZhiXieChangJianDanFangXing() {
-  return {
-    adminCardNo: '@string(5,1000)',
-    adminName: '@string(5,1000)',
-    certificateAuth: '@string(5,1000)',
-    certificateAuthStatus: '@string(5,1000)',
-    doorId: '@string(5,1000)',
-    id: '@string(5,1000)',
-    institutionLegalCatCertificateUrl: '@string(5,1000)',
-    legalBankNo: '@string(5,1000)',
-    legalBankPhone: '@string(5,1000)',
-    legalBankPhoneVerificationCode: '@string(5,1000)',
-    legalCat: '@string(5,1000)',
-    legalCatCardNo: '@string(5,1000)',
-    licenseFileUrl: '@string(5,1000)',
-    licenseUnifiedCode: '@string(5,1000)',
-    name: '@string(5,1000)',
-    orgType: '@string(5,1000)',
-    unifiedSocialCreditCodeCertificateUrl: '@string(5,1000)',
-  }
+return {
+adminCardNo: Mock.mock("@string(5,100)"),
+adminName: Mock.mock("@string(5,100)"),
+certificateAuth: Mock.mock("@string(5,100)"),
+certificateAuthStatus: Mock.mock("@string(5,100)"),
+doorId: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+institutionLegalCatCertificateUrl: Mock.mock("@string(5,100)"),
+legalBankNo: Mock.mock("@string(5,100)"),
+legalBankPhone: Mock.mock("@string(5,100)"),
+legalBankPhoneVerificationCode: Mock.mock("@string(5,100)"),
+legalCat: Mock.mock("@string(5,100)"),
+legalCatCardNo: Mock.mock("@string(5,100)"),
+licenseFileUrl: Mock.mock("@string(5,100)"),
+licenseUnifiedCode: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+orgType: Mock.mock("@string(5,100)"),
+unifiedSocialCreditCodeCertificateUrl: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ZhiXieChangJianDanFangXing0() {
-  return {
-    adminCardNo: '@string(5,1000)',
-    adminName: '@string(5,1000)',
-    certificateAuth: '@string(5,1000)',
-    certificateAuthStatus: '@string(5,1000)',
-    doorId: '@string(5,1000)',
-    id: '@string(5,1000)',
-    institutionLegalCatCertificateUrl: '@string(5,1000)',
-    legalBankNo: '@string(5,1000)',
-    legalBankPhone: '@string(5,1000)',
-    legalCat: '@string(5,1000)',
-    legalCatCardNo: '@string(5,1000)',
-    licenseFileUrl: '@string(5,1000)',
-    licenseUnifiedCode: '@string(5,1000)',
-    name: '@string(5,1000)',
-    orgType: '@string(5,1000)',
-    unifiedSocialCreditCodeCertificateUrl: '@string(5,1000)',
-  }
+return {
+adminCardNo: Mock.mock("@string(5,100)"),
+adminName: Mock.mock("@string(5,100)"),
+certificateAuth: Mock.mock("@string(5,100)"),
+certificateAuthStatus: Mock.mock("@string(5,100)"),
+doorId: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+institutionLegalCatCertificateUrl: Mock.mock("@string(5,100)"),
+legalBankNo: Mock.mock("@string(5,100)"),
+legalBankPhone: Mock.mock("@string(5,100)"),
+legalCat: Mock.mock("@string(5,100)"),
+legalCatCardNo: Mock.mock("@string(5,100)"),
+licenseFileUrl: Mock.mock("@string(5,100)"),
+licenseUnifiedCode: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+orgType: Mock.mock("@string(5,100)"),
+unifiedSocialCreditCodeCertificateUrl: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ZhiXieChangZhuTiXinXi() {
-  return {
-    area: '@string(5,1000)',
-    authStatus: '@string(5,1000)',
-    avatar: '@string(5,1000)',
-    chiefly: '@boolean()',
-    city: '@string(5,1000)',
-    claimId: '@string(5,1000)',
-    contactNumber: '@string(5,1000)',
-    country: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    firmSize: '@string(5,1000)',
-    id: '@string(5,1000)',
-    industryInvolved: '@string(5,1000)',
-    introduction: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    legalIdCardBack: '@string(5,1000)',
-    legalIdCardFront: '@string(5,1000)',
-    legalIdCardNo: '@string(5,1000)',
-    legalCat: '@string(5,1000)',
-    licenseUnifiedCode: '@string(5,1000)',
-    licenseUnifiedUrl: '@string(5,1000)',
-    location: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    name: '@string(5,1000)',
-    province: '@string(5,1000)',
-    serialNum: '@string(5,1000)',
-    gratefulId: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    keyBorardId: '@string(5,1000)',
-    xmail: '@string(5,1000)',
-  }
+return {
+area: Mock.mock("@string(5,100)"),
+authStatus: Mock.mock("@string(5,100)"),
+avatar: Mock.mock("https://www.uviewui.com/common/logo.png"),
+chiefly: Mock.mock("@boolean()"),
+city: Mock.mock("@string(5,100)"),
+claimId: Mock.mock("@string(5,100)"),
+contactNumber: Mock.mock("@string(5,100)"),
+country: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+firmSize: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+industryInvolved: Mock.mock("@string(5,100)"),
+introduction: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+legalIdCardBack: Mock.mock("@string(5,100)"),
+legalIdCardFront: Mock.mock("@string(5,100)"),
+legalIdCardNo: Mock.mock("@string(5,100)"),
+legalCat: Mock.mock("@string(5,100)"),
+licenseUnifiedCode: Mock.mock("@string(5,100)"),
+licenseUnifiedUrl: Mock.mock("@string(5,100)"),
+location: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+province: Mock.mock("@string(5,100)"),
+serialNum: Mock.mock("@string(5,100)"),
+gratefulId: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+keyBorardId: Mock.mock("@string(5,100)"),
+xmail: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ZhiXieChangBoJuZiXinXi() {
-  return {
-    green: '@string(5,1000)',
-    authStatus: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    doorBankCardNo: '@string(5,1000)',
-    doorBankCode: '@string(5,1000)',
-    doorBankName: '@string(5,1000)',
-    doorBasicBlueOpenVoucherId: '@string(5,1000)',
-    'doorBeneficiaryList|5-20': [DoorBeneficiaryReq()],
-    doorHappyScope: '@string(5,1000)',
-    doorCaElectronicSignature: '@string(5,1000)',
-    doorContactIdCardBackId: '@string(5,1000)',
-    doorContactIdCardFrontId: '@string(5,1000)',
-    doorContactName: '@string(5,1000)',
-    doorContactPhone: '@string(5,1000)',
-    doorId: '@string(5,1000)',
-    doorJoinProtocolId: '@string(5,1000)',
-    doorLegalIdCardBackId: '@string(5,1000)',
-    doorLegalIdCardFrontId: '@string(5,1000)',
-    doorLegalIdCardNo: '@string(5,1000)',
-    doorLegalIdCardType: '@string(5,1000)',
-    doorLegalIdCardValidDate: '@string(5,1000)',
-    doorLegalIdCardValidStartDate: '@string(5,1000)',
-    doorLegalName: '@string(5,1000)',
-    doorLegalPhone: '@string(5,1000)',
-    doorLicenseFileDuplicateId: '@string(5,1000)',
-    doorLicenseFileId: '@string(5,1000)',
-    doorLicenseName: '@string(5,1000)',
-    doorLicenseValidDate: '@string(5,1000)',
-    doorLicenseValidStartDate: '@string(5,1000)',
-    doorName: '@string(5,1000)',
-    doorOpenBluePermit: '@string(5,1000)',
-    doorOpratorAttorneyLetter: '@string(5,1000)',
-    doorOpratorIdCardNo: '@string(5,1000)',
-    doorOpratorIdCardType: '@string(5,1000)',
-    doorOpratorIdCardValidDate: '@string(5,1000)',
-    doorOpratorIdCardValidStartDate: '@string(5,1000)',
-    doorRealGreen: '@string(5,1000)',
-    'doorShareholderList|5-20': [DoorShareholderReq()],
-    doorStorePictureId: '@string(5,1000)',
-    doorTrade: '@string(5,1000)',
-    doorTradeName: SysDictDuiXiangnullZhiBuXuLieHua(),
-    doorUnifiedCode: '@string(5,1000)',
-    doorUpDoorId: '@string(5,1000)',
-    doorUpDoorName: '@string(5,1000)',
-    doorUpLegalBasicBlueOpenVoucherId: '@string(5,1000)',
-    doorUpLegalDoorUnifiedCode: '@string(5,1000)',
-    doorUpLegalIdCardBackId: '@string(5,1000)',
-    doorUpLegalIdCardFrontId: '@string(5,1000)',
-    doorUpLegalIdCardNo: '@string(5,1000)',
-    doorUpLegalIdCardType: '@string(5,1000)',
-    doorUpLegalLicenseDuplicateFileId: '@string(5,1000)',
-    doorUpLegalLicenseFileId: '@string(5,1000)',
-    doorUpLegalLicenseName: '@string(5,1000)',
-    doorUpLegalLicenseNo: '@string(5,1000)',
-    doorUpLegalLicenseType: '@string(5,1000)',
-    doorUpLegalName: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    msg: '@string(5,1000)',
-    stepNum: '@integer(3,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+green: Mock.mock("@string(5,100)"),
+authStatus: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+doorBankCardNo: Mock.mock("@string(5,100)"),
+doorBankCode: Mock.mock("@string(5,100)"),
+doorBankName: Mock.mock("@string(5,100)"),
+doorBasicBlueOpenVoucherId: Mock.mock("@string(5,100)"),
+"doorBeneficiaryList": [DoorBeneficiaryReq(),DoorBeneficiaryReq(),DoorBeneficiaryReq()],
+doorHappyScope: Mock.mock("@string(5,100)"),
+doorCaElectronicSignature: Mock.mock("@string(5,100)"),
+doorContactIdCardBackId: Mock.mock("@string(5,100)"),
+doorContactIdCardFrontId: Mock.mock("@string(5,100)"),
+doorContactName: Mock.mock("@string(5,100)"),
+doorContactPhone: Mock.mock("@string(5,100)"),
+doorId: Mock.mock("@string(5,100)"),
+doorJoinProtocolId: Mock.mock("@string(5,100)"),
+doorLegalIdCardBackId: Mock.mock("@string(5,100)"),
+doorLegalIdCardFrontId: Mock.mock("@string(5,100)"),
+doorLegalIdCardNo: Mock.mock("@string(5,100)"),
+doorLegalIdCardType: Mock.mock("@string(5,100)"),
+doorLegalIdCardValidDate: Mock.mock("@datetime()"),
+doorLegalIdCardValidStartDate: Mock.mock("@datetime()"),
+doorLegalName: Mock.mock("@string(5,100)"),
+doorLegalPhone: Mock.mock("@string(5,100)"),
+doorLicenseFileDuplicateId: Mock.mock("@string(5,100)"),
+doorLicenseFileId: Mock.mock("@string(5,100)"),
+doorLicenseName: Mock.mock("@string(5,100)"),
+doorLicenseValidDate: Mock.mock("@datetime()"),
+doorLicenseValidStartDate: Mock.mock("@datetime()"),
+doorName: Mock.mock("@string(5,100)"),
+doorOpenBluePermit: Mock.mock("@string(5,100)"),
+doorOpratorAttorneyLetter: Mock.mock("@string(5,100)"),
+doorOpratorIdCardNo: Mock.mock("@string(5,100)"),
+doorOpratorIdCardType: Mock.mock("@string(5,100)"),
+doorOpratorIdCardValidDate: Mock.mock("@datetime()"),
+doorOpratorIdCardValidStartDate: Mock.mock("@datetime()"),
+doorRealGreen: Mock.mock("@string(5,100)"),
+"doorShareholderList": [DoorShareholderReq(),DoorShareholderReq(),DoorShareholderReq()],
+doorStorePictureId: Mock.mock("@string(5,100)"),
+doorTrade: Mock.mock("@string(5,100)"),
+doorTradeName: SysDictDuiXiangnullZhiBuXuLieHua(),
+doorUnifiedCode: Mock.mock("@string(5,100)"),
+doorUpDoorId: Mock.mock("@string(5,100)"),
+doorUpDoorName: Mock.mock("@string(5,100)"),
+doorUpLegalBasicBlueOpenVoucherId: Mock.mock("@string(5,100)"),
+doorUpLegalDoorUnifiedCode: Mock.mock("@string(5,100)"),
+doorUpLegalIdCardBackId: Mock.mock("@string(5,100)"),
+doorUpLegalIdCardFrontId: Mock.mock("@string(5,100)"),
+doorUpLegalIdCardNo: Mock.mock("@string(5,100)"),
+doorUpLegalIdCardType: Mock.mock("@string(5,100)"),
+doorUpLegalLicenseDuplicateFileId: Mock.mock("@string(5,100)"),
+doorUpLegalLicenseFileId: Mock.mock("@string(5,100)"),
+doorUpLegalLicenseName: Mock.mock("@string(5,100)"),
+doorUpLegalLicenseNo: Mock.mock("@string(5,100)"),
+doorUpLegalLicenseType: Mock.mock("@string(5,100)"),
+doorUpLegalName: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+msg: Mock.mock("@string(5,100)"),
+stepNum: Mock.mock("@integer(3,1000)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function ZhiXieChangBoJuZiXinXi0() {
-  return {
-    green: '@string(5,1000)',
-    authStatus: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    doorBankCardNo: '@string(5,1000)',
-    doorBankCode: '@string(5,1000)',
-    doorBankName: '@string(5,1000)',
-    doorBasicBlueOpenVoucherId: '@string(5,1000)',
-    'doorBeneficiaryList|5-20': [DoorBeneficiaryResp()],
-    doorHappyScope: '@string(5,1000)',
-    doorCaElectronicSignature: '@string(5,1000)',
-    doorContactIdCardBackId: '@string(5,1000)',
-    doorContactIdCardFrontId: '@string(5,1000)',
-    doorContactName: '@string(5,1000)',
-    doorContactPhone: '@string(5,1000)',
-    doorId: '@string(5,1000)',
-    doorJoinProtocolId: '@string(5,1000)',
-    doorLegalIdCardBackId: '@string(5,1000)',
-    doorLegalIdCardFrontId: '@string(5,1000)',
-    doorLegalIdCardNo: '@string(5,1000)',
-    doorLegalIdCardType: '@string(5,1000)',
-    doorLegalIdCardValidDate: '@string(5,1000)',
-    doorLegalIdCardValidStartDate: '@string(5,1000)',
-    doorLegalName: '@string(5,1000)',
-    doorLegalPhone: '@string(5,1000)',
-    doorLicenseFileDuplicateId: '@string(5,1000)',
-    doorLicenseFileId: '@string(5,1000)',
-    doorLicenseName: '@string(5,1000)',
-    doorLicenseValidDate: '@string(5,1000)',
-    doorLicenseValidStartDate: '@string(5,1000)',
-    doorName: '@string(5,1000)',
-    doorOpenBluePermit: '@string(5,1000)',
-    doorOpratorAttorneyLetter: '@string(5,1000)',
-    doorOpratorIdCardNo: '@string(5,1000)',
-    doorOpratorIdCardType: '@string(5,1000)',
-    doorOpratorIdCardValidDate: '@string(5,1000)',
-    doorOpratorIdCardValidStartDate: '@string(5,1000)',
-    doorRealGreen: '@string(5,1000)',
-    'doorShareholderList|5-20': [DoorShareholderResp()],
-    doorStorePictureId: '@string(5,1000)',
-    doorTrade: '@string(5,1000)',
-    doorTradeName: SysDictDuiXiangnullZhiBuXuLieHua(),
-    doorUnifiedCode: '@string(5,1000)',
-    doorUpDoorId: '@string(5,1000)',
-    doorUpDoorName: '@string(5,1000)',
-    doorUpLegalBasicBlueOpenVoucherId: '@string(5,1000)',
-    doorUpLegalDoorUnifiedCode: '@string(5,1000)',
-    doorUpLegalIdCardBackId: '@string(5,1000)',
-    doorUpLegalIdCardFrontId: '@string(5,1000)',
-    doorUpLegalIdCardNo: '@string(5,1000)',
-    doorUpLegalIdCardType: '@string(5,1000)',
-    doorUpLegalLicenseDuplicateFileId: '@string(5,1000)',
-    doorUpLegalLicenseFileId: '@string(5,1000)',
-    doorUpLegalLicenseName: '@string(5,1000)',
-    doorUpLegalLicenseNo: '@string(5,1000)',
-    doorUpLegalLicenseType: '@string(5,1000)',
-    doorUpLegalName: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    msg: '@string(5,1000)',
-    stepNum: '@integer(3,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+green: Mock.mock("@string(5,100)"),
+authStatus: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+doorBankCardNo: Mock.mock("@string(5,100)"),
+doorBankCode: Mock.mock("@string(5,100)"),
+doorBankName: Mock.mock("@string(5,100)"),
+doorBasicBlueOpenVoucherId: Mock.mock("@string(5,100)"),
+"doorBeneficiaryList": [DoorBeneficiaryResp(),DoorBeneficiaryResp(),DoorBeneficiaryResp()],
+doorHappyScope: Mock.mock("@string(5,100)"),
+doorCaElectronicSignature: Mock.mock("@string(5,100)"),
+doorContactIdCardBackId: Mock.mock("@string(5,100)"),
+doorContactIdCardFrontId: Mock.mock("@string(5,100)"),
+doorContactName: Mock.mock("@string(5,100)"),
+doorContactPhone: Mock.mock("@string(5,100)"),
+doorId: Mock.mock("@string(5,100)"),
+doorJoinProtocolId: Mock.mock("@string(5,100)"),
+doorLegalIdCardBackId: Mock.mock("@string(5,100)"),
+doorLegalIdCardFrontId: Mock.mock("@string(5,100)"),
+doorLegalIdCardNo: Mock.mock("@string(5,100)"),
+doorLegalIdCardType: Mock.mock("@string(5,100)"),
+doorLegalIdCardValidDate: Mock.mock("@datetime()"),
+doorLegalIdCardValidStartDate: Mock.mock("@datetime()"),
+doorLegalName: Mock.mock("@string(5,100)"),
+doorLegalPhone: Mock.mock("@string(5,100)"),
+doorLicenseFileDuplicateId: Mock.mock("@string(5,100)"),
+doorLicenseFileId: Mock.mock("@string(5,100)"),
+doorLicenseName: Mock.mock("@string(5,100)"),
+doorLicenseValidDate: Mock.mock("@datetime()"),
+doorLicenseValidStartDate: Mock.mock("@datetime()"),
+doorName: Mock.mock("@string(5,100)"),
+doorOpenBluePermit: Mock.mock("@string(5,100)"),
+doorOpratorAttorneyLetter: Mock.mock("@string(5,100)"),
+doorOpratorIdCardNo: Mock.mock("@string(5,100)"),
+doorOpratorIdCardType: Mock.mock("@string(5,100)"),
+doorOpratorIdCardValidDate: Mock.mock("@datetime()"),
+doorOpratorIdCardValidStartDate: Mock.mock("@datetime()"),
+doorRealGreen: Mock.mock("@string(5,100)"),
+"doorShareholderList": [DoorShareholderResp(),DoorShareholderResp(),DoorShareholderResp()],
+doorStorePictureId: Mock.mock("@string(5,100)"),
+doorTrade: Mock.mock("@string(5,100)"),
+doorTradeName: SysDictDuiXiangnullZhiBuXuLieHua(),
+doorUnifiedCode: Mock.mock("@string(5,100)"),
+doorUpDoorId: Mock.mock("@string(5,100)"),
+doorUpDoorName: Mock.mock("@string(5,100)"),
+doorUpLegalBasicBlueOpenVoucherId: Mock.mock("@string(5,100)"),
+doorUpLegalDoorUnifiedCode: Mock.mock("@string(5,100)"),
+doorUpLegalIdCardBackId: Mock.mock("@string(5,100)"),
+doorUpLegalIdCardFrontId: Mock.mock("@string(5,100)"),
+doorUpLegalIdCardNo: Mock.mock("@string(5,100)"),
+doorUpLegalIdCardType: Mock.mock("@string(5,100)"),
+doorUpLegalLicenseDuplicateFileId: Mock.mock("@string(5,100)"),
+doorUpLegalLicenseFileId: Mock.mock("@string(5,100)"),
+doorUpLegalLicenseName: Mock.mock("@string(5,100)"),
+doorUpLegalLicenseNo: Mock.mock("@string(5,100)"),
+doorUpLegalLicenseType: Mock.mock("@string(5,100)"),
+doorUpLegalName: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+msg: Mock.mock("@string(5,100)"),
+stepNum: Mock.mock("@integer(3,1000)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function ZhiXieChangChuXing() {
-  return {
-    area: '@string(5,1000)',
-    authStatus: '@string(5,1000)',
-    avatar: '@string(5,1000)',
-    city: '@string(5,1000)',
-    contactNumber: '@string(5,1000)',
-    country: '@string(5,1000)',
-    created: '@boolean()',
-    firmSize: '@string(5,1000)',
-    industryInvolved: '@string(5,1000)',
-    introduction: '@string(5,1000)',
-    joinStatus: '@string(5,1000)',
-    legalCat: '@string(5,1000)',
-    location: '@string(5,1000)',
-    name: '@string(5,1000)',
-    province: '@string(5,1000)',
-    gratefulId: '@string(5,1000)',
-    xmail: '@string(5,1000)',
-  }
+return {
+area: Mock.mock("@string(5,100)"),
+authStatus: Mock.mock("@string(5,100)"),
+avatar: Mock.mock("https://www.uviewui.com/common/logo.png"),
+city: Mock.mock("@string(5,100)"),
+contactNumber: Mock.mock("@string(5,100)"),
+country: Mock.mock("@string(5,100)"),
+created: Mock.mock("@boolean()"),
+firmSize: Mock.mock("@string(5,100)"),
+industryInvolved: Mock.mock("@string(5,100)"),
+introduction: Mock.mock("@string(5,100)"),
+joinStatus: Mock.mock("@string(5,100)"),
+legalCat: Mock.mock("@string(5,100)"),
+location: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+province: Mock.mock("@string(5,100)"),
+gratefulId: Mock.mock("@string(5,100)"),
+xmail: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ZhiXieChangChuXing0() {
-  return {
-    doorName: '@string(5,1000)',
-    name: '@string(5,1000)',
-  }
+return {
+doorName: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ZhiXieChangFangDongXinXi() {
-  return {
-    area: '@string(5,1000)',
-    authStatus: '@string(5,1000)',
-    avatar: '@string(5,1000)',
-    chiefly: '@boolean()',
-    city: '@string(5,1000)',
-    contactNumber: '@string(5,1000)',
-    country: '@string(5,1000)',
-    firmSize: '@string(5,1000)',
-    id: '@string(5,1000)',
-    industryInvolved: '@string(5,1000)',
-    introduction: '@string(5,1000)',
-    legalCat: '@string(5,1000)',
-    licenseUnifiedCode: '@string(5,1000)',
-    licenseUnifiedUrl: '@string(5,1000)',
-    location: '@string(5,1000)',
-    name: '@string(5,1000)',
-    province: '@string(5,1000)',
-    serialNum: '@string(5,1000)',
-    gratefulId: '@string(5,1000)',
-    xmail: '@string(5,1000)',
-  }
+return {
+area: Mock.mock("@string(5,100)"),
+authStatus: Mock.mock("@string(5,100)"),
+avatar: Mock.mock("https://www.uviewui.com/common/logo.png"),
+chiefly: Mock.mock("@boolean()"),
+city: Mock.mock("@string(5,100)"),
+contactNumber: Mock.mock("@string(5,100)"),
+country: Mock.mock("@string(5,100)"),
+firmSize: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+industryInvolved: Mock.mock("@string(5,100)"),
+introduction: Mock.mock("@string(5,100)"),
+legalCat: Mock.mock("@string(5,100)"),
+licenseUnifiedCode: Mock.mock("@string(5,100)"),
+licenseUnifiedUrl: Mock.mock("@string(5,100)"),
+location: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+province: Mock.mock("@string(5,100)"),
+serialNum: Mock.mock("@string(5,100)"),
+gratefulId: Mock.mock("@string(5,100)"),
+xmail: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ZhiXieChangFangDongXinXiXiangQing() {
-  return {
-    area: '@string(5,1000)',
-    avatar: '@string(5,1000)',
-    city: '@string(5,1000)',
-    contactNumber: '@string(5,1000)',
-    country: '@string(5,1000)',
-    firmSize: '@string(5,1000)',
-    id: '@string(5,1000)',
-    industryInvolved: '@string(5,1000)',
-    introduction: '@string(5,1000)',
-    legalCat: '@string(5,1000)',
-    location: '@string(5,1000)',
-    name: '@string(5,1000)',
-    province: '@string(5,1000)',
-    xmail: '@string(5,1000)',
-  }
+return {
+area: Mock.mock("@string(5,100)"),
+avatar: Mock.mock("https://www.uviewui.com/common/logo.png"),
+city: Mock.mock("@string(5,100)"),
+contactNumber: Mock.mock("@string(5,100)"),
+country: Mock.mock("@string(5,100)"),
+firmSize: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+industryInvolved: Mock.mock("@string(5,100)"),
+introduction: Mock.mock("@string(5,100)"),
+legalCat: Mock.mock("@string(5,100)"),
+location: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+province: Mock.mock("@string(5,100)"),
+xmail: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ZhiXieChangFangDongXinXiXiangQing0() {
-  return {
-    area: '@string(5,1000)',
-    authStatus: '@string(5,1000)',
-    avatar: '@string(5,1000)',
-    city: '@string(5,1000)',
-    contactNumber: '@string(5,1000)',
-    country: '@string(5,1000)',
-    firmSize: '@string(5,1000)',
-    id: '@string(5,1000)',
-    industryInvolved: '@string(5,1000)',
-    init: '@boolean()',
-    introduction: '@string(5,1000)',
-    legalCat: '@string(5,1000)',
-    location: '@string(5,1000)',
-    maxNameUpdateNum: '@integer(3,1000)',
-    name: '@string(5,1000)',
-    nameUpdateNum: '@integer(3,1000)',
-    province: '@string(5,1000)',
-    gratefulId: '@string(5,1000)',
-    xmail: '@string(5,1000)',
-  }
+return {
+area: Mock.mock("@string(5,100)"),
+authStatus: Mock.mock("@string(5,100)"),
+avatar: Mock.mock("https://www.uviewui.com/common/logo.png"),
+city: Mock.mock("@string(5,100)"),
+contactNumber: Mock.mock("@string(5,100)"),
+country: Mock.mock("@string(5,100)"),
+firmSize: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+industryInvolved: Mock.mock("@string(5,100)"),
+init: Mock.mock("@boolean()"),
+introduction: Mock.mock("@string(5,100)"),
+legalCat: Mock.mock("@string(5,100)"),
+location: Mock.mock("@string(5,100)"),
+maxNameUpdateNum: Mock.mock("@datetime()"),
+name: Mock.mock("@string(5,100)"),
+nameUpdateNum: Mock.mock("@datetime()"),
+province: Mock.mock("@string(5,100)"),
+gratefulId: Mock.mock("@string(5,100)"),
+xmail: Mock.mock("@string(5,100)"),
+
+}
 }
 export function XiuGaiDouJiangJiXinXi() {
-  return {
-    area: '@string(5,1000)',
-    avatar: '@string(5,1000)',
-    city: '@string(5,1000)',
-    country: '@string(5,1000)',
-    location: '@string(5,1000)',
-    nickname: '@string(5,1000)',
-    province: '@string(5,1000)',
-    sex: '@string(5,1000)',
-    keyBorardname: '@string(5,1000)',
-    xmail: '@string(5,1000)',
-  }
+return {
+area: Mock.mock("@string(5,100)"),
+avatar: Mock.mock("https://www.uviewui.com/common/logo.png"),
+city: Mock.mock("@string(5,100)"),
+country: Mock.mock("@string(5,100)"),
+location: Mock.mock("@string(5,100)"),
+nickname: Mock.mock("@string(5,100)"),
+province: Mock.mock("@string(5,100)"),
+sex: Mock.mock("@string(5,100)"),
+keyBorardname: Mock.mock("@string(5,100)"),
+xmail: Mock.mock("@string(5,100)"),
+
+}
 }
 export function XiuGaiMiMa() {
-  return {
-    checkPassWord: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    oldPassword: '@string(5,1000)',
-    passWord: '@string(5,1000)',
-    uuid: '@string(5,1000)',
-    verificationCode: '@string(5,1000)',
-  }
+return {
+checkPassWord: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+oldPassword: Mock.mock("@string(5,100)"),
+passWord: Mock.mock("@string(5,100)"),
+uuid: Mock.mock("@string(5,100)"),
+verificationCode: Mock.mock("@string(5,100)"),
+
+}
 }
 export function MaoZiGuanLianFaQiGuanLianXinXi() {
-  return {
-    applyName: '@string(5,1000)',
-    applyPhone: '@string(5,1000)',
-    applyTime: '@string(5,1000)',
-    headerName: '@string(5,1000)',
-    headerPhone: '@string(5,1000)',
-    initTime: '@string(5,1000)',
-    inviteName: '@string(5,1000)',
-    invitePhone: '@string(5,1000)',
-    inviteSource: '@string(5,1000)',
-    inviteTime: '@string(5,1000)',
-    invitedName: '@string(5,1000)',
-    invitedPhone: '@string(5,1000)',
-    sourceEnum: '@string(5,1000)',
-    triggerTime: '@string(5,1000)',
-  }
+return {
+applyName: Mock.mock("@string(5,100)"),
+applyPhone: Mock.mock("@string(5,100)"),
+applyTime: Mock.mock("@datetime()"),
+headerName: Mock.mock("@string(5,100)"),
+headerPhone: Mock.mock("@string(5,100)"),
+initTime: Mock.mock("@datetime()"),
+inviteName: Mock.mock("@string(5,100)"),
+invitePhone: Mock.mock("@string(5,100)"),
+inviteSource: Mock.mock("@string(5,100)"),
+inviteTime: Mock.mock("@datetime()"),
+invitedName: Mock.mock("@string(5,100)"),
+invitedPhone: Mock.mock("@string(5,100)"),
+sourceEnum: Mock.mock("@string(5,100)"),
+triggerTime: Mock.mock("@datetime()"),
+
+}
 }
 export function MaoZiGuanLianYouGuanLianShenHeXinXi() {
-  return {
-    auditStatus: '@string(5,1000)',
-    auditTime: '@string(5,1000)',
-    name: '@string(5,1000)',
-    reason: '@string(5,1000)',
-  }
+return {
+auditStatus: Mock.mock("@string(5,100)"),
+auditTime: Mock.mock("@datetime()"),
+name: Mock.mock("@string(5,100)"),
+reason: Mock.mock("@string(5,100)"),
+
+}
 }
 export function GuanLianMaoZiYongDao() {
-  return {
-    inRelateCount: '@integer(3,1000)',
-    invalidRelateCount: '@integer(3,1000)',
-    list: ComPageRelationDoorInfo(),
-    totalCount: '@integer(3,1000)',
-    unRelateCount: '@integer(3,1000)',
-  }
+return {
+inRelateCount: Mock.mock("@integer(3,1000)"),
+invalidRelateCount: Mock.mock("@integer(3,1000)"),
+list: ComPageRelationDoorInfo(),
+totalCount: Mock.mock("@integer(3,1000)"),
+unRelateCount: Mock.mock("@integer(3,1000)"),
+
+}
 }
 export function GuanLianMaoZiXiangQing() {
-  return {
-    auditStatus: '@string(5,1000)',
-    authCount: '@integer(3,1000)',
-    created: '@string(5,1000)',
-    whiteCount: '@integer(3,1000)',
-    id: '@string(5,1000)',
-    preReDoorInfo: ReDoorInfo(),
-    reDoorInfo: ReDoorInfo(),
-    reDoorSource: '@string(5,1000)',
-    relationAuditInfo: MaoZiGuanLianYouGuanLianShenHeXinXi(),
-    relationInfo: MaoZiGuanLianFaQiGuanLianXinXi(),
-    relationStatus: '@string(5,1000)',
-    'relationTypeList|5-20': [RelationHappyTypeInfo()],
-    syncTime: '@string(5,1000)',
-  }
+return {
+auditStatus: Mock.mock("@string(5,100)"),
+authCount: Mock.mock("@integer(3,1000)"),
+created: Mock.mock("@string(5,100)"),
+whiteCount: Mock.mock("@integer(3,1000)"),
+id: Mock.mock("@string(5,100)"),
+preReDoorInfo: ReDoorInfo(),
+reDoorInfo: ReDoorInfo(),
+reDoorSource: Mock.mock("@string(5,100)"),
+relationAuditInfo: MaoZiGuanLianYouGuanLianShenHeXinXi(),
+relationInfo: MaoZiGuanLianFaQiGuanLianXinXi(),
+relationStatus: Mock.mock("@string(5,100)"),
+"relationTypeList": [RelationHappyTypeInfo(),RelationHappyTypeInfo(),RelationHappyTypeInfo()],
+syncTime: Mock.mock("@datetime()"),
+
+}
 }
 export function GuanLianShenHeXinXi() {
-  return {
-    auditClassificationEnum: '@string(5,1000)',
-    auditStatus: '@string(5,1000)',
-    branchName: '@string(5,1000)',
-    happyLicenseUrl: '@string(5,1000)',
-    created: '@string(5,1000)',
-    franchiseDoorName: '@string(5,1000)',
-    headerName: '@string(5,1000)',
-    headerPhone: '@string(5,1000)',
-    id: '@string(5,1000)',
-    relationStatus: '@string(5,1000)',
-    serialNo: '@string(5,1000)',
-    source: '@string(5,1000)',
-  }
+return {
+auditClassificationEnum: Mock.mock("@string(5,100)"),
+auditStatus: Mock.mock("@string(5,100)"),
+branchName: Mock.mock("@string(5,100)"),
+happyLicenseUrl: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+franchiseDoorName: Mock.mock("@string(5,100)"),
+headerName: Mock.mock("@string(5,100)"),
+headerPhone: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+relationStatus: Mock.mock("@string(5,100)"),
+serialNo: Mock.mock("@string(5,100)"),
+source: Mock.mock("@string(5,100)"),
+
+}
 }
 export function FenYeChuXingDouJiangJiBeiJing() {
-  return {
-    credentialNo: '@string(5,1000)',
-    credentialType: '@string(5,1000)',
-    page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
-  }
+return {
+credentialNo: Mock.mock("@string(5,100)"),
+credentialType: Mock.mock("@string(5,100)"),
+page: Mock.mock("@integer(3,1000)"),
+size: Mock.mock("@integer(20,50)"),
+
+}
 }
 export function FenYeChuXingSuoYouZhiXieChang() {
-  return {
-    name: '@string(5,1000)',
-    page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
-  }
+return {
+name: Mock.mock("@string(5,100)"),
+page: Mock.mock("@integer(3,1000)"),
+size: Mock.mock("@integer(20,50)"),
+
+}
 }
 export function QieHuanMoRenDiZhi() {
-  return {
-    newGreenId: '@string(5,1000)',
-  }
+return {
+newGreenId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ChuangJianZhiXieChang() {
-  return {
-    area: '@string(5,1000)',
-    city: '@string(5,1000)',
-    country: '@string(5,1000)',
-    location: '@string(5,1000)',
-    name: '@string(5,1000)',
-    province: '@string(5,1000)',
-  }
+return {
+area: Mock.mock("@string(5,100)"),
+city: Mock.mock("@string(5,100)"),
+country: Mock.mock("@string(5,100)"),
+location: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+province: Mock.mock("@string(5,100)"),
+
+}
 }
 export function XiaoYuanZhuoGuanLi() {
-  return {
-    bank: '@string(5,1000)',
-    bankAccNo: '@string(5,1000)',
-    dutyNum: '@string(5,1000)',
-    doorGreen: '@string(5,1000)',
-    doorMobile: '@string(5,1000)',
-    id: '@string(5,1000)',
-    title: '@string(5,1000)',
-    type: '@string(5,1000)',
-  }
+return {
+bank: Mock.mock("@string(5,100)"),
+bankAccNo: Mock.mock("@string(5,100)"),
+dutyNum: Mock.mock("@string(5,100)"),
+doorGreen: Mock.mock("@string(5,100)"),
+doorMobile: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+title: Mock.mock("@string(5,100)"),
+type: Mock.mock("@string(5,100)"),
+
+}
 }
 export function XiaoYuanZhuoGuanLi0() {
-  return {
-    bank: '@string(5,1000)',
-    bankAccNo: '@string(5,1000)',
-    dutyNum: '@string(5,1000)',
-    doorGreen: '@string(5,1000)',
-    doorMobile: '@string(5,1000)',
-    id: '@string(5,1000)',
-    title: '@string(5,1000)',
-    type: '@string(5,1000)',
-  }
+return {
+bank: Mock.mock("@string(5,100)"),
+bankAccNo: Mock.mock("@string(5,100)"),
+dutyNum: Mock.mock("@string(5,100)"),
+doorGreen: Mock.mock("@string(5,100)"),
+doorMobile: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+title: Mock.mock("@string(5,100)"),
+type: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ShenHeTongJiHuanCunSanShiMiao() {
-  return {
-    reviewedNum: '@integer(3,1000)',
-    unauditedNum: '@integer(3,1000)',
-  }
+return {
+reviewedNum: Mock.mock("@integer(3,1000)"),
+unauditedNum: Mock.mock("@integer(3,1000)"),
+
+}
 }
 export function ShenHeTongGuo() {
-  return {
-    whiteId: '@string(5,1000)',
-    id: '@string(5,1000)',
-    proposerId: '@string(5,1000)',
-    proposerName: '@string(5,1000)',
-    proposerPhone: '@string(5,1000)',
-    'pinkId|5-20': ['@string(5,1000)'],
-  }
+return {
+whiteId: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+proposerId: Mock.mock("@string(5,100)"),
+proposerName: Mock.mock("@string(5,100)"),
+proposerPhone: Mock.mock("@string(5,100)"),
+"pinkId": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+
+}
 }
 export function ZhaoHuiMiMa() {
-  return {
-    checkPassWord: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    passWord: '@string(5,1000)',
-    uuid: '@string(5,1000)',
-    verificationCode: '@string(5,1000)',
-  }
+return {
+checkPassWord: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+passWord: Mock.mock("@string(5,100)"),
+uuid: Mock.mock("@string(5,100)"),
+verificationCode: Mock.mock("@string(5,100)"),
+
+}
 }
 export function BiXieDaoZhongXinChuXingGuoLvTiaoJian() {
-  return {
-    authFlag: '@boolean()',
-    certType: '@string(5,1000)',
-    whiteName: '@string(5,1000)',
-    'desktopIds|5-20': ['@string(5,1000)'],
-    desktopMobile: '@string(5,1000)',
-    desktopName: '@string(5,1000)',
-    doorId: '@string(5,1000)',
-    page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
-  }
+return {
+authFlag: Mock.mock("@boolean()"),
+certType: Mock.mock("@string(5,100)"),
+whiteName: Mock.mock("@string(5,100)"),
+"desktopIds": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+desktopMobile: Mock.mock("@string(5,100)"),
+desktopName: Mock.mock("@string(5,100)"),
+doorId: Mock.mock("@string(5,100)"),
+page: Mock.mock("@integer(3,1000)"),
+size: Mock.mock("@integer(20,50)"),
+
+}
 }
 export function BiXieDaoRuCan() {
-  return {
-    channelType: '@string(5,1000)',
-    code: '@string(5,1000)',
-    corpId: '@string(5,1000)',
-    redirectUri: '@string(5,1000)',
-    state: '@string(5,1000)',
-  }
+return {
+channelType: Mock.mock("@string(5,100)"),
+code: Mock.mock("@integer(200,200)"),
+corpId: Mock.mock("@string(5,100)"),
+redirectUri: Mock.mock("@string(5,100)"),
+state: Mock.mock("@string(5,100)"),
+
+}
 }
 export function BiXieDao() {
-  return {
-    'ids|5-20': ['@string(5,1000)'],
-    reason: '@string(5,1000)',
-  }
+return {
+"ids": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+reason: Mock.mock("@string(5,100)"),
+
+}
 }
 export function BiXieDao0() {
-  return {
-    list: ComPageBiXieDao(),
-    reviewedNum: '@integer(3,1000)',
-    unauditedNum: '@integer(3,1000)',
-  }
+return {
+list: ComPageBiXieDao(),
+reviewedNum: Mock.mock("@integer(3,1000)"),
+unauditedNum: Mock.mock("@integer(3,1000)"),
+
+}
 }
 export function BiXieDao1() {
-  return {
-    auditName: '@string(5,1000)',
-    auditStatus: '@string(5,1000)',
-    auditTime: '@string(5,1000)',
-    authStatusEnum: '@string(5,1000)',
-    belongDoor: '@string(5,1000)',
-    id: '@string(5,1000)',
-    initTime: '@string(5,1000)',
-    mainDep: '@string(5,1000)',
-    name: '@string(5,1000)',
-    phone: '@string(5,1000)',
-    refuseReason: '@string(5,1000)',
-    source: '@string(5,1000)',
-  }
+return {
+auditName: Mock.mock("@string(5,100)"),
+auditStatus: Mock.mock("@string(5,100)"),
+auditTime: Mock.mock("@datetime()"),
+authStatusEnum: Mock.mock("@string(5,100)"),
+belongDoor: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+initTime: Mock.mock("@datetime()"),
+mainDep: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+phone: Mock.mock("@string(5,100)"),
+refuseReason: Mock.mock("@string(5,100)"),
+source: Mock.mock("@string(5,100)"),
+
+}
 }
 export function BiXieDaoYongDao() {
-  return {
-    authCount: '@integer(3,1000)',
-    branchName: '@string(5,1000)',
-    branchSerialNo: '@string(5,1000)',
-    doorName: '@string(5,1000)',
-    headerName: '@string(5,1000)',
-    headerPhone: '@string(5,1000)',
-    id: '@string(5,1000)',
-    relationStatus: '@string(5,1000)',
-    serialNo: '@string(5,1000)',
-    waitAuthCount: '@integer(3,1000)',
-  }
+return {
+authCount: Mock.mock("@integer(3,1000)"),
+branchName: Mock.mock("@string(5,100)"),
+branchSerialNo: Mock.mock("@string(5,100)"),
+doorName: Mock.mock("@string(5,100)"),
+headerName: Mock.mock("@string(5,100)"),
+headerPhone: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+relationStatus: Mock.mock("@string(5,100)"),
+serialNo: Mock.mock("@string(5,100)"),
+waitAuthCount: Mock.mock("@integer(3,1000)"),
+
+}
 }
 export function ShuJuYiZhiXingErCiQueRenCanShu() {
-  return {
-    dataId: '@string(5,1000)',
-    'dataSyncSystemReqs|5-20': [ShuJuYiZhiXingErCiQueRenCanShuXiTongDuiYingMeiLiCaoZuo()],
-    serialNumber: '@string(5,1000)',
-  }
+return {
+dataId: Mock.mock("@string(5,100)"),
+"dataSyncSystemReqs": [ShuJuYiZhiXingErCiQueRenCanShuXiTongDuiYingMeiLiCaoZuo(),ShuJuYiZhiXingErCiQueRenCanShuXiTongDuiYingMeiLiCaoZuo(),ShuJuYiZhiXingErCiQueRenCanShuXiTongDuiYingMeiLiCaoZuo()],
+serialNumber: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ShuJuYiZhiXingErCiQueRenCanShuXiTongDuiYingMeiLiCaoZuo() {
-  return {
-    resultHandleTypeEnum: '@string(5,1000)',
-    shiftDataId: '@string(5,1000)',
-    systemName: '@string(5,1000)',
-  }
+return {
+resultHandleTypeEnum: Mock.mock("@string(5,100)"),
+shiftDataId: Mock.mock("@string(5,100)"),
+systemName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ShuJuYiZhiXingCaoZuoFanHuiJieGuo() {
-  return {
-    'result|5-20': [XiaoYanJieGuo()],
-    serialNumber: '@string(5,1000)',
-  }
+return {
+"result": [XiaoYanJieGuo(),XiaoYanJieGuo(),XiaoYanJieGuo()],
+serialNumber: Mock.mock("@string(5,100)"),
+
+}
 }
 export function WenJianShangChuanXiangYing() {
-  return {
-    cdnDomain: '@string(5,1000)',
-    errorMsg: '@string(5,1000)',
-    id: '@string(5,1000)',
-    name: '@string(5,1000)',
-    objectKey: '@string(5,1000)',
-    uploadResult: '@boolean()',
-    url: '@string(5,1000)',
-  }
+return {
+cdnDomain: Mock.mock("@string(5,100)"),
+errorMsg: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+objectKey: Mock.mock("@string(5,100)"),
+uploadResult: Mock.mock("@boolean()"),
+url: Mock.mock("@string(5,100)"),
+
+}
 }
 export function XiaoYanJieGuo() {
-  return {
-    dataSyncHandleTypeEnum: '@string(5,1000)',
-    failedMessage: '@string(5,1000)',
-    resultFlag: '@boolean()',
-    skipUrl: '@string(5,1000)',
-    systemName: '@string(5,1000)',
-    systemNameStr: '@string(5,1000)',
-  }
+return {
+dataSyncHandleTypeEnum: Mock.mock("@string(5,100)"),
+failedMessage: Mock.mock("@string(5,100)"),
+resultFlag: Mock.mock("@boolean()"),
+skipUrl: Mock.mock("@string(5,100)"),
+systemName: Mock.mock("@string(5,100)"),
+systemNameStr: Mock.mock("@string(5,100)"),
+
+}
 }
 export function JianChaYaoQingMa() {
-  return {
-    msg: '@string(5,1000)',
-    gratefulName: '@string(5,1000)',
-  }
+return {
+msg: Mock.mock("@string(5,100)"),
+gratefulName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ZhuCeQingQiu() {
-  return {
-    checkPassWord: '@string(5,1000)',
-    clientType: '@string(5,1000)',
-    clientVersion: '@string(5,1000)',
-    deviceCode: '@string(5,1000)',
-    deviceManufacturer: '@string(5,1000)',
-    deviceModel: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    passWord: '@string(5,1000)',
-    uuid: '@string(5,1000)',
-    verificationCode: '@string(5,1000)',
-  }
+return {
+checkPassWord: Mock.mock("@string(5,100)"),
+clientType: Mock.mock("@string(5,100)"),
+clientVersion: Mock.mock("@string(5,100)"),
+deviceCode: Mock.mock("@string(5,100)"),
+deviceManufacturer: Mock.mock("@string(5,100)"),
+deviceModel: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+passWord: Mock.mock("@string(5,100)"),
+uuid: Mock.mock("@string(5,100)"),
+verificationCode: Mock.mock("@string(5,100)"),
+
+}
 }
 export function TianJiaDouJiangJiBeiJing() {
-  return {
-    'attachments|5-20': [Attachment()],
-    credentialNo: '@string(5,1000)',
-    credentialType: '@string(5,1000)',
-    id: '@string(5,1000)',
-    industryType: '@string(5,1000)',
-    issueDate: '@string(5,1000)',
-    'majors|5-20': [DouJiangJiBeiJingZhuCeZhuanYe()],
-    office: '@string(5,1000)',
-    orangeerNo: '@string(5,1000)',
-    scope: '@string(5,1000)',
-    source: '@string(5,1000)',
-  }
+return {
+"attachments": [Attachment(),Attachment(),Attachment()],
+credentialNo: Mock.mock("@string(5,100)"),
+credentialType: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+industryType: Mock.mock("@string(5,100)"),
+issueDate: Mock.mock("@datetime()"),
+"majors": [DouJiangJiBeiJingZhuCeZhuanYe(),DouJiangJiBeiJingZhuCeZhuanYe(),DouJiangJiBeiJingZhuCeZhuanYe()],
+office: Mock.mock("@string(5,100)"),
+orangeerNo: Mock.mock("@string(5,100)"),
+scope: Mock.mock("@string(5,100)"),
+source: Mock.mock("@string(5,100)"),
+
+}
 }
 export function TianJiaDouJiangJiBeiJing0() {
-  return {
-    attachment: '@string(5,1000)',
-    'attachments|5-20': [Attachment()],
-    credentialNo: '@string(5,1000)',
-    credentialType: '@string(5,1000)',
-    industryType: '@string(5,1000)',
-    issueDate: '@string(5,1000)',
-    'majors|5-20': [DouJiangJiBeiJingZhuCeZhuanYe()],
-    office: '@string(5,1000)',
-    orangeerNo: '@string(5,1000)',
-    scope: '@string(5,1000)',
-    source: '@string(5,1000)',
-  }
+return {
+attachment: Mock.mock("@string(5,100)"),
+"attachments": [Attachment(),Attachment(),Attachment()],
+credentialNo: Mock.mock("@string(5,100)"),
+credentialType: Mock.mock("@string(5,100)"),
+industryType: Mock.mock("@string(5,100)"),
+issueDate: Mock.mock("@datetime()"),
+"majors": [DouJiangJiBeiJingZhuCeZhuanYe(),DouJiangJiBeiJingZhuCeZhuanYe(),DouJiangJiBeiJingZhuCeZhuanYe()],
+office: Mock.mock("@string(5,100)"),
+orangeerNo: Mock.mock("@string(5,100)"),
+scope: Mock.mock("@string(5,100)"),
+source: Mock.mock("@string(5,100)"),
+
+}
 }
 export function QuDaoZhiXieChangJieMengQingQiuRuCan() {
-  return {
-    channelCorpId: '@string(5,1000)',
-    channelType: '@string(5,1000)',
-    dingId: '@string(5,1000)',
-    desktopId: '@string(5,1000)',
-    gratefulId: '@string(5,1000)',
-    keyBorardId: '@string(5,1000)',
-  }
+return {
+channelCorpId: Mock.mock("@string(5,100)"),
+channelType: Mock.mock("@string(5,100)"),
+dingId: Mock.mock("@string(5,100)"),
+desktopId: Mock.mock("@string(5,100)"),
+gratefulId: Mock.mock("@string(5,100)"),
+keyBorardId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ShengChengYaoQing() {
-  return {
-    audit: '@boolean()',
-    whiteId: '@string(5,1000)',
-    inviteShareType: '@string(5,1000)',
-  }
+return {
+audit: Mock.mock("@boolean()"),
+whiteId: Mock.mock("@string(5,100)"),
+inviteShareType: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ShengChengYaoQing0() {
-  return {
-    batchId: '@string(5,1000)',
-    whiteCode: '@string(5,1000)',
-    inviterId: '@string(5,1000)',
-    inviterName: '@string(5,1000)',
-    shareMark: '@string(5,1000)',
-    shareTime: '@string(5,1000)',
-    shareType: '@string(5,1000)',
-    gratefulName: '@string(5,1000)',
-  }
+return {
+batchId: Mock.mock("@string(5,100)"),
+whiteCode: Mock.mock("@string(5,100)"),
+inviterId: Mock.mock("@string(5,100)"),
+inviterName: Mock.mock("@string(5,100)"),
+shareMark: Mock.mock("@string(5,100)"),
+shareTime: Mock.mock("@datetime()"),
+shareType: Mock.mock("@string(5,100)"),
+gratefulName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function FangDongXinXi() {
-  return {
-    authStatus: '@string(5,1000)',
-    channelBindStatus: '@string(5,1000)',
-    channelCorpId: '@string(5,1000)',
-    channelType: '@string(5,1000)',
-    checked: '@boolean()',
-    clientType: '@string(5,1000)',
-    desktopStatus: '@string(5,1000)',
-    init: '@boolean()',
-    kind: '@string(5,1000)',
-    relation: '@string(5,1000)',
-    status: '@string(5,1000)',
-    gratefulId: '@string(5,1000)',
-    gratefulName: '@string(5,1000)',
-    keyBorardId: '@string(5,1000)',
-  }
+return {
+authStatus: Mock.mock("@string(5,100)"),
+channelBindStatus: Mock.mock("@string(5,100)"),
+channelCorpId: Mock.mock("@string(5,100)"),
+channelType: Mock.mock("@string(5,100)"),
+checked: Mock.mock("@boolean()"),
+clientType: Mock.mock("@string(5,100)"),
+desktopStatus: Mock.mock("@string(5,100)"),
+init: Mock.mock("@boolean()"),
+kind: Mock.mock("@string(5,100)"),
+relation: Mock.mock("@string(5,100)"),
+status: Mock.mock("@string(5,100)"),
+gratefulId: Mock.mock("@string(5,100)"),
+gratefulName: Mock.mock("@string(5,100)"),
+keyBorardId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function FangDongShouHuoDiZhiTianJia() {
-  return {
-    area: '@string(5,1000)',
-    checked: '@boolean()',
-    city: '@string(5,1000)',
-    country: '@string(5,1000)',
-    location: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    name: '@string(5,1000)',
-    province: '@string(5,1000)',
-  }
+return {
+area: Mock.mock("@string(5,100)"),
+checked: Mock.mock("@boolean()"),
+city: Mock.mock("@string(5,100)"),
+country: Mock.mock("@string(5,100)"),
+location: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+province: Mock.mock("@string(5,100)"),
+
+}
 }
 export function FangDongShouHuoDiZhiTianJia0() {
-  return {
-    area: '@string(5,1000)',
-    checked: '@boolean()',
-    city: '@string(5,1000)',
-    country: '@string(5,1000)',
-    id: '@string(5,1000)',
-    location: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    name: '@string(5,1000)',
-    province: '@string(5,1000)',
-  }
+return {
+area: Mock.mock("@string(5,100)"),
+checked: Mock.mock("@boolean()"),
+city: Mock.mock("@string(5,100)"),
+country: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+location: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+province: Mock.mock("@string(5,100)"),
+
+}
 }
 export function FangXingQuDaoZhuangTaiChuXing() {
-  return {
-    certifyId: '@string(5,1000)',
-    clazz: '@string(5,1000)',
-    cost: '@string(5,1000)',
-    function: '@string(5,1000)',
-    institution: '@string(5,1000)',
-    interests: '@string(5,1000)',
-    mark: '@string(5,1000)',
-    name: '@string(5,1000)',
-    status: '@string(5,1000)',
-  }
+return {
+certifyId: Mock.mock("@string(5,100)"),
+clazz: Mock.mock("@string(5,100)"),
+cost: Mock.mock("@string(5,100)"),
+function: Mock.mock("@string(5,100)"),
+institution: Mock.mock("@string(5,100)"),
+interests: Mock.mock("@string(5,100)"),
+mark: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+status: Mock.mock("@string(5,100)"),
+
+}
 }
 export function YaoQingZhuCe() {
-  return {
-    inviteCode: '@string(5,1000)',
-    inviteStatus: '@integer(3,1000)',
-    mobile: '@string(5,1000)',
-    msg: '@string(5,1000)',
-  }
+return {
+inviteCode: Mock.mock("@string(5,100)"),
+inviteStatus: Mock.mock("@integer(3,1000)"),
+mobile: Mock.mock("@string(5,100)"),
+msg: Mock.mock("@string(5,100)"),
+
+}
 }
 export function YaoQingZhuCe0() {
-  return {
-    inviteCode: '@string(5,1000)',
-  }
+return {
+inviteCode: Mock.mock("@string(5,100)"),
+
+}
 }

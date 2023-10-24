@@ -4,7 +4,7 @@ import Mock from 'mockjs'
 export const tokenAddTokenToShangyunCache = () => ''
 
 /** 校验token */
-export const tokenCheckToken = () => '@boolean()'
+export const tokenCheckToken = () => Mock.mock('@boolean()')
 
 /** 倒垃圾session */
 export const tokenRemoveSessionInShangyun = () => ''

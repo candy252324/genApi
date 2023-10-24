@@ -1,2933 +1,3150 @@
+import Mock from "mockjs"
 export function AddTastyCredentialProjectReq() {
-  return {
-    'addHrTastyCredentialReqList|5-20': [JuanXinCaiChiGuanTouShuiGuoDao0()],
-    'addHrTastyProjectReqList|5-20': [JuanXinCaiGongZuoYeJi()],
-  }
+return {
+"addHrTastyCredentialReqList": [JuanXinCaiChiGuanTouShuiGuoDao0(),JuanXinCaiChiGuanTouShuiGuoDao0(),JuanXinCaiChiGuanTouShuiGuoDao0()],
+"addHrTastyProjectReqList": [JuanXinCaiGongZuoYeJi(),JuanXinCaiGongZuoYeJi(),JuanXinCaiGongZuoYeJi()],
+
+}
 }
 export function ApiResponse() {
-  return {
-    code: '@integer(3,1000)',
-    data: '@string(5,1000)',
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: Mock.mock("@string(5,100)"),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageEntCredPlanResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageEntCredPlanResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageEntCredPlanResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageTastyCredExamResultResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageTastyCredExamResultResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageTastyCredExamResultResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPagestring() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPagestring(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPagestring(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageYeJiRenLingRiZhi() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageYeJiRenLingRiZhi(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageYeJiRenLingRiZhi(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageJuanXinCaiGongZuoYeJi() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageJuanXinCaiGongZuoYeJi(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageJuanXinCaiGongZuoYeJi(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageJuanXinCaiChiGuanTouShuiGuoDao() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageJuanXinCaiChiGuanTouShuiGuoDao(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageJuanXinCaiChiGuanTouShuiGuoDao(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageChaXianBanBuLiangGuShiLieBiaoXiangYing() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageChaXianBanBuLiangGuShiLieBiaoXiangYing(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageChaXianBanBuLiangGuShiLieBiaoXiangYing(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageChaXianBanFenZhiJiGou() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageChaXianBanFenZhiJiGou(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageChaXianBanFenZhiJiGou(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageChaXianBanShiXinLianHeChengJieGuShi() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageChaXianBanShiXinLianHeChengJieGuShi(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageChaXianBanShiXinLianHeChengJieGuShi(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageChaXianBanGongChengShuiBeiXiangYing() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageChaXianBanGongChengShuiBeiXiangYing(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageChaXianBanGongChengShuiBeiXiangYing(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageChaXianBanChiGuanTouJuanXinCaiXiangYing() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageChaXianBanChiGuanTouJuanXinCaiXiangYing(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageChaXianBanChiGuanTouJuanXinCaiXiangYing(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageChaXianBanErJiJuanXinCai() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageChaXianBanErJiJuanXinCai(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageChaXianBanErJiJuanXinCai(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageChaXianBanLiangHaoGuShiLieBiaoXiangYing() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageChaXianBanLiangHaoGuShiLieBiaoXiangYing(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageChaXianBanLiangHaoGuShiLieBiaoXiangYing(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageChaXianBanQingMingCaoZhiXiangYing() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageChaXianBanQingMingCaoZhiXiangYing(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageChaXianBanQingMingCaoZhiXiangYing(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageChaXianBanHeiMingDanXiangYing() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageChaXianBanHeiMingDanXiangYing(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageChaXianBanHeiMingDanXiangYing(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageErJiJuanXinCaiShuiGuoDao() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageErJiJuanXinCaiShuiGuoDao(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageErJiJuanXinCaiShuiGuoDao(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageJiJiXieXiaGongSiXiangYing() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageJiJiXieXiaGongSiXiangYing(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageJiJiXieXiaGongSiXiangYing(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageJiXuDaShuiNiuWeiShengSu() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageJiXuDaShuiNiuWeiShengSu(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageJiXuDaShuiNiuWeiShengSu(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageGuanTouShuRenLingRiZhi() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageGuanTouShuRenLingRiZhi(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageGuanTouShuRenLingRiZhi(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseComPageQingMingCaoZhiXiaoChouYu() {
-  return {
-    code: '@integer(3,1000)',
-    data: ComPageQingMingCaoZhiXiaoChouYu(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ComPageQingMingCaoZhiXiaoChouYu(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseEntCredOverviewResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: EntCredOverviewResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: EntCredOverviewResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseEntCredPlanMainResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: EntCredPlanMainResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: EntCredPlanMainResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseFridayAllCountResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: FridayAllCountResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: FridayAllCountResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseFridayBranchRawResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: FridayBranchRawResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: FridayBranchRawResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseJSONArray() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': ['@string(5,1000)'],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseJSONObject() {
-  return {
-    code: '@integer(3,1000)',
-    data: '@string(5,1000)',
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: Mock.mock("@string(5,100)"),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListEntCredentialExpireAlertResp() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [EntCredentialExpireAlertResp()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [EntCredentialExpireAlertResp(),EntCredentialExpireAlertResp(),EntCredentialExpireAlertResp()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListHrTastyCredentialDO() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [HrTastyCredentialDO()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [HrTastyCredentialDO(),HrTastyCredentialDO(),HrTastyCredentialDO()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListMap() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': ['@string(5,1000)'],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListTastyCredEvalInfo() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [TastyCredEvalInfo()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [TastyCredEvalInfo(),TastyCredEvalInfo(),TastyCredEvalInfo()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListTastyCredUpRecommendResp() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [TastyCredUpRecommendResp()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [TastyCredUpRecommendResp(),TastyCredUpRecommendResp(),TastyCredUpRecommendResp()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListVOResp() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [VOResp()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [VOResp(),VOResp(),VOResp()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListobject() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': ['@string(5,1000)'],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListstring() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': ['@string(5,1000)'],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListJuanXinCaiGongZuoYeJi() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [JuanXinCaiGongZuoYeJi()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [JuanXinCaiGongZuoYeJi(),JuanXinCaiGongZuoYeJi(),JuanXinCaiGongZuoYeJi()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListJuanXinCaiGongZuoJingLi() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [JuanXinCaiGongZuoJingLi0()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [JuanXinCaiGongZuoJingLi0(),JuanXinCaiGongZuoJingLi0(),JuanXinCaiGongZuoJingLi0()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListJuanXinCaiChiGuanTouShuiGuoDao() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [JuanXinCaiChiGuanTouShuiGuoDao()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [JuanXinCaiChiGuanTouShuiGuoDao(),JuanXinCaiChiGuanTouShuiGuoDao(),JuanXinCaiChiGuanTouShuiGuoDao()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListJuanXinCaiChiGuanTouQingKuang() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [JuanXinCaiChiGuanTouQingKuang()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [JuanXinCaiChiGuanTouQingKuang(),JuanXinCaiChiGuanTouQingKuang(),JuanXinCaiChiGuanTouQingKuang()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListChaXianBanBuLiangGuShiLieBiaoXiangYing() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [ChaXianBanBuLiangGuShiLieBiaoXiangYing()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [ChaXianBanBuLiangGuShiLieBiaoXiangYing(),ChaXianBanBuLiangGuShiLieBiaoXiangYing(),ChaXianBanBuLiangGuShiLieBiaoXiangYing()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListChaXianBanShiXinLianHeChengJieGuShi() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [ChaXianBanShiXinLianHeChengJieGuShi()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [ChaXianBanShiXinLianHeChengJieGuShi(),ChaXianBanShiXinLianHeChengJieGuShi(),ChaXianBanShiXinLianHeChengJieGuShi()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListChaXianBanGongChengShuiBeiXiangYing() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [ChaXianBanGongChengShuiBeiXiangYing()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [ChaXianBanGongChengShuiBeiXiangYing(),ChaXianBanGongChengShuiBeiXiangYing(),ChaXianBanGongChengShuiBeiXiangYing()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListChaXianBanErJiJuanXinCai() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [ChaXianBanErJiJuanXinCai()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [ChaXianBanErJiJuanXinCai(),ChaXianBanErJiJuanXinCai(),ChaXianBanErJiJuanXinCai()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListChaXianBanLiangHaoGuShiLieBiaoXiangYing() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [ChaXianBanLiangHaoGuShiLieBiaoXiangYing()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [ChaXianBanLiangHaoGuShiLieBiaoXiangYing(),ChaXianBanLiangHaoGuShiLieBiaoXiangYing(),ChaXianBanLiangHaoGuShiLieBiaoXiangYing()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListChaXianBanQingMingCaoZhiXiangYing() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [ChaXianBanQingMingCaoZhiXiangYing()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [ChaXianBanQingMingCaoZhiXiangYing(),ChaXianBanQingMingCaoZhiXiangYing(),ChaXianBanQingMingCaoZhiXiangYing()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListChaXianBanQingMingCaoZhiWuShu() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [ChaXianBanQingMingCaoZhiWuShu0()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [ChaXianBanQingMingCaoZhiWuShu0(),ChaXianBanQingMingCaoZhiWuShu0(),ChaXianBanQingMingCaoZhiWuShu0()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListChaXianBanHeiMingDanXiangYing() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [ChaXianBanHeiMingDanXiangYing()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [ChaXianBanHeiMingDanXiangYing(),ChaXianBanHeiMingDanXiangYing(),ChaXianBanHeiMingDanXiangYing()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListJiaTingChengYuanShuiGuoDao() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [JiaTingChengYuanShuiGuoDao0()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [JiaTingChengYuanShuiGuoDao0(),JiaTingChengYuanShuiGuoDao0(),JiaTingChengYuanShuiGuoDao0()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListDaShuiNiuJingLiShuiGuoDao() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [DaShuiNiuJingLiShuiGuoDao()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [DaShuiNiuJingLiShuiGuoDao(),DaShuiNiuJingLiShuiGuoDao(),DaShuiNiuJingLiShuiGuoDao()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListErJiJuanXinCaiTongJi() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [ErJiJuanXinCaiTongJi()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [ErJiJuanXinCaiTongJi(),ErJiJuanXinCaiTongJi(),ErJiJuanXinCaiTongJi()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListJiJiXieXiaGongSiXiangYing() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [JiJiXieXiaGongSiXiangYing()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [JiJiXieXiaGongSiXiangYing(),JiJiXieXiaGongSiXiangYing(),JiJiXieXiaGongSiXiangYing()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseListYinXingKaShuiGuoDao() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': [YinXingKaShuiGuoDao()],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [YinXingKaShuiGuoDao(),YinXingKaShuiGuoDao(),YinXingKaShuiGuoDao()],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseMapstringobject() {
-  return {
-    code: '@integer(3,1000)',
-    data: '@string(5,1000)',
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: Mock.mock("@string(5,100)"),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseMapstringstring() {
-  return {
-    code: '@integer(3,1000)',
-    data: '@string(5,1000)',
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: Mock.mock("@string(5,100)"),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseMap() {
-  return {
-    code: '@integer(3,1000)',
-    data: '@string(5,1000)',
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: Mock.mock("@string(5,100)"),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseTastyAllCountResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: TastyAllCountResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: TastyAllCountResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseTastyCredEvalInfo() {
-  return {
-    code: '@integer(3,1000)',
-    data: TastyCredEvalInfo(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: TastyCredEvalInfo(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseTastyCredUpRecommendResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: TastyCredUpRecommendResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: TastyCredUpRecommendResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseTastyIntroductionInfo() {
-  return {
-    code: '@integer(3,1000)',
-    data: TastyIntroductionInfo(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: TastyIntroductionInfo(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponsePlanCreditResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: PlanCreditResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: PlanCreditResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponsePlanTastyResp() {
-  return {
-    code: '@integer(3,1000)',
-    data: PlanTastyResp(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: PlanTastyResp(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseSetstring() {
-  return {
-    code: '@integer(3,1000)',
-    'data|5-20': ['@string(5,1000)'],
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+"data": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseappChaXianBanShuiGuoDaoFanHui() {
-  return {
-    code: '@integer(3,1000)',
-    data: appChaXianBanShuiGuoDaoFanHui(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: appChaXianBanShuiGuoDaoFanHui(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseboolean() {
-  return {
-    code: '@integer(3,1000)',
-    data: '@boolean()',
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: Mock.mock("@boolean()"),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponsestring() {
-  return {
-    code: '@integer(3,1000)',
-    data: '@string(5,1000)',
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: Mock.mock("@string(5,100)"),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseGeRenShuiGuoDao() {
-  return {
-    code: '@integer(3,1000)',
-    data: GeRenShuiGuoDao(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: GeRenShuiGuoDao(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseGeRenGongZuoNiuNaiXiangYingYeJiBiaoBianJi() {
-  return {
-    code: '@integer(3,1000)',
-    data: GeRenGongZuoNiuNaiXiangYingYeJiBiaoBianJi(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: GeRenGongZuoNiuNaiXiangYingYeJiBiaoBianJi(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseJuanXinCaiSuoYouShuiGuoDao() {
-  return {
-    code: '@integer(3,1000)',
-    data: JuanXinCaiSuoYouShuiGuoDao(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: JuanXinCaiSuoYouShuiGuoDao(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseChaXianBanGongShangShuiGuoDaoFanHui() {
-  return {
-    code: '@integer(3,1000)',
-    data: ChaXianBanGongShangShuiGuoDaoFanHui(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ChaXianBanGongShangShuiGuoDaoFanHui(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseChaXianBanQingMingCaoZhiShengJiTiaoJianFanHui() {
-  return {
-    code: '@integer(3,1000)',
-    data: ChaXianBanQingMingCaoZhiShengJiTiaoJianFanHui(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ChaXianBanQingMingCaoZhiShengJiTiaoJianFanHui(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseShengJiTiaoJianJuanXinCaiXiangQing() {
-  return {
-    code: '@integer(3,1000)',
-    data: ShengJiTiaoJianJuanXinCaiXiangQing(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ShengJiTiaoJianJuanXinCaiXiangQing(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseXueXinZhangHao() {
-  return {
-    code: '@integer(3,1000)',
-    data: XueXinZhangHao0(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: XueXinZhangHao0(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseZhanShiZanShiYongDeShengJiTiaoJianFanHui() {
-  return {
-    code: '@integer(3,1000)',
-    data: ZhanShiZanShiYongDeShengJiTiaoJianFanHui(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: ZhanShiZanShiYongDeShengJiTiaoJianFanHui(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseSheBaoZhangHao() {
-  return {
-    code: '@integer(3,1000)',
-    data: SheBaoZhangHao(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: SheBaoZhangHao(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseJiXuDaShuiNiuWeiShengSu() {
-  return {
-    code: '@integer(3,1000)',
-    data: JiXuDaShuiNiuWeiShengSu(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: JiXuDaShuiNiuWeiShengSu(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseHuoQuNiuNaiBianJiXiaLaHaiTunZhiXiangYing() {
-  return {
-    code: '@integer(3,1000)',
-    data: HuoQuNiuNaiBianJiXiaLaHaiTunZhiXiangYing(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: HuoQuNiuNaiBianJiXiaLaHaiTunZhiXiangYing(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseGuanTouShuHeGongChengShuiBei() {
-  return {
-    code: '@integer(3,1000)',
-    data: GuanTouShuHeGongChengShuiBei(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: GuanTouShuHeGongChengShuiBei(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ApiResponseQingMingCaoZhiXiaoChouYu() {
-  return {
-    code: '@integer(3,1000)',
-    data: QingMingCaoZhiXiaoChouYu(),
-    msg: '@string(5,1000)',
-    success: '@boolean()',
-    timestamp: '@string(5,1000)',
-    traceId: '@string(5,1000)',
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+data: QingMingCaoZhiXiaoChouYu(),
+msg: Mock.mock("@string(5,100)"),
+success: Mock.mock("@boolean()"),
+timestamp: Mock.mock("@datetime()"),
+traceId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ComPageEntCredPlanResp() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [EntCredPlanResp()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [EntCredPlanResp(),EntCredPlanResp(),EntCredPlanResp()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageTastyCredExamResultResp() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [TastyCredExamResultResp()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [TastyCredExamResultResp(),TastyCredExamResultResp(),TastyCredExamResultResp()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPagestring() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': ['@string(5,1000)'],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageYeJiRenLingRiZhi() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [YeJiRenLingRiZhi()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [YeJiRenLingRiZhi(),YeJiRenLingRiZhi(),YeJiRenLingRiZhi()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageJuanXinCaiGongZuoYeJi() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [JuanXinCaiGongZuoYeJi()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [JuanXinCaiGongZuoYeJi(),JuanXinCaiGongZuoYeJi(),JuanXinCaiGongZuoYeJi()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageJuanXinCaiChiGuanTouShuiGuoDao() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [JuanXinCaiChiGuanTouShuiGuoDao()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [JuanXinCaiChiGuanTouShuiGuoDao(),JuanXinCaiChiGuanTouShuiGuoDao(),JuanXinCaiChiGuanTouShuiGuoDao()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageChaXianBanBuLiangGuShiLieBiaoXiangYing() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [ChaXianBanBuLiangGuShiLieBiaoXiangYing()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [ChaXianBanBuLiangGuShiLieBiaoXiangYing(),ChaXianBanBuLiangGuShiLieBiaoXiangYing(),ChaXianBanBuLiangGuShiLieBiaoXiangYing()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageChaXianBanFenZhiJiGou() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [ChaXianBanFenZhiJiGou()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [ChaXianBanFenZhiJiGou(),ChaXianBanFenZhiJiGou(),ChaXianBanFenZhiJiGou()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageChaXianBanShiXinLianHeChengJieGuShi() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [ChaXianBanShiXinLianHeChengJieGuShi()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [ChaXianBanShiXinLianHeChengJieGuShi(),ChaXianBanShiXinLianHeChengJieGuShi(),ChaXianBanShiXinLianHeChengJieGuShi()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageChaXianBanGongChengShuiBeiXiangYing() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [ChaXianBanGongChengShuiBeiXiangYing()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [ChaXianBanGongChengShuiBeiXiangYing(),ChaXianBanGongChengShuiBeiXiangYing(),ChaXianBanGongChengShuiBeiXiangYing()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageChaXianBanChiGuanTouJuanXinCaiXiangYing() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [ChaXianBanChiGuanTouJuanXinCaiXiangYing()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [ChaXianBanChiGuanTouJuanXinCaiXiangYing(),ChaXianBanChiGuanTouJuanXinCaiXiangYing(),ChaXianBanChiGuanTouJuanXinCaiXiangYing()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageChaXianBanErJiJuanXinCai() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [ChaXianBanErJiJuanXinCai()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [ChaXianBanErJiJuanXinCai(),ChaXianBanErJiJuanXinCai(),ChaXianBanErJiJuanXinCai()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageChaXianBanLiangHaoGuShiLieBiaoXiangYing() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [ChaXianBanLiangHaoGuShiLieBiaoXiangYing()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [ChaXianBanLiangHaoGuShiLieBiaoXiangYing(),ChaXianBanLiangHaoGuShiLieBiaoXiangYing(),ChaXianBanLiangHaoGuShiLieBiaoXiangYing()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageChaXianBanQingMingCaoZhiXiangYing() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [ChaXianBanQingMingCaoZhiXiangYing()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [ChaXianBanQingMingCaoZhiXiangYing(),ChaXianBanQingMingCaoZhiXiangYing(),ChaXianBanQingMingCaoZhiXiangYing()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageChaXianBanHeiMingDanXiangYing() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [ChaXianBanHeiMingDanXiangYing()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [ChaXianBanHeiMingDanXiangYing(),ChaXianBanHeiMingDanXiangYing(),ChaXianBanHeiMingDanXiangYing()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [ShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [ShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing(),ShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing(),ShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageErJiJuanXinCaiShuiGuoDao() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [ErJiJuanXinCaiShuiGuoDao()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [ErJiJuanXinCaiShuiGuoDao(),ErJiJuanXinCaiShuiGuoDao(),ErJiJuanXinCaiShuiGuoDao()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageJiJiXieXiaGongSiXiangYing() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [JiJiXieXiaGongSiXiangYing()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [JiJiXieXiaGongSiXiangYing(),JiJiXieXiaGongSiXiangYing(),JiJiXieXiaGongSiXiangYing()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageJiXuDaShuiNiuWeiShengSu() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [JiXuDaShuiNiuWeiShengSu()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [JiXuDaShuiNiuWeiShengSu(),JiXuDaShuiNiuWeiShengSu(),JiXuDaShuiNiuWeiShengSu()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageGuanTouShuRenLingRiZhi() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [GuanTouShuRenLingRiZhi0()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [GuanTouShuRenLingRiZhi0(),GuanTouShuRenLingRiZhi0(),GuanTouShuRenLingRiZhi0()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function ComPageQingMingCaoZhiXiaoChouYu() {
-  return {
-    current: '@string(5,1000)',
-    'records|5-20': [QingMingCaoZhiXiaoChouYu()],
-    size: '@string(5,1000)',
-    total: '@string(5,1000)',
-  }
+return {
+current: Mock.mock("@integer(1,1)"),
+"records": [QingMingCaoZhiXiaoChouYu(),QingMingCaoZhiXiaoChouYu(),QingMingCaoZhiXiaoChouYu()],
+size: Mock.mock("@integer(20,50)"),
+total: Mock.mock("@integer(11,52)"),
+
+}
 }
 export function CredentialFilter() {
-  return {
-    approveTime: '@string(5,1000)',
-    attachmentUrl: '@string(5,1000)',
-    credentialBigType: '@string(5,1000)',
-    credentialName: '@string(5,1000)',
-    credentialNo: '@string(5,1000)',
-    credentialSmallType: '@string(5,1000)',
-    dataSource: '@string(5,1000)',
-    evaluationAttachmentUrl: '@string(5,1000)',
-    expireDateRangeEnd: '@string(5,1000)',
-    expireDateRangeStart: '@string(5,1000)',
-    hasAttachment: '@integer(3,1000)',
-    isContinueEducation: '@integer(3,1000)',
-    isInHuman: '@integer(3,1000)',
-    isRegistered: '@integer(3,1000)',
-    jobLevel: '@string(5,1000)',
-    jobType: '@string(5,1000)',
-    majorType: '@string(5,1000)',
-    operateItem: '@string(5,1000)',
-    originalRemainingAddress: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    postName: '@string(5,1000)',
-    qualificationName: '@string(5,1000)',
-    registerCode: '@string(5,1000)',
-    registerHuman: '@string(5,1000)',
-    registerDate: '@string(5,1000)',
-    registerSpecialityList: '@string(5,1000)',
-    reviewOrganization: '@string(5,1000)',
-    reviewTime: '@string(5,1000)',
-    sourceWebsiteName: '@string(5,1000)',
-    specialty: '@string(5,1000)',
-    startDateRangeEnd: '@string(5,1000)',
-    startDateRangeStart: '@string(5,1000)',
-    titleLevel: '@string(5,1000)',
-    trainInstitutions: '@string(5,1000)',
-    unit: '@string(5,1000)',
-    useExpireDateRangeEnd: '@string(5,1000)',
-    useExpireDateRangeStart: '@string(5,1000)',
-  }
+return {
+approveTime: Mock.mock("@datetime()"),
+attachmentUrl: Mock.mock("@string(5,100)"),
+credentialBigType: Mock.mock("@string(5,100)"),
+credentialName: Mock.mock("@string(5,100)"),
+credentialNo: Mock.mock("@string(5,100)"),
+credentialSmallType: Mock.mock("@string(5,100)"),
+dataSource: Mock.mock("@string(5,100)"),
+evaluationAttachmentUrl: Mock.mock("@string(5,100)"),
+expireDateRangeEnd: Mock.mock("@datetime()"),
+expireDateRangeStart: Mock.mock("@datetime()"),
+hasAttachment: Mock.mock("@integer(3,1000)"),
+isContinueEducation: Mock.mock("@integer(3,1000)"),
+isInHuman: Mock.mock("@integer(3,1000)"),
+isRegistered: Mock.mock("@integer(3,1000)"),
+jobLevel: Mock.mock("@string(5,100)"),
+jobType: Mock.mock("@string(5,100)"),
+majorType: Mock.mock("@string(5,100)"),
+operateItem: Mock.mock("@string(5,100)"),
+originalRemainingAddress: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+postName: Mock.mock("@string(5,100)"),
+qualificationName: Mock.mock("@string(5,100)"),
+registerCode: Mock.mock("@string(5,100)"),
+registerHuman: Mock.mock("@string(5,100)"),
+registerDate: Mock.mock("@datetime()"),
+registerSpecialityList: Mock.mock("@string(5,100)"),
+reviewOrganization: Mock.mock("@string(5,100)"),
+reviewTime: Mock.mock("@datetime()"),
+sourceWebsiteName: Mock.mock("@string(5,100)"),
+specialty: Mock.mock("@string(5,100)"),
+startDateRangeEnd: Mock.mock("@datetime()"),
+startDateRangeStart: Mock.mock("@datetime()"),
+titleLevel: Mock.mock("@string(5,100)"),
+trainInstitutions: Mock.mock("@string(5,100)"),
+unit: Mock.mock("@string(5,100)"),
+useExpireDateRangeEnd: Mock.mock("@datetime()"),
+useExpireDateRangeStart: Mock.mock("@datetime()"),
+
+}
 }
 export function EducationAndSubject() {
-  return {
-    educationBackground: '@string(5,1000)',
-    subject: '@string(5,1000)',
-  }
+return {
+educationBackground: Mock.mock("@string(5,100)"),
+subject: Mock.mock("@string(5,100)"),
+
+}
 }
 export function EntCredOverviewResp() {
-  return {
-    credCount: '@string(5,1000)',
-    projectCount: '@string(5,1000)',
-    registerTastyCount: '@string(5,1000)',
-  }
+return {
+credCount: Mock.mock("@string(5,100)"),
+projectCount: Mock.mock("@string(5,100)"),
+registerTastyCount: Mock.mock("@string(5,100)"),
+
+}
 }
 export function EntCredPlanMainReq() {
-  return {
-    certificateExpiryDate: '@string(5,1000)',
-    humanQualificationCate: '@string(5,1000)',
-    humanQualificationName: '@string(5,1000)',
-    credId: '@string(5,1000)',
-    fridayId: '@string(5,1000)',
-    planCredit: PlanCreditResp(),
-    planTasty: PlanTastyResp(),
-    target: '@string(5,1000)',
-    type: '@integer(3,1000)',
-  }
+return {
+certificateExpiryDate: Mock.mock("@datetime()"),
+humanQualificationCate: Mock.mock("@string(5,100)"),
+humanQualificationName: Mock.mock("@string(5,100)"),
+credId: Mock.mock("@string(5,100)"),
+fridayId: Mock.mock("@string(5,100)"),
+planCredit: PlanCreditResp(),
+planTasty: PlanTastyResp(),
+target: Mock.mock("@string(5,100)"),
+type: Mock.mock("@integer(3,1000)"),
+
+}
 }
 export function EntCredPlanMainResp() {
-  return {
-    certificateExpiryDate: '@string(5,1000)',
-    humanQualificationCate: '@string(5,1000)',
-    humanQualificationName: '@string(5,1000)',
-    credId: '@string(5,1000)',
-    credPlanId: '@string(5,1000)',
-    currentTastyNum: '@integer(3,1000)',
-    currentProjectNum: '@integer(3,1000)',
-    'deviceStandards|5-20': ['@string(5,1000)'],
-    diffTastyNum: '@integer(3,1000)',
-    diffProjectNum: '@integer(3,1000)',
-    historical: '@integer(3,1000)',
-    init: '@integer(3,1000)',
-    meetCondition: '@integer(3,1000)',
-    planCredit: PlanCreditResp(),
-    planTasty: PlanTastyResp(),
-    preVersionId: '@string(5,1000)',
-    standardTastyNum: '@integer(3,1000)',
-    standardProjectNum: '@integer(3,1000)',
-    standardURL: '@string(5,1000)',
-    target: '@string(5,1000)',
-    type: '@integer(3,1000)',
-  }
+return {
+certificateExpiryDate: Mock.mock("@datetime()"),
+humanQualificationCate: Mock.mock("@string(5,100)"),
+humanQualificationName: Mock.mock("@string(5,100)"),
+credId: Mock.mock("@string(5,100)"),
+credPlanId: Mock.mock("@string(5,100)"),
+currentTastyNum: Mock.mock("@integer(3,1000)"),
+currentProjectNum: Mock.mock("@integer(3,1000)"),
+"deviceStandards": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+diffTastyNum: Mock.mock("@integer(3,1000)"),
+diffProjectNum: Mock.mock("@integer(3,1000)"),
+historical: Mock.mock("@integer(3,1000)"),
+init: Mock.mock("@integer(3,1000)"),
+meetCondition: Mock.mock("@integer(3,1000)"),
+planCredit: PlanCreditResp(),
+planTasty: PlanTastyResp(),
+preVersionId: Mock.mock("@string(5,100)"),
+standardTastyNum: Mock.mock("@integer(3,1000)"),
+standardProjectNum: Mock.mock("@integer(3,1000)"),
+standardURL: Mock.mock("@string(5,100)"),
+target: Mock.mock("@string(5,100)"),
+type: Mock.mock("@integer(3,1000)"),
+
+}
 }
 export function EntCredPlanResp() {
-  return {
-    certificateExpiryDate: '@string(5,1000)',
-    humanQualificationCate: '@string(5,1000)',
-    humanQualificationName: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    credId: '@string(5,1000)',
-    currentTastyNum: '@integer(3,1000)',
-    currentProjectNum: '@integer(3,1000)',
-    diffTastyNum: '@integer(3,1000)',
-    diffProjectNum: '@integer(3,1000)',
-    fridayId: '@string(5,1000)',
-    historical: '@integer(3,1000)',
-    id: '@string(5,1000)',
-    meetCondition: '@integer(3,1000)',
-    modified: '@string(5,1000)',
-    preVersionId: '@string(5,1000)',
-    standardTastyNum: '@integer(3,1000)',
-    standardProjectNum: '@integer(3,1000)',
-    target: '@string(5,1000)',
-    type: '@integer(3,1000)',
-  }
+return {
+certificateExpiryDate: Mock.mock("@datetime()"),
+humanQualificationCate: Mock.mock("@string(5,100)"),
+humanQualificationName: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+credId: Mock.mock("@string(5,100)"),
+currentTastyNum: Mock.mock("@integer(3,1000)"),
+currentProjectNum: Mock.mock("@integer(3,1000)"),
+diffTastyNum: Mock.mock("@integer(3,1000)"),
+diffProjectNum: Mock.mock("@integer(3,1000)"),
+fridayId: Mock.mock("@string(5,100)"),
+historical: Mock.mock("@integer(3,1000)"),
+id: Mock.mock("@string(5,100)"),
+meetCondition: Mock.mock("@integer(3,1000)"),
+modified: Mock.mock("@string(5,100)"),
+preVersionId: Mock.mock("@string(5,100)"),
+standardTastyNum: Mock.mock("@integer(3,1000)"),
+standardProjectNum: Mock.mock("@integer(3,1000)"),
+target: Mock.mock("@string(5,100)"),
+type: Mock.mock("@integer(3,1000)"),
+
+}
 }
 export function EntCredStartReq() {
-  return {
-    certificateExpiryDate: '@string(5,1000)',
-    humanQualificationCate: '@string(5,1000)',
-    humanQualificationName: '@string(5,1000)',
-    credId: '@string(5,1000)',
-    fridayId: '@string(5,1000)',
-    target: '@string(5,1000)',
-    type: '@integer(3,1000)',
-  }
+return {
+certificateExpiryDate: Mock.mock("@datetime()"),
+humanQualificationCate: Mock.mock("@string(5,100)"),
+humanQualificationName: Mock.mock("@string(5,100)"),
+credId: Mock.mock("@string(5,100)"),
+fridayId: Mock.mock("@string(5,100)"),
+target: Mock.mock("@string(5,100)"),
+type: Mock.mock("@integer(3,1000)"),
+
+}
 }
 export function EntCredentialExpireAlertResp() {
-  return {
-    credentialName: '@string(5,1000)',
-    expireTime: '@string(5,1000)',
-    hadExpired: '@boolean()',
-  }
+return {
+credentialName: Mock.mock("@string(5,100)"),
+expireTime: Mock.mock("@datetime()"),
+hadExpired: Mock.mock("@boolean()"),
+
+}
 }
 export function EntUpgradeValidReq() {
-  return {
-    credName: '@string(5,1000)',
-    fridayId: '@string(5,1000)',
-    planCredits: PlanCreditResp(),
-    'planTastys|5-20': [TastyRecommendResp()],
-  }
+return {
+credName: Mock.mock("@string(5,100)"),
+fridayId: Mock.mock("@string(5,100)"),
+planCredits: PlanCreditResp(),
+"planTastys": [TastyRecommendResp(),TastyRecommendResp(),TastyRecommendResp()],
+
+}
 }
 export function FridayAllCountResp() {
-  return {
-    badBehaviorCount: '@integer(3,1000)',
-    blacklistCount: '@integer(3,1000)',
-    credentialCount: '@integer(3,1000)',
-    dishonestyPunishmentCount: '@integer(3,1000)',
-    goodBehaviorCount: '@integer(3,1000)',
-    isExpireStatus: '@integer(3,1000)',
-    tastyCount: '@integer(3,1000)',
-    projectCount: '@integer(3,1000)',
-  }
+return {
+badBehaviorCount: Mock.mock("@integer(3,1000)"),
+blacklistCount: Mock.mock("@integer(3,1000)"),
+credentialCount: Mock.mock("@integer(3,1000)"),
+dishonestyPunishmentCount: Mock.mock("@integer(3,1000)"),
+goodBehaviorCount: Mock.mock("@integer(3,1000)"),
+isExpireStatus: Mock.mock("@integer(3,1000)"),
+tastyCount: Mock.mock("@integer(3,1000)"),
+projectCount: Mock.mock("@integer(3,1000)"),
+
+}
 }
 export function FridayBranchRawResp() {
-  return {
-    area: '@string(5,1000)',
-    branchName: '@string(5,1000)',
-    establishmentTime: '@string(5,1000)',
-    head: '@string(5,1000)',
-    headPhoneNums: '@string(5,1000)',
-    id: '@string(5,1000)',
-    status: '@string(5,1000)',
-    statusNew: '@string(5,1000)',
-  }
+return {
+area: Mock.mock("@string(5,100)"),
+branchName: Mock.mock("@string(5,100)"),
+establishmentTime: Mock.mock("@datetime()"),
+head: Mock.mock("@string(5,100)"),
+headPhoneNums: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+status: Mock.mock("@string(5,100)"),
+statusNew: Mock.mock("@string(5,100)"),
+
+}
 }
 export function FridayCredentialAddReq() {
-  return {
-    'attachments|5-20': ['@string(5,1000)'],
-    certificateExpiryDate: '@string(5,1000)',
-    'certificationCode|5-20': ['@string(5,1000)'],
-    humanQualificationCate: '@string(5,1000)',
-    humanQualificationCertificateNum: '@string(5,1000)',
-    'humanQualificationName|5-20': ['@string(5,1000)'],
-    credentialNature: '@string(5,1000)',
-    fridayId: '@string(5,1000)',
-    industryType: '@string(5,1000)',
-    issuedDate: '@string(5,1000)',
-    issuingInstitutionName: '@string(5,1000)',
-    'nationStatus|5-20': ['@string(5,1000)'],
-  }
+return {
+"attachments": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+certificateExpiryDate: Mock.mock("@datetime()"),
+"certificationCode": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+humanQualificationCate: Mock.mock("@string(5,100)"),
+humanQualificationCertificateNum: Mock.mock("@string(5,100)"),
+"humanQualificationName": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+credentialNature: Mock.mock("@string(5,100)"),
+fridayId: Mock.mock("@string(5,100)"),
+industryType: Mock.mock("@string(5,100)"),
+issuedDate: Mock.mock("@datetime()"),
+issuingInstitutionName: Mock.mock("@string(5,100)"),
+"nationStatus": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+
+}
 }
 export function FridayCredentialNameReq() {
-  return {
-    humanQualificationCate: '@string(5,1000)',
-    credentialNature: '@string(5,1000)',
-    fridayId: '@string(5,1000)',
-    industryType: '@string(5,1000)',
-    name: '@string(5,1000)',
-    page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
-  }
+return {
+humanQualificationCate: Mock.mock("@string(5,100)"),
+credentialNature: Mock.mock("@string(5,100)"),
+fridayId: Mock.mock("@string(5,100)"),
+industryType: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+page: Mock.mock("@integer(3,1000)"),
+size: Mock.mock("@integer(20,50)"),
+
+}
 }
 export function FridayMainUpdateReq() {
-  return {
-    humanBusinessScope: '@string(5,1000)',
-    humanEmail: '@string(5,1000)',
-    humanEstablishDate: '@string(5,1000)',
-    humanLegalRepresentative: '@string(5,1000)',
-    humanName: '@string(5,1000)',
-    humanPhone: '@string(5,1000)',
-    humanRegistAddress: '@string(5,1000)',
-    humanRegistCapital: '@string(5,1000)',
-    humanWebsite: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    tenantId: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+humanBusinessScope: Mock.mock("@string(5,100)"),
+humanEmail: Mock.mock("@string(5,100)"),
+humanEstablishDate: Mock.mock("@datetime()"),
+humanLegalRepresentative: Mock.mock("@string(5,100)"),
+humanName: Mock.mock("@string(5,100)"),
+humanPhone: Mock.mock("@string(5,100)"),
+humanRegistAddress: Mock.mock("@string(5,100)"),
+humanRegistCapital: Mock.mock("@string(5,100)"),
+humanWebsite: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+tenantId: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function FridaySummary() {
-  return {
-    credentialName: '@string(5,1000)',
-    isContinueEducation: '@string(5,1000)',
-    originalRemainingAddress: '@string(5,1000)',
-    useExpireDate: '@string(5,1000)',
-  }
+return {
+credentialName: Mock.mock("@string(5,100)"),
+isContinueEducation: Mock.mock("@string(5,100)"),
+originalRemainingAddress: Mock.mock("@string(5,100)"),
+useExpireDate: Mock.mock("@datetime()"),
+
+}
 }
 export function HrTastyBankRecordDO() {
-  return {
-    attachmentUrlBack: '@string(5,1000)',
-    attachmentUrlFace: '@string(5,1000)',
-    bankNo: '@string(5,1000)',
-    bankOpenAddress: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    createTastyName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    remark: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+attachmentUrlBack: Mock.mock("@string(5,100)"),
+attachmentUrlFace: Mock.mock("@string(5,100)"),
+bankNo: Mock.mock("@string(5,100)"),
+bankOpenAddress: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+createTastyName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+remark: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function HrTastyCredentialDO() {
-  return {
-    approveTime: '@string(5,1000)',
-    attachmentUrl: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    credentialBigType: '@string(5,1000)',
-    credentialName: '@string(5,1000)',
-    credentialNo: '@string(5,1000)',
-    credentialSmallType: '@string(5,1000)',
-    dataSource: '@string(5,1000)',
-    evaluationAttachmentUrl: '@string(5,1000)',
-    expireDate: '@string(5,1000)',
-    hasAttachment: '@integer(3,1000)',
-    id: '@string(5,1000)',
-    isContinueEducation: '@integer(3,1000)',
-    isDelete: '@string(5,1000)',
-    isInHuman: '@integer(3,1000)',
-    isRegistered: '@integer(3,1000)',
-    jobLevel: '@string(5,1000)',
-    jobType: '@string(5,1000)',
-    majorType: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    operateItem: '@string(5,1000)',
-    originalRemainingAddress: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    postName: '@string(5,1000)',
-    qualificationName: '@string(5,1000)',
-    registerCode: '@string(5,1000)',
-    registerHuman: '@string(5,1000)',
-    registerDate: '@string(5,1000)',
-    registerSpecialityList: '@string(5,1000)',
-    reviewOrganization: '@string(5,1000)',
-    reviewTime: '@string(5,1000)',
-    sourceWebsiteName: '@string(5,1000)',
-    specialty: '@string(5,1000)',
-    startDate: '@string(5,1000)',
-    titleLevel: '@string(5,1000)',
-    trainInstitutions: '@string(5,1000)',
-    unit: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    useExpireDate: '@string(5,1000)',
-  }
+return {
+approveTime: Mock.mock("@datetime()"),
+attachmentUrl: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+credentialBigType: Mock.mock("@string(5,100)"),
+credentialName: Mock.mock("@string(5,100)"),
+credentialNo: Mock.mock("@string(5,100)"),
+credentialSmallType: Mock.mock("@string(5,100)"),
+dataSource: Mock.mock("@string(5,100)"),
+evaluationAttachmentUrl: Mock.mock("@string(5,100)"),
+expireDate: Mock.mock("@datetime()"),
+hasAttachment: Mock.mock("@integer(3,1000)"),
+id: Mock.mock("@string(5,100)"),
+isContinueEducation: Mock.mock("@integer(3,1000)"),
+isDelete: Mock.mock("@string(5,100)"),
+isInHuman: Mock.mock("@integer(3,1000)"),
+isRegistered: Mock.mock("@integer(3,1000)"),
+jobLevel: Mock.mock("@string(5,100)"),
+jobType: Mock.mock("@string(5,100)"),
+majorType: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+operateItem: Mock.mock("@string(5,100)"),
+originalRemainingAddress: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+postName: Mock.mock("@string(5,100)"),
+qualificationName: Mock.mock("@string(5,100)"),
+registerCode: Mock.mock("@string(5,100)"),
+registerHuman: Mock.mock("@string(5,100)"),
+registerDate: Mock.mock("@datetime()"),
+registerSpecialityList: Mock.mock("@string(5,100)"),
+reviewOrganization: Mock.mock("@string(5,100)"),
+reviewTime: Mock.mock("@datetime()"),
+sourceWebsiteName: Mock.mock("@string(5,100)"),
+specialty: Mock.mock("@string(5,100)"),
+startDate: Mock.mock("@datetime()"),
+titleLevel: Mock.mock("@string(5,100)"),
+trainInstitutions: Mock.mock("@string(5,100)"),
+unit: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+useExpireDate: Mock.mock("@datetime()"),
+
+}
 }
 export function HrTastyEducationDO() {
-  return {
-    certificateNumber: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    degree: '@string(5,1000)',
-    degreeAttachmentUrl: '@string(5,1000)',
-    diplomaAttachmentUrl: '@string(5,1000)',
-    educationBackground: '@string(5,1000)',
-    educationForm: '@string(5,1000)',
-    educationType: '@string(5,1000)',
-    entryDate: '@string(5,1000)',
-    graduateDate: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    school: '@string(5,1000)',
-    subject: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    verifyStatus: '@string(5,1000)',
-  }
+return {
+certificateNumber: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+degree: Mock.mock("@string(5,100)"),
+degreeAttachmentUrl: Mock.mock("@string(5,100)"),
+diplomaAttachmentUrl: Mock.mock("@string(5,100)"),
+educationBackground: Mock.mock("@string(5,100)"),
+educationForm: Mock.mock("@string(5,100)"),
+educationType: Mock.mock("@string(5,100)"),
+entryDate: Mock.mock("@datetime()"),
+graduateDate: Mock.mock("@datetime()"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+school: Mock.mock("@string(5,100)"),
+subject: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+verifyStatus: Mock.mock("@string(5,100)"),
+
+}
 }
 export function HrTastyFamilyDO() {
-  return {
-    birthday: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    name: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    position: '@string(5,1000)',
-    relationship: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    work: '@string(5,1000)',
-  }
+return {
+birthday: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+position: Mock.mock("@string(5,100)"),
+relationship: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+work: Mock.mock("@string(5,100)"),
+
+}
 }
 export function HrTastyGoodBadRecordDO() {
-  return {
-    attachmentUrl: '@string(5,1000)',
-    content: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    date: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    name: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    type: '@string(5,1000)',
-    unitName: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+attachmentUrl: Mock.mock("@string(5,100)"),
+content: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+date: Mock.mock("@datetime()"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+type: Mock.mock("@string(5,100)"),
+unitName: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function HrTastyPatentMonographDO() {
-  return {
-    applyDate: '@string(5,1000)',
-    applyNum: '@string(5,1000)',
-    attachmentUrl: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    id: '@string(5,1000)',
-    inventorName: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    monographPublisher: '@string(5,1000)',
-    name: '@string(5,1000)',
-    patentStatus: '@string(5,1000)',
-    patentType: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    publicDate: '@string(5,1000)',
-    publicNum: '@string(5,1000)',
-    type: '@integer(3,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+applyDate: Mock.mock("@datetime()"),
+applyNum: Mock.mock("@string(5,100)"),
+attachmentUrl: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+inventorName: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+monographPublisher: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+patentStatus: Mock.mock("@string(5,100)"),
+patentType: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+publicDate: Mock.mock("@datetime()"),
+publicNum: Mock.mock("@string(5,100)"),
+type: Mock.mock("@integer(3,1000)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function HrTastyProjectDO() {
-  return {
-    humanNameBuild: '@string(5,1000)',
-    constructProject: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    dataLevel: '@string(5,1000)',
-    endDate: '@string(5,1000)',
-    id: '@string(5,1000)',
-    importance: '@string(5,1000)',
-    industryMajor: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    jobDesc: '@string(5,1000)',
-    level: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    projectAttributionProvinceName: '@string(5,1000)',
-    projectCate: '@string(5,1000)',
-    projectCharacter: '@string(5,1000)',
-    projectLeader: '@string(5,1000)',
-    projectName: '@string(5,1000)',
-    projectNum: '@string(5,1000)',
-    projectSize: '@string(5,1000)',
-    projectStage: '@string(5,1000)',
-    projectStatus: '@string(5,1000)',
-    source: '@string(5,1000)',
-    startDate: '@string(5,1000)',
-    target: '@string(5,1000)',
-    totalArea: '@string(5,1000)',
-    totalInvest: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+humanNameBuild: Mock.mock("@string(5,100)"),
+constructProject: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+dataLevel: Mock.mock("@string(5,100)"),
+endDate: Mock.mock("@datetime()"),
+id: Mock.mock("@string(5,100)"),
+importance: Mock.mock("@string(5,100)"),
+industryMajor: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+jobDesc: Mock.mock("@string(5,100)"),
+level: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+projectAttributionProvinceName: Mock.mock("@string(5,100)"),
+projectCate: Mock.mock("@string(5,100)"),
+projectCharacter: Mock.mock("@string(5,100)"),
+projectLeader: Mock.mock("@string(5,100)"),
+projectName: Mock.mock("@string(5,100)"),
+projectNum: Mock.mock("@string(5,100)"),
+projectSize: Mock.mock("@string(5,100)"),
+projectStage: Mock.mock("@string(5,100)"),
+projectStatus: Mock.mock("@string(5,100)"),
+source: Mock.mock("@string(5,100)"),
+startDate: Mock.mock("@datetime()"),
+target: Mock.mock("@string(5,100)"),
+totalArea: Mock.mock("@string(5,100)"),
+totalInvest: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function HrTastyWorkHistoryDO() {
-  return {
-    human: '@string(5,1000)',
-    contact: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    departDate: '@string(5,1000)',
-    departReason: '@string(5,1000)',
-    description: '@string(5,1000)',
-    entryDate: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    performance: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    position: '@string(5,1000)',
-    referer: '@string(5,1000)',
-    refererMobile: '@string(5,1000)',
-    remark: '@string(5,1000)',
-    salary: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    workHistoryAttachmentUrl: '@string(5,1000)',
-    workTime: '@string(5,1000)',
-  }
+return {
+human: Mock.mock("@string(5,100)"),
+contact: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+departDate: Mock.mock("@datetime()"),
+departReason: Mock.mock("@string(5,100)"),
+description: Mock.mock("@string(5,100)"),
+entryDate: Mock.mock("@datetime()"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+performance: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+position: Mock.mock("@string(5,100)"),
+referer: Mock.mock("@string(5,100)"),
+refererMobile: Mock.mock("@string(5,100)"),
+remark: Mock.mock("@string(5,100)"),
+salary: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+workHistoryAttachmentUrl: Mock.mock("@string(5,100)"),
+workTime: Mock.mock("@datetime()"),
+
+}
 }
 export function OcrBigDataReq() {
-  return {
-    base64: '@string(5,1000)',
-    fileName: '@string(5,1000)',
-    fileUrl: '@string(5,1000)',
-  }
+return {
+base64: Mock.mock("@string(5,100)"),
+fileName: Mock.mock("@string(5,100)"),
+fileUrl: Mock.mock("@string(5,100)"),
+
+}
 }
 export function PageTastyCredExamResultReq() {
-  return {
-    cityName: '@string(5,1000)',
-    keyword: '@string(5,1000)',
-    page: '@integer(3,1000)',
-    tastyId: '@string(5,1000)',
-    provinceName: '@string(5,1000)',
-    queryType: '@string(5,1000)',
-    size: '@integer(3,1000)',
-    title: '@string(5,1000)',
-  }
+return {
+cityName: Mock.mock("@string(5,100)"),
+keyword: Mock.mock("@string(5,100)"),
+page: Mock.mock("@integer(3,1000)"),
+tastyId: Mock.mock("@string(5,100)"),
+provinceName: Mock.mock("@string(5,100)"),
+queryType: Mock.mock("@string(5,100)"),
+size: Mock.mock("@integer(20,50)"),
+title: Mock.mock("@string(5,100)"),
+
+}
 }
 export function PageTastyCredExamTimeReq() {
-  return {
-    page: '@integer(3,1000)',
-    tastyId: '@string(5,1000)',
-    region: '@string(5,1000)',
-    size: '@integer(3,1000)',
-    title: '@string(5,1000)',
-  }
+return {
+page: Mock.mock("@integer(3,1000)"),
+tastyId: Mock.mock("@string(5,100)"),
+region: Mock.mock("@string(5,100)"),
+size: Mock.mock("@integer(20,50)"),
+title: Mock.mock("@string(5,100)"),
+
+}
 }
 export function TastyAllCountResp() {
-  return {
-    credentialCount: '@integer(3,1000)',
-    projectCount: '@integer(3,1000)',
-  }
+return {
+credentialCount: Mock.mock("@integer(3,1000)"),
+projectCount: Mock.mock("@integer(3,1000)"),
+
+}
 }
 export function TastyCredEvalInfo() {
-  return {
-    credentialBigType: '@string(5,1000)',
-    credentialSmallType: '@string(5,1000)',
-    highEducation: '@string(5,1000)',
-    hrTastyData: '@integer(3,1000)',
-    idCardNum: '@string(5,1000)',
-    indexName: '@string(5,1000)',
-    key: '@string(5,1000)',
-    largeProjectNum: '@integer(3,1000)',
-    meetTechDirector: '@integer(3,1000)',
-    middleProjectNum: '@integer(3,1000)',
-    tastyId: '@string(5,1000)',
-    tastyName: '@string(5,1000)',
-    qualificationName: '@string(5,1000)',
-    registerMajor: '@string(5,1000)',
-    registerType: '@string(5,1000)',
-    titleLevel: '@string(5,1000)',
-    totalProjectNum: '@integer(3,1000)',
-    usedCredName: '@string(5,1000)',
-    workAge: '@integer(3,1000)',
-  }
+return {
+credentialBigType: Mock.mock("@string(5,100)"),
+credentialSmallType: Mock.mock("@string(5,100)"),
+highEducation: Mock.mock("@string(5,100)"),
+hrTastyData: Mock.mock("@integer(3,1000)"),
+idCardNum: Mock.mock("@string(5,100)"),
+indexName: Mock.mock("@string(5,100)"),
+key: Mock.mock("@string(5,100)"),
+largeProjectNum: Mock.mock("@integer(3,1000)"),
+meetTechDirector: Mock.mock("@integer(3,1000)"),
+middleProjectNum: Mock.mock("@integer(3,1000)"),
+tastyId: Mock.mock("@string(5,100)"),
+tastyName: Mock.mock("@string(5,100)"),
+qualificationName: Mock.mock("@string(5,100)"),
+registerMajor: Mock.mock("@string(5,100)"),
+registerType: Mock.mock("@string(5,100)"),
+titleLevel: Mock.mock("@string(5,100)"),
+totalProjectNum: Mock.mock("@integer(3,1000)"),
+usedCredName: Mock.mock("@string(5,100)"),
+workAge: Mock.mock("@integer(3,1000)"),
+
+}
 }
 export function TastyCredExamResultResp() {
-  return {
-    content: '@string(5,1000)',
-    time: '@string(5,1000)',
-    url: '@string(5,1000)',
-  }
+return {
+content: Mock.mock("@string(5,100)"),
+time: Mock.mock("@datetime()"),
+url: Mock.mock("@string(5,100)"),
+
+}
 }
 export function TastyCredUpRecommendResp() {
-  return {
-    applyCondition: '@string(5,1000)',
-    applyTime: '@string(5,1000)',
-    applyURL: '@string(5,1000)',
-    eduURL: '@string(5,1000)',
-    title: '@string(5,1000)',
-  }
+return {
+applyCondition: Mock.mock("@string(5,100)"),
+applyTime: Mock.mock("@datetime()"),
+applyURL: Mock.mock("@string(5,100)"),
+eduURL: Mock.mock("@string(5,100)"),
+title: Mock.mock("@string(5,100)"),
+
+}
 }
 export function TastyIntroductionInfo() {
-  return {
-    'credentialList|5-20': [JuanXinCaiChiGuanTouShuiGuoDao()],
-    tastyGender: '@string(5,1000)',
-    tastyIdentityCardNum: '@string(5,1000)',
-    tastyName: '@string(5,1000)',
-    'registerHuman|5-20': ['@string(5,1000)'],
-  }
+return {
+"credentialList": [JuanXinCaiChiGuanTouShuiGuoDao(),JuanXinCaiChiGuanTouShuiGuoDao(),JuanXinCaiChiGuanTouShuiGuoDao()],
+tastyGender: Mock.mock("@string(5,100)"),
+tastyIdentityCardNum: Mock.mock("@string(5,100)"),
+tastyName: Mock.mock("@string(5,100)"),
+"registerHuman": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+
+}
 }
 export function TastyLackItemResp() {
-  return {
-    indexCode: '@string(5,1000)',
-    indexName: '@string(5,1000)',
-    lackNum: '@integer(3,1000)',
-    standard: '@string(5,1000)',
-  }
+return {
+indexCode: Mock.mock("@string(5,100)"),
+indexName: Mock.mock("@string(5,100)"),
+lackNum: Mock.mock("@integer(3,1000)"),
+standard: Mock.mock("@string(5,100)"),
+
+}
 }
 export function TastyLackResp() {
-  return {
-    'tastyLackItems|5-20': [TastyLackItemResp()],
-    tastyProjectRequireDesc: '@string(5,1000)',
-    replenishment: '@string(5,1000)',
-  }
+return {
+"tastyLackItems": [TastyLackItemResp(),TastyLackItemResp(),TastyLackItemResp()],
+tastyProjectRequireDesc: Mock.mock("@string(5,100)"),
+replenishment: Mock.mock("@string(5,100)"),
+
+}
 }
 export function TastyRecommendItemResp() {
-  return {
-    credentialBigType: '@string(5,1000)',
-    credentialName: '@string(5,1000)',
-    credentialSmallType: '@string(5,1000)',
-    highEducation: '@string(5,1000)',
-    hrTastyData: '@integer(3,1000)',
-    idCardNum: '@string(5,1000)',
-    indexName: '@string(5,1000)',
-    key: '@string(5,1000)',
-    largeProjectNum: '@integer(3,1000)',
-    meetTechDirector: '@integer(3,1000)',
-    middleProjectNum: '@integer(3,1000)',
-    tastyId: '@string(5,1000)',
-    tastyName: '@string(5,1000)',
-    qualificationName: '@string(5,1000)',
-    registerMajor: '@string(5,1000)',
-    registerType: '@string(5,1000)',
-    titleLevel: '@string(5,1000)',
-    totalProjectNum: '@integer(3,1000)',
-    usedCredName: '@string(5,1000)',
-    workAge: '@integer(3,1000)',
-  }
+return {
+credentialBigType: Mock.mock("@string(5,100)"),
+credentialName: Mock.mock("@string(5,100)"),
+credentialSmallType: Mock.mock("@string(5,100)"),
+highEducation: Mock.mock("@string(5,100)"),
+hrTastyData: Mock.mock("@integer(3,1000)"),
+idCardNum: Mock.mock("@string(5,100)"),
+indexName: Mock.mock("@string(5,100)"),
+key: Mock.mock("@string(5,100)"),
+largeProjectNum: Mock.mock("@integer(3,1000)"),
+meetTechDirector: Mock.mock("@integer(3,1000)"),
+middleProjectNum: Mock.mock("@integer(3,1000)"),
+tastyId: Mock.mock("@string(5,100)"),
+tastyName: Mock.mock("@string(5,100)"),
+qualificationName: Mock.mock("@string(5,100)"),
+registerMajor: Mock.mock("@string(5,100)"),
+registerType: Mock.mock("@string(5,100)"),
+titleLevel: Mock.mock("@string(5,100)"),
+totalProjectNum: Mock.mock("@integer(3,1000)"),
+usedCredName: Mock.mock("@string(5,100)"),
+workAge: Mock.mock("@integer(3,1000)"),
+
+}
 }
 export function TastyRecommendResp() {
-  return {
-    indexCode: '@string(5,1000)',
-    indexName: '@string(5,1000)',
-    'tastyRecommendItems|5-20': [TastyRecommendItemResp()],
-  }
+return {
+indexCode: Mock.mock("@string(5,100)"),
+indexName: Mock.mock("@string(5,100)"),
+"tastyRecommendItems": [TastyRecommendItemResp(),TastyRecommendItemResp(),TastyRecommendItemResp()],
+
+}
 }
 export function PlanCreditResp() {
-  return {
-    'items|5-20': [PlanCreditRespItem()],
-    meet: '@integer(3,1000)',
-  }
+return {
+"items": [PlanCreditRespItem(),PlanCreditRespItem(),PlanCreditRespItem()],
+meet: Mock.mock("@integer(3,1000)"),
+
+}
 }
 export function PlanCreditRespItem() {
-  return {
-    indexCode: '@string(5,1000)',
-    indexName: '@string(5,1000)',
-    indexValue: '@string(5,1000)',
-    meet: '@integer(3,1000)',
-    standardValue: '@string(5,1000)',
-  }
+return {
+indexCode: Mock.mock("@string(5,100)"),
+indexName: Mock.mock("@string(5,100)"),
+indexValue: Mock.mock("@string(5,100)"),
+meet: Mock.mock("@integer(3,1000)"),
+standardValue: Mock.mock("@string(5,100)"),
+
+}
 }
 export function PlanTastyResp() {
-  return {
-    meet: '@integer(3,1000)',
-    tastyLack: TastyLackResp(),
-    'tastyRecommends|5-20': [TastyRecommendResp()],
-  }
+return {
+meet: Mock.mock("@integer(3,1000)"),
+tastyLack: TastyLackResp(),
+"tastyRecommends": [TastyRecommendResp(),TastyRecommendResp(),TastyRecommendResp()],
+
+}
 }
 export function SignUrlReq() {
-  return {
-    bucket: '@string(5,1000)',
-    callbackUrl: '@string(5,1000)',
-    path: '@string(5,1000)',
-    userAndTenantInfo: '@string(5,1000)',
-  }
+return {
+bucket: Mock.mock("@string(5,100)"),
+callbackUrl: Mock.mock("@string(5,100)"),
+path: Mock.mock("@string(5,100)"),
+userAndTenantInfo: Mock.mock("@string(5,100)"),
+
+}
 }
 export function Type() {
-  return {
-    typeName: '@string(5,1000)',
-  }
+return {
+typeName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function VOResp() {
-  return {
-    code: '@string(5,1000)',
-    value: '@string(5,1000)',
-    'vos|5-20': [VOResp()],
-  }
+return {
+code: Mock.mock("@integer(200,200)"),
+value: Mock.mock("@string(5,100)"),
+"vos": [VOResp(),VOResp(),VOResp()],
+
+}
 }
 export function appChaXianBanShuiGuoDaoFanHui() {
-  return {
-    humanName: '@string(5,1000)',
-    humanOperationState: '@string(5,1000)',
-    humanRegistAddress: '@string(5,1000)',
-    credentialCount: '@integer(3,1000)',
-    isClaim: '@string(5,1000)',
-    tastyCount: '@integer(3,1000)',
-    projectCount: '@integer(3,1000)',
-  }
+return {
+humanName: Mock.mock("@string(5,100)"),
+humanOperationState: Mock.mock("@string(5,100)"),
+humanRegistAddress: Mock.mock("@string(5,100)"),
+credentialCount: Mock.mock("@integer(3,1000)"),
+isClaim: Mock.mock("@string(5,100)"),
+tastyCount: Mock.mock("@integer(3,1000)"),
+projectCount: Mock.mock("@integer(3,1000)"),
+
+}
 }
 export function YeJiRenLingRiZhi() {
-  return {
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    createTime: '@string(5,1000)',
-    created: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    operationType: '@integer(3,1000)',
-    tastyId: '@string(5,1000)',
-    projectName: '@string(5,1000)',
-    projectNum: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+createTime: Mock.mock("@datetime()"),
+created: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+operationType: Mock.mock("@integer(3,1000)"),
+tastyId: Mock.mock("@string(5,100)"),
+projectName: Mock.mock("@string(5,100)"),
+projectNum: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function GeRenShuiGuoDao() {
-  return {
-    address: '@string(5,1000)',
-    authStatus: '@string(5,1000)',
-    birthday: '@string(5,1000)',
-    bloodType: '@string(5,1000)',
-    cardStartDate: '@string(5,1000)',
-    cardValidDate: '@string(5,1000)',
-    checkForWorkType: '@string(5,1000)',
-    claimStatus: '@integer(3,1000)',
-    email: '@string(5,1000)',
-    emergencyContactMobile: '@string(5,1000)',
-    emergencyContactTasty: '@string(5,1000)',
-    employmentContractDate: '@string(5,1000)',
-    employmentWay: '@string(5,1000)',
-    fridayId: '@string(5,1000)',
-    fridayName: '@string(5,1000)',
-    healthStatus: '@string(5,1000)',
-    highEducation: '@string(5,1000)',
-    householdRegistrationAddress: '@string(5,1000)',
-    householdRegistrationType: '@string(5,1000)',
-    id: '@string(5,1000)',
-    identityCardBack: '@string(5,1000)',
-    identityCardFace: '@string(5,1000)',
-    issue: '@string(5,1000)',
-    joinHumanDate: '@string(5,1000)',
-    laborContractDate: '@string(5,1000)',
-    maritalStatus: '@string(5,1000)',
-    mark: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    nation: '@string(5,1000)',
-    nativePlace: '@string(5,1000)',
-    tastyCredentialType: '@string(5,1000)',
-    tastyGender: '@string(5,1000)',
-    tastyIdentityCardNum: '@string(5,1000)',
-    tastyName: '@string(5,1000)',
-    tastyNum: '@string(5,1000)',
-    tastyStatus: '@string(5,1000)',
-    tastyType: '@string(5,1000)',
-    politicalOutlook: '@string(5,1000)',
-    regularDate: '@string(5,1000)',
-    relatedMobile: '@string(5,1000)',
-    signImgUrl: '@string(5,1000)',
-    socialSecurityHuman: '@string(5,1000)',
-    trialDate: '@string(5,1000)',
-    usedName: '@string(5,1000)',
-    workAddress: '@string(5,1000)',
-    workDeptName: '@string(5,1000)',
-    workJob: '@string(5,1000)',
-    workPosition: '@string(5,1000)',
-  }
+return {
+address: Mock.mock("@string(5,100)"),
+authStatus: Mock.mock("@string(5,100)"),
+birthday: Mock.mock("@string(5,100)"),
+bloodType: Mock.mock("@string(5,100)"),
+cardStartDate: Mock.mock("@datetime()"),
+cardValidDate: Mock.mock("@datetime()"),
+checkForWorkType: Mock.mock("@string(5,100)"),
+claimStatus: Mock.mock("@integer(3,1000)"),
+email: Mock.mock("@string(5,100)"),
+emergencyContactMobile: Mock.mock("@string(5,100)"),
+emergencyContactTasty: Mock.mock("@string(5,100)"),
+employmentContractDate: Mock.mock("@datetime()"),
+employmentWay: Mock.mock("@string(5,100)"),
+fridayId: Mock.mock("@string(5,100)"),
+fridayName: Mock.mock("@string(5,100)"),
+healthStatus: Mock.mock("@string(5,100)"),
+highEducation: Mock.mock("@string(5,100)"),
+householdRegistrationAddress: Mock.mock("@string(5,100)"),
+householdRegistrationType: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+identityCardBack: Mock.mock("@string(5,100)"),
+identityCardFace: Mock.mock("@string(5,100)"),
+issue: Mock.mock("@string(5,100)"),
+joinHumanDate: Mock.mock("@datetime()"),
+laborContractDate: Mock.mock("@datetime()"),
+maritalStatus: Mock.mock("@string(5,100)"),
+mark: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+nation: Mock.mock("@string(5,100)"),
+nativePlace: Mock.mock("@string(5,100)"),
+tastyCredentialType: Mock.mock("@string(5,100)"),
+tastyGender: Mock.mock("@string(5,100)"),
+tastyIdentityCardNum: Mock.mock("@string(5,100)"),
+tastyName: Mock.mock("@string(5,100)"),
+tastyNum: Mock.mock("@string(5,100)"),
+tastyStatus: Mock.mock("@string(5,100)"),
+tastyType: Mock.mock("@string(5,100)"),
+politicalOutlook: Mock.mock("@string(5,100)"),
+regularDate: Mock.mock("@datetime()"),
+relatedMobile: Mock.mock("@string(5,100)"),
+signImgUrl: Mock.mock("@string(5,100)"),
+socialSecurityHuman: Mock.mock("@string(5,100)"),
+trialDate: Mock.mock("@datetime()"),
+usedName: Mock.mock("@string(5,100)"),
+workAddress: Mock.mock("@string(5,100)"),
+workDeptName: Mock.mock("@string(5,100)"),
+workJob: Mock.mock("@string(5,100)"),
+workPosition: Mock.mock("@string(5,100)"),
+
+}
 }
 export function GeRenGongZuoNiuNaiXiangYingYeJiBiaoBianJi() {
-  return {
-    tastyCurriculumVitaeBaseInfo: NiuNaiMoKuaiJiBenShuiGuoDao(),
-    'tastyProjectInfo|5-20': [NiuNaiMoKuaiBenRenWanChengZhuYaoShuiBeiGaiKuang()],
-    'tastyWorkHistoryInfo|5-20': [NiuNaiMoKuaiGongZuoJingLi()],
-  }
+return {
+tastyCurriculumVitaeBaseInfo: NiuNaiMoKuaiJiBenShuiGuoDao(),
+"tastyProjectInfo": [NiuNaiMoKuaiBenRenWanChengZhuYaoShuiBeiGaiKuang(),NiuNaiMoKuaiBenRenWanChengZhuYaoShuiBeiGaiKuang(),NiuNaiMoKuaiBenRenWanChengZhuYaoShuiBeiGaiKuang()],
+"tastyWorkHistoryInfo": [NiuNaiMoKuaiGongZuoJingLi(),NiuNaiMoKuaiGongZuoJingLi(),NiuNaiMoKuaiGongZuoJingLi()],
+
+}
 }
 export function GeRenGongZuoJingLi() {
-  return {
-    human: '@string(5,1000)',
-    contact: '@string(5,1000)',
-    departDate: '@string(5,1000)',
-    departReason: '@string(5,1000)',
-    description: '@string(5,1000)',
-    entryDate: '@string(5,1000)',
-    performance: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    position: '@string(5,1000)',
-    referer: '@string(5,1000)',
-    refererMobile: '@string(5,1000)',
-    remark: '@string(5,1000)',
-    salary: '@string(5,1000)',
-    workHistoryAttachmentUrl: '@string(5,1000)',
-    workTime: '@string(5,1000)',
-  }
+return {
+human: Mock.mock("@string(5,100)"),
+contact: Mock.mock("@string(5,100)"),
+departDate: Mock.mock("@datetime()"),
+departReason: Mock.mock("@string(5,100)"),
+description: Mock.mock("@string(5,100)"),
+entryDate: Mock.mock("@datetime()"),
+performance: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+position: Mock.mock("@string(5,100)"),
+referer: Mock.mock("@string(5,100)"),
+refererMobile: Mock.mock("@string(5,100)"),
+remark: Mock.mock("@string(5,100)"),
+salary: Mock.mock("@string(5,100)"),
+workHistoryAttachmentUrl: Mock.mock("@string(5,100)"),
+workTime: Mock.mock("@datetime()"),
+
+}
 }
 export function JuanXinCaiBeiZhuShuiGuoDaoBaoCunQingQiu() {
-  return {
-    mark: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-  }
+return {
+mark: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function JuanXinCaiGongZuoYeJi() {
-  return {
-    humanNameBuild: '@string(5,1000)',
-    constructProject: '@string(5,1000)',
-    dataLevel: '@string(5,1000)',
-    endDate: '@string(5,1000)',
-    id: '@string(5,1000)',
-    importance: '@string(5,1000)',
-    industryMajor: '@string(5,1000)',
-    jobDesc: '@string(5,1000)',
-    level: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    projectAttributionProvinceName: '@string(5,1000)',
-    projectCate: '@string(5,1000)',
-    projectCharacter: '@string(5,1000)',
-    projectLeader: '@string(5,1000)',
-    projectName: '@string(5,1000)',
-    projectNum: '@string(5,1000)',
-    projectSize: '@string(5,1000)',
-    projectStage: '@string(5,1000)',
-    projectStatus: '@string(5,1000)',
-    source: '@string(5,1000)',
-    startDate: '@string(5,1000)',
-    target: '@string(5,1000)',
-    totalArea: '@string(5,1000)',
-    totalInvest: '@string(5,1000)',
-  }
+return {
+humanNameBuild: Mock.mock("@string(5,100)"),
+constructProject: Mock.mock("@string(5,100)"),
+dataLevel: Mock.mock("@string(5,100)"),
+endDate: Mock.mock("@datetime()"),
+id: Mock.mock("@string(5,100)"),
+importance: Mock.mock("@string(5,100)"),
+industryMajor: Mock.mock("@string(5,100)"),
+jobDesc: Mock.mock("@string(5,100)"),
+level: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+projectAttributionProvinceName: Mock.mock("@string(5,100)"),
+projectCate: Mock.mock("@string(5,100)"),
+projectCharacter: Mock.mock("@string(5,100)"),
+projectLeader: Mock.mock("@string(5,100)"),
+projectName: Mock.mock("@string(5,100)"),
+projectNum: Mock.mock("@string(5,100)"),
+projectSize: Mock.mock("@string(5,100)"),
+projectStage: Mock.mock("@string(5,100)"),
+projectStatus: Mock.mock("@string(5,100)"),
+source: Mock.mock("@string(5,100)"),
+startDate: Mock.mock("@datetime()"),
+target: Mock.mock("@string(5,100)"),
+totalArea: Mock.mock("@string(5,100)"),
+totalInvest: Mock.mock("@string(5,100)"),
+
+}
 }
 export function JuanXinCaiGongZuoYeJi0() {
-  return {
-    humanNameBuild: '@string(5,1000)',
-    constructProject: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    dataLevel: '@string(5,1000)',
-    endDate: '@string(5,1000)',
-    id: '@string(5,1000)',
-    importance: '@string(5,1000)',
-    industryMajor: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    jobDesc: '@string(5,1000)',
-    level: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    projectAttributionProvinceName: '@string(5,1000)',
-    projectCate: '@string(5,1000)',
-    projectCharacter: '@string(5,1000)',
-    projectLeader: '@string(5,1000)',
-    projectName: '@string(5,1000)',
-    projectNum: '@string(5,1000)',
-    projectSize: '@string(5,1000)',
-    projectStage: '@string(5,1000)',
-    projectStatus: '@string(5,1000)',
-    source: '@string(5,1000)',
-    startDate: '@string(5,1000)',
-    target: '@string(5,1000)',
-    totalArea: '@string(5,1000)',
-    totalInvest: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+humanNameBuild: Mock.mock("@string(5,100)"),
+constructProject: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+dataLevel: Mock.mock("@string(5,100)"),
+endDate: Mock.mock("@datetime()"),
+id: Mock.mock("@string(5,100)"),
+importance: Mock.mock("@string(5,100)"),
+industryMajor: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+jobDesc: Mock.mock("@string(5,100)"),
+level: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+projectAttributionProvinceName: Mock.mock("@string(5,100)"),
+projectCate: Mock.mock("@string(5,100)"),
+projectCharacter: Mock.mock("@string(5,100)"),
+projectLeader: Mock.mock("@string(5,100)"),
+projectName: Mock.mock("@string(5,100)"),
+projectNum: Mock.mock("@string(5,100)"),
+projectSize: Mock.mock("@string(5,100)"),
+projectStage: Mock.mock("@string(5,100)"),
+projectStatus: Mock.mock("@string(5,100)"),
+source: Mock.mock("@string(5,100)"),
+startDate: Mock.mock("@datetime()"),
+target: Mock.mock("@string(5,100)"),
+totalArea: Mock.mock("@string(5,100)"),
+totalInvest: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function JuanXinCaiGongZuoJingLi() {
-  return {
-    human: '@string(5,1000)',
-    contact: '@string(5,1000)',
-    departDate: '@string(5,1000)',
-    departReason: '@string(5,1000)',
-    description: '@string(5,1000)',
-    entryDate: '@string(5,1000)',
-    id: '@string(5,1000)',
-    performance: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    position: '@string(5,1000)',
-    referer: '@string(5,1000)',
-    refererMobile: '@string(5,1000)',
-    remark: '@string(5,1000)',
-    salary: '@string(5,1000)',
-    workHistoryAttachmentUrl: '@string(5,1000)',
-    workTime: '@string(5,1000)',
-  }
+return {
+human: Mock.mock("@string(5,100)"),
+contact: Mock.mock("@string(5,100)"),
+departDate: Mock.mock("@datetime()"),
+departReason: Mock.mock("@string(5,100)"),
+description: Mock.mock("@string(5,100)"),
+entryDate: Mock.mock("@datetime()"),
+id: Mock.mock("@string(5,100)"),
+performance: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+position: Mock.mock("@string(5,100)"),
+referer: Mock.mock("@string(5,100)"),
+refererMobile: Mock.mock("@string(5,100)"),
+remark: Mock.mock("@string(5,100)"),
+salary: Mock.mock("@string(5,100)"),
+workHistoryAttachmentUrl: Mock.mock("@string(5,100)"),
+workTime: Mock.mock("@datetime()"),
+
+}
 }
 export function JuanXinCaiGongZuoJingLi0() {
-  return {
-    human: '@string(5,1000)',
-    contact: '@string(5,1000)',
-    departDate: '@string(5,1000)',
-    departReason: '@string(5,1000)',
-    description: '@string(5,1000)',
-    entryDate: '@string(5,1000)',
-    id: '@string(5,1000)',
-    performance: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    position: '@string(5,1000)',
-    referer: '@string(5,1000)',
-    refererMobile: '@string(5,1000)',
-    remark: '@string(5,1000)',
-    salary: '@string(5,1000)',
-    workHistoryAttachmentUrl: '@string(5,1000)',
-    workTime: '@string(5,1000)',
-  }
+return {
+human: Mock.mock("@string(5,100)"),
+contact: Mock.mock("@string(5,100)"),
+departDate: Mock.mock("@datetime()"),
+departReason: Mock.mock("@string(5,100)"),
+description: Mock.mock("@string(5,100)"),
+entryDate: Mock.mock("@datetime()"),
+id: Mock.mock("@string(5,100)"),
+performance: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+position: Mock.mock("@string(5,100)"),
+referer: Mock.mock("@string(5,100)"),
+refererMobile: Mock.mock("@string(5,100)"),
+remark: Mock.mock("@string(5,100)"),
+salary: Mock.mock("@string(5,100)"),
+workHistoryAttachmentUrl: Mock.mock("@string(5,100)"),
+workTime: Mock.mock("@datetime()"),
+
+}
 }
 export function JuanXinCaiSuoYouShuiGuoDao() {
-  return {
-    address: '@string(5,1000)',
-    authStatus: '@string(5,1000)',
-    'bankRecords|5-20': [HrTastyBankRecordDO()],
-    birthday: '@string(5,1000)',
-    bloodType: '@string(5,1000)',
-    cardStartDate: '@string(5,1000)',
-    cardValidDate: '@string(5,1000)',
-    checkForWorkType: '@string(5,1000)',
-    claimStatus: '@integer(3,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    'credentials|5-20': [HrTastyCredentialDO()],
-    deptId: '@string(5,1000)',
-    deptName: '@string(5,1000)',
-    'educations|5-20': [HrTastyEducationDO()],
-    email: '@string(5,1000)',
-    emergencyContactMobile: '@string(5,1000)',
-    emergencyContactTasty: '@string(5,1000)',
-    employmentContractDate: '@string(5,1000)',
-    employmentWay: '@string(5,1000)',
-    fridayId: '@string(5,1000)',
-    fridayName: '@string(5,1000)',
-    fridayNum: '@string(5,1000)',
-    'families|5-20': [HrTastyFamilyDO()],
-    'goodBadRecords|5-20': [HrTastyGoodBadRecordDO()],
-    healthStatus: '@string(5,1000)',
-    highEducation: '@string(5,1000)',
-    householdRegistrationAddress: '@string(5,1000)',
-    householdRegistrationType: '@string(5,1000)',
-    id: '@string(5,1000)',
-    identityCardBack: '@string(5,1000)',
-    identityCardFace: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    issue: '@string(5,1000)',
-    jobId: '@string(5,1000)',
-    jobName: '@string(5,1000)',
-    joinHumanDate: '@string(5,1000)',
-    laborContractDate: '@string(5,1000)',
-    maritalStatus: '@string(5,1000)',
-    mark: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    nation: '@string(5,1000)',
-    nativePlace: '@string(5,1000)',
-    'patentMonographs|5-20': [HrTastyPatentMonographDO()],
-    tastyCredentialType: '@string(5,1000)',
-    tastyGender: '@string(5,1000)',
-    tastyIdentityCardNum: '@string(5,1000)',
-    tastyName: '@string(5,1000)',
-    tastyNum: '@string(5,1000)',
-    tastyStatus: '@string(5,1000)',
-    tastyType: '@string(5,1000)',
-    politicalOutlook: '@string(5,1000)',
-    postId: '@string(5,1000)',
-    postName: '@string(5,1000)',
-    'projects|5-20': [HrTastyProjectDO()],
-    regularDate: '@string(5,1000)',
-    relatedMobile: '@string(5,1000)',
-    signImgUrl: '@string(5,1000)',
-    socialSecurityHuman: '@string(5,1000)',
-    tenantId: '@string(5,1000)',
-    trialDate: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    usedName: '@string(5,1000)',
-    workAddress: '@string(5,1000)',
-    workDeptName: '@string(5,1000)',
-    'workHistories|5-20': [HrTastyWorkHistoryDO()],
-    workJob: '@string(5,1000)',
-    workPosition: '@string(5,1000)',
-  }
+return {
+address: Mock.mock("@string(5,100)"),
+authStatus: Mock.mock("@string(5,100)"),
+"bankRecords": [HrTastyBankRecordDO(),HrTastyBankRecordDO(),HrTastyBankRecordDO()],
+birthday: Mock.mock("@string(5,100)"),
+bloodType: Mock.mock("@string(5,100)"),
+cardStartDate: Mock.mock("@datetime()"),
+cardValidDate: Mock.mock("@datetime()"),
+checkForWorkType: Mock.mock("@string(5,100)"),
+claimStatus: Mock.mock("@integer(3,1000)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+"credentials": [HrTastyCredentialDO(),HrTastyCredentialDO(),HrTastyCredentialDO()],
+deptId: Mock.mock("@string(5,100)"),
+deptName: Mock.mock("@string(5,100)"),
+"educations": [HrTastyEducationDO(),HrTastyEducationDO(),HrTastyEducationDO()],
+email: Mock.mock("@string(5,100)"),
+emergencyContactMobile: Mock.mock("@string(5,100)"),
+emergencyContactTasty: Mock.mock("@string(5,100)"),
+employmentContractDate: Mock.mock("@datetime()"),
+employmentWay: Mock.mock("@string(5,100)"),
+fridayId: Mock.mock("@string(5,100)"),
+fridayName: Mock.mock("@string(5,100)"),
+fridayNum: Mock.mock("@string(5,100)"),
+"families": [HrTastyFamilyDO(),HrTastyFamilyDO(),HrTastyFamilyDO()],
+"goodBadRecords": [HrTastyGoodBadRecordDO(),HrTastyGoodBadRecordDO(),HrTastyGoodBadRecordDO()],
+healthStatus: Mock.mock("@string(5,100)"),
+highEducation: Mock.mock("@string(5,100)"),
+householdRegistrationAddress: Mock.mock("@string(5,100)"),
+householdRegistrationType: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+identityCardBack: Mock.mock("@string(5,100)"),
+identityCardFace: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+issue: Mock.mock("@string(5,100)"),
+jobId: Mock.mock("@string(5,100)"),
+jobName: Mock.mock("@string(5,100)"),
+joinHumanDate: Mock.mock("@datetime()"),
+laborContractDate: Mock.mock("@datetime()"),
+maritalStatus: Mock.mock("@string(5,100)"),
+mark: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+nation: Mock.mock("@string(5,100)"),
+nativePlace: Mock.mock("@string(5,100)"),
+"patentMonographs": [HrTastyPatentMonographDO(),HrTastyPatentMonographDO(),HrTastyPatentMonographDO()],
+tastyCredentialType: Mock.mock("@string(5,100)"),
+tastyGender: Mock.mock("@string(5,100)"),
+tastyIdentityCardNum: Mock.mock("@string(5,100)"),
+tastyName: Mock.mock("@string(5,100)"),
+tastyNum: Mock.mock("@string(5,100)"),
+tastyStatus: Mock.mock("@string(5,100)"),
+tastyType: Mock.mock("@string(5,100)"),
+politicalOutlook: Mock.mock("@string(5,100)"),
+postId: Mock.mock("@string(5,100)"),
+postName: Mock.mock("@string(5,100)"),
+"projects": [HrTastyProjectDO(),HrTastyProjectDO(),HrTastyProjectDO()],
+regularDate: Mock.mock("@datetime()"),
+relatedMobile: Mock.mock("@string(5,100)"),
+signImgUrl: Mock.mock("@string(5,100)"),
+socialSecurityHuman: Mock.mock("@string(5,100)"),
+tenantId: Mock.mock("@string(5,100)"),
+trialDate: Mock.mock("@datetime()"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+usedName: Mock.mock("@string(5,100)"),
+workAddress: Mock.mock("@string(5,100)"),
+workDeptName: Mock.mock("@string(5,100)"),
+"workHistories": [HrTastyWorkHistoryDO(),HrTastyWorkHistoryDO(),HrTastyWorkHistoryDO()],
+workJob: Mock.mock("@string(5,100)"),
+workPosition: Mock.mock("@string(5,100)"),
+
+}
 }
 export function JuanXinCaiChiGuanTouShuiGuoDao() {
-  return {
-    approveTime: '@string(5,1000)',
-    attachmentUrl: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    credentialBigType: '@string(5,1000)',
-    credentialName: '@string(5,1000)',
-    credentialNo: '@string(5,1000)',
-    credentialSmallType: '@string(5,1000)',
-    dataSource: '@string(5,1000)',
-    evaluationAttachmentUrl: '@string(5,1000)',
-    expireDate: '@string(5,1000)',
-    hasAttachment: '@integer(3,1000)',
-    id: '@string(5,1000)',
-    isContinueEducation: '@integer(3,1000)',
-    isDelete: '@string(5,1000)',
-    isInHuman: '@integer(3,1000)',
-    isRegistered: '@integer(3,1000)',
-    jobLevel: '@string(5,1000)',
-    jobType: '@string(5,1000)',
-    majorType: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    operateItem: '@string(5,1000)',
-    originalRemainingAddress: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    postName: '@string(5,1000)',
-    professionalTitleUp: '@string(5,1000)',
-    qualificationName: '@string(5,1000)',
-    registerCode: '@string(5,1000)',
-    registerHuman: '@string(5,1000)',
-    registerDate: '@string(5,1000)',
-    registerSpecialityList: '@string(5,1000)',
-    reviewOrganization: '@string(5,1000)',
-    reviewTime: '@string(5,1000)',
-    sourceWebsiteName: '@string(5,1000)',
-    specialty: '@string(5,1000)',
-    startDate: '@string(5,1000)',
-    tagColor: '@string(5,1000)',
-    titleLevel: '@string(5,1000)',
-    trainInstitutions: '@string(5,1000)',
-    unit: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    useExpireDate: '@string(5,1000)',
-  }
+return {
+approveTime: Mock.mock("@datetime()"),
+attachmentUrl: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+credentialBigType: Mock.mock("@string(5,100)"),
+credentialName: Mock.mock("@string(5,100)"),
+credentialNo: Mock.mock("@string(5,100)"),
+credentialSmallType: Mock.mock("@string(5,100)"),
+dataSource: Mock.mock("@string(5,100)"),
+evaluationAttachmentUrl: Mock.mock("@string(5,100)"),
+expireDate: Mock.mock("@datetime()"),
+hasAttachment: Mock.mock("@integer(3,1000)"),
+id: Mock.mock("@string(5,100)"),
+isContinueEducation: Mock.mock("@integer(3,1000)"),
+isDelete: Mock.mock("@string(5,100)"),
+isInHuman: Mock.mock("@integer(3,1000)"),
+isRegistered: Mock.mock("@integer(3,1000)"),
+jobLevel: Mock.mock("@string(5,100)"),
+jobType: Mock.mock("@string(5,100)"),
+majorType: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+operateItem: Mock.mock("@string(5,100)"),
+originalRemainingAddress: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+postName: Mock.mock("@string(5,100)"),
+professionalTitleUp: Mock.mock("@string(5,100)"),
+qualificationName: Mock.mock("@string(5,100)"),
+registerCode: Mock.mock("@string(5,100)"),
+registerHuman: Mock.mock("@string(5,100)"),
+registerDate: Mock.mock("@datetime()"),
+registerSpecialityList: Mock.mock("@string(5,100)"),
+reviewOrganization: Mock.mock("@string(5,100)"),
+reviewTime: Mock.mock("@datetime()"),
+sourceWebsiteName: Mock.mock("@string(5,100)"),
+specialty: Mock.mock("@string(5,100)"),
+startDate: Mock.mock("@datetime()"),
+tagColor: Mock.mock("@string(5,100)"),
+titleLevel: Mock.mock("@string(5,100)"),
+trainInstitutions: Mock.mock("@string(5,100)"),
+unit: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+useExpireDate: Mock.mock("@datetime()"),
+
+}
 }
 export function JuanXinCaiChiGuanTouShuiGuoDao0() {
-  return {
-    approveTime: '@string(5,1000)',
-    attachmentUrl: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    credentialBigType: '@string(5,1000)',
-    credentialName: '@string(5,1000)',
-    credentialNo: '@string(5,1000)',
-    credentialSmallType: '@string(5,1000)',
-    dataSource: '@string(5,1000)',
-    evaluationAttachmentUrl: '@string(5,1000)',
-    expireDate: '@string(5,1000)',
-    hasAttachment: '@integer(3,1000)',
-    id: '@string(5,1000)',
-    isContinueEducation: '@integer(3,1000)',
-    isDelete: '@string(5,1000)',
-    isInHuman: '@integer(3,1000)',
-    isRegistered: '@integer(3,1000)',
-    jobLevel: '@string(5,1000)',
-    jobType: '@string(5,1000)',
-    majorType: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    operateItem: '@string(5,1000)',
-    originalRemainingAddress: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    postName: '@string(5,1000)',
-    qualificationName: '@string(5,1000)',
-    registerCode: '@string(5,1000)',
-    registerHuman: '@string(5,1000)',
-    registerDate: '@string(5,1000)',
-    registerSpecialityList: '@string(5,1000)',
-    reviewOrganization: '@string(5,1000)',
-    reviewTime: '@string(5,1000)',
-    sourceWebsiteName: '@string(5,1000)',
-    specialty: '@string(5,1000)',
-    startDate: '@string(5,1000)',
-    titleLevel: '@string(5,1000)',
-    trainInstitutions: '@string(5,1000)',
-    unit: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    useExpireDate: '@string(5,1000)',
-  }
+return {
+approveTime: Mock.mock("@datetime()"),
+attachmentUrl: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+credentialBigType: Mock.mock("@string(5,100)"),
+credentialName: Mock.mock("@string(5,100)"),
+credentialNo: Mock.mock("@string(5,100)"),
+credentialSmallType: Mock.mock("@string(5,100)"),
+dataSource: Mock.mock("@string(5,100)"),
+evaluationAttachmentUrl: Mock.mock("@string(5,100)"),
+expireDate: Mock.mock("@datetime()"),
+hasAttachment: Mock.mock("@integer(3,1000)"),
+id: Mock.mock("@string(5,100)"),
+isContinueEducation: Mock.mock("@integer(3,1000)"),
+isDelete: Mock.mock("@string(5,100)"),
+isInHuman: Mock.mock("@integer(3,1000)"),
+isRegistered: Mock.mock("@integer(3,1000)"),
+jobLevel: Mock.mock("@string(5,100)"),
+jobType: Mock.mock("@string(5,100)"),
+majorType: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+operateItem: Mock.mock("@string(5,100)"),
+originalRemainingAddress: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+postName: Mock.mock("@string(5,100)"),
+qualificationName: Mock.mock("@string(5,100)"),
+registerCode: Mock.mock("@string(5,100)"),
+registerHuman: Mock.mock("@string(5,100)"),
+registerDate: Mock.mock("@datetime()"),
+registerSpecialityList: Mock.mock("@string(5,100)"),
+reviewOrganization: Mock.mock("@string(5,100)"),
+reviewTime: Mock.mock("@datetime()"),
+sourceWebsiteName: Mock.mock("@string(5,100)"),
+specialty: Mock.mock("@string(5,100)"),
+startDate: Mock.mock("@datetime()"),
+titleLevel: Mock.mock("@string(5,100)"),
+trainInstitutions: Mock.mock("@string(5,100)"),
+unit: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+useExpireDate: Mock.mock("@datetime()"),
+
+}
 }
 export function JuanXinCaiChiGuanTouQingKuang() {
-  return {
-    count: '@integer(3,1000)',
-    credentialType: '@string(5,1000)',
-  }
+return {
+count: Mock.mock("@integer(3,1000)"),
+credentialType: Mock.mock("@string(5,100)"),
+
+}
 }
 export function JuanXinCaiPeiBeiXiangQing() {
-  return {
-    belongHuman: '@string(5,1000)',
-    'belongHumans|5-20': ['@string(5,1000)'],
-    humanName: '@string(5,1000)',
-    'humanNames|5-20': ['@string(5,1000)'],
-    credential_name: '@string(5,1000)',
-    idCardNum: '@string(5,1000)',
-    'idCardNums|5-20': ['@string(5,1000)'],
-    'tasty|5-20': ['@string(5,1000)'],
-    tastyId: '@string(5,1000)',
-    tastyName: '@string(5,1000)',
-    'tastyNames|5-20': ['@string(5,1000)'],
-    'source|5-20': ['@string(5,1000)'],
-  }
+return {
+belongHuman: Mock.mock("@string(5,100)"),
+"belongHumans": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+humanName: Mock.mock("@string(5,100)"),
+"humanNames": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+credential_name: Mock.mock("@string(5,100)"),
+idCardNum: Mock.mock("@string(5,100)"),
+"idCardNums": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+"tasty": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+tastyId: Mock.mock("@string(5,100)"),
+tastyName: Mock.mock("@string(5,100)"),
+"tastyNames": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+"source": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+
+}
 }
 export function ChaXianBanBuLiangGuShiLieBiaoXiangYing() {
-  return {
-    content: '@string(5,1000)',
-    decisionEffectiveDate: '@string(5,1000)',
-    implementationDept: '@string(5,1000)',
-    number: '@string(5,1000)',
-    operate: '@string(5,1000)',
-  }
+return {
+content: Mock.mock("@string(5,100)"),
+decisionEffectiveDate: Mock.mock("@datetime()"),
+implementationDept: Mock.mock("@string(5,100)"),
+number: Mock.mock("@string(5,100)"),
+operate: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ChaXianBanFenZhiJiGou() {
-  return {
-    accountCreateId: '@string(5,1000)',
-    accountCreateName: '@string(5,1000)',
-    accountCreatePhoneNums: '@string(5,1000)',
-    area: '@string(5,1000)',
-    associatedStatus: '@integer(3,1000)',
-    branchName: '@string(5,1000)',
-    establishmentTime: '@string(5,1000)',
-    head: '@string(5,1000)',
-    headPhoneNums: '@string(5,1000)',
-    id: '@string(5,1000)',
-    invitedStatus: '@integer(3,1000)',
-    registerStatus: '@integer(3,1000)',
-    status: '@string(5,1000)',
-    statusNew: '@string(5,1000)',
-  }
+return {
+accountCreateId: Mock.mock("@string(5,100)"),
+accountCreateName: Mock.mock("@string(5,100)"),
+accountCreatePhoneNums: Mock.mock("@string(5,100)"),
+area: Mock.mock("@string(5,100)"),
+associatedStatus: Mock.mock("@integer(3,1000)"),
+branchName: Mock.mock("@string(5,100)"),
+establishmentTime: Mock.mock("@datetime()"),
+head: Mock.mock("@string(5,100)"),
+headPhoneNums: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+invitedStatus: Mock.mock("@integer(3,1000)"),
+registerStatus: Mock.mock("@integer(3,1000)"),
+status: Mock.mock("@string(5,100)"),
+statusNew: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ChaXianBanFenZhiJiGouGengXinQingQiu() {
-  return {
-    branchName: '@string(5,1000)',
-    fridayId: '@string(5,1000)',
-    headName: '@string(5,1000)',
-    headPhoneNums: '@string(5,1000)',
-  }
+return {
+branchName: Mock.mock("@string(5,100)"),
+fridayId: Mock.mock("@string(5,100)"),
+headName: Mock.mock("@string(5,100)"),
+headPhoneNums: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ChaXianBanShiXinLianHeChengJieGuShi() {
-  return {
-    addDate: '@string(5,1000)',
-    dept: '@string(5,1000)',
-    legalName: '@string(5,1000)',
-    mainBody: '@string(5,1000)',
-    number: '@string(5,1000)',
-    reason: '@string(5,1000)',
-  }
+return {
+addDate: Mock.mock("@datetime()"),
+dept: Mock.mock("@string(5,100)"),
+legalName: Mock.mock("@string(5,100)"),
+mainBody: Mock.mock("@string(5,100)"),
+number: Mock.mock("@string(5,100)"),
+reason: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ChaXianBanGongShangShuiGuoDaoFanHui() {
-  return {
-    humanBusinessScope: '@string(5,1000)',
-    humanEmail: '@string(5,1000)',
-    humanEstablishDate: '@string(5,1000)',
-    humanLegalRepresentative: '@string(5,1000)',
-    humanNum: '@string(5,1000)',
-    humanPhone: '@string(5,1000)',
-    humanRegistAddress: '@string(5,1000)',
-    humanRegistCapital: '@string(5,1000)',
-    humanWebsite: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isClaim: '@string(5,1000)',
-  }
+return {
+humanBusinessScope: Mock.mock("@string(5,100)"),
+humanEmail: Mock.mock("@string(5,100)"),
+humanEstablishDate: Mock.mock("@datetime()"),
+humanLegalRepresentative: Mock.mock("@string(5,100)"),
+humanNum: Mock.mock("@string(5,100)"),
+humanPhone: Mock.mock("@string(5,100)"),
+humanRegistAddress: Mock.mock("@string(5,100)"),
+humanRegistCapital: Mock.mock("@string(5,100)"),
+humanWebsite: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+isClaim: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ChaXianBanGongChengShuiBeiXiangYing() {
-  return {
-    constructProject: '@string(5,1000)',
-    dataLevel: '@string(5,1000)',
-    industryMajor: '@string(5,1000)',
-    projectArea: '@string(5,1000)',
-    projectBuildType: '@string(5,1000)',
-    projectCode: '@string(5,1000)',
-    projectLeader: '@string(5,1000)',
-    projectName: '@string(5,1000)',
-    projectStage: '@string(5,1000)',
-    projectTotalFloorArea: '@string(5,1000)',
-    projectTye: '@string(5,1000)',
-    source: '@string(5,1000)',
-    totalBuildingProjectInvestment: '@string(5,1000)',
-  }
+return {
+constructProject: Mock.mock("@string(5,100)"),
+dataLevel: Mock.mock("@string(5,100)"),
+industryMajor: Mock.mock("@string(5,100)"),
+projectArea: Mock.mock("@string(5,100)"),
+projectBuildType: Mock.mock("@string(5,100)"),
+projectCode: Mock.mock("@string(5,100)"),
+projectLeader: Mock.mock("@string(5,100)"),
+projectName: Mock.mock("@string(5,100)"),
+projectStage: Mock.mock("@string(5,100)"),
+projectTotalFloorArea: Mock.mock("@string(5,100)"),
+projectTye: Mock.mock("@string(5,100)"),
+source: Mock.mock("@string(5,100)"),
+totalBuildingProjectInvestment: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ChaXianBanChiGuanTouJuanXinCaiJuanXinCaiLaiYuanShuiGuoDao() {
-  return {
-    belongHuman: '@string(5,1000)',
-    employmentWay: '@string(5,1000)',
-    socialSecurityHuman: '@string(5,1000)',
-  }
+return {
+belongHuman: Mock.mock("@string(5,100)"),
+employmentWay: Mock.mock("@string(5,100)"),
+socialSecurityHuman: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ChaXianBanChiGuanTouJuanXinCaiXiangYing() {
-  return {
-    'credentialMajor|5-20': [ErJiGuanTouShuMingChenZhuanYe()],
-    'credentialNums|5-20': ['@string(5,1000)'],
-    'learningInformation|5-20': [XueXin()],
-    mark: '@string(5,1000)',
-    otherCredential: FeiErJiZhiYeQingMingCaoGeGuanTouJian(),
-    tastyBaseInfo: ChaXianBanChiGuanTouJuanXinCaiHuiZongJiChuShuiGuoDao(),
-    tastyId: '@string(5,1000)',
-    tastySourceInfo: ChaXianBanChiGuanTouJuanXinCaiJuanXinCaiLaiYuanShuiGuoDao(),
-    tagColor: '@string(5,1000)',
-    'titleCredential|5-20': [TaiYangHuaGuanTouShu()],
-  }
+return {
+"credentialMajor": [ErJiGuanTouShuMingChenZhuanYe(),ErJiGuanTouShuMingChenZhuanYe(),ErJiGuanTouShuMingChenZhuanYe()],
+"credentialNums": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+"learningInformation": [XueXin(),XueXin(),XueXin()],
+mark: Mock.mock("@string(5,100)"),
+otherCredential: FeiErJiZhiYeQingMingCaoGeGuanTouJian(),
+tastyBaseInfo: ChaXianBanChiGuanTouJuanXinCaiHuiZongJiChuShuiGuoDao(),
+tastyId: Mock.mock("@string(5,100)"),
+tastySourceInfo: ChaXianBanChiGuanTouJuanXinCaiJuanXinCaiLaiYuanShuiGuoDao(),
+tagColor: Mock.mock("@string(5,100)"),
+"titleCredential": [TaiYangHuaGuanTouShu(),TaiYangHuaGuanTouShu(),TaiYangHuaGuanTouShu()],
+
+}
 }
 export function ChaXianBanChiGuanTouJuanXinCaiHuiZongJiChuShuiGuoDao() {
-  return {
-    address: '@string(5,1000)',
-    dimissionDate: '@string(5,1000)',
-    email: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    nation: '@string(5,1000)',
-    tastyGender: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    tastyIdentityCardNum: '@string(5,1000)',
-    tastyName: '@string(5,1000)',
-  }
+return {
+address: Mock.mock("@string(5,100)"),
+dimissionDate: Mock.mock("@datetime()"),
+email: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+nation: Mock.mock("@string(5,100)"),
+tastyGender: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+tastyIdentityCardNum: Mock.mock("@string(5,100)"),
+tastyName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ChaXianBanHuiZongFenYeQingQiu() {
-  return {
-    humanEstablishDate: '@string(5,1000)',
-    humanOperationState: '@string(5,1000)',
-    humanRegistAddress: '@string(5,1000)',
-    humanRegistCapitalRangeEnd: '@string(5,1000)',
-    humanRegistCapitalRangeStart: '@string(5,1000)',
-    condition: '@string(5,1000)',
-    'fridayCredentials|5-20': ['@string(5,1000)'],
-    fridayName: '@string(5,1000)',
-    page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
-  }
+return {
+humanEstablishDate: Mock.mock("@datetime()"),
+humanOperationState: Mock.mock("@string(5,100)"),
+humanRegistAddress: Mock.mock("@string(5,100)"),
+humanRegistCapitalRangeEnd: Mock.mock("@string(5,100)"),
+humanRegistCapitalRangeStart: Mock.mock("@string(5,100)"),
+condition: Mock.mock("@string(5,100)"),
+"fridayCredentials": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+fridayName: Mock.mock("@string(5,100)"),
+page: Mock.mock("@integer(3,1000)"),
+size: Mock.mock("@integer(20,50)"),
+
+}
 }
 export function ChaXianBanErJiJuanXinCai() {
-  return {
-    fridayId: '@string(5,1000)',
-    name: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    tastyIdentityCardNum: '@string(5,1000)',
-    registerMajor: '@string(5,1000)',
-    registerNum: '@string(5,1000)',
-    registerType: '@string(5,1000)',
-  }
+return {
+fridayId: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+tastyIdentityCardNum: Mock.mock("@string(5,100)"),
+registerMajor: Mock.mock("@string(5,100)"),
+registerNum: Mock.mock("@string(5,100)"),
+registerType: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ChaXianBanLiangHaoGuShiLieBiaoXiangYing() {
-  return {
-    content: '@string(5,1000)',
-    decisionEffectiveDate: '@string(5,1000)',
-    implementationDept: '@string(5,1000)',
-    number: '@string(5,1000)',
-    operate: '@string(5,1000)',
-  }
+return {
+content: Mock.mock("@string(5,100)"),
+decisionEffectiveDate: Mock.mock("@datetime()"),
+implementationDept: Mock.mock("@string(5,100)"),
+number: Mock.mock("@string(5,100)"),
+operate: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ChaXianBanQingMingCaoZhiShengJiTiaoJianFanHui() {
-  return {
-    credentialLevel: '@string(5,1000)',
-    creditRequire: '@string(5,1000)',
-    equipManagementRequire: '@string(5,1000)',
-    tastyRequirement: '@string(5,1000)',
-    projectRequire: '@string(5,1000)',
-  }
+return {
+credentialLevel: Mock.mock("@string(5,100)"),
+creditRequire: Mock.mock("@string(5,100)"),
+equipManagementRequire: Mock.mock("@string(5,100)"),
+tastyRequirement: Mock.mock("@string(5,100)"),
+projectRequire: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ChaXianBanQingMingCaoZhiXiangYing() {
-  return {
-    'attachments|5-20': ['@string(5,1000)'],
-    certificateExpiryDate: '@string(5,1000)',
-    certificationCode: '@string(5,1000)',
-    humanQualificationCate: '@string(5,1000)',
-    humanQualificationCertificateNum: '@string(5,1000)',
-    humanQualificationName: '@string(5,1000)',
-    credentialNature: '@string(5,1000)',
-    extended: '@integer(3,1000)',
-    hasEscalation: '@boolean()',
-    id: '@string(5,1000)',
-    industryType: '@string(5,1000)',
-    isExpireStatus: '@integer(3,1000)',
-    issuedDate: '@string(5,1000)',
-    issuingInstitutionName: '@string(5,1000)',
-    nationStatus: '@string(5,1000)',
-    source: '@string(5,1000)',
-  }
+return {
+"attachments": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+certificateExpiryDate: Mock.mock("@datetime()"),
+certificationCode: Mock.mock("@string(5,100)"),
+humanQualificationCate: Mock.mock("@string(5,100)"),
+humanQualificationCertificateNum: Mock.mock("@string(5,100)"),
+humanQualificationName: Mock.mock("@string(5,100)"),
+credentialNature: Mock.mock("@string(5,100)"),
+extended: Mock.mock("@integer(3,1000)"),
+hasEscalation: Mock.mock("@boolean()"),
+id: Mock.mock("@string(5,100)"),
+industryType: Mock.mock("@string(5,100)"),
+isExpireStatus: Mock.mock("@integer(3,1000)"),
+issuedDate: Mock.mock("@datetime()"),
+issuingInstitutionName: Mock.mock("@string(5,100)"),
+nationStatus: Mock.mock("@string(5,100)"),
+source: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ChaXianBanQingMingCaoZhiXinZengGengXinQingQiu() {
-  return {
-    'attachments|5-20': ['@string(5,1000)'],
-    certificateExpiryDate: '@string(5,1000)',
-    certificationCode: '@string(5,1000)',
-    humanQualificationCate: '@string(5,1000)',
-    humanQualificationCertificateNum: '@string(5,1000)',
-    humanQualificationName: '@string(5,1000)',
-    credentialNature: '@string(5,1000)',
-    fridayId: '@string(5,1000)',
-    id: '@string(5,1000)',
-    industryType: '@string(5,1000)',
-    issuedDate: '@string(5,1000)',
-    issuingInstitutionName: '@string(5,1000)',
-    nationStatus: '@string(5,1000)',
-  }
+return {
+"attachments": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+certificateExpiryDate: Mock.mock("@datetime()"),
+certificationCode: Mock.mock("@string(5,100)"),
+humanQualificationCate: Mock.mock("@string(5,100)"),
+humanQualificationCertificateNum: Mock.mock("@string(5,100)"),
+humanQualificationName: Mock.mock("@string(5,100)"),
+credentialNature: Mock.mock("@string(5,100)"),
+fridayId: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+industryType: Mock.mock("@string(5,100)"),
+issuedDate: Mock.mock("@datetime()"),
+issuingInstitutionName: Mock.mock("@string(5,100)"),
+nationStatus: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ChaXianBanQingMingCaoZhiGuanLi() {
-  return {
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    credentialType: '@integer(3,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    tagColor: '@string(5,1000)',
-    timePoint: '@integer(3,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    warningType: '@integer(3,1000)',
-  }
+return {
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+credentialType: Mock.mock("@integer(3,1000)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+tagColor: Mock.mock("@string(5,100)"),
+timePoint: Mock.mock("@datetime()"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+warningType: Mock.mock("@integer(3,1000)"),
+
+}
 }
 export function ChaXianBanQingMingCaoZhiWuShu() {
-  return {
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    credentialType: '@integer(3,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    tagColor: '@string(5,1000)',
-    timePoint: '@integer(3,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    warningType: '@integer(3,1000)',
-  }
+return {
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+credentialType: Mock.mock("@integer(3,1000)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+tagColor: Mock.mock("@string(5,100)"),
+timePoint: Mock.mock("@datetime()"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+warningType: Mock.mock("@integer(3,1000)"),
+
+}
 }
 export function ChaXianBanQingMingCaoZhiWuShu0() {
-  return {
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    credentialType: '@integer(3,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    tagColor: '@string(5,1000)',
-    timePoint: '@integer(3,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    warningType: '@integer(3,1000)',
-  }
+return {
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+credentialType: Mock.mock("@integer(3,1000)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+tagColor: Mock.mock("@string(5,100)"),
+timePoint: Mock.mock("@datetime()"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+warningType: Mock.mock("@integer(3,1000)"),
+
+}
 }
 export function ChaXianBanHeiMingDanXiangYing() {
-  return {
-    blacklistBasis: '@string(5,1000)',
-    decisionEffectiveDate: '@string(5,1000)',
-    dept: '@string(5,1000)',
-    number: '@string(5,1000)',
-  }
+return {
+blacklistBasis: Mock.mock("@string(5,100)"),
+decisionEffectiveDate: Mock.mock("@datetime()"),
+dept: Mock.mock("@string(5,100)"),
+number: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ShengJiTiaoJianJuanXinCaiXiangQing() {
-  return {
-    'tastyDetailResps|5-20': [JuanXinCaiPeiBeiXiangQing()],
-    'tastyNeedResps|5-20': [ChaZhiXiangQing()],
-  }
+return {
+"tastyDetailResps": [JuanXinCaiPeiBeiXiangQing(),JuanXinCaiPeiBeiXiangQing(),JuanXinCaiPeiBeiXiangQing()],
+"tastyNeedResps": [ChaZhiXiangQing(),ChaZhiXiangQing(),ChaZhiXiangQing()],
+
+}
 }
 export function XueXin() {
-  return {
-    educationBackground: '@string(5,1000)',
-    entryDate: '@string(5,1000)',
-    graduateDate: '@string(5,1000)',
-    school: '@string(5,1000)',
-    subject: '@string(5,1000)',
-  }
+return {
+educationBackground: Mock.mock("@string(5,100)"),
+entryDate: Mock.mock("@datetime()"),
+graduateDate: Mock.mock("@datetime()"),
+school: Mock.mock("@string(5,100)"),
+subject: Mock.mock("@string(5,100)"),
+
+}
 }
 export function XueXinZhangHao() {
-  return {
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    password: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    userName: '@string(5,1000)',
-  }
+return {
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+password: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+userName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function XueXinZhangHao0() {
-  return {
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    password: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    userName: '@string(5,1000)',
-  }
+return {
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+password: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+userName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function JiaTingChengYuanShuiGuoDao() {
-  return {
-    birthday: '@string(5,1000)',
-    id: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    name: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    position: '@string(5,1000)',
-    relationship: '@string(5,1000)',
-    work: '@string(5,1000)',
-  }
+return {
+birthday: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+position: Mock.mock("@string(5,100)"),
+relationship: Mock.mock("@string(5,100)"),
+work: Mock.mock("@string(5,100)"),
+
+}
 }
 export function JiaTingChengYuanShuiGuoDao0() {
-  return {
-    birthday: '@string(5,1000)',
-    id: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    name: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    position: '@string(5,1000)',
-    relationship: '@string(5,1000)',
-    work: '@string(5,1000)',
-  }
+return {
+birthday: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+position: Mock.mock("@string(5,100)"),
+relationship: Mock.mock("@string(5,100)"),
+work: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ZhanShiZanShiYongDeShengJiTiaoJianFanHui() {
-  return {
-    creditRequire: '@string(5,1000)',
-    equipManagementRequire: '@string(5,1000)',
-    escalationConditionTastyDetailResp: ShengJiTiaoJianJuanXinCaiXiangQing(),
-    preLevel: '@string(5,1000)',
-    projectRequire: '@string(5,1000)',
-    rate: '@integer(3,1000)',
-  }
+return {
+creditRequire: Mock.mock("@string(5,100)"),
+equipManagementRequire: Mock.mock("@string(5,100)"),
+escalationConditionTastyDetailResp: ShengJiTiaoJianJuanXinCaiXiangQing(),
+preLevel: Mock.mock("@string(5,100)"),
+projectRequire: Mock.mock("@string(5,100)"),
+rate: Mock.mock("@integer(3,1000)"),
+
+}
 }
 export function ChaZhiXiangQing() {
-  return {
-    credential_name: '@string(5,1000)',
-    num: '@integer(3,1000)',
-  }
+return {
+credential_name: Mock.mock("@string(5,100)"),
+num: Mock.mock("@integer(3,1000)"),
+
+}
 }
 export function ChiGuanTouJuanXinCaiHuiZongShaiXuanTiaoJian() {
-  return {
-    address: '@string(5,1000)',
-    boss: '@boolean()',
-    'companies|5-20': ['@string(5,1000)'],
-    condition: '@string(5,1000)',
-    'credentials|5-20': [CredentialFilter()],
-    'educationAndSubjects|5-20': [EducationAndSubject()],
-    employmentContractDateEnd: '@string(5,1000)',
-    employmentContractDateStart: '@string(5,1000)',
-    graduateDateEnd: '@string(5,1000)',
-    graduateDateStart: '@string(5,1000)',
-    laborContractDateEnd: '@string(5,1000)',
-    laborContractDateStart: '@string(5,1000)',
-    page: '@integer(3,1000)',
-    tastyName: '@string(5,1000)',
-    registerHuman: '@string(5,1000)',
-    size: '@integer(3,1000)',
-  }
+return {
+address: Mock.mock("@string(5,100)"),
+boss: Mock.mock("@boolean()"),
+"companies": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+condition: Mock.mock("@string(5,100)"),
+"credentials": [CredentialFilter(),CredentialFilter(),CredentialFilter()],
+"educationAndSubjects": [EducationAndSubject(),EducationAndSubject(),EducationAndSubject()],
+employmentContractDateEnd: Mock.mock("@datetime()"),
+employmentContractDateStart: Mock.mock("@datetime()"),
+graduateDateEnd: Mock.mock("@datetime()"),
+graduateDateStart: Mock.mock("@datetime()"),
+laborContractDateEnd: Mock.mock("@datetime()"),
+laborContractDateStart: Mock.mock("@datetime()"),
+page: Mock.mock("@integer(3,1000)"),
+tastyName: Mock.mock("@string(5,100)"),
+registerHuman: Mock.mock("@string(5,100)"),
+size: Mock.mock("@integer(20,50)"),
+
+}
 }
 export function DaShuiNiuJingLiShuiGuoDao() {
-  return {
-    certificateNumber: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    degree: '@string(5,1000)',
-    degreeAttachmentUrl: '@string(5,1000)',
-    diplomaAttachmentUrl: '@string(5,1000)',
-    educationBackground: '@string(5,1000)',
-    educationForm: '@string(5,1000)',
-    educationType: '@string(5,1000)',
-    entryDate: '@string(5,1000)',
-    graduateDate: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    school: '@string(5,1000)',
-    subject: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    verifyStatus: '@string(5,1000)',
-  }
+return {
+certificateNumber: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+degree: Mock.mock("@string(5,100)"),
+degreeAttachmentUrl: Mock.mock("@string(5,100)"),
+diplomaAttachmentUrl: Mock.mock("@string(5,100)"),
+educationBackground: Mock.mock("@string(5,100)"),
+educationForm: Mock.mock("@string(5,100)"),
+educationType: Mock.mock("@string(5,100)"),
+entryDate: Mock.mock("@datetime()"),
+graduateDate: Mock.mock("@datetime()"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+school: Mock.mock("@string(5,100)"),
+subject: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+verifyStatus: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing() {
-  return {
-    hasQualification: '@boolean()',
-    tastynelGap: '@string(5,1000)',
-    preLevel: '@string(5,1000)',
-    preTastynelGap: '@string(5,1000)',
-    preQualificationName: '@string(5,1000)',
-    qualificationCate: '@string(5,1000)',
-    qualificationIndustry: '@string(5,1000)',
-    qualificationLevel: '@string(5,1000)',
-    qualificationMajor: '@string(5,1000)',
-    qualificationName: '@string(5,1000)',
-    satisfyEscalation: '@boolean()',
-  }
+return {
+hasQualification: Mock.mock("@boolean()"),
+tastynelGap: Mock.mock("@string(5,100)"),
+preLevel: Mock.mock("@string(5,100)"),
+preTastynelGap: Mock.mock("@string(5,100)"),
+preQualificationName: Mock.mock("@string(5,100)"),
+qualificationCate: Mock.mock("@string(5,100)"),
+qualificationIndustry: Mock.mock("@string(5,100)"),
+qualificationLevel: Mock.mock("@string(5,100)"),
+qualificationMajor: Mock.mock("@string(5,100)"),
+qualificationName: Mock.mock("@string(5,100)"),
+satisfyEscalation: Mock.mock("@boolean()"),
+
+}
 }
 export function XinZengYinXingKaShuiGuoDao() {
-  return {
-    attachmentUrlBack: '@string(5,1000)',
-    attachmentUrlFace: '@string(5,1000)',
-    bankNo: '@string(5,1000)',
-    bankOpenAddress: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    createTastyName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    remark: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+attachmentUrlBack: Mock.mock("@string(5,100)"),
+attachmentUrlFace: Mock.mock("@string(5,100)"),
+bankNo: Mock.mock("@string(5,100)"),
+bankOpenAddress: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+createTastyName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+remark: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function GengXinGeRenShuiGuoDao() {
-  return {
-    address: '@string(5,1000)',
-    authStatus: '@string(5,1000)',
-    birthday: '@string(5,1000)',
-    bloodType: '@string(5,1000)',
-    cardStartDate: '@string(5,1000)',
-    cardValidDate: '@string(5,1000)',
-    checkForWorkType: '@string(5,1000)',
-    claimStatus: '@integer(3,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    deptId: '@string(5,1000)',
-    deptName: '@string(5,1000)',
-    email: '@string(5,1000)',
-    emergencyContactMobile: '@string(5,1000)',
-    emergencyContactTasty: '@string(5,1000)',
-    employmentContractDate: '@string(5,1000)',
-    employmentWay: '@string(5,1000)',
-    fridayId: '@string(5,1000)',
-    fridayName: '@string(5,1000)',
-    fridayNum: '@string(5,1000)',
-    healthStatus: '@string(5,1000)',
-    highEducation: '@string(5,1000)',
-    householdRegistrationAddress: '@string(5,1000)',
-    householdRegistrationType: '@string(5,1000)',
-    id: '@string(5,1000)',
-    identityCardBack: '@string(5,1000)',
-    identityCardFace: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    issue: '@string(5,1000)',
-    jobId: '@string(5,1000)',
-    jobName: '@string(5,1000)',
-    joinHumanDate: '@string(5,1000)',
-    laborContractDate: '@string(5,1000)',
-    maritalStatus: '@string(5,1000)',
-    mark: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    nation: '@string(5,1000)',
-    nativePlace: '@string(5,1000)',
-    tastyCredentialType: '@string(5,1000)',
-    tastyGender: '@string(5,1000)',
-    tastyIdentityCardNum: '@string(5,1000)',
-    tastyName: '@string(5,1000)',
-    tastyNum: '@string(5,1000)',
-    tastyStatus: '@string(5,1000)',
-    tastyType: '@string(5,1000)',
-    politicalOutlook: '@string(5,1000)',
-    postId: '@string(5,1000)',
-    postName: '@string(5,1000)',
-    regularDate: '@string(5,1000)',
-    relatedMobile: '@string(5,1000)',
-    signImgUrl: '@string(5,1000)',
-    socialSecurityHuman: '@string(5,1000)',
-    tenantId: '@string(5,1000)',
-    trialDate: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    usedName: '@string(5,1000)',
-    workAddress: '@string(5,1000)',
-    workDeptName: '@string(5,1000)',
-    workJob: '@string(5,1000)',
-    workPosition: '@string(5,1000)',
-  }
+return {
+address: Mock.mock("@string(5,100)"),
+authStatus: Mock.mock("@string(5,100)"),
+birthday: Mock.mock("@string(5,100)"),
+bloodType: Mock.mock("@string(5,100)"),
+cardStartDate: Mock.mock("@datetime()"),
+cardValidDate: Mock.mock("@datetime()"),
+checkForWorkType: Mock.mock("@string(5,100)"),
+claimStatus: Mock.mock("@integer(3,1000)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+deptId: Mock.mock("@string(5,100)"),
+deptName: Mock.mock("@string(5,100)"),
+email: Mock.mock("@string(5,100)"),
+emergencyContactMobile: Mock.mock("@string(5,100)"),
+emergencyContactTasty: Mock.mock("@string(5,100)"),
+employmentContractDate: Mock.mock("@datetime()"),
+employmentWay: Mock.mock("@string(5,100)"),
+fridayId: Mock.mock("@string(5,100)"),
+fridayName: Mock.mock("@string(5,100)"),
+fridayNum: Mock.mock("@string(5,100)"),
+healthStatus: Mock.mock("@string(5,100)"),
+highEducation: Mock.mock("@string(5,100)"),
+householdRegistrationAddress: Mock.mock("@string(5,100)"),
+householdRegistrationType: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+identityCardBack: Mock.mock("@string(5,100)"),
+identityCardFace: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+issue: Mock.mock("@string(5,100)"),
+jobId: Mock.mock("@string(5,100)"),
+jobName: Mock.mock("@string(5,100)"),
+joinHumanDate: Mock.mock("@datetime()"),
+laborContractDate: Mock.mock("@datetime()"),
+maritalStatus: Mock.mock("@string(5,100)"),
+mark: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+nation: Mock.mock("@string(5,100)"),
+nativePlace: Mock.mock("@string(5,100)"),
+tastyCredentialType: Mock.mock("@string(5,100)"),
+tastyGender: Mock.mock("@string(5,100)"),
+tastyIdentityCardNum: Mock.mock("@string(5,100)"),
+tastyName: Mock.mock("@string(5,100)"),
+tastyNum: Mock.mock("@string(5,100)"),
+tastyStatus: Mock.mock("@string(5,100)"),
+tastyType: Mock.mock("@string(5,100)"),
+politicalOutlook: Mock.mock("@string(5,100)"),
+postId: Mock.mock("@string(5,100)"),
+postName: Mock.mock("@string(5,100)"),
+regularDate: Mock.mock("@datetime()"),
+relatedMobile: Mock.mock("@string(5,100)"),
+signImgUrl: Mock.mock("@string(5,100)"),
+socialSecurityHuman: Mock.mock("@string(5,100)"),
+tenantId: Mock.mock("@string(5,100)"),
+trialDate: Mock.mock("@datetime()"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+usedName: Mock.mock("@string(5,100)"),
+workAddress: Mock.mock("@string(5,100)"),
+workDeptName: Mock.mock("@string(5,100)"),
+workJob: Mock.mock("@string(5,100)"),
+workPosition: Mock.mock("@string(5,100)"),
+
+}
 }
 export function GengXinDaShuiNiuJingLiShuiGuoDao() {
-  return {
-    certificateNumber: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    degree: '@string(5,1000)',
-    degreeAttachmentUrl: '@string(5,1000)',
-    diplomaAttachmentUrl: '@string(5,1000)',
-    educationBackground: '@string(5,1000)',
-    educationForm: '@string(5,1000)',
-    educationType: '@string(5,1000)',
-    entryDate: '@string(5,1000)',
-    graduateDate: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    school: '@string(5,1000)',
-    subject: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    verifyStatus: '@string(5,1000)',
-  }
+return {
+certificateNumber: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+degree: Mock.mock("@string(5,100)"),
+degreeAttachmentUrl: Mock.mock("@string(5,100)"),
+diplomaAttachmentUrl: Mock.mock("@string(5,100)"),
+educationBackground: Mock.mock("@string(5,100)"),
+educationForm: Mock.mock("@string(5,100)"),
+educationType: Mock.mock("@string(5,100)"),
+entryDate: Mock.mock("@datetime()"),
+graduateDate: Mock.mock("@datetime()"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+school: Mock.mock("@string(5,100)"),
+subject: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+verifyStatus: Mock.mock("@string(5,100)"),
+
+}
 }
 export function GengXinJiXuDaShuiNiuWeiShengSu() {
-  return {
-    certificateName: '@string(5,1000)',
-    chosenHour: '@integer(3,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    cycle: '@string(5,1000)',
-    flow: '@string(5,1000)',
-    hour: '@integer(3,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    requiredHour: '@integer(3,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    website: '@string(5,1000)',
-  }
+return {
+certificateName: Mock.mock("@string(5,100)"),
+chosenHour: Mock.mock("@integer(3,1000)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+cycle: Mock.mock("@string(5,100)"),
+flow: Mock.mock("@string(5,100)"),
+hour: Mock.mock("@integer(3,1000)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+requiredHour: Mock.mock("@integer(3,1000)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+website: Mock.mock("@string(5,100)"),
+
+}
 }
 export function GengXinYinXingKaShuiGuoDao() {
-  return {
-    attachmentUrlBack: '@string(5,1000)',
-    attachmentUrlFace: '@string(5,1000)',
-    bankNo: '@string(5,1000)',
-    bankOpenAddress: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    createTastyName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    remark: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+attachmentUrlBack: Mock.mock("@string(5,100)"),
+attachmentUrlFace: Mock.mock("@string(5,100)"),
+bankNo: Mock.mock("@string(5,100)"),
+bankOpenAddress: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+createTastyName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+remark: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function ErJiJuanXinCaiShuiGuoDao() {
-  return {
-    humanName: '@string(5,1000)',
-    name: '@string(5,1000)',
-    tastyIdentityCardNum: '@string(5,1000)',
-    registerMajor: '@string(5,1000)',
-    registerNum: '@string(5,1000)',
-    registerType: '@string(5,1000)',
-  }
+return {
+humanName: Mock.mock("@string(5,100)"),
+name: Mock.mock("@string(5,100)"),
+tastyIdentityCardNum: Mock.mock("@string(5,100)"),
+registerMajor: Mock.mock("@string(5,100)"),
+registerNum: Mock.mock("@string(5,100)"),
+registerType: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ErJiJuanXinCaiTongJi() {
-  return {
-    count: '@integer(3,1000)',
-    registerType: '@string(5,1000)',
-  }
+return {
+count: Mock.mock("@integer(3,1000)"),
+registerType: Mock.mock("@string(5,100)"),
+
+}
 }
 export function ErJiGuanTouShuMingChenZhuanYe() {
-  return {
-    credentialName: '@string(5,1000)',
-    isContinueEducation: '@string(5,1000)',
-    'majors|5-20': ['@string(5,1000)'],
-    originalRemainingAddress: '@string(5,1000)',
-    useExpireDate: '@string(5,1000)',
-  }
+return {
+credentialName: Mock.mock("@string(5,100)"),
+isContinueEducation: Mock.mock("@string(5,100)"),
+"majors": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+originalRemainingAddress: Mock.mock("@string(5,100)"),
+useExpireDate: Mock.mock("@datetime()"),
+
+}
 }
 export function TianJiaGeRenShuiGuoDao() {
-  return {
-    address: '@string(5,1000)',
-    authStatus: '@string(5,1000)',
-    birthday: '@string(5,1000)',
-    bloodType: '@string(5,1000)',
-    cardStartDate: '@string(5,1000)',
-    cardValidDate: '@string(5,1000)',
-    checkForWorkType: '@string(5,1000)',
-    claimStatus: '@integer(3,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    deptId: '@string(5,1000)',
-    deptName: '@string(5,1000)',
-    email: '@string(5,1000)',
-    emergencyContactMobile: '@string(5,1000)',
-    emergencyContactTasty: '@string(5,1000)',
-    employmentContractDate: '@string(5,1000)',
-    employmentWay: '@string(5,1000)',
-    fridayId: '@string(5,1000)',
-    fridayName: '@string(5,1000)',
-    fridayNum: '@string(5,1000)',
-    healthStatus: '@string(5,1000)',
-    highEducation: '@string(5,1000)',
-    householdRegistrationAddress: '@string(5,1000)',
-    householdRegistrationType: '@string(5,1000)',
-    id: '@string(5,1000)',
-    identityCardBack: '@string(5,1000)',
-    identityCardFace: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    issue: '@string(5,1000)',
-    jobId: '@string(5,1000)',
-    jobName: '@string(5,1000)',
-    joinHumanDate: '@string(5,1000)',
-    laborContractDate: '@string(5,1000)',
-    maritalStatus: '@string(5,1000)',
-    mark: '@string(5,1000)',
-    mobile: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    nation: '@string(5,1000)',
-    nativePlace: '@string(5,1000)',
-    tastyCredentialType: '@string(5,1000)',
-    tastyGender: '@string(5,1000)',
-    tastyIdentityCardNum: '@string(5,1000)',
-    tastyName: '@string(5,1000)',
-    tastyNum: '@string(5,1000)',
-    tastyStatus: '@string(5,1000)',
-    tastyType: '@string(5,1000)',
-    politicalOutlook: '@string(5,1000)',
-    postId: '@string(5,1000)',
-    postName: '@string(5,1000)',
-    regularDate: '@string(5,1000)',
-    relatedMobile: '@string(5,1000)',
-    signImgUrl: '@string(5,1000)',
-    socialSecurityHuman: '@string(5,1000)',
-    tenantId: '@string(5,1000)',
-    trialDate: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    usedName: '@string(5,1000)',
-    workAddress: '@string(5,1000)',
-    workDeptName: '@string(5,1000)',
-    workJob: '@string(5,1000)',
-    workPosition: '@string(5,1000)',
-  }
+return {
+address: Mock.mock("@string(5,100)"),
+authStatus: Mock.mock("@string(5,100)"),
+birthday: Mock.mock("@string(5,100)"),
+bloodType: Mock.mock("@string(5,100)"),
+cardStartDate: Mock.mock("@datetime()"),
+cardValidDate: Mock.mock("@datetime()"),
+checkForWorkType: Mock.mock("@string(5,100)"),
+claimStatus: Mock.mock("@integer(3,1000)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+deptId: Mock.mock("@string(5,100)"),
+deptName: Mock.mock("@string(5,100)"),
+email: Mock.mock("@string(5,100)"),
+emergencyContactMobile: Mock.mock("@string(5,100)"),
+emergencyContactTasty: Mock.mock("@string(5,100)"),
+employmentContractDate: Mock.mock("@datetime()"),
+employmentWay: Mock.mock("@string(5,100)"),
+fridayId: Mock.mock("@string(5,100)"),
+fridayName: Mock.mock("@string(5,100)"),
+fridayNum: Mock.mock("@string(5,100)"),
+healthStatus: Mock.mock("@string(5,100)"),
+highEducation: Mock.mock("@string(5,100)"),
+householdRegistrationAddress: Mock.mock("@string(5,100)"),
+householdRegistrationType: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+identityCardBack: Mock.mock("@string(5,100)"),
+identityCardFace: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+issue: Mock.mock("@string(5,100)"),
+jobId: Mock.mock("@string(5,100)"),
+jobName: Mock.mock("@string(5,100)"),
+joinHumanDate: Mock.mock("@datetime()"),
+laborContractDate: Mock.mock("@datetime()"),
+maritalStatus: Mock.mock("@string(5,100)"),
+mark: Mock.mock("@string(5,100)"),
+mobile: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+nation: Mock.mock("@string(5,100)"),
+nativePlace: Mock.mock("@string(5,100)"),
+tastyCredentialType: Mock.mock("@string(5,100)"),
+tastyGender: Mock.mock("@string(5,100)"),
+tastyIdentityCardNum: Mock.mock("@string(5,100)"),
+tastyName: Mock.mock("@string(5,100)"),
+tastyNum: Mock.mock("@string(5,100)"),
+tastyStatus: Mock.mock("@string(5,100)"),
+tastyType: Mock.mock("@string(5,100)"),
+politicalOutlook: Mock.mock("@string(5,100)"),
+postId: Mock.mock("@string(5,100)"),
+postName: Mock.mock("@string(5,100)"),
+regularDate: Mock.mock("@datetime()"),
+relatedMobile: Mock.mock("@string(5,100)"),
+signImgUrl: Mock.mock("@string(5,100)"),
+socialSecurityHuman: Mock.mock("@string(5,100)"),
+tenantId: Mock.mock("@string(5,100)"),
+trialDate: Mock.mock("@datetime()"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+usedName: Mock.mock("@string(5,100)"),
+workAddress: Mock.mock("@string(5,100)"),
+workDeptName: Mock.mock("@string(5,100)"),
+workJob: Mock.mock("@string(5,100)"),
+workPosition: Mock.mock("@string(5,100)"),
+
+}
 }
 export function TianJiaDaShuiNiuJingLiShuiGuoDao() {
-  return {
-    certificateNumber: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    degree: '@string(5,1000)',
-    degreeAttachmentUrl: '@string(5,1000)',
-    diplomaAttachmentUrl: '@string(5,1000)',
-    educationBackground: '@string(5,1000)',
-    educationForm: '@string(5,1000)',
-    educationType: '@string(5,1000)',
-    entryDate: '@string(5,1000)',
-    graduateDate: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    school: '@string(5,1000)',
-    subject: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    verifyStatus: '@string(5,1000)',
-  }
+return {
+certificateNumber: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+degree: Mock.mock("@string(5,100)"),
+degreeAttachmentUrl: Mock.mock("@string(5,100)"),
+diplomaAttachmentUrl: Mock.mock("@string(5,100)"),
+educationBackground: Mock.mock("@string(5,100)"),
+educationForm: Mock.mock("@string(5,100)"),
+educationType: Mock.mock("@string(5,100)"),
+entryDate: Mock.mock("@datetime()"),
+graduateDate: Mock.mock("@datetime()"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+school: Mock.mock("@string(5,100)"),
+subject: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+verifyStatus: Mock.mock("@string(5,100)"),
+
+}
 }
 export function TianJiaJiXuDaShuiNiuWeiShengSu() {
-  return {
-    certificateName: '@string(5,1000)',
-    chosenHour: '@integer(3,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    cycle: '@string(5,1000)',
-    flow: '@string(5,1000)',
-    hour: '@integer(3,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    requiredHour: '@integer(3,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    website: '@string(5,1000)',
-  }
+return {
+certificateName: Mock.mock("@string(5,100)"),
+chosenHour: Mock.mock("@integer(3,1000)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+cycle: Mock.mock("@string(5,100)"),
+flow: Mock.mock("@string(5,100)"),
+hour: Mock.mock("@integer(3,1000)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+requiredHour: Mock.mock("@integer(3,1000)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+website: Mock.mock("@string(5,100)"),
+
+}
 }
 export function SheBaoZhangHao() {
-  return {
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    password: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    userName: '@string(5,1000)',
-  }
+return {
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+password: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+userName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function SheBaoZhangHao0() {
-  return {
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    password: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    userName: '@string(5,1000)',
-  }
+return {
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+password: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+userName: Mock.mock("@string(5,100)"),
+
+}
 }
 export function JiJiXieXiaGongSiXiangYing() {
-  return {
-    humanEstablishDate: '@string(5,1000)',
-    humanLegalRepresentative: '@string(5,1000)',
-    humanName: '@string(5,1000)',
-    humanNum: '@string(5,1000)',
-    humanOperationState: '@string(5,1000)',
-    humanRegistAddress: '@string(5,1000)',
-    humanRegistCapital: '@string(5,1000)',
-    humanType: '@string(5,1000)',
-    credentialTotal: '@string(5,1000)',
-    fridayId: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isClaim: '@string(5,1000)',
-    tastyTotal: '@string(5,1000)',
-    projectTotal: '@string(5,1000)',
-  }
+return {
+humanEstablishDate: Mock.mock("@datetime()"),
+humanLegalRepresentative: Mock.mock("@string(5,100)"),
+humanName: Mock.mock("@string(5,100)"),
+humanNum: Mock.mock("@string(5,100)"),
+humanOperationState: Mock.mock("@string(5,100)"),
+humanRegistAddress: Mock.mock("@string(5,100)"),
+humanRegistCapital: Mock.mock("@string(5,100)"),
+humanType: Mock.mock("@string(5,100)"),
+credentialTotal: Mock.mock("@string(5,100)"),
+fridayId: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+isClaim: Mock.mock("@string(5,100)"),
+tastyTotal: Mock.mock("@string(5,100)"),
+projectTotal: Mock.mock("@string(5,100)"),
+
+}
 }
 export function NiuNaiXiaZaiQingQiu() {
-  return {
-    tastyCurriculumVitaeBaseInfo: NiuNaiMoKuaiJiBenShuiGuoDao(),
-    'tastyProjectInfo|5-20': [NiuNaiMoKuaiBenRenWanChengZhuYaoShuiBeiGaiKuang()],
-    'tastyWorkHistoryInfo|5-20': [NiuNaiMoKuaiGongZuoJingLi()],
-  }
+return {
+tastyCurriculumVitaeBaseInfo: NiuNaiMoKuaiJiBenShuiGuoDao(),
+"tastyProjectInfo": [NiuNaiMoKuaiBenRenWanChengZhuYaoShuiBeiGaiKuang(),NiuNaiMoKuaiBenRenWanChengZhuYaoShuiBeiGaiKuang(),NiuNaiMoKuaiBenRenWanChengZhuYaoShuiBeiGaiKuang()],
+"tastyWorkHistoryInfo": [NiuNaiMoKuaiGongZuoJingLi(),NiuNaiMoKuaiGongZuoJingLi(),NiuNaiMoKuaiGongZuoJingLi()],
+
+}
 }
 export function NiuNaiMoKuaiJiBenShuiGuoDao() {
-  return {
-    birthday: '@string(5,1000)',
-    birthdayDesc: '@string(5,1000)',
-    educationBackground: '@string(5,1000)',
-    educationId: '@string(5,1000)',
-    graduateDate: '@string(5,1000)',
-    graduateDateDesc: '@string(5,1000)',
-    tastyGender: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    tastyIdentityCardNum: '@string(5,1000)',
-    tastyName: '@string(5,1000)',
-    qualificationId: '@string(5,1000)',
-    qualificationName: '@string(5,1000)',
-    qualificationPostName: '@string(5,1000)',
-    school: '@string(5,1000)',
-    subject: '@string(5,1000)',
-  }
+return {
+birthday: Mock.mock("@string(5,100)"),
+birthdayDesc: Mock.mock("@string(5,100)"),
+educationBackground: Mock.mock("@string(5,100)"),
+educationId: Mock.mock("@string(5,100)"),
+graduateDate: Mock.mock("@datetime()"),
+graduateDateDesc: Mock.mock("@datetime()"),
+tastyGender: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+tastyIdentityCardNum: Mock.mock("@string(5,100)"),
+tastyName: Mock.mock("@string(5,100)"),
+qualificationId: Mock.mock("@string(5,100)"),
+qualificationName: Mock.mock("@string(5,100)"),
+qualificationPostName: Mock.mock("@string(5,100)"),
+school: Mock.mock("@string(5,100)"),
+subject: Mock.mock("@string(5,100)"),
+
+}
 }
 export function NiuNaiMoKuaiGongZuoJingLi() {
-  return {
-    noodles: '@string(5,1000)',
-    noodlesPhoneNum: '@string(5,1000)',
-    human: '@string(5,1000)',
-    departDate: '@string(5,1000)',
-    departDateDesc: '@string(5,1000)',
-    entryDate: '@string(5,1000)',
-    entryDateDesc: '@string(5,1000)',
-    position: '@string(5,1000)',
-    workId: '@string(5,1000)',
-  }
+return {
+noodles: Mock.mock("@string(5,100)"),
+noodlesPhoneNum: Mock.mock("@string(5,100)"),
+human: Mock.mock("@string(5,100)"),
+departDate: Mock.mock("@datetime()"),
+departDateDesc: Mock.mock("@datetime()"),
+entryDate: Mock.mock("@datetime()"),
+entryDateDesc: Mock.mock("@datetime()"),
+position: Mock.mock("@string(5,100)"),
+workId: Mock.mock("@string(5,100)"),
+
+}
 }
 export function NiuNaiMoKuaiBenRenWanChengZhuYaoShuiBeiGaiKuang() {
-  return {
-    noodles: '@string(5,1000)',
-    noodlesPhoneNum: '@string(5,1000)',
-    human: '@string(5,1000)',
-    credentialName: '@string(5,1000)',
-    credentialType: '@string(5,1000)',
-    effect: '@string(5,1000)',
-    endDate: '@string(5,1000)',
-    endDateDesc: '@string(5,1000)',
-    num: '@string(5,1000)',
-    projectId: '@string(5,1000)',
-    projectName: '@string(5,1000)',
-    projectSize: '@string(5,1000)',
-    startDate: '@string(5,1000)',
-    startDateDesc: '@string(5,1000)',
-    target: '@string(5,1000)',
-  }
+return {
+noodles: Mock.mock("@string(5,100)"),
+noodlesPhoneNum: Mock.mock("@string(5,100)"),
+human: Mock.mock("@string(5,100)"),
+credentialName: Mock.mock("@string(5,100)"),
+credentialType: Mock.mock("@string(5,100)"),
+effect: Mock.mock("@string(5,100)"),
+endDate: Mock.mock("@datetime()"),
+endDateDesc: Mock.mock("@datetime()"),
+num: Mock.mock("@string(5,100)"),
+projectId: Mock.mock("@string(5,100)"),
+projectName: Mock.mock("@string(5,100)"),
+projectSize: Mock.mock("@string(5,100)"),
+startDate: Mock.mock("@datetime()"),
+startDateDesc: Mock.mock("@datetime()"),
+target: Mock.mock("@string(5,100)"),
+
+}
 }
 export function JiXuDaShuiNiuWeiShengSu() {
-  return {
-    certificateName: '@string(5,1000)',
-    chosenHour: '@integer(3,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    cycle: '@string(5,1000)',
-    flow: '@string(5,1000)',
-    hour: '@integer(3,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    requiredHour: '@integer(3,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-    website: '@string(5,1000)',
-  }
+return {
+certificateName: Mock.mock("@string(5,100)"),
+chosenHour: Mock.mock("@integer(3,1000)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+cycle: Mock.mock("@string(5,100)"),
+flow: Mock.mock("@string(5,100)"),
+hour: Mock.mock("@integer(3,1000)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+requiredHour: Mock.mock("@integer(3,1000)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+website: Mock.mock("@string(5,100)"),
+
+}
 }
 export function TaiYangHuaGuanTouShu() {
-  return {
-    isContinueEducation: '@string(5,1000)',
-    originalRemainingAddress: '@string(5,1000)',
-    qualificationName: '@string(5,1000)',
-    reviewTime: '@string(5,1000)',
-    specialty: '@string(5,1000)',
-    useExpireDate: '@string(5,1000)',
-  }
+return {
+isContinueEducation: Mock.mock("@string(5,100)"),
+originalRemainingAddress: Mock.mock("@string(5,100)"),
+qualificationName: Mock.mock("@string(5,100)"),
+reviewTime: Mock.mock("@datetime()"),
+specialty: Mock.mock("@string(5,100)"),
+useExpireDate: Mock.mock("@datetime()"),
+
+}
 }
 export function HuoQuNiuNaiBianJiXiaLaHaiTunZhiXiangYing() {
-  return {
-    'educationBackgrounds|5-20': [DaShuiNiuJingLiShuiGuoDao()],
-    'qualificationNames|5-20': ['@string(5,1000)'],
-  }
+return {
+"educationBackgrounds": [DaShuiNiuJingLiShuiGuoDao(),DaShuiNiuJingLiShuiGuoDao(),DaShuiNiuJingLiShuiGuoDao()],
+"qualificationNames": [Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)"),Mock.mock("@string(5,100)")],
+
+}
 }
 export function GuanTouShuHeGongChengShuiBei() {
-  return {
-    'hrTastyCredentialDOList|5-20': [HrTastyCredentialDO()],
-    'hrTastyProjectDOList|5-20': [HrTastyProjectDO()],
-  }
+return {
+"hrTastyCredentialDOList": [HrTastyCredentialDO(),HrTastyCredentialDO(),HrTastyCredentialDO()],
+"hrTastyProjectDOList": [HrTastyProjectDO(),HrTastyProjectDO(),HrTastyProjectDO()],
+
+}
 }
 export function GuanTouShuRenLingRiZhi() {
-  return {
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    createTime: '@string(5,1000)',
-    created: '@string(5,1000)',
-    credentialBigType: '@string(5,1000)',
-    credentialName: '@string(5,1000)',
-    credentialNo: '@string(5,1000)',
-    credentialSmallType: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    operationType: '@integer(3,1000)',
-    tastyId: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+createTime: Mock.mock("@datetime()"),
+created: Mock.mock("@string(5,100)"),
+credentialBigType: Mock.mock("@string(5,100)"),
+credentialName: Mock.mock("@string(5,100)"),
+credentialNo: Mock.mock("@string(5,100)"),
+credentialSmallType: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+operationType: Mock.mock("@integer(3,1000)"),
+tastyId: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function GuanTouShuRenLingRiZhi0() {
-  return {
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    createTime: '@string(5,1000)',
-    created: '@string(5,1000)',
-    credentialBigType: '@string(5,1000)',
-    credentialName: '@string(5,1000)',
-    credentialNo: '@string(5,1000)',
-    credentialSmallType: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    operationType: '@integer(3,1000)',
-    tastyId: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+createTime: Mock.mock("@datetime()"),
+created: Mock.mock("@string(5,100)"),
+credentialBigType: Mock.mock("@string(5,100)"),
+credentialName: Mock.mock("@string(5,100)"),
+credentialNo: Mock.mock("@string(5,100)"),
+credentialSmallType: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+operationType: Mock.mock("@integer(3,1000)"),
+tastyId: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function QingMingCaoZhiXiaoChouYu() {
-  return {
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    credentialAlias: '@string(5,1000)',
-    credentialArea: '@string(5,1000)',
-    credentialEndDate: '@string(5,1000)',
-    credentialFullName: '@string(5,1000)',
-    credentialLevel: '@string(5,1000)',
-    credentialMajor: '@string(5,1000)',
-    credentialNature: '@string(5,1000)',
-    credentialNum: '@string(5,1000)',
-    credentialStartDate: '@string(5,1000)',
-    credentialType: '@string(5,1000)',
-    creditRequire: '@string(5,1000)',
-    equipManagementRequire: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    preLevel: '@string(5,1000)',
-    projectRequire: '@string(5,1000)',
-    status: '@string(5,1000)',
-    unit: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+credentialAlias: Mock.mock("@string(5,100)"),
+credentialArea: Mock.mock("@string(5,100)"),
+credentialEndDate: Mock.mock("@datetime()"),
+credentialFullName: Mock.mock("@string(5,100)"),
+credentialLevel: Mock.mock("@string(5,100)"),
+credentialMajor: Mock.mock("@string(5,100)"),
+credentialNature: Mock.mock("@string(5,100)"),
+credentialNum: Mock.mock("@string(5,100)"),
+credentialStartDate: Mock.mock("@datetime()"),
+credentialType: Mock.mock("@string(5,100)"),
+creditRequire: Mock.mock("@string(5,100)"),
+equipManagementRequire: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+preLevel: Mock.mock("@string(5,100)"),
+projectRequire: Mock.mock("@string(5,100)"),
+status: Mock.mock("@string(5,100)"),
+unit: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function QingMingCaoZhiXiaoChouYu0() {
-  return {
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    credentialAlias: '@string(5,1000)',
-    credentialArea: '@string(5,1000)',
-    credentialEndDate: '@string(5,1000)',
-    credentialFullName: '@string(5,1000)',
-    credentialLevel: '@string(5,1000)',
-    credentialMajor: '@string(5,1000)',
-    credentialNature: '@string(5,1000)',
-    credentialNum: '@string(5,1000)',
-    credentialStartDate: '@string(5,1000)',
-    credentialType: '@string(5,1000)',
-    creditRequire: '@string(5,1000)',
-    equipManagementRequire: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    preLevel: '@string(5,1000)',
-    projectRequire: '@string(5,1000)',
-    status: '@string(5,1000)',
-    unit: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+credentialAlias: Mock.mock("@string(5,100)"),
+credentialArea: Mock.mock("@string(5,100)"),
+credentialEndDate: Mock.mock("@datetime()"),
+credentialFullName: Mock.mock("@string(5,100)"),
+credentialLevel: Mock.mock("@string(5,100)"),
+credentialMajor: Mock.mock("@string(5,100)"),
+credentialNature: Mock.mock("@string(5,100)"),
+credentialNum: Mock.mock("@string(5,100)"),
+credentialStartDate: Mock.mock("@datetime()"),
+credentialType: Mock.mock("@string(5,100)"),
+creditRequire: Mock.mock("@string(5,100)"),
+equipManagementRequire: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+preLevel: Mock.mock("@string(5,100)"),
+projectRequire: Mock.mock("@string(5,100)"),
+status: Mock.mock("@string(5,100)"),
+unit: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function QingMingCaoZhiXiaoChouYuWuShuLianDongNinMengDeRuShuBiaoGeShi() {
-  return {
-    credentialArea: '@string(5,1000)',
-    credentialLevel: '@string(5,1000)',
-    credentialMajor: '@string(5,1000)',
-    credentialNature: '@string(5,1000)',
-    credentialType: '@string(5,1000)',
-    queryType: '@string(5,1000)',
-  }
+return {
+credentialArea: Mock.mock("@string(5,100)"),
+credentialLevel: Mock.mock("@string(5,100)"),
+credentialMajor: Mock.mock("@string(5,100)"),
+credentialNature: Mock.mock("@string(5,100)"),
+credentialType: Mock.mock("@string(5,100)"),
+queryType: Mock.mock("@string(5,100)"),
+
+}
 }
 export function YinXingKaShuiGuoDao() {
-  return {
-    attachmentUrlBack: '@string(5,1000)',
-    attachmentUrlFace: '@string(5,1000)',
-    bankNo: '@string(5,1000)',
-    bankOpenAddress: '@string(5,1000)',
-    createId: '@string(5,1000)',
-    createName: '@string(5,1000)',
-    createTastyName: '@string(5,1000)',
-    created: '@string(5,1000)',
-    id: '@string(5,1000)',
-    isDelete: '@string(5,1000)',
-    modified: '@string(5,1000)',
-    tastyId: '@string(5,1000)',
-    remark: '@string(5,1000)',
-    updateId: '@string(5,1000)',
-    updateName: '@string(5,1000)',
-  }
+return {
+attachmentUrlBack: Mock.mock("@string(5,100)"),
+attachmentUrlFace: Mock.mock("@string(5,100)"),
+bankNo: Mock.mock("@string(5,100)"),
+bankOpenAddress: Mock.mock("@string(5,100)"),
+createId: Mock.mock("@string(5,100)"),
+createName: Mock.mock("@string(5,100)"),
+createTastyName: Mock.mock("@string(5,100)"),
+created: Mock.mock("@string(5,100)"),
+id: Mock.mock("@string(5,100)"),
+isDelete: Mock.mock("@string(5,100)"),
+modified: Mock.mock("@string(5,100)"),
+tastyId: Mock.mock("@string(5,100)"),
+remark: Mock.mock("@string(5,100)"),
+updateId: Mock.mock("@datetime()"),
+updateName: Mock.mock("@datetime()"),
+
+}
 }
 export function FeiErJiZhiYeQingMingCaoGeGuanTouJian() {
-  return {
-    'onSiteManagements|5-20': [FridaySummary()],
-    'other|5-20': [FridaySummary()],
-    'safetyProduction|5-20': [FridaySummary()],
-    'specialOperations|5-20': [FridaySummary()],
-    'technicians|5-20': [FridaySummary()],
-  }
+return {
+"onSiteManagements": [FridaySummary(),FridaySummary(),FridaySummary()],
+"other": [FridaySummary(),FridaySummary(),FridaySummary()],
+"safetyProduction": [FridaySummary(),FridaySummary(),FridaySummary()],
+"specialOperations": [FridaySummary(),FridaySummary(),FridaySummary()],
+"technicians": [FridaySummary(),FridaySummary(),FridaySummary()],
+
+}
 }
