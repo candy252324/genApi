@@ -4,7 +4,7 @@ const path = require('node:path')
 const { exec } = require('node:child_process')
 const axios = require('axios')
 
-const { cleanDir } = require('../utils')
+const { cleanDir, handleJsType, handleWeirdName } = require('../utils')
 const { handleApiModel } = require('../genApi/handleApiModel')
 const { genInterface } = require('../genApi/handleInterface')
 
@@ -123,8 +123,7 @@ Mock.setup({
       })
 
       item.apiList.forEach((obj) => {
-        let matchPath = name + obj.namespace // 如： srcApi + user
-        matchPath = matchPath.replace(/\./g, '') // 去除点号
+        let matchPath = handleWeirdName(name + obj.namespace) // 如： srcApi + user
         imortStr += `import * as ${matchPath} from './${outputDir}/${obj.namespace}.js'\n`
         ;(obj.apis || []).forEach((api) => {
           mockStr += `Mock.mock('${api.url}', '${api.method}', ${matchPath}.${api.name})\n`
@@ -157,17 +156,30 @@ Mock.setup({
 function writeMockToFile(apiList, { interfaces, absOutputDir }) {
   apiList.forEach((item) => {
     const namespace = item.namespace
-    let mockStr = `import Mock from 'mockjs'\n`
+    let mockStr = `import Mock from 'mockjs'\n\n`
+    let fileUsedInterface = [] // 当前文件用到的 interface
     item.apis.forEach((api) => {
       const { name, url, method, summary, parameters, outputInterface } = api
-      const returnStr = getReturnStr(outputInterface, interfaces)
-      const curStr = `
-export function ${name} (){
-  return ${returnStr ? '{\n' + returnStr + '\n}' : '{}'}
-}
-      `
+      // 出参存在且不是简单类型
+      if (outputInterface && !handleJsType(outputInterface)) {
+        fileUsedInterface.push(outputInterface)
+      }
+      const _summary = summary ? `/** ${summary} */\n` : ''
+      const curStr = `${_summary}export const ${name} = () => ${outputInterface}()\n\n`
       mockStr += curStr
     })
+
+    // interface 引入
+    let importStr = ''
+    fileUsedInterface = [...new Set(fileUsedInterface)]
+    if (fileUsedInterface.length) {
+      importStr += `import {`
+      fileUsedInterface.forEach((item, index) => {
+        importStr += index === 0 ? `${item}` : `,${item}`
+      })
+      importStr += `} from './_interfaces'`
+    }
+
     fs.access(absOutputDir, (err) => {
       if (err) {
         // 若目标目录不存在，则创建
@@ -175,7 +187,7 @@ export function ${name} (){
       }
       // 写入目标目录
       const targetFile = path.join(absOutputDir, `${namespace}.js`)
-      fs.writeFileSync(targetFile, `${mockStr}\n`)
+      fs.writeFileSync(targetFile, `${importStr}\n${mockStr}\n`)
 
       // 格式化
       // console.log(`格式化 ${targetFile}`)
