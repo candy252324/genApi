@@ -129,7 +129,8 @@ Mock.setup({
         let matchPath = handleWeirdName(name + obj.namespace) // 如： srcApi + user
         imortStr += `import * as ${matchPath} from './${outputDir}/${obj.namespace}.js'\n`
         ;(obj.apis || []).forEach((api) => {
-          mockStr += `Mock.mock('${api.url}', '${api.method}', ${matchPath}.${api.name})\n`
+          const _url = api.url.replace(/\//g, '\\/')
+          mockStr += `Mock.mock(/${_url}/, '${api.method}', ${matchPath}.${api.name})\n`
         })
       })
     }
@@ -249,7 +250,7 @@ function writeInterfaceToFile(definitions, absOutputDir) {
    *  }
    */
 function getInterfaceMock(model) {
-  const { name, type, isSimpleJsType } = model
+  const { name, type, isSimpleJsType, isArray } = model
 
   let mockStr = ''
   // 如果是简单类型
@@ -260,7 +261,11 @@ function getInterfaceMock(model) {
   } else {
     mockStr = `${type}()`
   }
-  return `${name}: ${mockStr},\n`
+  if (isArray) {
+    return `\"${name}|5-20\": [${mockStr}],\n`
+  } else {
+    return `${name}: ${mockStr},\n`
+  }
 }
 
 /** 获取简单数据类型的 mock */

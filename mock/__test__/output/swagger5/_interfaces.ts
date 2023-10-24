@@ -1,7 +1,7 @@
 export function AddTastyCredentialProjectReq() {
   return {
-    addHrTastyCredentialReqList: JuanXinCaiChiGuanTouShuiGuoDao0(),
-    addHrTastyProjectReqList: JuanXinCaiGongZuoYeJi(),
+    'addHrTastyCredentialReqList|5-20': [JuanXinCaiChiGuanTouShuiGuoDao0()],
+    'addHrTastyProjectReqList|5-20': [JuanXinCaiGongZuoYeJi()],
   }
 }
 export function ApiResponse() {
@@ -267,7 +267,7 @@ export function ApiResponseFridayBranchRawResp() {
 export function ApiResponseJSONArray() {
   return {
     code: '@integer(3,1000)',
-    data: '@string(5,1000)',
+    'data|5-20': ['@string(5,1000)'],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -287,7 +287,7 @@ export function ApiResponseJSONObject() {
 export function ApiResponseListEntCredentialExpireAlertResp() {
   return {
     code: '@integer(3,1000)',
-    data: EntCredentialExpireAlertResp(),
+    'data|5-20': [EntCredentialExpireAlertResp()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -297,7 +297,7 @@ export function ApiResponseListEntCredentialExpireAlertResp() {
 export function ApiResponseListHrTastyCredentialDO() {
   return {
     code: '@integer(3,1000)',
-    data: HrTastyCredentialDO(),
+    'data|5-20': [HrTastyCredentialDO()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -307,7 +307,7 @@ export function ApiResponseListHrTastyCredentialDO() {
 export function ApiResponseListMap() {
   return {
     code: '@integer(3,1000)',
-    data: '@string(5,1000)',
+    'data|5-20': ['@string(5,1000)'],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -317,7 +317,7 @@ export function ApiResponseListMap() {
 export function ApiResponseListTastyCredEvalInfo() {
   return {
     code: '@integer(3,1000)',
-    data: TastyCredEvalInfo(),
+    'data|5-20': [TastyCredEvalInfo()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -327,7 +327,7 @@ export function ApiResponseListTastyCredEvalInfo() {
 export function ApiResponseListTastyCredUpRecommendResp() {
   return {
     code: '@integer(3,1000)',
-    data: TastyCredUpRecommendResp(),
+    'data|5-20': [TastyCredUpRecommendResp()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -337,7 +337,7 @@ export function ApiResponseListTastyCredUpRecommendResp() {
 export function ApiResponseListVOResp() {
   return {
     code: '@integer(3,1000)',
-    data: VOResp(),
+    'data|5-20': [VOResp()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -347,7 +347,7 @@ export function ApiResponseListVOResp() {
 export function ApiResponseListobject() {
   return {
     code: '@integer(3,1000)',
-    data: '@string(5,1000)',
+    'data|5-20': ['@string(5,1000)'],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -357,7 +357,7 @@ export function ApiResponseListobject() {
 export function ApiResponseListstring() {
   return {
     code: '@integer(3,1000)',
-    data: '@string(5,1000)',
+    'data|5-20': ['@string(5,1000)'],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -367,7 +367,7 @@ export function ApiResponseListstring() {
 export function ApiResponseListJuanXinCaiGongZuoYeJi() {
   return {
     code: '@integer(3,1000)',
-    data: JuanXinCaiGongZuoYeJi(),
+    'data|5-20': [JuanXinCaiGongZuoYeJi()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -377,7 +377,7 @@ export function ApiResponseListJuanXinCaiGongZuoYeJi() {
 export function ApiResponseListJuanXinCaiGongZuoJingLi() {
   return {
     code: '@integer(3,1000)',
-    data: JuanXinCaiGongZuoJingLi0(),
+    'data|5-20': [JuanXinCaiGongZuoJingLi0()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -387,7 +387,7 @@ export function ApiResponseListJuanXinCaiGongZuoJingLi() {
 export function ApiResponseListJuanXinCaiChiGuanTouShuiGuoDao() {
   return {
     code: '@integer(3,1000)',
-    data: JuanXinCaiChiGuanTouShuiGuoDao(),
+    'data|5-20': [JuanXinCaiChiGuanTouShuiGuoDao()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -397,7 +397,7 @@ export function ApiResponseListJuanXinCaiChiGuanTouShuiGuoDao() {
 export function ApiResponseListJuanXinCaiChiGuanTouQingKuang() {
   return {
     code: '@integer(3,1000)',
-    data: JuanXinCaiChiGuanTouQingKuang(),
+    'data|5-20': [JuanXinCaiChiGuanTouQingKuang()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -407,7 +407,7 @@ export function ApiResponseListJuanXinCaiChiGuanTouQingKuang() {
 export function ApiResponseListChaXianBanBuLiangGuShiLieBiaoXiangYing() {
   return {
     code: '@integer(3,1000)',
-    data: ChaXianBanBuLiangGuShiLieBiaoXiangYing(),
+    'data|5-20': [ChaXianBanBuLiangGuShiLieBiaoXiangYing()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -417,7 +417,7 @@ export function ApiResponseListChaXianBanBuLiangGuShiLieBiaoXiangYing() {
 export function ApiResponseListChaXianBanShiXinLianHeChengJieGuShi() {
   return {
     code: '@integer(3,1000)',
-    data: ChaXianBanShiXinLianHeChengJieGuShi(),
+    'data|5-20': [ChaXianBanShiXinLianHeChengJieGuShi()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -427,7 +427,7 @@ export function ApiResponseListChaXianBanShiXinLianHeChengJieGuShi() {
 export function ApiResponseListChaXianBanGongChengShuiBeiXiangYing() {
   return {
     code: '@integer(3,1000)',
-    data: ChaXianBanGongChengShuiBeiXiangYing(),
+    'data|5-20': [ChaXianBanGongChengShuiBeiXiangYing()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -437,7 +437,7 @@ export function ApiResponseListChaXianBanGongChengShuiBeiXiangYing() {
 export function ApiResponseListChaXianBanErJiJuanXinCai() {
   return {
     code: '@integer(3,1000)',
-    data: ChaXianBanErJiJuanXinCai(),
+    'data|5-20': [ChaXianBanErJiJuanXinCai()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -447,7 +447,7 @@ export function ApiResponseListChaXianBanErJiJuanXinCai() {
 export function ApiResponseListChaXianBanLiangHaoGuShiLieBiaoXiangYing() {
   return {
     code: '@integer(3,1000)',
-    data: ChaXianBanLiangHaoGuShiLieBiaoXiangYing(),
+    'data|5-20': [ChaXianBanLiangHaoGuShiLieBiaoXiangYing()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -457,7 +457,7 @@ export function ApiResponseListChaXianBanLiangHaoGuShiLieBiaoXiangYing() {
 export function ApiResponseListChaXianBanQingMingCaoZhiXiangYing() {
   return {
     code: '@integer(3,1000)',
-    data: ChaXianBanQingMingCaoZhiXiangYing(),
+    'data|5-20': [ChaXianBanQingMingCaoZhiXiangYing()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -467,7 +467,7 @@ export function ApiResponseListChaXianBanQingMingCaoZhiXiangYing() {
 export function ApiResponseListChaXianBanQingMingCaoZhiWuShu() {
   return {
     code: '@integer(3,1000)',
-    data: ChaXianBanQingMingCaoZhiWuShu0(),
+    'data|5-20': [ChaXianBanQingMingCaoZhiWuShu0()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -477,7 +477,7 @@ export function ApiResponseListChaXianBanQingMingCaoZhiWuShu() {
 export function ApiResponseListChaXianBanHeiMingDanXiangYing() {
   return {
     code: '@integer(3,1000)',
-    data: ChaXianBanHeiMingDanXiangYing(),
+    'data|5-20': [ChaXianBanHeiMingDanXiangYing()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -487,7 +487,7 @@ export function ApiResponseListChaXianBanHeiMingDanXiangYing() {
 export function ApiResponseListJiaTingChengYuanShuiGuoDao() {
   return {
     code: '@integer(3,1000)',
-    data: JiaTingChengYuanShuiGuoDao0(),
+    'data|5-20': [JiaTingChengYuanShuiGuoDao0()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -497,7 +497,7 @@ export function ApiResponseListJiaTingChengYuanShuiGuoDao() {
 export function ApiResponseListDaShuiNiuJingLiShuiGuoDao() {
   return {
     code: '@integer(3,1000)',
-    data: DaShuiNiuJingLiShuiGuoDao(),
+    'data|5-20': [DaShuiNiuJingLiShuiGuoDao()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -507,7 +507,7 @@ export function ApiResponseListDaShuiNiuJingLiShuiGuoDao() {
 export function ApiResponseListErJiJuanXinCaiTongJi() {
   return {
     code: '@integer(3,1000)',
-    data: ErJiJuanXinCaiTongJi(),
+    'data|5-20': [ErJiJuanXinCaiTongJi()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -517,7 +517,7 @@ export function ApiResponseListErJiJuanXinCaiTongJi() {
 export function ApiResponseListJiJiXieXiaGongSiXiangYing() {
   return {
     code: '@integer(3,1000)',
-    data: JiJiXieXiaGongSiXiangYing(),
+    'data|5-20': [JiJiXieXiaGongSiXiangYing()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -527,7 +527,7 @@ export function ApiResponseListJiJiXieXiaGongSiXiangYing() {
 export function ApiResponseListYinXingKaShuiGuoDao() {
   return {
     code: '@integer(3,1000)',
-    data: YinXingKaShuiGuoDao(),
+    'data|5-20': [YinXingKaShuiGuoDao()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -627,7 +627,7 @@ export function ApiResponsePlanTastyResp() {
 export function ApiResponseSetstring() {
   return {
     code: '@integer(3,1000)',
-    data: '@string(5,1000)',
+    'data|5-20': ['@string(5,1000)'],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -797,7 +797,7 @@ export function ApiResponseQingMingCaoZhiXiaoChouYu() {
 export function ComPageEntCredPlanResp() {
   return {
     current: '@string(5,1000)',
-    records: EntCredPlanResp(),
+    'records|5-20': [EntCredPlanResp()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -805,7 +805,7 @@ export function ComPageEntCredPlanResp() {
 export function ComPageTastyCredExamResultResp() {
   return {
     current: '@string(5,1000)',
-    records: TastyCredExamResultResp(),
+    'records|5-20': [TastyCredExamResultResp()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -813,7 +813,7 @@ export function ComPageTastyCredExamResultResp() {
 export function ComPagestring() {
   return {
     current: '@string(5,1000)',
-    records: '@string(5,1000)',
+    'records|5-20': ['@string(5,1000)'],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -821,7 +821,7 @@ export function ComPagestring() {
 export function ComPageYeJiRenLingRiZhi() {
   return {
     current: '@string(5,1000)',
-    records: YeJiRenLingRiZhi(),
+    'records|5-20': [YeJiRenLingRiZhi()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -829,7 +829,7 @@ export function ComPageYeJiRenLingRiZhi() {
 export function ComPageJuanXinCaiGongZuoYeJi() {
   return {
     current: '@string(5,1000)',
-    records: JuanXinCaiGongZuoYeJi(),
+    'records|5-20': [JuanXinCaiGongZuoYeJi()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -837,7 +837,7 @@ export function ComPageJuanXinCaiGongZuoYeJi() {
 export function ComPageJuanXinCaiChiGuanTouShuiGuoDao() {
   return {
     current: '@string(5,1000)',
-    records: JuanXinCaiChiGuanTouShuiGuoDao(),
+    'records|5-20': [JuanXinCaiChiGuanTouShuiGuoDao()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -845,7 +845,7 @@ export function ComPageJuanXinCaiChiGuanTouShuiGuoDao() {
 export function ComPageChaXianBanBuLiangGuShiLieBiaoXiangYing() {
   return {
     current: '@string(5,1000)',
-    records: ChaXianBanBuLiangGuShiLieBiaoXiangYing(),
+    'records|5-20': [ChaXianBanBuLiangGuShiLieBiaoXiangYing()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -853,7 +853,7 @@ export function ComPageChaXianBanBuLiangGuShiLieBiaoXiangYing() {
 export function ComPageChaXianBanFenZhiJiGou() {
   return {
     current: '@string(5,1000)',
-    records: ChaXianBanFenZhiJiGou(),
+    'records|5-20': [ChaXianBanFenZhiJiGou()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -861,7 +861,7 @@ export function ComPageChaXianBanFenZhiJiGou() {
 export function ComPageChaXianBanShiXinLianHeChengJieGuShi() {
   return {
     current: '@string(5,1000)',
-    records: ChaXianBanShiXinLianHeChengJieGuShi(),
+    'records|5-20': [ChaXianBanShiXinLianHeChengJieGuShi()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -869,7 +869,7 @@ export function ComPageChaXianBanShiXinLianHeChengJieGuShi() {
 export function ComPageChaXianBanGongChengShuiBeiXiangYing() {
   return {
     current: '@string(5,1000)',
-    records: ChaXianBanGongChengShuiBeiXiangYing(),
+    'records|5-20': [ChaXianBanGongChengShuiBeiXiangYing()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -877,7 +877,7 @@ export function ComPageChaXianBanGongChengShuiBeiXiangYing() {
 export function ComPageChaXianBanChiGuanTouJuanXinCaiXiangYing() {
   return {
     current: '@string(5,1000)',
-    records: ChaXianBanChiGuanTouJuanXinCaiXiangYing(),
+    'records|5-20': [ChaXianBanChiGuanTouJuanXinCaiXiangYing()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -885,7 +885,7 @@ export function ComPageChaXianBanChiGuanTouJuanXinCaiXiangYing() {
 export function ComPageChaXianBanErJiJuanXinCai() {
   return {
     current: '@string(5,1000)',
-    records: ChaXianBanErJiJuanXinCai(),
+    'records|5-20': [ChaXianBanErJiJuanXinCai()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -893,7 +893,7 @@ export function ComPageChaXianBanErJiJuanXinCai() {
 export function ComPageChaXianBanLiangHaoGuShiLieBiaoXiangYing() {
   return {
     current: '@string(5,1000)',
-    records: ChaXianBanLiangHaoGuShiLieBiaoXiangYing(),
+    'records|5-20': [ChaXianBanLiangHaoGuShiLieBiaoXiangYing()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -901,7 +901,7 @@ export function ComPageChaXianBanLiangHaoGuShiLieBiaoXiangYing() {
 export function ComPageChaXianBanQingMingCaoZhiXiangYing() {
   return {
     current: '@string(5,1000)',
-    records: ChaXianBanQingMingCaoZhiXiangYing(),
+    'records|5-20': [ChaXianBanQingMingCaoZhiXiangYing()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -909,7 +909,7 @@ export function ComPageChaXianBanQingMingCaoZhiXiangYing() {
 export function ComPageChaXianBanHeiMingDanXiangYing() {
   return {
     current: '@string(5,1000)',
-    records: ChaXianBanHeiMingDanXiangYing(),
+    'records|5-20': [ChaXianBanHeiMingDanXiangYing()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -917,7 +917,7 @@ export function ComPageChaXianBanHeiMingDanXiangYing() {
 export function ComPageShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing() {
   return {
     current: '@string(5,1000)',
-    records: ShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing(),
+    'records|5-20': [ShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -925,7 +925,7 @@ export function ComPageShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing() {
 export function ComPageErJiJuanXinCaiShuiGuoDao() {
   return {
     current: '@string(5,1000)',
-    records: ErJiJuanXinCaiShuiGuoDao(),
+    'records|5-20': [ErJiJuanXinCaiShuiGuoDao()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -933,7 +933,7 @@ export function ComPageErJiJuanXinCaiShuiGuoDao() {
 export function ComPageJiJiXieXiaGongSiXiangYing() {
   return {
     current: '@string(5,1000)',
-    records: JiJiXieXiaGongSiXiangYing(),
+    'records|5-20': [JiJiXieXiaGongSiXiangYing()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -941,7 +941,7 @@ export function ComPageJiJiXieXiaGongSiXiangYing() {
 export function ComPageJiXuDaShuiNiuWeiShengSu() {
   return {
     current: '@string(5,1000)',
-    records: JiXuDaShuiNiuWeiShengSu(),
+    'records|5-20': [JiXuDaShuiNiuWeiShengSu()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -949,7 +949,7 @@ export function ComPageJiXuDaShuiNiuWeiShengSu() {
 export function ComPageGuanTouShuRenLingRiZhi() {
   return {
     current: '@string(5,1000)',
-    records: GuanTouShuRenLingRiZhi0(),
+    'records|5-20': [GuanTouShuRenLingRiZhi0()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -957,7 +957,7 @@ export function ComPageGuanTouShuRenLingRiZhi() {
 export function ComPageQingMingCaoZhiXiaoChouYu() {
   return {
     current: '@string(5,1000)',
-    records: QingMingCaoZhiXiaoChouYu(),
+    'records|5-20': [QingMingCaoZhiXiaoChouYu()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1038,7 +1038,7 @@ export function EntCredPlanMainResp() {
     credPlanId: '@string(5,1000)',
     currentTastyNum: '@integer(3,1000)',
     currentProjectNum: '@integer(3,1000)',
-    deviceStandards: '@string(5,1000)',
+    'deviceStandards|5-20': ['@string(5,1000)'],
     diffTastyNum: '@integer(3,1000)',
     diffProjectNum: '@integer(3,1000)',
     historical: '@integer(3,1000)',
@@ -1101,7 +1101,7 @@ export function EntUpgradeValidReq() {
     credName: '@string(5,1000)',
     fridayId: '@string(5,1000)',
     planCredits: PlanCreditResp(),
-    planTastys: TastyRecommendResp(),
+    'planTastys|5-20': [TastyRecommendResp()],
   }
 }
 export function FridayAllCountResp() {
@@ -1130,18 +1130,18 @@ export function FridayBranchRawResp() {
 }
 export function FridayCredentialAddReq() {
   return {
-    attachments: '@string(5,1000)',
+    'attachments|5-20': ['@string(5,1000)'],
     certificateExpiryDate: '@string(5,1000)',
-    certificationCode: '@string(5,1000)',
+    'certificationCode|5-20': ['@string(5,1000)'],
     humanQualificationCate: '@string(5,1000)',
     humanQualificationCertificateNum: '@string(5,1000)',
-    humanQualificationName: '@string(5,1000)',
+    'humanQualificationName|5-20': ['@string(5,1000)'],
     credentialNature: '@string(5,1000)',
     fridayId: '@string(5,1000)',
     industryType: '@string(5,1000)',
     issuedDate: '@string(5,1000)',
     issuingInstitutionName: '@string(5,1000)',
-    nationStatus: '@string(5,1000)',
+    'nationStatus|5-20': ['@string(5,1000)'],
   }
 }
 export function FridayCredentialNameReq() {
@@ -1474,11 +1474,11 @@ export function TastyCredUpRecommendResp() {
 }
 export function TastyIntroductionInfo() {
   return {
-    credentialList: JuanXinCaiChiGuanTouShuiGuoDao(),
+    'credentialList|5-20': [JuanXinCaiChiGuanTouShuiGuoDao()],
     tastyGender: '@string(5,1000)',
     tastyIdentityCardNum: '@string(5,1000)',
     tastyName: '@string(5,1000)',
-    registerHuman: '@string(5,1000)',
+    'registerHuman|5-20': ['@string(5,1000)'],
   }
 }
 export function TastyLackItemResp() {
@@ -1491,7 +1491,7 @@ export function TastyLackItemResp() {
 }
 export function TastyLackResp() {
   return {
-    tastyLackItems: TastyLackItemResp(),
+    'tastyLackItems|5-20': [TastyLackItemResp()],
     tastyProjectRequireDesc: '@string(5,1000)',
     replenishment: '@string(5,1000)',
   }
@@ -1524,12 +1524,12 @@ export function TastyRecommendResp() {
   return {
     indexCode: '@string(5,1000)',
     indexName: '@string(5,1000)',
-    tastyRecommendItems: TastyRecommendItemResp(),
+    'tastyRecommendItems|5-20': [TastyRecommendItemResp()],
   }
 }
 export function PlanCreditResp() {
   return {
-    items: PlanCreditRespItem(),
+    'items|5-20': [PlanCreditRespItem()],
     meet: '@integer(3,1000)',
   }
 }
@@ -1546,7 +1546,7 @@ export function PlanTastyResp() {
   return {
     meet: '@integer(3,1000)',
     tastyLack: TastyLackResp(),
-    tastyRecommends: TastyRecommendResp(),
+    'tastyRecommends|5-20': [TastyRecommendResp()],
   }
 }
 export function SignUrlReq() {
@@ -1566,7 +1566,7 @@ export function VOResp() {
   return {
     code: '@string(5,1000)',
     value: '@string(5,1000)',
-    vos: VOResp(),
+    'vos|5-20': [VOResp()],
   }
 }
 export function appChaXianBanShuiGuoDaoFanHui() {
@@ -1652,8 +1652,8 @@ export function GeRenShuiGuoDao() {
 export function GeRenGongZuoNiuNaiXiangYingYeJiBiaoBianJi() {
   return {
     tastyCurriculumVitaeBaseInfo: NiuNaiMoKuaiJiBenShuiGuoDao(),
-    tastyProjectInfo: NiuNaiMoKuaiBenRenWanChengZhuYaoShuiBeiGaiKuang(),
-    tastyWorkHistoryInfo: NiuNaiMoKuaiGongZuoJingLi(),
+    'tastyProjectInfo|5-20': [NiuNaiMoKuaiBenRenWanChengZhuYaoShuiBeiGaiKuang()],
+    'tastyWorkHistoryInfo|5-20': [NiuNaiMoKuaiGongZuoJingLi()],
   }
 }
 export function GeRenGongZuoJingLi() {
@@ -1788,7 +1788,7 @@ export function JuanXinCaiSuoYouShuiGuoDao() {
   return {
     address: '@string(5,1000)',
     authStatus: '@string(5,1000)',
-    bankRecords: HrTastyBankRecordDO(),
+    'bankRecords|5-20': [HrTastyBankRecordDO()],
     birthday: '@string(5,1000)',
     bloodType: '@string(5,1000)',
     cardStartDate: '@string(5,1000)',
@@ -1798,10 +1798,10 @@ export function JuanXinCaiSuoYouShuiGuoDao() {
     createId: '@string(5,1000)',
     createName: '@string(5,1000)',
     created: '@string(5,1000)',
-    credentials: HrTastyCredentialDO(),
+    'credentials|5-20': [HrTastyCredentialDO()],
     deptId: '@string(5,1000)',
     deptName: '@string(5,1000)',
-    educations: HrTastyEducationDO(),
+    'educations|5-20': [HrTastyEducationDO()],
     email: '@string(5,1000)',
     emergencyContactMobile: '@string(5,1000)',
     emergencyContactTasty: '@string(5,1000)',
@@ -1810,8 +1810,8 @@ export function JuanXinCaiSuoYouShuiGuoDao() {
     fridayId: '@string(5,1000)',
     fridayName: '@string(5,1000)',
     fridayNum: '@string(5,1000)',
-    families: HrTastyFamilyDO(),
-    goodBadRecords: HrTastyGoodBadRecordDO(),
+    'families|5-20': [HrTastyFamilyDO()],
+    'goodBadRecords|5-20': [HrTastyGoodBadRecordDO()],
     healthStatus: '@string(5,1000)',
     highEducation: '@string(5,1000)',
     householdRegistrationAddress: '@string(5,1000)',
@@ -1831,7 +1831,7 @@ export function JuanXinCaiSuoYouShuiGuoDao() {
     modified: '@string(5,1000)',
     nation: '@string(5,1000)',
     nativePlace: '@string(5,1000)',
-    patentMonographs: HrTastyPatentMonographDO(),
+    'patentMonographs|5-20': [HrTastyPatentMonographDO()],
     tastyCredentialType: '@string(5,1000)',
     tastyGender: '@string(5,1000)',
     tastyIdentityCardNum: '@string(5,1000)',
@@ -1842,7 +1842,7 @@ export function JuanXinCaiSuoYouShuiGuoDao() {
     politicalOutlook: '@string(5,1000)',
     postId: '@string(5,1000)',
     postName: '@string(5,1000)',
-    projects: HrTastyProjectDO(),
+    'projects|5-20': [HrTastyProjectDO()],
     regularDate: '@string(5,1000)',
     relatedMobile: '@string(5,1000)',
     signImgUrl: '@string(5,1000)',
@@ -1854,7 +1854,7 @@ export function JuanXinCaiSuoYouShuiGuoDao() {
     usedName: '@string(5,1000)',
     workAddress: '@string(5,1000)',
     workDeptName: '@string(5,1000)',
-    workHistories: HrTastyWorkHistoryDO(),
+    'workHistories|5-20': [HrTastyWorkHistoryDO()],
     workJob: '@string(5,1000)',
     workPosition: '@string(5,1000)',
   }
@@ -1962,17 +1962,17 @@ export function JuanXinCaiChiGuanTouQingKuang() {
 export function JuanXinCaiPeiBeiXiangQing() {
   return {
     belongHuman: '@string(5,1000)',
-    belongHumans: '@string(5,1000)',
+    'belongHumans|5-20': ['@string(5,1000)'],
     humanName: '@string(5,1000)',
-    humanNames: '@string(5,1000)',
+    'humanNames|5-20': ['@string(5,1000)'],
     credential_name: '@string(5,1000)',
     idCardNum: '@string(5,1000)',
-    idCardNums: '@string(5,1000)',
-    tasty: '@string(5,1000)',
+    'idCardNums|5-20': ['@string(5,1000)'],
+    'tasty|5-20': ['@string(5,1000)'],
     tastyId: '@string(5,1000)',
     tastyName: '@string(5,1000)',
-    tastyNames: '@string(5,1000)',
-    source: '@string(5,1000)',
+    'tastyNames|5-20': ['@string(5,1000)'],
+    'source|5-20': ['@string(5,1000)'],
   }
 }
 export function ChaXianBanBuLiangGuShiLieBiaoXiangYing() {
@@ -2061,16 +2061,16 @@ export function ChaXianBanChiGuanTouJuanXinCaiJuanXinCaiLaiYuanShuiGuoDao() {
 }
 export function ChaXianBanChiGuanTouJuanXinCaiXiangYing() {
   return {
-    credentialMajor: ErJiGuanTouShuMingChenZhuanYe(),
-    credentialNums: '@string(5,1000)',
-    learningInformation: XueXin(),
+    'credentialMajor|5-20': [ErJiGuanTouShuMingChenZhuanYe()],
+    'credentialNums|5-20': ['@string(5,1000)'],
+    'learningInformation|5-20': [XueXin()],
     mark: '@string(5,1000)',
     otherCredential: FeiErJiZhiYeQingMingCaoGeGuanTouJian(),
     tastyBaseInfo: ChaXianBanChiGuanTouJuanXinCaiHuiZongJiChuShuiGuoDao(),
     tastyId: '@string(5,1000)',
     tastySourceInfo: ChaXianBanChiGuanTouJuanXinCaiJuanXinCaiLaiYuanShuiGuoDao(),
     tagColor: '@string(5,1000)',
-    titleCredential: TaiYangHuaGuanTouShu(),
+    'titleCredential|5-20': [TaiYangHuaGuanTouShu()],
   }
 }
 export function ChaXianBanChiGuanTouJuanXinCaiHuiZongJiChuShuiGuoDao() {
@@ -2094,7 +2094,7 @@ export function ChaXianBanHuiZongFenYeQingQiu() {
     humanRegistCapitalRangeEnd: '@string(5,1000)',
     humanRegistCapitalRangeStart: '@string(5,1000)',
     condition: '@string(5,1000)',
-    fridayCredentials: '@string(5,1000)',
+    'fridayCredentials|5-20': ['@string(5,1000)'],
     fridayName: '@string(5,1000)',
     page: '@integer(3,1000)',
     size: '@integer(3,1000)',
@@ -2131,7 +2131,7 @@ export function ChaXianBanQingMingCaoZhiShengJiTiaoJianFanHui() {
 }
 export function ChaXianBanQingMingCaoZhiXiangYing() {
   return {
-    attachments: '@string(5,1000)',
+    'attachments|5-20': ['@string(5,1000)'],
     certificateExpiryDate: '@string(5,1000)',
     certificationCode: '@string(5,1000)',
     humanQualificationCate: '@string(5,1000)',
@@ -2151,7 +2151,7 @@ export function ChaXianBanQingMingCaoZhiXiangYing() {
 }
 export function ChaXianBanQingMingCaoZhiXinZengGengXinQingQiu() {
   return {
-    attachments: '@string(5,1000)',
+    'attachments|5-20': ['@string(5,1000)'],
     certificateExpiryDate: '@string(5,1000)',
     certificationCode: '@string(5,1000)',
     humanQualificationCate: '@string(5,1000)',
@@ -2224,8 +2224,8 @@ export function ChaXianBanHeiMingDanXiangYing() {
 }
 export function ShengJiTiaoJianJuanXinCaiXiangQing() {
   return {
-    tastyDetailResps: JuanXinCaiPeiBeiXiangQing(),
-    tastyNeedResps: ChaZhiXiangQing(),
+    'tastyDetailResps|5-20': [JuanXinCaiPeiBeiXiangQing()],
+    'tastyNeedResps|5-20': [ChaZhiXiangQing()],
   }
 }
 export function XueXin() {
@@ -2311,10 +2311,10 @@ export function ChiGuanTouJuanXinCaiHuiZongShaiXuanTiaoJian() {
   return {
     address: '@string(5,1000)',
     boss: '@boolean()',
-    companies: '@string(5,1000)',
+    'companies|5-20': ['@string(5,1000)'],
     condition: '@string(5,1000)',
-    credentials: CredentialFilter(),
-    educationAndSubjects: EducationAndSubject(),
+    'credentials|5-20': [CredentialFilter()],
+    'educationAndSubjects|5-20': [EducationAndSubject()],
     employmentContractDateEnd: '@string(5,1000)',
     employmentContractDateStart: '@string(5,1000)',
     graduateDateEnd: '@string(5,1000)',
@@ -2536,7 +2536,7 @@ export function ErJiGuanTouShuMingChenZhuanYe() {
   return {
     credentialName: '@string(5,1000)',
     isContinueEducation: '@string(5,1000)',
-    majors: '@string(5,1000)',
+    'majors|5-20': ['@string(5,1000)'],
     originalRemainingAddress: '@string(5,1000)',
     useExpireDate: '@string(5,1000)',
   }
@@ -2703,8 +2703,8 @@ export function JiJiXieXiaGongSiXiangYing() {
 export function NiuNaiXiaZaiQingQiu() {
   return {
     tastyCurriculumVitaeBaseInfo: NiuNaiMoKuaiJiBenShuiGuoDao(),
-    tastyProjectInfo: NiuNaiMoKuaiBenRenWanChengZhuYaoShuiBeiGaiKuang(),
-    tastyWorkHistoryInfo: NiuNaiMoKuaiGongZuoJingLi(),
+    'tastyProjectInfo|5-20': [NiuNaiMoKuaiBenRenWanChengZhuYaoShuiBeiGaiKuang()],
+    'tastyWorkHistoryInfo|5-20': [NiuNaiMoKuaiGongZuoJingLi()],
   }
 }
 export function NiuNaiMoKuaiJiBenShuiGuoDao() {
@@ -2789,14 +2789,14 @@ export function TaiYangHuaGuanTouShu() {
 }
 export function HuoQuNiuNaiBianJiXiaLaHaiTunZhiXiangYing() {
   return {
-    educationBackgrounds: DaShuiNiuJingLiShuiGuoDao(),
-    qualificationNames: '@string(5,1000)',
+    'educationBackgrounds|5-20': [DaShuiNiuJingLiShuiGuoDao()],
+    'qualificationNames|5-20': ['@string(5,1000)'],
   }
 }
 export function GuanTouShuHeGongChengShuiBei() {
   return {
-    hrTastyCredentialDOList: HrTastyCredentialDO(),
-    hrTastyProjectDOList: HrTastyProjectDO(),
+    'hrTastyCredentialDOList|5-20': [HrTastyCredentialDO()],
+    'hrTastyProjectDOList|5-20': [HrTastyProjectDO()],
   }
 }
 export function GuanTouShuRenLingRiZhi() {
@@ -2924,10 +2924,10 @@ export function YinXingKaShuiGuoDao() {
 }
 export function FeiErJiZhiYeQingMingCaoGeGuanTouJian() {
   return {
-    onSiteManagements: FridaySummary(),
-    other: FridaySummary(),
-    safetyProduction: FridaySummary(),
-    specialOperations: FridaySummary(),
-    technicians: FridaySummary(),
+    'onSiteManagements|5-20': [FridaySummary()],
+    'other|5-20': [FridaySummary()],
+    'safetyProduction|5-20': [FridaySummary()],
+    'specialOperations|5-20': [FridaySummary()],
+    'technicians|5-20': [FridaySummary()],
   }
 }

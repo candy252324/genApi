@@ -58,7 +58,7 @@ export function AddHappyCatReq() {
     happyClassificationType: '@string(5,1000)',
     happySource: '@string(5,1000)',
     happyType: '@string(5,1000)',
-    certificateList: AddHappyCatCertificateReq(),
+    'certificateList|5-20': [AddHappyCatCertificateReq()],
     city: '@string(5,1000)',
     coordinate: '@string(5,1000)',
     country: '@string(5,1000)',
@@ -84,7 +84,7 @@ export function AddHappyCatReq() {
     skCertificateCnt: '@string(5,1000)',
     step: '@integer(3,1000)',
     thirdId: '@string(5,1000)',
-    titleList: AddHappyCatTitleReq(),
+    'titleList|5-20': [AddHappyCatTitleReq()],
     type: '@string(5,1000)',
     updateId: '@string(5,1000)',
     updateName: '@string(5,1000)',
@@ -186,7 +186,7 @@ export function AddHappyResp() {
     failCnt: '@integer(3,1000)',
     id: '@string(5,1000)',
     licenseId: '@string(5,1000)',
-    list: '@string(5,1000)',
+    'list|5-20': ['@string(5,1000)'],
     gladName: '@string(5,1000)',
     receiveName: '@string(5,1000)',
     successCnt: '@integer(3,1000)',
@@ -194,13 +194,13 @@ export function AddHappyResp() {
 }
 export function AddCustomerResp() {
   return {
-    list: CustomerDoorInfoResp(),
+    'list|5-20': [CustomerDoorInfoResp()],
     repeatType: '@string(5,1000)',
   }
 }
 export function AddCatCustomerResp() {
   return {
-    list: CustomerCatInfoResp(),
+    'list|5-20': [CustomerCatInfoResp()],
     repeatType: '@string(5,1000)',
   }
 }
@@ -254,7 +254,7 @@ export function AddSignHappyCatReq() {
     happyId: '@string(5,1000)',
     happySource: '@string(5,1000)',
     happyType: '@string(5,1000)',
-    certificateList: AddHappyCatCertificateReq(),
+    'certificateList|5-20': [AddHappyCatCertificateReq()],
     city: '@string(5,1000)',
     coordinate: '@string(5,1000)',
     country: '@string(5,1000)',
@@ -276,7 +276,7 @@ export function AddSignHappyCatReq() {
     province: '@string(5,1000)',
     signType: '@string(5,1000)',
     step: '@integer(3,1000)',
-    titleList: AddHappyCatTitleReq(),
+    'titleList|5-20': [AddHappyCatTitleReq()],
     type: '@string(5,1000)',
     updateId: '@string(5,1000)',
     updateName: '@string(5,1000)',
@@ -342,7 +342,7 @@ export function AddSignHappyGladReq() {
 export function AddSignHappyResp() {
   return {
     happyId: '@string(5,1000)',
-    list: '@string(5,1000)',
+    'list|5-20': ['@string(5,1000)'],
     mobile: '@string(5,1000)',
     signId: '@string(5,1000)',
   }
@@ -840,7 +840,7 @@ export function ApiResponseDesktopResp() {
 export function ApiResponseListHappyPlanCoordinateResp() {
   return {
     code: '@integer(3,1000)',
-    data: HappyPlanCoordinateResp(),
+    'data|5-20': [HappyPlanCoordinateResp()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -850,7 +850,7 @@ export function ApiResponseListHappyPlanCoordinateResp() {
 export function ApiResponseListCustomerDoorFromDataResp() {
   return {
     code: '@integer(3,1000)',
-    data: CustomerDoorFromDataResp(),
+    'data|5-20': [CustomerDoorFromDataResp()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -860,7 +860,7 @@ export function ApiResponseListCustomerDoorFromDataResp() {
 export function ApiResponseListDayCityResp() {
   return {
     code: '@integer(3,1000)',
-    data: DayCityResp(),
+    'data|5-20': [DayCityResp()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -870,7 +870,7 @@ export function ApiResponseListDayCityResp() {
 export function ApiResponseListWhiteNoteResp() {
   return {
     code: '@integer(3,1000)',
-    data: WhiteNoteResp(),
+    'data|5-20': [WhiteNoteResp()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -880,7 +880,7 @@ export function ApiResponseListWhiteNoteResp() {
 export function ApiResponseListWhiteResp() {
   return {
     code: '@integer(3,1000)',
-    data: WhiteResp(),
+    'data|5-20': [WhiteResp()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -890,7 +890,7 @@ export function ApiResponseListWhiteResp() {
 export function ApiResponseListDocument() {
   return {
     code: '@integer(3,1000)',
-    data: Document(),
+    'data|5-20': [Document()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -900,7 +900,7 @@ export function ApiResponseListDocument() {
 export function ApiResponseListDesktopResp() {
   return {
     code: '@integer(3,1000)',
-    data: DesktopResp(),
+    'data|5-20': [DesktopResp()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -910,7 +910,7 @@ export function ApiResponseListDesktopResp() {
 export function ApiResponseListLocationInfoResp() {
   return {
     code: '@integer(3,1000)',
-    data: LocationInfoResp(),
+    'data|5-20': [LocationInfoResp()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -920,7 +920,7 @@ export function ApiResponseListLocationInfoResp() {
 export function ApiResponseListPagePlanResp() {
   return {
     code: '@integer(3,1000)',
-    data: PagePlanResp(),
+    'data|5-20': [PagePlanResp()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -930,7 +930,7 @@ export function ApiResponseListPagePlanResp() {
 export function ApiResponseListTaskProgressDetailResp() {
   return {
     code: '@integer(3,1000)',
-    data: TaskProgressDetailResp(),
+    'data|5-20': [TaskProgressDetailResp()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -940,7 +940,7 @@ export function ApiResponseListTaskProgressDetailResp() {
 export function ApiResponseListTaskProgressCatResp() {
   return {
     code: '@integer(3,1000)',
-    data: TaskProgressCatResp(),
+    'data|5-20': [TaskProgressCatResp()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -950,7 +950,7 @@ export function ApiResponseListTaskProgressCatResp() {
 export function ApiResponseListTreelong() {
   return {
     code: '@integer(3,1000)',
-    data: '@string(5,1000)',
+    'data|5-20': ['@string(5,1000)'],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -960,7 +960,7 @@ export function ApiResponseListTreelong() {
 export function ApiResponseListTreestring() {
   return {
     code: '@integer(3,1000)',
-    data: '@string(5,1000)',
+    'data|5-20': ['@string(5,1000)'],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -970,7 +970,7 @@ export function ApiResponseListTreestring() {
 export function ApiResponseListobject() {
   return {
     code: '@integer(3,1000)',
-    data: '@string(5,1000)',
+    'data|5-20': ['@string(5,1000)'],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -980,7 +980,7 @@ export function ApiResponseListobject() {
 export function ApiResponseListstring() {
   return {
     code: '@integer(3,1000)',
-    data: '@string(5,1000)',
+    'data|5-20': ['@string(5,1000)'],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -990,7 +990,7 @@ export function ApiResponseListstring() {
 export function ApiResponseListTongJiShuJuHistogramResp() {
   return {
     code: '@integer(3,1000)',
-    data: TongJiShuJuHistogramResp(),
+    'data|5-20': [TongJiShuJuHistogramResp()],
     msg: '@string(5,1000)',
     success: '@boolean()',
     timestamp: '@string(5,1000)',
@@ -1188,7 +1188,7 @@ export function ApiResponseXiangMuFaCaiMengXiangQingrpcresponse() {
 }
 export function AssignHappyReq() {
   return {
-    happyList: AddHappyReq(),
+    'happyList|5-20': [AddHappyReq()],
     happyReceiveSource: '@string(5,1000)',
     happyType: '@string(5,1000)',
     date: '@string(5,1000)',
@@ -1198,7 +1198,7 @@ export function AssignHappyReq() {
 }
 export function HappyClassificationResp() {
   return {
-    happyClassificationList: HappyCntResp(),
+    'happyClassificationList|5-20': [HappyCntResp()],
   }
 }
 export function HappyCntResp() {
@@ -1230,7 +1230,7 @@ export function HappyDesktopDetailRuleReq() {
 }
 export function HappyDesktopRulePageReq() {
   return {
-    desktopIdList: '@string(5,1000)',
+    'desktopIdList|5-20': ['@string(5,1000)'],
     page: '@integer(3,1000)',
     size: '@integer(3,1000)',
   }
@@ -1250,7 +1250,7 @@ export function HappyDesktopRulePageResp() {
 export function HappyDesktopRuleReq() {
   return {
     happyNumEveryday: '@integer(3,1000)',
-    detailRuleList: HappyDesktopDetailRuleReq(),
+    'detailRuleList|5-20': [HappyDesktopDetailRuleReq()],
     doorLimit: '@integer(3,1000)',
     isDoorNoLimit: '@integer(3,1000)',
     isCatNoLimit: '@integer(3,1000)',
@@ -1293,7 +1293,7 @@ export function HappyDoorInfoResp() {
     doorType: '@string(5,1000)',
     establishmentTime: '@string(5,1000)',
     filialeCompanyNameArray: '@string(5,1000)',
-    followInfoList: HuaHuaTiQingQiu(),
+    'followInfoList|5-20': [HuaHuaTiQingQiu()],
     followerId: '@string(5,1000)',
     followerName: '@string(5,1000)',
     hasCustomer: '@boolean()',
@@ -1331,8 +1331,8 @@ export function HappyFollowReq() {
     content: '@string(5,1000)',
     coordinate: '@string(5,1000)',
     date: '@string(5,1000)',
-    dateList: '@string(5,1000)',
-    fileIdList: '@string(5,1000)',
+    'dateList|5-20': ['@string(5,1000)'],
+    'fileIdList|5-20': ['@string(5,1000)'],
     followResult: '@string(5,1000)',
     followType: '@string(5,1000)',
     followerId: '@string(5,1000)',
@@ -1395,7 +1395,7 @@ export function HappyCatInfoResp() {
     blacklistRecordCnt: '@string(5,1000)',
     happyStatus: '@string(5,1000)',
     happyType: '@string(5,1000)',
-    certificateList: HappyCatCertificateResp(),
+    'certificateList|5-20': [HappyCatCertificateResp()],
     city: '@string(5,1000)',
     coordinate: '@string(5,1000)',
     country: '@string(5,1000)',
@@ -1405,7 +1405,7 @@ export function HappyCatInfoResp() {
     customerName: '@string(5,1000)',
     customerType: '@string(5,1000)',
     education: '@string(5,1000)',
-    followInfoList: HuaHuaTiQingQiu(),
+    'followInfoList|5-20': [HuaHuaTiQingQiu()],
     followerId: '@string(5,1000)',
     followerName: '@string(5,1000)',
     gender: '@string(5,1000)',
@@ -1430,7 +1430,7 @@ export function HappyCatInfoResp() {
     source: '@string(5,1000)',
     gratefulId: '@string(5,1000)',
     thirdId: '@string(5,1000)',
-    titleList: HappyCatTitleResp(),
+    'titleList|5-20': [HappyCatTitleResp()],
   }
 }
 export function HappyCatTitleResp() {
@@ -1449,7 +1449,7 @@ export function HappyPlanAddHappyListReq() {
 }
 export function HappyPlanAddHappyReq() {
   return {
-    addHappyList: HappyPlanAddHappyListReq(),
+    'addHappyList|5-20': [HappyPlanAddHappyListReq()],
     date: '@string(5,1000)',
   }
 }
@@ -1461,8 +1461,8 @@ export function HappyPlanAddCustomerListReq() {
 }
 export function HappyPlanAddCustomerReq() {
   return {
-    addCustomerList: HappyPlanAddCustomerListReq(),
-    dateList: ErrorModelNamenamespacejavatimenameLocalDateTime(),
+    'addCustomerList|5-20': [HappyPlanAddCustomerListReq()],
+    'dateList|5-20': [ErrorModelNamenamespacejavatimenameLocalDateTime()],
   }
 }
 export function HappyPlanCoordinateResp() {
@@ -1493,7 +1493,7 @@ export function HappyPlanDateListByTypeReq() {
 export function HappyPlanDateListReq() {
   return {
     endDate: '@string(5,1000)',
-    handlerIdList: '@string(5,1000)',
+    'handlerIdList|5-20': ['@string(5,1000)'],
     startDate: '@string(5,1000)',
     type: '@integer(3,1000)',
   }
@@ -1506,7 +1506,7 @@ export function HappyPlanDeleteReq() {
 export function HappyPlanPageReq() {
   return {
     date: '@string(5,1000)',
-    handlerIdList: '@string(5,1000)',
+    'handlerIdList|5-20': ['@string(5,1000)'],
     page: '@integer(3,1000)',
     size: '@integer(3,1000)',
   }
@@ -1566,7 +1566,7 @@ export function HappyGladInfoResp() {
     customerType: '@string(5,1000)',
     fileDownloadEndTime: '@string(5,1000)',
     fileDownloadStartTime: '@string(5,1000)',
-    followInfoList: HuaHuaTiQingQiu(),
+    'followInfoList|5-20': [HuaHuaTiQingQiu()],
     followerId: '@string(5,1000)',
     followerName: '@string(5,1000)',
     hasCustomer: '@boolean()',
@@ -1614,10 +1614,10 @@ export function HappyPushDetail() {
 }
 export function HappyPushInfoResp() {
   return {
-    areaList: DiZhi(),
+    'areaList|5-20': [DiZhi()],
     happyType: '@string(5,1000)',
     json: '@string(5,1000)',
-    catList: HappyPushCatInfoResp(),
+    'catList|5-20': [HappyPushCatInfoResp()],
     pushDays: '@integer(3,1000)',
     pushNum: '@integer(3,1000)',
     pushRule: '@integer(3,1000)',
@@ -1627,8 +1627,8 @@ export function HappyPushInfoResp() {
 }
 export function HappyPushCatInfoResp() {
   return {
-    areaList: DiZhi(),
-    catList: HappyPushCatResp(),
+    'areaList|5-20': [DiZhi()],
+    'catList|5-20': [HappyPushCatResp()],
     pushNum: '@integer(3,1000)',
   }
 }
@@ -1688,7 +1688,7 @@ export function CharSequence() {}
 export function ComPageHappyDesktopDetailRulePageResp() {
   return {
     current: '@string(5,1000)',
-    records: HappyDesktopDetailRulePageResp(),
+    'records|5-20': [HappyDesktopDetailRulePageResp()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1696,7 +1696,7 @@ export function ComPageHappyDesktopDetailRulePageResp() {
 export function ComPageHappyPushDetail() {
   return {
     current: '@string(5,1000)',
-    records: HappyPushDetail(),
+    'records|5-20': [HappyPushDetail()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1704,7 +1704,7 @@ export function ComPageHappyPushDetail() {
 export function ComPageCustomerDoorInfoResp() {
   return {
     current: '@string(5,1000)',
-    records: CustomerDoorInfoResp(),
+    'records|5-20': [CustomerDoorInfoResp()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1712,7 +1712,7 @@ export function ComPageCustomerDoorInfoResp() {
 export function ComPageCustomerCatInfoResp() {
   return {
     current: '@string(5,1000)',
-    records: CustomerCatInfoResp(),
+    'records|5-20': [CustomerCatInfoResp()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1720,7 +1720,7 @@ export function ComPageCustomerCatInfoResp() {
 export function ComPageDesktopListResp() {
   return {
     current: '@string(5,1000)',
-    records: DesktopListResp(),
+    'records|5-20': [DesktopListResp()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1728,7 +1728,7 @@ export function ComPageDesktopListResp() {
 export function ComPageLocationDateInfoResp() {
   return {
     current: '@string(5,1000)',
-    records: LocationDateInfoResp(),
+    'records|5-20': [LocationDateInfoResp()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1736,7 +1736,7 @@ export function ComPageLocationDateInfoResp() {
 export function ComPageLocationInfoResp() {
   return {
     current: '@string(5,1000)',
-    records: LocationInfoResp(),
+    'records|5-20': [LocationInfoResp()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1744,7 +1744,7 @@ export function ComPageLocationInfoResp() {
 export function ComPagePageHappyResp() {
   return {
     current: '@string(5,1000)',
-    records: PageHappyResp(),
+    'records|5-20': [PageHappyResp()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1752,7 +1752,7 @@ export function ComPagePageHappyResp() {
 export function ComPagePageDoorHappyPoolResp() {
   return {
     current: '@string(5,1000)',
-    records: PageDoorHappyPoolResp(),
+    'records|5-20': [PageDoorHappyPoolResp()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1760,7 +1760,7 @@ export function ComPagePageDoorHappyPoolResp() {
 export function ComPagePageCatHappyPoolResp() {
   return {
     current: '@string(5,1000)',
-    records: PageCatHappyPoolResp(),
+    'records|5-20': [PageCatHappyPoolResp()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1768,7 +1768,7 @@ export function ComPagePageCatHappyPoolResp() {
 export function ComPagePageGladHappyPoolResp() {
   return {
     current: '@string(5,1000)',
-    records: PageGladHappyPoolResp(),
+    'records|5-20': [PageGladHappyPoolResp()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1776,7 +1776,7 @@ export function ComPagePageGladHappyPoolResp() {
 export function ComPagePunchPageResp() {
   return {
     current: '@string(5,1000)',
-    records: PunchPageResp(),
+    'records|5-20': [PunchPageResp()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1784,7 +1784,7 @@ export function ComPagePunchPageResp() {
 export function ComPageTaskPageListResp() {
   return {
     current: '@string(5,1000)',
-    records: TaskPageListResp(),
+    'records|5-20': [TaskPageListResp()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1792,7 +1792,7 @@ export function ComPageTaskPageListResp() {
 export function ComPageTreelong() {
   return {
     current: '@string(5,1000)',
-    records: '@string(5,1000)',
+    'records|5-20': ['@string(5,1000)'],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1800,7 +1800,7 @@ export function ComPageTreelong() {
 export function ComPageFenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu() {
   return {
     current: '@string(5,1000)',
-    records: FenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu(),
+    'records|5-20': [FenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1808,7 +1808,7 @@ export function ComPageFenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu() {
 export function ComPageFenYeLvYouRenWu() {
   return {
     current: '@string(5,1000)',
-    records: FenYeLvYouRenWu(),
+    'records|5-20': [FenYeLvYouRenWu()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1816,7 +1816,7 @@ export function ComPageFenYeLvYouRenWu() {
 export function ComPageFenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu() {
   return {
     current: '@string(5,1000)',
-    records: FenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu(),
+    'records|5-20': [FenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1824,7 +1824,7 @@ export function ComPageFenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu() {
 export function ComPageFenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu() {
   return {
     current: '@string(5,1000)',
-    records: FenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu(),
+    'records|5-20': [FenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1832,7 +1832,7 @@ export function ComPageFenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu() {
 export function ComPageHuaHuaTiQingQiu() {
   return {
     current: '@string(5,1000)',
-    records: HuaHuaTiQingQiu(),
+    'records|5-20': [HuaHuaTiQingQiu()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1840,7 +1840,7 @@ export function ComPageHuaHuaTiQingQiu() {
 export function ComPageJiQiRenGenJinJiLuXiangYing() {
   return {
     current: '@string(5,1000)',
-    records: JiQiRenGenJinJiLuXiangYing(),
+    'records|5-20': [JiQiRenGenJinJiLuXiangYing()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1848,7 +1848,7 @@ export function ComPageJiQiRenGenJinJiLuXiangYing() {
 export function ComPageDaoRuHuaHuaTiXiangYing() {
   return {
     current: '@string(5,1000)',
-    records: DaoRuHuaHuaTiXiangYing(),
+    'records|5-20': [DaoRuHuaHuaTiXiangYing()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1856,7 +1856,7 @@ export function ComPageDaoRuHuaHuaTiXiangYing() {
 export function ComPageSouSuoRenCaiJiQiRenresponse() {
   return {
     current: '@string(5,1000)',
-    records: SouSuoRenCaiJiQiRenresponse(),
+    'records|5-20': [SouSuoRenCaiJiQiRenresponse()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1864,7 +1864,7 @@ export function ComPageSouSuoRenCaiJiQiRenresponse() {
 export function ComPageSouSuoZhiXieChangJiQiRenresponse() {
   return {
     current: '@string(5,1000)',
-    records: SouSuoZhiXieChangJiQiRenresponse(),
+    'records|5-20': [SouSuoZhiXieChangJiQiRenresponse()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1872,7 +1872,7 @@ export function ComPageSouSuoZhiXieChangJiQiRenresponse() {
 export function ComPageCaoZuoRiZhiFenYeresponse() {
   return {
     current: '@string(5,1000)',
-    records: CaoZuoRiZhiFenYeresponse(),
+    'records|5-20': [CaoZuoRiZhiFenYeresponse()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1880,7 +1880,7 @@ export function ComPageCaoZuoRiZhiFenYeresponse() {
 export function ComPageHongLingJinJiLuFenYeresponse() {
   return {
     current: '@string(5,1000)',
-    records: HongLingJinJiLuFenYeresponse(),
+    'records|5-20': [HongLingJinJiLuFenYeresponse()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1888,7 +1888,7 @@ export function ComPageHongLingJinJiLuFenYeresponse() {
 export function ComPageLianXiRenHuaHuaTi() {
   return {
     current: '@string(5,1000)',
-    records: LianXiRenHuaHuaTi(),
+    'records|5-20': [LianXiRenHuaHuaTi()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1896,7 +1896,7 @@ export function ComPageLianXiRenHuaHuaTi() {
 export function ComPageXiangMuFaCaiMengXiangQingrpcresponse() {
   return {
     current: '@string(5,1000)',
-    records: XiangMuFaCaiMengXiangQingrpcresponse(),
+    'records|5-20': [XiangMuFaCaiMengXiangQingrpcresponse()],
     size: '@string(5,1000)',
     total: '@string(5,1000)',
   }
@@ -1939,7 +1939,7 @@ export function CountCustomerHappyNumReq() {
 export function CountCustomerHappyNumResp() {
   return {
     totalNum: '@integer(3,1000)',
-    typeNum: CountCustomerHappyNumTypeResp(),
+    'typeNum|5-20': [CountCustomerHappyNumTypeResp()],
   }
 }
 export function CountCustomerHappyNumTypeResp() {
@@ -1956,7 +1956,7 @@ export function CustomerDoorAddReq() {
     happyPrincipal: '@string(5,1000)',
     categoryName: '@string(5,1000)',
     city: '@string(5,1000)',
-    contactList: ContactAddReq(),
+    'contactList|5-20': [ContactAddReq()],
     content: '@string(5,1000)',
     coordinate: '@string(5,1000)',
     corporateName: '@string(5,1000)',
@@ -1969,11 +1969,11 @@ export function CustomerDoorAddReq() {
     doorName: '@string(5,1000)',
     doorStatus: '@string(5,1000)',
     establishmentTime: '@string(5,1000)',
-    fileUrlList: '@string(5,1000)',
+    'fileUrlList|5-20': ['@string(5,1000)'],
     higherDoor: '@string(5,1000)',
-    invoiceList: CustomerInvoiceAddReq(),
+    'invoiceList|5-20': [CustomerInvoiceAddReq()],
     isImportant: '@integer(3,1000)',
-    labels: '@string(5,1000)',
+    'labels|5-20': ['@string(5,1000)'],
     location: '@string(5,1000)',
     phone: '@string(5,1000)',
     province: '@string(5,1000)',
@@ -1987,7 +1987,7 @@ export function CustomerDoorAddReq() {
 export function CustomerDoorAddResp() {
   return {
     id: '@string(5,1000)',
-    list: CustomerDoorInfoResp(),
+    'list|5-20': [CustomerDoorInfoResp()],
     repeatType: '@string(5,1000)',
   }
 }
@@ -1998,7 +1998,7 @@ export function CustomerDoorDetailResp() {
     happyPrincipal: '@string(5,1000)',
     categoryName: '@string(5,1000)',
     city: '@string(5,1000)',
-    contactList: ContactDetailResp(),
+    'contactList|5-20': [ContactDetailResp()],
     content: '@string(5,1000)',
     coordinate: '@string(5,1000)',
     corporateName: '@string(5,1000)',
@@ -2014,12 +2014,12 @@ export function CustomerDoorDetailResp() {
     doorName: '@string(5,1000)',
     doorStatus: '@string(5,1000)',
     establishmentTime: '@string(5,1000)',
-    fileUrlList: '@string(5,1000)',
+    'fileUrlList|5-20': ['@string(5,1000)'],
     higherDoor: '@string(5,1000)',
     id: '@string(5,1000)',
-    invoiceList: CustomerInvoiceDetailResp(),
+    'invoiceList|5-20': [CustomerInvoiceDetailResp()],
     isImportant: '@integer(3,1000)',
-    labels: CustomerLabelResp(),
+    'labels|5-20': [CustomerLabelResp()],
     licenseId: '@string(5,1000)',
     location: '@string(5,1000)',
     phone: '@string(5,1000)',
@@ -2074,7 +2074,7 @@ export function CustomerDoorInfoResp() {
     doorName: '@string(5,1000)',
     doorStatus: '@string(5,1000)',
     establishmentTime: '@string(5,1000)',
-    fileUrlList: '@string(5,1000)',
+    'fileUrlList|5-20': ['@string(5,1000)'],
     id: '@string(5,1000)',
     isCooperation: '@integer(3,1000)',
     isImportant: '@integer(3,1000)',
@@ -2116,7 +2116,7 @@ export function CustomerDoorUpReq() {
     happyPrincipal: '@string(5,1000)',
     categoryName: '@string(5,1000)',
     city: '@string(5,1000)',
-    contactList: ContactAddReq(),
+    'contactList|5-20': [ContactAddReq()],
     content: '@string(5,1000)',
     coordinate: '@string(5,1000)',
     corporateName: '@string(5,1000)',
@@ -2129,12 +2129,12 @@ export function CustomerDoorUpReq() {
     doorName: '@string(5,1000)',
     doorStatus: '@string(5,1000)',
     establishmentTime: '@string(5,1000)',
-    fileUrlList: '@string(5,1000)',
+    'fileUrlList|5-20': ['@string(5,1000)'],
     higherDoor: '@string(5,1000)',
     id: '@string(5,1000)',
-    invoiceList: CustomerInvoiceAddReq(),
+    'invoiceList|5-20': [CustomerInvoiceAddReq()],
     isImportant: '@integer(3,1000)',
-    labels: CustomerLabelReq(),
+    'labels|5-20': [CustomerLabelReq()],
     location: '@string(5,1000)',
     phone: '@string(5,1000)',
     province: '@string(5,1000)',
@@ -2155,7 +2155,7 @@ export function CustomerFollowReq() {
     customerId: '@string(5,1000)',
     customerType: '@string(5,1000)',
     date: '@string(5,1000)',
-    fileIdList: '@string(5,1000)',
+    'fileIdList|5-20': ['@string(5,1000)'],
     followType: '@string(5,1000)',
   }
 }
@@ -2205,9 +2205,9 @@ export function CustomerCatAddReq() {
     addr: '@string(5,1000)',
     area: '@string(5,1000)',
     happyPrincipal: '@string(5,1000)',
-    certificateList: CustomerCatCertificateReq(),
+    'certificateList|5-20': [CustomerCatCertificateReq()],
     city: '@string(5,1000)',
-    contactList: ContactAddReq(),
+    'contactList|5-20': [ContactAddReq()],
     content: '@string(5,1000)',
     coordinate: '@string(5,1000)',
     country: '@string(5,1000)',
@@ -2217,24 +2217,24 @@ export function CustomerCatAddReq() {
     education: '@string(5,1000)',
     doorAddr: '@string(5,1000)',
     doorName: '@string(5,1000)',
-    fileUrlList: '@string(5,1000)',
+    'fileUrlList|5-20': ['@string(5,1000)'],
     gender: '@string(5,1000)',
-    invoiceList: CustomerInvoiceAddReq(),
+    'invoiceList|5-20': [CustomerInvoiceAddReq()],
     isImportant: '@integer(3,1000)',
-    labels: '@string(5,1000)',
+    'labels|5-20': ['@string(5,1000)'],
     location: '@string(5,1000)',
     catName: '@string(5,1000)',
     phone: '@string(5,1000)',
     post: '@string(5,1000)',
     province: '@string(5,1000)',
     step: '@integer(3,1000)',
-    titleList: CustomerCatTitleReq(),
+    'titleList|5-20': [CustomerCatTitleReq()],
   }
 }
 export function CustomerCatAddResp() {
   return {
     id: '@string(5,1000)',
-    list: CustomerCatInfoResp(),
+    'list|5-20': [CustomerCatInfoResp()],
   }
 }
 export function CustomerCatCertificateInfoResp() {
@@ -2263,9 +2263,9 @@ export function CustomerCatDetailResp() {
     addr: '@string(5,1000)',
     area: '@string(5,1000)',
     happyPrincipal: '@string(5,1000)',
-    certificateList: CustomerCatCertificateInfoResp(),
+    'certificateList|5-20': [CustomerCatCertificateInfoResp()],
     city: '@string(5,1000)',
-    contactList: ContactDetailResp(),
+    'contactList|5-20': [ContactDetailResp()],
     content: '@string(5,1000)',
     coordinate: '@string(5,1000)',
     country: '@string(5,1000)',
@@ -2278,19 +2278,19 @@ export function CustomerCatDetailResp() {
     education: '@string(5,1000)',
     doorAddr: '@string(5,1000)',
     doorName: '@string(5,1000)',
-    fileUrlList: '@string(5,1000)',
+    'fileUrlList|5-20': ['@string(5,1000)'],
     gender: '@string(5,1000)',
     id: '@string(5,1000)',
-    invoiceList: CustomerInvoiceDetailResp(),
+    'invoiceList|5-20': [CustomerInvoiceDetailResp()],
     isImportant: '@integer(3,1000)',
-    labels: CustomerLabelResp(),
+    'labels|5-20': [CustomerLabelResp()],
     location: '@string(5,1000)',
     catName: '@string(5,1000)',
     phone: '@string(5,1000)',
     post: '@string(5,1000)',
     province: '@string(5,1000)',
     talentId: '@string(5,1000)',
-    titleList: CustomerCatTitleInfoResp(),
+    'titleList|5-20': [CustomerCatTitleInfoResp()],
   }
 }
 export function CustomerCatInfoResp() {
@@ -2349,9 +2349,9 @@ export function CustomerCatUpReq() {
     addr: '@string(5,1000)',
     area: '@string(5,1000)',
     happyPrincipal: '@string(5,1000)',
-    certificateList: CustomerCatCertificateReq(),
+    'certificateList|5-20': [CustomerCatCertificateReq()],
     city: '@string(5,1000)',
-    contactList: ContactAddReq(),
+    'contactList|5-20': [ContactAddReq()],
     content: '@string(5,1000)',
     coordinate: '@string(5,1000)',
     country: '@string(5,1000)',
@@ -2361,18 +2361,18 @@ export function CustomerCatUpReq() {
     education: '@string(5,1000)',
     doorAddr: '@string(5,1000)',
     doorName: '@string(5,1000)',
-    fileUrlList: '@string(5,1000)',
+    'fileUrlList|5-20': ['@string(5,1000)'],
     gender: '@string(5,1000)',
     id: '@string(5,1000)',
-    invoiceList: CustomerInvoiceAddReq(),
+    'invoiceList|5-20': [CustomerInvoiceAddReq()],
     isImportant: '@integer(3,1000)',
-    labels: CustomerLabelReq(),
+    'labels|5-20': [CustomerLabelReq()],
     location: '@string(5,1000)',
     catName: '@string(5,1000)',
     phone: '@string(5,1000)',
     post: '@string(5,1000)',
     province: '@string(5,1000)',
-    titleList: CustomerCatTitleReq(),
+    'titleList|5-20': [CustomerCatTitleReq()],
   }
 }
 export function DayCityReq() {
@@ -2383,7 +2383,7 @@ export function DayCityReq() {
 }
 export function DayCityResp() {
   return {
-    cityList: '@string(5,1000)',
+    'cityList|5-20': ['@string(5,1000)'],
     dayTime: '@string(5,1000)',
   }
 }
@@ -2602,7 +2602,7 @@ export function LocationAddReq() {
 }
 export function LocationDateInfoResp() {
   return {
-    addrList: '@string(5,1000)',
+    'addrList|5-20': ['@string(5,1000)'],
     addrNum: '@integer(3,1000)',
     addrStr: '@string(5,1000)',
     happyNum: '@integer(3,1000)',
@@ -2610,7 +2610,7 @@ export function LocationDateInfoResp() {
     desktopName: '@string(5,1000)',
     monthDay: '@string(5,1000)',
     provinceCity: '@string(5,1000)',
-    provinceCityList: '@string(5,1000)',
+    'provinceCityList|5-20': ['@string(5,1000)'],
   }
 }
 export function LocationInfoResp() {
@@ -2643,14 +2643,14 @@ export function PageHappyResp() {
   return {
     happyStatus: '@string(5,1000)',
     happyType: '@string(5,1000)',
-    contactPhoneList: LianXiRenHuaHuaTi(),
+    'contactPhoneList|5-20': [LianXiRenHuaHuaTi()],
     coordinate: '@string(5,1000)',
     created: '@string(5,1000)',
     customerId: '@string(5,1000)',
     customerType: '@string(5,1000)',
     dataLocation: '@string(5,1000)',
     distance: '@string(5,1000)',
-    followInfoList: HuaHuaTiQingQiu(),
+    'followInfoList|5-20': [HuaHuaTiQingQiu()],
     followerId: '@string(5,1000)',
     followerName: '@string(5,1000)',
     hasCustomer: '@boolean()',
@@ -2689,7 +2689,7 @@ export function PageCustomerDoorReq() {
     doorStatus: '@string(5,1000)',
     establishmentTimeEnd: '@string(5,1000)',
     establishmentTimeStart: '@string(5,1000)',
-    labelList: '@string(5,1000)',
+    'labelList|5-20': ['@string(5,1000)'],
     orderColumn: '@string(5,1000)',
     orderType: '@integer(3,1000)',
     own: '@boolean()',
@@ -2719,13 +2719,13 @@ export function PageCustomerCatReq() {
     addr: '@string(5,1000)',
     certificateMajor: '@string(5,1000)',
     certificateName: '@string(5,1000)',
-    certificateNameList: '@string(5,1000)',
+    'certificateNameList|5-20': ['@string(5,1000)'],
     customerCode: '@string(5,1000)',
-    labelList: '@string(5,1000)',
+    'labelList|5-20': ['@string(5,1000)'],
     level: '@string(5,1000)',
-    levelList: '@string(5,1000)',
+    'levelList|5-20': ['@string(5,1000)'],
     major: '@string(5,1000)',
-    majorList: '@string(5,1000)',
+    'majorList|5-20': ['@string(5,1000)'],
     orderColumn: '@string(5,1000)',
     orderType: '@integer(3,1000)',
     own: '@boolean()',
@@ -2749,7 +2749,7 @@ export function PageDoorHappyPoolResp() {
     addr: '@string(5,1000)',
     happyStatus: '@string(5,1000)',
     happyType: '@string(5,1000)',
-    contactPhoneList: LianXiRenHuaHuaTi(),
+    'contactPhoneList|5-20': [LianXiRenHuaHuaTi()],
     coordinate: '@string(5,1000)',
     corpCertArray: '@string(5,1000)',
     corpCertCnt: '@integer(3,1000)',
@@ -2766,7 +2766,7 @@ export function PageDoorHappyPoolResp() {
     establishmentTime: '@string(5,1000)',
     filialeCompanyCnt: '@integer(3,1000)',
     filialeCompanyNameArray: '@string(5,1000)',
-    followInfoList: HuaHuaTiQingQiu(),
+    'followInfoList|5-20': [HuaHuaTiQingQiu()],
     followerId: '@string(5,1000)',
     followerName: '@string(5,1000)',
     hasCustomer: '@boolean()',
@@ -2807,7 +2807,7 @@ export function PageLocationReq() {
     city: '@string(5,1000)',
     desktopName: '@string(5,1000)',
     endTime: '@string(5,1000)',
-    followerIdList: '@string(5,1000)',
+    'followerIdList|5-20': ['@string(5,1000)'],
     page: '@integer(3,1000)',
     province: '@string(5,1000)',
     size: '@integer(3,1000)',
@@ -2827,7 +2827,7 @@ export function PageCatHappyPoolResp() {
     certificateName: '@string(5,1000)',
     certificateNum: '@string(5,1000)',
     city: '@string(5,1000)',
-    contactPhoneList: LianXiRenHuaHuaTi(),
+    'contactPhoneList|5-20': [LianXiRenHuaHuaTi()],
     coordinate: '@string(5,1000)',
     country: '@string(5,1000)',
     created: '@string(5,1000)',
@@ -2838,7 +2838,7 @@ export function PageCatHappyPoolResp() {
     dataLocation: '@string(5,1000)',
     distance: '@string(5,1000)',
     education: '@string(5,1000)',
-    followInfoList: HuaHuaTiQingQiu(),
+    'followInfoList|5-20': [HuaHuaTiQingQiu()],
     followerId: '@string(5,1000)',
     followerName: '@string(5,1000)',
     gender: '@string(5,1000)',
@@ -2919,7 +2919,7 @@ export function PageGladHappyPoolResp() {
     biddingType: '@string(5,1000)',
     happyStatus: '@string(5,1000)',
     happyType: '@string(5,1000)',
-    contactPhoneList: LianXiRenHuaHuaTi(),
+    'contactPhoneList|5-20': [LianXiRenHuaHuaTi()],
     coordinate: '@string(5,1000)',
     created: '@string(5,1000)',
     customerId: '@string(5,1000)',
@@ -2928,7 +2928,7 @@ export function PageGladHappyPoolResp() {
     distance: '@string(5,1000)',
     fileDownloadEndTime: '@string(5,1000)',
     fileDownloadStartTime: '@string(5,1000)',
-    followInfoList: HuaHuaTiQingQiu(),
+    'followInfoList|5-20': [HuaHuaTiQingQiu()],
     followerId: '@string(5,1000)',
     followerName: '@string(5,1000)',
     hasCustomer: '@boolean()',
@@ -3005,7 +3005,7 @@ export function PunchPageResp() {
     coordinate: '@string(5,1000)',
     country: '@string(5,1000)',
     createName: '@string(5,1000)',
-    imageUrlList: '@string(5,1000)',
+    'imageUrlList|5-20': ['@string(5,1000)'],
     location: '@string(5,1000)',
     province: '@string(5,1000)',
     punchTime: '@string(5,1000)',
@@ -3021,7 +3021,7 @@ export function PunchReq() {
     coordinate: '@string(5,1000)',
     country: '@string(5,1000)',
     date: '@string(5,1000)',
-    fileIdList: '@string(5,1000)',
+    'fileIdList|5-20': ['@string(5,1000)'],
     followResult: '@string(5,1000)',
     location: '@string(5,1000)',
     province: '@string(5,1000)',
@@ -3029,13 +3029,13 @@ export function PunchReq() {
 }
 export function RankResp() {
   return {
-    list: PaiMingShuJuRankDataResp(),
+    'list|5-20': [PaiMingShuJuRankDataResp()],
     rank: WoCongMingPaiMingMyRankResp(),
   }
 }
 export function ReceiveHappyReq() {
   return {
-    happyList: '@string(5,1000)',
+    'happyList|5-20': ['@string(5,1000)'],
     happyReceiveSource: '@string(5,1000)',
     happyType: '@string(5,1000)',
   }
@@ -3055,7 +3055,7 @@ export function SelectCustomerDoorGratefulReq() {
   return {
     doorCode: '@string(5,1000)',
     doorName: '@string(5,1000)',
-    gratefulIdList: '@string(5,1000)',
+    'gratefulIdList|5-20': ['@string(5,1000)'],
   }
 }
 export function TaskAddrResp() {
@@ -3103,13 +3103,13 @@ export function TaskCreateCatReq() {
 }
 export function TaskCreateReq() {
   return {
-    addrList: TaskCreateAddrReq(),
+    'addrList|5-20': [TaskCreateAddrReq()],
     dayHappyNum: '@integer(3,1000)',
     dayHappyOpen: '@boolean()',
-    whiteList: TaskCreateWhiteReq(),
+    'whiteList|5-20': [TaskCreateWhiteReq()],
     endTime: '@string(5,1000)',
     name: '@string(5,1000)',
-    catList: TaskCreateCatReq(),
+    'catList|5-20': [TaskCreateCatReq()],
     startTime: '@string(5,1000)',
     taskType: '@string(5,1000)',
   }
@@ -3122,19 +3122,19 @@ export function TaskWhiteResp() {
 }
 export function TaskInfoResp() {
   return {
-    addrList: TaskAddrResp(),
+    'addrList|5-20': [TaskAddrResp()],
     allDays: '@string(5,1000)',
     createId: '@string(5,1000)',
     created: '@string(5,1000)',
     dayHappyNum: '@integer(3,1000)',
     dayHappyOpen: '@boolean()',
     days: '@string(5,1000)',
-    whiteList: TaskWhiteResp(),
+    'whiteList|5-20': [TaskWhiteResp()],
     endTime: '@string(5,1000)',
     id: '@string(5,1000)',
     isMyCreated: '@boolean()',
     name: '@string(5,1000)',
-    catList: TaskCatResp(),
+    'catList|5-20': [TaskCatResp()],
     startTime: '@string(5,1000)',
     taskStatus: '@string(5,1000)',
     taskType: '@string(5,1000)',
@@ -3142,14 +3142,14 @@ export function TaskInfoResp() {
 }
 export function TaskModifyReq() {
   return {
-    addrList: TaskCreateAddrReq(),
+    'addrList|5-20': [TaskCreateAddrReq()],
     dayHappyNum: '@integer(3,1000)',
     dayHappyOpen: '@boolean()',
-    whiteList: TaskCreateWhiteReq(),
+    'whiteList|5-20': [TaskCreateWhiteReq()],
     endTime: '@string(5,1000)',
     id: '@string(5,1000)',
     name: '@string(5,1000)',
-    catList: TaskCreateCatReq(),
+    'catList|5-20': [TaskCreateCatReq()],
     startTime: '@string(5,1000)',
     taskType: '@string(5,1000)',
   }
@@ -3169,19 +3169,19 @@ export function TaskPageListReq() {
 }
 export function TaskPageListResp() {
   return {
-    addrList: TaskAddrResp(),
+    'addrList|5-20': [TaskAddrResp()],
     allDays: '@string(5,1000)',
     createId: '@string(5,1000)',
     created: '@string(5,1000)',
     dayHappyNum: '@integer(3,1000)',
     dayHappyOpen: '@boolean()',
     days: '@string(5,1000)',
-    whiteList: TaskWhiteResp(),
+    'whiteList|5-20': [TaskWhiteResp()],
     endTime: '@string(5,1000)',
     id: '@string(5,1000)',
     isMyCreated: '@boolean()',
     name: '@string(5,1000)',
-    catList: TaskCatResp(),
+    'catList|5-20': [TaskCatResp()],
     progress: TaskProgressResp(),
     startTime: '@string(5,1000)',
     taskStatus: '@string(5,1000)',
@@ -3209,7 +3209,7 @@ export function TaskProgressDetailResp() {
     followerId: '@string(5,1000)',
     followerName: '@string(5,1000)',
     lastLocation: '@string(5,1000)',
-    locationDataList: TaskAddrResp(),
+    'locationDataList|5-20': [TaskAddrResp()],
     phone: '@string(5,1000)',
     progress: TaskProgressResp(),
     taskStatus: '@string(5,1000)',
@@ -3334,14 +3334,14 @@ export function FenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu() {
   return {
     happyStatus: '@string(5,1000)',
     happyType: '@string(5,1000)',
-    contactPhoneList: LianXiRenHuaHuaTi(),
+    'contactPhoneList|5-20': [LianXiRenHuaHuaTi()],
     coordinate: '@string(5,1000)',
     created: '@string(5,1000)',
     customerId: '@string(5,1000)',
     customerType: '@string(5,1000)',
     dataLocation: '@string(5,1000)',
     distance: '@string(5,1000)',
-    followInfoList: HuaHuaTiQingQiu(),
+    'followInfoList|5-20': [HuaHuaTiQingQiu()],
     followerId: '@string(5,1000)',
     followerName: '@string(5,1000)',
     hasCustomer: '@boolean()',
@@ -3363,7 +3363,7 @@ export function FenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu() {
 export function FenYeLvYouRenCaiFaCaiMengJianDanShuJu() {
   return {
     addr: '@string(5,1000)',
-    addrList: DiZhi(),
+    'addrList|5-20': [DiZhi()],
     area: '@string(5,1000)',
     happyStatus: '@string(5,1000)',
     city: '@string(5,1000)',
@@ -3375,7 +3375,7 @@ export function FenYeLvYouRenCaiFaCaiMengJianDanShuJu() {
     distance: '@string(5,1000)',
     followResult: '@string(5,1000)',
     followType: '@string(5,1000)',
-    followTypeList: '@string(5,1000)',
+    'followTypeList|5-20': ['@string(5,1000)'],
     followerId: '@string(5,1000)',
     isRead: '@integer(3,1000)',
     name: '@string(5,1000)',
@@ -3394,10 +3394,10 @@ export function FenYeLvYouRenCaiFaCaiMengGongHai() {
     achievementCntMax: '@string(5,1000)',
     achievementCntMin: '@string(5,1000)',
     addr: '@string(5,1000)',
-    addrList: DiZhi(),
+    'addrList|5-20': [DiZhi()],
     area: '@string(5,1000)',
     happyStatus: '@string(5,1000)',
-    certificateList: '@string(5,1000)',
+    'certificateList|5-20': ['@string(5,1000)'],
     certificateMajor: '@string(5,1000)',
     certificateName: '@string(5,1000)',
     city: '@string(5,1000)',
@@ -3409,13 +3409,13 @@ export function FenYeLvYouRenCaiFaCaiMengGongHai() {
     distance: '@string(5,1000)',
     followResult: '@string(5,1000)',
     followType: '@string(5,1000)',
-    followTypeList: '@string(5,1000)',
+    'followTypeList|5-20': ['@string(5,1000)'],
     followerId: '@string(5,1000)',
     isRead: '@integer(3,1000)',
     level: '@string(5,1000)',
-    levelList: '@string(5,1000)',
+    'levelList|5-20': ['@string(5,1000)'],
     major: '@string(5,1000)',
-    majorList: '@string(5,1000)',
+    'majorList|5-20': ['@string(5,1000)'],
     name: '@string(5,1000)',
     orderColumn: '@string(5,1000)',
     orderType: '@integer(3,1000)',
@@ -3435,7 +3435,7 @@ export function FenYeLvYouRenCaiFaCaiMengTuiJian() {
     achievementCntMax: '@string(5,1000)',
     achievementCntMin: '@string(5,1000)',
     addr: '@string(5,1000)',
-    addrList: DiZhi(),
+    'addrList|5-20': [DiZhi()],
     area: '@string(5,1000)',
     certificateMajor: '@string(5,1000)',
     certificateName: '@string(5,1000)',
@@ -3446,11 +3446,11 @@ export function FenYeLvYouRenCaiFaCaiMengTuiJian() {
     distance: '@string(5,1000)',
     followResult: '@string(5,1000)',
     followType: '@string(5,1000)',
-    followTypeList: '@string(5,1000)',
+    'followTypeList|5-20': ['@string(5,1000)'],
     level: '@string(5,1000)',
-    levelList: '@string(5,1000)',
+    'levelList|5-20': ['@string(5,1000)'],
     major: '@string(5,1000)',
-    majorList: '@string(5,1000)',
+    'majorList|5-20': ['@string(5,1000)'],
     name: '@string(5,1000)',
     orderColumn: '@string(5,1000)',
     orderType: '@integer(3,1000)',
@@ -3469,10 +3469,10 @@ export function FenYeLvYouRenWu() {
     handlerId: '@string(5,1000)',
     handlerName: '@string(5,1000)',
     lastPunchAddr: '@string(5,1000)',
-    planHappyList: PagePlanResp(),
+    'planHappyList|5-20': [PagePlanResp()],
     planCount: '@integer(3,1000)',
     planKeyBorardId: '@string(5,1000)',
-    signHappyList: PagePlanResp(),
+    'signHappyList|5-20': [PagePlanResp()],
     signCount: '@integer(3,1000)',
   }
 }
@@ -3480,7 +3480,7 @@ export function FenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu() {
   return {
     happyStatus: '@string(5,1000)',
     happyType: '@string(5,1000)',
-    contactPhoneList: LianXiRenHuaHuaTi(),
+    'contactPhoneList|5-20': [LianXiRenHuaHuaTi()],
     coordinate: '@string(5,1000)',
     created: '@string(5,1000)',
     customerId: '@string(5,1000)',
@@ -3488,7 +3488,7 @@ export function FenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu() {
     dataLocation: '@string(5,1000)',
     distance: '@string(5,1000)',
     doorName: '@string(5,1000)',
-    followInfoList: HuaHuaTiQingQiu(),
+    'followInfoList|5-20': [HuaHuaTiQingQiu()],
     followerId: '@string(5,1000)',
     followerName: '@string(5,1000)',
     hasCustomer: '@boolean()',
@@ -3516,12 +3516,12 @@ export function FenYeLvYouZhiXieChangFaCaiMengJianDanShuJu() {
 export function FenYeLvYouZhiXieChangFaCaiMengGongHai() {
   return {
     addr: '@string(5,1000)',
-    addrList: DiZhi(),
+    'addrList|5-20': [DiZhi()],
     area: '@string(5,1000)',
     happyStatus: '@string(5,1000)',
     city: '@string(5,1000)',
     coordinate: '@string(5,1000)',
-    corpCertList: '@string(5,1000)',
+    'corpCertList|5-20': ['@string(5,1000)'],
     corpCertMax: '@string(5,1000)',
     corpCertMin: '@string(5,1000)',
     createEndTime: '@string(5,1000)',
@@ -3531,24 +3531,24 @@ export function FenYeLvYouZhiXieChangFaCaiMengGongHai() {
     distance: '@string(5,1000)',
     endTime: '@string(5,1000)',
     doorStatus: '@string(5,1000)',
-    doorType: '@string(5,1000)',
-    doorTypeList: '@string(5,1000)',
+    'doorType|5-20': ['@string(5,1000)'],
+    'doorTypeList|5-20': ['@string(5,1000)'],
     filialeCompanyMax: '@string(5,1000)',
     filialeCompanyMin: '@string(5,1000)',
     followResult: '@string(5,1000)',
     followType: '@string(5,1000)',
-    followTypeList: '@string(5,1000)',
+    'followTypeList|5-20': ['@string(5,1000)'],
     followerId: '@string(5,1000)',
-    industryType: '@string(5,1000)',
+    'industryType|5-20': ['@string(5,1000)'],
     isRead: '@integer(3,1000)',
-    lackCorpCertList: '@string(5,1000)',
-    lackQualicaficationList: '@string(5,1000)',
+    'lackCorpCertList|5-20': ['@string(5,1000)'],
+    'lackQualicaficationList|5-20': ['@string(5,1000)'],
     name: '@string(5,1000)',
     orderColumn: '@string(5,1000)',
     orderType: '@integer(3,1000)',
     page: '@integer(3,1000)',
     province: '@string(5,1000)',
-    qualicaficationList: '@string(5,1000)',
+    'qualicaficationList|5-20': ['@string(5,1000)'],
     qualicaficationMax: '@string(5,1000)',
     qualicaficationMin: '@string(5,1000)',
     receiveType: '@string(5,1000)',
@@ -3572,11 +3572,11 @@ export function FenYeLvYouZhiXieChangFaCaiMengGongHai() {
 export function FenYeLvYouZhiXieChangFaCaiMengTuiJian() {
   return {
     addr: '@string(5,1000)',
-    addrList: DiZhi(),
+    'addrList|5-20': [DiZhi()],
     area: '@string(5,1000)',
     city: '@string(5,1000)',
     coordinate: '@string(5,1000)',
-    corpCertList: '@string(5,1000)',
+    'corpCertList|5-20': ['@string(5,1000)'],
     corpCertMax: '@string(5,1000)',
     corpCertMin: '@string(5,1000)',
     createEndTime: '@string(5,1000)',
@@ -3584,18 +3584,18 @@ export function FenYeLvYouZhiXieChangFaCaiMengTuiJian() {
     distance: '@string(5,1000)',
     endTime: '@string(5,1000)',
     doorStatus: '@string(5,1000)',
-    filialeCompanyList: '@string(5,1000)',
+    'filialeCompanyList|5-20': ['@string(5,1000)'],
     filialeCompanyMax: '@string(5,1000)',
     filialeCompanyMin: '@string(5,1000)',
     followResult: '@string(5,1000)',
     followType: '@string(5,1000)',
-    followTypeList: '@string(5,1000)',
+    'followTypeList|5-20': ['@string(5,1000)'],
     name: '@string(5,1000)',
     orderColumn: '@string(5,1000)',
     orderType: '@integer(3,1000)',
     page: '@integer(3,1000)',
     province: '@string(5,1000)',
-    qualicaficationList: '@string(5,1000)',
+    'qualicaficationList|5-20': ['@string(5,1000)'],
     qualicaficationMax: '@string(5,1000)',
     qualicaficationMin: '@string(5,1000)',
     regCatCntMax: '@string(5,1000)',
@@ -3617,14 +3617,14 @@ export function FenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu() {
   return {
     happyStatus: '@string(5,1000)',
     happyType: '@string(5,1000)',
-    contactPhoneList: LianXiRenHuaHuaTi(),
+    'contactPhoneList|5-20': [LianXiRenHuaHuaTi()],
     coordinate: '@string(5,1000)',
     created: '@string(5,1000)',
     customerId: '@string(5,1000)',
     customerType: '@string(5,1000)',
     dataLocation: '@string(5,1000)',
     distance: '@string(5,1000)',
-    followInfoList: HuaHuaTiQingQiu(),
+    'followInfoList|5-20': [HuaHuaTiQingQiu()],
     followerId: '@string(5,1000)',
     followerName: '@string(5,1000)',
     hasCustomer: '@boolean()',
@@ -3646,7 +3646,7 @@ export function FenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu() {
 export function FenYeLvYouXiangMuFaCaiMengJianDanShuJu() {
   return {
     addr: '@string(5,1000)',
-    addrList: DiZhi(),
+    'addrList|5-20': [DiZhi()],
     area: '@string(5,1000)',
     happyStatus: '@string(5,1000)',
     city: '@string(5,1000)',
@@ -3658,7 +3658,7 @@ export function FenYeLvYouXiangMuFaCaiMengJianDanShuJu() {
     distance: '@string(5,1000)',
     followResult: '@string(5,1000)',
     followType: '@string(5,1000)',
-    followTypeList: '@string(5,1000)',
+    'followTypeList|5-20': ['@string(5,1000)'],
     followerId: '@string(5,1000)',
     isRead: '@integer(3,1000)',
     name: '@string(5,1000)',
@@ -3675,7 +3675,7 @@ export function FenYeLvYouXiangMuFaCaiMengJianDanShuJu() {
 export function FenYeLvYouXiangMuFaCaiMengTuiJian() {
   return {
     addr: '@string(5,1000)',
-    addrList: DiZhi(),
+    'addrList|5-20': [DiZhi()],
     area: '@string(5,1000)',
     biddingType: '@string(5,1000)',
     city: '@string(5,1000)',
@@ -3685,15 +3685,15 @@ export function FenYeLvYouXiangMuFaCaiMengTuiJian() {
     distance: '@string(5,1000)',
     followResult: '@string(5,1000)',
     followType: '@string(5,1000)',
-    followTypeList: '@string(5,1000)',
-    industryTypeList: '@string(5,1000)',
+    'followTypeList|5-20': ['@string(5,1000)'],
+    'industryTypeList|5-20': ['@string(5,1000)'],
     name: '@string(5,1000)',
     orderColumn: '@string(5,1000)',
     orderType: '@integer(3,1000)',
     page: '@integer(3,1000)',
     gladBudgetMax: '@string(5,1000)',
     gladBudgetMin: '@string(5,1000)',
-    gladTypeList: '@string(5,1000)',
+    'gladTypeList|5-20': ['@string(5,1000)'],
     province: '@string(5,1000)',
     publishEndTime: '@string(5,1000)',
     publishStartTime: '@string(5,1000)',
@@ -3722,7 +3722,7 @@ export function HuaHuaTiQingQiu() {
     followType: '@string(5,1000)',
     follower: '@string(5,1000)',
     id: '@string(5,1000)',
-    imageUrlList: '@string(5,1000)',
+    'imageUrlList|5-20': ['@string(5,1000)'],
   }
 }
 export function YuMiHuaHuaTiQingQiu() {
@@ -3737,7 +3737,7 @@ export function FaCaiMengGenJinJiLuQingQiu() {
   return {
     happyId: '@string(5,1000)',
     happyType: '@string(5,1000)',
-    flowType: '@string(5,1000)',
+    'flowType|5-20': ['@string(5,1000)'],
     page: '@integer(3,1000)',
     size: '@integer(3,1000)',
   }
@@ -3766,7 +3766,7 @@ export function JiQiRenGenJinJiLuXiangYing() {
     followType: '@string(5,1000)',
     follower: '@string(5,1000)',
     id: '@string(5,1000)',
-    imageUrlList: '@string(5,1000)',
+    'imageUrlList|5-20': ['@string(5,1000)'],
   }
 }
 export function JiQiRenGenJinJiLuQingQiu() {
@@ -3779,7 +3779,7 @@ export function JiQiRenGenJinJiLuQingQiu() {
 }
 export function DaoRuHuaHuaTiXiangYing() {
   return {
-    failData: FailData(),
+    'failData|5-20': [FailData()],
     failNum: '@integer(3,1000)',
     fileName: '@string(5,1000)',
     fileUrl: '@string(5,1000)',
@@ -3917,7 +3917,7 @@ export function GuanShuiXiangMuFaCaiMengrpcChongDong() {
 }
 export function GengGaiPaiXuDuiXiang() {
   return {
-    list: HappyPlanScoreListReq(),
+    'list|5-20': [HappyPlanScoreListReq()],
   }
 }
 export function ZhuZhuangTuTongJiHistogramDataReq() {
@@ -4044,7 +4044,7 @@ export function DuRuWenJianXiangYing() {
 }
 export function ZhuanRangQingQiu() {
   return {
-    happyId: '@string(5,1000)',
+    'happyId|5-20': ['@string(5,1000)'],
     happyType: '@string(5,1000)',
     followerId: '@string(5,1000)',
     followerName: '@string(5,1000)',
@@ -4090,7 +4090,7 @@ export function XiangMuFaCaiMengXiuGairpcrequest() {
 export function XiangMuFaCaiMengGongHaiLvYou() {
   return {
     addr: '@string(5,1000)',
-    addrList: DiZhi(),
+    'addrList|5-20': [DiZhi()],
     area: '@string(5,1000)',
     biddingType: '@string(5,1000)',
     happyStatus: '@string(5,1000)',
@@ -4103,9 +4103,9 @@ export function XiangMuFaCaiMengGongHaiLvYou() {
     distance: '@string(5,1000)',
     followResult: '@string(5,1000)',
     followType: '@string(5,1000)',
-    followTypeList: '@string(5,1000)',
+    'followTypeList|5-20': ['@string(5,1000)'],
     followerId: '@string(5,1000)',
-    industryTypeList: '@string(5,1000)',
+    'industryTypeList|5-20': ['@string(5,1000)'],
     isRead: '@integer(3,1000)',
     name: '@string(5,1000)',
     orderColumn: '@string(5,1000)',
@@ -4113,7 +4113,7 @@ export function XiangMuFaCaiMengGongHaiLvYou() {
     page: '@integer(3,1000)',
     gladBudgetMax: '@string(5,1000)',
     gladBudgetMin: '@string(5,1000)',
-    gladTypeList: '@string(5,1000)',
+    'gladTypeList|5-20': ['@string(5,1000)'],
     province: '@string(5,1000)',
     publishEndTime: '@string(5,1000)',
     publishStartTime: '@string(5,1000)',
