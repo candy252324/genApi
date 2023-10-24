@@ -15,6 +15,7 @@ let apiConfig = {}
 /**
  * // 解析过的所有的api站点的数据
  * [{
+ *  index:0, // 用于排序
  *  outputDir:'/src/api',
  *  apiList:[{namespace:"user", apis:[]}, {namespace:"role", apis:[]}]
  * }]
@@ -26,17 +27,17 @@ function genMock(config) {
   allData = []
   cleanDir(mockPath)
   const apiList = apiConfig.apiList.filter((item) => item.tag)
-  apiList.forEach((item) => {
+  apiList.forEach((item, index) => {
     readSwagger(item)
       .then((apiList) => {
-        allData.push({ outputDir: item.outputDir, apiList })
+        allData.push({ index, outputDir: item.outputDir, apiList })
       })
       .catch(() => {
         allData.push({}) // 解析失败
       })
       .finally(() => {
         if (allData.length === apiList.length) {
-          // 所有站点的 swagger 都解析完成，开始写入 index
+          // 所有站点的 swagger 都解析完成，开始写入 index.js
           writeIndexToFile(allData)
         }
       })
@@ -109,11 +110,13 @@ Mock.setup({
   /**
    * allData 数据格式
    * [{
+   *  index:0, // 用于排序
    *  outputDir:'/src/api',
    *  apiList:[{namespace:"user", apis:[]}, {namespace:"role", apis:[]}]
    * }]
    */
-  allData.forEach((item) => {
+  const sortedData = allData.sort((a, b) => a.index - b.index)
+  sortedData.forEach((item) => {
     if (item.outputDir && item.apiList && item.apiList.length) {
       const outputDir = item.outputDir.replace(/^\//, '') // 去除开头的 /, 将 '/src/api' 处理成 'src/api'
       // 将 src/api 处理成 srcApi
@@ -279,22 +282,6 @@ function getMockStr(model) {
     return `${name}: \"any\",\n`
   } else {
     return `${name}: ${type}(),\n`
-    // if (!isSimpleJsType) {
-    //   // if (type === 'CustomerCatDetailResp') {
-    //   //   const theInterface = allInterfaces.find((item) => item.name === type)
-    //   //   const properties = theInterface.properties || []
-    //   //   let str = ''
-    //   //   properties.forEach((pro) => {
-    //   //     const result = getMockStr(pro, allInterfaces)
-    //   //     str += `${pro.name}:\"${result}\",\n`
-    //   //   })
-    //   //   return str
-    //   // } else {
-    //   //   return ''
-    //   // }
-    // } else {
-    //   console.log('未处理，', type)
-    // }
   }
 }
 

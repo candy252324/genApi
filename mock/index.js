@@ -4,39 +4,6 @@ Mock.setup({
   timeout: '200-500',
 })
 
-import * as __test__OutputSwagger3greenBook from '././__test__/output/swagger3/greenBook.js'
-import * as __test__OutputSwagger3admin from '././__test__/output/swagger3/admin.js'
-import * as __test__OutputSwagger3appVersion from '././__test__/output/swagger3/appVersion.js'
-import * as __test__OutputSwagger3hiall from '././__test__/output/swagger3/hiall.js'
-import * as __test__OutputSwagger3common from '././__test__/output/swagger3/common.js'
-import * as __test__OutputSwagger3white from '././__test__/output/swagger3/white.js'
-import * as __test__OutputSwagger3file from '././__test__/output/swagger3/file.js'
-import * as __test__OutputSwagger3forward from '././__test__/output/swagger3/forward.js'
-import * as __test__OutputSwagger3friendship from '././__test__/output/swagger3/friendship.js'
-import * as __test__OutputSwagger3bird from '././__test__/output/swagger3/bird.js'
-import * as __test__OutputSwagger3birdMember from '././__test__/output/swagger3/birdMember.js'
-import * as __test__OutputSwagger3birdf2f from '././__test__/output/swagger3/birdf2f.js'
-import * as __test__OutputSwagger3login from '././__test__/output/swagger3/login.js'
-import * as __test__OutputSwagger3message from '././__test__/output/swagger3/message.js'
-import * as __test__OutputSwagger3phone from '././__test__/output/swagger3/phone.js'
-import * as __test__OutputSwagger3qrcode from '././__test__/output/swagger3/qrcode.js'
-import * as __test__OutputSwagger3request from '././__test__/output/swagger3/request.js'
-import * as __test__OutputSwagger3requestMsg from '././__test__/output/swagger3/requestMsg.js'
-import * as __test__OutputSwagger3keyBorard from '././__test__/output/swagger3/keyBorard.js'
-import * as __test__OutputSwagger3keyBorardAttention from '././__test__/output/swagger3/keyBorardAttention.js'
-import * as __test__OutputSwagger3baseStation from '././__test__/output/swagger3/baseStation.js'
-import * as __test__OutputSwagger3delete from '././__test__/output/swagger3/delete.js'
-import * as __test__OutputSwagger3deleteAdmin from '././__test__/output/swagger3/deleteAdmin.js'
-import * as __test__OutputSwagger3detail from '././__test__/output/swagger3/detail.js'
-import * as __test__OutputSwagger3existInBird from '././__test__/output/swagger3/existInBird.js'
-import * as __test__OutputSwagger3birdStatus from '././__test__/output/swagger3/birdStatus.js'
-import * as __test__OutputSwagger3leaveBird from '././__test__/output/swagger3/leaveBird.js'
-import * as __test__OutputSwagger3listAdmin from '././__test__/output/swagger3/listAdmin.js'
-import * as __test__OutputSwagger3modifyRemark from '././__test__/output/swagger3/modifyRemark.js'
-import * as __test__OutputSwagger3pageList from '././__test__/output/swagger3/pageList.js'
-import * as __test__OutputSwagger3save from '././__test__/output/swagger3/save.js'
-import * as __test__OutputSwagger3saveAdmin from '././__test__/output/swagger3/saveAdmin.js'
-import * as __test__OutputSwagger3token from '././__test__/output/swagger3/token.js'
 import * as __test__OutputSwagger1blue from '././__test__/output/swagger1/blue.js'
 import * as __test__OutputSwagger1active from '././__test__/output/swagger1/active.js'
 import * as __test__OutputSwagger1audit from '././__test__/output/swagger1/audit.js'
@@ -101,7 +68,39 @@ import * as __test__OutputSwagger2keyBorardAttention from '././__test__/output/s
 import * as __test__OutputSwagger2keyBorardBlack from '././__test__/output/swagger2/keyBorardBlack.js'
 import * as __test__OutputSwagger2keyBorardInform from '././__test__/output/swagger2/keyBorardInform.js'
 import * as __test__OutputSwagger2inner from '././__test__/output/swagger2/inner.js'
-import * as __test__OutputSwagger5thk from '././__test__/output/swagger5/thk.js'
+import * as __test__OutputSwagger3greenBook from '././__test__/output/swagger3/greenBook.js'
+import * as __test__OutputSwagger3admin from '././__test__/output/swagger3/admin.js'
+import * as __test__OutputSwagger3appVersion from '././__test__/output/swagger3/appVersion.js'
+import * as __test__OutputSwagger3hiall from '././__test__/output/swagger3/hiall.js'
+import * as __test__OutputSwagger3common from '././__test__/output/swagger3/common.js'
+import * as __test__OutputSwagger3white from '././__test__/output/swagger3/white.js'
+import * as __test__OutputSwagger3file from '././__test__/output/swagger3/file.js'
+import * as __test__OutputSwagger3forward from '././__test__/output/swagger3/forward.js'
+import * as __test__OutputSwagger3friendship from '././__test__/output/swagger3/friendship.js'
+import * as __test__OutputSwagger3bird from '././__test__/output/swagger3/bird.js'
+import * as __test__OutputSwagger3birdMember from '././__test__/output/swagger3/birdMember.js'
+import * as __test__OutputSwagger3birdf2f from '././__test__/output/swagger3/birdf2f.js'
+import * as __test__OutputSwagger3login from '././__test__/output/swagger3/login.js'
+import * as __test__OutputSwagger3message from '././__test__/output/swagger3/message.js'
+import * as __test__OutputSwagger3phone from '././__test__/output/swagger3/phone.js'
+import * as __test__OutputSwagger3qrcode from '././__test__/output/swagger3/qrcode.js'
+import * as __test__OutputSwagger3request from '././__test__/output/swagger3/request.js'
+import * as __test__OutputSwagger3requestMsg from '././__test__/output/swagger3/requestMsg.js'
+import * as __test__OutputSwagger3keyBorard from '././__test__/output/swagger3/keyBorard.js'
+import * as __test__OutputSwagger3keyBorardAttention from '././__test__/output/swagger3/keyBorardAttention.js'
+import * as __test__OutputSwagger3baseStation from '././__test__/output/swagger3/baseStation.js'
+import * as __test__OutputSwagger3delete from '././__test__/output/swagger3/delete.js'
+import * as __test__OutputSwagger3deleteAdmin from '././__test__/output/swagger3/deleteAdmin.js'
+import * as __test__OutputSwagger3detail from '././__test__/output/swagger3/detail.js'
+import * as __test__OutputSwagger3existInBird from '././__test__/output/swagger3/existInBird.js'
+import * as __test__OutputSwagger3birdStatus from '././__test__/output/swagger3/birdStatus.js'
+import * as __test__OutputSwagger3leaveBird from '././__test__/output/swagger3/leaveBird.js'
+import * as __test__OutputSwagger3listAdmin from '././__test__/output/swagger3/listAdmin.js'
+import * as __test__OutputSwagger3modifyRemark from '././__test__/output/swagger3/modifyRemark.js'
+import * as __test__OutputSwagger3pageList from '././__test__/output/swagger3/pageList.js'
+import * as __test__OutputSwagger3save from '././__test__/output/swagger3/save.js'
+import * as __test__OutputSwagger3saveAdmin from '././__test__/output/swagger3/saveAdmin.js'
+import * as __test__OutputSwagger3token from '././__test__/output/swagger3/token.js'
 import * as __test__OutputSwagger4happy from '././__test__/output/swagger4/happy.js'
 import * as __test__OutputSwagger4happyCertificate from '././__test__/output/swagger4/happyCertificate.js'
 import * as __test__OutputSwagger4happyContact from '././__test__/output/swagger4/happyContact.js'
@@ -125,151 +124,7 @@ import * as __test__OutputSwagger4statistics from '././__test__/output/swagger4/
 import * as __test__OutputSwagger4travel from '././__test__/output/swagger4/travel.js'
 import * as __test__OutputSwagger4keyBorard from '././__test__/output/swagger4/keyBorard.js'
 import * as __test__OutputSwagger4inner from '././__test__/output/swagger4/inner.js'
-Mock.mock('/greenBook/listGratefulInfo', 'post', __test__OutputSwagger3greenBook.greenBookListGratefulInfo)
-Mock.mock('/api/greenBook/listGratefulInfo', 'get', __test__OutputSwagger3greenBook.greenBookListGratefulInfo)
-Mock.mock('/api/admin/getAvatar', 'get', __test__OutputSwagger3admin.adminGetAvatar)
-Mock.mock('/api/admin/putAppVersionFile', 'post', __test__OutputSwagger3admin.adminPutAppVersionFile)
-Mock.mock('/api/appVersion/list', 'get', __test__OutputSwagger3appVersion.appVersionList)
-Mock.mock('/api/hiall/clearHiall', 'post', __test__OutputSwagger3hiall.hiallClearHiall)
-Mock.mock('/api/hiall/create', 'post', __test__OutputSwagger3hiall.hiallCreate)
-Mock.mock('/api/hiall/oftenContact', 'post', __test__OutputSwagger3hiall.hiallOftenContact)
-Mock.mock('/api/hiall/pageList', 'post', __test__OutputSwagger3hiall.hiallPageList)
-Mock.mock('/api/hiall/recentContact', 'post', __test__OutputSwagger3hiall.hiallRecentContact)
-Mock.mock('/api/hiall/unreadList', 'post', __test__OutputSwagger3hiall.hiallUnreadList)
-Mock.mock('/hiall/clearHiall', 'post', __test__OutputSwagger3hiall.hiallClearHiall)
-Mock.mock('/hiall/create', 'post', __test__OutputSwagger3hiall.hiallCreate)
-Mock.mock('/hiall/oftenContact', 'post', __test__OutputSwagger3hiall.hiallOftenContact)
-Mock.mock('/hiall/pageList', 'post', __test__OutputSwagger3hiall.hiallPageList)
-Mock.mock('/hiall/recentContact', 'post', __test__OutputSwagger3hiall.hiallRecentContact)
-Mock.mock('/api/common/bind', 'post', __test__OutputSwagger3common.commonBind)
-Mock.mock('/api/common/search', 'post', __test__OutputSwagger3common.commonSearch)
-Mock.mock('/api/common/search/type', 'post', __test__OutputSwagger3common.commonSearchType)
-Mock.mock('/api/common/searchBeforeAddFriend', 'post', __test__OutputSwagger3common.commonSearchBeforeAddFriend)
-Mock.mock('/api/common/switchChannel', 'post', __test__OutputSwagger3common.commonSwitchChannel)
-Mock.mock('/api/common/switchKeyBorardList', 'post', __test__OutputSwagger3common.commonSwitchKeyBorardList)
-Mock.mock('/common/bind', 'post', __test__OutputSwagger3common.commonBind)
-Mock.mock('/common/search', 'post', __test__OutputSwagger3common.commonSearch)
-Mock.mock('/common/search/type', 'post', __test__OutputSwagger3common.commonSearchType)
-Mock.mock('/common/searchBeforeAddFriend', 'post', __test__OutputSwagger3common.commonSearchBeforeAddFriend)
-Mock.mock('/common/switchChannel', 'post', __test__OutputSwagger3common.commonSwitchChannel)
-Mock.mock('/common/switchKeyBorardList', 'post', __test__OutputSwagger3common.commonSwitchKeyBorardList)
-Mock.mock('/api/white/list', 'post', __test__OutputSwagger3white.whiteList)
-Mock.mock('/api/white/keyBorardWhiteList', 'post', __test__OutputSwagger3white.whiteKeyBorardWhiteList)
-Mock.mock('/api/white/keyBorardListAllGrateful', 'post', __test__OutputSwagger3white.whiteKeyBorardListAllGrateful)
-Mock.mock('/api/white/keyBorardPage', 'post', __test__OutputSwagger3white.whiteKeyBorardPage)
-Mock.mock('/white/list', 'post', __test__OutputSwagger3white.whiteList)
-Mock.mock('/white/keyBorardWhiteList', 'post', __test__OutputSwagger3white.whiteKeyBorardWhiteList)
-Mock.mock('/white/keyBorardListAllGrateful', 'post', __test__OutputSwagger3white.whiteKeyBorardListAllGrateful)
-Mock.mock('/white/keyBorardPage', 'post', __test__OutputSwagger3white.whiteKeyBorardPage)
-Mock.mock('/api/file/putOssFile', 'post', __test__OutputSwagger3file.filePutOssFile)
-Mock.mock('/api/forward/checkAndCreate', 'post', __test__OutputSwagger3forward.forwardCheckAndCreate)
-Mock.mock('/api/forward/list', 'post', __test__OutputSwagger3forward.forwardList)
-Mock.mock('/api/forward/search', 'post', __test__OutputSwagger3forward.forwardSearch)
-Mock.mock('/forward/list', 'post', __test__OutputSwagger3forward.forwardList)
-Mock.mock('/forward/search', 'post', __test__OutputSwagger3forward.forwardSearch)
-Mock.mock('/api/friendship/delete', 'post', __test__OutputSwagger3friendship.friendshipDelete)
-Mock.mock('/api/friendship/detail', 'post', __test__OutputSwagger3friendship.friendshipDetail)
-Mock.mock('/api/friendship/getIsFriend', 'post', __test__OutputSwagger3friendship.friendshipGetIsFriend)
-Mock.mock('/api/friendship/getKeyBorardDetail', 'post', __test__OutputSwagger3friendship.friendshipGetKeyBorardDetail)
-Mock.mock('/api/friendship/modifyRemark', 'post', __test__OutputSwagger3friendship.friendshipModifyRemark)
-Mock.mock('/api/friendship/pageList', 'post', __test__OutputSwagger3friendship.friendshipPageList)
-Mock.mock('/api/friendship/setNoticeAndTop', 'post', __test__OutputSwagger3friendship.friendshipSetNoticeAndTop)
-Mock.mock('/friendship/delete', 'post', __test__OutputSwagger3friendship.friendshipDelete)
-Mock.mock('/friendship/detail', 'post', __test__OutputSwagger3friendship.friendshipDetail)
-Mock.mock('/friendship/getIsFriend', 'post', __test__OutputSwagger3friendship.friendshipGetIsFriend)
-Mock.mock('/friendship/getKeyBorardDetail', 'post', __test__OutputSwagger3friendship.friendshipGetKeyBorardDetail)
-Mock.mock('/friendship/modifyRemark', 'post', __test__OutputSwagger3friendship.friendshipModifyRemark)
-Mock.mock('/friendship/pageList', 'post', __test__OutputSwagger3friendship.friendshipPageList)
-Mock.mock('/api/bird/detail', 'post', __test__OutputSwagger3bird.birdDetail)
-Mock.mock('/api/bird/dissolve', 'post', __test__OutputSwagger3bird.birdDissolve)
-Mock.mock('/api/bird/birdSetting', 'post', __test__OutputSwagger3bird.birdBirdSetting)
-Mock.mock('/api/bird/modifyBirdName', 'post', __test__OutputSwagger3bird.birdModifyBirdName)
-Mock.mock('/api/bird/pageList', 'post', __test__OutputSwagger3bird.birdPageList)
-Mock.mock('/api/bird/save', 'post', __test__OutputSwagger3bird.birdSave)
-Mock.mock('/api/bird/transfer', 'post', __test__OutputSwagger3bird.birdTransfer)
-Mock.mock('/bird/detail', 'post', __test__OutputSwagger3bird.birdDetail)
-Mock.mock('/bird/birdSetting', 'post', __test__OutputSwagger3bird.birdBirdSetting)
-Mock.mock('/bird/modifyBirdName', 'post', __test__OutputSwagger3bird.birdModifyBirdName)
-Mock.mock('/bird/pageList', 'post', __test__OutputSwagger3bird.birdPageList)
-Mock.mock('/bird/save', 'post', __test__OutputSwagger3bird.birdSave)
-Mock.mock('/api/birdMember/delete', 'post', __test__OutputSwagger3birdMember.birdMemberDelete)
-Mock.mock('/api/birdMember/deleteAdmin', 'post', __test__OutputSwagger3birdMember.birdMemberDeleteAdmin)
-Mock.mock('/api/birdMember/detail', 'post', __test__OutputSwagger3birdMember.birdMemberDetail)
-Mock.mock('/api/birdMember/existInBird', 'post', __test__OutputSwagger3birdMember.birdMemberExistInBird)
-Mock.mock('/api/birdMember/birdStatus', 'post', __test__OutputSwagger3birdMember.birdMemberBirdStatus)
-Mock.mock('/api/birdMember/leaveBird', 'post', __test__OutputSwagger3birdMember.birdMemberLeaveBird)
-Mock.mock('/api/birdMember/listAdmin', 'get', __test__OutputSwagger3birdMember.birdMemberListAdmin)
-Mock.mock('/api/birdMember/modifyRemark', 'post', __test__OutputSwagger3birdMember.birdMemberModifyRemark)
-Mock.mock('/api/birdMember/pageList', 'post', __test__OutputSwagger3birdMember.birdMemberPageList)
-Mock.mock('/api/birdMember/save', 'post', __test__OutputSwagger3birdMember.birdMemberSave)
-Mock.mock('/api/birdMember/saveAdmin', 'post', __test__OutputSwagger3birdMember.birdMemberSaveAdmin)
-Mock.mock('/api/birdMember/setNoticeAndTop', 'post', __test__OutputSwagger3birdMember.birdMemberSetNoticeAndTop)
-Mock.mock('/api/birdf2f/enterBird', 'post', __test__OutputSwagger3birdf2f.birdf2fEnterBird)
-Mock.mock('/api/birdf2f/list', 'post', __test__OutputSwagger3birdf2f.birdf2fList)
-Mock.mock('/api/birdf2f/saveRandom', 'post', __test__OutputSwagger3birdf2f.birdf2fSaveRandom)
-Mock.mock('/api/login/doLogin', 'post', __test__OutputSwagger3login.loginDoLogin)
-Mock.mock('/api/login/doLogout', 'get', __test__OutputSwagger3login.loginDoLogout)
-Mock.mock('/api/login/sendPhoneValidateCode', 'get', __test__OutputSwagger3login.loginSendPhoneValidateCode)
-Mock.mock('/login/doLogin', 'post', __test__OutputSwagger3login.loginDoLogin)
-Mock.mock('/login/doLogout', 'get', __test__OutputSwagger3login.loginDoLogout)
-Mock.mock('/login/sendPhoneValidateCode', 'get', __test__OutputSwagger3login.loginSendPhoneValidateCode)
-Mock.mock('/api/message/ack', 'post', __test__OutputSwagger3message.messageAck)
-Mock.mock('/api/message/clear', 'post', __test__OutputSwagger3message.messageClear)
-Mock.mock('/api/message/delete', 'post', __test__OutputSwagger3message.messageDelete)
-Mock.mock('/api/message/detail', 'post', __test__OutputSwagger3message.messageDetail)
-Mock.mock('/api/message/history/pageList', 'post', __test__OutputSwagger3message.messageHistoryPageList)
-Mock.mock('/api/message/search/pageList', 'post', __test__OutputSwagger3message.messageSearchPageList)
-Mock.mock('/api/message/testSendMQ', 'post', __test__OutputSwagger3message.messageTestSendMQ)
-Mock.mock('/api/phone/list', 'post', __test__OutputSwagger3phone.phoneList)
-Mock.mock('/api/qrcode/getImg', 'post', __test__OutputSwagger3qrcode.qrcodeGetImg)
-Mock.mock('/api/request/addFriend', 'post', __test__OutputSwagger3request.requestAddFriend)
-Mock.mock('/api/request/addBird', 'post', __test__OutputSwagger3request.requestAddBird)
-Mock.mock('/api/request/approve', 'post', __test__OutputSwagger3request.requestApprove)
-Mock.mock('/api/request/detail', 'get', __test__OutputSwagger3request.requestDetail)
-Mock.mock('/api/request/getUnreadAttr', 'post', __test__OutputSwagger3request.requestGetUnreadAttr)
-Mock.mock('/api/request/getUnreadCount', 'get', __test__OutputSwagger3request.requestGetUnreadCount)
-Mock.mock('/api/request/invite', 'post', __test__OutputSwagger3request.requestInvite)
-Mock.mock('/api/request/pageList', 'post', __test__OutputSwagger3request.requestPageList)
-Mock.mock('/api/request/read', 'post', __test__OutputSwagger3request.requestRead)
-Mock.mock('/api/request/tryInvite', 'post', __test__OutputSwagger3request.requestTryInvite)
-Mock.mock('/api/requestMsg/save', 'post', __test__OutputSwagger3requestMsg.requestMsgSave)
-Mock.mock('/api/keyBorard/cancel', 'post', __test__OutputSwagger3keyBorard.keyBorardCancel)
-Mock.mock('/api/keyBorard/getCancelSmsCode', 'get', __test__OutputSwagger3keyBorard.keyBorardGetCancelSmsCode)
-Mock.mock('/api/keyBorard/hasSelectGrateful', 'get', __test__OutputSwagger3keyBorard.keyBorardHasSelectGrateful)
-Mock.mock('/api/keyBorard/listGratefulInfo', 'get', __test__OutputSwagger3keyBorard.keyBorardListGratefulInfo)
-Mock.mock('/api/keyBorard/modifyAvatar', 'post', __test__OutputSwagger3keyBorard.keyBorardModifyAvatar)
-Mock.mock('/api/keyBorard/modifyEmail', 'post', __test__OutputSwagger3keyBorard.keyBorardModifyEmail)
-Mock.mock('/api/keyBorard/catInfo', 'get', __test__OutputSwagger3keyBorard.keyBorardCatInfo)
-Mock.mock('/api/keyBorard/queryAppVersion', 'get', __test__OutputSwagger3keyBorard.keyBorardQueryAppVersion)
-Mock.mock('/api/keyBorard/setDefaultDoor', 'post', __test__OutputSwagger3keyBorard.keyBorardSetDefaultDoor)
-Mock.mock('/api/keyBorard/setIsApprove', 'get', __test__OutputSwagger3keyBorard.keyBorardSetIsApprove)
-Mock.mock('/api/keyBorard/setIsBirdApprove', 'get', __test__OutputSwagger3keyBorard.keyBorardSetIsBirdApprove)
-Mock.mock('/api/keyBorard/setIsNotice', 'get', __test__OutputSwagger3keyBorard.keyBorardSetIsNotice)
-Mock.mock('/api/keyBorard/setRequestChannel', 'post', __test__OutputSwagger3keyBorard.keyBorardSetRequestChannel)
-Mock.mock('/api/keyBorardAttention/remove', 'get', __test__OutputSwagger3keyBorardAttention.keyBorardAttentionRemove)
-Mock.mock('/api/keyBorardAttention/save', 'get', __test__OutputSwagger3keyBorardAttention.keyBorardAttentionSave)
-Mock.mock(
-  '/baseStation/getDesktopAllByKeyBorardAndGrateful',
-  'post',
-  __test__OutputSwagger3baseStation.baseStationGetDesktopAllByKeyBorardAndGrateful
-)
-Mock.mock('/baseStation/listWhiteByParent', 'post', __test__OutputSwagger3baseStation.baseStationListWhiteByParent)
-Mock.mock('/baseStation/listGratefulInfo', 'post', __test__OutputSwagger3baseStation.baseStationListGratefulInfo)
-Mock.mock('/baseStation/queryDoorAll', 'post', __test__OutputSwagger3baseStation.baseStationQueryDoorAll)
-Mock.mock('/delete', 'post', __test__OutputSwagger3delete.deleteFn)
-Mock.mock('/deleteAdmin', 'post', __test__OutputSwagger3deleteAdmin.deleteAdmin)
-Mock.mock('/detail', 'post', __test__OutputSwagger3detail.detail)
-Mock.mock('/existInBird', 'post', __test__OutputSwagger3existInBird.existInBird)
-Mock.mock('/birdStatus', 'post', __test__OutputSwagger3birdStatus.birdStatus)
-Mock.mock('/leaveBird', 'post', __test__OutputSwagger3leaveBird.leaveBird)
-Mock.mock('/listAdmin', 'get', __test__OutputSwagger3listAdmin.listAdmin)
-Mock.mock('/modifyRemark', 'post', __test__OutputSwagger3modifyRemark.modifyRemark)
-Mock.mock('/pageList', 'post', __test__OutputSwagger3pageList.pageList)
-Mock.mock('/save', 'post', __test__OutputSwagger3save.save)
-Mock.mock('/saveAdmin', 'post', __test__OutputSwagger3saveAdmin.saveAdmin)
-Mock.mock('/token/addTokenToShangyunCache', 'post', __test__OutputSwagger3token.tokenAddTokenToShangyunCache)
-Mock.mock('/token/checkToken', 'post', __test__OutputSwagger3token.tokenCheckToken)
-Mock.mock('/token/removeSessionInShangyun', 'post', __test__OutputSwagger3token.tokenRemoveSessionInShangyun)
+import * as __test__OutputSwagger5thk from '././__test__/output/swagger5/thk.js'
 Mock.mock('/api/blue/acc/queryAcc', 'post', __test__OutputSwagger1blue.blueAccQueryAcc)
 Mock.mock('/api/blue/door/addDoor', 'post', __test__OutputSwagger1blue.blueDoorAddDoor)
 Mock.mock('/api/blue/door/createDoor', 'post', __test__OutputSwagger1blue.blueDoorCreateDoor)
@@ -846,6 +701,367 @@ Mock.mock('/inner/birdMember/save', 'post', __test__OutputSwagger2inner.innerBir
 Mock.mock('/inner/mock/mockSaveMember', 'post', __test__OutputSwagger2inner.innerMockMockSaveMember)
 Mock.mock('/inner/msg/search', 'post', __test__OutputSwagger2inner.innerMsgSearch)
 Mock.mock('/inner/msg/send', 'post', __test__OutputSwagger2inner.innerMsgSend)
+Mock.mock('/greenBook/listGratefulInfo', 'post', __test__OutputSwagger3greenBook.greenBookListGratefulInfo)
+Mock.mock('/api/greenBook/listGratefulInfo', 'get', __test__OutputSwagger3greenBook.greenBookListGratefulInfo)
+Mock.mock('/api/admin/getAvatar', 'get', __test__OutputSwagger3admin.adminGetAvatar)
+Mock.mock('/api/admin/putAppVersionFile', 'post', __test__OutputSwagger3admin.adminPutAppVersionFile)
+Mock.mock('/api/appVersion/list', 'get', __test__OutputSwagger3appVersion.appVersionList)
+Mock.mock('/api/hiall/clearHiall', 'post', __test__OutputSwagger3hiall.hiallClearHiall)
+Mock.mock('/api/hiall/create', 'post', __test__OutputSwagger3hiall.hiallCreate)
+Mock.mock('/api/hiall/oftenContact', 'post', __test__OutputSwagger3hiall.hiallOftenContact)
+Mock.mock('/api/hiall/pageList', 'post', __test__OutputSwagger3hiall.hiallPageList)
+Mock.mock('/api/hiall/recentContact', 'post', __test__OutputSwagger3hiall.hiallRecentContact)
+Mock.mock('/api/hiall/unreadList', 'post', __test__OutputSwagger3hiall.hiallUnreadList)
+Mock.mock('/hiall/clearHiall', 'post', __test__OutputSwagger3hiall.hiallClearHiall)
+Mock.mock('/hiall/create', 'post', __test__OutputSwagger3hiall.hiallCreate)
+Mock.mock('/hiall/oftenContact', 'post', __test__OutputSwagger3hiall.hiallOftenContact)
+Mock.mock('/hiall/pageList', 'post', __test__OutputSwagger3hiall.hiallPageList)
+Mock.mock('/hiall/recentContact', 'post', __test__OutputSwagger3hiall.hiallRecentContact)
+Mock.mock('/api/common/bind', 'post', __test__OutputSwagger3common.commonBind)
+Mock.mock('/api/common/search', 'post', __test__OutputSwagger3common.commonSearch)
+Mock.mock('/api/common/search/type', 'post', __test__OutputSwagger3common.commonSearchType)
+Mock.mock('/api/common/searchBeforeAddFriend', 'post', __test__OutputSwagger3common.commonSearchBeforeAddFriend)
+Mock.mock('/api/common/switchChannel', 'post', __test__OutputSwagger3common.commonSwitchChannel)
+Mock.mock('/api/common/switchKeyBorardList', 'post', __test__OutputSwagger3common.commonSwitchKeyBorardList)
+Mock.mock('/common/bind', 'post', __test__OutputSwagger3common.commonBind)
+Mock.mock('/common/search', 'post', __test__OutputSwagger3common.commonSearch)
+Mock.mock('/common/search/type', 'post', __test__OutputSwagger3common.commonSearchType)
+Mock.mock('/common/searchBeforeAddFriend', 'post', __test__OutputSwagger3common.commonSearchBeforeAddFriend)
+Mock.mock('/common/switchChannel', 'post', __test__OutputSwagger3common.commonSwitchChannel)
+Mock.mock('/common/switchKeyBorardList', 'post', __test__OutputSwagger3common.commonSwitchKeyBorardList)
+Mock.mock('/api/white/list', 'post', __test__OutputSwagger3white.whiteList)
+Mock.mock('/api/white/keyBorardWhiteList', 'post', __test__OutputSwagger3white.whiteKeyBorardWhiteList)
+Mock.mock('/api/white/keyBorardListAllGrateful', 'post', __test__OutputSwagger3white.whiteKeyBorardListAllGrateful)
+Mock.mock('/api/white/keyBorardPage', 'post', __test__OutputSwagger3white.whiteKeyBorardPage)
+Mock.mock('/white/list', 'post', __test__OutputSwagger3white.whiteList)
+Mock.mock('/white/keyBorardWhiteList', 'post', __test__OutputSwagger3white.whiteKeyBorardWhiteList)
+Mock.mock('/white/keyBorardListAllGrateful', 'post', __test__OutputSwagger3white.whiteKeyBorardListAllGrateful)
+Mock.mock('/white/keyBorardPage', 'post', __test__OutputSwagger3white.whiteKeyBorardPage)
+Mock.mock('/api/file/putOssFile', 'post', __test__OutputSwagger3file.filePutOssFile)
+Mock.mock('/api/forward/checkAndCreate', 'post', __test__OutputSwagger3forward.forwardCheckAndCreate)
+Mock.mock('/api/forward/list', 'post', __test__OutputSwagger3forward.forwardList)
+Mock.mock('/api/forward/search', 'post', __test__OutputSwagger3forward.forwardSearch)
+Mock.mock('/forward/list', 'post', __test__OutputSwagger3forward.forwardList)
+Mock.mock('/forward/search', 'post', __test__OutputSwagger3forward.forwardSearch)
+Mock.mock('/api/friendship/delete', 'post', __test__OutputSwagger3friendship.friendshipDelete)
+Mock.mock('/api/friendship/detail', 'post', __test__OutputSwagger3friendship.friendshipDetail)
+Mock.mock('/api/friendship/getIsFriend', 'post', __test__OutputSwagger3friendship.friendshipGetIsFriend)
+Mock.mock('/api/friendship/getKeyBorardDetail', 'post', __test__OutputSwagger3friendship.friendshipGetKeyBorardDetail)
+Mock.mock('/api/friendship/modifyRemark', 'post', __test__OutputSwagger3friendship.friendshipModifyRemark)
+Mock.mock('/api/friendship/pageList', 'post', __test__OutputSwagger3friendship.friendshipPageList)
+Mock.mock('/api/friendship/setNoticeAndTop', 'post', __test__OutputSwagger3friendship.friendshipSetNoticeAndTop)
+Mock.mock('/friendship/delete', 'post', __test__OutputSwagger3friendship.friendshipDelete)
+Mock.mock('/friendship/detail', 'post', __test__OutputSwagger3friendship.friendshipDetail)
+Mock.mock('/friendship/getIsFriend', 'post', __test__OutputSwagger3friendship.friendshipGetIsFriend)
+Mock.mock('/friendship/getKeyBorardDetail', 'post', __test__OutputSwagger3friendship.friendshipGetKeyBorardDetail)
+Mock.mock('/friendship/modifyRemark', 'post', __test__OutputSwagger3friendship.friendshipModifyRemark)
+Mock.mock('/friendship/pageList', 'post', __test__OutputSwagger3friendship.friendshipPageList)
+Mock.mock('/api/bird/detail', 'post', __test__OutputSwagger3bird.birdDetail)
+Mock.mock('/api/bird/dissolve', 'post', __test__OutputSwagger3bird.birdDissolve)
+Mock.mock('/api/bird/birdSetting', 'post', __test__OutputSwagger3bird.birdBirdSetting)
+Mock.mock('/api/bird/modifyBirdName', 'post', __test__OutputSwagger3bird.birdModifyBirdName)
+Mock.mock('/api/bird/pageList', 'post', __test__OutputSwagger3bird.birdPageList)
+Mock.mock('/api/bird/save', 'post', __test__OutputSwagger3bird.birdSave)
+Mock.mock('/api/bird/transfer', 'post', __test__OutputSwagger3bird.birdTransfer)
+Mock.mock('/bird/detail', 'post', __test__OutputSwagger3bird.birdDetail)
+Mock.mock('/bird/birdSetting', 'post', __test__OutputSwagger3bird.birdBirdSetting)
+Mock.mock('/bird/modifyBirdName', 'post', __test__OutputSwagger3bird.birdModifyBirdName)
+Mock.mock('/bird/pageList', 'post', __test__OutputSwagger3bird.birdPageList)
+Mock.mock('/bird/save', 'post', __test__OutputSwagger3bird.birdSave)
+Mock.mock('/api/birdMember/delete', 'post', __test__OutputSwagger3birdMember.birdMemberDelete)
+Mock.mock('/api/birdMember/deleteAdmin', 'post', __test__OutputSwagger3birdMember.birdMemberDeleteAdmin)
+Mock.mock('/api/birdMember/detail', 'post', __test__OutputSwagger3birdMember.birdMemberDetail)
+Mock.mock('/api/birdMember/existInBird', 'post', __test__OutputSwagger3birdMember.birdMemberExistInBird)
+Mock.mock('/api/birdMember/birdStatus', 'post', __test__OutputSwagger3birdMember.birdMemberBirdStatus)
+Mock.mock('/api/birdMember/leaveBird', 'post', __test__OutputSwagger3birdMember.birdMemberLeaveBird)
+Mock.mock('/api/birdMember/listAdmin', 'get', __test__OutputSwagger3birdMember.birdMemberListAdmin)
+Mock.mock('/api/birdMember/modifyRemark', 'post', __test__OutputSwagger3birdMember.birdMemberModifyRemark)
+Mock.mock('/api/birdMember/pageList', 'post', __test__OutputSwagger3birdMember.birdMemberPageList)
+Mock.mock('/api/birdMember/save', 'post', __test__OutputSwagger3birdMember.birdMemberSave)
+Mock.mock('/api/birdMember/saveAdmin', 'post', __test__OutputSwagger3birdMember.birdMemberSaveAdmin)
+Mock.mock('/api/birdMember/setNoticeAndTop', 'post', __test__OutputSwagger3birdMember.birdMemberSetNoticeAndTop)
+Mock.mock('/api/birdf2f/enterBird', 'post', __test__OutputSwagger3birdf2f.birdf2fEnterBird)
+Mock.mock('/api/birdf2f/list', 'post', __test__OutputSwagger3birdf2f.birdf2fList)
+Mock.mock('/api/birdf2f/saveRandom', 'post', __test__OutputSwagger3birdf2f.birdf2fSaveRandom)
+Mock.mock('/api/login/doLogin', 'post', __test__OutputSwagger3login.loginDoLogin)
+Mock.mock('/api/login/doLogout', 'get', __test__OutputSwagger3login.loginDoLogout)
+Mock.mock('/api/login/sendPhoneValidateCode', 'get', __test__OutputSwagger3login.loginSendPhoneValidateCode)
+Mock.mock('/login/doLogin', 'post', __test__OutputSwagger3login.loginDoLogin)
+Mock.mock('/login/doLogout', 'get', __test__OutputSwagger3login.loginDoLogout)
+Mock.mock('/login/sendPhoneValidateCode', 'get', __test__OutputSwagger3login.loginSendPhoneValidateCode)
+Mock.mock('/api/message/ack', 'post', __test__OutputSwagger3message.messageAck)
+Mock.mock('/api/message/clear', 'post', __test__OutputSwagger3message.messageClear)
+Mock.mock('/api/message/delete', 'post', __test__OutputSwagger3message.messageDelete)
+Mock.mock('/api/message/detail', 'post', __test__OutputSwagger3message.messageDetail)
+Mock.mock('/api/message/history/pageList', 'post', __test__OutputSwagger3message.messageHistoryPageList)
+Mock.mock('/api/message/search/pageList', 'post', __test__OutputSwagger3message.messageSearchPageList)
+Mock.mock('/api/message/testSendMQ', 'post', __test__OutputSwagger3message.messageTestSendMQ)
+Mock.mock('/api/phone/list', 'post', __test__OutputSwagger3phone.phoneList)
+Mock.mock('/api/qrcode/getImg', 'post', __test__OutputSwagger3qrcode.qrcodeGetImg)
+Mock.mock('/api/request/addFriend', 'post', __test__OutputSwagger3request.requestAddFriend)
+Mock.mock('/api/request/addBird', 'post', __test__OutputSwagger3request.requestAddBird)
+Mock.mock('/api/request/approve', 'post', __test__OutputSwagger3request.requestApprove)
+Mock.mock('/api/request/detail', 'get', __test__OutputSwagger3request.requestDetail)
+Mock.mock('/api/request/getUnreadAttr', 'post', __test__OutputSwagger3request.requestGetUnreadAttr)
+Mock.mock('/api/request/getUnreadCount', 'get', __test__OutputSwagger3request.requestGetUnreadCount)
+Mock.mock('/api/request/invite', 'post', __test__OutputSwagger3request.requestInvite)
+Mock.mock('/api/request/pageList', 'post', __test__OutputSwagger3request.requestPageList)
+Mock.mock('/api/request/read', 'post', __test__OutputSwagger3request.requestRead)
+Mock.mock('/api/request/tryInvite', 'post', __test__OutputSwagger3request.requestTryInvite)
+Mock.mock('/api/requestMsg/save', 'post', __test__OutputSwagger3requestMsg.requestMsgSave)
+Mock.mock('/api/keyBorard/cancel', 'post', __test__OutputSwagger3keyBorard.keyBorardCancel)
+Mock.mock('/api/keyBorard/getCancelSmsCode', 'get', __test__OutputSwagger3keyBorard.keyBorardGetCancelSmsCode)
+Mock.mock('/api/keyBorard/hasSelectGrateful', 'get', __test__OutputSwagger3keyBorard.keyBorardHasSelectGrateful)
+Mock.mock('/api/keyBorard/listGratefulInfo', 'get', __test__OutputSwagger3keyBorard.keyBorardListGratefulInfo)
+Mock.mock('/api/keyBorard/modifyAvatar', 'post', __test__OutputSwagger3keyBorard.keyBorardModifyAvatar)
+Mock.mock('/api/keyBorard/modifyEmail', 'post', __test__OutputSwagger3keyBorard.keyBorardModifyEmail)
+Mock.mock('/api/keyBorard/catInfo', 'get', __test__OutputSwagger3keyBorard.keyBorardCatInfo)
+Mock.mock('/api/keyBorard/queryAppVersion', 'get', __test__OutputSwagger3keyBorard.keyBorardQueryAppVersion)
+Mock.mock('/api/keyBorard/setDefaultDoor', 'post', __test__OutputSwagger3keyBorard.keyBorardSetDefaultDoor)
+Mock.mock('/api/keyBorard/setIsApprove', 'get', __test__OutputSwagger3keyBorard.keyBorardSetIsApprove)
+Mock.mock('/api/keyBorard/setIsBirdApprove', 'get', __test__OutputSwagger3keyBorard.keyBorardSetIsBirdApprove)
+Mock.mock('/api/keyBorard/setIsNotice', 'get', __test__OutputSwagger3keyBorard.keyBorardSetIsNotice)
+Mock.mock('/api/keyBorard/setRequestChannel', 'post', __test__OutputSwagger3keyBorard.keyBorardSetRequestChannel)
+Mock.mock('/api/keyBorardAttention/remove', 'get', __test__OutputSwagger3keyBorardAttention.keyBorardAttentionRemove)
+Mock.mock('/api/keyBorardAttention/save', 'get', __test__OutputSwagger3keyBorardAttention.keyBorardAttentionSave)
+Mock.mock(
+  '/baseStation/getDesktopAllByKeyBorardAndGrateful',
+  'post',
+  __test__OutputSwagger3baseStation.baseStationGetDesktopAllByKeyBorardAndGrateful
+)
+Mock.mock('/baseStation/listWhiteByParent', 'post', __test__OutputSwagger3baseStation.baseStationListWhiteByParent)
+Mock.mock('/baseStation/listGratefulInfo', 'post', __test__OutputSwagger3baseStation.baseStationListGratefulInfo)
+Mock.mock('/baseStation/queryDoorAll', 'post', __test__OutputSwagger3baseStation.baseStationQueryDoorAll)
+Mock.mock('/delete', 'post', __test__OutputSwagger3delete.deleteFn)
+Mock.mock('/deleteAdmin', 'post', __test__OutputSwagger3deleteAdmin.deleteAdmin)
+Mock.mock('/detail', 'post', __test__OutputSwagger3detail.detail)
+Mock.mock('/existInBird', 'post', __test__OutputSwagger3existInBird.existInBird)
+Mock.mock('/birdStatus', 'post', __test__OutputSwagger3birdStatus.birdStatus)
+Mock.mock('/leaveBird', 'post', __test__OutputSwagger3leaveBird.leaveBird)
+Mock.mock('/listAdmin', 'get', __test__OutputSwagger3listAdmin.listAdmin)
+Mock.mock('/modifyRemark', 'post', __test__OutputSwagger3modifyRemark.modifyRemark)
+Mock.mock('/pageList', 'post', __test__OutputSwagger3pageList.pageList)
+Mock.mock('/save', 'post', __test__OutputSwagger3save.save)
+Mock.mock('/saveAdmin', 'post', __test__OutputSwagger3saveAdmin.saveAdmin)
+Mock.mock('/token/addTokenToShangyunCache', 'post', __test__OutputSwagger3token.tokenAddTokenToShangyunCache)
+Mock.mock('/token/checkToken', 'post', __test__OutputSwagger3token.tokenCheckToken)
+Mock.mock('/token/removeSessionInShangyun', 'post', __test__OutputSwagger3token.tokenRemoveSessionInShangyun)
+Mock.mock('/api/happy/addHappyDoor', 'post', __test__OutputSwagger4happy.happyAddHappyDoor)
+Mock.mock('/api/happy/addHappyCat', 'post', __test__OutputSwagger4happy.happyAddHappyCat)
+Mock.mock('/api/happy/addHappyGlad', 'post', __test__OutputSwagger4happy.happyAddHappyGlad)
+Mock.mock('/api/happy/addSignHappyDoor', 'post', __test__OutputSwagger4happy.happyAddSignHappyDoor)
+Mock.mock('/api/happy/addSignHappyCat', 'post', __test__OutputSwagger4happy.happyAddSignHappyCat)
+Mock.mock('/api/happy/addSignHappyGlad', 'post', __test__OutputSwagger4happy.happyAddSignHappyGlad)
+Mock.mock('/api/happy/assignHappy', 'post', __test__OutputSwagger4happy.happyAssignHappy)
+Mock.mock('/api/happy/happyClassification', 'post', __test__OutputSwagger4happy.happyHappyClassification)
+Mock.mock('/api/happy/happyNum', 'post', __test__OutputSwagger4happy.happyHappyNum)
+Mock.mock('/api/happy/editHappyDoor', 'post', __test__OutputSwagger4happy.happyEditHappyDoor)
+Mock.mock('/api/happy/editHappyCat', 'post', __test__OutputSwagger4happy.happyEditHappyCat)
+Mock.mock('/api/happy/editHappyGlad', 'post', __test__OutputSwagger4happy.happyEditHappyGlad)
+Mock.mock('/api/happy/door/detail', 'post', __test__OutputSwagger4happy.happyDoorDetail)
+Mock.mock('/api/happy/doorInfo', 'get', __test__OutputSwagger4happy.happyDoorInfo)
+Mock.mock('/api/happy/link', 'post', __test__OutputSwagger4happy.happyLink)
+Mock.mock('/api/happy/pageDoor/sampleList', 'post', __test__OutputSwagger4happy.happyPageDoorSampleList)
+Mock.mock('/api/happy/pageDoorHappyMix', 'post', __test__OutputSwagger4happy.happyPageDoorHappyMix)
+Mock.mock('/api/happy/pageDoorHappyPool', 'post', __test__OutputSwagger4happy.happyPageDoorHappyPool)
+Mock.mock('/api/happy/pageCat/sampleList', 'post', __test__OutputSwagger4happy.happyPageCatSampleList)
+Mock.mock('/api/happy/pageCatHappyMix', 'post', __test__OutputSwagger4happy.happyPageCatHappyMix)
+Mock.mock('/api/happy/pageCatHappyPool', 'post', __test__OutputSwagger4happy.happyPageCatHappyPool)
+Mock.mock('/api/happy/pageGlad/sampleList', 'post', __test__OutputSwagger4happy.happyPageGladSampleList)
+Mock.mock('/api/happy/pageGladHappyMix', 'post', __test__OutputSwagger4happy.happyPageGladHappyMix)
+Mock.mock('/api/happy/pageGladHappyPool', 'post', __test__OutputSwagger4happy.happyPageGladHappyPool)
+Mock.mock('/api/happy/catInfo', 'get', __test__OutputSwagger4happy.happyCatInfo)
+Mock.mock('/api/happy/glad/add', 'post', __test__OutputSwagger4happy.happyGladAdd)
+Mock.mock('/api/happy/glad/get', 'get', __test__OutputSwagger4happy.happyGladGet)
+Mock.mock('/api/happy/glad/modified', 'post', __test__OutputSwagger4happy.happyGladModified)
+Mock.mock('/api/happy/glad/pageList', 'post', __test__OutputSwagger4happy.happyGladPageList)
+Mock.mock('/api/happy/gladInfo', 'get', __test__OutputSwagger4happy.happyGladInfo)
+Mock.mock('/api/happy/receiveHappy', 'post', __test__OutputSwagger4happy.happyReceiveHappy)
+Mock.mock('/api/happy/setVisitPlan', 'get', __test__OutputSwagger4happy.happySetVisitPlan)
+Mock.mock('/api/happy/verifyRepeatHappy', 'post', __test__OutputSwagger4happy.happyVerifyRepeatHappy)
+Mock.mock('/api/happyCertificate/delete', 'post', __test__OutputSwagger4happyCertificate.happyCertificateDelete)
+Mock.mock('/api/happyContact/add', 'post', __test__OutputSwagger4happyContact.happyContactAdd)
+Mock.mock('/api/happyContact/deleteById', 'post', __test__OutputSwagger4happyContact.happyContactDeleteById)
+Mock.mock('/api/happyContact/list', 'post', __test__OutputSwagger4happyContact.happyContactList)
+Mock.mock('/api/happyFollow/whiteDesktopTree', 'get', __test__OutputSwagger4happyFollow.happyFollowWhiteDesktopTree)
+Mock.mock('/api/happyFollow/desktopList', 'post', __test__OutputSwagger4happyFollow.happyFollowDesktopList)
+Mock.mock('/api/happyFollow/follow', 'post', __test__OutputSwagger4happyFollow.happyFollowFollow)
+Mock.mock('/api/happyFollow/followAgain', 'post', __test__OutputSwagger4happyFollow.happyFollowFollowAgain)
+Mock.mock('/api/happyFollow/giveUp', 'post', __test__OutputSwagger4happyFollow.happyFollowGiveUp)
+Mock.mock('/api/happyFollow/info', 'get', __test__OutputSwagger4happyFollow.happyFollowInfo)
+Mock.mock('/api/happyFollow/list', 'post', __test__OutputSwagger4happyFollow.happyFollowList)
+Mock.mock('/api/happyFollow/transfer', 'post', __test__OutputSwagger4happyFollow.happyFollowTransfer)
+Mock.mock('/api/happyPlan/addHappy', 'post', __test__OutputSwagger4happyPlan.happyPlanAddHappy)
+Mock.mock('/api/happyPlan/addCustomer', 'post', __test__OutputSwagger4happyPlan.happyPlanAddCustomer)
+Mock.mock('/api/happyPlan/happyPlanDateList', 'post', __test__OutputSwagger4happyPlan.happyPlanHappyPlanDateList)
+Mock.mock('/api/happyPlan/changeScore', 'post', __test__OutputSwagger4happyPlan.happyPlanChangeScore)
+Mock.mock('/api/happyPlan/count', 'post', __test__OutputSwagger4happyPlan.happyPlanCount)
+Mock.mock('/api/happyPlan/delete', 'post', __test__OutputSwagger4happyPlan.happyPlanDelete)
+Mock.mock('/api/happyPlan/getHappyDesktopRule', 'post', __test__OutputSwagger4happyPlan.happyPlanGetHappyDesktopRule)
+Mock.mock('/api/happyPlan/getHappyFollowRule', 'post', __test__OutputSwagger4happyPlan.happyPlanGetHappyFollowRule)
+Mock.mock(
+  '/api/happyPlan/getDateListByTaskType',
+  'post',
+  __test__OutputSwagger4happyPlan.happyPlanGetDateListByTaskType
+)
+Mock.mock('/api/happyPlan/locateList', 'post', __test__OutputSwagger4happyPlan.happyPlanLocateList)
+Mock.mock('/api/happyPlan/myPlanPageList', 'post', __test__OutputSwagger4happyPlan.happyPlanMyPlanPageList)
+Mock.mock('/api/happyPlan/pageList', 'post', __test__OutputSwagger4happyPlan.happyPlanPageList)
+Mock.mock('/api/happyPlan/recommended2Plan', 'post', __test__OutputSwagger4happyPlan.happyPlanRecommended2Plan)
+Mock.mock('/api/happyPlan/recommendedHappy', 'post', __test__OutputSwagger4happyPlan.happyPlanRecommendedHappy)
+Mock.mock('/api/happyPlan/setHappyDesktopRule', 'post', __test__OutputSwagger4happyPlan.happyPlanSetHappyDesktopRule)
+Mock.mock('/api/happyPlan/setHappyFollowRule', 'post', __test__OutputSwagger4happyPlan.happyPlanSetHappyFollowRule)
+Mock.mock('/api/happyPunch/pageList', 'post', __test__OutputSwagger4happyPunch.happyPunchPageList)
+Mock.mock('/api/happyPunch/punch', 'post', __test__OutputSwagger4happyPunch.happyPunchPunch)
+Mock.mock('/api/happyPunch/v2/punch', 'post', __test__OutputSwagger4happyPunch.happyPunchV2Punch)
+Mock.mock('/api/happyRecommend/pageDoorHappy', 'post', __test__OutputSwagger4happyRecommend.happyRecommendPageDoorHappy)
+Mock.mock('/api/happyRecommend/pageCatHappy', 'post', __test__OutputSwagger4happyRecommend.happyRecommendPageCatHappy)
+Mock.mock('/api/happyRecommend/pageGladHappy', 'post', __test__OutputSwagger4happyRecommend.happyRecommendPageGladHappy)
+Mock.mock('/api/happySubscribe/cancelPush', 'get', __test__OutputSwagger4happySubscribe.happySubscribeCancelPush)
+Mock.mock('/api/happySubscribe/edit', 'post', __test__OutputSwagger4happySubscribe.happySubscribeEdit)
+Mock.mock('/api/happySubscribe/get', 'get', __test__OutputSwagger4happySubscribe.happySubscribeGet)
+Mock.mock('/api/happySubscribe/info', 'get', __test__OutputSwagger4happySubscribe.happySubscribeInfo)
+Mock.mock('/api/happySubscribe/pushEdit', 'post', __test__OutputSwagger4happySubscribe.happySubscribePushEdit)
+Mock.mock('/api/happySubscribe/pushInfo', 'get', __test__OutputSwagger4happySubscribe.happySubscribePushInfo)
+Mock.mock('/api/happySubscribe/pushList', 'get', __test__OutputSwagger4happySubscribe.happySubscribePushList)
+Mock.mock('/api/happyTask/changeStatus', 'post', __test__OutputSwagger4happyTask.happyTaskChangeStatus)
+Mock.mock('/api/happyTask/create', 'post', __test__OutputSwagger4happyTask.happyTaskCreate)
+Mock.mock('/api/happyTask/info', 'get', __test__OutputSwagger4happyTask.happyTaskInfo)
+Mock.mock('/api/happyTask/modify', 'post', __test__OutputSwagger4happyTask.happyTaskModify)
+Mock.mock('/api/happyTask/pageList', 'post', __test__OutputSwagger4happyTask.happyTaskPageList)
+Mock.mock('/api/happyTask/catMessageList', 'post', __test__OutputSwagger4happyTask.happyTaskCatMessageList)
+Mock.mock('/api/happyTask/progressList', 'get', __test__OutputSwagger4happyTask.happyTaskProgressList)
+Mock.mock('/api/config/getBiddingTypeLabel', 'post', __test__OutputSwagger4config.configGetBiddingTypeLabel)
+Mock.mock('/api/config/getDoorCertlabel', 'post', __test__OutputSwagger4config.configGetDoorCertlabel)
+Mock.mock('/api/config/getDoorStatusLabel', 'post', __test__OutputSwagger4config.configGetDoorStatusLabel)
+Mock.mock('/api/config/getDoorTypelabel', 'post', __test__OutputSwagger4config.configGetDoorTypelabel)
+Mock.mock('/api/config/getIndustryTypeLabel', 'post', __test__OutputSwagger4config.configGetIndustryTypeLabel)
+Mock.mock('/api/config/getCatCertificateLabel', 'post', __test__OutputSwagger4config.configGetCatCertificateLabel)
+Mock.mock('/api/config/getCatCertlabel', 'post', __test__OutputSwagger4config.configGetCatCertlabel)
+Mock.mock('/api/config/getCatTitleLabel', 'post', __test__OutputSwagger4config.configGetCatTitleLabel)
+Mock.mock('/api/config/getCatTitleLevelLabel', 'post', __test__OutputSwagger4config.configGetCatTitleLevelLabel)
+Mock.mock('/api/config/getPlanRules', 'post', __test__OutputSwagger4config.configGetPlanRules)
+Mock.mock('/api/config/getGladPhaseLabel', 'post', __test__OutputSwagger4config.configGetGladPhaseLabel)
+Mock.mock('/api/customer/door/add', 'post', __test__OutputSwagger4customer.customerDoorAdd)
+Mock.mock('/api/customer/door/countHappyNum', 'post', __test__OutputSwagger4customer.customerDoorCountHappyNum)
+Mock.mock('/api/customer/door/detail', 'get', __test__OutputSwagger4customer.customerDoorDetail)
+Mock.mock('/api/customer/door/pageList', 'post', __test__OutputSwagger4customer.customerDoorPageList)
+Mock.mock('/api/customer/door/sampleList', 'post', __test__OutputSwagger4customer.customerDoorSampleList)
+Mock.mock('/api/customer/door/update', 'post', __test__OutputSwagger4customer.customerDoorUpdate)
+Mock.mock('/api/customer/door/verifyRepeatHappy', 'post', __test__OutputSwagger4customer.customerDoorVerifyRepeatHappy)
+Mock.mock('/api/customer/cat/add', 'post', __test__OutputSwagger4customer.customerCatAdd)
+Mock.mock('/api/customer/cat/addCertificate', 'post', __test__OutputSwagger4customer.customerCatAddCertificate)
+Mock.mock('/api/customer/cat/addTitle', 'post', __test__OutputSwagger4customer.customerCatAddTitle)
+Mock.mock('/api/customer/cat/countHappyNum', 'post', __test__OutputSwagger4customer.customerCatCountHappyNum)
+Mock.mock('/api/customer/cat/deleteCertificate', 'get', __test__OutputSwagger4customer.customerCatDeleteCertificate)
+Mock.mock('/api/customer/cat/deleteTitle', 'get', __test__OutputSwagger4customer.customerCatDeleteTitle)
+Mock.mock('/api/customer/cat/detail', 'get', __test__OutputSwagger4customer.customerCatDetail)
+Mock.mock('/api/customer/cat/pageList', 'post', __test__OutputSwagger4customer.customerCatPageList)
+Mock.mock('/api/customer/cat/sampleList', 'post', __test__OutputSwagger4customer.customerCatSampleList)
+Mock.mock('/api/customer/cat/update', 'post', __test__OutputSwagger4customer.customerCatUpdate)
+Mock.mock(
+  '/api/customer/cat/verifyRepeatCustomer',
+  'post',
+  __test__OutputSwagger4customer.customerCatVerifyRepeatCustomer
+)
+Mock.mock('/api/customerFollow/follow', 'post', __test__OutputSwagger4customerFollow.customerFollowFollow)
+Mock.mock('/api/customerFollow/list', 'post', __test__OutputSwagger4customerFollow.customerFollowList)
+Mock.mock('/api/white/acquireWhiteInfo', 'post', __test__OutputSwagger4white.whiteAcquireWhiteInfo)
+Mock.mock('/api/white/whiteList', 'post', __test__OutputSwagger4white.whiteWhiteList)
+Mock.mock('/api/white/whiteTreeComplex', 'post', __test__OutputSwagger4white.whiteWhiteTreeComplex)
+Mock.mock('/api/white/whiteWithDesktops', 'post', __test__OutputSwagger4white.whiteWhiteWithDesktops)
+Mock.mock('/api/white/listWhiteByParent', 'post', __test__OutputSwagger4white.whiteListWhiteByParent)
+Mock.mock('/api/white/listDesktop', 'post', __test__OutputSwagger4white.whiteListDesktop)
+Mock.mock('/api/file/uploadFile', 'post', __test__OutputSwagger4file.fileUploadFile)
+Mock.mock('/api/importTask/importExcel', 'post', __test__OutputSwagger4importTask.importTaskImportExcel)
+Mock.mock('/api/importTask/importExcelByUrl', 'post', __test__OutputSwagger4importTask.importTaskImportExcelByUrl)
+Mock.mock('/api/importTask/importList', 'post', __test__OutputSwagger4importTask.importTaskImportList)
+Mock.mock('/api/init/happySubscribe', 'post', __test__OutputSwagger4init.initHappySubscribe)
+Mock.mock('/api/location/add', 'post', __test__OutputSwagger4location.locationAdd)
+Mock.mock('/api/location/happyFollowList', 'post', __test__OutputSwagger4location.locationHappyFollowList)
+Mock.mock('/api/location/dayCityList', 'post', __test__OutputSwagger4location.locationDayCityList)
+Mock.mock('/api/location/doorHappyList', 'post', __test__OutputSwagger4location.locationDoorHappyList)
+Mock.mock('/api/location/locationList', 'post', __test__OutputSwagger4location.locationLocationList)
+Mock.mock('/api/location/locationListByTask', 'post', __test__OutputSwagger4location.locationLocationListByTask)
+Mock.mock('/api/location/pageLocationList', 'post', __test__OutputSwagger4location.locationPageLocationList)
+Mock.mock('/api/location/catHappyList', 'post', __test__OutputSwagger4location.locationCatHappyList)
+Mock.mock('/api/location/gladHappyList', 'post', __test__OutputSwagger4location.locationGladHappyList)
+Mock.mock('/api/operateLog/pageList', 'post', __test__OutputSwagger4operateLog.operateLogPageList)
+Mock.mock('/api/signing/pageList', 'post', __test__OutputSwagger4signing.signingPageList)
+Mock.mock('/api/signing/remove', 'post', __test__OutputSwagger4signing.signingRemove)
+Mock.mock('/api/signing/save', 'post', __test__OutputSwagger4signing.signingSave)
+Mock.mock('/api/statistics/app/dealData', 'post', __test__OutputSwagger4statistics.statisticsAppDealData)
+Mock.mock('/api/statistics/app/followData', 'post', __test__OutputSwagger4statistics.statisticsAppFollowData)
+Mock.mock('/api/statistics/app/newData', 'post', __test__OutputSwagger4statistics.statisticsAppNewData)
+Mock.mock('/api/statistics/dealData', 'post', __test__OutputSwagger4statistics.statisticsDealData)
+Mock.mock('/api/statistics/followData', 'post', __test__OutputSwagger4statistics.statisticsFollowData)
+Mock.mock('/api/statistics/histogram', 'post', __test__OutputSwagger4statistics.statisticsHistogram)
+Mock.mock(
+  '/api/statistics/init/initRecentSixDay',
+  'get',
+  __test__OutputSwagger4statistics.statisticsInitInitRecentSixDay
+)
+Mock.mock(
+  '/api/statistics/init/initRecentSixMonth',
+  'get',
+  __test__OutputSwagger4statistics.statisticsInitInitRecentSixMonth
+)
+Mock.mock(
+  '/api/statistics/init/initRecentSixQuarter',
+  'get',
+  __test__OutputSwagger4statistics.statisticsInitInitRecentSixQuarter
+)
+Mock.mock(
+  '/api/statistics/init/initRecentSixWeek',
+  'get',
+  __test__OutputSwagger4statistics.statisticsInitInitRecentSixWeek
+)
+Mock.mock(
+  '/api/statistics/init/initRecentSixYear',
+  'get',
+  __test__OutputSwagger4statistics.statisticsInitInitRecentSixYear
+)
+Mock.mock(
+  '/api/statistics/init/initRecountDesktopList',
+  'get',
+  __test__OutputSwagger4statistics.statisticsInitInitRecountDesktopList
+)
+Mock.mock(
+  '/api/statistics/init/initRecountDesktopRank',
+  'get',
+  __test__OutputSwagger4statistics.statisticsInitInitRecountDesktopRank
+)
+Mock.mock('/api/statistics/newData', 'post', __test__OutputSwagger4statistics.statisticsNewData)
+Mock.mock('/api/statistics/rankList', 'post', __test__OutputSwagger4statistics.statisticsRankList)
+Mock.mock('/api/travel/login', 'post', __test__OutputSwagger4travel.travelLogin)
+Mock.mock('/api/keyBorard/getDesktopInfo', 'get', __test__OutputSwagger4keyBorard.keyBorardGetDesktopInfo)
+Mock.mock('/inner/happy/glad/signInfo', 'post', __test__OutputSwagger4inner.innerHappyGladSignInfo)
+Mock.mock('/inner/config/getCatCertificateLabel', 'post', __test__OutputSwagger4inner.innerConfigGetCatCertificateLabel)
+Mock.mock('/inner/config/getCatTitleLabel', 'post', __test__OutputSwagger4inner.innerConfigGetCatTitleLabel)
+Mock.mock('/inner/customer/door/add', 'post', __test__OutputSwagger4inner.innerCustomerDoorAdd)
+Mock.mock('/inner/customer/door/contact/pageList', 'post', __test__OutputSwagger4inner.innerCustomerDoorContactPageList)
+Mock.mock('/inner/customer/door/customerNum', 'post', __test__OutputSwagger4inner.innerCustomerDoorCustomerNum)
+Mock.mock('/inner/customer/door/detail', 'post', __test__OutputSwagger4inner.innerCustomerDoorDetail)
+Mock.mock(
+  '/inner/customer/door/getCustomerByNameFromData',
+  'post',
+  __test__OutputSwagger4inner.innerCustomerDoorGetCustomerByNameFromData
+)
+Mock.mock('/inner/customer/door/pageList', 'post', __test__OutputSwagger4inner.innerCustomerDoorPageList)
+Mock.mock(
+  '/inner/customer/door/selectFilterGrateful',
+  'post',
+  __test__OutputSwagger4inner.innerCustomerDoorSelectFilterGrateful
+)
+Mock.mock('/inner/customer/door/selectOne', 'post', __test__OutputSwagger4inner.innerCustomerDoorSelectOne)
+Mock.mock('/inner/customer/door/update', 'post', __test__OutputSwagger4inner.innerCustomerDoorUpdate)
+Mock.mock('/inner/customer/cat/add', 'post', __test__OutputSwagger4inner.innerCustomerCatAdd)
+Mock.mock('/inner/customer/cat/contact/pageList', 'post', __test__OutputSwagger4inner.innerCustomerCatContactPageList)
+Mock.mock('/inner/customer/cat/detail', 'post', __test__OutputSwagger4inner.innerCustomerCatDetail)
+Mock.mock('/inner/customer/cat/pageList', 'post', __test__OutputSwagger4inner.innerCustomerCatPageList)
+Mock.mock('/inner/customer/cat/update', 'post', __test__OutputSwagger4inner.innerCustomerCatUpdate)
+Mock.mock('/inner/import/importExcelByUrl', 'post', __test__OutputSwagger4inner.innerImportImportExcelByUrl)
+Mock.mock('/inner/import/importList', 'post', __test__OutputSwagger4inner.innerImportImportList)
 Mock.mock('/thk/api/common/v1/enum-info', 'get', __test__OutputSwagger5thk.thkApiCommonV1Enuminfo)
 Mock.mock('/thk/api/common/v1/enum/all', 'get', __test__OutputSwagger5thk.thkApiCommonV1EnumAll)
 Mock.mock('/thk/api/sys-dict/api/common/v1/areaInfo', 'get', __test__OutputSwagger5thk.thkApiSysdictApiCommonV1AreaInfo)
@@ -1362,219 +1578,3 @@ Mock.mock('/thk/api/v1/store/student-info', 'get', __test__OutputSwagger5thk.thk
 Mock.mock('/thk/api/v1/store/student-info', 'post', __test__OutputSwagger5thk.thkApiV1StoreStudentinfoPost)
 Mock.mock('/thk/api/v1/store/student-info', 'put', __test__OutputSwagger5thk.thkApiV1StoreStudentinfoPut)
 Mock.mock('/thk/api/v1/store/student-info/${id}', 'delete', __test__OutputSwagger5thk.thkApiV1StoreStudentinfoId)
-Mock.mock('/api/happy/addHappyDoor', 'post', __test__OutputSwagger4happy.happyAddHappyDoor)
-Mock.mock('/api/happy/addHappyCat', 'post', __test__OutputSwagger4happy.happyAddHappyCat)
-Mock.mock('/api/happy/addHappyGlad', 'post', __test__OutputSwagger4happy.happyAddHappyGlad)
-Mock.mock('/api/happy/addSignHappyDoor', 'post', __test__OutputSwagger4happy.happyAddSignHappyDoor)
-Mock.mock('/api/happy/addSignHappyCat', 'post', __test__OutputSwagger4happy.happyAddSignHappyCat)
-Mock.mock('/api/happy/addSignHappyGlad', 'post', __test__OutputSwagger4happy.happyAddSignHappyGlad)
-Mock.mock('/api/happy/assignHappy', 'post', __test__OutputSwagger4happy.happyAssignHappy)
-Mock.mock('/api/happy/happyClassification', 'post', __test__OutputSwagger4happy.happyHappyClassification)
-Mock.mock('/api/happy/happyNum', 'post', __test__OutputSwagger4happy.happyHappyNum)
-Mock.mock('/api/happy/editHappyDoor', 'post', __test__OutputSwagger4happy.happyEditHappyDoor)
-Mock.mock('/api/happy/editHappyCat', 'post', __test__OutputSwagger4happy.happyEditHappyCat)
-Mock.mock('/api/happy/editHappyGlad', 'post', __test__OutputSwagger4happy.happyEditHappyGlad)
-Mock.mock('/api/happy/door/detail', 'post', __test__OutputSwagger4happy.happyDoorDetail)
-Mock.mock('/api/happy/doorInfo', 'get', __test__OutputSwagger4happy.happyDoorInfo)
-Mock.mock('/api/happy/link', 'post', __test__OutputSwagger4happy.happyLink)
-Mock.mock('/api/happy/pageDoor/sampleList', 'post', __test__OutputSwagger4happy.happyPageDoorSampleList)
-Mock.mock('/api/happy/pageDoorHappyMix', 'post', __test__OutputSwagger4happy.happyPageDoorHappyMix)
-Mock.mock('/api/happy/pageDoorHappyPool', 'post', __test__OutputSwagger4happy.happyPageDoorHappyPool)
-Mock.mock('/api/happy/pageCat/sampleList', 'post', __test__OutputSwagger4happy.happyPageCatSampleList)
-Mock.mock('/api/happy/pageCatHappyMix', 'post', __test__OutputSwagger4happy.happyPageCatHappyMix)
-Mock.mock('/api/happy/pageCatHappyPool', 'post', __test__OutputSwagger4happy.happyPageCatHappyPool)
-Mock.mock('/api/happy/pageGlad/sampleList', 'post', __test__OutputSwagger4happy.happyPageGladSampleList)
-Mock.mock('/api/happy/pageGladHappyMix', 'post', __test__OutputSwagger4happy.happyPageGladHappyMix)
-Mock.mock('/api/happy/pageGladHappyPool', 'post', __test__OutputSwagger4happy.happyPageGladHappyPool)
-Mock.mock('/api/happy/catInfo', 'get', __test__OutputSwagger4happy.happyCatInfo)
-Mock.mock('/api/happy/glad/add', 'post', __test__OutputSwagger4happy.happyGladAdd)
-Mock.mock('/api/happy/glad/get', 'get', __test__OutputSwagger4happy.happyGladGet)
-Mock.mock('/api/happy/glad/modified', 'post', __test__OutputSwagger4happy.happyGladModified)
-Mock.mock('/api/happy/glad/pageList', 'post', __test__OutputSwagger4happy.happyGladPageList)
-Mock.mock('/api/happy/gladInfo', 'get', __test__OutputSwagger4happy.happyGladInfo)
-Mock.mock('/api/happy/receiveHappy', 'post', __test__OutputSwagger4happy.happyReceiveHappy)
-Mock.mock('/api/happy/setVisitPlan', 'get', __test__OutputSwagger4happy.happySetVisitPlan)
-Mock.mock('/api/happy/verifyRepeatHappy', 'post', __test__OutputSwagger4happy.happyVerifyRepeatHappy)
-Mock.mock('/api/happyCertificate/delete', 'post', __test__OutputSwagger4happyCertificate.happyCertificateDelete)
-Mock.mock('/api/happyContact/add', 'post', __test__OutputSwagger4happyContact.happyContactAdd)
-Mock.mock('/api/happyContact/deleteById', 'post', __test__OutputSwagger4happyContact.happyContactDeleteById)
-Mock.mock('/api/happyContact/list', 'post', __test__OutputSwagger4happyContact.happyContactList)
-Mock.mock('/api/happyFollow/whiteDesktopTree', 'get', __test__OutputSwagger4happyFollow.happyFollowWhiteDesktopTree)
-Mock.mock('/api/happyFollow/desktopList', 'post', __test__OutputSwagger4happyFollow.happyFollowDesktopList)
-Mock.mock('/api/happyFollow/follow', 'post', __test__OutputSwagger4happyFollow.happyFollowFollow)
-Mock.mock('/api/happyFollow/followAgain', 'post', __test__OutputSwagger4happyFollow.happyFollowFollowAgain)
-Mock.mock('/api/happyFollow/giveUp', 'post', __test__OutputSwagger4happyFollow.happyFollowGiveUp)
-Mock.mock('/api/happyFollow/info', 'get', __test__OutputSwagger4happyFollow.happyFollowInfo)
-Mock.mock('/api/happyFollow/list', 'post', __test__OutputSwagger4happyFollow.happyFollowList)
-Mock.mock('/api/happyFollow/transfer', 'post', __test__OutputSwagger4happyFollow.happyFollowTransfer)
-Mock.mock('/api/happyPlan/addHappy', 'post', __test__OutputSwagger4happyPlan.happyPlanAddHappy)
-Mock.mock('/api/happyPlan/addCustomer', 'post', __test__OutputSwagger4happyPlan.happyPlanAddCustomer)
-Mock.mock('/api/happyPlan/happyPlanDateList', 'post', __test__OutputSwagger4happyPlan.happyPlanHappyPlanDateList)
-Mock.mock('/api/happyPlan/changeScore', 'post', __test__OutputSwagger4happyPlan.happyPlanChangeScore)
-Mock.mock('/api/happyPlan/count', 'post', __test__OutputSwagger4happyPlan.happyPlanCount)
-Mock.mock('/api/happyPlan/delete', 'post', __test__OutputSwagger4happyPlan.happyPlanDelete)
-Mock.mock('/api/happyPlan/getHappyDesktopRule', 'post', __test__OutputSwagger4happyPlan.happyPlanGetHappyDesktopRule)
-Mock.mock('/api/happyPlan/getHappyFollowRule', 'post', __test__OutputSwagger4happyPlan.happyPlanGetHappyFollowRule)
-Mock.mock(
-  '/api/happyPlan/getDateListByTaskType',
-  'post',
-  __test__OutputSwagger4happyPlan.happyPlanGetDateListByTaskType
-)
-Mock.mock('/api/happyPlan/locateList', 'post', __test__OutputSwagger4happyPlan.happyPlanLocateList)
-Mock.mock('/api/happyPlan/myPlanPageList', 'post', __test__OutputSwagger4happyPlan.happyPlanMyPlanPageList)
-Mock.mock('/api/happyPlan/pageList', 'post', __test__OutputSwagger4happyPlan.happyPlanPageList)
-Mock.mock('/api/happyPlan/recommended2Plan', 'post', __test__OutputSwagger4happyPlan.happyPlanRecommended2Plan)
-Mock.mock('/api/happyPlan/recommendedHappy', 'post', __test__OutputSwagger4happyPlan.happyPlanRecommendedHappy)
-Mock.mock('/api/happyPlan/setHappyDesktopRule', 'post', __test__OutputSwagger4happyPlan.happyPlanSetHappyDesktopRule)
-Mock.mock('/api/happyPlan/setHappyFollowRule', 'post', __test__OutputSwagger4happyPlan.happyPlanSetHappyFollowRule)
-Mock.mock('/api/happyPunch/pageList', 'post', __test__OutputSwagger4happyPunch.happyPunchPageList)
-Mock.mock('/api/happyPunch/punch', 'post', __test__OutputSwagger4happyPunch.happyPunchPunch)
-Mock.mock('/api/happyPunch/v2/punch', 'post', __test__OutputSwagger4happyPunch.happyPunchV2Punch)
-Mock.mock('/api/happyRecommend/pageDoorHappy', 'post', __test__OutputSwagger4happyRecommend.happyRecommendPageDoorHappy)
-Mock.mock('/api/happyRecommend/pageCatHappy', 'post', __test__OutputSwagger4happyRecommend.happyRecommendPageCatHappy)
-Mock.mock('/api/happyRecommend/pageGladHappy', 'post', __test__OutputSwagger4happyRecommend.happyRecommendPageGladHappy)
-Mock.mock('/api/happySubscribe/cancelPush', 'get', __test__OutputSwagger4happySubscribe.happySubscribeCancelPush)
-Mock.mock('/api/happySubscribe/edit', 'post', __test__OutputSwagger4happySubscribe.happySubscribeEdit)
-Mock.mock('/api/happySubscribe/get', 'get', __test__OutputSwagger4happySubscribe.happySubscribeGet)
-Mock.mock('/api/happySubscribe/info', 'get', __test__OutputSwagger4happySubscribe.happySubscribeInfo)
-Mock.mock('/api/happySubscribe/pushEdit', 'post', __test__OutputSwagger4happySubscribe.happySubscribePushEdit)
-Mock.mock('/api/happySubscribe/pushInfo', 'get', __test__OutputSwagger4happySubscribe.happySubscribePushInfo)
-Mock.mock('/api/happySubscribe/pushList', 'get', __test__OutputSwagger4happySubscribe.happySubscribePushList)
-Mock.mock('/api/happyTask/changeStatus', 'post', __test__OutputSwagger4happyTask.happyTaskChangeStatus)
-Mock.mock('/api/happyTask/create', 'post', __test__OutputSwagger4happyTask.happyTaskCreate)
-Mock.mock('/api/happyTask/info', 'get', __test__OutputSwagger4happyTask.happyTaskInfo)
-Mock.mock('/api/happyTask/modify', 'post', __test__OutputSwagger4happyTask.happyTaskModify)
-Mock.mock('/api/happyTask/pageList', 'post', __test__OutputSwagger4happyTask.happyTaskPageList)
-Mock.mock('/api/happyTask/catMessageList', 'post', __test__OutputSwagger4happyTask.happyTaskCatMessageList)
-Mock.mock('/api/happyTask/progressList', 'get', __test__OutputSwagger4happyTask.happyTaskProgressList)
-Mock.mock('/api/config/getBiddingTypeLabel', 'post', __test__OutputSwagger4config.configGetBiddingTypeLabel)
-Mock.mock('/api/config/getDoorCertlabel', 'post', __test__OutputSwagger4config.configGetDoorCertlabel)
-Mock.mock('/api/config/getDoorStatusLabel', 'post', __test__OutputSwagger4config.configGetDoorStatusLabel)
-Mock.mock('/api/config/getDoorTypelabel', 'post', __test__OutputSwagger4config.configGetDoorTypelabel)
-Mock.mock('/api/config/getIndustryTypeLabel', 'post', __test__OutputSwagger4config.configGetIndustryTypeLabel)
-Mock.mock('/api/config/getCatCertificateLabel', 'post', __test__OutputSwagger4config.configGetCatCertificateLabel)
-Mock.mock('/api/config/getCatCertlabel', 'post', __test__OutputSwagger4config.configGetCatCertlabel)
-Mock.mock('/api/config/getCatTitleLabel', 'post', __test__OutputSwagger4config.configGetCatTitleLabel)
-Mock.mock('/api/config/getCatTitleLevelLabel', 'post', __test__OutputSwagger4config.configGetCatTitleLevelLabel)
-Mock.mock('/api/config/getPlanRules', 'post', __test__OutputSwagger4config.configGetPlanRules)
-Mock.mock('/api/config/getGladPhaseLabel', 'post', __test__OutputSwagger4config.configGetGladPhaseLabel)
-Mock.mock('/api/customer/door/add', 'post', __test__OutputSwagger4customer.customerDoorAdd)
-Mock.mock('/api/customer/door/countHappyNum', 'post', __test__OutputSwagger4customer.customerDoorCountHappyNum)
-Mock.mock('/api/customer/door/detail', 'get', __test__OutputSwagger4customer.customerDoorDetail)
-Mock.mock('/api/customer/door/pageList', 'post', __test__OutputSwagger4customer.customerDoorPageList)
-Mock.mock('/api/customer/door/sampleList', 'post', __test__OutputSwagger4customer.customerDoorSampleList)
-Mock.mock('/api/customer/door/update', 'post', __test__OutputSwagger4customer.customerDoorUpdate)
-Mock.mock('/api/customer/door/verifyRepeatHappy', 'post', __test__OutputSwagger4customer.customerDoorVerifyRepeatHappy)
-Mock.mock('/api/customer/cat/add', 'post', __test__OutputSwagger4customer.customerCatAdd)
-Mock.mock('/api/customer/cat/addCertificate', 'post', __test__OutputSwagger4customer.customerCatAddCertificate)
-Mock.mock('/api/customer/cat/addTitle', 'post', __test__OutputSwagger4customer.customerCatAddTitle)
-Mock.mock('/api/customer/cat/countHappyNum', 'post', __test__OutputSwagger4customer.customerCatCountHappyNum)
-Mock.mock('/api/customer/cat/deleteCertificate', 'get', __test__OutputSwagger4customer.customerCatDeleteCertificate)
-Mock.mock('/api/customer/cat/deleteTitle', 'get', __test__OutputSwagger4customer.customerCatDeleteTitle)
-Mock.mock('/api/customer/cat/detail', 'get', __test__OutputSwagger4customer.customerCatDetail)
-Mock.mock('/api/customer/cat/pageList', 'post', __test__OutputSwagger4customer.customerCatPageList)
-Mock.mock('/api/customer/cat/sampleList', 'post', __test__OutputSwagger4customer.customerCatSampleList)
-Mock.mock('/api/customer/cat/update', 'post', __test__OutputSwagger4customer.customerCatUpdate)
-Mock.mock(
-  '/api/customer/cat/verifyRepeatCustomer',
-  'post',
-  __test__OutputSwagger4customer.customerCatVerifyRepeatCustomer
-)
-Mock.mock('/api/customerFollow/follow', 'post', __test__OutputSwagger4customerFollow.customerFollowFollow)
-Mock.mock('/api/customerFollow/list', 'post', __test__OutputSwagger4customerFollow.customerFollowList)
-Mock.mock('/api/white/acquireWhiteInfo', 'post', __test__OutputSwagger4white.whiteAcquireWhiteInfo)
-Mock.mock('/api/white/whiteList', 'post', __test__OutputSwagger4white.whiteWhiteList)
-Mock.mock('/api/white/whiteTreeComplex', 'post', __test__OutputSwagger4white.whiteWhiteTreeComplex)
-Mock.mock('/api/white/whiteWithDesktops', 'post', __test__OutputSwagger4white.whiteWhiteWithDesktops)
-Mock.mock('/api/white/listWhiteByParent', 'post', __test__OutputSwagger4white.whiteListWhiteByParent)
-Mock.mock('/api/white/listDesktop', 'post', __test__OutputSwagger4white.whiteListDesktop)
-Mock.mock('/api/file/uploadFile', 'post', __test__OutputSwagger4file.fileUploadFile)
-Mock.mock('/api/importTask/importExcel', 'post', __test__OutputSwagger4importTask.importTaskImportExcel)
-Mock.mock('/api/importTask/importExcelByUrl', 'post', __test__OutputSwagger4importTask.importTaskImportExcelByUrl)
-Mock.mock('/api/importTask/importList', 'post', __test__OutputSwagger4importTask.importTaskImportList)
-Mock.mock('/api/init/happySubscribe', 'post', __test__OutputSwagger4init.initHappySubscribe)
-Mock.mock('/api/location/add', 'post', __test__OutputSwagger4location.locationAdd)
-Mock.mock('/api/location/happyFollowList', 'post', __test__OutputSwagger4location.locationHappyFollowList)
-Mock.mock('/api/location/dayCityList', 'post', __test__OutputSwagger4location.locationDayCityList)
-Mock.mock('/api/location/doorHappyList', 'post', __test__OutputSwagger4location.locationDoorHappyList)
-Mock.mock('/api/location/locationList', 'post', __test__OutputSwagger4location.locationLocationList)
-Mock.mock('/api/location/locationListByTask', 'post', __test__OutputSwagger4location.locationLocationListByTask)
-Mock.mock('/api/location/pageLocationList', 'post', __test__OutputSwagger4location.locationPageLocationList)
-Mock.mock('/api/location/catHappyList', 'post', __test__OutputSwagger4location.locationCatHappyList)
-Mock.mock('/api/location/gladHappyList', 'post', __test__OutputSwagger4location.locationGladHappyList)
-Mock.mock('/api/operateLog/pageList', 'post', __test__OutputSwagger4operateLog.operateLogPageList)
-Mock.mock('/api/signing/pageList', 'post', __test__OutputSwagger4signing.signingPageList)
-Mock.mock('/api/signing/remove', 'post', __test__OutputSwagger4signing.signingRemove)
-Mock.mock('/api/signing/save', 'post', __test__OutputSwagger4signing.signingSave)
-Mock.mock('/api/statistics/app/dealData', 'post', __test__OutputSwagger4statistics.statisticsAppDealData)
-Mock.mock('/api/statistics/app/followData', 'post', __test__OutputSwagger4statistics.statisticsAppFollowData)
-Mock.mock('/api/statistics/app/newData', 'post', __test__OutputSwagger4statistics.statisticsAppNewData)
-Mock.mock('/api/statistics/dealData', 'post', __test__OutputSwagger4statistics.statisticsDealData)
-Mock.mock('/api/statistics/followData', 'post', __test__OutputSwagger4statistics.statisticsFollowData)
-Mock.mock('/api/statistics/histogram', 'post', __test__OutputSwagger4statistics.statisticsHistogram)
-Mock.mock(
-  '/api/statistics/init/initRecentSixDay',
-  'get',
-  __test__OutputSwagger4statistics.statisticsInitInitRecentSixDay
-)
-Mock.mock(
-  '/api/statistics/init/initRecentSixMonth',
-  'get',
-  __test__OutputSwagger4statistics.statisticsInitInitRecentSixMonth
-)
-Mock.mock(
-  '/api/statistics/init/initRecentSixQuarter',
-  'get',
-  __test__OutputSwagger4statistics.statisticsInitInitRecentSixQuarter
-)
-Mock.mock(
-  '/api/statistics/init/initRecentSixWeek',
-  'get',
-  __test__OutputSwagger4statistics.statisticsInitInitRecentSixWeek
-)
-Mock.mock(
-  '/api/statistics/init/initRecentSixYear',
-  'get',
-  __test__OutputSwagger4statistics.statisticsInitInitRecentSixYear
-)
-Mock.mock(
-  '/api/statistics/init/initRecountDesktopList',
-  'get',
-  __test__OutputSwagger4statistics.statisticsInitInitRecountDesktopList
-)
-Mock.mock(
-  '/api/statistics/init/initRecountDesktopRank',
-  'get',
-  __test__OutputSwagger4statistics.statisticsInitInitRecountDesktopRank
-)
-Mock.mock('/api/statistics/newData', 'post', __test__OutputSwagger4statistics.statisticsNewData)
-Mock.mock('/api/statistics/rankList', 'post', __test__OutputSwagger4statistics.statisticsRankList)
-Mock.mock('/api/travel/login', 'post', __test__OutputSwagger4travel.travelLogin)
-Mock.mock('/api/keyBorard/getDesktopInfo', 'get', __test__OutputSwagger4keyBorard.keyBorardGetDesktopInfo)
-Mock.mock('/inner/happy/glad/signInfo', 'post', __test__OutputSwagger4inner.innerHappyGladSignInfo)
-Mock.mock('/inner/config/getCatCertificateLabel', 'post', __test__OutputSwagger4inner.innerConfigGetCatCertificateLabel)
-Mock.mock('/inner/config/getCatTitleLabel', 'post', __test__OutputSwagger4inner.innerConfigGetCatTitleLabel)
-Mock.mock('/inner/customer/door/add', 'post', __test__OutputSwagger4inner.innerCustomerDoorAdd)
-Mock.mock('/inner/customer/door/contact/pageList', 'post', __test__OutputSwagger4inner.innerCustomerDoorContactPageList)
-Mock.mock('/inner/customer/door/customerNum', 'post', __test__OutputSwagger4inner.innerCustomerDoorCustomerNum)
-Mock.mock('/inner/customer/door/detail', 'post', __test__OutputSwagger4inner.innerCustomerDoorDetail)
-Mock.mock(
-  '/inner/customer/door/getCustomerByNameFromData',
-  'post',
-  __test__OutputSwagger4inner.innerCustomerDoorGetCustomerByNameFromData
-)
-Mock.mock('/inner/customer/door/pageList', 'post', __test__OutputSwagger4inner.innerCustomerDoorPageList)
-Mock.mock(
-  '/inner/customer/door/selectFilterGrateful',
-  'post',
-  __test__OutputSwagger4inner.innerCustomerDoorSelectFilterGrateful
-)
-Mock.mock('/inner/customer/door/selectOne', 'post', __test__OutputSwagger4inner.innerCustomerDoorSelectOne)
-Mock.mock('/inner/customer/door/update', 'post', __test__OutputSwagger4inner.innerCustomerDoorUpdate)
-Mock.mock('/inner/customer/cat/add', 'post', __test__OutputSwagger4inner.innerCustomerCatAdd)
-Mock.mock('/inner/customer/cat/contact/pageList', 'post', __test__OutputSwagger4inner.innerCustomerCatContactPageList)
-Mock.mock('/inner/customer/cat/detail', 'post', __test__OutputSwagger4inner.innerCustomerCatDetail)
-Mock.mock('/inner/customer/cat/pageList', 'post', __test__OutputSwagger4inner.innerCustomerCatPageList)
-Mock.mock('/inner/customer/cat/update', 'post', __test__OutputSwagger4inner.innerCustomerCatUpdate)
-Mock.mock('/inner/import/importExcelByUrl', 'post', __test__OutputSwagger4inner.innerImportImportExcelByUrl)
-Mock.mock('/inner/import/importList', 'post', __test__OutputSwagger4inner.innerImportImportList)

@@ -39,7 +39,7 @@ function handleApiModel(paths, { ignore, fileName }) {
         else if (resScheme?.type) {
           outputInterface = handleJsType(resScheme.type)
         } else {
-          console.log('该接口不存在出参')
+          // console.log('该接口不存在出参')
         }
         outputInterface = handleJsType(outputInterface) ? handleJsType(outputInterface) : outputInterface
         if (outputInterface === 'Void' || outputInterface === 'void') {
