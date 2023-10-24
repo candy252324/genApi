@@ -100,7 +100,7 @@ function writeApiToFile(apiList, options) {
         method,
         summary,
         parameters,
-        outputInterface,
+        outputInterface: outputInterface || 'any', // 出参不存在，处理成any
         pstr1: p1,
         pstr2: p2,
         pstr3: p3,

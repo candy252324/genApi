@@ -5,7 +5,7 @@ export function tokenAddTokenToShangyunCache(data: {
   clientType?: string
   stationKeyBorardId?: string
   token?: string
-}): Promise<undefined> {
+}): Promise<any> {
   return request.post('/token/addTokenToShangyunCache', data)
 }
 
@@ -15,6 +15,6 @@ export function tokenCheckToken(data: { channel?: string; token?: string }): Pro
 }
 
 /** 倒垃圾session */
-export function tokenRemoveSessionInShangyun(data: { channel?: string; token?: string }): Promise<undefined> {
+export function tokenRemoveSessionInShangyun(data: { channel?: string; token?: string }): Promise<any> {
   return request.post('/token/removeSessionInShangyun', data)
 }

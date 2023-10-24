@@ -41,37 +41,37 @@ export function statisticsHistogram(
 }
 
 /** initRecentSixDay */
-export function statisticsInitInitRecentSixDay(): Promise<undefined> {
+export function statisticsInitInitRecentSixDay(): Promise<any> {
   return request.get('/api/statistics/init/initRecentSixDay')
 }
 
 /** recountSixMonth */
-export function statisticsInitInitRecentSixMonth(): Promise<undefined> {
+export function statisticsInitInitRecentSixMonth(): Promise<any> {
   return request.get('/api/statistics/init/initRecentSixMonth')
 }
 
 /** initRecentSixQuarter */
-export function statisticsInitInitRecentSixQuarter(): Promise<undefined> {
+export function statisticsInitInitRecentSixQuarter(): Promise<any> {
   return request.get('/api/statistics/init/initRecentSixQuarter')
 }
 
 /** initRecentSixWeek */
-export function statisticsInitInitRecentSixWeek(): Promise<undefined> {
+export function statisticsInitInitRecentSixWeek(): Promise<any> {
   return request.get('/api/statistics/init/initRecentSixWeek')
 }
 
 /** initRecentSixYear */
-export function statisticsInitInitRecentSixYear(): Promise<undefined> {
+export function statisticsInitInitRecentSixYear(): Promise<any> {
   return request.get('/api/statistics/init/initRecentSixYear')
 }
 
 /** initRecountDesktopList */
-export function statisticsInitInitRecountDesktopList(): Promise<undefined> {
+export function statisticsInitInitRecountDesktopList(): Promise<any> {
   return request.get('/api/statistics/init/initRecountDesktopList')
 }
 
 /** initRecountDesktopRank */
-export function statisticsInitInitRecountDesktopRank(): Promise<undefined> {
+export function statisticsInitInitRecountDesktopRank(): Promise<any> {
   return request.get('/api/statistics/init/initRecountDesktopRank')
 }
 

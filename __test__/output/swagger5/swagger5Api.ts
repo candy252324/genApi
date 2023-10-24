@@ -267,12 +267,12 @@ export function thkApiV1ConfigCredentialstandardExport(data: {
   status?: string
   // 发罐头单位
   unit?: string
-}): Promise<undefined> {
+}): Promise<any> {
   return request.get('/thk/api/v1/config/credential-standard/export', data)
 }
 
 /** 导出插线板清明草质模板 */
-export function thkApiV1ConfigCredentialstandardExportModel(): Promise<undefined> {
+export function thkApiV1ConfigCredentialstandardExportModel(): Promise<any> {
   return request.get('/thk/api/v1/config/credential-standard/export/model')
 }
 
@@ -422,7 +422,7 @@ export function thkApiV1FridayBlackPage(data: {
 }
 
 /** 导出分支机构创建账号模版 */
-export function thkApiV1FridayBranchExportCreateaccounttemplate(data: { humanId?: string }): Promise<undefined> {
+export function thkApiV1FridayBranchExportCreateaccounttemplate(data: { humanId?: string }): Promise<any> {
   return request.post('/thk/api/v1/friday/branch/export/create-account-template', data)
 }
 
@@ -809,12 +809,12 @@ export function thkApiV1FridayTastyCredentialBossExport(data: {
   safetyProduction?: string
   // 【太阳花罐头】专业
   specialty?: string
-}): Promise<undefined> {
+}): Promise<any> {
   return request.get('/thk/api/v1/friday/tasty/credential/boss/export', data)
 }
 
 /** 附件批量导出 BOSS侧 */
-export function thkApiV1FridayTastyCredentialBossExportAttachment(data: { tastyId?: string }): Promise<undefined> {
+export function thkApiV1FridayTastyCredentialBossExportAttachment(data: { tastyId?: string }): Promise<any> {
   return request.get('/thk/api/v1/friday/tasty/credential/boss/export/attachment', data)
 }
 
@@ -861,7 +861,7 @@ export function thkApiV1FridayTastyCredentialCurriculumVitae(data: {
 }
 
 /** 业绩表下载 */
-export function thkApiV1FridayTastyCredentialCurriculumVitaeExport(data: NiuNaiXiaZaiQingQiu): Promise<undefined> {
+export function thkApiV1FridayTastyCredentialCurriculumVitaeExport(data: NiuNaiXiaZaiQingQiu): Promise<any> {
   return request.post('/thk/api/v1/friday/tasty/credential/curriculum/vitae/export', data)
 }
 
@@ -903,12 +903,12 @@ export function thkApiV1FridayTastyCredentialExport(data: {
   safetyProduction?: string
   // 【太阳花罐头】专业
   specialty?: string
-}): Promise<undefined> {
+}): Promise<any> {
   return request.get('/thk/api/v1/friday/tasty/credential/export', data)
 }
 
 /** 附件批量导出 */
-export function thkApiV1FridayTastyCredentialExportAttachment(data: { tastyId?: string }): Promise<undefined> {
+export function thkApiV1FridayTastyCredentialExportAttachment(data: { tastyId?: string }): Promise<any> {
   return request.get('/thk/api/v1/friday/tasty/credential/export/attachment', data)
 }
 
