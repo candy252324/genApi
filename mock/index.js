@@ -169,36 +169,28 @@ Mock.mock(
   'post',
   __test__OutputSwagger1deliverGreen.deliverGreenCheckDefaultGreen
 )
-Mock.mock(
-  /\/api\/deliverGreen\/deleteGreen\/${id}/,
-  'get',
-  __test__OutputSwagger1deliverGreen.deliverGreenDeleteGreenId
-)
+Mock.mock(/\/api\/deliverGreen\/deleteGreen\/.*/, 'get', __test__OutputSwagger1deliverGreen.deliverGreenDeleteGreenId)
 Mock.mock(/\/api\/deliverGreen\/pageGreen/, 'post', __test__OutputSwagger1deliverGreen.deliverGreenPageGreen)
 Mock.mock(/\/api\/deliverGreen\/updateGreen/, 'post', __test__OutputSwagger1deliverGreen.deliverGreenUpdateGreen)
 Mock.mock(/\/api\/white\/addWhite/, 'post', __test__OutputSwagger1white.whiteAddWhite)
 Mock.mock(/\/api\/white\/delWhite\/confirm/, 'post', __test__OutputSwagger1white.whiteDelWhiteConfirm)
-Mock.mock(/\/api\/white\/delWhite\/${whiteId}/, 'get', __test__OutputSwagger1white.whiteDelWhiteWhiteId)
+Mock.mock(/\/api\/white\/delWhite\/.*/, 'get', __test__OutputSwagger1white.whiteDelWhiteWhiteId)
 Mock.mock(/\/api\/white\/whiteTree/, 'get', __test__OutputSwagger1white.whiteWhiteTree)
 Mock.mock(/\/api\/white\/whiteTreeComplex/, 'get', __test__OutputSwagger1white.whiteWhiteTreeComplex)
 Mock.mock(/\/api\/white\/whiteTreeInfo/, 'get', __test__OutputSwagger1white.whiteWhiteTreeInfo)
 Mock.mock(/\/api\/white\/editWhite/, 'post', __test__OutputSwagger1white.whiteEditWhite)
-Mock.mock(/\/api\/white\/get\/${whiteId}/, 'get', __test__OutputSwagger1white.whiteGetWhiteId)
+Mock.mock(/\/api\/white\/get\/.*/, 'get', __test__OutputSwagger1white.whiteGetWhiteId)
 Mock.mock(/\/api\/white\/list/, 'get', __test__OutputSwagger1white.whiteList)
-Mock.mock(
-  /\/api\/white\/list\/excludeChild\/${whiteId}/,
-  'get',
-  __test__OutputSwagger1white.whiteListExcludeChildWhiteId
-)
+Mock.mock(/\/api\/white\/list\/excludeChild\/.*/, 'get', __test__OutputSwagger1white.whiteListExcludeChildWhiteId)
 Mock.mock(/\/api\/white\/queryDesktopByWhiteId/, 'get', __test__OutputSwagger1white.whiteQueryDesktopByWhiteId)
 Mock.mock(/\/api\/white\/queryDesktopByPhoneOrName/, 'get', __test__OutputSwagger1white.whiteQueryDesktopByPhoneOrName)
-Mock.mock(/\/api\/white\/start\/delWhite\/${whiteId}/, 'get', __test__OutputSwagger1white.whiteStartDelWhiteWhiteId)
+Mock.mock(/\/api\/white\/start\/delWhite\/.*/, 'get', __test__OutputSwagger1white.whiteStartDelWhiteWhiteId)
 Mock.mock(/\/api\/white\/upWhiteStatus/, 'get', __test__OutputSwagger1white.whiteUpWhiteStatus)
-Mock.mock(/\/api\/dict\/query\/${type}/, 'get', __test__OutputSwagger1dict.dictQueryType)
+Mock.mock(/\/api\/dict\/query\/.*/, 'get', __test__OutputSwagger1dict.dictQueryType)
 Mock.mock(/\/api\/desktop\/add/, 'post', __test__OutputSwagger1desktop.desktopAdd)
 Mock.mock(/\/api\/desktop\/changeStatus/, 'get', __test__OutputSwagger1desktop.desktopChangeStatus)
 Mock.mock(/\/api\/desktop\/del\/confirm/, 'post', __test__OutputSwagger1desktop.desktopDelConfirm)
-Mock.mock(/\/api\/desktop\/del\/${desktopIds}/, 'get', __test__OutputSwagger1desktop.desktopDelDesktopIds)
+Mock.mock(/\/api\/desktop\/del\/.*/, 'get', __test__OutputSwagger1desktop.desktopDelDesktopIds)
 Mock.mock(/\/api\/desktop\/whiteTreeCount/, 'get', __test__OutputSwagger1desktop.desktopWhiteTreeCount)
 Mock.mock(/\/api\/desktop\/edit/, 'post', __test__OutputSwagger1desktop.desktopEdit)
 Mock.mock(/\/api\/desktop\/desktopWhite/, 'get', __test__OutputSwagger1desktop.desktopDesktopWhite)
@@ -206,9 +198,9 @@ Mock.mock(/\/api\/desktop\/getDesktopByDesktopId/, 'get', __test__OutputSwagger1
 Mock.mock(/\/api\/desktop\/myWhiteTreeCount/, 'get', __test__OutputSwagger1desktop.desktopMyWhiteTreeCount)
 Mock.mock(/\/api\/desktop\/pageList/, 'get', __test__OutputSwagger1desktop.desktopPageList)
 Mock.mock(/\/api\/desktop\/pageSelectList/, 'get', __test__OutputSwagger1desktop.desktopPageSelectList)
-Mock.mock(/\/api\/desktop\/shift\/${desktopId}/, 'get', __test__OutputSwagger1desktop.desktopShiftDesktopId)
-Mock.mock(/\/api\/desktop\/start\/del\/${desktopId}/, 'get', __test__OutputSwagger1desktop.desktopStartDelDesktopId)
-Mock.mock(/\/api\/desktop\/stop\/start\/${desktopId}/, 'get', __test__OutputSwagger1desktop.desktopStopStartDesktopId)
+Mock.mock(/\/api\/desktop\/shift\/.*/, 'get', __test__OutputSwagger1desktop.desktopShiftDesktopId)
+Mock.mock(/\/api\/desktop\/start\/del\/.*/, 'get', __test__OutputSwagger1desktop.desktopStartDelDesktopId)
+Mock.mock(/\/api\/desktop\/stop\/start\/.*/, 'get', __test__OutputSwagger1desktop.desktopStopStartDesktopId)
 Mock.mock(/\/api\/desktop\/stopDesktop\/confirm/, 'post', __test__OutputSwagger1desktop.desktopStopDesktopConfirm)
 Mock.mock(/\/api\/desktopAddRecord\/export/, 'post', __test__OutputSwagger1desktopAddRecord.desktopAddRecordExport)
 Mock.mock(
@@ -238,7 +230,7 @@ Mock.mock(
 )
 Mock.mock(/\/api\/empower\/doorRe\/detail\/listDoor/, 'get', __test__OutputSwagger1empower.empowerDoorReDetailListDoor)
 Mock.mock(
-  /\/api\/empower\/doorRe\/desktopOper\/em\/${type}/,
+  /\/api\/empower\/doorRe\/desktopOper\/em\/.*/,
   'get',
   __test__OutputSwagger1empower.empowerDoorReDesktopOperEmType
 )
@@ -248,20 +240,20 @@ Mock.mock(
   __test__OutputSwagger1empower.empowerDoorReEntReSetListPink
 )
 Mock.mock(
-  /\/api\/empower\/doorRe\/franchiseOper\/${oper}/,
+  /\/api\/empower\/doorRe\/franchiseOper\/.*/,
   'get',
   __test__OutputSwagger1empower.empowerDoorReFranchiseOperOper
 )
 Mock.mock(/\/api\/empower\/doorRe\/getAccByMobile/, 'get', __test__OutputSwagger1empower.empowerDoorReGetAccByMobile)
 Mock.mock(
-  /\/api\/empower\/doorRe\/getEmDesktopInfo\/${linkCode}/,
+  /\/api\/empower\/doorRe\/getEmDesktopInfo\/.*/,
   'get',
   __test__OutputSwagger1empower.empowerDoorReGetEmDesktopInfoLinkCode
 )
 Mock.mock(/\/api\/empower\/doorRe\/getEmpowerInfo/, 'get', __test__OutputSwagger1empower.empowerDoorReGetEmpowerInfo)
 Mock.mock(/\/api\/empower\/doorRe\/getEntReSet/, 'get', __test__OutputSwagger1empower.empowerDoorReGetEntReSet)
 Mock.mock(
-  /\/api\/empower\/doorRe\/getInviteReInfo\/${linkCode}/,
+  /\/api\/empower\/doorRe\/getInviteReInfo\/.*/,
   'get',
   __test__OutputSwagger1empower.empowerDoorReGetInviteReInfoLinkCode
 )
@@ -284,11 +276,7 @@ Mock.mock(
 )
 Mock.mock(/\/api\/empower\/doorRe\/scan\/getOrgInfo/, 'get', __test__OutputSwagger1empower.empowerDoorReScanGetOrgInfo)
 Mock.mock(/\/api\/empower\/doorRe\/sendEmpowerSms/, 'post', __test__OutputSwagger1empower.empowerDoorReSendEmpowerSms)
-Mock.mock(
-  /\/api\/empower\/doorRe\/upEntReSet\/${doorId}/,
-  'post',
-  __test__OutputSwagger1empower.empowerDoorReUpEntReSetDoorId
-)
+Mock.mock(/\/api\/empower\/doorRe\/upEntReSet\/.*/, 'post', __test__OutputSwagger1empower.empowerDoorReUpEntReSetDoorId)
 Mock.mock(/\/api\/enterCredential\/add/, 'post', __test__OutputSwagger1enterCredential.enterCredentialAdd)
 Mock.mock(/\/api\/enterCredential\/del/, 'get', __test__OutputSwagger1enterCredential.enterCredentialDel)
 Mock.mock(
@@ -349,12 +337,12 @@ Mock.mock(
   __test__OutputSwagger1door.doorIdentificationV1TicketAuth
 )
 Mock.mock(
-  /\/api\/door\/identification\/v1\/${doorId}\/openAcct\/append/,
+  /\/api\/door\/identification\/v1\/.*\/openAcct\/append/,
   'post',
   __test__OutputSwagger1door.doorIdentificationV1DoorIdOpenAcctAppend
 )
 Mock.mock(
-  /\/api\/door\/identification\/v1\/${doorId}\/openAcct\/execute/,
+  /\/api\/door\/identification\/v1\/.*\/openAcct\/execute/,
   'put',
   __test__OutputSwagger1door.doorIdentificationV1DoorIdOpenAcctExecute
 )
@@ -384,16 +372,16 @@ Mock.mock(
   __test__OutputSwagger1door.doorIdentificationcenterSwitchMainDoor
 )
 Mock.mock(
-  /\/api\/door\/identificationcenter\/${doorId}\/mainAuthInfo/,
+  /\/api\/door\/identificationcenter\/.*\/mainAuthInfo/,
   'get',
   __test__OutputSwagger1door.doorIdentificationcenterDoorIdMainAuthInfo
 )
 Mock.mock(/\/api\/door\/link\/white/, 'post', __test__OutputSwagger1door.doorLinkWhite)
-Mock.mock(/\/api\/door\/pageHome\/claim\/${companyId}/, 'get', __test__OutputSwagger1door.doorPageHomeClaimCompanyId)
-Mock.mock(/\/api\/door\/pageHome\/exclude\/${claimId}/, 'get', __test__OutputSwagger1door.doorPageHomeExcludeClaimId)
+Mock.mock(/\/api\/door\/pageHome\/claim\/.*/, 'get', __test__OutputSwagger1door.doorPageHomeClaimCompanyId)
+Mock.mock(/\/api\/door\/pageHome\/exclude\/.*/, 'get', __test__OutputSwagger1door.doorPageHomeExcludeClaimId)
 Mock.mock(/\/api\/door\/pageHome\/judge/, 'get', __test__OutputSwagger1door.doorPageHomeJudge)
 Mock.mock(/\/api\/door\/pageHome\/query/, 'get', __test__OutputSwagger1door.doorPageHomeQuery)
-Mock.mock(/\/api\/door\/${id}\/link\/white/, 'get', __test__OutputSwagger1door.doorIdLinkWhite)
+Mock.mock(/\/api\/door\/.*\/link\/white/, 'get', __test__OutputSwagger1door.doorIdLinkWhite)
 Mock.mock(/\/api\/excel\/export/, 'post', __test__OutputSwagger1excel.excelExport)
 Mock.mock(/\/api\/excel\/history/, 'get', __test__OutputSwagger1excel.excelHistory)
 Mock.mock(/\/api\/excel\/import/, 'post', __test__OutputSwagger1excel.excelImport)
@@ -402,17 +390,17 @@ Mock.mock(/\/api\/file\/upload/, 'post', __test__OutputSwagger1file.fileUpload)
 Mock.mock(/\/api\/index\/getCurrentAuth/, 'get', __test__OutputSwagger1index.indexGetCurrentAuth)
 Mock.mock(/\/api\/index\/getCurrentDesktop/, 'get', __test__OutputSwagger1index.indexGetCurrentDesktop)
 Mock.mock(/\/api\/index\/getCurrentDesktopAll/, 'get', __test__OutputSwagger1index.indexGetCurrentDesktopAll)
-Mock.mock(/\/api\/invite\/audit\/cancelShield\/${id}/, 'get', __test__OutputSwagger1invite.inviteAuditCancelShieldId)
+Mock.mock(/\/api\/invite\/audit\/cancelShield\/.*/, 'get', __test__OutputSwagger1invite.inviteAuditCancelShieldId)
 Mock.mock(/\/api\/invite\/audit\/pass/, 'post', __test__OutputSwagger1invite.inviteAuditPass)
 Mock.mock(/\/api\/invite\/audit\/refuse/, 'post', __test__OutputSwagger1invite.inviteAuditRefuse)
-Mock.mock(/\/api\/invite\/audit\/shield\/${id}/, 'get', __test__OutputSwagger1invite.inviteAuditShieldId)
+Mock.mock(/\/api\/invite\/audit\/shield\/.*/, 'get', __test__OutputSwagger1invite.inviteAuditShieldId)
 Mock.mock(/\/api\/invite\/checkInviteCode/, 'get', __test__OutputSwagger1invite.inviteCheckInviteCode)
 Mock.mock(/\/api\/invite\/export/, 'post', __test__OutputSwagger1invite.inviteExport)
 Mock.mock(/\/api\/invite\/generateInviteShare/, 'post', __test__OutputSwagger1invite.inviteGenerateInviteShare)
 Mock.mock(/\/api\/invite\/inviteJoinEchoData/, 'get', __test__OutputSwagger1invite.inviteInviteJoinEchoData)
 Mock.mock(/\/api\/invite\/inviteLogin/, 'post', __test__OutputSwagger1invite.inviteInviteLogin)
 Mock.mock(/\/api\/invite\/inviteOrangeer/, 'post', __test__OutputSwagger1invite.inviteInviteOrangeer)
-Mock.mock(/\/api\/invite\/page\/${applyType}/, 'post', __test__OutputSwagger1invite.invitePageApplyType)
+Mock.mock(/\/api\/invite\/page\/.*/, 'post', __test__OutputSwagger1invite.invitePageApplyType)
 Mock.mock(/\/api\/invite\/querySetting/, 'get', __test__OutputSwagger1invite.inviteQuerySetting)
 Mock.mock(/\/api\/invite\/updatesetting/, 'post', __test__OutputSwagger1invite.inviteUpdatesetting)
 Mock.mock(/\/api\/invoice\/add/, 'post', __test__OutputSwagger1invoice.invoiceAdd)
@@ -440,12 +428,12 @@ Mock.mock(
   __test__OutputSwagger1loginOrangeer.loginOrangeerAliMpAutoLogin
 )
 Mock.mock(
-  /\/api\/loginOrangeer\/clearCode\/${verificationEnum}/,
+  /\/api\/loginOrangeer\/clearCode\/.*/,
   'get',
   __test__OutputSwagger1loginOrangeer.loginOrangeerClearCodeVerificationEnum
 )
 Mock.mock(
-  /\/api\/loginOrangeer\/clearTimeLimit\/${verificationEnum}/,
+  /\/api\/loginOrangeer\/clearTimeLimit\/.*/,
   'get',
   __test__OutputSwagger1loginOrangeer.loginOrangeerClearTimeLimitVerificationEnum
 )
@@ -459,16 +447,16 @@ Mock.mock(
   __test__OutputSwagger1loginOrangeer.loginOrangeerRetrievePassword
 )
 Mock.mock(
-  /\/api\/loginOrangeer\/sendPhoneValidateCode\/${verificationEnum}/,
+  /\/api\/loginOrangeer\/sendPhoneValidateCode\/.*/,
   'get',
   __test__OutputSwagger1loginOrangeer.loginOrangeerSendPhoneValidateCodeVerificationEnum
 )
 Mock.mock(/\/api\/loginOrangeer\/setPassWord/, 'post', __test__OutputSwagger1loginOrangeer.loginOrangeerSetPassWord)
 Mock.mock(/\/api\/menu\/desktopMenuList/, 'get', __test__OutputSwagger1menu.menuDesktopMenuList)
-Mock.mock(/\/api\/menu\/getMenu\/${menuId}/, 'get', __test__OutputSwagger1menu.menuGetMenuMenuId)
+Mock.mock(/\/api\/menu\/getMenu\/.*/, 'get', __test__OutputSwagger1menu.menuGetMenuMenuId)
 Mock.mock(/\/api\/menu\/treeSelect/, 'get', __test__OutputSwagger1menu.menuTreeSelect)
-Mock.mock(/\/api\/pageHome\/claim\/${claimId}/, 'get', __test__OutputSwagger1pageHome.pageHomeClaimClaimId)
-Mock.mock(/\/api\/pageHome\/exclude\/${claimId}/, 'get', __test__OutputSwagger1pageHome.pageHomeExcludeClaimId)
+Mock.mock(/\/api\/pageHome\/claim\/.*/, 'get', __test__OutputSwagger1pageHome.pageHomeClaimClaimId)
+Mock.mock(/\/api\/pageHome\/exclude\/.*/, 'get', __test__OutputSwagger1pageHome.pageHomeExcludeClaimId)
 Mock.mock(/\/api\/pageHome\/judge/, 'get', __test__OutputSwagger1pageHome.pageHomeJudge)
 Mock.mock(/\/api\/pageHome\/query/, 'get', __test__OutputSwagger1pageHome.pageHomeQuery)
 Mock.mock(
@@ -487,7 +475,7 @@ Mock.mock(
   __test__OutputSwagger1catCertification.catCertificationIdCardFront
 )
 Mock.mock(
-  /\/api\/catCertification\/initFaceVerifyWithCertifyId\/${type}/,
+  /\/api\/catCertification\/initFaceVerifyWithCertifyId\/.*/,
   'post',
   __test__OutputSwagger1catCertification.catCertificationInitFaceVerifyWithCertifyIdType
 )
@@ -498,7 +486,7 @@ Mock.mock(
 )
 Mock.mock(/\/api\/catCertification\/cat\/list/, 'post', __test__OutputSwagger1catCertification.catCertificationCatList)
 Mock.mock(
-  /\/api\/catCertification\/cat\/v1\/${keyBorardId}\/openAcct\/execute/,
+  /\/api\/catCertification\/cat\/v1\/.*\/openAcct\/execute/,
   'post',
   __test__OutputSwagger1catCertification.catCertificationCatV1KeyBorardIdOpenAcctExecute
 )
@@ -532,9 +520,9 @@ Mock.mock(
   'post',
   __test__OutputSwagger1catCredential.catCredentialAddCatCredential
 )
-Mock.mock(/\/api\/catCredential\/delete\/${id}/, 'get', __test__OutputSwagger1catCredential.catCredentialDeleteId)
+Mock.mock(/\/api\/catCredential\/delete\/.*/, 'get', __test__OutputSwagger1catCredential.catCredentialDeleteId)
 Mock.mock(
-  /\/api\/catCredential\/deleteMajor\/${id}/,
+  /\/api\/catCredential\/deleteMajor\/.*/,
   'get',
   __test__OutputSwagger1catCredential.catCredentialDeleteMajorId
 )
@@ -551,7 +539,7 @@ Mock.mock(
 Mock.mock(/\/api\/post\/addDesktop/, 'get', __test__OutputSwagger1post.postAddDesktop)
 Mock.mock(/\/api\/post\/addPost/, 'post', __test__OutputSwagger1post.postAddPost)
 Mock.mock(/\/api\/post\/delDesktop/, 'get', __test__OutputSwagger1post.postDelDesktop)
-Mock.mock(/\/api\/post\/delPost\/${postId}/, 'get', __test__OutputSwagger1post.postDelPostPostId)
+Mock.mock(/\/api\/post\/delPost\/.*/, 'get', __test__OutputSwagger1post.postDelPostPostId)
 Mock.mock(/\/api\/post\/editPost/, 'post', __test__OutputSwagger1post.postEditPost)
 Mock.mock(/\/api\/post\/list/, 'get', __test__OutputSwagger1post.postList)
 Mock.mock(/\/api\/post\/queryDesktopByWhiteId/, 'get', __test__OutputSwagger1post.postQueryDesktopByWhiteId)
@@ -565,43 +553,27 @@ Mock.mock(/\/api\/pink\/curCanAllotPinkList/, 'get', __test__OutputSwagger1pink.
 Mock.mock(/\/api\/pink\/curDesktopPinkList/, 'get', __test__OutputSwagger1pink.pinkCurDesktopPinkList)
 Mock.mock(/\/api\/pink\/editPinkBase/, 'post', __test__OutputSwagger1pink.pinkEditPinkBase)
 Mock.mock(/\/api\/pink\/editPinkMenu/, 'post', __test__OutputSwagger1pink.pinkEditPinkMenu)
-Mock.mock(
-  /\/api\/pink\/getCanAllotPinkList\/${desktopId}/,
-  'get',
-  __test__OutputSwagger1pink.pinkGetCanAllotPinkListDesktopId
-)
-Mock.mock(/\/api\/pink\/pagePinkDesktop\/${pinkId}/, 'get', __test__OutputSwagger1pink.pinkPagePinkDesktopPinkId)
+Mock.mock(/\/api\/pink\/getCanAllotPinkList\/.*/, 'get', __test__OutputSwagger1pink.pinkGetCanAllotPinkListDesktopId)
+Mock.mock(/\/api\/pink\/pagePinkDesktop\/.*/, 'get', __test__OutputSwagger1pink.pinkPagePinkDesktopPinkId)
 Mock.mock(/\/api\/pink\/queryDesktopByWhiteId/, 'get', __test__OutputSwagger1pink.pinkQueryDesktopByWhiteId)
 Mock.mock(/\/api\/pink\/queryDesktopByPhoneOrName/, 'get', __test__OutputSwagger1pink.pinkQueryDesktopByPhoneOrName)
-Mock.mock(/\/api\/pink\/removePink\/${pinkIds}/, 'get', __test__OutputSwagger1pink.pinkRemovePinkPinkIds)
-Mock.mock(/\/api\/pink\/pinkInfo\/${pinkId}/, 'get', __test__OutputSwagger1pink.pinkPinkInfoPinkId)
+Mock.mock(/\/api\/pink\/removePink\/.*/, 'get', __test__OutputSwagger1pink.pinkRemovePinkPinkIds)
+Mock.mock(/\/api\/pink\/pinkInfo\/.*/, 'get', __test__OutputSwagger1pink.pinkPinkInfoPinkId)
 Mock.mock(/\/api\/pink\/pinkList/, 'get', __test__OutputSwagger1pink.pinkPinkList)
-Mock.mock(/\/api\/pink\/pinkMenuTree\/${pinkId}/, 'get', __test__OutputSwagger1pink.pinkPinkMenuTreePinkId)
-Mock.mock(
-  /\/api\/pink\/pinkMenuTreeChecked\/${pinkId}/,
-  'get',
-  __test__OutputSwagger1pink.pinkPinkMenuTreeCheckedPinkId
-)
+Mock.mock(/\/api\/pink\/pinkMenuTree\/.*/, 'get', __test__OutputSwagger1pink.pinkPinkMenuTreePinkId)
+Mock.mock(/\/api\/pink\/pinkMenuTreeChecked\/.*/, 'get', __test__OutputSwagger1pink.pinkPinkMenuTreeCheckedPinkId)
 Mock.mock(/\/api\/pink\/pinkTree/, 'get', __test__OutputSwagger1pink.pinkPinkTree)
 Mock.mock(/\/api\/slider\/addImage/, 'post', __test__OutputSwagger1slider.sliderAddImage)
-Mock.mock(
-  /\/api\/slider\/create\/${verificationEnum}/,
-  'get',
-  __test__OutputSwagger1slider.sliderCreateVerificationEnum
-)
-Mock.mock(
-  /\/api\/slider\/preCheck\/${verificationEnum}/,
-  'get',
-  __test__OutputSwagger1slider.sliderPreCheckVerificationEnum
-)
+Mock.mock(/\/api\/slider\/create\/.*/, 'get', __test__OutputSwagger1slider.sliderCreateVerificationEnum)
+Mock.mock(/\/api\/slider\/preCheck\/.*/, 'get', __test__OutputSwagger1slider.sliderPreCheckVerificationEnum)
 Mock.mock(/\/api\/super\/list/, 'get', __test__OutputSwagger1super.superList)
 Mock.mock(/\/api\/super\/transfer/, 'get', __test__OutputSwagger1super.superTransfer)
-Mock.mock(/\/api\/super\/verify\/${verifyType}/, 'post', __test__OutputSwagger1super.superVerifyVerifyType)
+Mock.mock(/\/api\/super\/verify\/.*/, 'post', __test__OutputSwagger1super.superVerifyVerifyType)
 Mock.mock(/\/api\/sys-dict\/v1\/areaInfo/, 'get', __test__OutputSwagger1sysdict.sysdictV1AreaInfo)
 Mock.mock(/\/api\/sys-dict\/v1\/types/, 'get', __test__OutputSwagger1sysdict.sysdictV1Types)
-Mock.mock(/\/api\/sys-dict\/v1\/${type}\/list\/filter/, 'get', __test__OutputSwagger1sysdict.sysdictV1TypeListFilter)
-Mock.mock(/\/api\/sys-dict\/v1\/${type}\/list\/page/, 'post', __test__OutputSwagger1sysdict.sysdictV1TypeListPage)
-Mock.mock(/\/api\/sys-dict\/v1\/${type}\/list\/tree/, 'get', __test__OutputSwagger1sysdict.sysdictV1TypeListTree)
+Mock.mock(/\/api\/sys-dict\/v1\/.*\/list\/filter/, 'get', __test__OutputSwagger1sysdict.sysdictV1TypeListFilter)
+Mock.mock(/\/api\/sys-dict\/v1\/.*\/list\/page/, 'post', __test__OutputSwagger1sysdict.sysdictV1TypeListPage)
+Mock.mock(/\/api\/sys-dict\/v1\/.*\/list\/tree/, 'get', __test__OutputSwagger1sysdict.sysdictV1TypeListTree)
 Mock.mock(
   /\/api\/grateful\/acquirePresentGratefulInfo/,
   'get',
@@ -1252,7 +1224,7 @@ Mock.mock(
   __test__OutputSwagger5thk.thkApiV1ConfigContinueeducationPage
 )
 Mock.mock(
-  /\/thk\/api\/v1\/config\/continue-education\/${id}/,
+  /\/thk\/api\/v1\/config\/continue-education\/.*/,
   'delete',
   __test__OutputSwagger5thk.thkApiV1ConfigContinueeducationId
 )
@@ -1634,7 +1606,7 @@ Mock.mock(/\/thk\/api\/v1\/tasty\/all-count/, 'get', __test__OutputSwagger5thk.t
 Mock.mock(/\/thk\/api\/v1\/tasty\/bank-record/, 'get', __test__OutputSwagger5thk.thkApiV1TastyBankrecordGet)
 Mock.mock(/\/thk\/api\/v1\/tasty\/bank-record/, 'post', __test__OutputSwagger5thk.thkApiV1TastyBankrecordPost)
 Mock.mock(/\/thk\/api\/v1\/tasty\/bank-record/, 'put', __test__OutputSwagger5thk.thkApiV1TastyBankrecordPut)
-Mock.mock(/\/thk\/api\/v1\/tasty\/bank-record\/${id}/, 'delete', __test__OutputSwagger5thk.thkApiV1TastyBankrecordId)
+Mock.mock(/\/thk\/api\/v1\/tasty\/bank-record\/.*/, 'delete', __test__OutputSwagger5thk.thkApiV1TastyBankrecordId)
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/cred-upgrade\/condition-overview/,
   'get',
@@ -1684,7 +1656,7 @@ Mock.mock(
   __test__OutputSwagger5thk.thkApiV1TastyCredentialclaimlogValidate
 )
 Mock.mock(
-  /\/thk\/api\/v1\/tasty\/credential-claim-log\/${id}/,
+  /\/thk\/api\/v1\/tasty\/credential-claim-log\/.*/,
   'delete',
   __test__OutputSwagger5thk.thkApiV1TastyCredentialclaimlogId
 )
@@ -1730,13 +1702,13 @@ Mock.mock(
   'get',
   __test__OutputSwagger5thk.thkApiV1TastyCredentialUploadCertificateBatch
 )
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/${id}/, 'delete', __test__OutputSwagger5thk.thkApiV1TastyCredentialId)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/.*/, 'delete', __test__OutputSwagger5thk.thkApiV1TastyCredentialId)
 Mock.mock(/\/thk\/api\/v1\/tasty\/education/, 'get', __test__OutputSwagger5thk.thkApiV1TastyEducationGet)
 Mock.mock(/\/thk\/api\/v1\/tasty\/education/, 'post', __test__OutputSwagger5thk.thkApiV1TastyEducationPost)
 Mock.mock(/\/thk\/api\/v1\/tasty\/education/, 'put', __test__OutputSwagger5thk.thkApiV1TastyEducationPut)
 Mock.mock(/\/thk\/api\/v1\/tasty\/education\/batch/, 'post', __test__OutputSwagger5thk.thkApiV1TastyEducationBatch)
 Mock.mock(/\/thk\/api\/v1\/tasty\/education\/school/, 'get', __test__OutputSwagger5thk.thkApiV1TastyEducationSchool)
-Mock.mock(/\/thk\/api\/v1\/tasty\/education\/${id}/, 'delete', __test__OutputSwagger5thk.thkApiV1TastyEducationId)
+Mock.mock(/\/thk\/api\/v1\/tasty\/education\/.*/, 'delete', __test__OutputSwagger5thk.thkApiV1TastyEducationId)
 Mock.mock(/\/thk\/api\/v1\/tasty\/family/, 'get', __test__OutputSwagger5thk.thkApiV1TastyFamilyGet)
 Mock.mock(/\/thk\/api\/v1\/tasty\/family/, 'post', __test__OutputSwagger5thk.thkApiV1TastyFamilyPost)
 Mock.mock(/\/thk\/api\/v1\/tasty\/introduction/, 'get', __test__OutputSwagger5thk.thkApiV1TastyIntroduction)
@@ -1762,7 +1734,7 @@ Mock.mock(
   'get',
   __test__OutputSwagger5thk.thkApiV1TastyProjectQueryProjectByIdAbdName
 )
-Mock.mock(/\/thk\/api\/v1\/tasty\/project\/${id}/, 'delete', __test__OutputSwagger5thk.thkApiV1TastyProjectId)
+Mock.mock(/\/thk\/api\/v1\/tasty\/project\/.*/, 'delete', __test__OutputSwagger5thk.thkApiV1TastyProjectId)
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/tool\/majorInEducation/,
   'get',
@@ -1772,17 +1744,17 @@ Mock.mock(/\/thk\/api\/v1\/tasty\/work-history/, 'get', __test__OutputSwagger5th
 Mock.mock(/\/thk\/api\/v1\/tasty\/work-history/, 'post', __test__OutputSwagger5thk.thkApiV1TastyWorkhistoryPost)
 Mock.mock(/\/thk\/api\/v1\/tasty\/work-history/, 'put', __test__OutputSwagger5thk.thkApiV1TastyWorkhistoryPut)
 Mock.mock(/\/thk\/api\/v1\/tasty\/work-history\/batch/, 'post', __test__OutputSwagger5thk.thkApiV1TastyWorkhistoryBatch)
-Mock.mock(/\/thk\/api\/v1\/tasty\/work-history\/${id}/, 'delete', __test__OutputSwagger5thk.thkApiV1TastyWorkhistoryId)
-Mock.mock(/\/thk\/api\/v1\/tasty\/${id}/, 'delete', __test__OutputSwagger5thk.thkApiV1TastyId)
+Mock.mock(/\/thk\/api\/v1\/tasty\/work-history\/.*/, 'delete', __test__OutputSwagger5thk.thkApiV1TastyWorkhistoryId)
+Mock.mock(/\/thk\/api\/v1\/tasty\/.*/, 'delete', __test__OutputSwagger5thk.thkApiV1TastyId)
 Mock.mock(/\/thk\/api\/v1\/store\/social-insurance/, 'get', __test__OutputSwagger5thk.thkApiV1StoreSocialinsuranceGet)
 Mock.mock(/\/thk\/api\/v1\/store\/social-insurance/, 'post', __test__OutputSwagger5thk.thkApiV1StoreSocialinsurancePost)
 Mock.mock(/\/thk\/api\/v1\/store\/social-insurance/, 'put', __test__OutputSwagger5thk.thkApiV1StoreSocialinsurancePut)
 Mock.mock(
-  /\/thk\/api\/v1\/store\/social-insurance\/${id}/,
+  /\/thk\/api\/v1\/store\/social-insurance\/.*/,
   'delete',
   __test__OutputSwagger5thk.thkApiV1StoreSocialinsuranceId
 )
 Mock.mock(/\/thk\/api\/v1\/store\/student-info/, 'get', __test__OutputSwagger5thk.thkApiV1StoreStudentinfoGet)
 Mock.mock(/\/thk\/api\/v1\/store\/student-info/, 'post', __test__OutputSwagger5thk.thkApiV1StoreStudentinfoPost)
 Mock.mock(/\/thk\/api\/v1\/store\/student-info/, 'put', __test__OutputSwagger5thk.thkApiV1StoreStudentinfoPut)
-Mock.mock(/\/thk\/api\/v1\/store\/student-info\/${id}/, 'delete', __test__OutputSwagger5thk.thkApiV1StoreStudentinfoId)
+Mock.mock(/\/thk\/api\/v1\/store\/student-info\/.*/, 'delete', __test__OutputSwagger5thk.thkApiV1StoreStudentinfoId)

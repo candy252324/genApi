@@ -129,7 +129,8 @@ Mock.setup({
         let matchPath = handleWeirdName(name + obj.namespace) // 如： srcApi + user
         imortStr += `import * as ${matchPath} from './${outputDir}/${obj.namespace}.js'\n`
         ;(obj.apis || []).forEach((api) => {
-          const _url = api.url.replace(/\//g, '\\/')
+          // 将 /thk/api/v1/config/continue-education/${id}  处理成  /\/thk\/api\/v1\/config\/continue-education\/.*/
+          const _url = api.url.replace(/\//g, '\\/').replace(/\$\{.*?\}/g, '.*')
           mockStr += `Mock.mock(/${_url}/, '${api.method}', ${matchPath}.${api.name})\n`
         })
       })
@@ -213,7 +214,7 @@ function writeMockToFile(apiList, { interfaces, absOutputDir }) {
 
 /** interface 写入 */
 function writeInterfaceToFile(definitions, absOutputDir) {
-  let str = ''
+  let str = 'import Mock from "mockjs"\n'
   definitions.forEach((item, index) => {
     str += `export function ${item.name}() {`
     if (item?.properties && item.properties?.length) {
@@ -262,7 +263,7 @@ function getInterfaceMock(model) {
     mockStr = `${type}()`
   }
   if (isArray) {
-    return `\"${name}|5-20\": [${mockStr}],\n`
+    return `\"${name}\": [${mockStr},${mockStr},${mockStr}],\n`
   } else {
     return `${name}: ${mockStr},\n`
   }
@@ -271,19 +272,35 @@ function getInterfaceMock(model) {
 /** 获取简单数据类型的 mock */
 function getFieldMockStr({ name, type }) {
   let s = ''
-  if (type === 'number') {
-    s = '@integer(3,1000)'
-  } else if (type === 'string' || type === 'any') {
-    s = '@string(5,1000)'
-  } else if (type === 'boolean') {
-    s = '@boolean()'
-  } else if (type === 'File') {
-    s = 'file'
+  // 一些特殊的字段
+  if (name === 'code') {
+    s = '@integer(200,200)'
+  } else if (name === 'total') {
+    s = '@integer(11,52)'
+  } else if (name === 'current') {
+    s = '@integer(1,1)'
+  } else if (name === 'size') {
+    s = '@integer(20,50)'
+  } else if (name.toLowerCase().indexOf('avatar') > -1) {
+    s = 'https://www.uviewui.com/common/logo.png'
+  } else if (name.toLowerCase().indexOf('time') > -1 || name.toLowerCase().indexOf('date') > -1) {
+    s = '@datetime()'
   } else {
-    console.log('未处理的类型？')
-    s = '@string(5,1000)'
+    if (type === 'number') {
+      s = '@integer(3,1000)'
+    } else if (type === 'string' || type === 'any') {
+      s = '@string(5,100)'
+    } else if (type === 'boolean') {
+      s = '@boolean()'
+    } else if (type === 'File') {
+      s = 'file'
+    } else {
+      console.log('未处理的类型？')
+      s = '@string(5,1000)'
+    }
   }
-  return `\"${s}\"`
+
+  return `Mock.mock(\"${s}\")`
 }
 
 module.exports = {

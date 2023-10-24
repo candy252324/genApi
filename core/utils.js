@@ -41,7 +41,7 @@ function getUrl(url) {
  */
 function getApiName(url, method) {
   let url2 = url.replace(/^\/api/, '') // 去除开头的 /api
-  url2 = url2.replace(/[\$\{\}-]/g, '') // 去除可能存在的短杠、左右花括号和$
+  url2 = url2.replace(/\$|\{|\}|-|\./g, '') // 去除可能存在的短杠、左右花括号和$、 点号
   let name = url2.replace(/\/\w/g, (matched, index) => {
     const letter = matched.replace('/', '')
     return index === 0 ? letter : letter.toUpperCase()
