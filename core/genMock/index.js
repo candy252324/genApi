@@ -177,7 +177,8 @@ function writeMockToFile(apiList, { interfaces, absOutputDir }) {
       }
       // 出参是简单类型
       else if (handleJsType(outputInterface)) {
-        _outputInterface = getFieldMockStr({ name, type: outputInterface })
+        const s = getFieldMockStr({ name, type: outputInterface })
+        _outputInterface = `Mock.mock(\'${s}\')`
       } else {
         _outputInterface = `${outputInterface}()`
       }
@@ -255,17 +256,23 @@ function getInterfaceMock(model) {
 
   let mockStr = ''
   // 如果是简单类型
+  let isFn = false
   if (type === 'string' || type === 'number' || type === 'boolean' || type === 'any' || type === 'File') {
     mockStr = getFieldMockStr({ name, type })
   } else if (type === 'object') {
     mockStr = '{}'
   } else {
+    isFn = true
     mockStr = `${type}()`
   }
   if (isArray) {
-    return `\"${name}\": [${mockStr},${mockStr},${mockStr}],\n`
+    if (isFn) {
+      return `\'${name}|1-20\': [${mockStr}],\n`
+    } else {
+      return `\'${name}|1-20\': [Mock.mock(\'${mockStr}\')],\n`
+    }
   } else {
-    return `${name}: ${mockStr},\n`
+    return `${name}: Mock.mock(\'${mockStr}\'),\n`
   }
 }
 
@@ -288,19 +295,18 @@ function getFieldMockStr({ name, type }) {
   } else {
     if (type === 'number') {
       s = '@integer(3,1000)'
-    } else if (type === 'string' || type === 'any') {
+    } else if (type === 'string') {
       s = '@string(5,100)'
     } else if (type === 'boolean') {
       s = '@boolean()'
-    } else if (type === 'File') {
-      s = 'file'
+    } else if (type === 'any' || type === 'File') {
+      s = ''
     } else {
       console.log('未处理的类型？')
       s = '@string(5,1000)'
     }
   }
-
-  return `Mock.mock(\"${s}\")`
+  return s
 }
 
 module.exports = {

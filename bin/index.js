@@ -9,6 +9,7 @@ const { CONFIG_FILE_NAME } = require('../core/constant')
 const CWD = process.cwd()
 const program = commander.program // commander 实例
 const configFilePath = path.join(CWD, CONFIG_FILE_NAME)
+const apiConfig = require(configFilePath)
 
 program.version(pkgJson.version)
 
@@ -25,10 +26,12 @@ program.command('now').action(() => {
   }
   // 生成api
   const { genApi } = require('../core/genApi/index')
-  genApi(require(configFilePath))
+  genApi(apiConfig)
   // 生成mock
-  // const { genMock } = require('../core/genMock/index')
-  // genMock(require(configFilePath))
+  if (apiConfig.mock !== false) {
+    const { genMock } = require('../core/genMock/index')
+    genMock(apiConfig)
+  }
 })
 
 program.helpInformation = () => {

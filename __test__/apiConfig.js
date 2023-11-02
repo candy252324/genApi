@@ -63,4 +63,6 @@ module.exports = {
           return request.${method}(${quotationMark}${url}${quotationMark}, ${pstr2})
         }`
   },
+  // 是否生成 mock 数据
+  mock: false,
 }
