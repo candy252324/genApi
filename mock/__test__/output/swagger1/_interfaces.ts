@@ -1,4 +1,4 @@
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 export function AccInfoResp() {
   return {
     mobile: Mock.mock('@string(5,100)'),

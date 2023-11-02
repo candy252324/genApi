@@ -1,5 +1,5 @@
 import { ApiResponseDuRuWenJianXiangYing, ApiResponseComPageDaoRuHuaHuaTiXiangYing } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 导入excel文件操作 */
 export const importTaskImportExcel = () => ApiResponseDuRuWenJianXiangYing()

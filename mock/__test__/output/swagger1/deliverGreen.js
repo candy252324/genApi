@@ -1,5 +1,5 @@
 import { ApiResponseboolean, ApiResponseComPageFangDongShouHuoDiZhiTianJia } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 添加地址 */
 export const deliverGreenAddGreen = () => ApiResponseboolean()

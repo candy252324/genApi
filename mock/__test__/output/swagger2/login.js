@@ -1,5 +1,5 @@
 import { ApiResponseDengLuXiangYingShiTi, ApiResponse, ApiResponsestring } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 通用登录 */
 export const loginDoLogin = () => ApiResponseDengLuXiangYingShiTi()

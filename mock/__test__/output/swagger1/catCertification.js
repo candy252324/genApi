@@ -10,7 +10,7 @@ import {
   ApiResponsestring,
   ApiResponseDouJiangJiFangXingXinXiBoJuZiXinXiJiaShiShiZhiXuYaoChuanRuindividualBankCardNoindividualReservedPhoneNoindividualVocationQiTaXinXiCongredisHuanCunZhongHuoQu,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 出行放行结果 */
 export const catCertificationDescribeFaceVerify = () => ApiResponseDescribeFaceVerifyResponse()

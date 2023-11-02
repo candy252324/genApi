@@ -1,5 +1,5 @@
 import { ApiResponseDouJiangJiFangDongXinXiXiangQingBiao, ApiResponseboolean } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 获取豆浆机房东信息详情 */
 export const gratefulCatAcquireInfo = () => ApiResponseDouJiangJiFangDongXinXiXiangQingBiao()

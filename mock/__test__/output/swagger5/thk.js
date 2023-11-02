@@ -79,7 +79,7 @@ import {
   ApiResponseSheBaoZhangHao,
   ApiResponseXueXinZhangHao,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 2-枚举值的下拉列表 */
 export const thkApiCommonV1Enuminfo = () => ApiResponseMapstringobject()

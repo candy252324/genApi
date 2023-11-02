@@ -1,5 +1,5 @@
 import { ApiResponseboolean, ApiResponseListSelectorDesktopResp, ApiResponseListTreelong } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 添加成员 */
 export const jobAddDesktop = () => ApiResponseboolean()

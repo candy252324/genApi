@@ -1,5 +1,5 @@
 import { ApiResponseVoid, ApiResponseBiXieDao, ApiResponseComPageBiXieDaoYongDao } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 执行审核 */
 export const auditAuthExecute = () => ApiResponseVoid()

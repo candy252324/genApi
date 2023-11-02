@@ -9,7 +9,7 @@ import {
   ApiResponseListTreelong,
   ApiResponseMenuCheckedResp,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 加湿角色 */
 export const pinkAddPink = () => ApiResponselong()

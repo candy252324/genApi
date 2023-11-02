@@ -1,5 +1,5 @@
 import { FileSystemResource, ApiResponseListImportDesktopResp, ApiResponseImportDesktopResp } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 导出小麦 */
 export const excelExport = () => FileSystemResource()

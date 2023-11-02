@@ -7,7 +7,7 @@ import {
   ApiResponseComPageNiaoWoDuiXiangBirdResp,
   ApiResponseComPageXiaoXiNaBuXiangYingShiTi,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 生成上传签名url[图片消息 传入type及originalFileName] */
 export const innerFileGetUploadUrl = () => ApiResponsePutFileResp()

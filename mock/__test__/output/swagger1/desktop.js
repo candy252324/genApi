@@ -8,7 +8,7 @@ import {
   ApiResponseShuJuYiZhiXingCaoZuoFanHuiJieGuo,
   ApiResponseVoid,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 加湿小麦 */
 export const desktopAdd = () => ApiResponse()

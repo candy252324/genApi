@@ -6,7 +6,7 @@ import {
   ApiResponseKeyBorardRespDuiXiang,
   ApiResponseQueryLastMessageResp,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 注销账号 */
 export const keyBorardCancel = () => ApiResponse()

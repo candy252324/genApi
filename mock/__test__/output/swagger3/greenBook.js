@@ -1,5 +1,5 @@
 import { ApiResponseListGreenBookGratefulInfoResp } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 获取房东秋千 */
 export const greenBookListGratefulInfo = () => ApiResponseListGreenBookGratefulInfoResp()

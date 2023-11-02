@@ -1,5 +1,5 @@
 import { ApiResponseChannelKeyBorardResp, ApiResponseCorpWehiallAuthUrlResp } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 获取渠道喇叭花信息 */
 export const clientCorpWehiallAuthKeyBorard = () => ApiResponseChannelKeyBorardResp()

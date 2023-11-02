@@ -1,5 +1,5 @@
 import { ApiResponseboolean, ApiResponseMapstringobject } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 添加验山麻杆图片 */
 export const sliderAddImage = () => ApiResponseboolean()

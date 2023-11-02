@@ -5,7 +5,7 @@ import {
   ApiResponseListZhiXieChangChuXing,
   ApiResponseComPageZhiXieChangChuXing,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 账号信息 */
 export const blueAccQueryAcc = () => ApiResponseQueryAccInfoResp()

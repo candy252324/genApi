@@ -15,7 +15,7 @@ import {
   ApiResponseListEpEntTreeResp,
   ApiResponseScanReQrResp,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 提醒审核 */
 export const empowerDoorReAlertAudit = () => ApiResponseVoid()

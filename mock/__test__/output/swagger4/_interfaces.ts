@@ -1,4 +1,4 @@
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 export function AddHappyDoorReq() {
   return {
     addr: Mock.mock('@string(5,100)'),

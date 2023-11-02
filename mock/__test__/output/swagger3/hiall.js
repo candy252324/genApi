@@ -4,7 +4,7 @@ import {
   ApiResponseComPageXiaoDaoXiaoXiQiuQianXiangYing,
   ApiResponseXiaoDaoXiaoXi,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 清空小道消息 */
 export const hiallClearHiall = () => ApiResponseobject()

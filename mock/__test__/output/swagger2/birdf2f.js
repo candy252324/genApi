@@ -1,5 +1,5 @@
 import { ApiResponselong, ApiResponseListBirdF2fKeyBorardListResp, ApiResponse } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 进入鸟窝瓜子 */
 export const birdf2fApiBirdf2fEnterBird = () => ApiResponselong()

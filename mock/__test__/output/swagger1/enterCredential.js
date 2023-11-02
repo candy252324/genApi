@@ -4,7 +4,7 @@ import {
   ApiResponseComPageDoorCredentialResp,
   ApiResponseOcrHappyLicenseBO,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 添加制鞋厂背景 */
 export const enterCredentialAdd = () => ApiResponseboolean()

@@ -13,7 +13,7 @@ import {
   ApiResponseQueryDoorPageHomeResp,
   ApiResponseWhiteLinkDoorResp,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 钱包临时使用，后面切换版本。分页出行小麦信息【房东id, 姓名，手机号，状态】 */
 export const doorIdentificationBaseInfoDesktopList = () => ApiResponseComPageDesktopResp()

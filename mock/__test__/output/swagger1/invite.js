@@ -10,7 +10,7 @@ import {
   ApiResponseInviteSetResp,
   ApiResponseboolean,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 取消屏蔽喇叭花 */
 export const inviteAuditCancelShieldId = () => ApiResponsestring()

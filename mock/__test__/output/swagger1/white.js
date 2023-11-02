@@ -7,7 +7,7 @@ import {
   ApiResponseListWhiteResp,
   ApiResponseListSelectorDesktopResp,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 加湿小金库 */
 export const whiteAddWhite = () => ApiResponse()

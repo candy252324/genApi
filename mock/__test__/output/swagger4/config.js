@@ -1,5 +1,5 @@
 import { ApiResponseListTreestring, ApiResponseListobject } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 招标方式下拉框 */
 export const configGetBiddingTypeLabel = () => ApiResponseListTreestring()

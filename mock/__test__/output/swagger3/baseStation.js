@@ -4,7 +4,7 @@ import {
   ApiResponseListFangDongXinXi,
   ApiResponseComPageDoorMainInfoResp,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 旅游玉米信息 */
 export const baseStationGetDesktopAllByKeyBorardAndGrateful = () => ApiResponseDesktopAllInfoResp()

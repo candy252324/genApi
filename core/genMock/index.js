@@ -99,7 +99,7 @@ function parseData(jsonData, configOptions) {
 
 /** 在 mock/index.js 中写入内容 */
 function writeIndexToFile() {
-  let firstLine = "import Mock from 'mockjs'\n"
+  let firstLine = "import Mock from 'better-mock'\n"
   const extraStr = `
 Mock.setup({
   timeout: "200-500"
@@ -161,7 +161,7 @@ Mock.setup({
 function writeMockToFile(apiList, { interfaces, absOutputDir }) {
   apiList.forEach((item) => {
     const namespace = item.namespace
-    let mockStr = `import Mock from 'mockjs'\n\n`
+    let mockStr = `import Mock from 'better-mock'\n\n`
     let fileUsedInterface = [] // 当前文件用到的 interface
     item.apis.forEach((api) => {
       const { name, url, method, summary, parameters, outputInterface } = api
@@ -207,7 +207,6 @@ function writeMockToFile(apiList, { interfaces, absOutputDir }) {
       fs.writeFileSync(targetFile, `${importStr}\n${mockStr}\n`)
 
       // 格式化
-      // console.log(`格式化 ${targetFile}`)
       exec(`prettier --write ${targetFile}`)
     })
   })
@@ -215,7 +214,7 @@ function writeMockToFile(apiList, { interfaces, absOutputDir }) {
 
 /** interface 写入 */
 function writeInterfaceToFile(definitions, absOutputDir) {
-  let str = 'import Mock from "mockjs"\n'
+  let str = 'import Mock from "better-mock"\n'
   definitions.forEach((item, index) => {
     str += `export function ${item.name}() {`
     if (item?.properties && item.properties?.length) {
@@ -234,6 +233,8 @@ function writeInterfaceToFile(definitions, absOutputDir) {
       fs.mkdirSync(absOutputDir, { recursive: true })
     }
     fs.writeFileSync(targetFile, str)
+    // 格式化
+    exec(`prettier --write ${targetFile}`)
   })
 }
 

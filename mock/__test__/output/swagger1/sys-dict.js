@@ -4,7 +4,7 @@ import {
   ApiResponseListSysDictDuiXiangnullZhiBuXuLieHua,
   ApiResponsePageSysDictDuiXiangnullZhiBuXuLieHua,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 区域出行 */
 export const sysdictV1AreaInfo = () => ApiResponseJSONArray()

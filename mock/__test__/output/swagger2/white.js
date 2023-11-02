@@ -3,7 +3,7 @@ import {
   ApiResponseListKeyBorardListAllGratefulResp,
   ApiResponseComPageDaDuNanTongQianCaoYongDaoWhiteKeyBorardResp,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 获取子大肚腩甬道+丐帮架构imgrouid */
 export const whiteList = () => ApiResponseListDaDuNanXinXiWhiteResp()

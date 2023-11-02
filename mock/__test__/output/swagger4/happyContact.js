@@ -1,5 +1,5 @@
 import { ApiResponseLianXiRenHuaHuaTi, ApiResponseboolean, ApiResponseComPageLianXiRenHuaHuaTi } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 添加联系人 */
 export const happyContactAdd = () => ApiResponseLianXiRenHuaHuaTi()

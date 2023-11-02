@@ -4,7 +4,7 @@ import {
   ApiResponseComPageContactResp,
   ApiResponseUnReadComPageXiaoDaoXiaoXiYongDaoXiangYing,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 清除小道消息[上帝减去对应聪明未读消息总量] */
 export const hiallClearHiall = () => ApiResponseobject()

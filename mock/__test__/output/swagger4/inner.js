@@ -15,7 +15,7 @@ import {
   ApiResponseDuRuWenJianXiangYing,
   ApiResponseComPageDaoRuHuaHuaTiXiangYing,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** gladSignInfo */
 export const innerHappyGladSignInfo = () => ApiResponseGladSignInfoResp()

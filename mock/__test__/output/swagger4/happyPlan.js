@@ -9,7 +9,7 @@ import {
   ApiResponseComPageFenYeLvYouRenWu,
   ApiResponseComPagePageHappyResp,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 日程-添加发财梦 */
 export const happyPlanAddHappy = () => ApiResponseobject()

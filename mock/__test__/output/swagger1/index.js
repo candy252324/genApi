@@ -1,5 +1,5 @@
 import { ApiResponseCurrentAuthResp, ApiResponseDesktopResp, ApiResponseDesktopAllInfoResp } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 当前登录者美丽喇叭花菜单路由+权限信息 */
 export const indexGetCurrentAuth = () => ApiResponseCurrentAuthResp()

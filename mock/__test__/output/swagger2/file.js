@@ -6,7 +6,7 @@ import {
   ApiResponseWenJianPiLiangBaoCunXiangYingShiTi,
   ApiResponseQianMingWenJianXiangYing,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 阿里云STS鉴权 */
 export const fileGetAliyunStsSign = () => ApiResponsealiyunSTSJianQuanFanHuiZhi()

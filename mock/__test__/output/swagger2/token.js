@@ -1,4 +1,4 @@
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 添加token到缓存 */
 export const tokenAddTokenToShangyunCache = () => ''

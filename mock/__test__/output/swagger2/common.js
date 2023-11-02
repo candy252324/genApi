@@ -5,7 +5,7 @@ import {
   ApiResponseComPageSearchBeforeAddFriendResp,
   ApiResponseListSwitchKeyBorardListResp,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 结盟设备 */
 export const commonBind = () => ApiResponseKeyBorardBindResp()

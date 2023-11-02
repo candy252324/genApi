@@ -1,5 +1,5 @@
 import { ApiResponseFangDongXinXi, ApiResponseListFangDongXinXi, ApiResponseboolean } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 获取当前美丽房东信息 */
 export const gratefulAcquirePresentGratefulInfo = () => ApiResponseFangDongXinXi()

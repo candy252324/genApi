@@ -1,4 +1,4 @@
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 export function AddBirdResp() {
   return {
     directEntryBird: Mock.mock('@boolean()'),

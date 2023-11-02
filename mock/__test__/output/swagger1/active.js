@@ -1,5 +1,5 @@
 import { ApiResponseDesktopNoActiveResp, ApiResponseSendActiveMessageResp } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 根据小金库code出行未激活小麦甬道 */
 export const activeNoActiveList = () => ApiResponseDesktopNoActiveResp()

@@ -1,5 +1,5 @@
 import { ApiResponseComLoginResp, ApiResponse, ApiResponseChannelAppGratefulConfigResp } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 登录结盟 */
 export const channelDesktopComLoginAndBind = () => ApiResponseComLoginResp()

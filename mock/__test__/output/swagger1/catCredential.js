@@ -1,5 +1,5 @@
 import { ApiResponseComPageTianJiaDouJiangJiBeiJing, ApiResponseboolean, ApiResponse } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 分页出行豆浆机背景 */
 export const catCredentialPageCatCredential = () => ApiResponseComPageTianJiaDouJiangJiBeiJing()

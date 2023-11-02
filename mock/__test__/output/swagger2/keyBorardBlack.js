@@ -3,7 +3,7 @@ import {
   ApiResponseobject,
   ApiResponseWaterFallPageKeyBorardBlackResp,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 黑名单甬道 */
 export const keyBorardBlackPageList = () => ApiResponseComPageKeyBorardBlackResp()

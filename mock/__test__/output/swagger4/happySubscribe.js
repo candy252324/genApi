@@ -4,7 +4,7 @@ import {
   ApiResponseHappySubscribeInfoResp,
   ApiResponseComPageHappyPushDetail,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 发财梦分派取消操作 */
 export const happySubscribeCancelPush = () => ApiResponse()

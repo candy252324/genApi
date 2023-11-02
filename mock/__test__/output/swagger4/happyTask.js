@@ -6,7 +6,7 @@ import {
   ApiResponseListTaskProgressDetailResp,
   ApiResponseListTaskProgressCatResp,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 修改发财梦任务状态 */
 export const happyTaskChangeStatus = () => ApiResponseboolean()

@@ -3,7 +3,7 @@ import {
   ApiResponseComPagePageCatHappyPoolResp,
   ApiResponseComPagePageGladHappyPoolResp,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 制鞋厂发财梦滑滑梯 */
 export const happyRecommendPageDoorHappy = () => ApiResponseComPagePageDoorHappyPoolResp()

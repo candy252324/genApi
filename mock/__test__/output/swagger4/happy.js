@@ -20,7 +20,7 @@ import {
   ApiResponseHappyGladInfoResp,
   ApiResponseAddHappyResp,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 灌水制鞋厂发财梦 */
 export const happyAddHappyDoor = () => ApiResponseHappyReceiveResp()

@@ -1,5 +1,5 @@
 import { ApiResponseListMenuResp, ApiResponseMenuResp, ApiResponseListTreelong } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 获取当前小麦美丽可见菜单甬道 */
 export const menuDesktopMenuList = () => ApiResponseListMenuResp()

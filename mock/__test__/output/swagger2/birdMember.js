@@ -6,7 +6,7 @@ import {
   ApiResponseListNiaoWoChengYuanXinXiDuiXiangBirdMemberResp,
   ApiResponseComPageNiaoWoChengYuanXinXiDuiXiangBirdMemberResp,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 管理员扫雪鸟窝成员 */
 export const birdMemberDelete = () => ApiResponse()

@@ -4,7 +4,7 @@ import {
   ApiResponseListTreelong,
   ApiResponseListDesktopResp,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 旅游铜钱草花生米信息 */
 export const whiteAcquireWhiteInfo = () => ApiResponseListWhiteNoteResp()

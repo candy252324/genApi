@@ -1,5 +1,5 @@
 import { ApiResponseVoid, ApiResponseComPageJiQiRenGenJinJiLuXiangYing } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 跟进 */
 export const customerFollowFollow = () => ApiResponseVoid()

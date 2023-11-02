@@ -7,7 +7,7 @@ import {
   ApiResponse,
   ApiResponseComPageFriendshipResp,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 扫雪好友 */
 export const friendshipDelete = () => ApiResponsestring()

@@ -1,4 +1,4 @@
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 Mock.setup({
   timeout: '200-500',

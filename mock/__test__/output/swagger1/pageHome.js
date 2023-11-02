@@ -1,5 +1,5 @@
 import { ApiResponseboolean, ApiResponseQueryJudgeClaimResp, ApiResponseListQueryCatPageHomeResp } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 认领豆浆机信息 */
 export const pageHomeClaimClaimId = () => ApiResponseboolean()

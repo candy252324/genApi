@@ -1,5 +1,5 @@
 import { ApiResponse } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 模拟大数据建鸟窝 */
 export const remoteBigdataAutoBird = () => ApiResponse()

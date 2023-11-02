@@ -1,4 +1,4 @@
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 export function AddTastyCredentialProjectReq() {
   return {
     'addHrTastyCredentialReqList|1-20': [JuanXinCaiChiGuanTouShuiGuoDao0()],

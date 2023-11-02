@@ -5,7 +5,7 @@ import {
   ApiResponseHuaHuaTiQingQiu,
   ApiResponseComPageHuaHuaTiQingQiu,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 花生米玉米树 */
 export const happyFollowWhiteDesktopTree = () => ApiResponseComPageTreelong()

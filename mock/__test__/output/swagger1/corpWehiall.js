@@ -4,7 +4,7 @@ import {
   ApiResponseAgentConfigResp,
   ApiResponse,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 获取应用辟邪刀链接 */
 export const corpWehiallAppAuthLink = () => ApiResponseCorpWehiallAuthUrlResp()

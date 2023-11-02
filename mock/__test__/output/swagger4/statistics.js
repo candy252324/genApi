@@ -3,7 +3,7 @@ import {
   ApiResponseListTongJiShuJuHistogramResp,
   ApiResponseRankResp,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** APP统计【成交发财梦】 */
 export const statisticsAppDealData = () => ApiResponseTongJiShuJuPieDataResp()

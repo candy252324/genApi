@@ -9,7 +9,7 @@ import {
   ApiResponseComPagePageCatHappyPoolResp,
   ApiResponseComPagePageGladHappyPoolResp,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 打卡记录灌水 */
 export const locationAdd = () => ApiResponselong()

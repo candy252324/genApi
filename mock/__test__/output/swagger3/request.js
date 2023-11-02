@@ -7,7 +7,7 @@ import {
   ApiResponseYaoQingRuBuLuoXiangYing,
   ApiResponseComPageYanChangChunHuaXiaoXiFenYeRequestPageListResp,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 添加好友申请 */
 export const requestAddFriend = () => ApiResponse()

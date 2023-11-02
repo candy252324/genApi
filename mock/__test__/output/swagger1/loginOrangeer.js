@@ -5,7 +5,7 @@ import {
   ApiResponsestring,
   ApiResponseOrangeerResultResp,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 出行喇叭花密码未设置是否提醒 */
 export const loginOrangeerJudgePassWordIsSet = () => ApiResponseboolean()

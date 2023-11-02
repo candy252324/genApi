@@ -4,7 +4,7 @@ import {
   ApiResponseComPageBuLuoDuiXiangBirdResp,
   ApiResponseBuLuoDuiXiangBirdResp,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 部落信息详情 */
 export const birdDetail = () => ApiResponseBuLuoDuiXiangBirdDetailResp()

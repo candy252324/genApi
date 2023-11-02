@@ -3,7 +3,7 @@ import {
   ApiResponseListForwardListResp,
   ApiResponseComPageCommonSearchResp,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 转发 创建小道消息/发起瓜子天/进入部落瓜子 */
 export const forwardCheckAndCreate = () => ApiResponseXiaoDaoXiaoXi()

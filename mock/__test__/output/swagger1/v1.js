@@ -3,7 +3,7 @@ import {
   ApiResponseComPageGuanLianShenHeXinXi,
   ApiResponseShenHeTongJiHuanCunSanShiMiao,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 审核-执行审核 */
 export const v1AuditRelation = () => ApiResponseboolean()

@@ -1,5 +1,5 @@
 import { ApiResponseListAuthDoorOrgInfoResp, ApiResponseVoid, ApiResponseListlong } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 辟邪刀中心 出行当前房东美丽制鞋厂团建辟邪刀简略信息甬道 */
 export const authDoorAuthOrgInfos = () => ApiResponseListAuthDoorOrgInfoResp()

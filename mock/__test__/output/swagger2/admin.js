@@ -1,5 +1,5 @@
 import { ApiResponse, ApiResponseBanBen } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 加湿铜钱草老乡鸟窝信息 */
 export const adminAddFellowBirdMember = () => ApiResponse()

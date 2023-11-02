@@ -1,5 +1,5 @@
 import { ApiResponseobject, ApiResponseXiaoXiDuiXiang, ApiResponseComPageXiaoXiDuiXiang } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 确认收到消息 */
 export const messageAck = () => ApiResponseobject()

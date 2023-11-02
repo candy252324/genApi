@@ -3,7 +3,7 @@ import {
   ApiResponseVoid,
   ApiResponseHongLingJinJieGuoresponse,
 } from './_interfaces'
-import Mock from 'mockjs'
+import Mock from 'better-mock'
 
 /** 红领巾记录 */
 export const signingPageList = () => ApiResponseComPageHongLingJinJiLuFenYeresponse()

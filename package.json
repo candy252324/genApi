@@ -31,9 +31,9 @@
   "homepage": "https://github.com/candy252324/genApi#readme",
   "dependencies": {
     "axios": "^1.4.0",
+    "better-mock": "^0.3.7",
     "commander": "^11.0.0",
     "js-pinyin": "^0.2.4",
-    "mockjs": "^1.1.0",
     "prettier": "^2.8.8"
   }
 }
