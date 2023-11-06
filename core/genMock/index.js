@@ -299,7 +299,7 @@ function getInterfaceMock(model) {
 
 /** 获取简单数据类型的 mock */
 function getFieldMockStr({ name, type }) {
-  const _name = name.toLowerCase()
+  const lowerCaseName = name.toLowerCase()
   let mockStr = ''
   let isBare = false // 是否不需要在前面添加Mock.mock， true:不添加， false:添加
   const customeMockStr = getCustomeMockStr(name)
@@ -307,18 +307,35 @@ function getFieldMockStr({ name, type }) {
   if (customeMockStr) {
     mockStr = customeMockStr
     isBare = true
-  } else if (/date|time/.test(_name)) {
-    // 一些内置的 mock处理 逻辑
-    mockStr = '@datetime()' // 处理成日期
-  } else if (/avatar/.test(_name)) {
-    mockStr = 'Mock.Random.image("200x100", Mock.Random.color())' // 生成一张随机图片
+  }
+  // 一些内置的 mock处理规则
+  else if (type === 'string' && /date|time/.test(lowerCaseName)) {
+    mockStr = '@datetime' // 处理成日期
+  } else if (/(.*)id$/.test(lowerCaseName)) {
+    mockStr = '@guid' // 处理成 id
+  } else if (type === 'string' && /url/.test(lowerCaseName)) {
+    mockStr = '@url'
+  } else if (type === 'string' && /color/.test(lowerCaseName)) {
+    mockStr = '@color'
+  } else if (type === 'string' && /province/.test(lowerCaseName)) {
+    mockStr = '@province'
+  } else if (type === 'string' && /city/.test(lowerCaseName)) {
+    mockStr = '@city'
+  } else if (type === 'string' && /county/.test(lowerCaseName)) {
+    mockStr = '@county'
+  } else if (type === 'string' && /username/.test(lowerCaseName)) {
+    mockStr = '@cname'
+  } else if (type === 'string' && /title/.test(lowerCaseName)) {
+    mockStr = '@ctitle(5,20)'
+  } else if (type === 'string' && /avatar/.test(lowerCaseName)) {
+    mockStr = 'Mock.Random.image("200x100", Mock.Random.color())' // 生成一张图片地址
     isBare = true
   } else if (type === 'number') {
     mockStr = '@integer(3,1000)'
   } else if (type === 'string') {
     mockStr = '@string(5,100)'
   } else if (type === 'boolean') {
-    mockStr = '@boolean()'
+    mockStr = '@boolean'
   } else if (type === 'any' || type === 'File') {
     mockStr = ''
   } else {
@@ -331,7 +348,7 @@ function getFieldMockStr({ name, type }) {
   }
 }
 
-/** 内置 mock 规则 */
+/** 用户自定义的 mock 规则 */
 function getCustomeMockStr(name) {
   // 不存在用户自定义的 mock 规则
   if (!filedJsonPath || !Object.keys(filedJsonPath).length) {

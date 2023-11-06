@@ -1,17 +1,17 @@
 import Mock from 'better-mock'
 export function AddBirdResp() {
   return {
-    directEntryBird: Mock.mock('@boolean()'),
-    imBirdId: Mock.mock('@string(5,100)'),
+    directEntryBird: Mock.mock('@boolean'),
+    imBirdId: Mock.mock('@guid'),
   }
 }
 export function GreenBookGratefulInfoResp() {
   return {
     avatar: Mock.Random.image('200x100', Mock.Random.color()),
-    checked: Mock.mock('@boolean()'),
+    checked: Mock.mock('@boolean'),
     kind: Mock.mock('@string(5,100)'),
-    showImBirdId: Mock.mock('@boolean()'),
-    gratefulId: Mock.mock('@string(5,100)'),
+    showImBirdId: Mock.mock('@guid'),
+    gratefulId: Mock.mock('@guid'),
     gratefulName: Mock.mock('@string(5,100)'),
   }
 }
@@ -20,9 +20,9 @@ export function ApiResponse() {
     code: 200,
     data: Mock.mock(''),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseAddBirdResp() {
@@ -30,9 +30,9 @@ export function ApiResponseAddBirdResp() {
     code: 200,
     data: Mock.mock('AddBirdResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseAtListAndAckSequenceResp() {
@@ -40,9 +40,9 @@ export function ApiResponseAtListAndAckSequenceResp() {
     code: 200,
     data: Mock.mock('AtListAndAckSequenceResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageCommonSearchResp() {
@@ -50,9 +50,9 @@ export function ApiResponseComPageCommonSearchResp() {
     code: 200,
     data: Mock.mock('ComPageCommonSearchResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageContactResp() {
@@ -60,9 +60,9 @@ export function ApiResponseComPageContactResp() {
     code: 200,
     data: Mock.mock('ComPageContactResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageFriendshipResp() {
@@ -70,9 +70,9 @@ export function ApiResponseComPageFriendshipResp() {
     code: 200,
     data: Mock.mock('ComPageFriendshipResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageSearchBeforeAddFriendResp() {
@@ -80,9 +80,9 @@ export function ApiResponseComPageSearchBeforeAddFriendResp() {
     code: 200,
     data: Mock.mock('ComPageSearchBeforeAddFriendResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageKeyBorardBlackResp() {
@@ -90,9 +90,9 @@ export function ApiResponseComPageKeyBorardBlackResp() {
     code: 200,
     data: Mock.mock('ComPageKeyBorardBlackResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageWaiBuZhiXieChangChuCan() {
@@ -100,9 +100,9 @@ export function ApiResponseComPageWaiBuZhiXieChangChuCan() {
     code: 200,
     data: Mock.mock('ComPageWaiBuZhiXieChangChuCan()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageWaiBuShuiDaoXiangYing() {
@@ -110,9 +110,9 @@ export function ApiResponseComPageWaiBuShuiDaoXiangYing() {
     code: 200,
     data: Mock.mock('ComPageWaiBuShuiDaoXiangYing()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageXiaoXiNaBuXiangYingShiTi() {
@@ -120,9 +120,9 @@ export function ApiResponseComPageXiaoXiNaBuXiangYingShiTi() {
     code: 200,
     data: Mock.mock('ComPageXiaoXiNaBuXiangYingShiTi()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageXiaoXiDuiXiang() {
@@ -130,9 +130,9 @@ export function ApiResponseComPageXiaoXiDuiXiang() {
     code: 200,
     data: Mock.mock('ComPageXiaoXiDuiXiang()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageNiaoWoDuiXiangBirdResp() {
@@ -140,9 +140,9 @@ export function ApiResponseComPageNiaoWoDuiXiangBirdResp() {
     code: 200,
     data: Mock.mock('ComPageNiaoWoDuiXiangBirdResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageNiaoWoChengYuanXinXiDuiXiangBirdMemberResp() {
@@ -150,9 +150,9 @@ export function ApiResponseComPageNiaoWoChengYuanXinXiDuiXiangBirdMemberResp() {
     code: 200,
     data: Mock.mock('ComPageNiaoWoChengYuanXinXiDuiXiangBirdMemberResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageDaDuNanTongQianCaoYongDaoWhiteKeyBorardResp() {
@@ -160,9 +160,9 @@ export function ApiResponseComPageDaDuNanTongQianCaoYongDaoWhiteKeyBorardResp() 
     code: 200,
     data: Mock.mock('ComPageDaDuNanTongQianCaoYongDaoWhiteKeyBorardResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageYanChangChunHuaXiaoXiFenYeRequestPageListResp() {
@@ -170,9 +170,9 @@ export function ApiResponseComPageYanChangChunHuaXiaoXiFenYeRequestPageListResp(
     code: 200,
     data: Mock.mock('ComPageYanChangChunHuaXiaoXiFenYeRequestPageListResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseFriendshipDetailResp() {
@@ -180,9 +180,9 @@ export function ApiResponseFriendshipDetailResp() {
     code: 200,
     data: Mock.mock('FriendshipDetailResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseFriendshipKeyBorardDetailResp() {
@@ -190,9 +190,9 @@ export function ApiResponseFriendshipKeyBorardDetailResp() {
     code: 200,
     data: Mock.mock('FriendshipKeyBorardDetailResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseInviteToBirdRespYaoQingRuNiaoWoXiangYing() {
@@ -200,9 +200,9 @@ export function ApiResponseInviteToBirdRespYaoQingRuNiaoWoXiangYing() {
     code: 200,
     data: Mock.mock('InviteToBirdRespYaoQingRuNiaoWoXiangYing()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListGreenBookGratefulInfoResp() {
@@ -210,9 +210,9 @@ export function ApiResponseListGreenBookGratefulInfoResp() {
     code: 200,
     'data|1-20': [GreenBookGratefulInfoResp()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListForwardListResp() {
@@ -220,9 +220,9 @@ export function ApiResponseListForwardListResp() {
     code: 200,
     'data|1-20': [ForwardListResp()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListFriendshipResp() {
@@ -230,9 +230,9 @@ export function ApiResponseListFriendshipResp() {
     code: 200,
     'data|1-20': [FriendshipResp()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListBirdF2fKeyBorardListResp() {
@@ -240,9 +240,9 @@ export function ApiResponseListBirdF2fKeyBorardListResp() {
     code: 200,
     'data|1-20': [BirdF2fKeyBorardListResp()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListPhoneFriendshipResp() {
@@ -250,9 +250,9 @@ export function ApiResponseListPhoneFriendshipResp() {
     code: 200,
     'data|1-20': [PhoneFriendshipResp()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListSwitchKeyBorardListResp() {
@@ -260,9 +260,9 @@ export function ApiResponseListSwitchKeyBorardListResp() {
     code: 200,
     'data|1-20': [SwitchKeyBorardListResp()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListGratefulInfoRespLvKeXinXi() {
@@ -270,9 +270,9 @@ export function ApiResponseListGratefulInfoRespLvKeXinXi() {
     code: 200,
     'data|1-20': [GratefulInfoRespLvKeXinXi()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListUnreadResp() {
@@ -280,9 +280,9 @@ export function ApiResponseListUnreadResp() {
     code: 200,
     'data|1-20': [UnreadResp()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListKeyBorardListAllGratefulResp() {
@@ -290,9 +290,9 @@ export function ApiResponseListKeyBorardListAllGratefulResp() {
     code: 200,
     'data|1-20': [KeyBorardListAllGratefulResp()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListXiaoXiDuiXiang() {
@@ -300,9 +300,9 @@ export function ApiResponseListXiaoXiDuiXiang() {
     code: 200,
     'data|1-20': [XiaoXiDuiXiang()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListBanBen() {
@@ -310,9 +310,9 @@ export function ApiResponseListBanBen() {
     code: 200,
     'data|1-20': [BanBen()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListNiaoWoChengYuanXinXiDuiXiangBirdMemberResp() {
@@ -320,9 +320,9 @@ export function ApiResponseListNiaoWoChengYuanXinXiDuiXiangBirdMemberResp() {
     code: 200,
     'data|1-20': [NiaoWoChengYuanXinXiDuiXiangBirdMemberResp()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListDaDuNanXinXiWhiteResp() {
@@ -330,9 +330,9 @@ export function ApiResponseListDaDuNanXinXiWhiteResp() {
     code: 200,
     'data|1-20': [DaDuNanXinXiWhiteResp()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseMaplongLvKeTongQianCaoDaoimTongQianCaoXiangYingShiTi() {
@@ -340,9 +340,9 @@ export function ApiResponseMaplongLvKeTongQianCaoDaoimTongQianCaoXiangYingShiTi(
     code: 200,
     data: Mock.mock('LvKeTongQianCaoDaoimTongQianCaoXiangYingShiTi()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseMapstringSearchMapResp() {
@@ -350,9 +350,9 @@ export function ApiResponseMapstringSearchMapResp() {
     code: 200,
     data: Mock.mock('SearchMapResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseMemberBirdStatusResp() {
@@ -360,9 +360,9 @@ export function ApiResponseMemberBirdStatusResp() {
     code: 200,
     data: Mock.mock('MemberBirdStatusResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponsePutFileResp() {
@@ -370,9 +370,9 @@ export function ApiResponsePutFileResp() {
     code: 200,
     data: Mock.mock('PutFileResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseQueryLastMessageResp() {
@@ -380,9 +380,9 @@ export function ApiResponseQueryLastMessageResp() {
     code: 200,
     data: Mock.mock('QueryLastMessageResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseUnReadComPageXiaoDaoXiaoXiYongDaoXiangYing() {
@@ -390,9 +390,9 @@ export function ApiResponseUnReadComPageXiaoDaoXiaoXiYongDaoXiangYing() {
     code: 200,
     data: Mock.mock('UnReadComPageXiaoDaoXiaoXiYongDaoXiangYing()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseKeyBorardBindResp() {
@@ -400,9 +400,9 @@ export function ApiResponseKeyBorardBindResp() {
     code: 200,
     data: Mock.mock('KeyBorardBindResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseKeyBorardRespDuiXiang() {
@@ -410,18 +410,18 @@ export function ApiResponseKeyBorardRespDuiXiang() {
     code: 200,
     data: Mock.mock('KeyBorardRespDuiXiang()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseVoid() {
   return {
     code: 200,
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseWaterFallPageKeyBorardBlackResp() {
@@ -429,9 +429,9 @@ export function ApiResponseWaterFallPageKeyBorardBlackResp() {
     code: 200,
     data: Mock.mock('WaterFallPageKeyBorardBlackResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponsealiyunSTSJianQuanFanHuiZhi() {
@@ -439,19 +439,19 @@ export function ApiResponsealiyunSTSJianQuanFanHuiZhi() {
     code: 200,
     data: Mock.mock('aliyunSTSJianQuanFanHuiZhi()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseboolean() {
   return {
     code: 200,
-    data: Mock.mock('@boolean()'),
+    data: Mock.mock('@boolean'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponselong() {
@@ -459,9 +459,9 @@ export function ApiResponselong() {
     code: 200,
     data: Mock.mock('@string(5,100)'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseobject() {
@@ -469,9 +469,9 @@ export function ApiResponseobject() {
     code: 200,
     data: Mock.mock(''),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponsestring() {
@@ -479,9 +479,9 @@ export function ApiResponsestring() {
     code: 200,
     data: Mock.mock('@string(5,100)'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseShangChuanALiYunQianMingXiangYing() {
@@ -489,9 +489,9 @@ export function ApiResponseShangChuanALiYunQianMingXiangYing() {
     code: 200,
     data: Mock.mock('ShangChuanALiYunQianMingXiangYing()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseXiaoDaoXiaoXi() {
@@ -499,9 +499,9 @@ export function ApiResponseXiaoDaoXiaoXi() {
     code: 200,
     data: Mock.mock('XiaoDaoXiaoXi()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseNaBuMaiShaoBingNiaoWoBaoCunChuCan() {
@@ -509,9 +509,9 @@ export function ApiResponseNaBuMaiShaoBingNiaoWoBaoCunChuCan() {
     code: 200,
     data: Mock.mock('NaBuMaiShaoBingNiaoWoBaoCunChuCan()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseWenJianPiLiangBaoCunXiangYingShiTi() {
@@ -519,9 +519,9 @@ export function ApiResponseWenJianPiLiangBaoCunXiangYingShiTi() {
     code: 200,
     data: Mock.mock('WenJianPiLiangBaoCunXiangYingShiTi()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseXiaoXiDuiXiang() {
@@ -529,9 +529,9 @@ export function ApiResponseXiaoXiDuiXiang() {
     code: 200,
     data: Mock.mock('XiaoXiDuiXiang()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseBanBen() {
@@ -539,9 +539,9 @@ export function ApiResponseBanBen() {
     code: 200,
     data: Mock.mock('BanBen()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseDengLuXiangYingShiTi() {
@@ -549,9 +549,9 @@ export function ApiResponseDengLuXiangYingShiTi() {
     code: 200,
     data: Mock.mock('DengLuXiangYingShiTi()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseQianMingWenJianXiangYing() {
@@ -559,9 +559,9 @@ export function ApiResponseQianMingWenJianXiangYing() {
     code: 200,
     data: Mock.mock('QianMingWenJianXiangYing()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseNiaoWoDuiXiangBirdDetailResp() {
@@ -569,9 +569,9 @@ export function ApiResponseNiaoWoDuiXiangBirdDetailResp() {
     code: 200,
     data: Mock.mock('NiaoWoDuiXiangBirdDetailResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseNiaoWoDuiXiangBirdResp() {
@@ -579,9 +579,9 @@ export function ApiResponseNiaoWoDuiXiangBirdResp() {
     code: 200,
     data: Mock.mock('NiaoWoDuiXiangBirdResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseNiaoWoChengYuanXinXiDuiXiangBirdMemberResp() {
@@ -589,9 +589,9 @@ export function ApiResponseNiaoWoChengYuanXinXiDuiXiangBirdMemberResp() {
     code: 200,
     data: Mock.mock('NiaoWoChengYuanXinXiDuiXiangBirdMemberResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseNiaoWoWenJianShangChuanXiangYingShiTi() {
@@ -599,9 +599,9 @@ export function ApiResponseNiaoWoWenJianShangChuanXiangYingShiTi() {
     code: 200,
     data: Mock.mock('NiaoWoWenJianShangChuanXiangYingShiTi()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseYuYinShiBieFanHui() {
@@ -609,9 +609,9 @@ export function ApiResponseYuYinShiBieFanHui() {
     code: 200,
     data: Mock.mock('YuYinShiBieFanHui()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseYanChangChunHuaXiaoXiXiangQingRequestDetailResp() {
@@ -619,9 +619,9 @@ export function ApiResponseYanChangChunHuaXiaoXiXiangQingRequestDetailResp() {
     code: 200,
     data: Mock.mock('YanChangChunHuaXiaoXiXiangQingRequestDetailResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function AtListAndAckSequenceResp() {
@@ -648,8 +648,8 @@ export function ComLoginReq() {
     deviceManufacturer: Mock.mock('@string(5,100)'),
     deviceModel: Mock.mock('@string(5,100)'),
     loginModeEnum: Mock.mock('@string(5,100)'),
-    openId: Mock.mock('@string(5,100)'),
-    uuid: Mock.mock('@string(5,100)'),
+    openId: Mock.mock('@guid'),
+    uuid: Mock.mock('@guid'),
   }
 }
 export function ComPageCommonSearchResp() {
@@ -758,8 +758,8 @@ export function ComPageYanChangChunHuaXiaoXiFenYeRequestPageListResp() {
 }
 export function CommonSearchReq() {
   return {
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isForward: Mock.mock('@boolean()'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isForward: Mock.mock('@boolean'),
     keywords: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
@@ -775,16 +775,16 @@ export function CommonSearchResp() {
     birdAttr: Mock.mock('@string(5,100)'),
     birdAvatar: Mock.Random.image('200x100', Mock.Random.color()),
     birdType: Mock.mock('@string(5,100)'),
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isFriendship: Mock.mock('@boolean()'),
-    isNotice: Mock.mock('@boolean()'),
-    isSameGrateful: Mock.mock('@boolean()'),
-    isTop: Mock.mock('@boolean()'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isFriendship: Mock.mock('@boolean'),
+    isNotice: Mock.mock('@boolean'),
+    isSameGrateful: Mock.mock('@boolean'),
+    isTop: Mock.mock('@boolean'),
     job: Mock.mock('@string(5,100)'),
     keywords: Mock.mock('@string(5,100)'),
     name: Mock.mock('@string(5,100)'),
-    ownerId: Mock.mock('@string(5,100)'),
+    ownerId: Mock.mock('@guid'),
     post: Mock.mock('@string(5,100)'),
     total: Mock.mock('@integer(3,1000)'),
   }
@@ -792,9 +792,9 @@ export function CommonSearchResp() {
 export function ContactReq() {
   return {
     hiallEnum: Mock.mock('@string(5,100)'),
-    excludeMemberImBirdId: Mock.mock('@string(5,100)'),
+    excludeMemberImBirdId: Mock.mock('@guid'),
     birdTypeE: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imKeyBorardId: Mock.mock('@guid'),
     keywords: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
@@ -809,19 +809,19 @@ export function ContactResp() {
     createType: Mock.mock('@string(5,100)'),
     birdAttr: Mock.mock('@string(5,100)'),
     birdType: Mock.mock('@string(5,100)'),
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isFriendship: Mock.mock('@boolean()'),
-    isBirdMember: Mock.mock('@boolean()'),
-    isNotice: Mock.mock('@boolean()'),
-    isSameSubsidiary: Mock.mock('@boolean()'),
-    isSameGrateful: Mock.mock('@boolean()'),
-    isTop: Mock.mock('@boolean()'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isFriendship: Mock.mock('@boolean'),
+    isBirdMember: Mock.mock('@boolean'),
+    isNotice: Mock.mock('@boolean'),
+    isSameSubsidiary: Mock.mock('@boolean'),
+    isSameGrateful: Mock.mock('@boolean'),
+    isTop: Mock.mock('@boolean'),
     job: Mock.mock('@string(5,100)'),
     keywords: Mock.mock('@string(5,100)'),
     name: Mock.mock('@string(5,100)'),
     post: Mock.mock('@string(5,100)'),
-    privateImBirdId: Mock.mock('@string(5,100)'),
+    privateImBirdId: Mock.mock('@guid'),
     remark: Mock.mock('@string(5,100)'),
     status: Mock.mock('@string(5,100)'),
     gratefulName: Mock.mock('@string(5,100)'),
@@ -831,25 +831,25 @@ export function ContactResp() {
 }
 export function EnterBirdReq() {
   return {
-    f2fBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    f2fBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
   }
 }
 export function FileDTO() {
   return {
     fileName: Mock.mock('@string(5,100)'),
-    ossUrl: Mock.mock('@string(5,100)'),
+    ossUrl: Mock.mock('@url'),
   }
 }
 export function FileResp() {
   return {
-    fileId: Mock.mock('@string(5,100)'),
+    fileId: Mock.mock('@guid'),
     fileName: Mock.mock('@string(5,100)'),
     fileSize: Mock.mock('@string(5,100)'),
     fileText: Mock.mock('@string(5,100)'),
-    fileTime: Mock.mock('@datetime()'),
+    fileTime: Mock.mock('@datetime'),
     fileType: Mock.mock('@string(5,100)'),
-    fileUrl: Mock.mock('@string(5,100)'),
+    fileUrl: Mock.mock('@url'),
     height: Mock.mock('@integer(3,1000)'),
     width: Mock.mock('@integer(3,1000)'),
   }
@@ -860,7 +860,7 @@ export function FooterDetailDTO() {
     footerTypeE: Mock.mock('@string(5,100)'),
     methodType: Mock.mock('@string(5,100)'),
     param: Mock.mock(''),
-    url: Mock.mock('@string(5,100)'),
+    url: Mock.mock('@url'),
   }
 }
 export function FooterWrapper() {
@@ -872,7 +872,7 @@ export function FooterWrapper() {
 export function ForwardListReq() {
   return {
     channel: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imKeyBorardId: Mock.mock('@guid'),
     keyword: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
@@ -883,9 +883,9 @@ export function ForwardListResp() {
   return {
     avatar: Mock.Random.image('200x100', Mock.Random.color()),
     hiallType: Mock.mock('@string(5,100)'),
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isFriendship: Mock.mock('@boolean()'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isFriendship: Mock.mock('@boolean'),
     name: Mock.mock('@string(5,100)'),
     gratefulName: Mock.mock('@string(5,100)'),
     total: Mock.mock('@string(5,100)'),
@@ -894,47 +894,47 @@ export function ForwardListResp() {
 export function FriendshipDetailReq() {
   return {
     channel: Mock.mock('@string(5,100)'),
-    friendId: Mock.mock('@string(5,100)'),
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isPhoneSearch: Mock.mock('@boolean()'),
-    needHiallMsg: Mock.mock('@boolean()'),
+    friendId: Mock.mock('@guid'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isPhoneSearch: Mock.mock('@boolean'),
+    needHiallMsg: Mock.mock('@boolean'),
   }
 }
 export function FriendshipDetailResp() {
   return {
-    addFriend: Mock.mock('@boolean()'),
+    addFriend: Mock.mock('@boolean'),
     avatar: Mock.Random.image('200x100', Mock.Random.color()),
     hiallType: Mock.mock('@string(5,100)'),
     childCompany: Mock.mock('@string(5,100)'),
     company: Mock.mock('@string(5,100)'),
-    whiteId: Mock.mock('@string(5,100)'),
+    whiteId: Mock.mock('@guid'),
     whiteName: Mock.mock('@string(5,100)'),
     whitePath: Mock.mock('@string(5,100)'),
     email: Mock.mock('@string(5,100)'),
-    enableInput: Mock.mock('@boolean()'),
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isAt: Mock.mock('@boolean()'),
-    isAttention: Mock.mock('@boolean()'),
-    isFriendship: Mock.mock('@boolean()'),
-    isMutual: Mock.mock('@boolean()'),
-    isNotice: Mock.mock('@boolean()'),
-    isPayAttention: Mock.mock('@boolean()'),
-    isSameSubsidiary: Mock.mock('@boolean()'),
-    isSameGrateful: Mock.mock('@boolean()'),
-    isSenderSystem: Mock.mock('@boolean()'),
-    isTop: Mock.mock('@boolean()'),
+    enableInput: Mock.mock('@boolean'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isAt: Mock.mock('@boolean'),
+    isAttention: Mock.mock('@boolean'),
+    isFriendship: Mock.mock('@boolean'),
+    isMutual: Mock.mock('@boolean'),
+    isNotice: Mock.mock('@boolean'),
+    isPayAttention: Mock.mock('@boolean'),
+    isSameSubsidiary: Mock.mock('@boolean'),
+    isSameGrateful: Mock.mock('@boolean'),
+    isSenderSystem: Mock.mock('@boolean'),
+    isTop: Mock.mock('@boolean'),
     job: Mock.mock('@string(5,100)'),
     lastAckSequence: Mock.mock('@string(5,100)'),
     msgApplyType: Mock.mock('@string(5,100)'),
     msgContent: Mock.mock('@string(5,100)'),
     msgContentType: Mock.mock('@string(5,100)'),
-    msgFileUrl: Mock.mock('@string(5,100)'),
-    msgId: Mock.mock('@string(5,100)'),
+    msgFileUrl: Mock.mock('@url'),
+    msgId: Mock.mock('@guid'),
     msgSenderName: Mock.mock('@string(5,100)'),
     msgSequence: Mock.mock('@string(5,100)'),
-    msgTime: Mock.mock('@datetime()'),
+    msgTime: Mock.mock('@datetime'),
     nickName: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
     pinyin: Mock.mock('@string(5,100)'),
@@ -942,7 +942,7 @@ export function FriendshipDetailResp() {
     sex: Mock.mock('@string(5,100)'),
     status: Mock.mock('@string(5,100)'),
     statusDesc: Mock.mock('@string(5,100)'),
-    title: Mock.mock('@string(5,100)'),
+    title: Mock.mock('@ctitle(5,20)'),
     unreadCount: Mock.mock('@integer(3,1000)'),
     keyBorardName: Mock.mock('@string(5,100)'),
   }
@@ -950,8 +950,8 @@ export function FriendshipDetailResp() {
 export function FriendshipResp() {
   return {
     avatar: Mock.Random.image('200x100', Mock.Random.color()),
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
     pinyin: Mock.mock('@string(5,100)'),
     gratefulName: Mock.mock('@string(5,100)'),
     keyBorardName: Mock.mock('@string(5,100)'),
@@ -959,71 +959,71 @@ export function FriendshipResp() {
 }
 export function FriendshipKeyBorardDetailResp() {
   return {
-    enableSendMsg: Mock.mock('@boolean()'),
-    hasSameGrateful: Mock.mock('@boolean()'),
-    imBirdId: Mock.mock('@string(5,100)'),
-    isAttention: Mock.mock('@boolean()'),
-    isBlack: Mock.mock('@boolean()'),
-    isFrinedship: Mock.mock('@boolean()'),
-    isNotice: Mock.mock('@boolean()'),
-    isPrivate: Mock.mock('@boolean()'),
-    isRcvMsgAttr: Mock.mock('@boolean()'),
-    isShowPhone: Mock.mock('@boolean()'),
-    isShowPhoneAttr: Mock.mock('@boolean()'),
-    isTop: Mock.mock('@boolean()'),
-    privateImBirdId: Mock.mock('@string(5,100)'),
+    enableSendMsg: Mock.mock('@boolean'),
+    hasSameGrateful: Mock.mock('@boolean'),
+    imBirdId: Mock.mock('@guid'),
+    isAttention: Mock.mock('@boolean'),
+    isBlack: Mock.mock('@boolean'),
+    isFrinedship: Mock.mock('@boolean'),
+    isNotice: Mock.mock('@boolean'),
+    isPrivate: Mock.mock('@boolean'),
+    isRcvMsgAttr: Mock.mock('@boolean'),
+    isShowPhone: Mock.mock('@boolean'),
+    isShowPhoneAttr: Mock.mock('@boolean'),
+    isTop: Mock.mock('@boolean'),
+    privateImBirdId: Mock.mock('@guid'),
     remark: Mock.mock('@string(5,100)'),
-    showRemark: Mock.mock('@boolean()'),
+    showRemark: Mock.mock('@boolean'),
   }
 }
 export function GetUnreadPageReq() {
   return {
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imKeyBorardId: Mock.mock('@guid'),
     'requestIdList|1-20': [Mock.mock('@string(5,100)')],
   }
 }
 export function BirdF2fKeyBorardListResp() {
   return {
-    avatarUrl: Mock.Random.image('200x100', Mock.Random.color()),
-    f2fBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    avatarUrl: Mock.mock('@url'),
+    f2fBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
     keyBorardName: Mock.mock('@string(5,100)'),
   }
 }
 export function BirdFileUploadReq() {
   return {
-    bizId: Mock.mock('@string(5,100)'),
+    bizId: Mock.mock('@guid'),
     bizSource: Mock.mock('@string(5,100)'),
-    bpSenderId: Mock.mock('@string(5,100)'),
+    bpSenderId: Mock.mock('@guid'),
     'fileList|1-20': [FileDTO()],
   }
 }
 export function BirdSetNoticeAndTopReq() {
   return {
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isNotice: Mock.mock('@boolean()'),
-    isTop: Mock.mock('@boolean()'),
-    needHiallMsg: Mock.mock('@boolean()'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isNotice: Mock.mock('@boolean'),
+    isTop: Mock.mock('@boolean'),
+    needHiallMsg: Mock.mock('@boolean'),
   }
 }
 export function BirdTransferReq() {
   return {
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
   }
 }
 export function InnerBirdDissolveReq() {
   return {
-    bizId: Mock.mock('@string(5,100)'),
+    bizId: Mock.mock('@guid'),
     bizSource: Mock.mock('@string(5,100)'),
-    imBirdId: Mock.mock('@string(5,100)'),
-    ownerBpKeyBorardId: Mock.mock('@string(5,100)'),
+    imBirdId: Mock.mock('@guid'),
+    ownerBpKeyBorardId: Mock.mock('@guid'),
   }
 }
 export function InnerBirdMemberBirdListReq() {
   return {
-    bpKeyBorardId: Mock.mock('@string(5,100)'),
+    bpKeyBorardId: Mock.mock('@guid'),
     keyword: Mock.mock('@string(5,100)'),
     name: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
@@ -1035,8 +1035,8 @@ export function InviteToBirdReq() {
     'applyIds|1-20': [Mock.mock('@string(5,100)')],
     desc: Mock.mock('@string(5,100)'),
     birdName: Mock.mock('@string(5,100)'),
-    imBirdId: Mock.mock('@string(5,100)'),
-    inviterId: Mock.mock('@string(5,100)'),
+    imBirdId: Mock.mock('@guid'),
+    inviterId: Mock.mock('@guid'),
   }
 }
 export function InviteToBirdRespYaoQingRuNiaoWoXiangYing() {
@@ -1049,31 +1049,31 @@ export function InviteToBirdRespYaoQingRuNiaoWoXiangYing() {
 }
 export function ListFriendshipQueryReq() {
   return {
-    excludeMemberImBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isForward: Mock.mock('@boolean()'),
+    excludeMemberImBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isForward: Mock.mock('@boolean'),
     keyword: Mock.mock('@string(5,100)'),
   }
 }
 export function MemberBirdStatusResp() {
   return {
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
     status: Mock.mock('@string(5,100)'),
     statusDesc: Mock.mock('@string(5,100)'),
   }
 }
 export function MessageAtResp() {
   return {
-    messageId: Mock.mock('@string(5,100)'),
-    senderId: Mock.mock('@string(5,100)'),
+    messageId: Mock.mock('@guid'),
+    senderId: Mock.mock('@guid'),
     sequence: Mock.mock('@string(5,100)'),
   }
 }
 export function MessagePositionReqq() {
   return {
-    imBirdId: Mock.mock('@string(5,100)'),
-    isAt: Mock.mock('@boolean()'),
+    imBirdId: Mock.mock('@guid'),
+    isAt: Mock.mock('@boolean'),
     limit: Mock.mock('@integer(3,1000)'),
     startSequence: Mock.mock('@string(5,100)'),
   }
@@ -1081,26 +1081,26 @@ export function MessagePositionReqq() {
 export function MessageProcessReq() {
   return {
     footer: Mock.mock('FooterDetailDTO()'),
-    msgId: Mock.mock('@string(5,100)'),
+    msgId: Mock.mock('@guid'),
   }
 }
 export function MsgSearchReq() {
   return {
-    friendId: Mock.mock('@string(5,100)'),
-    birdId: Mock.mock('@string(5,100)'),
+    friendId: Mock.mock('@guid'),
+    birdId: Mock.mock('@guid'),
     keywords: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
     type: Mock.mock('@string(5,100)'),
-    keyBorardId: Mock.mock('@string(5,100)'),
+    keyBorardId: Mock.mock('@guid'),
   }
 }
 export function PhoneFriendshipResp() {
   return {
     avatar: Mock.Random.image('200x100', Mock.Random.color()),
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isFriend: Mock.mock('@boolean()'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isFriend: Mock.mock('@boolean'),
     phone: Mock.mock('@string(5,100)'),
     pinyin: Mock.mock('@string(5,100)'),
     gratefulName: Mock.mock('@string(5,100)'),
@@ -1109,48 +1109,48 @@ export function PhoneFriendshipResp() {
 }
 export function PhoneListReq() {
   return {
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imKeyBorardId: Mock.mock('@guid'),
     'phoneList|1-20': [Mock.mock('@string(5,100)')],
   }
 }
 export function PutFileResp() {
   return {
-    happyId: Mock.mock('@string(5,100)'),
-    fileId: Mock.mock('@string(5,100)'),
+    happyId: Mock.mock('@guid'),
+    fileId: Mock.mock('@guid'),
     originalFileName: Mock.mock('@string(5,100)'),
-    signUrl: Mock.mock('@string(5,100)'),
-    url: Mock.mock('@string(5,100)'),
+    signUrl: Mock.mock('@url'),
+    url: Mock.mock('@url'),
   }
 }
 export function QueryLastMessageResp() {
   return {
     appType: Mock.mock('@integer(3,1000)'),
-    isForceUpdate: Mock.mock('@datetime()'),
+    isForceUpdate: Mock.mock('@boolean'),
     versionDesc: Mock.mock('@string(5,100)'),
     versionName: Mock.mock('@string(5,100)'),
-    versionUrl: Mock.mock('@string(5,100)'),
+    versionUrl: Mock.mock('@url'),
   }
 }
 export function RemoteAutoBirdReq() {
   return {
-    cityId: Mock.mock('@string(5,100)'),
-    endTime: Mock.mock('@datetime()'),
+    cityId: Mock.mock('@guid'),
+    endTime: Mock.mock('@datetime'),
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
-    startTime: Mock.mock('@datetime()'),
+    startTime: Mock.mock('@datetime'),
   }
 }
 export function RequestMsgReqDuiXiang() {
   return {
     content: Mock.mock('@string(5,100)'),
-    receiverId: Mock.mock('@string(5,100)'),
-    requestId: Mock.mock('@string(5,100)'),
-    senderId: Mock.mock('@string(5,100)'),
+    receiverId: Mock.mock('@guid'),
+    requestId: Mock.mock('@guid'),
+    senderId: Mock.mock('@guid'),
   }
 }
 export function SaveRandomReq() {
   return {
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imKeyBorardId: Mock.mock('@guid'),
     latitude: Mock.mock('@string(5,100)'),
     longitude: Mock.mock('@string(5,100)'),
     random: Mock.mock('@string(5,100)'),
@@ -1158,10 +1158,10 @@ export function SaveRandomReq() {
 }
 export function SearchBeforeAddFriendReq() {
   return {
-    excludeMemberImBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isShowFullName: Mock.mock('@boolean()'),
-    isShowGratefulName: Mock.mock('@boolean()'),
+    excludeMemberImBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isShowFullName: Mock.mock('@boolean'),
+    isShowGratefulName: Mock.mock('@boolean'),
     keyword: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
@@ -1171,10 +1171,10 @@ export function SearchBeforeAddFriendResp() {
   return {
     avatar: Mock.Random.image('200x100', Mock.Random.color()),
     channel: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isFriend: Mock.mock('@boolean()'),
-    isBirdMember: Mock.mock('@boolean()'),
-    permitChannel: Mock.mock('@boolean()'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isFriend: Mock.mock('@boolean'),
+    isBirdMember: Mock.mock('@boolean'),
+    permitChannel: Mock.mock('@boolean'),
     phone: Mock.mock('@string(5,100)'),
     pinyin: Mock.mock('@string(5,100)'),
     gratefulName: Mock.mock('@string(5,100)'),
@@ -1183,14 +1183,14 @@ export function SearchBeforeAddFriendResp() {
 }
 export function SearchMapResp() {
   return {
-    hasMore: Mock.mock('@boolean()'),
+    hasMore: Mock.mock('@boolean'),
     'keyBorardList|1-20': [SearchResp()],
   }
 }
 export function SearchReq() {
   return {
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isForward: Mock.mock('@boolean()'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isForward: Mock.mock('@boolean'),
     keywords: Mock.mock('@string(5,100)'),
   }
 }
@@ -1202,34 +1202,34 @@ export function SearchResp() {
     createType: Mock.mock('@string(5,100)'),
     birdAttr: Mock.mock('@string(5,100)'),
     birdType: Mock.mock('@string(5,100)'),
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
     job: Mock.mock('@string(5,100)'),
     keywords: Mock.mock('@string(5,100)'),
     name: Mock.mock('@string(5,100)'),
-    ownerId: Mock.mock('@string(5,100)'),
+    ownerId: Mock.mock('@guid'),
     post: Mock.mock('@string(5,100)'),
     total: Mock.mock('@integer(3,1000)'),
   }
 }
 export function SetRcvMsgReq() {
   return {
-    imFriendId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isRcvMsg: Mock.mock('@boolean()'),
+    imFriendId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isRcvMsg: Mock.mock('@boolean'),
   }
 }
 export function SetShowPhoneReq() {
   return {
-    imFriendId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isShowPhone: Mock.mock('@boolean()'),
+    imFriendId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isShowPhone: Mock.mock('@boolean'),
   }
 }
 export function SwitchKeyBorardListResp() {
   return {
     avatar: Mock.Random.image('200x100', Mock.Random.color()),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imKeyBorardId: Mock.mock('@guid'),
     phone: Mock.mock('@string(5,100)'),
     satoken: Mock.mock('@string(5,100)'),
     keyBorardName: Mock.mock('@string(5,100)'),
@@ -1237,19 +1237,19 @@ export function SwitchKeyBorardListResp() {
 }
 export function SwitchKeyBorardReq() {
   return {
-    deviceId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    deviceId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
   }
 }
 export function GratefulInfoRespLvKeXinXi() {
   return {
     avatar: Mock.Random.image('200x100', Mock.Random.color()),
     channel: Mock.mock('@string(5,100)'),
-    checked: Mock.mock('@boolean()'),
+    checked: Mock.mock('@boolean'),
     kind: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
     post: Mock.mock('@string(5,100)'),
-    gratefulId: Mock.mock('@string(5,100)'),
+    gratefulId: Mock.mock('@guid'),
     gratefulName: Mock.mock('@string(5,100)'),
     keyBorardName: Mock.mock('@string(5,100)'),
   }
@@ -1265,16 +1265,16 @@ export function UnReadComPageXiaoDaoXiaoXiYongDaoXiangYing() {
 }
 export function UnreadResp() {
   return {
-    isRead: Mock.mock('@boolean()'),
-    requestId: Mock.mock('@string(5,100)'),
+    isRead: Mock.mock('@boolean'),
+    requestId: Mock.mock('@guid'),
   }
 }
 export function UploadFileReq() {
   return {
-    happyId: Mock.mock('@string(5,100)'),
-    fileTime: Mock.mock('@datetime()'),
+    happyId: Mock.mock('@guid'),
+    fileTime: Mock.mock('@datetime'),
     height: Mock.mock('@integer(3,1000)'),
-    isVoice: Mock.mock('@boolean()'),
+    isVoice: Mock.mock('@boolean'),
     originalFileName: Mock.mock('@string(5,100)'),
     realFileSize: Mock.mock('@string(5,100)'),
     type: Mock.mock('@string(5,100)'),
@@ -1284,37 +1284,37 @@ export function UploadFileReq() {
 export function KeyBorardBindReq() {
   return {
     channel: Mock.mock('@string(5,100)'),
-    deviceId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    deviceId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
   }
 }
 export function KeyBorardBindResp() {}
 export function KeyBorardBlackResp() {
   return {
-    avatarUrl: Mock.Random.image('200x100', Mock.Random.color()),
-    id: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    avatarUrl: Mock.mock('@url'),
+    id: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
     gratefulName: Mock.mock('@string(5,100)'),
     keyBorardName: Mock.mock('@string(5,100)'),
   }
 }
 export function KeyBorardCancelReq() {
   return {
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imKeyBorardId: Mock.mock('@guid'),
     smsCode: Mock.mock('@string(5,100)'),
   }
 }
 export function KeyBorardInformSaveReq() {
   return {
     content: Mock.mock('@string(5,100)'),
-    peerId: Mock.mock('@string(5,100)'),
+    peerId: Mock.mock('@guid'),
     type: Mock.mock('@string(5,100)'),
   }
 }
 export function KeyBorardListAllGratefulResp() {
   return {
-    hasMore: Mock.mock('@boolean()'),
-    gratefulId: Mock.mock('@string(5,100)'),
+    hasMore: Mock.mock('@boolean'),
+    gratefulId: Mock.mock('@guid'),
     gratefulName: Mock.mock('@string(5,100)'),
     'keyBorardList|1-20': [DaDuNanTongQianCaoYongDaoWhiteKeyBorardResp()],
   }
@@ -1322,16 +1322,16 @@ export function KeyBorardListAllGratefulResp() {
 export function KeyBorardRespDuiXiang() {
   return {
     avatar: Mock.Random.image('200x100', Mock.Random.color()),
-    whiteId: Mock.mock('@string(5,100)'),
+    whiteId: Mock.mock('@guid'),
     whiteName: Mock.mock('@string(5,100)'),
     email: Mock.mock('@string(5,100)'),
     birdMemberRemark: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isApprove: Mock.mock('@boolean()'),
-    isBirdApprove: Mock.mock('@boolean()'),
-    isNamePhoneSearch: Mock.mock('@boolean()'),
-    isNoticed: Mock.mock('@boolean()'),
-    isRcvStrangerMsg: Mock.mock('@boolean()'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isApprove: Mock.mock('@boolean'),
+    isBirdApprove: Mock.mock('@boolean'),
+    isNamePhoneSearch: Mock.mock('@boolean'),
+    isNoticed: Mock.mock('@boolean'),
+    isRcvStrangerMsg: Mock.mock('@boolean'),
     job: Mock.mock('@string(5,100)'),
     nickName: Mock.mock('@string(5,100)'),
     parentWhitePath: Mock.mock('@string(5,100)'),
@@ -1341,7 +1341,7 @@ export function KeyBorardRespDuiXiang() {
     requestChannel: Mock.mock('@string(5,100)'),
     sex: Mock.mock('@string(5,100)'),
     status: Mock.mock('@string(5,100)'),
-    gratefulId: Mock.mock('@string(5,100)'),
+    gratefulId: Mock.mock('@guid'),
     gratefulName: Mock.mock('@string(5,100)'),
     keyBorardName: Mock.mock('@string(5,100)'),
   }
@@ -1350,7 +1350,7 @@ export function WaterFallPageKeyBorardBlackResp() {
   return {
     'list|1-20': [KeyBorardBlackResp()],
     nextOffset: Mock.mock('@string(5,100)'),
-    requestTime: Mock.mock('@datetime()'),
+    requestTime: Mock.mock('@datetime'),
   }
 }
 export function aliyunSTSJianQuanFanHuiZhi() {
@@ -1362,9 +1362,9 @@ export function aliyunSTSJianQuanFanHuiZhi() {
 }
 export function mockJiaRenRuNiaoWoRuCan() {
   return {
-    bizId: Mock.mock('@string(5,100)'),
+    bizId: Mock.mock('@guid'),
     bizSourceE: Mock.mock('@string(5,100)'),
-    cityId: Mock.mock('@string(5,100)'),
+    cityId: Mock.mock('@guid'),
     'imKeyBorardIds|1-20': [Mock.mock('@string(5,100)')],
     schoolName: Mock.mock('@string(5,100)'),
   }
@@ -1383,19 +1383,19 @@ export function MaiShaoBingXiaoXiTuiSongimXiaoXi() {
     atBpKeyBorardIds: Mock.mock('@string(5,100)'),
     'bizIdList|1-20': [Mock.mock('@string(5,100)')],
     bizSource: Mock.mock('@string(5,100)'),
-    bpSenderId: Mock.mock('@string(5,100)'),
+    bpSenderId: Mock.mock('@guid'),
     content: Mock.mock('@string(5,100)'),
     contentType: Mock.mock('@string(5,100)'),
     footer: Mock.mock('FooterWrapper()'),
     'imBirdIdList|1-20': [Mock.mock('@string(5,100)')],
     'receiverBpKeyBorardIdList|1-20': [Mock.mock('@string(5,100)')],
-    title: Mock.mock('@string(5,100)'),
+    title: Mock.mock('@ctitle(5,20)'),
     type: Mock.mock('@string(5,100)'),
   }
 }
 export function ErWeiMa() {
   return {
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     type: Mock.mock('@string(5,100)'),
   }
 }
@@ -1407,24 +1407,24 @@ export function XiaoDaoXiaoXi() {
     hiallType: Mock.mock('@string(5,100)'),
     birdAttr: Mock.mock('@string(5,100)'),
     'birdIdList|1-20': [Mock.mock('@string(5,100)')],
-    birdStatus: Mock.mock('@boolean()'),
+    birdStatus: Mock.mock('@boolean'),
     birdType: Mock.mock('@string(5,100)'),
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isAllSilence: Mock.mock('@boolean()'),
-    isAtAll: Mock.mock('@boolean()'),
-    isFriendship: Mock.mock('@boolean()'),
-    isModifyName: Mock.mock('@boolean()'),
-    isNotice: Mock.mock('@boolean()'),
-    isOrdinaryInvent: Mock.mock('@boolean()'),
-    isPrivate: Mock.mock('@boolean()'),
-    isShow: Mock.mock('@boolean()'),
-    isTop: Mock.mock('@boolean()'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isAllSilence: Mock.mock('@boolean'),
+    isAtAll: Mock.mock('@boolean'),
+    isFriendship: Mock.mock('@boolean'),
+    isModifyName: Mock.mock('@boolean'),
+    isNotice: Mock.mock('@boolean'),
+    isOrdinaryInvent: Mock.mock('@boolean'),
+    isPrivate: Mock.mock('@boolean'),
+    isShow: Mock.mock('@boolean'),
+    isTop: Mock.mock('@boolean'),
     job: Mock.mock('@string(5,100)'),
     modified: Mock.mock('@string(5,100)'),
     nickName: Mock.mock('@string(5,100)'),
     post: Mock.mock('@string(5,100)'),
-    privateImBirdId: Mock.mock('@string(5,100)'),
+    privateImBirdId: Mock.mock('@guid'),
     receiver: Mock.mock('@string(5,100)'),
     total: Mock.mock('@integer(3,1000)'),
     keyBorardName: Mock.mock('@string(5,100)'),
@@ -1434,9 +1434,9 @@ export function XiaoDaoXiaoXiYongDao() {
   return {
     channel: Mock.mock('@string(5,100)'),
     'birdIdList|1-20': [Mock.mock('@string(5,100)')],
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imKeyBorardId: Mock.mock('@guid'),
     limit: Mock.mock('@integer(3,1000)'),
-    selectSum: Mock.mock('@boolean()'),
+    selectSum: Mock.mock('@boolean'),
     skipCount: Mock.mock('@integer(3,1000)'),
   }
 }
@@ -1452,45 +1452,45 @@ export function XiaoDaoXiaoXiYongDaoXiangYing() {
     hiallRemark: Mock.mock('@string(5,100)'),
     hiallType: Mock.mock('@string(5,100)'),
     birdAttr: Mock.mock('@string(5,100)'),
-    birdId: Mock.mock('@string(5,100)'),
+    birdId: Mock.mock('@guid'),
     birdType: Mock.mock('@string(5,100)'),
-    isAt: Mock.mock('@boolean()'),
-    isAttention: Mock.mock('@boolean()'),
-    isFriendship: Mock.mock('@boolean()'),
-    isNotice: Mock.mock('@boolean()'),
-    isSameSubsidiary: Mock.mock('@boolean()'),
-    isSameGrateful: Mock.mock('@boolean()'),
-    isSenderSystem: Mock.mock('@boolean()'),
-    isTop: Mock.mock('@boolean()'),
+    isAt: Mock.mock('@boolean'),
+    isAttention: Mock.mock('@boolean'),
+    isFriendship: Mock.mock('@boolean'),
+    isNotice: Mock.mock('@boolean'),
+    isSameSubsidiary: Mock.mock('@boolean'),
+    isSameGrateful: Mock.mock('@boolean'),
+    isSenderSystem: Mock.mock('@boolean'),
+    isTop: Mock.mock('@boolean'),
     lastAckSequence: Mock.mock('@string(5,100)'),
     modified: Mock.mock('@string(5,100)'),
     msgApplyType: Mock.mock('@string(5,100)'),
     msgContent: Mock.mock('@string(5,100)'),
     msgContentType: Mock.mock('@string(5,100)'),
-    msgFileUrl: Mock.mock('@string(5,100)'),
-    msgId: Mock.mock('@string(5,100)'),
+    msgFileUrl: Mock.mock('@url'),
+    msgId: Mock.mock('@guid'),
     msgSenderName: Mock.mock('@string(5,100)'),
     msgSequence: Mock.mock('@string(5,100)'),
-    msgTime: Mock.mock('@datetime()'),
-    privateBirdId: Mock.mock('@string(5,100)'),
+    msgTime: Mock.mock('@datetime'),
+    privateBirdId: Mock.mock('@guid'),
     total: Mock.mock('@string(5,100)'),
     unreadCount: Mock.mock('@integer(3,1000)'),
     unreadSum: Mock.mock('@integer(3,1000)'),
-    keyBorardid: Mock.mock('@string(5,100)'),
+    keyBorardid: Mock.mock('@guid'),
   }
 }
 export function XiuGaiBeiZhuModifyRemarkBirdReq() {
   return {
     birdRemark: Mock.mock('@string(5,100)'),
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
   }
 }
 export function XiuGaiBeiZhuModifyfriendRemarkReq() {
   return {
     friendRemark: Mock.mock('@string(5,100)'),
-    imFriendId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imFriendId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
   }
 }
 export function XiuGaiTongQianCaoTouXiang() {
@@ -1501,29 +1501,29 @@ export function XiuGaiTongQianCaoTouXiang() {
 export function XiuGaiNiaoWoTaiYangHuaRuCanModifyBirdNameReq() {
   return {
     birdName: Mock.mock('@string(5,100)'),
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
   }
 }
 export function RuNiaoWoQingQiuAddBirdReq() {
   return {
-    applyId: Mock.mock('@string(5,100)'),
-    imBirdId: Mock.mock('@string(5,100)'),
-    inviterId: Mock.mock('@string(5,100)'),
+    applyId: Mock.mock('@guid'),
+    imBirdId: Mock.mock('@guid'),
+    inviterId: Mock.mock('@guid'),
     type: Mock.mock('@integer(3,1000)'),
   }
 }
 export function NaBuMaiShaoBingNiaoWoBaoCunChuCan() {
   return {
     'errorKeyBorardIds|1-20': [Mock.mock('@string(5,100)')],
-    birdId: Mock.mock('@string(5,100)'),
-    ownerBpKeyBorardId: Mock.mock('@string(5,100)'),
+    birdId: Mock.mock('@guid'),
+    ownerBpKeyBorardId: Mock.mock('@guid'),
   }
 }
 export function NaBuXiaoXiSouSuoQingQiu() {
   return {
-    bpKeyBorardId: Mock.mock('@string(5,100)'),
-    birdId: Mock.mock('@string(5,100)'),
+    bpKeyBorardId: Mock.mock('@guid'),
+    birdId: Mock.mock('@guid'),
     keywords: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
@@ -1532,36 +1532,36 @@ export function NaBuXiaoXiSouSuoQingQiu() {
 }
 export function NaBuNiaoWoBaoCunRuCan() {
   return {
-    avatarUrl: Mock.Random.image('200x100', Mock.Random.color()),
-    bizId: Mock.mock('@string(5,100)'),
+    avatarUrl: Mock.mock('@url'),
+    bizId: Mock.mock('@guid'),
     bizSource: Mock.mock('@string(5,100)'),
     desc: Mock.mock('@string(5,100)'),
     'memberBpKeyBorardIdList|1-20': [Mock.mock('@string(5,100)')],
     name: Mock.mock('@string(5,100)'),
-    ownerBpKeyBorardId: Mock.mock('@string(5,100)'),
+    ownerBpKeyBorardId: Mock.mock('@guid'),
   }
 }
 export function NaBuNiaoWoBaoCunNiaoWoChengYuanRuCan() {
   return {
-    bizId: Mock.mock('@string(5,100)'),
+    bizId: Mock.mock('@guid'),
     bizSource: Mock.mock('@string(5,100)'),
     'memberBpKeyBorardIdList|1-20': [Mock.mock('@string(5,100)')],
-    ownerBpKeyBorardId: Mock.mock('@string(5,100)'),
+    ownerBpKeyBorardId: Mock.mock('@guid'),
   }
 }
 export function ChuangJianXiaoDaoXiaoXi() {
   return {
     channel: Mock.mock('@string(5,100)'),
-    checkCache: Mock.mock('@boolean()'),
+    checkCache: Mock.mock('@boolean'),
     'birdIdList|1-20': [Mock.mock('@string(5,100)')],
-    privateBirdId: Mock.mock('@string(5,100)'),
+    privateBirdId: Mock.mock('@guid'),
     'receiverIdList|1-20': [Mock.mock('@string(5,100)')],
-    updateBirdHiall: Mock.mock('@datetime()'),
+    updateBirdHiall: Mock.mock('@boolean'),
   }
 }
 export function LiShiXiaoXiMessageHistoryReq() {
   return {
-    imBirdId: Mock.mock('@string(5,100)'),
+    imBirdId: Mock.mock('@guid'),
     orderType: Mock.mock('@integer(3,1000)'),
     page: Mock.mock('@integer(3,1000)'),
     sequence: Mock.mock('@string(5,100)'),
@@ -1573,35 +1573,35 @@ export function WaiBuZhiXieChangChuCan() {
     area: Mock.mock('@string(5,100)'),
     authStatus: Mock.mock('@string(5,100)'),
     avatar: Mock.Random.image('200x100', Mock.Random.color()),
-    chiefly: Mock.mock('@boolean()'),
-    city: Mock.mock('@string(5,100)'),
+    chiefly: Mock.mock('@boolean'),
+    city: Mock.mock('@city'),
     contactNumber: Mock.mock('@string(5,100)'),
     country: Mock.mock('@string(5,100)'),
-    whiteId: Mock.mock('@string(5,100)'),
+    whiteId: Mock.mock('@guid'),
     empNum: Mock.mock('@integer(3,1000)'),
     doorRealGreen: Mock.mock('@string(5,100)'),
     firmSize: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
-    imBirdId: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
+    imBirdId: Mock.mock('@guid'),
     industryInvolved: Mock.mock('@string(5,100)'),
     introduction: Mock.mock('@string(5,100)'),
     legalIdCardNo: Mock.mock('@string(5,100)'),
     legalCat: Mock.mock('@string(5,100)'),
     licenseUnifiedCode: Mock.mock('@string(5,100)'),
-    licenseUnifiedUrl: Mock.mock('@string(5,100)'),
+    licenseUnifiedUrl: Mock.mock('@url'),
     location: Mock.mock('@string(5,100)'),
     mark: Mock.mock('@string(5,100)'),
     name: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
     serialNum: Mock.mock('@string(5,100)'),
-    gratefulId: Mock.mock('@string(5,100)'),
+    gratefulId: Mock.mock('@guid'),
     xmail: Mock.mock('@string(5,100)'),
   }
 }
 export function WaiBuZhiXieChangSouSuoRuCan() {
   return {
     doorName: Mock.mock('@string(5,100)'),
-    flag: Mock.mock('@boolean()'),
+    flag: Mock.mock('@boolean'),
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
   }
@@ -1609,15 +1609,15 @@ export function WaiBuZhiXieChangSouSuoRuCan() {
 export function WaiBuShuiDaoXiangYing() {
   return {
     avatar: Mock.Random.image('200x100', Mock.Random.color()),
-    bpKeyBorardId: Mock.mock('@string(5,100)'),
+    bpKeyBorardId: Mock.mock('@guid'),
     channel: Mock.mock('@string(5,100)'),
     desktopNickName: Mock.mock('@string(5,100)'),
     desktopKeyBorardName: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isFriend: Mock.mock('@boolean()'),
-    isBirdMember: Mock.mock('@boolean()'),
-    isNormal: Mock.mock('@boolean()'),
-    permitChannel: Mock.mock('@boolean()'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isFriend: Mock.mock('@boolean'),
+    isBirdMember: Mock.mock('@boolean'),
+    isNormal: Mock.mock('@boolean'),
+    permitChannel: Mock.mock('@boolean'),
     phone: Mock.mock('@string(5,100)'),
     pinyin: Mock.mock('@string(5,100)'),
     gratefulName: Mock.mock('@string(5,100)'),
@@ -1628,23 +1628,23 @@ export function WaiBuShuiDaoSouSuoRuCan() {
   return {
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
-    gratefulId: Mock.mock('@string(5,100)'),
+    gratefulId: Mock.mock('@guid'),
     keyBorardName: Mock.mock('@string(5,100)'),
   }
 }
 export function HaoYouFriendshipReq() {
   return {
-    imFriendId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isNotice: Mock.mock('@boolean()'),
-    isTop: Mock.mock('@boolean()'),
+    imFriendId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isNotice: Mock.mock('@boolean'),
+    isTop: Mock.mock('@boolean'),
   }
 }
 export function HaoYouYongDaoChuXingFriendshipQueryReq() {
   return {
-    excludeMemberImBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isForward: Mock.mock('@boolean()'),
+    excludeMemberImBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isForward: Mock.mock('@boolean'),
     keyword: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
@@ -1657,8 +1657,8 @@ export function WenJianPiLiangBaoCunXiangYingShiTi() {
 }
 export function XiaoXiack() {
   return {
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
   }
 }
 export function XiaoXiNaBuXiangYingShiTi() {
@@ -1666,38 +1666,38 @@ export function XiaoXiNaBuXiangYingShiTi() {
     applyType: Mock.mock('@string(5,100)'),
     atKeyBorardIds: Mock.mock('@string(5,100)'),
     atKeyBorardNames: Mock.mock('@string(5,100)'),
-    bpKeyBorardId: Mock.mock('@string(5,100)'),
+    bpKeyBorardId: Mock.mock('@guid'),
     'cardMessageList|1-20': [ZhuanFaXiaoXiDuiXiang()],
     channelFile: Mock.mock('FileResp()'),
     content: Mock.mock('@string(5,100)'),
     contentType: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    fileId: Mock.mock('@string(5,100)'),
+    fileId: Mock.mock('@guid'),
     fileName: Mock.mock('@string(5,100)'),
     fileSize: Mock.mock('@string(5,100)'),
     fileText: Mock.mock('@string(5,100)'),
-    fileTime: Mock.mock('@datetime()'),
+    fileTime: Mock.mock('@datetime'),
     fileType: Mock.mock('@string(5,100)'),
-    fileUrl: Mock.mock('@string(5,100)'),
+    fileUrl: Mock.mock('@url'),
     footer: Mock.mock('FooterWrapper()'),
-    birdId: Mock.mock('@string(5,100)'),
+    birdId: Mock.mock('@guid'),
     height: Mock.mock('@integer(3,1000)'),
-    id: Mock.mock('@string(5,100)'),
-    isAlarm: Mock.mock('@boolean()'),
-    isSystem: Mock.mock('@boolean()'),
+    id: Mock.mock('@guid'),
+    isAlarm: Mock.mock('@boolean'),
+    isSystem: Mock.mock('@boolean'),
     nickName: Mock.mock('@string(5,100)'),
     senderAvatar: Mock.Random.image('200x100', Mock.Random.color()),
-    senderId: Mock.mock('@string(5,100)'),
+    senderId: Mock.mock('@guid'),
     senderName: Mock.mock('@string(5,100)'),
     sequence: Mock.mock('@string(5,100)'),
-    title: Mock.mock('@string(5,100)'),
+    title: Mock.mock('@ctitle(5,20)'),
     width: Mock.mock('@integer(3,1000)'),
   }
 }
 export function XiaoXiSaoXue() {
   return {
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
     'messageIdList|1-20': [Mock.mock('@string(5,100)')],
   }
 }
@@ -1711,41 +1711,41 @@ export function XiaoXiDuiXiang() {
     content: Mock.mock('@string(5,100)'),
     contentType: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    fileId: Mock.mock('@string(5,100)'),
+    fileId: Mock.mock('@guid'),
     fileName: Mock.mock('@string(5,100)'),
     fileSize: Mock.mock('@string(5,100)'),
     fileText: Mock.mock('@string(5,100)'),
-    fileTime: Mock.mock('@datetime()'),
+    fileTime: Mock.mock('@datetime'),
     fileType: Mock.mock('@string(5,100)'),
-    fileUrl: Mock.mock('@string(5,100)'),
+    fileUrl: Mock.mock('@url'),
     footer: Mock.mock('FooterWrapper()'),
-    birdId: Mock.mock('@string(5,100)'),
+    birdId: Mock.mock('@guid'),
     height: Mock.mock('@integer(3,1000)'),
-    id: Mock.mock('@string(5,100)'),
-    isAlarm: Mock.mock('@boolean()'),
-    isSystem: Mock.mock('@boolean()'),
+    id: Mock.mock('@guid'),
+    isAlarm: Mock.mock('@boolean'),
+    isSystem: Mock.mock('@boolean'),
     nickName: Mock.mock('@string(5,100)'),
     senderAvatar: Mock.Random.image('200x100', Mock.Random.color()),
-    senderId: Mock.mock('@string(5,100)'),
+    senderId: Mock.mock('@guid'),
     senderName: Mock.mock('@string(5,100)'),
     sequence: Mock.mock('@string(5,100)'),
-    title: Mock.mock('@string(5,100)'),
+    title: Mock.mock('@ctitle(5,20)'),
     width: Mock.mock('@integer(3,1000)'),
   }
 }
 export function XiaoXiGunDongQingQiuTi() {
   return {
-    chooseCurrentMessage: Mock.mock('@boolean()'),
+    chooseCurrentMessage: Mock.mock('@boolean'),
     downSize: Mock.mock('@integer(3,1000)'),
-    birdId: Mock.mock('@string(5,100)'),
-    messageId: Mock.mock('@string(5,100)'),
+    birdId: Mock.mock('@guid'),
+    messageId: Mock.mock('@guid'),
     type: Mock.mock('@string(5,100)'),
     upSize: Mock.mock('@integer(3,1000)'),
   }
 }
 export function XiaoXiXiangQingMessageDetailReq() {
   return {
-    messageId: Mock.mock('@string(5,100)'),
+    messageId: Mock.mock('@guid'),
   }
 }
 export function TianJiaHaoYouAddFriendReq() {
@@ -1753,52 +1753,52 @@ export function TianJiaHaoYouAddFriendReq() {
     channel: Mock.mock('@string(5,100)'),
     content: Mock.mock('@string(5,100)'),
     friendRemark: Mock.mock('@string(5,100)'),
-    imFriendId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isTop: Mock.mock('@boolean()'),
+    imFriendId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isTop: Mock.mock('@boolean'),
     phone: Mock.mock('@string(5,100)'),
   }
 }
 export function TianJiaWoWeiHaoYouCongMingFangShi() {
   return {
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imKeyBorardId: Mock.mock('@guid'),
     'requestChannels|1-20': [Mock.mock('@string(5,100)')],
   }
 }
 export function QingKongXiaoXiRuCan() {
   return {
-    imFriendId: Mock.mock('@string(5,100)'),
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imFriendId: Mock.mock('@guid'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
   }
 }
 export function QingKongXiaoXiJiLu() {
   return {
     channel: Mock.mock('@string(5,100)'),
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
   }
 }
 export function BanBen() {
   return {
     appType: Mock.mock('@string(5,100)'),
     fileSize: Mock.mock('@string(5,100)'),
-    isForceUpdate: Mock.mock('@datetime()'),
+    isForceUpdate: Mock.mock('@boolean'),
     versionDesc: Mock.mock('@string(5,100)'),
     versionName: Mock.mock('@string(5,100)'),
     versionNum: Mock.mock('@string(5,100)'),
-    versionUrl: Mock.mock('@string(5,100)'),
+    versionUrl: Mock.mock('@url'),
   }
 }
 export function BanBen0() {
   return {
     appType: Mock.mock('@string(5,100)'),
     fileSize: Mock.mock('@string(5,100)'),
-    isForceUpdate: Mock.mock('@datetime()'),
+    isForceUpdate: Mock.mock('@boolean'),
     versionDesc: Mock.mock('@string(5,100)'),
     versionName: Mock.mock('@string(5,100)'),
     versionNum: Mock.mock('@string(5,100)'),
-    versionUrl: Mock.mock('@string(5,100)'),
+    versionUrl: Mock.mock('@url'),
   }
 }
 export function ShengChengWenJianfileId() {
@@ -1806,7 +1806,7 @@ export function ShengChengWenJianfileId() {
     bucketName: Mock.mock('@string(5,100)'),
     dir: Mock.mock('@string(5,100)'),
     fileSize: Mock.mock('@string(5,100)'),
-    fileTime: Mock.mock('@datetime()'),
+    fileTime: Mock.mock('@datetime'),
     height: Mock.mock('@integer(3,1000)'),
     originalFileName: Mock.mock('@string(5,100)'),
     ossFileName: Mock.mock('@string(5,100)'),
@@ -1816,9 +1816,9 @@ export function ShengChengWenJianfileId() {
 }
 export function TongQianCaoSuoYouLvKeKeyBorardListAllGratefulReq() {
   return {
-    excludeMemberImBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isForward: Mock.mock('@boolean()'),
+    excludeMemberImBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isForward: Mock.mock('@boolean'),
     keyword: Mock.mock('@string(5,100)'),
   }
 }
@@ -1826,29 +1826,29 @@ export function DengLuXiangYingShiTi() {
   return {
     channel: Mock.mock('@string(5,100)'),
     code: 200,
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    newKeyBorard: Mock.mock('@boolean()'),
-    openId: Mock.mock('@string(5,100)'),
+    imKeyBorardId: Mock.mock('@guid'),
+    newKeyBorard: Mock.mock('@boolean'),
+    openId: Mock.mock('@guid'),
     satoken: Mock.mock('@string(5,100)'),
-    setPassWord: Mock.mock('@boolean()'),
+    setPassWord: Mock.mock('@boolean'),
     token: Mock.mock('@string(5,100)'),
-    tokenTimeOut: Mock.mock('@datetime()'),
-    keyBorardId: Mock.mock('@string(5,100)'),
+    tokenTimeOut: Mock.mock('@datetime'),
+    keyBorardId: Mock.mock('@guid'),
   }
 }
 export function LvKeTongQianCaoDaoimTongQianCaoXiangYingShiTi() {
   return {
     avatar: Mock.Random.image('200x100', Mock.Random.color()),
-    avatarId: Mock.Random.image('200x100', Mock.Random.color()),
-    bpKeyBorardId: Mock.mock('@string(5,100)'),
+    avatarId: Mock.mock('@guid'),
+    bpKeyBorardId: Mock.mock('@guid'),
     email: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imKeyBorardId: Mock.mock('@guid'),
     nickName: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
     'relationE|1-20': [Mock.mock('@string(5,100)')],
     sex: Mock.mock('@string(5,100)'),
     status: Mock.mock('@string(5,100)'),
-    gratefulId: Mock.mock('@string(5,100)'),
+    gratefulId: Mock.mock('@guid'),
     gratefulName: Mock.mock('@string(5,100)'),
     keyBorardName: Mock.mock('@string(5,100)'),
   }
@@ -1860,7 +1860,7 @@ export function QianMingWenJianShangChuanQingQiuRuCanShiTi() {
 }
 export function QianMingWenJianXiangYing() {
   return {
-    accessId: Mock.mock('@string(5,100)'),
+    accessId: Mock.mock('@guid'),
     bucketName: Mock.mock('@string(5,100)'),
     callback: Mock.mock('@string(5,100)'),
     dir: Mock.mock('@string(5,100)'),
@@ -1876,21 +1876,21 @@ export function NiaoWoBaoCunRuCan() {
     desc: Mock.mock('@string(5,100)'),
     'memberIdList|1-20': [Mock.mock('@string(5,100)')],
     name: Mock.mock('@string(5,100)'),
-    ownerId: Mock.mock('@string(5,100)'),
+    ownerId: Mock.mock('@guid'),
   }
 }
 export function NiaoWoXinXiBirdDetailReq() {
   return {
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    needHiallMsg: Mock.mock('@boolean()'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
+    needHiallMsg: Mock.mock('@boolean'),
   }
 }
 export function NiaoWoFenYeBirdPageListReq() {
   return {
     birdAttrE: Mock.mock('@string(5,100)'),
     birdTypeE: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imKeyBorardId: Mock.mock('@guid'),
     keyword: Mock.mock('@string(5,100)'),
     name: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
@@ -1901,37 +1901,37 @@ export function NiaoWoDuiXiangBirdDetailResp() {
   return {
     avatar: Mock.Random.image('200x100', Mock.Random.color()),
     createType: Mock.mock('@string(5,100)'),
-    whiteId: Mock.mock('@string(5,100)'),
+    whiteId: Mock.mock('@guid'),
     whitePath: Mock.mock('@string(5,100)'),
     desc: Mock.mock('@string(5,100)'),
     birdAttr: Mock.mock('@string(5,100)'),
     birdBelong: Mock.mock('@string(5,100)'),
     birdType: Mock.mock('@string(5,100)'),
-    imBirdId: Mock.mock('@string(5,100)'),
-    isAdminConfirm: Mock.mock('@boolean()'),
-    isAllSilence: Mock.mock('@boolean()'),
-    isAt: Mock.mock('@boolean()'),
-    isAtAll: Mock.mock('@boolean()'),
-    isAttention: Mock.mock('@boolean()'),
-    isModifyName: Mock.mock('@boolean()'),
-    isNotice: Mock.mock('@boolean()'),
-    isOrdinaryInvent: Mock.mock('@boolean()'),
-    isPrivate: Mock.mock('@boolean()'),
-    isTop: Mock.mock('@boolean()'),
+    imBirdId: Mock.mock('@guid'),
+    isAdminConfirm: Mock.mock('@boolean'),
+    isAllSilence: Mock.mock('@boolean'),
+    isAt: Mock.mock('@boolean'),
+    isAtAll: Mock.mock('@boolean'),
+    isAttention: Mock.mock('@boolean'),
+    isModifyName: Mock.mock('@boolean'),
+    isNotice: Mock.mock('@boolean'),
+    isOrdinaryInvent: Mock.mock('@boolean'),
+    isPrivate: Mock.mock('@boolean'),
+    isTop: Mock.mock('@boolean'),
     lastAckSequence: Mock.mock('@string(5,100)'),
     msgApplyType: Mock.mock('@string(5,100)'),
     msgContent: Mock.mock('@string(5,100)'),
     msgContentType: Mock.mock('@string(5,100)'),
-    msgFileUrl: Mock.mock('@string(5,100)'),
-    msgId: Mock.mock('@string(5,100)'),
+    msgFileUrl: Mock.mock('@url'),
+    msgId: Mock.mock('@guid'),
     msgSenderName: Mock.mock('@string(5,100)'),
     msgSequence: Mock.mock('@string(5,100)'),
-    msgTime: Mock.mock('@datetime()'),
+    msgTime: Mock.mock('@datetime'),
     name: Mock.mock('@string(5,100)'),
     notice: Mock.mock('@string(5,100)'),
-    ownerId: Mock.mock('@string(5,100)'),
+    ownerId: Mock.mock('@guid'),
     status: Mock.mock('@string(5,100)'),
-    gratefulId: Mock.mock('@string(5,100)'),
+    gratefulId: Mock.mock('@guid'),
     total: Mock.mock('@integer(3,1000)'),
     unreadCount: Mock.mock('@integer(3,1000)'),
   }
@@ -1939,27 +1939,27 @@ export function NiaoWoDuiXiangBirdDetailResp() {
 export function NiaoWoDuiXiangBirdResp() {
   return {
     avatar: Mock.Random.image('200x100', Mock.Random.color()),
-    bizId: Mock.mock('@string(5,100)'),
+    bizId: Mock.mock('@guid'),
     bizSource: Mock.mock('@string(5,100)'),
     hiallType: Mock.mock('@string(5,100)'),
     createType: Mock.mock('@string(5,100)'),
     birdAttr: Mock.mock('@string(5,100)'),
     birdType: Mock.mock('@string(5,100)'),
-    imBirdId: Mock.mock('@string(5,100)'),
+    imBirdId: Mock.mock('@guid'),
     name: Mock.mock('@string(5,100)'),
-    ownerId: Mock.mock('@string(5,100)'),
+    ownerId: Mock.mock('@guid'),
     total: Mock.mock('@integer(3,1000)'),
   }
 }
 export function NiaoWoChengYuanXinXiDuiXiangBirdMemberResp() {
   return {
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isFriendship: Mock.mock('@boolean()'),
-    isNotice: Mock.mock('@boolean()'),
-    isTop: Mock.mock('@boolean()'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isFriendship: Mock.mock('@boolean'),
+    isNotice: Mock.mock('@boolean'),
+    isTop: Mock.mock('@boolean'),
     memberAvatar: Mock.Random.image('200x100', Mock.Random.color()),
-    memberAvatarId: Mock.Random.image('200x100', Mock.Random.color()),
+    memberAvatarId: Mock.mock('@guid'),
     memberName: Mock.mock('@string(5,100)'),
     memberPhone: Mock.mock('@string(5,100)'),
     memberRemark: Mock.mock('@string(5,100)'),
@@ -1969,13 +1969,13 @@ export function NiaoWoChengYuanXinXiDuiXiangBirdMemberResp() {
 }
 export function NiaoWoChengYuanFenYeBirdMemberPageReq() {
   return {
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isDeleteMember: Mock.mock('@boolean()'),
-    isFilterCurrentKeyBorard: Mock.mock('@boolean()'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isDeleteMember: Mock.mock('@boolean'),
+    isFilterCurrentKeyBorard: Mock.mock('@boolean'),
     keyword: Mock.mock('@string(5,100)'),
     memberType: Mock.mock('@string(5,100)'),
-    needFriendRelation: Mock.mock('@boolean()'),
+    needFriendRelation: Mock.mock('@boolean'),
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
     sortE: Mock.mock('@string(5,100)'),
@@ -1983,9 +1983,9 @@ export function NiaoWoChengYuanFenYeBirdMemberPageReq() {
 }
 export function NiaoWoChengYuanYongDaoChuXingRuCan() {
   return {
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isDeleteMember: Mock.mock('@boolean()'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isDeleteMember: Mock.mock('@boolean'),
     keyword: Mock.mock('@string(5,100)'),
     memberType: Mock.mock('@string(5,100)'),
     sortE: Mock.mock('@string(5,100)'),
@@ -1993,34 +1993,34 @@ export function NiaoWoChengYuanYongDaoChuXingRuCan() {
 }
 export function NiaoWoChengYuanSaoXueBirdMemberDelReq() {
   return {
-    imBirdId: Mock.mock('@string(5,100)'),
+    imBirdId: Mock.mock('@guid'),
     'imMemberIdList|1-20': [Mock.mock('@string(5,100)')],
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imKeyBorardId: Mock.mock('@guid'),
   }
 }
 export function NiaoWoChengYuanJiaShiBirdMemberSaveReq() {
   return {
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
     'imKeyBorardIdList|1-20': [Mock.mock('@string(5,100)')],
   }
 }
 export function NiaoWoWenJianShangChuanXiangYingShiTi() {
   return {
     'files|1-20': [FileDTO()],
-    imBirdId: Mock.mock('@string(5,100)'),
+    imBirdId: Mock.mock('@guid'),
   }
 }
 export function NiaoWoSheZhiZhiNenYiGeZhiBuWeiNullBirdSetReq() {
   return {
-    imBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isAdminConfirm: Mock.mock('@boolean()'),
-    isAllSilence: Mock.mock('@boolean()'),
-    isAtAll: Mock.mock('@boolean()'),
-    isModifyName: Mock.mock('@boolean()'),
-    isOrdinaryInvent: Mock.mock('@boolean()'),
-    isPrivate: Mock.mock('@boolean()'),
+    imBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isAdminConfirm: Mock.mock('@boolean'),
+    isAllSilence: Mock.mock('@boolean'),
+    isAtAll: Mock.mock('@boolean'),
+    isModifyName: Mock.mock('@boolean'),
+    isOrdinaryInvent: Mock.mock('@boolean'),
+    isPrivate: Mock.mock('@boolean'),
   }
 }
 export function HuoQubucket() {
@@ -2033,9 +2033,9 @@ export function HuoQuLvKeTongQianCaoDuiYingimTongQianCaoXinXiRuCan() {
   return {
     'bpKeyBorardIds|1-20': [Mock.mock('@string(5,100)')],
     channel: Mock.mock('@string(5,100)'),
-    currentBpKeyBorardId: Mock.mock('@string(5,100)'),
-    needRelation: Mock.mock('@boolean()'),
-    needGrateful: Mock.mock('@boolean()'),
+    currentBpKeyBorardId: Mock.mock('@guid'),
+    needRelation: Mock.mock('@boolean'),
+    needGrateful: Mock.mock('@boolean'),
   }
 }
 export function HuoQuALiYunQianMingRuCan() {
@@ -2047,34 +2047,34 @@ export function HuoQuALiYunQianMingRuCan() {
 export function SheZhiMoRenZhiXieChang() {
   return {
     kind: Mock.mock('@string(5,100)'),
-    gratefulId: Mock.mock('@string(5,100)'),
+    gratefulId: Mock.mock('@guid'),
     gratefulName: Mock.mock('@string(5,100)'),
   }
 }
 export function YuYinShiBieFanHui() {
   return {
     content: Mock.mock('@string(5,100)'),
-    fileId: Mock.mock('@string(5,100)'),
+    fileId: Mock.mock('@guid'),
     fileResp: Mock.mock('FileResp()'),
-    messageId: Mock.mock('@string(5,100)'),
+    messageId: Mock.mock('@guid'),
   }
 }
 export function QingQiuHuiFuXiaoXiYongDaoReqMsgDetailResp() {
   return {
     content: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    isRead: Mock.mock('@boolean()'),
-    receiverId: Mock.mock('@string(5,100)'),
+    isRead: Mock.mock('@boolean'),
+    receiverId: Mock.mock('@guid'),
     receiverName: Mock.mock('@string(5,100)'),
-    requestId: Mock.mock('@string(5,100)'),
-    requestMsgId: Mock.mock('@string(5,100)'),
-    senderId: Mock.mock('@string(5,100)'),
+    requestId: Mock.mock('@guid'),
+    requestMsgId: Mock.mock('@guid'),
+    senderId: Mock.mock('@guid'),
     senderName: Mock.mock('@string(5,100)'),
   }
 }
 export function QingQiuXiaoXiYongDaoRequestPageListReq() {
   return {
-    imKeyBorardId: Mock.mock('@string(5,100)'),
+    imKeyBorardId: Mock.mock('@guid'),
     keyword: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
@@ -2083,8 +2083,8 @@ export function QingQiuXiaoXiYongDaoRequestPageListReq() {
 }
 export function QingQiuXiaoXiDuBaoKuoYanChangChunHuaJiHuiFuXiaoXiDuRequestReadReq() {
   return {
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    requestId: Mock.mock('@string(5,100)'),
+    imKeyBorardId: Mock.mock('@guid'),
+    requestId: Mock.mock('@guid'),
     'requestMsgIdList|1-20': [Mock.mock('@string(5,100)')],
   }
 }
@@ -2095,73 +2095,73 @@ export function ZhuanFaXiaoXiDuiXiang() {
     content: Mock.mock('@string(5,100)'),
     contentType: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    fileId: Mock.mock('@string(5,100)'),
+    fileId: Mock.mock('@guid'),
     fileName: Mock.mock('@string(5,100)'),
     fileSize: Mock.mock('@string(5,100)'),
     fileText: Mock.mock('@string(5,100)'),
-    fileTime: Mock.mock('@datetime()'),
+    fileTime: Mock.mock('@datetime'),
     fileType: Mock.mock('@string(5,100)'),
-    fileUrl: Mock.mock('@string(5,100)'),
+    fileUrl: Mock.mock('@url'),
     forwardMessageFooter: Mock.mock('FooterWrapper()'),
-    forwardMessageIsAlarm: Mock.mock('@boolean()'),
-    forwardMessageTitle: Mock.mock('@string(5,100)'),
-    birdId: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    forwardMessageIsAlarm: Mock.mock('@boolean'),
+    forwardMessageTitle: Mock.mock('@ctitle(5,20)'),
+    birdId: Mock.mock('@guid'),
+    id: Mock.mock('@guid'),
     senderAvatar: Mock.Random.image('200x100', Mock.Random.color()),
-    senderId: Mock.mock('@string(5,100)'),
+    senderId: Mock.mock('@guid'),
     senderName: Mock.mock('@string(5,100)'),
     sequence: Mock.mock('@string(5,100)'),
   }
 }
 export function TongGuoJuJueApproveReq() {
   return {
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isNotice: Mock.mock('@boolean()'),
-    permitted: Mock.mock('@boolean()'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isNotice: Mock.mock('@boolean'),
+    permitted: Mock.mock('@boolean'),
     remark: Mock.mock('@string(5,100)'),
-    requestId: Mock.mock('@string(5,100)'),
+    requestId: Mock.mock('@guid'),
   }
 }
 export function DaDuNanXinXiWhiteResp() {
   return {
-    whiteId: Mock.mock('@string(5,100)'),
+    whiteId: Mock.mock('@guid'),
     whiteName: Mock.mock('@string(5,100)'),
-    imBirdId: Mock.mock('@string(5,100)'),
+    imBirdId: Mock.mock('@guid'),
   }
 }
 export function DaDuNanYongDaoWhiteListReq() {
   return {
-    getImBirdId: Mock.mock('@boolean()'),
-    parentId: Mock.mock('@string(5,100)'),
-    gratefulId: Mock.mock('@string(5,100)'),
+    getImBirdId: Mock.mock('@guid'),
+    parentId: Mock.mock('@guid'),
+    gratefulId: Mock.mock('@guid'),
   }
 }
 export function DaDuNanTongQianCaoFenYeKeyBorardPageReq() {
   return {
-    whiteId: Mock.mock('@string(5,100)'),
-    excludeMemberImBirdId: Mock.mock('@string(5,100)'),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isForward: Mock.mock('@boolean()'),
+    whiteId: Mock.mock('@guid'),
+    excludeMemberImBirdId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isForward: Mock.mock('@boolean'),
     keyword: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
-    gratefulId: Mock.mock('@string(5,100)'),
+    gratefulId: Mock.mock('@guid'),
   }
 }
 export function DaDuNanTongQianCaoYongDaoWhiteListReq() {
   return {
-    getImBirdId: Mock.mock('@boolean()'),
-    gratefulId: Mock.mock('@string(5,100)'),
+    getImBirdId: Mock.mock('@guid'),
+    gratefulId: Mock.mock('@guid'),
   }
 }
 export function DaDuNanTongQianCaoYongDaoWhiteKeyBorardResp() {
   return {
     avatar: Mock.Random.image('200x100', Mock.Random.color()),
-    avatarId: Mock.Random.image('200x100', Mock.Random.color()),
-    imKeyBorardId: Mock.mock('@string(5,100)'),
-    isForward: Mock.mock('@boolean()'),
-    isBirdMember: Mock.mock('@boolean()'),
-    gratefulId: Mock.mock('@string(5,100)'),
+    avatarId: Mock.mock('@guid'),
+    imKeyBorardId: Mock.mock('@guid'),
+    isForward: Mock.mock('@boolean'),
+    isBirdMember: Mock.mock('@boolean'),
+    gratefulId: Mock.mock('@guid'),
     gratefulName: Mock.mock('@string(5,100)'),
     keyBorardName: Mock.mock('@string(5,100)'),
   }
@@ -2169,50 +2169,50 @@ export function DaDuNanTongQianCaoYongDaoWhiteKeyBorardResp() {
 export function YanChangChunHuaXiaoXiFenYeRequestPageListResp() {
   return {
     applyAvatar: Mock.Random.image('200x100', Mock.Random.color()),
-    applyAvatarUrl: Mock.Random.image('200x100', Mock.Random.color()),
-    applyId: Mock.mock('@string(5,100)'),
+    applyAvatarUrl: Mock.mock('@url'),
+    applyId: Mock.mock('@guid'),
     applyName: Mock.mock('@string(5,100)'),
     avatar: Mock.Random.image('200x100', Mock.Random.color()),
     content: Mock.mock('@string(5,100)'),
     inviterAvatar: Mock.Random.image('200x100', Mock.Random.color()),
-    inviterAvatarUrl: Mock.Random.image('200x100', Mock.Random.color()),
-    inviterId: Mock.mock('@string(5,100)'),
+    inviterAvatarUrl: Mock.mock('@url'),
+    inviterId: Mock.mock('@guid'),
     inviterName: Mock.mock('@string(5,100)'),
     receiverAvatar: Mock.Random.image('200x100', Mock.Random.color()),
-    receiverAvatarUrl: Mock.Random.image('200x100', Mock.Random.color()),
-    receiverId: Mock.mock('@string(5,100)'),
+    receiverAvatarUrl: Mock.mock('@url'),
+    receiverId: Mock.mock('@guid'),
     receiverName: Mock.mock('@string(5,100)'),
-    requestId: Mock.mock('@string(5,100)'),
+    requestId: Mock.mock('@guid'),
     status: Mock.mock('@integer(3,1000)'),
     gratefulName: Mock.mock('@string(5,100)'),
     type: Mock.mock('@integer(3,1000)'),
     keyBorardAvatar: Mock.Random.image('200x100', Mock.Random.color()),
-    keyBorardAvatarUrl: Mock.Random.image('200x100', Mock.Random.color()),
-    keyBorardId: Mock.mock('@string(5,100)'),
+    keyBorardAvatarUrl: Mock.mock('@url'),
+    keyBorardId: Mock.mock('@guid'),
     keyBorardName: Mock.mock('@string(5,100)'),
   }
 }
 export function YanChangChunHuaXiaoXiXiangQingRequestDetailResp() {
   return {
     applyAvatar: Mock.Random.image('200x100', Mock.Random.color()),
-    applyId: Mock.mock('@string(5,100)'),
+    applyId: Mock.mock('@guid'),
     applyName: Mock.mock('@string(5,100)'),
     applyGratefulName: Mock.mock('@string(5,100)'),
     channel: Mock.mock('@string(5,100)'),
     content: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
     inviterAvatar: Mock.Random.image('200x100', Mock.Random.color()),
-    inviterId: Mock.mock('@string(5,100)'),
+    inviterId: Mock.mock('@guid'),
     inviterName: Mock.mock('@string(5,100)'),
     inviterGratefulName: Mock.mock('@string(5,100)'),
-    isFriendshipOrHasSameGrateful: Mock.mock('@boolean()'),
+    isFriendshipOrHasSameGrateful: Mock.mock('@boolean'),
     'msgList|1-20': [QingQiuHuiFuXiaoXiYongDaoReqMsgDetailResp()],
     receiverAvatar: Mock.Random.image('200x100', Mock.Random.color()),
-    receiverId: Mock.mock('@string(5,100)'),
+    receiverId: Mock.mock('@guid'),
     receiverName: Mock.mock('@string(5,100)'),
     receiverGratefulName: Mock.mock('@string(5,100)'),
     remark: Mock.mock('@string(5,100)'),
-    requestId: Mock.mock('@string(5,100)'),
+    requestId: Mock.mock('@guid'),
     status: Mock.mock('@integer(3,1000)'),
     total: Mock.mock('@integer(3,1000)'),
     type: Mock.mock('@integer(3,1000)'),

@@ -7,46 +7,46 @@ export function AddHappyDoorReq() {
     happySource: Mock.mock('@string(5,100)'),
     happyType: Mock.mock('@string(5,100)'),
     categoryName: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     coordinate: Mock.mock('@string(5,100)'),
     corporateName: Mock.mock('@string(5,100)'),
     country: Mock.mock('@string(5,100)'),
-    createId: Mock.mock('@string(5,100)'),
+    createId: Mock.mock('@guid'),
     createName: Mock.mock('@string(5,100)'),
     createSource: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    enableSaveOrUpdate: Mock.mock('@datetime()'),
+    enableSaveOrUpdate: Mock.mock('@boolean'),
     doorCode: Mock.mock('@string(5,100)'),
     doorName: Mock.mock('@string(5,100)'),
     doorStatus: Mock.mock('@string(5,100)'),
-    establishmentTime: Mock.mock('@datetime()'),
-    id: Mock.mock('@string(5,100)'),
+    establishmentTime: Mock.mock('@datetime'),
+    id: Mock.mock('@guid'),
     isDelete: Mock.mock('@string(5,100)'),
     lat: Mock.mock('@string(5,100)'),
-    licenseId: Mock.mock('@string(5,100)'),
+    licenseId: Mock.mock('@guid'),
     lng: Mock.mock('@string(5,100)'),
     modified: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
     regCatCnt: Mock.mock('@string(5,100)'),
     orangeeredCapital: Mock.mock('@string(5,100)'),
     score: Mock.mock('@integer(3,1000)'),
-    searchStationId: Mock.mock('@string(5,100)'),
+    searchStationId: Mock.mock('@guid'),
     skAchievementCnt: Mock.mock('@string(5,100)'),
     skQualificationCnt: Mock.mock('@string(5,100)'),
     step: Mock.mock('@integer(3,1000)'),
-    thirdId: Mock.mock('@string(5,100)'),
+    thirdId: Mock.mock('@guid'),
     type: Mock.mock('@string(5,100)'),
-    updateId: Mock.mock('@datetime()'),
-    updateName: Mock.mock('@datetime()'),
+    updateId: Mock.mock('@datetime'),
+    updateName: Mock.mock('@datetime'),
   }
 }
 export function AddHappyCatCertificateReq() {
   return {
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     major: Mock.mock('@string(5,100)'),
     name: Mock.mock('@string(5,100)'),
-    pictureUrl: Mock.mock('@string(5,100)'),
+    pictureUrl: Mock.mock('@url'),
   }
 }
 export function AddHappyCatReq() {
@@ -60,43 +60,43 @@ export function AddHappyCatReq() {
     happySource: Mock.mock('@string(5,100)'),
     happyType: Mock.mock('@string(5,100)'),
     'certificateList|1-20': [AddHappyCatCertificateReq()],
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     coordinate: Mock.mock('@string(5,100)'),
     country: Mock.mock('@string(5,100)'),
-    createId: Mock.mock('@string(5,100)'),
+    createId: Mock.mock('@guid'),
     createName: Mock.mock('@string(5,100)'),
     createSource: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
     education: Mock.mock('@string(5,100)'),
-    enableSaveOrUpdate: Mock.mock('@datetime()'),
+    enableSaveOrUpdate: Mock.mock('@boolean'),
     gender: Mock.mock('@string(5,100)'),
     goodBehaviorCnt: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     isDelete: Mock.mock('@string(5,100)'),
     lat: Mock.mock('@string(5,100)'),
-    licenseId: Mock.mock('@string(5,100)'),
+    licenseId: Mock.mock('@guid'),
     lng: Mock.mock('@string(5,100)'),
     modified: Mock.mock('@string(5,100)'),
     catName: Mock.mock('@string(5,100)'),
     catnelRisk: Mock.mock('@integer(3,1000)'),
     phone: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
-    searchStationId: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
+    searchStationId: Mock.mock('@guid'),
     skCertificateCnt: Mock.mock('@string(5,100)'),
     step: Mock.mock('@integer(3,1000)'),
-    thirdId: Mock.mock('@string(5,100)'),
+    thirdId: Mock.mock('@guid'),
     'titleList|1-20': [AddHappyCatTitleReq()],
     type: Mock.mock('@string(5,100)'),
-    updateId: Mock.mock('@datetime()'),
-    updateName: Mock.mock('@datetime()'),
+    updateId: Mock.mock('@datetime'),
+    updateName: Mock.mock('@datetime'),
   }
 }
 export function AddHappyCatTitleReq() {
   return {
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     level: Mock.mock('@string(5,100)'),
     major: Mock.mock('@string(5,100)'),
-    pictureUrl: Mock.mock('@string(5,100)'),
+    pictureUrl: Mock.mock('@url'),
   }
 }
 export function AddHappyGladReq() {
@@ -107,40 +107,40 @@ export function AddHappyGladReq() {
     agenciesAddrLat: Mock.mock('@string(5,100)'),
     agenciesAddrLng: Mock.mock('@string(5,100)'),
     agenciesArea: Mock.mock('@string(5,100)'),
-    agenciesCity: Mock.mock('@string(5,100)'),
+    agenciesCity: Mock.mock('@city'),
     agenciesCountry: Mock.mock('@string(5,100)'),
     agenciesPhone: Mock.mock('@string(5,100)'),
-    agenciesProvince: Mock.mock('@string(5,100)'),
+    agenciesProvince: Mock.mock('@province'),
     biddingCorpAddr: Mock.mock('@string(5,100)'),
     biddingCorpAddrCoordinate: Mock.mock('@string(5,100)'),
     biddingCorpAddrLat: Mock.mock('@string(5,100)'),
     biddingCorpAddrLng: Mock.mock('@string(5,100)'),
     biddingCorpArea: Mock.mock('@string(5,100)'),
-    biddingCorpCity: Mock.mock('@string(5,100)'),
+    biddingCorpCity: Mock.mock('@city'),
     biddingCorpCountry: Mock.mock('@string(5,100)'),
     biddingCorpName: Mock.mock('@string(5,100)'),
     biddingCorpPhone: Mock.mock('@string(5,100)'),
-    biddingCorpProvince: Mock.mock('@string(5,100)'),
-    biddingEndTime: Mock.mock('@datetime()'),
-    biddingOpeningTime: Mock.mock('@datetime()'),
-    biddingStartTime: Mock.mock('@datetime()'),
+    biddingCorpProvince: Mock.mock('@province'),
+    biddingEndTime: Mock.mock('@datetime'),
+    biddingOpeningTime: Mock.mock('@datetime'),
+    biddingStartTime: Mock.mock('@datetime'),
     biddingType: Mock.mock('@string(5,100)'),
     happyClassificationType: Mock.mock('@string(5,100)'),
     happySource: Mock.mock('@string(5,100)'),
     happyType: Mock.mock('@string(5,100)'),
     coordinate: Mock.mock('@string(5,100)'),
-    createId: Mock.mock('@string(5,100)'),
+    createId: Mock.mock('@guid'),
     createName: Mock.mock('@string(5,100)'),
     createSource: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    enableSaveOrUpdate: Mock.mock('@datetime()'),
-    fileDownloadEndTime: Mock.mock('@datetime()'),
-    fileDownloadStartTime: Mock.mock('@datetime()'),
-    id: Mock.mock('@string(5,100)'),
+    enableSaveOrUpdate: Mock.mock('@boolean'),
+    fileDownloadEndTime: Mock.mock('@datetime'),
+    fileDownloadStartTime: Mock.mock('@datetime'),
+    id: Mock.mock('@guid'),
     industryType: Mock.mock('@string(5,100)'),
     isDelete: Mock.mock('@string(5,100)'),
     lat: Mock.mock('@string(5,100)'),
-    licenseId: Mock.mock('@string(5,100)'),
+    licenseId: Mock.mock('@guid'),
     lng: Mock.mock('@string(5,100)'),
     modified: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
@@ -148,13 +148,13 @@ export function AddHappyGladReq() {
     gladName: Mock.mock('@string(5,100)'),
     gladNum: Mock.mock('@string(5,100)'),
     gladType: Mock.mock('@string(5,100)'),
-    searchStationId: Mock.mock('@string(5,100)'),
+    searchStationId: Mock.mock('@guid'),
     step: Mock.mock('@integer(3,1000)'),
-    thirdId: Mock.mock('@string(5,100)'),
+    thirdId: Mock.mock('@guid'),
     type: Mock.mock('@string(5,100)'),
-    updateId: Mock.mock('@datetime()'),
-    updateName: Mock.mock('@datetime()'),
-    webPageUrl: Mock.mock('@string(5,100)'),
+    updateId: Mock.mock('@datetime'),
+    updateName: Mock.mock('@datetime'),
+    webPageUrl: Mock.mock('@url'),
   }
 }
 export function AddHappyReq() {
@@ -163,30 +163,30 @@ export function AddHappyReq() {
     happySource: Mock.mock('@string(5,100)'),
     happyType: Mock.mock('@string(5,100)'),
     coordinate: Mock.mock('@string(5,100)'),
-    createId: Mock.mock('@string(5,100)'),
+    createId: Mock.mock('@guid'),
     createName: Mock.mock('@string(5,100)'),
     createSource: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    enableSaveOrUpdate: Mock.mock('@datetime()'),
-    id: Mock.mock('@string(5,100)'),
+    enableSaveOrUpdate: Mock.mock('@boolean'),
+    id: Mock.mock('@guid'),
     isDelete: Mock.mock('@string(5,100)'),
     lat: Mock.mock('@string(5,100)'),
-    licenseId: Mock.mock('@string(5,100)'),
+    licenseId: Mock.mock('@guid'),
     lng: Mock.mock('@string(5,100)'),
     modified: Mock.mock('@string(5,100)'),
-    searchStationId: Mock.mock('@string(5,100)'),
+    searchStationId: Mock.mock('@guid'),
     step: Mock.mock('@integer(3,1000)'),
-    thirdId: Mock.mock('@string(5,100)'),
+    thirdId: Mock.mock('@guid'),
     type: Mock.mock('@string(5,100)'),
-    updateId: Mock.mock('@datetime()'),
-    updateName: Mock.mock('@datetime()'),
+    updateId: Mock.mock('@datetime'),
+    updateName: Mock.mock('@datetime'),
   }
 }
 export function AddHappyResp() {
   return {
     failCnt: Mock.mock('@integer(3,1000)'),
-    id: Mock.mock('@string(5,100)'),
-    licenseId: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
+    licenseId: Mock.mock('@guid'),
     'list|1-20': [Mock.mock('')],
     gladName: Mock.mock('@string(5,100)'),
     receiveName: Mock.mock('@string(5,100)'),
@@ -209,32 +209,32 @@ export function AddSignHappyDoorReq() {
   return {
     addr: Mock.mock('@string(5,100)'),
     area: Mock.mock('@string(5,100)'),
-    happyId: Mock.mock('@string(5,100)'),
+    happyId: Mock.mock('@guid'),
     happySource: Mock.mock('@string(5,100)'),
     happyType: Mock.mock('@string(5,100)'),
     categoryName: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     coordinate: Mock.mock('@string(5,100)'),
     corporateName: Mock.mock('@string(5,100)'),
     country: Mock.mock('@string(5,100)'),
-    createId: Mock.mock('@string(5,100)'),
+    createId: Mock.mock('@guid'),
     createName: Mock.mock('@string(5,100)'),
     createSource: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    customerId: Mock.mock('@string(5,100)'),
+    customerId: Mock.mock('@guid'),
     customerType: Mock.mock('@string(5,100)'),
     doorCode: Mock.mock('@string(5,100)'),
     doorName: Mock.mock('@string(5,100)'),
     doorStatus: Mock.mock('@string(5,100)'),
-    establishmentTime: Mock.mock('@datetime()'),
-    id: Mock.mock('@string(5,100)'),
+    establishmentTime: Mock.mock('@datetime'),
+    id: Mock.mock('@guid'),
     isDelete: Mock.mock('@string(5,100)'),
     lat: Mock.mock('@string(5,100)'),
-    licenseId: Mock.mock('@string(5,100)'),
+    licenseId: Mock.mock('@guid'),
     lng: Mock.mock('@string(5,100)'),
     modified: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
     regCatCnt: Mock.mock('@string(5,100)'),
     orangeeredCapital: Mock.mock('@string(5,100)'),
     score: Mock.mock('@integer(3,1000)'),
@@ -243,8 +243,8 @@ export function AddSignHappyDoorReq() {
     skQualificationCnt: Mock.mock('@string(5,100)'),
     step: Mock.mock('@integer(3,1000)'),
     type: Mock.mock('@string(5,100)'),
-    updateId: Mock.mock('@datetime()'),
-    updateName: Mock.mock('@datetime()'),
+    updateId: Mock.mock('@datetime'),
+    updateName: Mock.mock('@datetime'),
   }
 }
 export function AddSignHappyCatReq() {
@@ -252,35 +252,35 @@ export function AddSignHappyCatReq() {
     achievementCnt: Mock.mock('@string(5,100)'),
     addr: Mock.mock('@string(5,100)'),
     area: Mock.mock('@string(5,100)'),
-    happyId: Mock.mock('@string(5,100)'),
+    happyId: Mock.mock('@guid'),
     happySource: Mock.mock('@string(5,100)'),
     happyType: Mock.mock('@string(5,100)'),
     'certificateList|1-20': [AddHappyCatCertificateReq()],
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     coordinate: Mock.mock('@string(5,100)'),
     country: Mock.mock('@string(5,100)'),
-    createId: Mock.mock('@string(5,100)'),
+    createId: Mock.mock('@guid'),
     createName: Mock.mock('@string(5,100)'),
     createSource: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    customerId: Mock.mock('@string(5,100)'),
+    customerId: Mock.mock('@guid'),
     customerType: Mock.mock('@string(5,100)'),
     education: Mock.mock('@string(5,100)'),
     gender: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     isDelete: Mock.mock('@string(5,100)'),
     lat: Mock.mock('@string(5,100)'),
     lng: Mock.mock('@string(5,100)'),
     modified: Mock.mock('@string(5,100)'),
     catName: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
     signType: Mock.mock('@string(5,100)'),
     step: Mock.mock('@integer(3,1000)'),
     'titleList|1-20': [AddHappyCatTitleReq()],
     type: Mock.mock('@string(5,100)'),
-    updateId: Mock.mock('@datetime()'),
-    updateName: Mock.mock('@datetime()'),
+    updateId: Mock.mock('@datetime'),
+    updateName: Mock.mock('@datetime'),
   }
 }
 export function AddSignHappyGladReq() {
@@ -291,37 +291,37 @@ export function AddSignHappyGladReq() {
     agenciesAddrLat: Mock.mock('@string(5,100)'),
     agenciesAddrLng: Mock.mock('@string(5,100)'),
     agenciesArea: Mock.mock('@string(5,100)'),
-    agenciesCity: Mock.mock('@string(5,100)'),
+    agenciesCity: Mock.mock('@city'),
     agenciesCountry: Mock.mock('@string(5,100)'),
     agenciesPhone: Mock.mock('@string(5,100)'),
-    agenciesProvince: Mock.mock('@string(5,100)'),
+    agenciesProvince: Mock.mock('@province'),
     biddingCorpAddr: Mock.mock('@string(5,100)'),
     biddingCorpAddrCoordinate: Mock.mock('@string(5,100)'),
     biddingCorpAddrLat: Mock.mock('@string(5,100)'),
     biddingCorpAddrLng: Mock.mock('@string(5,100)'),
     biddingCorpArea: Mock.mock('@string(5,100)'),
-    biddingCorpCity: Mock.mock('@string(5,100)'),
+    biddingCorpCity: Mock.mock('@city'),
     biddingCorpCountry: Mock.mock('@string(5,100)'),
     biddingCorpName: Mock.mock('@string(5,100)'),
     biddingCorpPhone: Mock.mock('@string(5,100)'),
-    biddingCorpProvince: Mock.mock('@string(5,100)'),
-    biddingEndTime: Mock.mock('@datetime()'),
-    biddingOpeningTime: Mock.mock('@datetime()'),
-    biddingStartTime: Mock.mock('@datetime()'),
+    biddingCorpProvince: Mock.mock('@province'),
+    biddingEndTime: Mock.mock('@datetime'),
+    biddingOpeningTime: Mock.mock('@datetime'),
+    biddingStartTime: Mock.mock('@datetime'),
     biddingType: Mock.mock('@string(5,100)'),
-    happyId: Mock.mock('@string(5,100)'),
+    happyId: Mock.mock('@guid'),
     happySource: Mock.mock('@string(5,100)'),
     happyType: Mock.mock('@string(5,100)'),
     coordinate: Mock.mock('@string(5,100)'),
-    createId: Mock.mock('@string(5,100)'),
+    createId: Mock.mock('@guid'),
     createName: Mock.mock('@string(5,100)'),
     createSource: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    customerId: Mock.mock('@string(5,100)'),
+    customerId: Mock.mock('@guid'),
     customerType: Mock.mock('@string(5,100)'),
-    fileDownloadEndTime: Mock.mock('@datetime()'),
-    fileDownloadStartTime: Mock.mock('@datetime()'),
-    id: Mock.mock('@string(5,100)'),
+    fileDownloadEndTime: Mock.mock('@datetime'),
+    fileDownloadStartTime: Mock.mock('@datetime'),
+    id: Mock.mock('@guid'),
     industryType: Mock.mock('@string(5,100)'),
     isDelete: Mock.mock('@string(5,100)'),
     lat: Mock.mock('@string(5,100)'),
@@ -335,17 +335,17 @@ export function AddSignHappyGladReq() {
     signType: Mock.mock('@string(5,100)'),
     step: Mock.mock('@integer(3,1000)'),
     type: Mock.mock('@string(5,100)'),
-    updateId: Mock.mock('@datetime()'),
-    updateName: Mock.mock('@datetime()'),
-    webPageUrl: Mock.mock('@string(5,100)'),
+    updateId: Mock.mock('@datetime'),
+    updateName: Mock.mock('@datetime'),
+    webPageUrl: Mock.mock('@url'),
   }
 }
 export function AddSignHappyResp() {
   return {
-    happyId: Mock.mock('@string(5,100)'),
+    happyId: Mock.mock('@guid'),
     'list|1-20': [Mock.mock('')],
     mobile: Mock.mock('@string(5,100)'),
-    signId: Mock.mock('@string(5,100)'),
+    signId: Mock.mock('@guid'),
   }
 }
 export function ApiResponse() {
@@ -353,9 +353,9 @@ export function ApiResponse() {
     code: 200,
     data: Mock.mock(''),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseAddHappyResp() {
@@ -363,9 +363,9 @@ export function ApiResponseAddHappyResp() {
     code: 200,
     data: Mock.mock('AddHappyResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseAddCustomerResp() {
@@ -373,9 +373,9 @@ export function ApiResponseAddCustomerResp() {
     code: 200,
     data: Mock.mock('AddCustomerResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseAddCatCustomerResp() {
@@ -383,9 +383,9 @@ export function ApiResponseAddCatCustomerResp() {
     code: 200,
     data: Mock.mock('AddCatCustomerResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseAddSignHappyResp() {
@@ -393,9 +393,9 @@ export function ApiResponseAddSignHappyResp() {
     code: 200,
     data: Mock.mock('AddSignHappyResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseHappyClassificationResp() {
@@ -403,9 +403,9 @@ export function ApiResponseHappyClassificationResp() {
     code: 200,
     data: Mock.mock('HappyClassificationResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseHappyDesktopRulePageResp() {
@@ -413,9 +413,9 @@ export function ApiResponseHappyDesktopRulePageResp() {
     code: 200,
     data: Mock.mock('HappyDesktopRulePageResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseHappyDesktopRuleResp() {
@@ -423,9 +423,9 @@ export function ApiResponseHappyDesktopRuleResp() {
     code: 200,
     data: Mock.mock('HappyDesktopRuleResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseHappyDoorInfoResp() {
@@ -433,9 +433,9 @@ export function ApiResponseHappyDoorInfoResp() {
     code: 200,
     data: Mock.mock('HappyDoorInfoResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseHappyNumResp() {
@@ -443,9 +443,9 @@ export function ApiResponseHappyNumResp() {
     code: 200,
     data: Mock.mock('HappyNumResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseHappyCatInfoResp() {
@@ -453,9 +453,9 @@ export function ApiResponseHappyCatInfoResp() {
     code: 200,
     data: Mock.mock('HappyCatInfoResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseHappyPlanCountResp() {
@@ -463,9 +463,9 @@ export function ApiResponseHappyPlanCountResp() {
     code: 200,
     data: Mock.mock('HappyPlanCountResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseHappyGladInfoResp() {
@@ -473,9 +473,9 @@ export function ApiResponseHappyGladInfoResp() {
     code: 200,
     data: Mock.mock('HappyGladInfoResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseHappyPushInfoResp() {
@@ -483,9 +483,9 @@ export function ApiResponseHappyPushInfoResp() {
     code: 200,
     data: Mock.mock('HappyPushInfoResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseHappyReceiveResp() {
@@ -493,9 +493,9 @@ export function ApiResponseHappyReceiveResp() {
     code: 200,
     data: Mock.mock('HappyReceiveResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseHappySubscribeInfoResp() {
@@ -503,9 +503,9 @@ export function ApiResponseHappySubscribeInfoResp() {
     code: 200,
     data: Mock.mock('HappySubscribeInfoResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageHappyPushDetail() {
@@ -513,9 +513,9 @@ export function ApiResponseComPageHappyPushDetail() {
     code: 200,
     data: Mock.mock('ComPageHappyPushDetail()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageCustomerDoorInfoResp() {
@@ -523,9 +523,9 @@ export function ApiResponseComPageCustomerDoorInfoResp() {
     code: 200,
     data: Mock.mock('ComPageCustomerDoorInfoResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageCustomerCatInfoResp() {
@@ -533,9 +533,9 @@ export function ApiResponseComPageCustomerCatInfoResp() {
     code: 200,
     data: Mock.mock('ComPageCustomerCatInfoResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageDesktopListResp() {
@@ -543,9 +543,9 @@ export function ApiResponseComPageDesktopListResp() {
     code: 200,
     data: Mock.mock('ComPageDesktopListResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageLocationDateInfoResp() {
@@ -553,9 +553,9 @@ export function ApiResponseComPageLocationDateInfoResp() {
     code: 200,
     data: Mock.mock('ComPageLocationDateInfoResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageLocationInfoResp() {
@@ -563,9 +563,9 @@ export function ApiResponseComPageLocationInfoResp() {
     code: 200,
     data: Mock.mock('ComPageLocationInfoResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPagePageHappyResp() {
@@ -573,9 +573,9 @@ export function ApiResponseComPagePageHappyResp() {
     code: 200,
     data: Mock.mock('ComPagePageHappyResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPagePageDoorHappyPoolResp() {
@@ -583,9 +583,9 @@ export function ApiResponseComPagePageDoorHappyPoolResp() {
     code: 200,
     data: Mock.mock('ComPagePageDoorHappyPoolResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPagePageCatHappyPoolResp() {
@@ -593,9 +593,9 @@ export function ApiResponseComPagePageCatHappyPoolResp() {
     code: 200,
     data: Mock.mock('ComPagePageCatHappyPoolResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPagePageGladHappyPoolResp() {
@@ -603,9 +603,9 @@ export function ApiResponseComPagePageGladHappyPoolResp() {
     code: 200,
     data: Mock.mock('ComPagePageGladHappyPoolResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPagePunchPageResp() {
@@ -613,9 +613,9 @@ export function ApiResponseComPagePunchPageResp() {
     code: 200,
     data: Mock.mock('ComPagePunchPageResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageTaskPageListResp() {
@@ -623,9 +623,9 @@ export function ApiResponseComPageTaskPageListResp() {
     code: 200,
     data: Mock.mock('ComPageTaskPageListResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageTreelong() {
@@ -633,9 +633,9 @@ export function ApiResponseComPageTreelong() {
     code: 200,
     data: Mock.mock('ComPageTreelong()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageFenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu() {
@@ -643,9 +643,9 @@ export function ApiResponseComPageFenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu(
     code: 200,
     data: Mock.mock('ComPageFenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageFenYeLvYouRenWu() {
@@ -653,9 +653,9 @@ export function ApiResponseComPageFenYeLvYouRenWu() {
     code: 200,
     data: Mock.mock('ComPageFenYeLvYouRenWu()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageFenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu() {
@@ -663,9 +663,9 @@ export function ApiResponseComPageFenYeLvYouZhiXieChangFaCaiMengresponseJianDanS
     code: 200,
     data: Mock.mock('ComPageFenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageFenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu() {
@@ -673,9 +673,9 @@ export function ApiResponseComPageFenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu
     code: 200,
     data: Mock.mock('ComPageFenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageHuaHuaTiQingQiu() {
@@ -683,9 +683,9 @@ export function ApiResponseComPageHuaHuaTiQingQiu() {
     code: 200,
     data: Mock.mock('ComPageHuaHuaTiQingQiu()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageJiQiRenGenJinJiLuXiangYing() {
@@ -693,9 +693,9 @@ export function ApiResponseComPageJiQiRenGenJinJiLuXiangYing() {
     code: 200,
     data: Mock.mock('ComPageJiQiRenGenJinJiLuXiangYing()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageDaoRuHuaHuaTiXiangYing() {
@@ -703,9 +703,9 @@ export function ApiResponseComPageDaoRuHuaHuaTiXiangYing() {
     code: 200,
     data: Mock.mock('ComPageDaoRuHuaHuaTiXiangYing()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageSouSuoRenCaiJiQiRenresponse() {
@@ -713,9 +713,9 @@ export function ApiResponseComPageSouSuoRenCaiJiQiRenresponse() {
     code: 200,
     data: Mock.mock('ComPageSouSuoRenCaiJiQiRenresponse()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageSouSuoZhiXieChangJiQiRenresponse() {
@@ -723,9 +723,9 @@ export function ApiResponseComPageSouSuoZhiXieChangJiQiRenresponse() {
     code: 200,
     data: Mock.mock('ComPageSouSuoZhiXieChangJiQiRenresponse()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageCaoZuoRiZhiFenYeresponse() {
@@ -733,9 +733,9 @@ export function ApiResponseComPageCaoZuoRiZhiFenYeresponse() {
     code: 200,
     data: Mock.mock('ComPageCaoZuoRiZhiFenYeresponse()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageHongLingJinJiLuFenYeresponse() {
@@ -743,9 +743,9 @@ export function ApiResponseComPageHongLingJinJiLuFenYeresponse() {
     code: 200,
     data: Mock.mock('ComPageHongLingJinJiLuFenYeresponse()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageLianXiRenHuaHuaTi() {
@@ -753,9 +753,9 @@ export function ApiResponseComPageLianXiRenHuaHuaTi() {
     code: 200,
     data: Mock.mock('ComPageLianXiRenHuaHuaTi()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseComPageXiangMuFaCaiMengXiangQingrpcresponse() {
@@ -763,9 +763,9 @@ export function ApiResponseComPageXiangMuFaCaiMengXiangQingrpcresponse() {
     code: 200,
     data: Mock.mock('ComPageXiangMuFaCaiMengXiangQingrpcresponse()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseCountCustomerHappyNumResp() {
@@ -773,9 +773,9 @@ export function ApiResponseCountCustomerHappyNumResp() {
     code: 200,
     data: Mock.mock('CountCustomerHappyNumResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseCustomerDoorAddResp() {
@@ -783,9 +783,9 @@ export function ApiResponseCustomerDoorAddResp() {
     code: 200,
     data: Mock.mock('CustomerDoorAddResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseCustomerDoorDetailResp() {
@@ -793,9 +793,9 @@ export function ApiResponseCustomerDoorDetailResp() {
     code: 200,
     data: Mock.mock('CustomerDoorDetailResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseCustomerDoorNumResp() {
@@ -803,9 +803,9 @@ export function ApiResponseCustomerDoorNumResp() {
     code: 200,
     data: Mock.mock('CustomerDoorNumResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseCustomerCatAddResp() {
@@ -813,9 +813,9 @@ export function ApiResponseCustomerCatAddResp() {
     code: 200,
     data: Mock.mock('CustomerCatAddResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseCustomerCatDetailResp() {
@@ -823,9 +823,9 @@ export function ApiResponseCustomerCatDetailResp() {
     code: 200,
     data: Mock.mock('CustomerCatDetailResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseDesktopResp() {
@@ -833,9 +833,9 @@ export function ApiResponseDesktopResp() {
     code: 200,
     data: Mock.mock('DesktopResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListHappyPlanCoordinateResp() {
@@ -843,9 +843,9 @@ export function ApiResponseListHappyPlanCoordinateResp() {
     code: 200,
     'data|1-20': [HappyPlanCoordinateResp()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListCustomerDoorFromDataResp() {
@@ -853,9 +853,9 @@ export function ApiResponseListCustomerDoorFromDataResp() {
     code: 200,
     'data|1-20': [CustomerDoorFromDataResp()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListDayCityResp() {
@@ -863,9 +863,9 @@ export function ApiResponseListDayCityResp() {
     code: 200,
     'data|1-20': [DayCityResp()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListWhiteNoteResp() {
@@ -873,9 +873,9 @@ export function ApiResponseListWhiteNoteResp() {
     code: 200,
     'data|1-20': [WhiteNoteResp()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListWhiteResp() {
@@ -883,9 +883,9 @@ export function ApiResponseListWhiteResp() {
     code: 200,
     'data|1-20': [WhiteResp()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListDocument() {
@@ -893,9 +893,9 @@ export function ApiResponseListDocument() {
     code: 200,
     'data|1-20': [Document()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListDesktopResp() {
@@ -903,9 +903,9 @@ export function ApiResponseListDesktopResp() {
     code: 200,
     'data|1-20': [DesktopResp()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListLocationInfoResp() {
@@ -913,9 +913,9 @@ export function ApiResponseListLocationInfoResp() {
     code: 200,
     'data|1-20': [LocationInfoResp()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListPagePlanResp() {
@@ -923,9 +923,9 @@ export function ApiResponseListPagePlanResp() {
     code: 200,
     'data|1-20': [PagePlanResp()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListTaskProgressDetailResp() {
@@ -933,9 +933,9 @@ export function ApiResponseListTaskProgressDetailResp() {
     code: 200,
     'data|1-20': [TaskProgressDetailResp()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListTaskProgressCatResp() {
@@ -943,9 +943,9 @@ export function ApiResponseListTaskProgressCatResp() {
     code: 200,
     'data|1-20': [TaskProgressCatResp()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListTreelong() {
@@ -953,9 +953,9 @@ export function ApiResponseListTreelong() {
     code: 200,
     'data|1-20': [Mock.mock('')],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListTreestring() {
@@ -963,9 +963,9 @@ export function ApiResponseListTreestring() {
     code: 200,
     'data|1-20': [Mock.mock('')],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListobject() {
@@ -973,9 +973,9 @@ export function ApiResponseListobject() {
     code: 200,
     'data|1-20': [Mock.mock('')],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListstring() {
@@ -983,9 +983,9 @@ export function ApiResponseListstring() {
     code: 200,
     'data|1-20': [Mock.mock('@string(5,100)')],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseListTongJiShuJuHistogramResp() {
@@ -993,9 +993,9 @@ export function ApiResponseListTongJiShuJuHistogramResp() {
     code: 200,
     'data|1-20': [TongJiShuJuHistogramResp()],
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseMaplongCustomerDoorDetailResp() {
@@ -1003,9 +1003,9 @@ export function ApiResponseMaplongCustomerDoorDetailResp() {
     code: 200,
     data: Mock.mock('CustomerDoorDetailResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseGladSignInfoResp() {
@@ -1013,9 +1013,9 @@ export function ApiResponseGladSignInfoResp() {
     code: 200,
     data: Mock.mock('GladSignInfoResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseRankResp() {
@@ -1023,9 +1023,9 @@ export function ApiResponseRankResp() {
     code: 200,
     data: Mock.mock('RankResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseTaskInfoResp() {
@@ -1033,9 +1033,9 @@ export function ApiResponseTaskInfoResp() {
     code: 200,
     data: Mock.mock('TaskInfoResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseTravelLoginResp() {
@@ -1043,28 +1043,28 @@ export function ApiResponseTravelLoginResp() {
     code: 200,
     data: Mock.mock('TravelLoginResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseVoid() {
   return {
     code: 200,
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseboolean() {
   return {
     code: 200,
-    data: Mock.mock('@boolean()'),
+    data: Mock.mock('@boolean'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponselong() {
@@ -1072,9 +1072,9 @@ export function ApiResponselong() {
     code: 200,
     data: Mock.mock('@string(5,100)'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseobject() {
@@ -1082,9 +1082,9 @@ export function ApiResponseobject() {
     code: 200,
     data: Mock.mock(''),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponsestring() {
@@ -1092,9 +1092,9 @@ export function ApiResponsestring() {
     code: 200,
     data: Mock.mock('@string(5,100)'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseShangChuanWenJianFanHui() {
@@ -1102,9 +1102,9 @@ export function ApiResponseShangChuanWenJianFanHui() {
     code: 200,
     data: Mock.mock('ShangChuanWenJianFanHui()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseZhiXieChangFaCaiMengXiangQingrpcresponse() {
@@ -1112,9 +1112,9 @@ export function ApiResponseZhiXieChangFaCaiMengXiangQingrpcresponse() {
     code: 200,
     data: Mock.mock('ZhiXieChangFaCaiMengXiangQingrpcresponse()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseGuanLianFaCaiMengResponse() {
@@ -1122,9 +1122,9 @@ export function ApiResponseGuanLianFaCaiMengResponse() {
     code: 200,
     data: Mock.mock('GuanLianFaCaiMengResponse()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseHuaHuaTiQingQiu() {
@@ -1132,9 +1132,9 @@ export function ApiResponseHuaHuaTiQingQiu() {
     code: 200,
     data: Mock.mock('HuaHuaTiQingQiu()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseHongLingJinJieGuoresponse() {
@@ -1142,9 +1142,9 @@ export function ApiResponseHongLingJinJieGuoresponse() {
     code: 200,
     data: Mock.mock('HongLingJinJieGuoresponse()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseTongJiShuJuPieDataResp() {
@@ -1152,9 +1152,9 @@ export function ApiResponseTongJiShuJuPieDataResp() {
     code: 200,
     data: Mock.mock('TongJiShuJuPieDataResp()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseLianXiRenHuaHuaTi() {
@@ -1162,9 +1162,9 @@ export function ApiResponseLianXiRenHuaHuaTi() {
     code: 200,
     data: Mock.mock('LianXiRenHuaHuaTi()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseDuRuWenJianXiangYing() {
@@ -1172,9 +1172,9 @@ export function ApiResponseDuRuWenJianXiangYing() {
     code: 200,
     data: Mock.mock('DuRuWenJianXiangYing()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function ApiResponseXiangMuFaCaiMengXiangQingrpcresponse() {
@@ -1182,9 +1182,9 @@ export function ApiResponseXiangMuFaCaiMengXiangQingrpcresponse() {
     code: 200,
     data: Mock.mock('XiangMuFaCaiMengXiangQingrpcresponse()'),
     msg: Mock.mock('@string(5,100)'),
-    success: Mock.mock('@boolean()'),
-    timestamp: Mock.mock('@datetime()'),
-    traceId: Mock.mock('@string(5,100)'),
+    success: Mock.mock('@boolean'),
+    timestamp: Mock.mock('@datetime'),
+    traceId: Mock.mock('@guid'),
   }
 }
 export function AssignHappyReq() {
@@ -1192,8 +1192,8 @@ export function AssignHappyReq() {
     'happyList|1-20': [AddHappyReq()],
     happyReceiveSource: Mock.mock('@string(5,100)'),
     happyType: Mock.mock('@string(5,100)'),
-    date: Mock.mock('@datetime()'),
-    receiverId: Mock.mock('@string(5,100)'),
+    date: Mock.mock('@datetime'),
+    receiverId: Mock.mock('@guid'),
     receiverName: Mock.mock('@string(5,100)'),
   }
 }
@@ -1212,7 +1212,7 @@ export function HappyCntResp() {
 export function HappyDesktopDetailRulePageResp() {
   return {
     happyNumEveryday: Mock.mock('@integer(3,1000)'),
-    desktopId: Mock.mock('@string(5,100)'),
+    desktopId: Mock.mock('@guid'),
     desktopName: Mock.mock('@string(5,100)'),
     doorLimit: Mock.mock('@integer(3,1000)'),
     catLimit: Mock.mock('@integer(3,1000)'),
@@ -1222,7 +1222,7 @@ export function HappyDesktopDetailRulePageResp() {
 export function HappyDesktopDetailRuleReq() {
   return {
     happyNumEveryday: Mock.mock('@integer(3,1000)'),
-    desktopId: Mock.mock('@string(5,100)'),
+    desktopId: Mock.mock('@guid'),
     desktopName: Mock.mock('@string(5,100)'),
     doorLimit: Mock.mock('@integer(3,1000)'),
     catLimit: Mock.mock('@integer(3,1000)'),
@@ -1262,15 +1262,15 @@ export function HappyDesktopRuleReq() {
 }
 export function HappyDesktopRuleResp() {
   return {
-    doorNoFollowTime: Mock.mock('@datetime()'),
-    doorTimeType: Mock.mock('@datetime()'),
+    doorNoFollowTime: Mock.mock('@integer(3,1000)'),
+    doorTimeType: Mock.mock('@datetime'),
     isDoorNeedBackOpenSea: Mock.mock('@integer(3,1000)'),
     isCatNeedBackOpenSea: Mock.mock('@integer(3,1000)'),
     isGladNeedBackOpenSea: Mock.mock('@integer(3,1000)'),
-    catNoFollowTime: Mock.mock('@datetime()'),
-    catTimeType: Mock.mock('@datetime()'),
-    gladNoFollowTime: Mock.mock('@datetime()'),
-    gladTimeType: Mock.mock('@datetime()'),
+    catNoFollowTime: Mock.mock('@integer(3,1000)'),
+    catTimeType: Mock.mock('@datetime'),
+    gladNoFollowTime: Mock.mock('@integer(3,1000)'),
+    gladTimeType: Mock.mock('@datetime'),
   }
 }
 export function HappyDoorInfoResp() {
@@ -1280,79 +1280,79 @@ export function HappyDoorInfoResp() {
     happyStatus: Mock.mock('@string(5,100)'),
     happyType: Mock.mock('@string(5,100)'),
     categoryName: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     coordinate: Mock.mock('@string(5,100)'),
     corpCertArray: Mock.mock('@string(5,100)'),
     corporateName: Mock.mock('@string(5,100)'),
     country: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    customerId: Mock.mock('@string(5,100)'),
+    customerId: Mock.mock('@guid'),
     customerType: Mock.mock('@string(5,100)'),
     doorCode: Mock.mock('@string(5,100)'),
     doorName: Mock.mock('@string(5,100)'),
     doorStatus: Mock.mock('@string(5,100)'),
     doorType: Mock.mock('@string(5,100)'),
-    establishmentTime: Mock.mock('@datetime()'),
+    establishmentTime: Mock.mock('@datetime'),
     filialeCompanyNameArray: Mock.mock('@string(5,100)'),
     'followInfoList|1-20': [HuaHuaTiQingQiu()],
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     followerName: Mock.mock('@string(5,100)'),
-    hasCustomer: Mock.mock('@boolean()'),
-    id: Mock.mock('@string(5,100)'),
+    hasCustomer: Mock.mock('@boolean'),
+    id: Mock.mock('@guid'),
     isRead: Mock.mock('@string(5,100)'),
-    lastFetchTime: Mock.mock('@datetime()'),
-    lastFollowTime: Mock.mock('@datetime()'),
+    lastFetchTime: Mock.mock('@datetime'),
+    lastFollowTime: Mock.mock('@datetime'),
     lat: Mock.mock('@string(5,100)'),
-    licenseId: Mock.mock('@string(5,100)'),
+    licenseId: Mock.mock('@guid'),
     lng: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
-    planId: Mock.mock('@string(5,100)'),
+    planId: Mock.mock('@guid'),
     planScore: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
     qualicaficationArray: Mock.mock('@string(5,100)'),
     recommendedReason: Mock.mock('@string(5,100)'),
     regCatCnt: Mock.mock('@string(5,100)'),
     orangeeredCapital: Mock.mock('@string(5,100)'),
     score: Mock.mock('@integer(3,1000)'),
-    signId: Mock.mock('@string(5,100)'),
+    signId: Mock.mock('@guid'),
     skAchievementCnt: Mock.mock('@string(5,100)'),
     skQualificationCnt: Mock.mock('@string(5,100)'),
     source: Mock.mock('@string(5,100)'),
-    gratefulId: Mock.mock('@string(5,100)'),
-    thirdId: Mock.mock('@string(5,100)'),
+    gratefulId: Mock.mock('@guid'),
+    thirdId: Mock.mock('@guid'),
   }
 }
 export function HappyFollowReq() {
   return {
     addr: Mock.mock('@string(5,100)'),
-    happyId: Mock.mock('@string(5,100)'),
+    happyId: Mock.mock('@guid'),
     happyType: Mock.mock('@string(5,100)'),
-    contactCatId: Mock.mock('@string(5,100)'),
+    contactCatId: Mock.mock('@guid'),
     contactCatName: Mock.mock('@string(5,100)'),
     content: Mock.mock('@string(5,100)'),
     coordinate: Mock.mock('@string(5,100)'),
-    date: Mock.mock('@datetime()'),
-    'dateList|1-20': [Mock.mock('@datetime()')],
+    date: Mock.mock('@datetime'),
+    'dateList|1-20': [Mock.mock('@datetime')],
     'fileIdList|1-20': [Mock.mock('@string(5,100)')],
     followResult: Mock.mock('@string(5,100)'),
     followType: Mock.mock('@string(5,100)'),
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     followerName: Mock.mock('@string(5,100)'),
     setPlanType: Mock.mock('@integer(3,1000)'),
-    gratefulId: Mock.mock('@string(5,100)'),
+    gratefulId: Mock.mock('@guid'),
   }
 }
 export function HappyFollowRuleReq() {
   return {
-    doorNoFollowTime: Mock.mock('@datetime()'),
-    doorTimeType: Mock.mock('@datetime()'),
+    doorNoFollowTime: Mock.mock('@integer(3,1000)'),
+    doorTimeType: Mock.mock('@datetime'),
     isDoorNeedBackOpenSea: Mock.mock('@integer(3,1000)'),
     isCatNeedBackOpenSea: Mock.mock('@integer(3,1000)'),
     isGladNeedBackOpenSea: Mock.mock('@integer(3,1000)'),
-    catNoFollowTime: Mock.mock('@datetime()'),
-    catTimeType: Mock.mock('@datetime()'),
-    gladNoFollowTime: Mock.mock('@datetime()'),
-    gladTimeType: Mock.mock('@datetime()'),
+    catNoFollowTime: Mock.mock('@integer(3,1000)'),
+    catTimeType: Mock.mock('@datetime'),
+    gladNoFollowTime: Mock.mock('@integer(3,1000)'),
+    gladTimeType: Mock.mock('@datetime'),
   }
 }
 export function HappyNumReq() {
@@ -1366,7 +1366,7 @@ export function HappyNumResp() {
     followNum: Mock.mock('@integer(3,1000)'),
     highIntentionNum: Mock.mock('@integer(3,1000)'),
     invalidNum: Mock.mock('@integer(3,1000)'),
-    longTimeNoSignNum: Mock.mock('@datetime()'),
+    longTimeNoSignNum: Mock.mock('@integer(3,1000)'),
     newNum: Mock.mock('@integer(3,1000)'),
     oldNum: Mock.mock('@integer(3,1000)'),
     signNum: Mock.mock('@integer(3,1000)'),
@@ -1380,10 +1380,10 @@ export function HappyCatCertificateResp() {
     certificateNum: Mock.mock('@string(5,100)'),
     createName: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     major: Mock.mock('@string(5,100)'),
     name: Mock.mock('@string(5,100)'),
-    pictureUrl: Mock.mock('@string(5,100)'),
+    pictureUrl: Mock.mock('@url'),
     orangeered: Mock.mock('@string(5,100)'),
   }
 }
@@ -1397,67 +1397,67 @@ export function HappyCatInfoResp() {
     happyStatus: Mock.mock('@string(5,100)'),
     happyType: Mock.mock('@string(5,100)'),
     'certificateList|1-20': [HappyCatCertificateResp()],
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     coordinate: Mock.mock('@string(5,100)'),
     country: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    customerId: Mock.mock('@string(5,100)'),
+    customerId: Mock.mock('@guid'),
     customerMobile: Mock.mock('@string(5,100)'),
     customerName: Mock.mock('@string(5,100)'),
     customerType: Mock.mock('@string(5,100)'),
     education: Mock.mock('@string(5,100)'),
     'followInfoList|1-20': [HuaHuaTiQingQiu()],
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     followerName: Mock.mock('@string(5,100)'),
     gender: Mock.mock('@string(5,100)'),
     goodBehaviorCnt: Mock.mock('@string(5,100)'),
-    hasCustomer: Mock.mock('@boolean()'),
-    id: Mock.mock('@string(5,100)'),
+    hasCustomer: Mock.mock('@boolean'),
+    id: Mock.mock('@guid'),
     isRead: Mock.mock('@string(5,100)'),
-    lastFetchTime: Mock.mock('@datetime()'),
-    lastFollowTime: Mock.mock('@datetime()'),
+    lastFetchTime: Mock.mock('@datetime'),
+    lastFollowTime: Mock.mock('@datetime'),
     lat: Mock.mock('@string(5,100)'),
-    licenseId: Mock.mock('@string(5,100)'),
+    licenseId: Mock.mock('@guid'),
     lng: Mock.mock('@string(5,100)'),
     catName: Mock.mock('@string(5,100)'),
     catnelRisk: Mock.mock('@integer(3,1000)'),
     phone: Mock.mock('@string(5,100)'),
-    planId: Mock.mock('@string(5,100)'),
+    planId: Mock.mock('@guid'),
     planScore: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
     recommendedReason: Mock.mock('@string(5,100)'),
-    signId: Mock.mock('@string(5,100)'),
+    signId: Mock.mock('@guid'),
     skCertificateCnt: Mock.mock('@string(5,100)'),
     source: Mock.mock('@string(5,100)'),
-    gratefulId: Mock.mock('@string(5,100)'),
-    thirdId: Mock.mock('@string(5,100)'),
+    gratefulId: Mock.mock('@guid'),
+    thirdId: Mock.mock('@guid'),
     'titleList|1-20': [HappyCatTitleResp()],
   }
 }
 export function HappyCatTitleResp() {
   return {
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     level: Mock.mock('@string(5,100)'),
     major: Mock.mock('@string(5,100)'),
-    pictureUrl: Mock.mock('@string(5,100)'),
+    pictureUrl: Mock.mock('@url'),
   }
 }
 export function HappyPlanAddHappyListReq() {
   return {
     happyType: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
   }
 }
 export function HappyPlanAddHappyReq() {
   return {
     'addHappyList|1-20': [HappyPlanAddHappyListReq()],
-    date: Mock.mock('@datetime()'),
+    date: Mock.mock('@datetime'),
   }
 }
 export function HappyPlanAddCustomerListReq() {
   return {
     customerType: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
   }
 }
 export function HappyPlanAddCustomerReq() {
@@ -1470,12 +1470,12 @@ export function HappyPlanCoordinateResp() {
   return {
     coordinate: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    planId: Mock.mock('@string(5,100)'),
+    planId: Mock.mock('@guid'),
   }
 }
 export function HappyPlanCountReq() {
   return {
-    date: Mock.mock('@datetime()'),
+    date: Mock.mock('@datetime'),
   }
 }
 export function HappyPlanCountResp() {
@@ -1486,27 +1486,27 @@ export function HappyPlanCountResp() {
 }
 export function HappyPlanDateListByTypeReq() {
   return {
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     taskType: Mock.mock('@integer(3,1000)'),
     type: Mock.mock('@string(5,100)'),
   }
 }
 export function HappyPlanDateListReq() {
   return {
-    endDate: Mock.mock('@datetime()'),
+    endDate: Mock.mock('@datetime'),
     'handlerIdList|1-20': [Mock.mock('@string(5,100)')],
-    startDate: Mock.mock('@datetime()'),
+    startDate: Mock.mock('@datetime'),
     type: Mock.mock('@integer(3,1000)'),
   }
 }
 export function HappyPlanDeleteReq() {
   return {
-    planId: Mock.mock('@string(5,100)'),
+    planId: Mock.mock('@guid'),
   }
 }
 export function HappyPlanPageReq() {
   return {
-    date: Mock.mock('@datetime()'),
+    date: Mock.mock('@datetime'),
     'handlerIdList|1-20': [Mock.mock('@string(5,100)')],
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
@@ -1514,20 +1514,20 @@ export function HappyPlanPageReq() {
 }
 export function HappyPlanPunchReq() {
   return {
-    date: Mock.mock('@datetime()'),
+    date: Mock.mock('@datetime'),
   }
 }
 export function HappyPlanRecommendedReq() {
   return {
     happyType: Mock.mock('@string(5,100)'),
-    date: Mock.mock('@datetime()'),
+    date: Mock.mock('@datetime'),
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
   }
 }
 export function HappyPlanScoreListReq() {
   return {
-    planId: Mock.mock('@string(5,100)'),
+    planId: Mock.mock('@guid'),
     score: Mock.mock('@string(5,100)'),
   }
 }
@@ -1538,79 +1538,79 @@ export function HappyGladInfoResp() {
     agenciesAddrLat: Mock.mock('@string(5,100)'),
     agenciesAddrLng: Mock.mock('@string(5,100)'),
     agenciesArea: Mock.mock('@string(5,100)'),
-    agenciesCity: Mock.mock('@string(5,100)'),
+    agenciesCity: Mock.mock('@city'),
     agenciesCountry: Mock.mock('@string(5,100)'),
     agenciesPhone: Mock.mock('@string(5,100)'),
-    agenciesProvince: Mock.mock('@string(5,100)'),
+    agenciesProvince: Mock.mock('@province'),
     area: Mock.mock('@string(5,100)'),
     biddingCorpAddr: Mock.mock('@string(5,100)'),
     biddingCorpAddrLat: Mock.mock('@string(5,100)'),
     biddingCorpAddrLng: Mock.mock('@string(5,100)'),
     biddingCorpArea: Mock.mock('@string(5,100)'),
-    biddingCorpCity: Mock.mock('@string(5,100)'),
+    biddingCorpCity: Mock.mock('@city'),
     biddingCorpCountry: Mock.mock('@string(5,100)'),
     biddingCorpName: Mock.mock('@string(5,100)'),
     biddingCorpPhone: Mock.mock('@string(5,100)'),
-    biddingCorpProvince: Mock.mock('@string(5,100)'),
-    biddingEndTime: Mock.mock('@datetime()'),
-    biddingOpeningTime: Mock.mock('@datetime()'),
-    biddingStartTime: Mock.mock('@datetime()'),
-    biddingTime: Mock.mock('@datetime()'),
+    biddingCorpProvince: Mock.mock('@province'),
+    biddingEndTime: Mock.mock('@datetime'),
+    biddingOpeningTime: Mock.mock('@datetime'),
+    biddingStartTime: Mock.mock('@datetime'),
+    biddingTime: Mock.mock('@datetime'),
     biddingType: Mock.mock('@string(5,100)'),
     happyStatus: Mock.mock('@string(5,100)'),
     happyType: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     coordinate: Mock.mock('@string(5,100)'),
     country: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    customerId: Mock.mock('@string(5,100)'),
+    customerId: Mock.mock('@guid'),
     customerType: Mock.mock('@string(5,100)'),
-    fileDownloadEndTime: Mock.mock('@datetime()'),
-    fileDownloadStartTime: Mock.mock('@datetime()'),
+    fileDownloadEndTime: Mock.mock('@datetime'),
+    fileDownloadStartTime: Mock.mock('@datetime'),
     'followInfoList|1-20': [HuaHuaTiQingQiu()],
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     followerName: Mock.mock('@string(5,100)'),
-    hasCustomer: Mock.mock('@boolean()'),
-    id: Mock.mock('@string(5,100)'),
+    hasCustomer: Mock.mock('@boolean'),
+    id: Mock.mock('@guid'),
     industryType: Mock.mock('@string(5,100)'),
     isRead: Mock.mock('@string(5,100)'),
-    lastFetchTime: Mock.mock('@datetime()'),
-    lastFollowTime: Mock.mock('@datetime()'),
+    lastFetchTime: Mock.mock('@datetime'),
+    lastFollowTime: Mock.mock('@datetime'),
     lat: Mock.mock('@string(5,100)'),
-    licenseId: Mock.mock('@string(5,100)'),
+    licenseId: Mock.mock('@guid'),
     lng: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
-    planId: Mock.mock('@string(5,100)'),
+    planId: Mock.mock('@guid'),
     planScore: Mock.mock('@string(5,100)'),
     gladBudget: Mock.mock('@string(5,100)'),
     gladName: Mock.mock('@string(5,100)'),
     gladNum: Mock.mock('@string(5,100)'),
     gladType: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
-    publishTime: Mock.mock('@datetime()'),
-    quoteBeginTime: Mock.mock('@datetime()'),
-    quoteEndTime: Mock.mock('@datetime()'),
+    province: Mock.mock('@province'),
+    publishTime: Mock.mock('@datetime'),
+    quoteBeginTime: Mock.mock('@datetime'),
+    quoteEndTime: Mock.mock('@datetime'),
     recommendedReason: Mock.mock('@string(5,100)'),
-    signId: Mock.mock('@string(5,100)'),
-    signUpBeginTime: Mock.mock('@datetime()'),
-    signUpEndTime: Mock.mock('@datetime()'),
+    signId: Mock.mock('@guid'),
+    signUpBeginTime: Mock.mock('@datetime'),
+    signUpEndTime: Mock.mock('@datetime'),
     source: Mock.mock('@string(5,100)'),
-    gratefulId: Mock.mock('@string(5,100)'),
-    thirdId: Mock.mock('@string(5,100)'),
-    valid: Mock.mock('@integer(3,1000)'),
-    webPageUrl: Mock.mock('@string(5,100)'),
+    gratefulId: Mock.mock('@guid'),
+    thirdId: Mock.mock('@guid'),
+    valid: Mock.mock('@guid'),
+    webPageUrl: Mock.mock('@url'),
   }
 }
 export function HappyPushDetail() {
   return {
     happyType: Mock.mock('@string(5,100)'),
     enable: Mock.mock('@integer(3,1000)'),
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     json: Mock.mock(''),
     planPushNum: Mock.mock('@integer(3,1000)'),
     pushedNum: Mock.mock('@integer(3,1000)'),
     remark: Mock.mock('@string(5,100)'),
-    ruleSettingTime: Mock.mock('@datetime()'),
+    ruleSettingTime: Mock.mock('@datetime'),
   }
 }
 export function HappyPushInfoResp() {
@@ -1635,15 +1635,15 @@ export function HappyPushCatInfoResp() {
 }
 export function HappyPushCatResp() {
   return {
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     followerName: Mock.mock('@string(5,100)'),
   }
 }
 export function HappyReceiveResp() {
   return {
     failCnt: Mock.mock('@integer(3,1000)'),
-    id: Mock.mock('@string(5,100)'),
-    licenseId: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
+    licenseId: Mock.mock('@guid'),
     gladName: Mock.mock('@string(5,100)'),
     receiveName: Mock.mock('@string(5,100)'),
     successCnt: Mock.mock('@integer(3,1000)'),
@@ -1651,28 +1651,28 @@ export function HappyReceiveResp() {
 }
 export function HappySetVisitPlanReq() {
   return {
-    happyId: Mock.mock('@string(5,100)'),
+    happyId: Mock.mock('@guid'),
     happyType: Mock.mock('@string(5,100)'),
-    expectedDate: Mock.mock('@datetime()'),
+    expectedDate: Mock.mock('@datetime'),
     interfaceType: Mock.mock('@string(5,100)'),
   }
 }
 export function HappySubscribeInfoReq() {
   return {
-    createId: Mock.mock('@string(5,100)'),
+    createId: Mock.mock('@guid'),
     createName: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
     doorEnable: Mock.mock('@integer(3,1000)'),
     doorJson: Mock.mock(''),
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     isDelete: Mock.mock('@string(5,100)'),
     modified: Mock.mock('@string(5,100)'),
     catEnable: Mock.mock('@integer(3,1000)'),
     catJson: Mock.mock(''),
     gladEnable: Mock.mock('@integer(3,1000)'),
     gladJson: Mock.mock(''),
-    updateId: Mock.mock('@datetime()'),
-    updateName: Mock.mock('@datetime()'),
+    updateId: Mock.mock('@datetime'),
+    updateName: Mock.mock('@datetime'),
   }
 }
 export function HappySubscribeInfoResp() {
@@ -1907,7 +1907,7 @@ export function ContactAddReq() {
   return {
     whiteName: Mock.mock('@string(5,100)'),
     duty: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     isDelete: Mock.mock('@integer(3,1000)'),
     isPrincipal: Mock.mock('@integer(3,1000)'),
     name: Mock.mock('@string(5,100)'),
@@ -1922,7 +1922,7 @@ export function ContactDetailResp() {
   return {
     whiteName: Mock.mock('@string(5,100)'),
     duty: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     isPrincipal: Mock.mock('@integer(3,1000)'),
     name: Mock.mock('@string(5,100)'),
     post: Mock.mock('@string(5,100)'),
@@ -1934,7 +1934,7 @@ export function ContactDetailResp() {
 }
 export function CountCustomerHappyNumReq() {
   return {
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
   }
 }
 export function CountCustomerHappyNumResp() {
@@ -1956,7 +1956,7 @@ export function CustomerDoorAddReq() {
     area: Mock.mock('@string(5,100)'),
     happyPrincipal: Mock.mock('@string(5,100)'),
     categoryName: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     'contactList|1-20': [ContactAddReq()],
     content: Mock.mock('@string(5,100)'),
     coordinate: Mock.mock('@string(5,100)'),
@@ -1969,15 +1969,15 @@ export function CustomerDoorAddReq() {
     doorCode: Mock.mock('@string(5,100)'),
     doorName: Mock.mock('@string(5,100)'),
     doorStatus: Mock.mock('@string(5,100)'),
-    establishmentTime: Mock.mock('@datetime()'),
-    'fileUrlList|1-20': [Mock.mock('@string(5,100)')],
+    establishmentTime: Mock.mock('@datetime'),
+    'fileUrlList|1-20': [Mock.mock('@url')],
     higherDoor: Mock.mock('@string(5,100)'),
     'invoiceList|1-20': [CustomerInvoiceAddReq()],
     isImportant: Mock.mock('@integer(3,1000)'),
     'labels|1-20': [Mock.mock('@string(5,100)')],
     location: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
     regCatCnt: Mock.mock('@string(5,100)'),
     orangeeredCapital: Mock.mock('@integer(3,1000)'),
     skAchievementCnt: Mock.mock('@string(5,100)'),
@@ -1987,7 +1987,7 @@ export function CustomerDoorAddReq() {
 }
 export function CustomerDoorAddResp() {
   return {
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     'list|1-20': [CustomerDoorInfoResp()],
     repeatType: Mock.mock('@string(5,100)'),
   }
@@ -1998,7 +1998,7 @@ export function CustomerDoorDetailResp() {
     area: Mock.mock('@string(5,100)'),
     happyPrincipal: Mock.mock('@string(5,100)'),
     categoryName: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     'contactList|1-20': [ContactDetailResp()],
     content: Mock.mock('@string(5,100)'),
     coordinate: Mock.mock('@string(5,100)'),
@@ -2014,22 +2014,22 @@ export function CustomerDoorDetailResp() {
     doorCode: Mock.mock('@string(5,100)'),
     doorName: Mock.mock('@string(5,100)'),
     doorStatus: Mock.mock('@string(5,100)'),
-    establishmentTime: Mock.mock('@datetime()'),
-    'fileUrlList|1-20': [Mock.mock('@string(5,100)')],
+    establishmentTime: Mock.mock('@datetime'),
+    'fileUrlList|1-20': [Mock.mock('@url')],
     higherDoor: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     'invoiceList|1-20': [CustomerInvoiceDetailResp()],
     isImportant: Mock.mock('@integer(3,1000)'),
     'labels|1-20': [CustomerLabelResp()],
-    licenseId: Mock.mock('@string(5,100)'),
+    licenseId: Mock.mock('@guid'),
     location: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
     regCatCnt: Mock.mock('@string(5,100)'),
     orangeeredCapital: Mock.mock('@integer(3,1000)'),
     skAchievementCnt: Mock.mock('@string(5,100)'),
     skQualificationCnt: Mock.mock('@string(5,100)'),
-    gratefulId: Mock.mock('@string(5,100)'),
+    gratefulId: Mock.mock('@guid'),
   }
 }
 export function CustomerDoorFromDataReq() {
@@ -2041,8 +2041,8 @@ export function CustomerDoorFromDataReq() {
 }
 export function CustomerDoorFromDataResp() {
   return {
-    companyEstablishDate: Mock.mock('@datetime()'),
-    companyIprovinceName: Mock.mock('@string(5,100)'),
+    companyEstablishDate: Mock.mock('@datetime'),
+    companyIprovinceName: Mock.mock('@province'),
     companyKey: Mock.mock('@integer(3,1000)'),
     companyLegalRepresentative: Mock.mock('@string(5,100)'),
     companyLegalRepresentativePhone: Mock.mock('@string(5,100)'),
@@ -2057,7 +2057,7 @@ export function CustomerDoorFromDataResp() {
     companyOrangerarCnt: Mock.mock('@string(5,100)'),
     companyRewardsCnt: Mock.mock('@string(5,100)'),
     companyScore: Mock.mock('@integer(3,1000)'),
-    tycCompanyId: Mock.mock('@string(5,100)'),
+    tycCompanyId: Mock.mock('@guid'),
   }
 }
 export function CustomerDoorInfoResp() {
@@ -2065,7 +2065,7 @@ export function CustomerDoorInfoResp() {
     addr: Mock.mock('@string(5,100)'),
     area: Mock.mock('@string(5,100)'),
     happyPrincipal: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     content: Mock.mock('@string(5,100)'),
     coordinate: Mock.mock('@string(5,100)'),
     customerCode: Mock.mock('@string(5,100)'),
@@ -2074,30 +2074,30 @@ export function CustomerDoorInfoResp() {
     doorCode: Mock.mock('@string(5,100)'),
     doorName: Mock.mock('@string(5,100)'),
     doorStatus: Mock.mock('@string(5,100)'),
-    establishmentTime: Mock.mock('@datetime()'),
-    'fileUrlList|1-20': [Mock.mock('@string(5,100)')],
-    id: Mock.mock('@string(5,100)'),
+    establishmentTime: Mock.mock('@datetime'),
+    'fileUrlList|1-20': [Mock.mock('@url')],
+    id: Mock.mock('@guid'),
     isCooperation: Mock.mock('@integer(3,1000)'),
     isImportant: Mock.mock('@integer(3,1000)'),
     label: Mock.mock('@string(5,100)'),
     location: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
     regCatCnt: Mock.mock('@string(5,100)'),
     orangeeredCapital: Mock.mock('@integer(3,1000)'),
     score: Mock.mock('@integer(3,1000)'),
-    signId: Mock.mock('@string(5,100)'),
+    signId: Mock.mock('@guid'),
     signState: Mock.mock('@string(5,100)'),
-    signTime: Mock.mock('@datetime()'),
+    signTime: Mock.mock('@datetime'),
     skAchievementCnt: Mock.mock('@string(5,100)'),
     skQualificationCnt: Mock.mock('@string(5,100)'),
   }
 }
 export function CustomerDoorNumReq() {
   return {
-    createEndTime: Mock.mock('@datetime()'),
-    createStartTime: Mock.mock('@datetime()'),
-    own: Mock.mock('@boolean()'),
+    createEndTime: Mock.mock('@datetime'),
+    createStartTime: Mock.mock('@datetime'),
+    own: Mock.mock('@boolean'),
   }
 }
 export function CustomerDoorNumResp() {
@@ -2116,7 +2116,7 @@ export function CustomerDoorUpReq() {
     area: Mock.mock('@string(5,100)'),
     happyPrincipal: Mock.mock('@string(5,100)'),
     categoryName: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     'contactList|1-20': [ContactAddReq()],
     content: Mock.mock('@string(5,100)'),
     coordinate: Mock.mock('@string(5,100)'),
@@ -2129,16 +2129,16 @@ export function CustomerDoorUpReq() {
     doorCode: Mock.mock('@string(5,100)'),
     doorName: Mock.mock('@string(5,100)'),
     doorStatus: Mock.mock('@string(5,100)'),
-    establishmentTime: Mock.mock('@datetime()'),
-    'fileUrlList|1-20': [Mock.mock('@string(5,100)')],
+    establishmentTime: Mock.mock('@datetime'),
+    'fileUrlList|1-20': [Mock.mock('@url')],
     higherDoor: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     'invoiceList|1-20': [CustomerInvoiceAddReq()],
     isImportant: Mock.mock('@integer(3,1000)'),
     'labels|1-20': [CustomerLabelReq()],
     location: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
     regCatCnt: Mock.mock('@string(5,100)'),
     orangeeredCapital: Mock.mock('@integer(3,1000)'),
     skAchievementCnt: Mock.mock('@string(5,100)'),
@@ -2149,13 +2149,13 @@ export function CustomerDoorUpReq() {
 export function CustomerFollowReq() {
   return {
     addr: Mock.mock('@string(5,100)'),
-    contactCatId: Mock.mock('@string(5,100)'),
+    contactCatId: Mock.mock('@guid'),
     contactCatName: Mock.mock('@string(5,100)'),
     content: Mock.mock('@string(5,100)'),
     coordinate: Mock.mock('@string(5,100)'),
-    customerId: Mock.mock('@string(5,100)'),
+    customerId: Mock.mock('@guid'),
     customerType: Mock.mock('@string(5,100)'),
-    date: Mock.mock('@datetime()'),
+    date: Mock.mock('@datetime'),
     'fileIdList|1-20': [Mock.mock('@string(5,100)')],
     followType: Mock.mock('@string(5,100)'),
   }
@@ -2166,7 +2166,7 @@ export function CustomerInvoiceAddReq() {
     blueBank: Mock.mock('@string(5,100)'),
     bankNo: Mock.mock('@string(5,100)'),
     doorName: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     isDefault: Mock.mock('@integer(3,1000)'),
     isDelete: Mock.mock('@integer(3,1000)'),
     phone: Mock.mock('@string(5,100)'),
@@ -2180,7 +2180,7 @@ export function CustomerInvoiceDetailResp() {
     blueBank: Mock.mock('@string(5,100)'),
     bankNo: Mock.mock('@string(5,100)'),
     doorName: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     isDefault: Mock.mock('@integer(3,1000)'),
     isDelete: Mock.mock('@integer(3,1000)'),
     phone: Mock.mock('@string(5,100)'),
@@ -2190,13 +2190,13 @@ export function CustomerInvoiceDetailResp() {
 }
 export function CustomerLabelReq() {
   return {
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     labelName: Mock.mock('@string(5,100)'),
   }
 }
 export function CustomerLabelResp() {
   return {
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     labelName: Mock.mock('@string(5,100)'),
   }
 }
@@ -2207,7 +2207,7 @@ export function CustomerCatAddReq() {
     area: Mock.mock('@string(5,100)'),
     happyPrincipal: Mock.mock('@string(5,100)'),
     'certificateList|1-20': [CustomerCatCertificateReq()],
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     'contactList|1-20': [ContactAddReq()],
     content: Mock.mock('@string(5,100)'),
     coordinate: Mock.mock('@string(5,100)'),
@@ -2218,7 +2218,7 @@ export function CustomerCatAddReq() {
     education: Mock.mock('@string(5,100)'),
     doorAddr: Mock.mock('@string(5,100)'),
     doorName: Mock.mock('@string(5,100)'),
-    'fileUrlList|1-20': [Mock.mock('@string(5,100)')],
+    'fileUrlList|1-20': [Mock.mock('@url')],
     gender: Mock.mock('@string(5,100)'),
     'invoiceList|1-20': [CustomerInvoiceAddReq()],
     isImportant: Mock.mock('@integer(3,1000)'),
@@ -2227,14 +2227,14 @@ export function CustomerCatAddReq() {
     catName: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
     post: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
     step: Mock.mock('@integer(3,1000)'),
     'titleList|1-20': [CustomerCatTitleReq()],
   }
 }
 export function CustomerCatAddResp() {
   return {
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     'list|1-20': [CustomerCatInfoResp()],
   }
 }
@@ -2242,18 +2242,18 @@ export function CustomerCatCertificateInfoResp() {
   return {
     createName: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    customerId: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    customerId: Mock.mock('@guid'),
+    id: Mock.mock('@guid'),
     major: Mock.mock('@string(5,100)'),
     name: Mock.mock('@string(5,100)'),
-    pictureUrl: Mock.mock('@string(5,100)'),
+    pictureUrl: Mock.mock('@url'),
     orangeered: Mock.mock('@string(5,100)'),
   }
 }
 export function CustomerCatCertificateReq() {
   return {
-    customerId: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    customerId: Mock.mock('@guid'),
+    id: Mock.mock('@guid'),
     major: Mock.mock('@string(5,100)'),
     name: Mock.mock('@string(5,100)'),
   }
@@ -2265,7 +2265,7 @@ export function CustomerCatDetailResp() {
     area: Mock.mock('@string(5,100)'),
     happyPrincipal: Mock.mock('@string(5,100)'),
     'certificateList|1-20': [CustomerCatCertificateInfoResp()],
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     'contactList|1-20': [ContactDetailResp()],
     content: Mock.mock('@string(5,100)'),
     coordinate: Mock.mock('@string(5,100)'),
@@ -2279,9 +2279,9 @@ export function CustomerCatDetailResp() {
     education: Mock.mock('@string(5,100)'),
     doorAddr: Mock.mock('@string(5,100)'),
     doorName: Mock.mock('@string(5,100)'),
-    'fileUrlList|1-20': [Mock.mock('@string(5,100)')],
+    'fileUrlList|1-20': [Mock.mock('@url')],
     gender: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     'invoiceList|1-20': [CustomerInvoiceDetailResp()],
     isImportant: Mock.mock('@integer(3,1000)'),
     'labels|1-20': [CustomerLabelResp()],
@@ -2289,8 +2289,8 @@ export function CustomerCatDetailResp() {
     catName: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
     post: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
-    talentId: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
+    talentId: Mock.mock('@guid'),
     'titleList|1-20': [CustomerCatTitleInfoResp()],
   }
 }
@@ -2303,7 +2303,7 @@ export function CustomerCatInfoResp() {
     blacklistRecordCnt: Mock.mock('@string(5,100)'),
     happyPrincipal: Mock.mock('@string(5,100)'),
     certificate: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     content: Mock.mock('@string(5,100)'),
     coordinate: Mock.mock('@string(5,100)'),
     customerCode: Mock.mock('@string(5,100)'),
@@ -2312,34 +2312,34 @@ export function CustomerCatInfoResp() {
     education: Mock.mock('@string(5,100)'),
     gender: Mock.mock('@string(5,100)'),
     goodBehaviorCnt: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     isCooperation: Mock.mock('@integer(3,1000)'),
     isImportant: Mock.mock('@integer(3,1000)'),
     label: Mock.mock('@string(5,100)'),
     catName: Mock.mock('@string(5,100)'),
     catnelRisk: Mock.mock('@integer(3,1000)'),
     phone: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
-    signId: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
+    signId: Mock.mock('@guid'),
     signState: Mock.mock('@string(5,100)'),
-    signTime: Mock.mock('@datetime()'),
+    signTime: Mock.mock('@datetime'),
     skCertificateCnt: Mock.mock('@string(5,100)'),
-    title: Mock.mock('@string(5,100)'),
+    title: Mock.mock('@ctitle(5,20)'),
   }
 }
 export function CustomerCatTitleInfoResp() {
   return {
-    customerId: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    customerId: Mock.mock('@guid'),
+    id: Mock.mock('@guid'),
     level: Mock.mock('@string(5,100)'),
     major: Mock.mock('@string(5,100)'),
-    pictureUrl: Mock.mock('@string(5,100)'),
+    pictureUrl: Mock.mock('@url'),
   }
 }
 export function CustomerCatTitleReq() {
   return {
-    customerId: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    customerId: Mock.mock('@guid'),
+    id: Mock.mock('@guid'),
     level: Mock.mock('@string(5,100)'),
     major: Mock.mock('@string(5,100)'),
   }
@@ -2351,7 +2351,7 @@ export function CustomerCatUpReq() {
     area: Mock.mock('@string(5,100)'),
     happyPrincipal: Mock.mock('@string(5,100)'),
     'certificateList|1-20': [CustomerCatCertificateReq()],
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     'contactList|1-20': [ContactAddReq()],
     content: Mock.mock('@string(5,100)'),
     coordinate: Mock.mock('@string(5,100)'),
@@ -2362,9 +2362,9 @@ export function CustomerCatUpReq() {
     education: Mock.mock('@string(5,100)'),
     doorAddr: Mock.mock('@string(5,100)'),
     doorName: Mock.mock('@string(5,100)'),
-    'fileUrlList|1-20': [Mock.mock('@string(5,100)')],
+    'fileUrlList|1-20': [Mock.mock('@url')],
     gender: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     'invoiceList|1-20': [CustomerInvoiceAddReq()],
     isImportant: Mock.mock('@integer(3,1000)'),
     'labels|1-20': [CustomerLabelReq()],
@@ -2372,35 +2372,35 @@ export function CustomerCatUpReq() {
     catName: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
     post: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
     'titleList|1-20': [CustomerCatTitleReq()],
   }
 }
 export function DayCityReq() {
   return {
-    endTime: Mock.mock('@datetime()'),
-    startTime: Mock.mock('@datetime()'),
+    endTime: Mock.mock('@datetime'),
+    startTime: Mock.mock('@datetime'),
   }
 }
 export function DayCityResp() {
   return {
-    'cityList|1-20': [Mock.mock('@string(5,100)')],
-    dayTime: Mock.mock('@datetime()'),
+    'cityList|1-20': [Mock.mock('@city')],
+    dayTime: Mock.mock('@datetime'),
   }
 }
 export function DelReq() {
   return {
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
   }
 }
 export function DeleteReq() {
   return {
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
   }
 }
 export function WhiteListReq() {
   return {
-    parentId: Mock.mock('@string(5,100)'),
+    parentId: Mock.mock('@guid'),
     scaleType: Mock.mock('@string(5,100)'),
   }
 }
@@ -2413,61 +2413,61 @@ export function WhiteNoteResp() {
 export function WhiteReq() {
   return {
     whiteName: Mock.mock('@string(5,100)'),
-    parentId: Mock.mock('@string(5,100)'),
+    parentId: Mock.mock('@guid'),
   }
 }
 export function WhiteResp() {
   return {
     ancestors: Mock.mock('@string(5,100)'),
     authStatus: Mock.mock('@string(5,100)'),
-    createId: Mock.mock('@string(5,100)'),
+    createId: Mock.mock('@guid'),
     createName: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
     whiteCode: Mock.mock('@string(5,100)'),
     whiteName: Mock.mock('@string(5,100)'),
     email: Mock.mock('@string(5,100)'),
-    doorId: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
-    isShow: Mock.mock('@boolean()'),
-    leaderDesktopId: Mock.mock('@string(5,100)'),
+    doorId: Mock.mock('@guid'),
+    id: Mock.mock('@guid'),
+    isShow: Mock.mock('@boolean'),
+    leaderDesktopId: Mock.mock('@guid'),
     leaderDesktopName: Mock.mock('@string(5,100)'),
-    leaderKeyBorardId: Mock.mock('@string(5,100)'),
-    linkStatus: Mock.mock('@boolean()'),
+    leaderKeyBorardId: Mock.mock('@guid'),
+    linkStatus: Mock.mock('@boolean'),
     mark: Mock.mock('@string(5,100)'),
     markDesc: Mock.mock('@string(5,100)'),
     modified: Mock.mock('@string(5,100)'),
     orderNum: Mock.mock('@integer(3,1000)'),
     parentCode: Mock.mock('@string(5,100)'),
-    parentId: Mock.mock('@string(5,100)'),
+    parentId: Mock.mock('@guid'),
     phone: Mock.mock('@string(5,100)'),
     profile: Mock.mock('@string(5,100)'),
     scaleType: Mock.mock('@string(5,100)'),
     scaleTypeDesc: Mock.mock('@string(5,100)'),
     status: Mock.mock('@string(5,100)'),
     statusDesc: Mock.mock('@string(5,100)'),
-    gratefulId: Mock.mock('@string(5,100)'),
-    updateId: Mock.mock('@datetime()'),
-    updateName: Mock.mock('@datetime()'),
+    gratefulId: Mock.mock('@guid'),
+    updateId: Mock.mock('@datetime'),
+    updateName: Mock.mock('@datetime'),
   }
 }
 export function Document() {
   return {
     content: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     location: Mock.mock('@string(5,100)'),
-    title: Mock.mock('@string(5,100)'),
+    title: Mock.mock('@ctitle(5,20)'),
   }
 }
 export function DesktopListResp() {
   return {
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     name: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
   }
 }
 export function DesktopResp() {
   return {
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     mobile: Mock.mock('@string(5,100)'),
     keyBorardName: Mock.mock('@string(5,100)'),
   }
@@ -2481,7 +2481,7 @@ export function FailData() {
 }
 export function FollowAgainReq() {
   return {
-    happyId: Mock.mock('@string(5,100)'),
+    happyId: Mock.mock('@guid'),
     happyType: Mock.mock('@string(5,100)'),
   }
 }
@@ -2489,22 +2489,22 @@ export function FollowListReq() {
   return {
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
-    taskId: Mock.mock('@string(5,100)'),
+    taskId: Mock.mock('@guid'),
   }
 }
 export function ImportExcelByUrlReq() {
   return {
     fileName: Mock.mock('@string(5,100)'),
-    fileUrl: Mock.mock('@string(5,100)'),
+    fileUrl: Mock.mock('@url'),
     taskType: Mock.mock('@integer(3,1000)'),
   }
 }
 export function ImportListReq() {
   return {
-    endTime: Mock.mock('@datetime()'),
+    endTime: Mock.mock('@datetime'),
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
-    startTime: Mock.mock('@datetime()'),
+    startTime: Mock.mock('@datetime'),
     taskType: Mock.mock('@integer(3,1000)'),
   }
 }
@@ -2580,25 +2580,25 @@ export function InnerRpcGuanShuiXiangMuFaCaiMengrpcChongDong() {
 }
 export function ListDesktopReq() {
   return {
-    whiteId: Mock.mock('@string(5,100)'),
+    whiteId: Mock.mock('@guid'),
     keyword: Mock.mock('@string(5,100)'),
   }
 }
 export function ListLocationReq() {
   return {
-    date: Mock.mock('@datetime()'),
-    followerId: Mock.mock('@string(5,100)'),
+    date: Mock.mock('@datetime'),
+    followerId: Mock.mock('@guid'),
   }
 }
 export function LocationAddReq() {
   return {
     addr: Mock.mock('@string(5,100)'),
     area: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     coordinate: Mock.mock('@string(5,100)'),
     country: Mock.mock('@string(5,100)'),
     location: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
   }
 }
 export function LocationDateInfoResp() {
@@ -2607,26 +2607,26 @@ export function LocationDateInfoResp() {
     addrNum: Mock.mock('@integer(3,1000)'),
     addrStr: Mock.mock('@string(5,100)'),
     happyNum: Mock.mock('@integer(3,1000)'),
-    desktopId: Mock.mock('@string(5,100)'),
+    desktopId: Mock.mock('@guid'),
     desktopName: Mock.mock('@string(5,100)'),
     monthDay: Mock.mock('@string(5,100)'),
-    provinceCity: Mock.mock('@string(5,100)'),
-    'provinceCityList|1-20': [Mock.mock('@string(5,100)')],
+    provinceCity: Mock.mock('@province'),
+    'provinceCityList|1-20': [Mock.mock('@province')],
   }
 }
 export function LocationInfoResp() {
   return {
     addr: Mock.mock('@string(5,100)'),
     area: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     coordinate: Mock.mock('@string(5,100)'),
     country: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    desktopId: Mock.mock('@string(5,100)'),
+    desktopId: Mock.mock('@guid'),
     desktopName: Mock.mock('@string(5,100)'),
-    fileId: Mock.mock('@string(5,100)'),
+    fileId: Mock.mock('@guid'),
     location: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
   }
 }
 export function PageHappyMixReq() {
@@ -2647,31 +2647,31 @@ export function PageHappyResp() {
     'contactPhoneList|1-20': [LianXiRenHuaHuaTi()],
     coordinate: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    customerId: Mock.mock('@string(5,100)'),
+    customerId: Mock.mock('@guid'),
     customerType: Mock.mock('@string(5,100)'),
     dataLocation: Mock.mock('@string(5,100)'),
     distance: Mock.mock('@string(5,100)'),
     'followInfoList|1-20': [HuaHuaTiQingQiu()],
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     followerName: Mock.mock('@string(5,100)'),
-    hasCustomer: Mock.mock('@boolean()'),
-    id: Mock.mock('@string(5,100)'),
+    hasCustomer: Mock.mock('@boolean'),
+    id: Mock.mock('@guid'),
     isMyself: Mock.mock('@integer(3,1000)'),
     isRead: Mock.mock('@integer(3,1000)'),
-    lastFetchTime: Mock.mock('@datetime()'),
-    lastFollowTime: Mock.mock('@datetime()'),
-    planId: Mock.mock('@string(5,100)'),
+    lastFetchTime: Mock.mock('@datetime'),
+    lastFollowTime: Mock.mock('@datetime'),
+    planId: Mock.mock('@guid'),
     planScore: Mock.mock('@string(5,100)'),
     recommendedReason: Mock.mock('@string(5,100)'),
-    signId: Mock.mock('@string(5,100)'),
+    signId: Mock.mock('@guid'),
     source: Mock.mock('@string(5,100)'),
-    gratefulId: Mock.mock('@string(5,100)'),
-    thirdId: Mock.mock('@string(5,100)'),
+    gratefulId: Mock.mock('@guid'),
+    thirdId: Mock.mock('@guid'),
   }
 }
 export function PageContactReq() {
   return {
-    doorId: Mock.mock('@string(5,100)'),
+    doorId: Mock.mock('@guid'),
     name: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
@@ -2680,22 +2680,22 @@ export function PageContactReq() {
 export function PageCustomerDoorReq() {
   return {
     addr: Mock.mock('@string(5,100)'),
-    createEndTime: Mock.mock('@datetime()'),
-    createStartTime: Mock.mock('@datetime()'),
+    createEndTime: Mock.mock('@datetime'),
+    createStartTime: Mock.mock('@datetime'),
     customerCode: Mock.mock('@string(5,100)'),
     door: Mock.mock('@string(5,100)'),
     doorAttr: Mock.mock('@string(5,100)'),
     doorCode: Mock.mock('@string(5,100)'),
     doorName: Mock.mock('@string(5,100)'),
     doorStatus: Mock.mock('@string(5,100)'),
-    establishmentTimeEnd: Mock.mock('@datetime()'),
-    establishmentTimeStart: Mock.mock('@datetime()'),
+    establishmentTimeEnd: Mock.mock('@datetime'),
+    establishmentTimeStart: Mock.mock('@datetime'),
     'labelList|1-20': [Mock.mock('@string(5,100)')],
     orderColumn: Mock.mock('@string(5,100)'),
     orderType: Mock.mock('@integer(3,1000)'),
-    own: Mock.mock('@boolean()'),
+    own: Mock.mock('@boolean'),
     page: Mock.mock('@integer(3,1000)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
     regCatCntMax: Mock.mock('@string(5,100)'),
     regCatCntMin: Mock.mock('@string(5,100)'),
     orangeeredCapitalMax: Mock.mock('@integer(3,1000)'),
@@ -2703,8 +2703,8 @@ export function PageCustomerDoorReq() {
     scoreMax: Mock.mock('@integer(3,1000)'),
     scoreMin: Mock.mock('@integer(3,1000)'),
     sign: Mock.mock('@string(5,100)'),
-    signDateMax: Mock.mock('@datetime()'),
-    signDateMin: Mock.mock('@datetime()'),
+    signDateMax: Mock.mock('@datetime'),
+    signDateMin: Mock.mock('@datetime'),
     signState: Mock.mock('@string(5,100)'),
     size: Mock.mock('@integer(3,1000)'),
     skAchievementCntMax: Mock.mock('@string(5,100)'),
@@ -2729,16 +2729,16 @@ export function PageCustomerCatReq() {
     'majorList|1-20': [Mock.mock('@string(5,100)')],
     orderColumn: Mock.mock('@string(5,100)'),
     orderType: Mock.mock('@integer(3,1000)'),
-    own: Mock.mock('@boolean()'),
+    own: Mock.mock('@boolean'),
     page: Mock.mock('@integer(3,1000)'),
     cat: Mock.mock('@string(5,100)'),
     catName: Mock.mock('@string(5,100)'),
-    catnelRisk: Mock.mock('@boolean()'),
+    catnelRisk: Mock.mock('@boolean'),
     phone: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
     sign: Mock.mock('@string(5,100)'),
-    signDateMax: Mock.mock('@datetime()'),
-    signDateMin: Mock.mock('@datetime()'),
+    signDateMax: Mock.mock('@datetime'),
+    signDateMin: Mock.mock('@datetime'),
     signState: Mock.mock('@string(5,100)'),
     size: Mock.mock('@integer(3,1000)'),
     skCertificateCntMax: Mock.mock('@string(5,100)'),
@@ -2756,7 +2756,7 @@ export function PageDoorHappyPoolResp() {
     corpCertCnt: Mock.mock('@integer(3,1000)'),
     corporateName: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    customerId: Mock.mock('@string(5,100)'),
+    customerId: Mock.mock('@guid'),
     customerType: Mock.mock('@string(5,100)'),
     dataLocation: Mock.mock('@string(5,100)'),
     distance: Mock.mock('@string(5,100)'),
@@ -2764,21 +2764,21 @@ export function PageDoorHappyPoolResp() {
     doorName: Mock.mock('@string(5,100)'),
     doorStatus: Mock.mock('@string(5,100)'),
     doorType: Mock.mock('@string(5,100)'),
-    establishmentTime: Mock.mock('@datetime()'),
+    establishmentTime: Mock.mock('@datetime'),
     filialeCompanyCnt: Mock.mock('@integer(3,1000)'),
     filialeCompanyNameArray: Mock.mock('@string(5,100)'),
     'followInfoList|1-20': [HuaHuaTiQingQiu()],
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     followerName: Mock.mock('@string(5,100)'),
-    hasCustomer: Mock.mock('@boolean()'),
-    id: Mock.mock('@string(5,100)'),
+    hasCustomer: Mock.mock('@boolean'),
+    id: Mock.mock('@guid'),
     industryType: Mock.mock('@string(5,100)'),
     isMyself: Mock.mock('@integer(3,1000)'),
     isRead: Mock.mock('@integer(3,1000)'),
-    lastFetchTime: Mock.mock('@datetime()'),
-    lastFollowTime: Mock.mock('@datetime()'),
+    lastFetchTime: Mock.mock('@datetime'),
+    lastFollowTime: Mock.mock('@datetime'),
     phone: Mock.mock('@string(5,100)'),
-    planId: Mock.mock('@string(5,100)'),
+    planId: Mock.mock('@guid'),
     planScore: Mock.mock('@string(5,100)'),
     qualicaficationArray: Mock.mock('@string(5,100)'),
     qualicaficationCnt: Mock.mock('@integer(3,1000)'),
@@ -2786,12 +2786,12 @@ export function PageDoorHappyPoolResp() {
     regCatCnt: Mock.mock('@string(5,100)'),
     orangeeredCapital: Mock.mock('@string(5,100)'),
     score: Mock.mock('@integer(3,1000)'),
-    signId: Mock.mock('@string(5,100)'),
+    signId: Mock.mock('@guid'),
     skAchievementCnt: Mock.mock('@string(5,100)'),
     skQualificationCnt: Mock.mock('@string(5,100)'),
     source: Mock.mock('@string(5,100)'),
-    gratefulId: Mock.mock('@string(5,100)'),
-    thirdId: Mock.mock('@string(5,100)'),
+    gratefulId: Mock.mock('@guid'),
+    thirdId: Mock.mock('@guid'),
   }
 }
 export function PageLocationByTaskReq() {
@@ -2799,20 +2799,20 @@ export function PageLocationByTaskReq() {
     desktopName: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
-    taskId: Mock.mock('@string(5,100)'),
+    taskId: Mock.mock('@guid'),
   }
 }
 export function PageLocationReq() {
   return {
     area: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     desktopName: Mock.mock('@string(5,100)'),
-    endTime: Mock.mock('@datetime()'),
+    endTime: Mock.mock('@datetime'),
     'followerIdList|1-20': [Mock.mock('@string(5,100)')],
     page: Mock.mock('@integer(3,1000)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
     size: Mock.mock('@integer(3,1000)'),
-    startTime: Mock.mock('@datetime()'),
+    startTime: Mock.mock('@datetime'),
   }
 }
 export function PageCatHappyPoolResp() {
@@ -2827,12 +2827,12 @@ export function PageCatHappyPoolResp() {
     happyType: Mock.mock('@string(5,100)'),
     certificateName: Mock.mock('@string(5,100)'),
     certificateNum: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     'contactPhoneList|1-20': [LianXiRenHuaHuaTi()],
     coordinate: Mock.mock('@string(5,100)'),
     country: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    customerId: Mock.mock('@string(5,100)'),
+    customerId: Mock.mock('@guid'),
     customerMobile: Mock.mock('@string(5,100)'),
     customerName: Mock.mock('@string(5,100)'),
     customerType: Mock.mock('@string(5,100)'),
@@ -2840,31 +2840,31 @@ export function PageCatHappyPoolResp() {
     distance: Mock.mock('@string(5,100)'),
     education: Mock.mock('@string(5,100)'),
     'followInfoList|1-20': [HuaHuaTiQingQiu()],
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     followerName: Mock.mock('@string(5,100)'),
     gender: Mock.mock('@string(5,100)'),
     goodBehaviorCnt: Mock.mock('@string(5,100)'),
-    hasCustomer: Mock.mock('@boolean()'),
-    id: Mock.mock('@string(5,100)'),
+    hasCustomer: Mock.mock('@boolean'),
+    id: Mock.mock('@guid'),
     isMyself: Mock.mock('@integer(3,1000)'),
     isRead: Mock.mock('@integer(3,1000)'),
     isRetire: Mock.mock('@integer(3,1000)'),
-    lastFetchTime: Mock.mock('@datetime()'),
-    lastFollowTime: Mock.mock('@datetime()'),
-    licenseId: Mock.mock('@string(5,100)'),
+    lastFetchTime: Mock.mock('@datetime'),
+    lastFollowTime: Mock.mock('@datetime'),
+    licenseId: Mock.mock('@guid'),
     catName: Mock.mock('@string(5,100)'),
     catnelRisk: Mock.mock('@integer(3,1000)'),
     phone: Mock.mock('@string(5,100)'),
-    planId: Mock.mock('@string(5,100)'),
+    planId: Mock.mock('@guid'),
     planScore: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
     recommendedReason: Mock.mock('@string(5,100)'),
-    signId: Mock.mock('@string(5,100)'),
+    signId: Mock.mock('@guid'),
     skCertificateCnt: Mock.mock('@string(5,100)'),
     source: Mock.mock('@string(5,100)'),
-    gratefulId: Mock.mock('@string(5,100)'),
-    thirdId: Mock.mock('@string(5,100)'),
-    title: Mock.mock('@string(5,100)'),
+    gratefulId: Mock.mock('@guid'),
+    thirdId: Mock.mock('@guid'),
+    title: Mock.mock('@ctitle(5,20)'),
     workYear: Mock.mock('@integer(3,1000)'),
   }
 }
@@ -2875,14 +2875,14 @@ export function PagePlanResp() {
     coordinate: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
     distance: Mock.mock('@string(5,100)'),
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     followerName: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     isMyself: Mock.mock('@integer(3,1000)'),
     isRead: Mock.mock('@integer(3,1000)'),
-    lastFetchTime: Mock.mock('@datetime()'),
-    lastFollowTime: Mock.mock('@datetime()'),
-    planId: Mock.mock('@string(5,100)'),
+    lastFetchTime: Mock.mock('@datetime'),
+    lastFollowTime: Mock.mock('@datetime'),
+    planId: Mock.mock('@guid'),
     planScore: Mock.mock('@string(5,100)'),
     planSource: Mock.mock('@string(5,100)'),
     planStatus: Mock.mock('@string(5,100)'),
@@ -2891,7 +2891,7 @@ export function PagePlanResp() {
     relStatus: Mock.mock('@string(5,100)'),
     relType: Mock.mock('@string(5,100)'),
     source: Mock.mock('@string(5,100)'),
-    gratefulId: Mock.mock('@string(5,100)'),
+    gratefulId: Mock.mock('@guid'),
   }
 }
 export function PageGladHappyPoolResp() {
@@ -2902,95 +2902,95 @@ export function PageGladHappyPoolResp() {
     agenciesAddrLat: Mock.mock('@string(5,100)'),
     agenciesAddrLng: Mock.mock('@string(5,100)'),
     agenciesArea: Mock.mock('@string(5,100)'),
-    agenciesCity: Mock.mock('@string(5,100)'),
+    agenciesCity: Mock.mock('@city'),
     agenciesCountry: Mock.mock('@string(5,100)'),
     agenciesPhone: Mock.mock('@string(5,100)'),
-    agenciesProvince: Mock.mock('@string(5,100)'),
+    agenciesProvince: Mock.mock('@province'),
     biddingCorpAddr: Mock.mock('@string(5,100)'),
     biddingCorpAddrLat: Mock.mock('@string(5,100)'),
     biddingCorpAddrLng: Mock.mock('@string(5,100)'),
     biddingCorpArea: Mock.mock('@string(5,100)'),
-    biddingCorpCity: Mock.mock('@string(5,100)'),
+    biddingCorpCity: Mock.mock('@city'),
     biddingCorpName: Mock.mock('@string(5,100)'),
     biddingCorpPhone: Mock.mock('@string(5,100)'),
-    biddingCorpProvince: Mock.mock('@string(5,100)'),
-    biddingEndTime: Mock.mock('@datetime()'),
-    biddingOpeningTime: Mock.mock('@datetime()'),
-    biddingStartTime: Mock.mock('@datetime()'),
+    biddingCorpProvince: Mock.mock('@province'),
+    biddingEndTime: Mock.mock('@datetime'),
+    biddingOpeningTime: Mock.mock('@datetime'),
+    biddingStartTime: Mock.mock('@datetime'),
     biddingType: Mock.mock('@string(5,100)'),
     happyStatus: Mock.mock('@string(5,100)'),
     happyType: Mock.mock('@string(5,100)'),
     'contactPhoneList|1-20': [LianXiRenHuaHuaTi()],
     coordinate: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    customerId: Mock.mock('@string(5,100)'),
+    customerId: Mock.mock('@guid'),
     customerType: Mock.mock('@string(5,100)'),
     dataLocation: Mock.mock('@string(5,100)'),
     distance: Mock.mock('@string(5,100)'),
-    fileDownloadEndTime: Mock.mock('@datetime()'),
-    fileDownloadStartTime: Mock.mock('@datetime()'),
+    fileDownloadEndTime: Mock.mock('@datetime'),
+    fileDownloadStartTime: Mock.mock('@datetime'),
     'followInfoList|1-20': [HuaHuaTiQingQiu()],
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     followerName: Mock.mock('@string(5,100)'),
-    hasCustomer: Mock.mock('@boolean()'),
-    id: Mock.mock('@string(5,100)'),
+    hasCustomer: Mock.mock('@boolean'),
+    id: Mock.mock('@guid'),
     industryType: Mock.mock('@string(5,100)'),
     isMyself: Mock.mock('@integer(3,1000)'),
     isRead: Mock.mock('@integer(3,1000)'),
-    lastFetchTime: Mock.mock('@datetime()'),
-    lastFollowTime: Mock.mock('@datetime()'),
+    lastFetchTime: Mock.mock('@datetime'),
+    lastFollowTime: Mock.mock('@datetime'),
     phone: Mock.mock('@string(5,100)'),
-    planId: Mock.mock('@string(5,100)'),
+    planId: Mock.mock('@guid'),
     planScore: Mock.mock('@string(5,100)'),
     gladBudget: Mock.mock('@string(5,100)'),
     gladName: Mock.mock('@string(5,100)'),
     gladType: Mock.mock('@string(5,100)'),
-    publishTime: Mock.mock('@datetime()'),
-    quoteBeginTime: Mock.mock('@datetime()'),
-    quoteEndTime: Mock.mock('@datetime()'),
+    publishTime: Mock.mock('@datetime'),
+    quoteBeginTime: Mock.mock('@datetime'),
+    quoteEndTime: Mock.mock('@datetime'),
     recommendedReason: Mock.mock('@string(5,100)'),
-    signId: Mock.mock('@string(5,100)'),
-    signUpBeginTime: Mock.mock('@datetime()'),
-    signUpEndTime: Mock.mock('@datetime()'),
+    signId: Mock.mock('@guid'),
+    signUpBeginTime: Mock.mock('@datetime'),
+    signUpEndTime: Mock.mock('@datetime'),
     source: Mock.mock('@string(5,100)'),
-    gratefulId: Mock.mock('@string(5,100)'),
-    thirdId: Mock.mock('@string(5,100)'),
-    valid: Mock.mock('@integer(3,1000)'),
+    gratefulId: Mock.mock('@guid'),
+    thirdId: Mock.mock('@guid'),
+    valid: Mock.mock('@guid'),
   }
 }
 export function GladSignInfoResp() {
   return {
-    applyKeyBorardId: Mock.mock('@string(5,100)'),
+    applyKeyBorardId: Mock.mock('@guid'),
     applyKeyBorardName: Mock.mock('@string(5,100)'),
     belongCompany: Mock.mock('@string(5,100)'),
-    belongCompanyId: Mock.mock('@string(5,100)'),
-    bidEndDate: Mock.mock('@datetime()'),
-    bidOpenDate: Mock.mock('@datetime()'),
-    bidStartDate: Mock.mock('@datetime()'),
-    biddingAgencyId: Mock.mock('@string(5,100)'),
+    belongCompanyId: Mock.mock('@guid'),
+    bidEndDate: Mock.mock('@datetime'),
+    bidOpenDate: Mock.mock('@datetime'),
+    bidStartDate: Mock.mock('@datetime'),
+    biddingAgencyId: Mock.mock('@guid'),
     biddingAgencyName: Mock.mock('@string(5,100)'),
     happyStatus: Mock.mock('@string(5,100)'),
-    cainfoId: Mock.mock('@string(5,100)'),
+    cainfoId: Mock.mock('@guid'),
     cainfoName: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
-    county: Mock.mock('@string(5,100)'),
-    customerId: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
+    county: Mock.mock('@county'),
+    customerId: Mock.mock('@guid'),
     customerName: Mock.mock('@string(5,100)'),
-    isBid: Mock.mock('@boolean()'),
-    isPreApproval: Mock.mock('@boolean()'),
-    paramsOneId: Mock.mock('@string(5,100)'),
+    isBid: Mock.mock('@guid'),
+    isPreApproval: Mock.mock('@boolean'),
+    paramsOneId: Mock.mock('@guid'),
     paramsOneName: Mock.mock('@string(5,100)'),
     gladName: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
     street: Mock.mock('@string(5,100)'),
-    templateId: Mock.mock('@string(5,100)'),
+    templateId: Mock.mock('@guid'),
     templateName: Mock.mock('@string(5,100)'),
     township: Mock.mock('@string(5,100)'),
   }
 }
 export function PunchPageReq() {
   return {
-    happyId: Mock.mock('@string(5,100)'),
+    happyId: Mock.mock('@guid'),
     happyType: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
@@ -3000,32 +3000,32 @@ export function PunchPageResp() {
   return {
     addr: Mock.mock('@string(5,100)'),
     area: Mock.mock('@string(5,100)'),
-    happyId: Mock.mock('@string(5,100)'),
+    happyId: Mock.mock('@guid'),
     happyType: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     coordinate: Mock.mock('@string(5,100)'),
     country: Mock.mock('@string(5,100)'),
     createName: Mock.mock('@string(5,100)'),
-    'imageUrlList|1-20': [Mock.mock('@string(5,100)')],
+    'imageUrlList|1-20': [Mock.mock('@url')],
     location: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
-    punchTime: Mock.mock('@datetime()'),
+    province: Mock.mock('@province'),
+    punchTime: Mock.mock('@datetime'),
   }
 }
 export function PunchReq() {
   return {
     addr: Mock.mock('@string(5,100)'),
     area: Mock.mock('@string(5,100)'),
-    happyId: Mock.mock('@string(5,100)'),
+    happyId: Mock.mock('@guid'),
     happyType: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     coordinate: Mock.mock('@string(5,100)'),
     country: Mock.mock('@string(5,100)'),
-    date: Mock.mock('@datetime()'),
+    date: Mock.mock('@datetime'),
     'fileIdList|1-20': [Mock.mock('@string(5,100)')],
     followResult: Mock.mock('@string(5,100)'),
     location: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
   }
 }
 export function RankResp() {
@@ -3043,7 +3043,7 @@ export function ReceiveHappyReq() {
 }
 export function Recommended2PlanReq() {
   return {
-    date: Mock.mock('@datetime()'),
+    date: Mock.mock('@datetime'),
   }
 }
 export function SelectCustomerDoorReq() {
@@ -3063,17 +3063,17 @@ export function TaskAddrResp() {
   return {
     addr: Mock.mock('@string(5,100)'),
     area: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     coordinate: Mock.mock('@string(5,100)'),
     country: Mock.mock('@string(5,100)'),
-    date: Mock.mock('@datetime()'),
+    date: Mock.mock('@datetime'),
     location: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
   }
 }
 export function TaskChangeStatusReq() {
   return {
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     taskStatus: Mock.mock('@string(5,100)'),
   }
 }
@@ -3081,23 +3081,23 @@ export function TaskCreateAddrReq() {
   return {
     addr: Mock.mock('@string(5,100)'),
     area: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     coordinate: Mock.mock('@string(5,100)'),
     country: Mock.mock('@string(5,100)'),
     location: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
     sort: Mock.mock('@integer(3,1000)'),
   }
 }
 export function TaskCreateWhiteReq() {
   return {
-    whiteId: Mock.mock('@string(5,100)'),
+    whiteId: Mock.mock('@guid'),
     whiteName: Mock.mock('@string(5,100)'),
   }
 }
 export function TaskCreateCatReq() {
   return {
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     followerName: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
   }
@@ -3106,18 +3106,18 @@ export function TaskCreateReq() {
   return {
     'addrList|1-20': [TaskCreateAddrReq()],
     dayHappyNum: Mock.mock('@integer(3,1000)'),
-    dayHappyOpen: Mock.mock('@boolean()'),
+    dayHappyOpen: Mock.mock('@boolean'),
     'whiteList|1-20': [TaskCreateWhiteReq()],
-    endTime: Mock.mock('@datetime()'),
+    endTime: Mock.mock('@datetime'),
     name: Mock.mock('@string(5,100)'),
     'catList|1-20': [TaskCreateCatReq()],
-    startTime: Mock.mock('@datetime()'),
+    startTime: Mock.mock('@datetime'),
     taskType: Mock.mock('@string(5,100)'),
   }
 }
 export function TaskWhiteResp() {
   return {
-    whiteId: Mock.mock('@string(5,100)'),
+    whiteId: Mock.mock('@guid'),
     whiteName: Mock.mock('@string(5,100)'),
   }
 }
@@ -3125,18 +3125,18 @@ export function TaskInfoResp() {
   return {
     'addrList|1-20': [TaskAddrResp()],
     allDays: Mock.mock('@string(5,100)'),
-    createId: Mock.mock('@string(5,100)'),
+    createId: Mock.mock('@guid'),
     created: Mock.mock('@string(5,100)'),
     dayHappyNum: Mock.mock('@integer(3,1000)'),
-    dayHappyOpen: Mock.mock('@boolean()'),
+    dayHappyOpen: Mock.mock('@boolean'),
     days: Mock.mock('@string(5,100)'),
     'whiteList|1-20': [TaskWhiteResp()],
-    endTime: Mock.mock('@datetime()'),
-    id: Mock.mock('@string(5,100)'),
-    isMyCreated: Mock.mock('@boolean()'),
+    endTime: Mock.mock('@datetime'),
+    id: Mock.mock('@guid'),
+    isMyCreated: Mock.mock('@boolean'),
     name: Mock.mock('@string(5,100)'),
     'catList|1-20': [TaskCatResp()],
-    startTime: Mock.mock('@datetime()'),
+    startTime: Mock.mock('@datetime'),
     taskStatus: Mock.mock('@string(5,100)'),
     taskType: Mock.mock('@string(5,100)'),
   }
@@ -3145,25 +3145,25 @@ export function TaskModifyReq() {
   return {
     'addrList|1-20': [TaskCreateAddrReq()],
     dayHappyNum: Mock.mock('@integer(3,1000)'),
-    dayHappyOpen: Mock.mock('@boolean()'),
+    dayHappyOpen: Mock.mock('@boolean'),
     'whiteList|1-20': [TaskCreateWhiteReq()],
-    endTime: Mock.mock('@datetime()'),
-    id: Mock.mock('@string(5,100)'),
+    endTime: Mock.mock('@datetime'),
+    id: Mock.mock('@guid'),
     name: Mock.mock('@string(5,100)'),
     'catList|1-20': [TaskCreateCatReq()],
-    startTime: Mock.mock('@datetime()'),
+    startTime: Mock.mock('@datetime'),
     taskType: Mock.mock('@string(5,100)'),
   }
 }
 export function TaskPageListReq() {
   return {
-    createEndTime: Mock.mock('@datetime()'),
-    createStartTime: Mock.mock('@datetime()'),
-    endTime: Mock.mock('@datetime()'),
+    createEndTime: Mock.mock('@datetime'),
+    createStartTime: Mock.mock('@datetime'),
+    endTime: Mock.mock('@datetime'),
     name: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
-    startTime: Mock.mock('@datetime()'),
+    startTime: Mock.mock('@datetime'),
     taskStatus: Mock.mock('@string(5,100)'),
     type: Mock.mock('@integer(3,1000)'),
   }
@@ -3172,42 +3172,42 @@ export function TaskPageListResp() {
   return {
     'addrList|1-20': [TaskAddrResp()],
     allDays: Mock.mock('@string(5,100)'),
-    createId: Mock.mock('@string(5,100)'),
+    createId: Mock.mock('@guid'),
     created: Mock.mock('@string(5,100)'),
     dayHappyNum: Mock.mock('@integer(3,1000)'),
-    dayHappyOpen: Mock.mock('@boolean()'),
+    dayHappyOpen: Mock.mock('@boolean'),
     days: Mock.mock('@string(5,100)'),
     'whiteList|1-20': [TaskWhiteResp()],
-    endTime: Mock.mock('@datetime()'),
-    id: Mock.mock('@string(5,100)'),
-    isMyCreated: Mock.mock('@boolean()'),
+    endTime: Mock.mock('@datetime'),
+    id: Mock.mock('@guid'),
+    isMyCreated: Mock.mock('@boolean'),
     name: Mock.mock('@string(5,100)'),
     'catList|1-20': [TaskCatResp()],
     progress: Mock.mock('TaskProgressResp()'),
-    startTime: Mock.mock('@datetime()'),
+    startTime: Mock.mock('@datetime'),
     taskStatus: Mock.mock('@string(5,100)'),
     taskType: Mock.mock('@string(5,100)'),
   }
 }
 export function TaskCatResp() {
   return {
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     followerName: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
   }
 }
 export function TaskProgressDetailReq() {
   return {
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     followerName: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
   }
 }
 export function TaskProgressDetailResp() {
   return {
     dayHappyNum: Mock.mock('@integer(3,1000)'),
-    dayHappyOpen: Mock.mock('@boolean()'),
-    followerId: Mock.mock('@string(5,100)'),
+    dayHappyOpen: Mock.mock('@boolean'),
+    followerId: Mock.mock('@guid'),
     followerName: Mock.mock('@string(5,100)'),
     lastLocation: Mock.mock('@string(5,100)'),
     'locationDataList|1-20': [TaskAddrResp()],
@@ -3221,9 +3221,9 @@ export function TaskProgressCatResp() {
     allDays: Mock.mock('@string(5,100)'),
     allTasks: Mock.mock('@string(5,100)'),
     dayHappyNum: Mock.mock('@integer(3,1000)'),
-    dayHappyOpen: Mock.mock('@boolean()'),
+    dayHappyOpen: Mock.mock('@boolean'),
     days: Mock.mock('@string(5,100)'),
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     followerName: Mock.mock('@string(5,100)'),
     taskFollow: Mock.mock('@string(5,100)'),
     taskStatus: Mock.mock('@string(5,100)'),
@@ -3253,7 +3253,7 @@ export function TravelLoginReq() {
 }
 export function TravelLoginResp() {
   return {
-    redirectUrl: Mock.mock('@string(5,100)'),
+    redirectUrl: Mock.mock('@url'),
   }
 }
 export function TreeNodeConfig() {
@@ -3277,25 +3277,25 @@ export function VerifyRepeatCustomerReq() {
   return {
     doorCode: Mock.mock('@string(5,100)'),
     doorName: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
   }
 }
 export function VerifyRepeatCatCustomerReq() {
   return {
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     catName: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
   }
 }
 export function ShangChuanWenJianFanHui() {
   return {
-    fileUrl: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    fileUrl: Mock.mock('@url'),
+    id: Mock.mock('@guid'),
   }
 }
 export function BuZaiGenJin() {
   return {
-    happyId: Mock.mock('@string(5,100)'),
+    happyId: Mock.mock('@guid'),
     happyType: Mock.mock('@string(5,100)'),
     flowType: Mock.mock('@string(5,100)'),
     noFollowReason: Mock.mock('@string(5,100)'),
@@ -3309,11 +3309,11 @@ export function ZhiXieChangFaCaiMengXiangQingrpcresponse() {
     contactName: Mock.mock('@string(5,100)'),
     corporateName: Mock.mock('@string(5,100)'),
     doorCode: Mock.mock('@string(5,100)'),
-    doorId: Mock.mock('@string(5,100)'),
+    doorId: Mock.mock('@guid'),
     doorName: Mock.mock('@string(5,100)'),
     doorStatus: Mock.mock('@string(5,100)'),
-    establishmentTime: Mock.mock('@datetime()'),
-    followerId: Mock.mock('@string(5,100)'),
+    establishmentTime: Mock.mock('@datetime'),
+    followerId: Mock.mock('@guid'),
     followerName: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
     regCatCnt: Mock.mock('@string(5,100)'),
@@ -3325,9 +3325,9 @@ export function ZhiXieChangFaCaiMengXiangQingrpcresponse() {
 }
 export function GuanLianFaCaiMengRequest() {
   return {
-    happyId: Mock.mock('@string(5,100)'),
+    happyId: Mock.mock('@guid'),
     happyType: Mock.mock('@string(5,100)'),
-    thirdId: Mock.mock('@string(5,100)'),
+    thirdId: Mock.mock('@guid'),
   }
 }
 export function GuanLianFaCaiMengResponse() {}
@@ -3338,27 +3338,27 @@ export function FenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu() {
     'contactPhoneList|1-20': [LianXiRenHuaHuaTi()],
     coordinate: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    customerId: Mock.mock('@string(5,100)'),
+    customerId: Mock.mock('@guid'),
     customerType: Mock.mock('@string(5,100)'),
     dataLocation: Mock.mock('@string(5,100)'),
     distance: Mock.mock('@string(5,100)'),
     'followInfoList|1-20': [HuaHuaTiQingQiu()],
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     followerName: Mock.mock('@string(5,100)'),
-    hasCustomer: Mock.mock('@boolean()'),
-    id: Mock.mock('@string(5,100)'),
+    hasCustomer: Mock.mock('@boolean'),
+    id: Mock.mock('@guid'),
     isMyself: Mock.mock('@integer(3,1000)'),
     isRead: Mock.mock('@integer(3,1000)'),
-    lastFetchTime: Mock.mock('@datetime()'),
-    lastFollowTime: Mock.mock('@datetime()'),
+    lastFetchTime: Mock.mock('@datetime'),
+    lastFollowTime: Mock.mock('@datetime'),
     catName: Mock.mock('@string(5,100)'),
-    planId: Mock.mock('@string(5,100)'),
+    planId: Mock.mock('@guid'),
     planScore: Mock.mock('@string(5,100)'),
     recommendedReason: Mock.mock('@string(5,100)'),
-    signId: Mock.mock('@string(5,100)'),
+    signId: Mock.mock('@guid'),
     source: Mock.mock('@string(5,100)'),
-    gratefulId: Mock.mock('@string(5,100)'),
-    thirdId: Mock.mock('@string(5,100)'),
+    gratefulId: Mock.mock('@guid'),
+    thirdId: Mock.mock('@guid'),
   }
 }
 export function FenYeLvYouRenCaiFaCaiMengJianDanShuJu() {
@@ -3367,23 +3367,23 @@ export function FenYeLvYouRenCaiFaCaiMengJianDanShuJu() {
     'addrList|1-20': [DiZhi()],
     area: Mock.mock('@string(5,100)'),
     happyStatus: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     coordinate: Mock.mock('@string(5,100)'),
-    createEndTime: Mock.mock('@datetime()'),
-    createStartTime: Mock.mock('@datetime()'),
-    customerId: Mock.mock('@string(5,100)'),
+    createEndTime: Mock.mock('@datetime'),
+    createStartTime: Mock.mock('@datetime'),
+    customerId: Mock.mock('@guid'),
     customerType: Mock.mock('@string(5,100)'),
     distance: Mock.mock('@string(5,100)'),
     followResult: Mock.mock('@string(5,100)'),
     followType: Mock.mock('@string(5,100)'),
     'followTypeList|1-20': [Mock.mock('@string(5,100)')],
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     isRead: Mock.mock('@integer(3,1000)'),
     name: Mock.mock('@string(5,100)'),
     orderColumn: Mock.mock('@string(5,100)'),
     orderType: Mock.mock('@integer(3,1000)'),
     page: Mock.mock('@integer(3,1000)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
     receiveType: Mock.mock('@string(5,100)'),
     size: Mock.mock('@integer(3,1000)'),
     source: Mock.mock('@string(5,100)'),
@@ -3401,17 +3401,17 @@ export function FenYeLvYouRenCaiFaCaiMengGongHai() {
     'certificateList|1-20': [Mock.mock('@string(5,100)')],
     certificateMajor: Mock.mock('@string(5,100)'),
     certificateName: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     coordinate: Mock.mock('@string(5,100)'),
-    createEndTime: Mock.mock('@datetime()'),
-    createStartTime: Mock.mock('@datetime()'),
-    customerId: Mock.mock('@string(5,100)'),
+    createEndTime: Mock.mock('@datetime'),
+    createStartTime: Mock.mock('@datetime'),
+    customerId: Mock.mock('@guid'),
     customerType: Mock.mock('@string(5,100)'),
     distance: Mock.mock('@string(5,100)'),
     followResult: Mock.mock('@string(5,100)'),
     followType: Mock.mock('@string(5,100)'),
     'followTypeList|1-20': [Mock.mock('@string(5,100)')],
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     isRead: Mock.mock('@integer(3,1000)'),
     level: Mock.mock('@string(5,100)'),
     'levelList|1-20': [Mock.mock('@string(5,100)')],
@@ -3421,13 +3421,13 @@ export function FenYeLvYouRenCaiFaCaiMengGongHai() {
     orderColumn: Mock.mock('@string(5,100)'),
     orderType: Mock.mock('@integer(3,1000)'),
     page: Mock.mock('@integer(3,1000)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
     receiveType: Mock.mock('@string(5,100)'),
     size: Mock.mock('@integer(3,1000)'),
     skCertificateCntMax: Mock.mock('@string(5,100)'),
     skCertificateCntMin: Mock.mock('@string(5,100)'),
     source: Mock.mock('@string(5,100)'),
-    taskId: Mock.mock('@string(5,100)'),
+    taskId: Mock.mock('@guid'),
     type: Mock.mock('@integer(3,1000)'),
   }
 }
@@ -3440,10 +3440,10 @@ export function FenYeLvYouRenCaiFaCaiMengTuiJian() {
     area: Mock.mock('@string(5,100)'),
     certificateMajor: Mock.mock('@string(5,100)'),
     certificateName: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     coordinate: Mock.mock('@string(5,100)'),
-    createEndTime: Mock.mock('@datetime()'),
-    createStartTime: Mock.mock('@datetime()'),
+    createEndTime: Mock.mock('@datetime'),
+    createStartTime: Mock.mock('@datetime'),
     distance: Mock.mock('@string(5,100)'),
     followResult: Mock.mock('@string(5,100)'),
     followType: Mock.mock('@string(5,100)'),
@@ -3456,8 +3456,8 @@ export function FenYeLvYouRenCaiFaCaiMengTuiJian() {
     orderColumn: Mock.mock('@string(5,100)'),
     orderType: Mock.mock('@integer(3,1000)'),
     page: Mock.mock('@integer(3,1000)'),
-    catnelRisk: Mock.mock('@boolean()'),
-    province: Mock.mock('@string(5,100)'),
+    catnelRisk: Mock.mock('@boolean'),
+    province: Mock.mock('@province'),
     size: Mock.mock('@integer(3,1000)'),
     skCertificateCntMax: Mock.mock('@string(5,100)'),
     skCertificateCntMin: Mock.mock('@string(5,100)'),
@@ -3467,12 +3467,12 @@ export function FenYeLvYouRenCaiFaCaiMengTuiJian() {
 export function FenYeLvYouRenWu() {
   return {
     cnt: Mock.mock('@string(5,100)'),
-    handlerId: Mock.mock('@string(5,100)'),
+    handlerId: Mock.mock('@guid'),
     handlerName: Mock.mock('@string(5,100)'),
     lastPunchAddr: Mock.mock('@string(5,100)'),
     'planHappyList|1-20': [PagePlanResp()],
     planCount: Mock.mock('@integer(3,1000)'),
-    planKeyBorardId: Mock.mock('@string(5,100)'),
+    planKeyBorardId: Mock.mock('@guid'),
     'signHappyList|1-20': [PagePlanResp()],
     signCount: Mock.mock('@integer(3,1000)'),
   }
@@ -3484,27 +3484,27 @@ export function FenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu() {
     'contactPhoneList|1-20': [LianXiRenHuaHuaTi()],
     coordinate: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    customerId: Mock.mock('@string(5,100)'),
+    customerId: Mock.mock('@guid'),
     customerType: Mock.mock('@string(5,100)'),
     dataLocation: Mock.mock('@string(5,100)'),
     distance: Mock.mock('@string(5,100)'),
     doorName: Mock.mock('@string(5,100)'),
     'followInfoList|1-20': [HuaHuaTiQingQiu()],
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     followerName: Mock.mock('@string(5,100)'),
-    hasCustomer: Mock.mock('@boolean()'),
-    id: Mock.mock('@string(5,100)'),
+    hasCustomer: Mock.mock('@boolean'),
+    id: Mock.mock('@guid'),
     isMyself: Mock.mock('@integer(3,1000)'),
     isRead: Mock.mock('@integer(3,1000)'),
-    lastFetchTime: Mock.mock('@datetime()'),
-    lastFollowTime: Mock.mock('@datetime()'),
-    planId: Mock.mock('@string(5,100)'),
+    lastFetchTime: Mock.mock('@datetime'),
+    lastFollowTime: Mock.mock('@datetime'),
+    planId: Mock.mock('@guid'),
     planScore: Mock.mock('@string(5,100)'),
     recommendedReason: Mock.mock('@string(5,100)'),
-    signId: Mock.mock('@string(5,100)'),
+    signId: Mock.mock('@guid'),
     source: Mock.mock('@string(5,100)'),
-    gratefulId: Mock.mock('@string(5,100)'),
-    thirdId: Mock.mock('@string(5,100)'),
+    gratefulId: Mock.mock('@guid'),
+    thirdId: Mock.mock('@guid'),
   }
 }
 export function FenYeLvYouZhiXieChangFaCaiMengJianDanShuJu() {
@@ -3520,17 +3520,17 @@ export function FenYeLvYouZhiXieChangFaCaiMengGongHai() {
     'addrList|1-20': [DiZhi()],
     area: Mock.mock('@string(5,100)'),
     happyStatus: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     coordinate: Mock.mock('@string(5,100)'),
     'corpCertList|1-20': [Mock.mock('@string(5,100)')],
     corpCertMax: Mock.mock('@string(5,100)'),
     corpCertMin: Mock.mock('@string(5,100)'),
-    createEndTime: Mock.mock('@datetime()'),
-    createStartTime: Mock.mock('@datetime()'),
-    customerId: Mock.mock('@string(5,100)'),
+    createEndTime: Mock.mock('@datetime'),
+    createStartTime: Mock.mock('@datetime'),
+    customerId: Mock.mock('@guid'),
     customerType: Mock.mock('@string(5,100)'),
     distance: Mock.mock('@string(5,100)'),
-    endTime: Mock.mock('@datetime()'),
+    endTime: Mock.mock('@datetime'),
     doorStatus: Mock.mock('@string(5,100)'),
     'doorType|1-20': [Mock.mock('@string(5,100)')],
     'doorTypeList|1-20': [Mock.mock('@string(5,100)')],
@@ -3539,7 +3539,7 @@ export function FenYeLvYouZhiXieChangFaCaiMengGongHai() {
     followResult: Mock.mock('@string(5,100)'),
     followType: Mock.mock('@string(5,100)'),
     'followTypeList|1-20': [Mock.mock('@string(5,100)')],
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     'industryType|1-20': [Mock.mock('@string(5,100)')],
     isRead: Mock.mock('@integer(3,1000)'),
     'lackCorpCertList|1-20': [Mock.mock('@string(5,100)')],
@@ -3548,7 +3548,7 @@ export function FenYeLvYouZhiXieChangFaCaiMengGongHai() {
     orderColumn: Mock.mock('@string(5,100)'),
     orderType: Mock.mock('@integer(3,1000)'),
     page: Mock.mock('@integer(3,1000)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
     'qualicaficationList|1-20': [Mock.mock('@string(5,100)')],
     qualicaficationMax: Mock.mock('@string(5,100)'),
     qualicaficationMin: Mock.mock('@string(5,100)'),
@@ -3565,8 +3565,8 @@ export function FenYeLvYouZhiXieChangFaCaiMengGongHai() {
     skQualificationCntMax: Mock.mock('@string(5,100)'),
     skQualificationCntMin: Mock.mock('@string(5,100)'),
     source: Mock.mock('@string(5,100)'),
-    startTime: Mock.mock('@datetime()'),
-    taskId: Mock.mock('@string(5,100)'),
+    startTime: Mock.mock('@datetime'),
+    taskId: Mock.mock('@guid'),
     type: Mock.mock('@integer(3,1000)'),
   }
 }
@@ -3575,15 +3575,15 @@ export function FenYeLvYouZhiXieChangFaCaiMengTuiJian() {
     addr: Mock.mock('@string(5,100)'),
     'addrList|1-20': [DiZhi()],
     area: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     coordinate: Mock.mock('@string(5,100)'),
     'corpCertList|1-20': [Mock.mock('@string(5,100)')],
     corpCertMax: Mock.mock('@string(5,100)'),
     corpCertMin: Mock.mock('@string(5,100)'),
-    createEndTime: Mock.mock('@datetime()'),
-    createStartTime: Mock.mock('@datetime()'),
+    createEndTime: Mock.mock('@datetime'),
+    createStartTime: Mock.mock('@datetime'),
     distance: Mock.mock('@string(5,100)'),
-    endTime: Mock.mock('@datetime()'),
+    endTime: Mock.mock('@datetime'),
     doorStatus: Mock.mock('@string(5,100)'),
     'filialeCompanyList|1-20': [Mock.mock('@string(5,100)')],
     filialeCompanyMax: Mock.mock('@string(5,100)'),
@@ -3595,7 +3595,7 @@ export function FenYeLvYouZhiXieChangFaCaiMengTuiJian() {
     orderColumn: Mock.mock('@string(5,100)'),
     orderType: Mock.mock('@integer(3,1000)'),
     page: Mock.mock('@integer(3,1000)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
     'qualicaficationList|1-20': [Mock.mock('@string(5,100)')],
     qualicaficationMax: Mock.mock('@string(5,100)'),
     qualicaficationMin: Mock.mock('@string(5,100)'),
@@ -3610,7 +3610,7 @@ export function FenYeLvYouZhiXieChangFaCaiMengTuiJian() {
     skAchievementCntMin: Mock.mock('@string(5,100)'),
     skQualificationCntMax: Mock.mock('@string(5,100)'),
     skQualificationCntMin: Mock.mock('@string(5,100)'),
-    startTime: Mock.mock('@datetime()'),
+    startTime: Mock.mock('@datetime'),
     type: Mock.mock('@integer(3,1000)'),
   }
 }
@@ -3621,27 +3621,27 @@ export function FenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu() {
     'contactPhoneList|1-20': [LianXiRenHuaHuaTi()],
     coordinate: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    customerId: Mock.mock('@string(5,100)'),
+    customerId: Mock.mock('@guid'),
     customerType: Mock.mock('@string(5,100)'),
     dataLocation: Mock.mock('@string(5,100)'),
     distance: Mock.mock('@string(5,100)'),
     'followInfoList|1-20': [HuaHuaTiQingQiu()],
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     followerName: Mock.mock('@string(5,100)'),
-    hasCustomer: Mock.mock('@boolean()'),
-    id: Mock.mock('@string(5,100)'),
+    hasCustomer: Mock.mock('@boolean'),
+    id: Mock.mock('@guid'),
     isMyself: Mock.mock('@integer(3,1000)'),
     isRead: Mock.mock('@integer(3,1000)'),
-    lastFetchTime: Mock.mock('@datetime()'),
-    lastFollowTime: Mock.mock('@datetime()'),
-    planId: Mock.mock('@string(5,100)'),
+    lastFetchTime: Mock.mock('@datetime'),
+    lastFollowTime: Mock.mock('@datetime'),
+    planId: Mock.mock('@guid'),
     planScore: Mock.mock('@string(5,100)'),
     gladName: Mock.mock('@string(5,100)'),
     recommendedReason: Mock.mock('@string(5,100)'),
-    signId: Mock.mock('@string(5,100)'),
+    signId: Mock.mock('@guid'),
     source: Mock.mock('@string(5,100)'),
-    gratefulId: Mock.mock('@string(5,100)'),
-    thirdId: Mock.mock('@string(5,100)'),
+    gratefulId: Mock.mock('@guid'),
+    thirdId: Mock.mock('@guid'),
   }
 }
 export function FenYeLvYouXiangMuFaCaiMengJianDanShuJu() {
@@ -3650,23 +3650,23 @@ export function FenYeLvYouXiangMuFaCaiMengJianDanShuJu() {
     'addrList|1-20': [DiZhi()],
     area: Mock.mock('@string(5,100)'),
     happyStatus: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     coordinate: Mock.mock('@string(5,100)'),
-    createEndTime: Mock.mock('@datetime()'),
-    createStartTime: Mock.mock('@datetime()'),
-    customerId: Mock.mock('@string(5,100)'),
+    createEndTime: Mock.mock('@datetime'),
+    createStartTime: Mock.mock('@datetime'),
+    customerId: Mock.mock('@guid'),
     customerType: Mock.mock('@string(5,100)'),
     distance: Mock.mock('@string(5,100)'),
     followResult: Mock.mock('@string(5,100)'),
     followType: Mock.mock('@string(5,100)'),
     'followTypeList|1-20': [Mock.mock('@string(5,100)')],
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     isRead: Mock.mock('@integer(3,1000)'),
     name: Mock.mock('@string(5,100)'),
     orderColumn: Mock.mock('@string(5,100)'),
     orderType: Mock.mock('@integer(3,1000)'),
     page: Mock.mock('@integer(3,1000)'),
-    province: Mock.mock('@string(5,100)'),
+    province: Mock.mock('@province'),
     receiveType: Mock.mock('@string(5,100)'),
     size: Mock.mock('@integer(3,1000)'),
     source: Mock.mock('@string(5,100)'),
@@ -3679,10 +3679,10 @@ export function FenYeLvYouXiangMuFaCaiMengTuiJian() {
     'addrList|1-20': [DiZhi()],
     area: Mock.mock('@string(5,100)'),
     biddingType: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     coordinate: Mock.mock('@string(5,100)'),
-    createEndTime: Mock.mock('@datetime()'),
-    createStartTime: Mock.mock('@datetime()'),
+    createEndTime: Mock.mock('@datetime'),
+    createStartTime: Mock.mock('@datetime'),
     distance: Mock.mock('@string(5,100)'),
     followResult: Mock.mock('@string(5,100)'),
     followType: Mock.mock('@string(5,100)'),
@@ -3695,35 +3695,35 @@ export function FenYeLvYouXiangMuFaCaiMengTuiJian() {
     gladBudgetMax: Mock.mock('@string(5,100)'),
     gladBudgetMin: Mock.mock('@string(5,100)'),
     'gladTypeList|1-20': [Mock.mock('@string(5,100)')],
-    province: Mock.mock('@string(5,100)'),
-    publishEndTime: Mock.mock('@datetime()'),
-    publishStartTime: Mock.mock('@datetime()'),
-    signUpBeginTime: Mock.mock('@datetime()'),
-    signUpEndTime: Mock.mock('@datetime()'),
+    province: Mock.mock('@province'),
+    publishEndTime: Mock.mock('@datetime'),
+    publishStartTime: Mock.mock('@datetime'),
+    signUpBeginTime: Mock.mock('@datetime'),
+    signUpEndTime: Mock.mock('@datetime'),
     size: Mock.mock('@integer(3,1000)'),
     type: Mock.mock('@integer(3,1000)'),
-    valid: Mock.mock('@integer(3,1000)'),
+    valid: Mock.mock('@guid'),
   }
 }
 export function HuaHuaTiQingQiu() {
   return {
     addr: Mock.mock('@string(5,100)'),
-    happyId: Mock.mock('@string(5,100)'),
+    happyId: Mock.mock('@guid'),
     happyName: Mock.mock('@string(5,100)'),
     happyStatus: Mock.mock('@string(5,100)'),
     happyType: Mock.mock('@string(5,100)'),
-    contactCatId: Mock.mock('@string(5,100)'),
+    contactCatId: Mock.mock('@guid'),
     contactCatName: Mock.mock('@string(5,100)'),
     contactCatNum: Mock.mock('@string(5,100)'),
     contactCatType: Mock.mock('@integer(3,1000)'),
     content: Mock.mock('@string(5,100)'),
     coordinate: Mock.mock('@string(5,100)'),
     followResult: Mock.mock('@string(5,100)'),
-    followTime: Mock.mock('@datetime()'),
+    followTime: Mock.mock('@datetime'),
     followType: Mock.mock('@string(5,100)'),
     follower: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
-    'imageUrlList|1-20': [Mock.mock('@string(5,100)')],
+    id: Mock.mock('@guid'),
+    'imageUrlList|1-20': [Mock.mock('@url')],
   }
 }
 export function YuMiHuaHuaTiQingQiu() {
@@ -3736,7 +3736,7 @@ export function YuMiHuaHuaTiQingQiu() {
 }
 export function FaCaiMengGenJinJiLuQingQiu() {
   return {
-    happyId: Mock.mock('@string(5,100)'),
+    happyId: Mock.mock('@guid'),
     happyType: Mock.mock('@string(5,100)'),
     'flowType|1-20': [Mock.mock('@string(5,100)')],
     page: Mock.mock('@integer(3,1000)'),
@@ -3746,33 +3746,33 @@ export function FaCaiMengGenJinJiLuQingQiu() {
 export function DiZhi() {
   return {
     area: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
-    province: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
+    province: Mock.mock('@province'),
   }
 }
 export function JiQiRenGenJinJiLuXiangYing() {
   return {
     addr: Mock.mock('@string(5,100)'),
-    contactCatId: Mock.mock('@string(5,100)'),
+    contactCatId: Mock.mock('@guid'),
     contactCatName: Mock.mock('@string(5,100)'),
     contactCatNum: Mock.mock('@string(5,100)'),
     contactCatType: Mock.mock('@integer(3,1000)'),
     content: Mock.mock('@string(5,100)'),
     coordinate: Mock.mock('@string(5,100)'),
-    customerId: Mock.mock('@string(5,100)'),
+    customerId: Mock.mock('@guid'),
     customerName: Mock.mock('@string(5,100)'),
     customerType: Mock.mock('@string(5,100)'),
     followResult: Mock.mock('@string(5,100)'),
-    followTime: Mock.mock('@datetime()'),
+    followTime: Mock.mock('@datetime'),
     followType: Mock.mock('@string(5,100)'),
     follower: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
-    'imageUrlList|1-20': [Mock.mock('@string(5,100)')],
+    id: Mock.mock('@guid'),
+    'imageUrlList|1-20': [Mock.mock('@url')],
   }
 }
 export function JiQiRenGenJinJiLuQingQiu() {
   return {
-    customerId: Mock.mock('@string(5,100)'),
+    customerId: Mock.mock('@guid'),
     customerType: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
@@ -3783,8 +3783,8 @@ export function DaoRuHuaHuaTiXiangYing() {
     'failData|1-20': [FailData()],
     failNum: Mock.mock('@integer(3,1000)'),
     fileName: Mock.mock('@string(5,100)'),
-    fileUrl: Mock.mock('@string(5,100)'),
-    importTime: Mock.mock('@datetime()'),
+    fileUrl: Mock.mock('@url'),
+    importTime: Mock.mock('@datetime'),
     operator: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
@@ -3794,10 +3794,10 @@ export function DaoRuHuaHuaTiXiangYing() {
 }
 export function DaoRuHuaHuaTiQingQiu() {
   return {
-    endTime: Mock.mock('@datetime()'),
+    endTime: Mock.mock('@datetime'),
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
-    startTime: Mock.mock('@datetime()'),
+    startTime: Mock.mock('@datetime'),
     taskType: Mock.mock('@integer(3,1000)'),
   }
 }
@@ -3820,15 +3820,15 @@ export function PaiMingShuJuRankDataResp() {
   return {
     dealData: Mock.mock('@integer(3,1000)'),
     followData: Mock.mock('@integer(3,1000)'),
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     followerName: Mock.mock('@string(5,100)'),
     newData: Mock.mock('@integer(3,1000)'),
   }
 }
 export function PaiMingTongJiPieDataReq() {
   return {
-    beginTime: Mock.mock('@datetime()'),
-    endTime: Mock.mock('@datetime()'),
+    beginTime: Mock.mock('@datetime'),
+    endTime: Mock.mock('@datetime'),
   }
 }
 export function PaiMingTongJiRankDataReq() {
@@ -3845,7 +3845,7 @@ export function SouSuoRenCaiJiQiRenrequest() {
 }
 export function SouSuoRenCaiJiQiRenresponse() {
   return {
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     catName: Mock.mock('@string(5,100)'),
   }
 }
@@ -3859,14 +3859,14 @@ export function SouSuoZhiXieChangJiQiRenrequest() {
 export function SouSuoZhiXieChangJiQiRenresponse() {
   return {
     doorName: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
   }
 }
 export function CaoZuoRiZhiFenYerequest() {
   return {
-    bizId: Mock.mock('@string(5,100)'),
+    bizId: Mock.mock('@guid'),
     bizType: Mock.mock('@string(5,100)'),
-    operatorId: Mock.mock('@string(5,100)'),
+    operatorId: Mock.mock('@guid'),
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
   }
@@ -3874,8 +3874,8 @@ export function CaoZuoRiZhiFenYerequest() {
 export function CaoZuoRiZhiFenYeresponse() {
   return {
     content: Mock.mock('@string(5,100)'),
-    logId: Mock.mock('@string(5,100)'),
-    operateTime: Mock.mock('@datetime()'),
+    logId: Mock.mock('@guid'),
+    operateTime: Mock.mock('@datetime'),
     operateType: Mock.mock('@string(5,100)'),
     operator: Mock.mock('@string(5,100)'),
   }
@@ -3888,26 +3888,26 @@ export function GuanShuiXiangMuFaCaiMengrpcChongDong() {
     agenciesAddrLat: Mock.mock('@string(5,100)'),
     agenciesAddrLng: Mock.mock('@string(5,100)'),
     agenciesArea: Mock.mock('@string(5,100)'),
-    agenciesCity: Mock.mock('@string(5,100)'),
+    agenciesCity: Mock.mock('@city'),
     agenciesCountry: Mock.mock('@string(5,100)'),
     agenciesPhone: Mock.mock('@string(5,100)'),
-    agenciesProvince: Mock.mock('@string(5,100)'),
+    agenciesProvince: Mock.mock('@province'),
     biddingCorpAddr: Mock.mock('@string(5,100)'),
     biddingCorpAddrCoordinate: Mock.mock('@string(5,100)'),
     biddingCorpAddrLat: Mock.mock('@string(5,100)'),
     biddingCorpAddrLng: Mock.mock('@string(5,100)'),
     biddingCorpArea: Mock.mock('@string(5,100)'),
-    biddingCorpCity: Mock.mock('@string(5,100)'),
+    biddingCorpCity: Mock.mock('@city'),
     biddingCorpCountry: Mock.mock('@string(5,100)'),
     biddingCorpName: Mock.mock('@string(5,100)'),
     biddingCorpPhone: Mock.mock('@string(5,100)'),
-    biddingCorpProvince: Mock.mock('@string(5,100)'),
-    biddingEndTime: Mock.mock('@datetime()'),
-    biddingOpeningTime: Mock.mock('@datetime()'),
-    biddingStartTime: Mock.mock('@datetime()'),
+    biddingCorpProvince: Mock.mock('@province'),
+    biddingEndTime: Mock.mock('@datetime'),
+    biddingOpeningTime: Mock.mock('@datetime'),
+    biddingStartTime: Mock.mock('@datetime'),
     biddingType: Mock.mock('@string(5,100)'),
-    fileDownloadEndTime: Mock.mock('@datetime()'),
-    fileDownloadStartTime: Mock.mock('@datetime()'),
+    fileDownloadEndTime: Mock.mock('@datetime'),
+    fileDownloadStartTime: Mock.mock('@datetime'),
     industryType: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
     gladBudget: Mock.mock('@string(5,100)'),
@@ -3924,13 +3924,13 @@ export function GengGaiPaiXuDuiXiang() {
 export function ZhuZhuangTuTongJiHistogramDataReq() {
   return {
     happyType: Mock.mock('@string(5,100)'),
-    dateType: Mock.mock('@datetime()'),
+    dateType: Mock.mock('@datetime'),
   }
 }
 export function TianJiaLianXiRenQingQiu() {
   return {
     name: Mock.mock('@string(5,100)'),
-    relId: Mock.mock('@string(5,100)'),
+    relId: Mock.mock('@guid'),
     relType: Mock.mock('@integer(3,1000)'),
     remark: Mock.mock('@string(5,100)'),
     type: Mock.mock('@integer(3,1000)'),
@@ -3939,27 +3939,27 @@ export function TianJiaLianXiRenQingQiu() {
 }
 export function HongLingJinRequest() {
   return {
-    happyId: Mock.mock('@string(5,100)'),
+    happyId: Mock.mock('@guid'),
     happySource: Mock.mock('@string(5,100)'),
     happyType: Mock.mock('@string(5,100)'),
-    customerId: Mock.mock('@string(5,100)'),
+    customerId: Mock.mock('@guid'),
     customerType: Mock.mock('@string(5,100)'),
-    radarHappyId: Mock.mock('@string(5,100)'),
+    radarHappyId: Mock.mock('@guid'),
     signType: Mock.mock('@string(5,100)'),
   }
 }
 export function HongLingJinJieGuoresponse() {
   return {
-    happyId: Mock.mock('@string(5,100)'),
+    happyId: Mock.mock('@guid'),
     mobile: Mock.mock('@string(5,100)'),
-    signId: Mock.mock('@string(5,100)'),
+    signId: Mock.mock('@guid'),
   }
 }
 export function HongLingJinJiLuFenYerequest() {
   return {
-    happyId: Mock.mock('@string(5,100)'),
+    happyId: Mock.mock('@guid'),
     happyType: Mock.mock('@string(5,100)'),
-    customerId: Mock.mock('@string(5,100)'),
+    customerId: Mock.mock('@guid'),
     customerType: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
@@ -3967,21 +3967,21 @@ export function HongLingJinJiLuFenYerequest() {
 }
 export function HongLingJinJiLuFenYeresponse() {
   return {
-    happyId: Mock.mock('@string(5,100)'),
+    happyId: Mock.mock('@guid'),
     happyName: Mock.mock('@string(5,100)'),
     happyType: Mock.mock('@string(5,100)'),
     content: Mock.mock('@string(5,100)'),
     created: Mock.mock('@string(5,100)'),
-    customerId: Mock.mock('@string(5,100)'),
+    customerId: Mock.mock('@guid'),
     customerType: Mock.mock('@string(5,100)'),
-    dealTime: Mock.mock('@datetime()'),
+    dealTime: Mock.mock('@datetime'),
     dealType: Mock.mock('@string(5,100)'),
     handler: Mock.mock('@string(5,100)'),
-    handlerId: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    handlerId: Mock.mock('@guid'),
+    id: Mock.mock('@guid'),
     schedule: Mock.mock('@string(5,100)'),
     signingType: Mock.mock('@string(5,100)'),
-    thirdId: Mock.mock('@string(5,100)'),
+    thirdId: Mock.mock('@guid'),
   }
 }
 export function TongJiShuJuHistogramDataResp() {
@@ -4013,9 +4013,9 @@ export function TongJiShuJuPieDataResp() {
 }
 export function LianXiRenHuaHuaTi() {
   return {
-    addDate: Mock.mock('@datetime()'),
+    addDate: Mock.mock('@datetime'),
     addName: Mock.mock('@string(5,100)'),
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
     name: Mock.mock('@string(5,100)'),
     remark: Mock.mock('@string(5,100)'),
     type: Mock.mock('@integer(3,1000)'),
@@ -4026,7 +4026,7 @@ export function LianXiRenHuaHuaTiQingQiu() {
   return {
     name: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
-    relId: Mock.mock('@string(5,100)'),
+    relId: Mock.mock('@guid'),
     relType: Mock.mock('@integer(3,1000)'),
     size: Mock.mock('@integer(3,1000)'),
     type: Mock.mock('@integer(3,1000)'),
@@ -4034,20 +4034,20 @@ export function LianXiRenHuaHuaTiQingQiu() {
 }
 export function JieChuHongLingJinrequest() {
   return {
-    happyId: Mock.mock('@string(5,100)'),
+    happyId: Mock.mock('@guid'),
     happyType: Mock.mock('@string(5,100)'),
   }
 }
 export function DuRuWenJianXiangYing() {
   return {
-    id: Mock.mock('@string(5,100)'),
+    id: Mock.mock('@guid'),
   }
 }
 export function ZhuanRangQingQiu() {
   return {
-    'happyId|1-20': [Mock.mock('@string(5,100)')],
+    'happyId|1-20': [Mock.mock('@guid')],
     happyType: Mock.mock('@string(5,100)'),
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     followerName: Mock.mock('@string(5,100)'),
   }
 }
@@ -4059,30 +4059,30 @@ export function XiangMuFaCaiMengXiuGairpcrequest() {
     agenciesAddrLat: Mock.mock('@string(5,100)'),
     agenciesAddrLng: Mock.mock('@string(5,100)'),
     agenciesArea: Mock.mock('@string(5,100)'),
-    agenciesCity: Mock.mock('@string(5,100)'),
+    agenciesCity: Mock.mock('@city'),
     agenciesCountry: Mock.mock('@string(5,100)'),
     agenciesPhone: Mock.mock('@string(5,100)'),
-    agenciesProvince: Mock.mock('@string(5,100)'),
+    agenciesProvince: Mock.mock('@province'),
     biddingCorpAddr: Mock.mock('@string(5,100)'),
     biddingCorpAddrCoordinate: Mock.mock('@string(5,100)'),
     biddingCorpAddrLat: Mock.mock('@string(5,100)'),
     biddingCorpAddrLng: Mock.mock('@string(5,100)'),
     biddingCorpArea: Mock.mock('@string(5,100)'),
-    biddingCorpCity: Mock.mock('@string(5,100)'),
+    biddingCorpCity: Mock.mock('@city'),
     biddingCorpCountry: Mock.mock('@string(5,100)'),
     biddingCorpName: Mock.mock('@string(5,100)'),
     biddingCorpPhone: Mock.mock('@string(5,100)'),
-    biddingCorpProvince: Mock.mock('@string(5,100)'),
-    biddingEndTime: Mock.mock('@datetime()'),
-    biddingOpeningTime: Mock.mock('@datetime()'),
-    biddingStartTime: Mock.mock('@datetime()'),
+    biddingCorpProvince: Mock.mock('@province'),
+    biddingEndTime: Mock.mock('@datetime'),
+    biddingOpeningTime: Mock.mock('@datetime'),
+    biddingStartTime: Mock.mock('@datetime'),
     biddingType: Mock.mock('@string(5,100)'),
-    fileDownloadEndTime: Mock.mock('@datetime()'),
-    fileDownloadStartTime: Mock.mock('@datetime()'),
+    fileDownloadEndTime: Mock.mock('@datetime'),
+    fileDownloadStartTime: Mock.mock('@datetime'),
     industryType: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
     gladBudget: Mock.mock('@string(5,100)'),
-    gladId: Mock.mock('@string(5,100)'),
+    gladId: Mock.mock('@guid'),
     gladName: Mock.mock('@string(5,100)'),
     gladNum: Mock.mock('@string(5,100)'),
     gladType: Mock.mock('@string(5,100)'),
@@ -4095,17 +4095,17 @@ export function XiangMuFaCaiMengGongHaiLvYou() {
     area: Mock.mock('@string(5,100)'),
     biddingType: Mock.mock('@string(5,100)'),
     happyStatus: Mock.mock('@string(5,100)'),
-    city: Mock.mock('@string(5,100)'),
+    city: Mock.mock('@city'),
     coordinate: Mock.mock('@string(5,100)'),
-    createEndTime: Mock.mock('@datetime()'),
-    createStartTime: Mock.mock('@datetime()'),
-    customerId: Mock.mock('@string(5,100)'),
+    createEndTime: Mock.mock('@datetime'),
+    createStartTime: Mock.mock('@datetime'),
+    customerId: Mock.mock('@guid'),
     customerType: Mock.mock('@string(5,100)'),
     distance: Mock.mock('@string(5,100)'),
     followResult: Mock.mock('@string(5,100)'),
     followType: Mock.mock('@string(5,100)'),
     'followTypeList|1-20': [Mock.mock('@string(5,100)')],
-    followerId: Mock.mock('@string(5,100)'),
+    followerId: Mock.mock('@guid'),
     'industryTypeList|1-20': [Mock.mock('@string(5,100)')],
     isRead: Mock.mock('@integer(3,1000)'),
     name: Mock.mock('@string(5,100)'),
@@ -4115,17 +4115,17 @@ export function XiangMuFaCaiMengGongHaiLvYou() {
     gladBudgetMax: Mock.mock('@string(5,100)'),
     gladBudgetMin: Mock.mock('@string(5,100)'),
     'gladTypeList|1-20': [Mock.mock('@string(5,100)')],
-    province: Mock.mock('@string(5,100)'),
-    publishEndTime: Mock.mock('@datetime()'),
-    publishStartTime: Mock.mock('@datetime()'),
+    province: Mock.mock('@province'),
+    publishEndTime: Mock.mock('@datetime'),
+    publishStartTime: Mock.mock('@datetime'),
     receiveType: Mock.mock('@string(5,100)'),
-    signUpBeginTime: Mock.mock('@datetime()'),
-    signUpEndTime: Mock.mock('@datetime()'),
+    signUpBeginTime: Mock.mock('@datetime'),
+    signUpEndTime: Mock.mock('@datetime'),
     size: Mock.mock('@integer(3,1000)'),
     source: Mock.mock('@string(5,100)'),
-    taskId: Mock.mock('@string(5,100)'),
+    taskId: Mock.mock('@guid'),
     type: Mock.mock('@integer(3,1000)'),
-    valid: Mock.mock('@integer(3,1000)'),
+    valid: Mock.mock('@guid'),
   }
 }
 export function XiangMuFaCaiMengFenYeLvYourpcrequest() {
@@ -4143,12 +4143,12 @@ export function XiangMuFaCaiMengXiangQingrpcresponse() {
     biddingCorpAddr: Mock.mock('@string(5,100)'),
     biddingCorpName: Mock.mock('@string(5,100)'),
     biddingCorpPhone: Mock.mock('@string(5,100)'),
-    biddingTime: Mock.mock('@datetime()'),
+    biddingTime: Mock.mock('@datetime'),
     biddingType: Mock.mock('@string(5,100)'),
     industryType: Mock.mock('@string(5,100)'),
     phone: Mock.mock('@string(5,100)'),
     gladBudget: Mock.mock('@string(5,100)'),
-    gladId: Mock.mock('@string(5,100)'),
+    gladId: Mock.mock('@guid'),
     gladName: Mock.mock('@string(5,100)'),
     gladNum: Mock.mock('@string(5,100)'),
     gladType: Mock.mock('@string(5,100)'),
