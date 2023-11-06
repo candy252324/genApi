@@ -2,7 +2,7 @@ import { ApiResponseQueryWalletBalanceResp, ApiResponseboolean } from './_interf
 import Mock from 'better-mock'
 
 /** 出行余额 */
-export const walletBalance = () => ApiResponseQueryWalletBalanceResp()
+export const walletBalance = () => Mock.mock(ApiResponseQueryWalletBalanceResp())
 
 /** 是否开通 */
-export const walletJudgeStatus = () => ApiResponseboolean()
+export const walletJudgeStatus = () => Mock.mock(ApiResponseboolean())

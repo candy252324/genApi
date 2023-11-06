@@ -2,10 +2,10 @@ import { ApiResponseVoid, ApiResponseBiXieDao, ApiResponseComPageBiXieDaoYongDao
 import Mock from 'better-mock'
 
 /** 执行审核 */
-export const auditAuthExecute = () => ApiResponseVoid()
+export const auditAuthExecute = () => Mock.mock(ApiResponseVoid())
 
 /** 辟邪刀详情甬道 */
-export const auditAuthInfoList = () => ApiResponseBiXieDao()
+export const auditAuthInfoList = () => Mock.mock(ApiResponseBiXieDao())
 
 /** 辟邪刀甬道 */
-export const auditAuthList = () => ApiResponseComPageBiXieDaoYongDao()
+export const auditAuthList = () => Mock.mock(ApiResponseComPageBiXieDaoYongDao())

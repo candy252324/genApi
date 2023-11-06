@@ -2,10 +2,10 @@ import { ApiResponse } from './_interfaces'
 import Mock from 'better-mock'
 
 /** 模拟大数据建鸟窝 */
-export const remoteBigdataAutoBird = () => ApiResponse()
+export const remoteBigdataAutoBird = () => Mock.mock(ApiResponse())
 
 /** 模拟大数据建鸟窝 */
-export const remoteBigdataMockAutoBird = () => ApiResponse()
+export const remoteBigdataMockAutoBird = () => Mock.mock(ApiResponse())
 
 /** 处理结构化消息 */
-export const remoteMessageProcess = () => ApiResponse()
+export const remoteMessageProcess = () => Mock.mock(ApiResponse())

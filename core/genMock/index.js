@@ -186,12 +186,12 @@ function writeMockToFile(apiList, { interfaces, absOutputDir }) {
       }
       // 出参是简单类型
       else if (handleJsType(outputInterface)) {
-        const { mockStr, isBare } = getFieldMockStr({ name, type: outputInterface })
-        _outputInterface = isBare ? `${mockStr}` : `Mock.mock(\'${mockStr}\')`
+        const { isCustome, mockStr } = getFieldMockStr({ name, type: outputInterface })
+        _outputInterface = isCustome ? mockStr : `\'${mockStr}\'`
       } else {
         _outputInterface = `${outputInterface}()`
       }
-      const curStr = `${_summary}export const ${name} = () => ${_outputInterface}\n\n`
+      const curStr = `${_summary}export const ${name} = () => Mock.mock(${_outputInterface})\n\n`
       mockStr += curStr
     })
 
@@ -267,11 +267,11 @@ function getInterfaceMock(model) {
   let _mockStr = ''
   // 如果是简单类型
   let isFn = false
-  let _isBare = false
+  let _isCustome = false
   if (type === 'string' || type === 'number' || type === 'boolean' || type === 'any' || type === 'File') {
-    const { mockStr, isBare } = getFieldMockStr({ name, type })
+    const { mockStr, isCustome } = getFieldMockStr({ name, type })
     _mockStr = mockStr
-    _isBare = isBare
+    _isCustome = isCustome
   } else if (type === 'object') {
     _mockStr = '{}'
   } else {
@@ -279,20 +279,16 @@ function getInterfaceMock(model) {
     _mockStr = `${type}()`
   }
   if (isArray) {
-    if (isFn) {
-      return `\'${name}|1-20\': [${_mockStr}],\n` // 'data|1-20': [AuthDoorOrgInfoResp()],
+    if (isFn || _isCustome) {
+      return `\'${name}|1-20\': [${_mockStr}],\n`
     } else {
-      if (_isBare) {
-        return `\'${name}|1-20\': [${_mockStr}],\n` // 'auditorIds|1-20': [Mock.Random.image('200x100', Mock.Random.color())],
-      } else {
-        return `\'${name}|1-20\': [Mock.mock(\'${_mockStr}\')],\n` // 'auditorIds|1-20': [Mock.mock('@string(5,100)')],
-      }
+      return `\'${name}|1-20\': [\'${_mockStr}\'],\n`
     }
   } else {
-    if (_isBare) {
+    if (isFn || _isCustome) {
       return `${name}: ${_mockStr},\n`
     } else {
-      return `${name}: Mock.mock(\'${_mockStr}\'),\n`
+      return `${name}: \'${_mockStr}\',\n`
     }
   }
 }
@@ -301,12 +297,12 @@ function getInterfaceMock(model) {
 function getFieldMockStr({ name, type }) {
   const lowerCaseName = name.toLowerCase()
   let mockStr = ''
-  let isBare = false // 是否不需要在前面添加Mock.mock， true:不添加， false:添加
+  let isCustome = false // 使用用户自定义规则
   const customeMockStr = getCustomeMockStr(name)
   // 处理用户自定义的 mock 规则
   if (customeMockStr) {
     mockStr = customeMockStr
-    isBare = true
+    isCustome = true
   }
   // 一些内置的 mock处理规则
   else if (type === 'string' && /date|time/.test(lowerCaseName)) {
@@ -325,26 +321,25 @@ function getFieldMockStr({ name, type }) {
     mockStr = '@county'
   } else if (type === 'string' && /username/.test(lowerCaseName)) {
     mockStr = '@cname'
-  } else if (type === 'string' && /title/.test(lowerCaseName)) {
-    mockStr = '@ctitle(5,20)'
+  } else if (type === 'string' && /name|title/.test(lowerCaseName)) {
+    mockStr = '@ctitle(5,10)'
   } else if (type === 'string' && /avatar/.test(lowerCaseName)) {
-    mockStr = 'Mock.Random.image("200x100", Mock.Random.color())' // 生成一张图片地址
-    isBare = true
+    mockStr = '@image(200x100, @color)' // 生成一张图片地址
   } else if (type === 'number') {
     mockStr = '@integer(3,1000)'
   } else if (type === 'string') {
-    mockStr = '@string(5,100)'
+    mockStr = '@string(5,50)'
   } else if (type === 'boolean') {
     mockStr = '@boolean'
   } else if (type === 'any' || type === 'File') {
     mockStr = ''
   } else {
     console.log('未处理的类型？')
-    mockStr = '@string(5,1000)'
+    mockStr = '@string(5,50)'
   }
   return {
     mockStr,
-    isBare,
+    isCustome,
   }
 }
 

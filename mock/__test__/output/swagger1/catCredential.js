@@ -2,19 +2,19 @@ import { ApiResponseComPageTianJiaDouJiangJiBeiJing, ApiResponseboolean, ApiResp
 import Mock from 'better-mock'
 
 /** 分页出行豆浆机背景 */
-export const catCredentialPageCatCredential = () => ApiResponseComPageTianJiaDouJiangJiBeiJing()
+export const catCredentialPageCatCredential = () => Mock.mock(ApiResponseComPageTianJiaDouJiangJiBeiJing())
 
 /** 添加豆浆机背景 */
-export const catCredentialAddCatCredential = () => ApiResponseboolean()
+export const catCredentialAddCatCredential = () => Mock.mock(ApiResponseboolean())
 
 /** 扫落叶豆浆机背景 */
-export const catCredentialDeleteId = () => ApiResponseboolean()
+export const catCredentialDeleteId = () => Mock.mock(ApiResponseboolean())
 
 /** 扫落叶注册专业山麻杆书 */
-export const catCredentialDeleteMajorId = () => ApiResponseboolean()
+export const catCredentialDeleteMajorId = () => Mock.mock(ApiResponseboolean())
 
 /** 获取注册专业树 */
-export const catCredentialGetMajorCodeTree = () => ApiResponse()
+export const catCredentialGetMajorCodeTree = () => Mock.mock(ApiResponse())
 
 /** 修改豆浆机背景 */
-export const catCredentialUpdateCatCredential = () => ApiResponseboolean()
+export const catCredentialUpdateCatCredential = () => Mock.mock(ApiResponseboolean())

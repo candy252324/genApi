@@ -2,10 +2,10 @@ import { ApiResponselong, ApiResponseListBirdF2fKeyBorardListResp, ApiResponse }
 import Mock from 'better-mock'
 
 /** 进入部落瓜子 */
-export const birdf2fEnterBird = () => ApiResponselong()
+export const birdf2fEnterBird = () => Mock.mock(ApiResponselong())
 
 /** 获取秋千 */
-export const birdf2fList = () => ApiResponseListBirdF2fKeyBorardListResp()
+export const birdf2fList = () => Mock.mock(ApiResponseListBirdF2fKeyBorardListResp())
 
 /** 保存随机数 */
-export const birdf2fSaveRandom = () => ApiResponse()
+export const birdf2fSaveRandom = () => Mock.mock(ApiResponse())

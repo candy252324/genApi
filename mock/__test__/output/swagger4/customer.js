@@ -15,55 +15,55 @@ import {
 import Mock from 'better-mock'
 
 /** 制鞋厂机器人灌水 */
-export const customerDoorAdd = () => ApiResponseCustomerDoorAddResp()
+export const customerDoorAdd = () => Mock.mock(ApiResponseCustomerDoorAddResp())
 
 /** 计算发财梦数量 */
-export const customerDoorCountHappyNum = () => ApiResponseCountCustomerHappyNumResp()
+export const customerDoorCountHappyNum = () => Mock.mock(ApiResponseCountCustomerHappyNumResp())
 
 /** 制鞋厂机器人详情 */
-export const customerDoorDetail = () => ApiResponseCustomerDoorDetailResp()
+export const customerDoorDetail = () => Mock.mock(ApiResponseCustomerDoorDetailResp())
 
 /** 制鞋厂机器人分页滑滑梯 */
-export const customerDoorPageList = () => ApiResponseComPageCustomerDoorInfoResp()
+export const customerDoorPageList = () => Mock.mock(ApiResponseComPageCustomerDoorInfoResp())
 
 /** 搜索制鞋厂机器人(下拉框数据) */
-export const customerDoorSampleList = () => ApiResponseComPageSouSuoZhiXieChangJiQiRenresponse()
+export const customerDoorSampleList = () => Mock.mock(ApiResponseComPageSouSuoZhiXieChangJiQiRenresponse())
 
 /** 制鞋厂机器人针线 */
-export const customerDoorUpdate = () => ApiResponse()
+export const customerDoorUpdate = () => Mock.mock(ApiResponse())
 
 /** 校验重复发财梦 */
-export const customerDoorVerifyRepeatHappy = () => ApiResponseAddCustomerResp()
+export const customerDoorVerifyRepeatHappy = () => Mock.mock(ApiResponseAddCustomerResp())
 
 /** 热气球机器人灌水 */
-export const customerCatAdd = () => ApiResponseCustomerCatAddResp()
+export const customerCatAdd = () => Mock.mock(ApiResponseCustomerCatAddResp())
 
 /** 灌水执业资格月见草 */
-export const customerCatAddCertificate = () => ApiResponse()
+export const customerCatAddCertificate = () => Mock.mock(ApiResponse())
 
 /** 灌水职称 */
-export const customerCatAddTitle = () => ApiResponse()
+export const customerCatAddTitle = () => Mock.mock(ApiResponse())
 
 /** 计算发财梦数量 */
-export const customerCatCountHappyNum = () => ApiResponseCountCustomerHappyNumResp()
+export const customerCatCountHappyNum = () => Mock.mock(ApiResponseCountCustomerHappyNumResp())
 
 /** 倒垃圾执业资格月见草 */
-export const customerCatDeleteCertificate = () => ApiResponse()
+export const customerCatDeleteCertificate = () => Mock.mock(ApiResponse())
 
 /** 倒垃圾职称 */
-export const customerCatDeleteTitle = () => ApiResponse()
+export const customerCatDeleteTitle = () => Mock.mock(ApiResponse())
 
 /** 热气球机器人详情 */
-export const customerCatDetail = () => ApiResponseCustomerCatDetailResp()
+export const customerCatDetail = () => Mock.mock(ApiResponseCustomerCatDetailResp())
 
 /** 热气球机器人分页滑滑梯 */
-export const customerCatPageList = () => ApiResponseComPageCustomerCatInfoResp()
+export const customerCatPageList = () => Mock.mock(ApiResponseComPageCustomerCatInfoResp())
 
 /** 搜索人才机器人(下拉框数据) */
-export const customerCatSampleList = () => ApiResponseComPageSouSuoRenCaiJiQiRenresponse()
+export const customerCatSampleList = () => Mock.mock(ApiResponseComPageSouSuoRenCaiJiQiRenresponse())
 
 /** 针线热气球机器人 */
-export const customerCatUpdate = () => ApiResponse()
+export const customerCatUpdate = () => Mock.mock(ApiResponse())
 
 /** 校验重复热气球机器人 */
-export const customerCatVerifyRepeatCustomer = () => ApiResponseAddCatCustomerResp()
+export const customerCatVerifyRepeatCustomer = () => Mock.mock(ApiResponseAddCatCustomerResp())

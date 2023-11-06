@@ -8,25 +8,25 @@ import {
 import Mock from 'better-mock'
 
 /** 花生米玉米树 */
-export const happyFollowWhiteDesktopTree = () => ApiResponseComPageTreelong()
+export const happyFollowWhiteDesktopTree = () => Mock.mock(ApiResponseComPageTreelong())
 
 /** 玉米滑滑梯 */
-export const happyFollowDesktopList = () => ApiResponseComPageDesktopListResp()
+export const happyFollowDesktopList = () => Mock.mock(ApiResponseComPageDesktopListResp())
 
 /** 跟进 */
-export const happyFollowFollow = () => ApiResponseboolean()
+export const happyFollowFollow = () => Mock.mock(ApiResponseboolean())
 
 /** 重新跟进 */
-export const happyFollowFollowAgain = () => ApiResponseboolean()
+export const happyFollowFollowAgain = () => Mock.mock(ApiResponseboolean())
 
 /** 不再跟进 */
-export const happyFollowGiveUp = () => ApiResponseboolean()
+export const happyFollowGiveUp = () => Mock.mock(ApiResponseboolean())
 
 /** 跟进记录-详情 */
-export const happyFollowInfo = () => ApiResponseHuaHuaTiQingQiu()
+export const happyFollowInfo = () => Mock.mock(ApiResponseHuaHuaTiQingQiu())
 
 /** 跟进记录 */
-export const happyFollowList = () => ApiResponseComPageHuaHuaTiQingQiu()
+export const happyFollowList = () => Mock.mock(ApiResponseComPageHuaHuaTiQingQiu())
 
 /** 转让 */
-export const happyFollowTransfer = () => ApiResponseboolean()
+export const happyFollowTransfer = () => Mock.mock(ApiResponseboolean())

@@ -2,13 +2,13 @@ import { ApiResponseComLoginResp, ApiResponse, ApiResponseChannelAppGratefulConf
 import Mock from 'better-mock'
 
 /** 登录结盟 */
-export const channelDesktopComLoginAndBind = () => ApiResponseComLoginResp()
+export const channelDesktopComLoginAndBind = () => Mock.mock(ApiResponseComLoginResp())
 
 /** 加湿内部结盟 */
-export const channelGratefulConfigAdd = () => ApiResponse()
+export const channelGratefulConfigAdd = () => Mock.mock(ApiResponse())
 
 /** 结盟详情 */
-export const channelGratefulConfigDetail = () => ApiResponseChannelAppGratefulConfigResp()
+export const channelGratefulConfigDetail = () => Mock.mock(ApiResponseChannelAppGratefulConfigResp())
 
 /** 修改内部结盟 */
-export const channelGratefulConfigUpdate = () => ApiResponse()
+export const channelGratefulConfigUpdate = () => Mock.mock(ApiResponse())

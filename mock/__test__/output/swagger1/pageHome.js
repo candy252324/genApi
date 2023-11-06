@@ -2,13 +2,13 @@ import { ApiResponseboolean, ApiResponseQueryJudgeClaimResp, ApiResponseListQuer
 import Mock from 'better-mock'
 
 /** 认领豆浆机信息 */
-export const pageHomeClaimClaimId = () => ApiResponseboolean()
+export const pageHomeClaimClaimId = () => Mock.mock(ApiResponseboolean())
 
 /** 排除豆浆机信息 */
-export const pageHomeExcludeClaimId = () => ApiResponseboolean()
+export const pageHomeExcludeClaimId = () => Mock.mock(ApiResponseboolean())
 
 /** 出行认领操作结果 */
-export const pageHomeJudge = () => ApiResponseQueryJudgeClaimResp()
+export const pageHomeJudge = () => Mock.mock(ApiResponseQueryJudgeClaimResp())
 
 /** 出行放行结果 */
-export const pageHomeQuery = () => ApiResponseListQueryCatPageHomeResp()
+export const pageHomeQuery = () => Mock.mock(ApiResponseListQueryCatPageHomeResp())

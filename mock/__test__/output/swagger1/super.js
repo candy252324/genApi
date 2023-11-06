@@ -2,10 +2,10 @@ import { ApiResponseListSuperManResp, ApiResponse, ApiResponsestring } from './_
 import Mock from 'better-mock'
 
 /** 甬道 */
-export const superList = () => ApiResponseListSuperManResp()
+export const superList = () => Mock.mock(ApiResponseListSuperManResp())
 
 /** 转让 */
-export const superTransfer = () => ApiResponse()
+export const superTransfer = () => Mock.mock(ApiResponse())
 
 /** 转让验山麻杆码验山麻杆 */
-export const superVerifyVerifyType = () => ApiResponsestring()
+export const superVerifyVerifyType = () => Mock.mock(ApiResponsestring())

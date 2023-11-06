@@ -6,46 +6,46 @@ import {
 import Mock from 'better-mock'
 
 /** APP统计【成交发财梦】 */
-export const statisticsAppDealData = () => ApiResponseTongJiShuJuPieDataResp()
+export const statisticsAppDealData = () => Mock.mock(ApiResponseTongJiShuJuPieDataResp())
 
 /** APP统计【跟进发财梦】 */
-export const statisticsAppFollowData = () => ApiResponseTongJiShuJuPieDataResp()
+export const statisticsAppFollowData = () => Mock.mock(ApiResponseTongJiShuJuPieDataResp())
 
 /** APP统计【灌水发财梦】 */
-export const statisticsAppNewData = () => ApiResponseTongJiShuJuPieDataResp()
+export const statisticsAppNewData = () => Mock.mock(ApiResponseTongJiShuJuPieDataResp())
 
 /** 统计【成交发财梦】 */
-export const statisticsDealData = () => ApiResponseTongJiShuJuPieDataResp()
+export const statisticsDealData = () => Mock.mock(ApiResponseTongJiShuJuPieDataResp())
 
 /** 统计【跟进发财梦】 */
-export const statisticsFollowData = () => ApiResponseTongJiShuJuPieDataResp()
+export const statisticsFollowData = () => Mock.mock(ApiResponseTongJiShuJuPieDataResp())
 
 /** 统计【柱状图】 */
-export const statisticsHistogram = () => ApiResponseListTongJiShuJuHistogramResp()
+export const statisticsHistogram = () => Mock.mock(ApiResponseListTongJiShuJuHistogramResp())
 
 /** initRecentSixDay */
-export const statisticsInitInitRecentSixDay = () => ''
+export const statisticsInitInitRecentSixDay = () => Mock.mock('')
 
 /** recountSixMonth */
-export const statisticsInitInitRecentSixMonth = () => ''
+export const statisticsInitInitRecentSixMonth = () => Mock.mock('')
 
 /** initRecentSixQuarter */
-export const statisticsInitInitRecentSixQuarter = () => ''
+export const statisticsInitInitRecentSixQuarter = () => Mock.mock('')
 
 /** initRecentSixWeek */
-export const statisticsInitInitRecentSixWeek = () => ''
+export const statisticsInitInitRecentSixWeek = () => Mock.mock('')
 
 /** initRecentSixYear */
-export const statisticsInitInitRecentSixYear = () => ''
+export const statisticsInitInitRecentSixYear = () => Mock.mock('')
 
 /** initRecountDesktopList */
-export const statisticsInitInitRecountDesktopList = () => ''
+export const statisticsInitInitRecountDesktopList = () => Mock.mock('')
 
 /** initRecountDesktopRank */
-export const statisticsInitInitRecountDesktopRank = () => ''
+export const statisticsInitInitRecountDesktopRank = () => Mock.mock('')
 
 /** 统计【灌水发财梦】 */
-export const statisticsNewData = () => ApiResponseTongJiShuJuPieDataResp()
+export const statisticsNewData = () => Mock.mock(ApiResponseTongJiShuJuPieDataResp())
 
 /** 统计排名 */
-export const statisticsRankList = () => ApiResponseRankResp()
+export const statisticsRankList = () => Mock.mock(ApiResponseRankResp())

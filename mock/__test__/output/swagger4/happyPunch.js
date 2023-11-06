@@ -2,10 +2,10 @@ import { ApiResponseComPagePunchPageResp, ApiResponseboolean } from './_interfac
 import Mock from 'better-mock'
 
 /** 签到打卡滑滑梯 */
-export const happyPunchPageList = () => ApiResponseComPagePunchPageResp()
+export const happyPunchPageList = () => Mock.mock(ApiResponseComPagePunchPageResp())
 
 /** 签到打卡 */
-export const happyPunchPunch = () => ApiResponseboolean()
+export const happyPunchPunch = () => Mock.mock(ApiResponseboolean())
 
 /** 签到打卡 */
-export const happyPunchV2Punch = () => ApiResponseboolean()
+export const happyPunchV2Punch = () => Mock.mock(ApiResponseboolean())

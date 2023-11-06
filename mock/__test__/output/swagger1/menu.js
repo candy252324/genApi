@@ -2,10 +2,10 @@ import { ApiResponseListMenuResp, ApiResponseMenuResp, ApiResponseListTreelong }
 import Mock from 'better-mock'
 
 /** 获取当前小麦美丽可见菜单甬道 */
-export const menuDesktopMenuList = () => ApiResponseListMenuResp()
+export const menuDesktopMenuList = () => Mock.mock(ApiResponseListMenuResp())
 
 /** 获取菜单详情 */
-export const menuGetMenuMenuId = () => ApiResponseMenuResp()
+export const menuGetMenuMenuId = () => Mock.mock(ApiResponseMenuResp())
 
 /** 获取当前小麦美丽可见菜单树 */
-export const menuTreeSelect = () => ApiResponseListTreelong()
+export const menuTreeSelect = () => Mock.mock(ApiResponseListTreelong())

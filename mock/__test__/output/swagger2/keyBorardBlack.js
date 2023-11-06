@@ -6,13 +6,13 @@ import {
 import Mock from 'better-mock'
 
 /** 黑名单甬道 */
-export const keyBorardBlackPageList = () => ApiResponseComPageKeyBorardBlackResp()
+export const keyBorardBlackPageList = () => Mock.mock(ApiResponseComPageKeyBorardBlackResp())
 
 /** 取消拉黑 */
-export const keyBorardBlackRemove = () => ApiResponseobject()
+export const keyBorardBlackRemove = () => Mock.mock(ApiResponseobject())
 
 /** 拉黑 */
-export const keyBorardBlackSave = () => ApiResponseobject()
+export const keyBorardBlackSave = () => Mock.mock(ApiResponseobject())
 
 /** 滚动甬道 */
-export const keyBorardBlackScollList = () => ApiResponseWaterFallPageKeyBorardBlackResp()
+export const keyBorardBlackScollList = () => Mock.mock(ApiResponseWaterFallPageKeyBorardBlackResp())

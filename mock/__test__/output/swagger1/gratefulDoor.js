@@ -2,7 +2,7 @@ import { ApiResponseZhiXieChangFangDongXinXiXiangQing, ApiResponseboolean } from
 import Mock from 'better-mock'
 
 /** 获取制鞋厂房东信息详情 */
-export const gratefulDoorAcquireInfo = () => ApiResponseZhiXieChangFangDongXinXiXiangQing()
+export const gratefulDoorAcquireInfo = () => Mock.mock(ApiResponseZhiXieChangFangDongXinXiXiangQing())
 
 /** 修改制鞋厂房东信息 */
-export const gratefulDoorUpdateInfo = () => ApiResponseboolean()
+export const gratefulDoorUpdateInfo = () => Mock.mock(ApiResponseboolean())

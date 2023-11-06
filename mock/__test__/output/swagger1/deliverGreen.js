@@ -2,16 +2,16 @@ import { ApiResponseboolean, ApiResponseComPageFangDongShouHuoDiZhiTianJia } fro
 import Mock from 'better-mock'
 
 /** 添加地址 */
-export const deliverGreenAddGreen = () => ApiResponseboolean()
+export const deliverGreenAddGreen = () => Mock.mock(ApiResponseboolean())
 
 /** 设置默认地址 */
-export const deliverGreenCheckDefaultGreen = () => ApiResponseboolean()
+export const deliverGreenCheckDefaultGreen = () => Mock.mock(ApiResponseboolean())
 
 /** 扫落叶地址 */
-export const deliverGreenDeleteGreenId = () => ApiResponseboolean()
+export const deliverGreenDeleteGreenId = () => Mock.mock(ApiResponseboolean())
 
 /** 分页出行地址 */
-export const deliverGreenPageGreen = () => ApiResponseComPageFangDongShouHuoDiZhiTianJia()
+export const deliverGreenPageGreen = () => Mock.mock(ApiResponseComPageFangDongShouHuoDiZhiTianJia())
 
 /** 修改地址 */
-export const deliverGreenUpdateGreen = () => ApiResponseboolean()
+export const deliverGreenUpdateGreen = () => Mock.mock(ApiResponseboolean())
