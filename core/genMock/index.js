@@ -11,6 +11,14 @@ const { genInterface } = require('../genApi/handleInterface')
 const CWD = process.cwd()
 const mockPath = path.join(__dirname, '../../', 'mock')
 let apiConfig = {}
+/** 用于自定义的 mock 生成规则
+ *  filedJsonPath: {
+      'root.code': 200, // jsonPath
+      '/url/': 'Mock.mock("@url")', // 正则
+      userName: '@cname', // 完全匹配
+    },
+ */
+let filedJsonPath = {}
 
 /**
  * // 解析过的所有的api站点的数据
@@ -25,6 +33,7 @@ let allData = []
 function genMock(config) {
   apiConfig = config
   allData = []
+  filedJsonPath = config?.mock?.filedJsonPath || {}
   cleanDir(mockPath)
   const apiList = apiConfig.apiList.filter((item) => item.tag)
   apiList.forEach((item, index) => {
@@ -177,8 +186,8 @@ function writeMockToFile(apiList, { interfaces, absOutputDir }) {
       }
       // 出参是简单类型
       else if (handleJsType(outputInterface)) {
-        const s = getFieldMockStr({ name, type: outputInterface })
-        _outputInterface = `Mock.mock(\'${s}\')`
+        const { mockStr, isBare } = getFieldMockStr({ name, type: outputInterface })
+        _outputInterface = isBare ? `${mockStr}` : `Mock.mock(\'${mockStr}\')`
       } else {
         _outputInterface = `${outputInterface}()`
       }
@@ -255,59 +264,98 @@ function writeInterfaceToFile(definitions, absOutputDir) {
 function getInterfaceMock(model) {
   const { name, type, isSimpleJsType, isArray } = model
 
-  let mockStr = ''
+  let _mockStr = ''
   // 如果是简单类型
   let isFn = false
+  let _isBare = false
   if (type === 'string' || type === 'number' || type === 'boolean' || type === 'any' || type === 'File') {
-    mockStr = getFieldMockStr({ name, type })
+    const { mockStr, isBare } = getFieldMockStr({ name, type })
+    _mockStr = mockStr
+    _isBare = isBare
   } else if (type === 'object') {
-    mockStr = '{}'
+    _mockStr = '{}'
   } else {
     isFn = true
-    mockStr = `${type}()`
+    _mockStr = `${type}()`
   }
   if (isArray) {
     if (isFn) {
-      return `\'${name}|1-20\': [${mockStr}],\n`
+      return `\'${name}|1-20\': [${_mockStr}],\n` // 'data|1-20': [AuthDoorOrgInfoResp()],
     } else {
-      return `\'${name}|1-20\': [Mock.mock(\'${mockStr}\')],\n`
+      if (_isBare) {
+        return `\'${name}|1-20\': [${_mockStr}],\n` // 'auditorIds|1-20': [Mock.Random.image('200x100', Mock.Random.color())],
+      } else {
+        return `\'${name}|1-20\': [Mock.mock(\'${_mockStr}\')],\n` // 'auditorIds|1-20': [Mock.mock('@string(5,100)')],
+      }
     }
   } else {
-    return `${name}: Mock.mock(\'${mockStr}\'),\n`
+    if (_isBare) {
+      return `${name}: ${_mockStr},\n`
+    } else {
+      return `${name}: Mock.mock(\'${_mockStr}\'),\n`
+    }
   }
 }
 
 /** 获取简单数据类型的 mock */
 function getFieldMockStr({ name, type }) {
-  let s = ''
-  // 一些特殊的字段
-  if (name === 'code') {
-    s = '@integer(200,200)'
-  } else if (name === 'total') {
-    s = '@integer(11,52)'
-  } else if (name === 'current') {
-    s = '@integer(1,1)'
-  } else if (name === 'size') {
-    s = '@integer(20,50)'
-  } else if (name.toLowerCase().indexOf('avatar') > -1) {
-    s = 'https://www.uviewui.com/common/logo.png'
-  } else if (name.toLowerCase().indexOf('time') > -1 || name.toLowerCase().indexOf('date') > -1) {
-    s = '@datetime()'
+  const _name = name.toLowerCase()
+  let mockStr = ''
+  let isBare = false // 是否不需要在前面添加Mock.mock， true:不添加， false:添加
+  const customeMockStr = getCustomeMockStr(name)
+  // 处理用户自定义的 mock 规则
+  if (customeMockStr) {
+    mockStr = customeMockStr
+    isBare = true
+  } else if (/date|time/.test(_name)) {
+    // 一些内置的 mock处理 逻辑
+    mockStr = '@datetime()' // 处理成日期
+  } else if (/avatar/.test(_name)) {
+    mockStr = 'Mock.Random.image("200x100", Mock.Random.color())' // 生成一张随机图片
+    isBare = true
+  } else if (type === 'number') {
+    mockStr = '@integer(3,1000)'
+  } else if (type === 'string') {
+    mockStr = '@string(5,100)'
+  } else if (type === 'boolean') {
+    mockStr = '@boolean()'
+  } else if (type === 'any' || type === 'File') {
+    mockStr = ''
   } else {
-    if (type === 'number') {
-      s = '@integer(3,1000)'
-    } else if (type === 'string') {
-      s = '@string(5,100)'
-    } else if (type === 'boolean') {
-      s = '@boolean()'
-    } else if (type === 'any' || type === 'File') {
-      s = ''
-    } else {
-      console.log('未处理的类型？')
-      s = '@string(5,1000)'
-    }
+    console.log('未处理的类型？')
+    mockStr = '@string(5,1000)'
   }
-  return s
+  return {
+    mockStr,
+    isBare,
+  }
+}
+
+/** 内置 mock 规则 */
+function getCustomeMockStr(name) {
+  // 不存在用户自定义的 mock 规则
+  if (!filedJsonPath || !Object.keys(filedJsonPath).length) {
+    return false
+  }
+
+  const findRule = Object.keys(filedJsonPath).filter((rule) => {
+    let matched = false
+    // 正则 '/url/': 'Mock.mock("@url")'
+    if (rule.startsWith('/') && rule.endsWith('/')) {
+      const reg = new RegExp(rule)
+      reg.test(name) && (matched = true)
+    }
+    // jsonPath  'root.code': 200
+    else if (rule.startsWith('root.')) {
+      matched = false
+    }
+    // 完全匹配  'userName':'@cname'
+    else if (rule === name) {
+      matched = true
+    }
+    return matched
+  })
+  return filedJsonPath[findRule]
 }
 
 module.exports = {

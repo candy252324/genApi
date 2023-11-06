@@ -64,5 +64,12 @@ module.exports = {
         }`
   },
   // 是否生成 mock 数据
-  mock: false,
+  // mock: false,
+  mock: {
+    /** 自定义的 mock 生成规则 */
+    filedJsonPath: {
+      code: 200, // jsonPath
+      '/url/': 'Mock.mock("@url")', // 正则
+    },
+  },
 }

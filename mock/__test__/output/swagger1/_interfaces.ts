@@ -67,7 +67,7 @@ export function AliMpLoginReq() {
 }
 export function ApiResponse() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock(''),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -77,7 +77,7 @@ export function ApiResponse() {
 }
 export function ApiResponseAccInfoResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('AccInfoResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -87,7 +87,7 @@ export function ApiResponseAccInfoResp() {
 }
 export function ApiResponseAgentConfigResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('AgentConfigResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -97,7 +97,7 @@ export function ApiResponseAgentConfigResp() {
 }
 export function ApiResponseChannelAppGratefulConfigResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ChannelAppGratefulConfigResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -107,7 +107,7 @@ export function ApiResponseChannelAppGratefulConfigResp() {
 }
 export function ApiResponseChannelKeyBorardResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ChannelKeyBorardResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -117,7 +117,7 @@ export function ApiResponseChannelKeyBorardResp() {
 }
 export function ApiResponseComLoginResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ComLoginResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -127,7 +127,7 @@ export function ApiResponseComLoginResp() {
 }
 export function ApiResponseComPageDesktopAddRecordResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ComPageDesktopAddRecordResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -137,7 +137,7 @@ export function ApiResponseComPageDesktopAddRecordResp() {
 }
 export function ApiResponseComPageDesktopComplexResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ComPageDesktopComplexResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -147,7 +147,7 @@ export function ApiResponseComPageDesktopComplexResp() {
 }
 export function ApiResponseComPageDesktopResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ComPageDesktopResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -157,7 +157,7 @@ export function ApiResponseComPageDesktopResp() {
 }
 export function ApiResponseComPageDoorCredentialResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ComPageDoorCredentialResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -167,7 +167,7 @@ export function ApiResponseComPageDoorCredentialResp() {
 }
 export function ApiResponseComPageDoorIdentificationResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ComPageDoorIdentificationResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -177,7 +177,7 @@ export function ApiResponseComPageDoorIdentificationResp() {
 }
 export function ApiResponseComPageEpDesktopResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ComPageEpDesktopResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -187,7 +187,7 @@ export function ApiResponseComPageEpDesktopResp() {
 }
 export function ApiResponseComPageInviteDesktopResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ComPageInviteDesktopResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -197,7 +197,7 @@ export function ApiResponseComPageInviteDesktopResp() {
 }
 export function ApiResponseComPageLogLoginResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ComPageLogLoginResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -207,7 +207,7 @@ export function ApiResponseComPageLogLoginResp() {
 }
 export function ApiResponseComPageZhiXieChangChuXing() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ComPageZhiXieChangChuXing()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -217,7 +217,7 @@ export function ApiResponseComPageZhiXieChangChuXing() {
 }
 export function ApiResponseComPageGuanLianShenHeXinXi() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ComPageGuanLianShenHeXinXi()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -227,7 +227,7 @@ export function ApiResponseComPageGuanLianShenHeXinXi() {
 }
 export function ApiResponseComPageXiaoYuanZhuoGuanLi() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ComPageXiaoYuanZhuoGuanLi()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -237,7 +237,7 @@ export function ApiResponseComPageXiaoYuanZhuoGuanLi() {
 }
 export function ApiResponseComPageBiXieDaoYongDao() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ComPageBiXieDaoYongDao()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -247,7 +247,7 @@ export function ApiResponseComPageBiXieDaoYongDao() {
 }
 export function ApiResponseComPageTianJiaDouJiangJiBeiJing() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ComPageTianJiaDouJiangJiBeiJing()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -257,7 +257,7 @@ export function ApiResponseComPageTianJiaDouJiangJiBeiJing() {
 }
 export function ApiResponseComPageFangDongShouHuoDiZhiTianJia() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ComPageFangDongShouHuoDiZhiTianJia()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -267,7 +267,7 @@ export function ApiResponseComPageFangDongShouHuoDiZhiTianJia() {
 }
 export function ApiResponseCorpWehiallAuthUrlResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('CorpWehiallAuthUrlResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -277,7 +277,7 @@ export function ApiResponseCorpWehiallAuthUrlResp() {
 }
 export function ApiResponseCurrentAuthResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('CurrentAuthResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -287,7 +287,7 @@ export function ApiResponseCurrentAuthResp() {
 }
 export function ApiResponseWhiteDetailResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('WhiteDetailResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -297,7 +297,7 @@ export function ApiResponseWhiteDetailResp() {
 }
 export function ApiResponseWhiteLinkDoorResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('WhiteLinkDoorResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -307,7 +307,7 @@ export function ApiResponseWhiteLinkDoorResp() {
 }
 export function ApiResponseDescribeFaceVerifyResponse() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('DescribeFaceVerifyResponse()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -317,7 +317,7 @@ export function ApiResponseDescribeFaceVerifyResponse() {
 }
 export function ApiResponseDesktopAllInfoResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('DesktopAllInfoResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -327,7 +327,7 @@ export function ApiResponseDesktopAllInfoResp() {
 }
 export function ApiResponseDesktopNoActiveResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('DesktopNoActiveResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -337,7 +337,7 @@ export function ApiResponseDesktopNoActiveResp() {
 }
 export function ApiResponseDesktopResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('DesktopResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -347,7 +347,7 @@ export function ApiResponseDesktopResp() {
 }
 export function ApiResponseEntReSetResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('EntReSetResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -357,7 +357,7 @@ export function ApiResponseEntReSetResp() {
 }
 export function ApiResponseHeaderEmpowerSmsInfo() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('HeaderEmpowerSmsInfo()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -367,7 +367,7 @@ export function ApiResponseHeaderEmpowerSmsInfo() {
 }
 export function ApiResponseImportDesktopResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ImportDesktopResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -377,7 +377,7 @@ export function ApiResponseImportDesktopResp() {
 }
 export function ApiResponseInviteDoorReInfo() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('InviteDoorReInfo()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -387,7 +387,7 @@ export function ApiResponseInviteDoorReInfo() {
 }
 export function ApiResponseInviteJoinEchoResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('InviteJoinEchoResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -397,7 +397,7 @@ export function ApiResponseInviteJoinEchoResp() {
 }
 export function ApiResponseInviteLoginResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('InviteLoginResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -407,7 +407,7 @@ export function ApiResponseInviteLoginResp() {
 }
 export function ApiResponseInviteSetResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('InviteSetResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -417,7 +417,7 @@ export function ApiResponseInviteSetResp() {
 }
 export function ApiResponseJSONArray() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [Mock.mock('')],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -427,7 +427,7 @@ export function ApiResponseJSONArray() {
 }
 export function ApiResponseJudgeSwitchDoorLimitResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('JudgeSwitchDoorLimitResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -437,7 +437,7 @@ export function ApiResponseJudgeSwitchDoorLimitResp() {
 }
 export function ApiResponseListAuthDoorOrgInfoResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [AuthDoorOrgInfoResp()],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -447,7 +447,7 @@ export function ApiResponseListAuthDoorOrgInfoResp() {
 }
 export function ApiResponseListWhiteResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [WhiteResp()],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -457,7 +457,7 @@ export function ApiResponseListWhiteResp() {
 }
 export function ApiResponseListEmpowerWhiteResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [EmpowerWhiteResp()],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -467,7 +467,7 @@ export function ApiResponseListEmpowerWhiteResp() {
 }
 export function ApiResponseListEpEntTreeResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [EpEntTreeResp()],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -477,7 +477,7 @@ export function ApiResponseListEpEntTreeResp() {
 }
 export function ApiResponseListExtWhiteResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [ExtWhiteResp()],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -487,7 +487,7 @@ export function ApiResponseListExtWhiteResp() {
 }
 export function ApiResponseListImportDesktopResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [ImportDesktopResp()],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -497,7 +497,7 @@ export function ApiResponseListImportDesktopResp() {
 }
 export function ApiResponseListMenuResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [MenuResp()],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -507,7 +507,7 @@ export function ApiResponseListMenuResp() {
 }
 export function ApiResponseListPostResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [PostResp()],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -517,7 +517,7 @@ export function ApiResponseListPostResp() {
 }
 export function ApiResponseListQueryCatPageHomeResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [QueryCatPageHomeResp()],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -527,7 +527,7 @@ export function ApiResponseListQueryCatPageHomeResp() {
 }
 export function ApiResponseListPinkInfo() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [PinkInfo()],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -537,7 +537,7 @@ export function ApiResponseListPinkInfo() {
 }
 export function ApiResponseListPinkResq() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [PinkResq()],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -547,7 +547,7 @@ export function ApiResponseListPinkResq() {
 }
 export function ApiResponseListSelectorDesktopResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [SelectorDesktopResp()],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -557,7 +557,7 @@ export function ApiResponseListSelectorDesktopResp() {
 }
 export function ApiResponseListSuperManResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [SuperManResp()],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -567,7 +567,7 @@ export function ApiResponseListSuperManResp() {
 }
 export function ApiResponseListSysDictDuiXiangnullZhiBuXuLieHua() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [SysDictDuiXiangnullZhiBuXuLieHua()],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -577,7 +577,7 @@ export function ApiResponseListSysDictDuiXiangnullZhiBuXuLieHua() {
 }
 export function ApiResponseListTreelong() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [Mock.mock('')],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -587,7 +587,7 @@ export function ApiResponseListTreelong() {
 }
 export function ApiResponseListlong() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [Mock.mock('@string(5,100)')],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -597,7 +597,7 @@ export function ApiResponseListlong() {
 }
 export function ApiResponseListstring() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [Mock.mock('@string(5,100)')],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -607,7 +607,7 @@ export function ApiResponseListstring() {
 }
 export function ApiResponseListZhiXieChangChuXing() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [ZhiXieChangChuXing()],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -617,7 +617,7 @@ export function ApiResponseListZhiXieChangChuXing() {
 }
 export function ApiResponseListZhiXieChangFangDongXinXi() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [ZhiXieChangFangDongXinXi()],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -627,7 +627,7 @@ export function ApiResponseListZhiXieChangFangDongXinXi() {
 }
 export function ApiResponseListWenJianShangChuanXiangYing() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [WenJianShangChuanXiangYing()],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -637,7 +637,7 @@ export function ApiResponseListWenJianShangChuanXiangYing() {
 }
 export function ApiResponseListShengChengYaoQing() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [ShengChengYaoQing0()],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -647,7 +647,7 @@ export function ApiResponseListShengChengYaoQing() {
 }
 export function ApiResponseListFangDongXinXi() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [FangDongXinXi()],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -657,7 +657,7 @@ export function ApiResponseListFangDongXinXi() {
 }
 export function ApiResponseListFangXingQuDaoZhuangTaiChuXing() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     'data|1-20': [FangXingQuDaoZhuangTaiChuXing()],
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -667,7 +667,7 @@ export function ApiResponseListFangXingQuDaoZhuangTaiChuXing() {
 }
 export function ApiResponseMapstringobject() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock(''),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -677,7 +677,7 @@ export function ApiResponseMapstringobject() {
 }
 export function ApiResponseMapstringstring() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock(''),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -687,7 +687,7 @@ export function ApiResponseMapstringstring() {
 }
 export function ApiResponseMenuCheckedResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('MenuCheckedResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -697,7 +697,7 @@ export function ApiResponseMenuCheckedResp() {
 }
 export function ApiResponseMenuResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('MenuResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -707,7 +707,7 @@ export function ApiResponseMenuResp() {
 }
 export function ApiResponseOcrHappyLicenseBO() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('OcrHappyLicenseBO()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -717,7 +717,7 @@ export function ApiResponseOcrHappyLicenseBO() {
 }
 export function ApiResponseOcrIdCardBackResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('OcrIdCardBackResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -727,7 +727,7 @@ export function ApiResponseOcrIdCardBackResp() {
 }
 export function ApiResponseOcrIdCardFrontResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('OcrIdCardFrontResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -737,7 +737,7 @@ export function ApiResponseOcrIdCardFrontResp() {
 }
 export function ApiResponsePageSysDictDuiXiangnullZhiBuXuLieHua() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('PageSysDictDuiXiangnullZhiBuXuLieHua()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -747,7 +747,7 @@ export function ApiResponsePageSysDictDuiXiangnullZhiBuXuLieHua() {
 }
 export function ApiResponsePageZhiXieChangBoJuZiXinXi() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('PageZhiXieChangBoJuZiXinXi()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -757,7 +757,7 @@ export function ApiResponsePageZhiXieChangBoJuZiXinXi() {
 }
 export function ApiResponseQueryAccInfoResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('QueryAccInfoResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -767,7 +767,7 @@ export function ApiResponseQueryAccInfoResp() {
 }
 export function ApiResponseQueryCertFormResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('QueryCertFormResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -777,7 +777,7 @@ export function ApiResponseQueryCertFormResp() {
 }
 export function ApiResponseQueryDoorPageHomeResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('QueryDoorPageHomeResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -787,7 +787,7 @@ export function ApiResponseQueryDoorPageHomeResp() {
 }
 export function ApiResponseQueryJudgeClaimResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('QueryJudgeClaimResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -797,7 +797,7 @@ export function ApiResponseQueryJudgeClaimResp() {
 }
 export function ApiResponseQueryWalletBalanceResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('QueryWalletBalanceResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -807,7 +807,7 @@ export function ApiResponseQueryWalletBalanceResp() {
 }
 export function ApiResponseOrangeerResultResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('OrangeerResultResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -817,7 +817,7 @@ export function ApiResponseOrangeerResultResp() {
 }
 export function ApiResponsePinkInfoResq() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('PinkInfoResq()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -827,7 +827,7 @@ export function ApiResponsePinkInfoResq() {
 }
 export function ApiResponseScanReQrResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ScanReQrResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -837,7 +837,7 @@ export function ApiResponseScanReQrResp() {
 }
 export function ApiResponseSendActiveMessageResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('SendActiveMessageResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -847,7 +847,7 @@ export function ApiResponseSendActiveMessageResp() {
 }
 export function ApiResponseShiftDesktopResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ShiftDesktopResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -857,7 +857,7 @@ export function ApiResponseShiftDesktopResp() {
 }
 export function ApiResponseVerificationResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('VerificationResp()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -867,7 +867,7 @@ export function ApiResponseVerificationResp() {
 }
 export function ApiResponseVoid() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
     timestamp: Mock.mock('@datetime()'),
@@ -876,7 +876,7 @@ export function ApiResponseVoid() {
 }
 export function ApiResponseboolean() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('@boolean()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -886,7 +886,7 @@ export function ApiResponseboolean() {
 }
 export function ApiResponselong() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('@string(5,100)'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -896,7 +896,7 @@ export function ApiResponselong() {
 }
 export function ApiResponsestring() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('@string(5,100)'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -906,7 +906,7 @@ export function ApiResponsestring() {
 }
 export function ApiResponseDouJiangJiFangDongXinXiXiangQingBiao() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('DouJiangJiFangDongXinXiXiangQingBiao()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -916,7 +916,7 @@ export function ApiResponseDouJiangJiFangDongXinXiXiangQingBiao() {
 }
 export function ApiResponseDouJiangJiFangXingXinXiBoJuZiXinXiJiaShiShiZhiXuYaoChuanRuindividualBankCardNoindividualReservedPhoneNoindividualVocationQiTaXinXiCongredisHuanCunZhongHuoQu() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock(
       'DouJiangJiFangXingXinXiBoJuZiXinXiJiaShiShiZhiXuYaoChuanRuindividualBankCardNoindividualReservedPhoneNoindividualVocationQiTaXinXiCongredisHuanCunZhongHuoQu()'
     ),
@@ -928,7 +928,7 @@ export function ApiResponseDouJiangJiFangXingXinXiBoJuZiXinXiJiaShiShiZhiXuYaoCh
 }
 export function ApiResponseDouJiangJiFangXingXinXi() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('DouJiangJiFangXingXinXi()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -938,7 +938,7 @@ export function ApiResponseDouJiangJiFangXingXinXi() {
 }
 export function ApiResponseZhiXieChangJianDanFangXing() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ZhiXieChangJianDanFangXing0()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -948,7 +948,7 @@ export function ApiResponseZhiXieChangJianDanFangXing() {
 }
 export function ApiResponseZhiXieChangZhuTiXinXi() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ZhiXieChangZhuTiXinXi()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -958,7 +958,7 @@ export function ApiResponseZhiXieChangZhuTiXinXi() {
 }
 export function ApiResponseZhiXieChangBoJuZiXinXi() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ZhiXieChangBoJuZiXinXi0()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -968,7 +968,7 @@ export function ApiResponseZhiXieChangBoJuZiXinXi() {
 }
 export function ApiResponseZhiXieChangFangDongXinXiXiangQing() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ZhiXieChangFangDongXinXiXiangQing0()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -978,7 +978,7 @@ export function ApiResponseZhiXieChangFangDongXinXiXiangQing() {
 }
 export function ApiResponseGuanLianMaoZiYongDao() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('GuanLianMaoZiYongDao()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -988,7 +988,7 @@ export function ApiResponseGuanLianMaoZiYongDao() {
 }
 export function ApiResponseGuanLianMaoZiXiangQing() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('GuanLianMaoZiXiangQing()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -998,7 +998,7 @@ export function ApiResponseGuanLianMaoZiXiangQing() {
 }
 export function ApiResponseShenHeTongJiHuanCunSanShiMiao() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ShenHeTongJiHuanCunSanShiMiao()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -1008,7 +1008,7 @@ export function ApiResponseShenHeTongJiHuanCunSanShiMiao() {
 }
 export function ApiResponseBiXieDao() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('BiXieDao0()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -1018,7 +1018,7 @@ export function ApiResponseBiXieDao() {
 }
 export function ApiResponseShuJuYiZhiXingCaoZuoFanHuiJieGuo() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('ShuJuYiZhiXingCaoZuoFanHuiJieGuo()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -1028,7 +1028,7 @@ export function ApiResponseShuJuYiZhiXingCaoZuoFanHuiJieGuo() {
 }
 export function ApiResponseJianChaYaoQingMa() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('JianChaYaoQingMa()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -1038,7 +1038,7 @@ export function ApiResponseJianChaYaoQingMa() {
 }
 export function ApiResponseFangDongXinXi() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('FangDongXinXi()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -1048,7 +1048,7 @@ export function ApiResponseFangDongXinXi() {
 }
 export function ApiResponseYaoQingZhuCe() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     data: Mock.mock('YaoQingZhuCe()'),
     msg: Mock.mock('@string(5,100)'),
     success: Mock.mock('@boolean()'),
@@ -1102,7 +1102,7 @@ export function AuthOrgKeyBorardReq() {
 export function BasePageReq() {
   return {
     page: Mock.mock('@integer(3,1000)'),
-    size: Mock.mock('@integer(20,50)'),
+    size: Mock.mock('@integer(3,1000)'),
   }
 }
 export function ChannelAppGratefulConfigAddReq() {
@@ -1186,7 +1186,7 @@ export function ComLoginReq() {
 }
 export function ComLoginResp() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     newKeyBorard: Mock.mock('@boolean()'),
     setPassWord: Mock.mock('@boolean()'),
     token: Mock.mock('@string(5,100)'),
@@ -1195,138 +1195,138 @@ export function ComLoginResp() {
 }
 export function ComPage() {
   return {
-    current: Mock.mock('@integer(1,1)'),
+    current: Mock.mock('@string(5,100)'),
     'records|1-20': [Mock.mock('')],
-    size: Mock.mock('@integer(20,50)'),
-    total: Mock.mock('@integer(11,52)'),
+    size: Mock.mock('@string(5,100)'),
+    total: Mock.mock('@string(5,100)'),
   }
 }
 export function ComPageDesktopAddRecordResp() {
   return {
-    current: Mock.mock('@integer(1,1)'),
+    current: Mock.mock('@string(5,100)'),
     'records|1-20': [DesktopAddRecordResp()],
-    size: Mock.mock('@integer(20,50)'),
-    total: Mock.mock('@integer(11,52)'),
+    size: Mock.mock('@string(5,100)'),
+    total: Mock.mock('@string(5,100)'),
   }
 }
 export function ComPageDesktopComplexResp() {
   return {
-    current: Mock.mock('@integer(1,1)'),
+    current: Mock.mock('@string(5,100)'),
     'records|1-20': [DesktopComplexResp()],
-    size: Mock.mock('@integer(20,50)'),
-    total: Mock.mock('@integer(11,52)'),
+    size: Mock.mock('@string(5,100)'),
+    total: Mock.mock('@string(5,100)'),
   }
 }
 export function ComPageDesktopResp() {
   return {
-    current: Mock.mock('@integer(1,1)'),
+    current: Mock.mock('@string(5,100)'),
     'records|1-20': [DesktopResp()],
-    size: Mock.mock('@integer(20,50)'),
-    total: Mock.mock('@integer(11,52)'),
+    size: Mock.mock('@string(5,100)'),
+    total: Mock.mock('@string(5,100)'),
   }
 }
 export function ComPageDoorCredentialResp() {
   return {
-    current: Mock.mock('@integer(1,1)'),
+    current: Mock.mock('@string(5,100)'),
     'records|1-20': [DoorCredentialResp()],
-    size: Mock.mock('@integer(20,50)'),
-    total: Mock.mock('@integer(11,52)'),
+    size: Mock.mock('@string(5,100)'),
+    total: Mock.mock('@string(5,100)'),
   }
 }
 export function ComPageDoorIdentificationResp() {
   return {
-    current: Mock.mock('@integer(1,1)'),
+    current: Mock.mock('@string(5,100)'),
     'records|1-20': [DoorIdentificationResp()],
-    size: Mock.mock('@integer(20,50)'),
-    total: Mock.mock('@integer(11,52)'),
+    size: Mock.mock('@string(5,100)'),
+    total: Mock.mock('@string(5,100)'),
   }
 }
 export function ComPageEpDesktopResp() {
   return {
-    current: Mock.mock('@integer(1,1)'),
+    current: Mock.mock('@string(5,100)'),
     'records|1-20': [EpDesktopResp()],
-    size: Mock.mock('@integer(20,50)'),
-    total: Mock.mock('@integer(11,52)'),
+    size: Mock.mock('@string(5,100)'),
+    total: Mock.mock('@string(5,100)'),
   }
 }
 export function ComPageInviteDesktopResp() {
   return {
-    current: Mock.mock('@integer(1,1)'),
+    current: Mock.mock('@string(5,100)'),
     'records|1-20': [InviteDesktopResp()],
-    size: Mock.mock('@integer(20,50)'),
-    total: Mock.mock('@integer(11,52)'),
+    size: Mock.mock('@string(5,100)'),
+    total: Mock.mock('@string(5,100)'),
   }
 }
 export function ComPageLogLoginResp() {
   return {
-    current: Mock.mock('@integer(1,1)'),
+    current: Mock.mock('@string(5,100)'),
     'records|1-20': [LogLoginResp()],
-    size: Mock.mock('@integer(20,50)'),
-    total: Mock.mock('@integer(11,52)'),
+    size: Mock.mock('@string(5,100)'),
+    total: Mock.mock('@string(5,100)'),
   }
 }
 export function ComPageRelationDoorInfo() {
   return {
-    current: Mock.mock('@integer(1,1)'),
+    current: Mock.mock('@string(5,100)'),
     'records|1-20': [RelationDoorInfo()],
-    size: Mock.mock('@integer(20,50)'),
-    total: Mock.mock('@integer(11,52)'),
+    size: Mock.mock('@string(5,100)'),
+    total: Mock.mock('@string(5,100)'),
   }
 }
 export function ComPageZhiXieChangChuXing() {
   return {
-    current: Mock.mock('@integer(1,1)'),
+    current: Mock.mock('@string(5,100)'),
     'records|1-20': [ZhiXieChangChuXing()],
-    size: Mock.mock('@integer(20,50)'),
-    total: Mock.mock('@integer(11,52)'),
+    size: Mock.mock('@string(5,100)'),
+    total: Mock.mock('@string(5,100)'),
   }
 }
 export function ComPageGuanLianShenHeXinXi() {
   return {
-    current: Mock.mock('@integer(1,1)'),
+    current: Mock.mock('@string(5,100)'),
     'records|1-20': [GuanLianShenHeXinXi()],
-    size: Mock.mock('@integer(20,50)'),
-    total: Mock.mock('@integer(11,52)'),
+    size: Mock.mock('@string(5,100)'),
+    total: Mock.mock('@string(5,100)'),
   }
 }
 export function ComPageXiaoYuanZhuoGuanLi() {
   return {
-    current: Mock.mock('@integer(1,1)'),
+    current: Mock.mock('@string(5,100)'),
     'records|1-20': [XiaoYuanZhuoGuanLi0()],
-    size: Mock.mock('@integer(20,50)'),
-    total: Mock.mock('@integer(11,52)'),
+    size: Mock.mock('@string(5,100)'),
+    total: Mock.mock('@string(5,100)'),
   }
 }
 export function ComPageBiXieDao() {
   return {
-    current: Mock.mock('@integer(1,1)'),
+    current: Mock.mock('@string(5,100)'),
     'records|1-20': [BiXieDao1()],
-    size: Mock.mock('@integer(20,50)'),
-    total: Mock.mock('@integer(11,52)'),
+    size: Mock.mock('@string(5,100)'),
+    total: Mock.mock('@string(5,100)'),
   }
 }
 export function ComPageBiXieDaoYongDao() {
   return {
-    current: Mock.mock('@integer(1,1)'),
+    current: Mock.mock('@string(5,100)'),
     'records|1-20': [BiXieDaoYongDao()],
-    size: Mock.mock('@integer(20,50)'),
-    total: Mock.mock('@integer(11,52)'),
+    size: Mock.mock('@string(5,100)'),
+    total: Mock.mock('@string(5,100)'),
   }
 }
 export function ComPageTianJiaDouJiangJiBeiJing() {
   return {
-    current: Mock.mock('@integer(1,1)'),
+    current: Mock.mock('@string(5,100)'),
     'records|1-20': [TianJiaDouJiangJiBeiJing()],
-    size: Mock.mock('@integer(20,50)'),
-    total: Mock.mock('@integer(11,52)'),
+    size: Mock.mock('@string(5,100)'),
+    total: Mock.mock('@string(5,100)'),
   }
 }
 export function ComPageFangDongShouHuoDiZhiTianJia() {
   return {
-    current: Mock.mock('@integer(1,1)'),
+    current: Mock.mock('@string(5,100)'),
     'records|1-20': [FangDongShouHuoDiZhiTianJia0()],
-    size: Mock.mock('@integer(20,50)'),
-    total: Mock.mock('@integer(11,52)'),
+    size: Mock.mock('@string(5,100)'),
+    total: Mock.mock('@string(5,100)'),
   }
 }
 export function CompanyInfo() {
@@ -1501,7 +1501,7 @@ export function WhiteUpReq() {
 }
 export function DescribeFaceVerifyResponse() {
   return {
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     message: Mock.mock('@string(5,100)'),
     requestId: Mock.mock('@string(5,100)'),
     resultObject: Mock.mock('DescribeFaceVerifyResponseResultObject()'),
@@ -1685,7 +1685,7 @@ export function DesktopSimpleListReq() {
     id: Mock.mock('@string(5,100)'),
     mobile: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
-    size: Mock.mock('@integer(20,50)'),
+    size: Mock.mock('@integer(3,1000)'),
     status: Mock.mock('@string(5,100)'),
     keyBorardName: Mock.mock('@string(5,100)'),
   }
@@ -1743,7 +1743,7 @@ export function DoorAuditReq() {
     endTime: Mock.mock('@datetime()'),
     franchiseDoorName: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
-    size: Mock.mock('@integer(20,50)'),
+    size: Mock.mock('@integer(3,1000)'),
     startTime: Mock.mock('@datetime()'),
   }
 }
@@ -1830,7 +1830,7 @@ export function DoorIdentificationReq() {
     name: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
     serialNum: Mock.mock('@string(5,100)'),
-    size: Mock.mock('@integer(20,50)'),
+    size: Mock.mock('@integer(3,1000)'),
     walletStatus: Mock.mock('@string(5,100)'),
   }
 }
@@ -2257,7 +2257,7 @@ export function PageDesktopAddRecordReq() {
     desktopNameOrPhone: Mock.mock('@string(5,100)'),
     desktopStatus: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
-    size: Mock.mock('@integer(20,50)'),
+    size: Mock.mock('@integer(3,1000)'),
   }
 }
 export function PageDoorCredentialReq() {
@@ -2269,7 +2269,7 @@ export function PageDoorCredentialReq() {
     office: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
     scope: Mock.mock('@string(5,100)'),
-    size: Mock.mock('@integer(20,50)'),
+    size: Mock.mock('@integer(3,1000)'),
     validDate: Mock.mock('@datetime()'),
   }
 }
@@ -2277,36 +2277,36 @@ export function PageInvoiceReq() {
   return {
     dutyNum: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
-    size: Mock.mock('@integer(20,50)'),
+    size: Mock.mock('@integer(3,1000)'),
     title: Mock.mock('@string(5,100)'),
   }
 }
 export function PageSysDictDuiXiangnullZhiBuXuLieHua() {
   return {
     countId: Mock.mock('@string(5,100)'),
-    current: Mock.mock('@integer(1,1)'),
+    current: Mock.mock('@string(5,100)'),
     maxLimit: Mock.mock('@string(5,100)'),
     optimizeCountSql: Mock.mock('@boolean()'),
     'orders|1-20': [OrderItem()],
     pages: Mock.mock('@string(5,100)'),
     'records|1-20': [SysDictDuiXiangnullZhiBuXuLieHua()],
     searchCount: Mock.mock('@boolean()'),
-    size: Mock.mock('@integer(20,50)'),
-    total: Mock.mock('@integer(11,52)'),
+    size: Mock.mock('@string(5,100)'),
+    total: Mock.mock('@string(5,100)'),
   }
 }
 export function PageZhiXieChangBoJuZiXinXi() {
   return {
     countId: Mock.mock('@string(5,100)'),
-    current: Mock.mock('@integer(1,1)'),
+    current: Mock.mock('@string(5,100)'),
     maxLimit: Mock.mock('@string(5,100)'),
     optimizeCountSql: Mock.mock('@boolean()'),
     'orders|1-20': [OrderItem()],
     pages: Mock.mock('@string(5,100)'),
     'records|1-20': [ZhiXieChangBoJuZiXinXi0()],
     searchCount: Mock.mock('@boolean()'),
-    size: Mock.mock('@integer(20,50)'),
-    total: Mock.mock('@integer(11,52)'),
+    size: Mock.mock('@string(5,100)'),
+    total: Mock.mock('@string(5,100)'),
   }
 }
 export function CatVerifyReq() {
@@ -2406,7 +2406,7 @@ export function QueryInviteDesktopReq() {
     proposerPhone: Mock.mock('@string(5,100)'),
     proposerPhoneOrName: Mock.mock('@string(5,100)'),
     shareType: Mock.mock('@string(5,100)'),
-    size: Mock.mock('@integer(20,50)'),
+    size: Mock.mock('@integer(3,1000)'),
     status: Mock.mock('@string(5,100)'),
   }
 }
@@ -2734,7 +2734,7 @@ export function VerificationResp() {
     cardVaildDate: Mock.mock('@datetime()'),
     certifyId: Mock.mock('@string(5,100)'),
     certifyUrl: Mock.mock('@string(5,100)'),
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     message: Mock.mock('@string(5,100)'),
     ocrIdCardBack: Mock.mock('@string(5,100)'),
     ocrIdCardFront: Mock.mock('@string(5,100)'),
@@ -2749,7 +2749,7 @@ export function DouJiangJiFangDongXinXiXiangQingBiao() {
   return {
     area: Mock.mock('@string(5,100)'),
     authStatus: Mock.mock('@string(5,100)'),
-    avatar: Mock.mock('https://www.uviewui.com/common/logo.png'),
+    avatar: Mock.Random.image('200x100', Mock.Random.color()),
     city: Mock.mock('@string(5,100)'),
     country: Mock.mock('@string(5,100)'),
     init: Mock.mock('@boolean()'),
@@ -2870,7 +2870,7 @@ export function ZhiXieChangZhuTiXinXi() {
   return {
     area: Mock.mock('@string(5,100)'),
     authStatus: Mock.mock('@string(5,100)'),
-    avatar: Mock.mock('https://www.uviewui.com/common/logo.png'),
+    avatar: Mock.Random.image('200x100', Mock.Random.color()),
     chiefly: Mock.mock('@boolean()'),
     city: Mock.mock('@string(5,100)'),
     claimId: Mock.mock('@string(5,100)'),
@@ -3044,7 +3044,7 @@ export function ZhiXieChangChuXing() {
   return {
     area: Mock.mock('@string(5,100)'),
     authStatus: Mock.mock('@string(5,100)'),
-    avatar: Mock.mock('https://www.uviewui.com/common/logo.png'),
+    avatar: Mock.Random.image('200x100', Mock.Random.color()),
     city: Mock.mock('@string(5,100)'),
     contactNumber: Mock.mock('@string(5,100)'),
     country: Mock.mock('@string(5,100)'),
@@ -3071,7 +3071,7 @@ export function ZhiXieChangFangDongXinXi() {
   return {
     area: Mock.mock('@string(5,100)'),
     authStatus: Mock.mock('@string(5,100)'),
-    avatar: Mock.mock('https://www.uviewui.com/common/logo.png'),
+    avatar: Mock.Random.image('200x100', Mock.Random.color()),
     chiefly: Mock.mock('@boolean()'),
     city: Mock.mock('@string(5,100)'),
     contactNumber: Mock.mock('@string(5,100)'),
@@ -3094,7 +3094,7 @@ export function ZhiXieChangFangDongXinXi() {
 export function ZhiXieChangFangDongXinXiXiangQing() {
   return {
     area: Mock.mock('@string(5,100)'),
-    avatar: Mock.mock('https://www.uviewui.com/common/logo.png'),
+    avatar: Mock.Random.image('200x100', Mock.Random.color()),
     city: Mock.mock('@string(5,100)'),
     contactNumber: Mock.mock('@string(5,100)'),
     country: Mock.mock('@string(5,100)'),
@@ -3113,7 +3113,7 @@ export function ZhiXieChangFangDongXinXiXiangQing0() {
   return {
     area: Mock.mock('@string(5,100)'),
     authStatus: Mock.mock('@string(5,100)'),
-    avatar: Mock.mock('https://www.uviewui.com/common/logo.png'),
+    avatar: Mock.Random.image('200x100', Mock.Random.color()),
     city: Mock.mock('@string(5,100)'),
     contactNumber: Mock.mock('@string(5,100)'),
     country: Mock.mock('@string(5,100)'),
@@ -3135,7 +3135,7 @@ export function ZhiXieChangFangDongXinXiXiangQing0() {
 export function XiuGaiDouJiangJiXinXi() {
   return {
     area: Mock.mock('@string(5,100)'),
-    avatar: Mock.mock('https://www.uviewui.com/common/logo.png'),
+    avatar: Mock.Random.image('200x100', Mock.Random.color()),
     city: Mock.mock('@string(5,100)'),
     country: Mock.mock('@string(5,100)'),
     location: Mock.mock('@string(5,100)'),
@@ -3229,14 +3229,14 @@ export function FenYeChuXingDouJiangJiBeiJing() {
     credentialNo: Mock.mock('@string(5,100)'),
     credentialType: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
-    size: Mock.mock('@integer(20,50)'),
+    size: Mock.mock('@integer(3,1000)'),
   }
 }
 export function FenYeChuXingSuoYouZhiXieChang() {
   return {
     name: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
-    size: Mock.mock('@integer(20,50)'),
+    size: Mock.mock('@integer(3,1000)'),
   }
 }
 export function QieHuanMoRenDiZhi() {
@@ -3313,13 +3313,13 @@ export function BiXieDaoZhongXinChuXingGuoLvTiaoJian() {
     desktopName: Mock.mock('@string(5,100)'),
     doorId: Mock.mock('@string(5,100)'),
     page: Mock.mock('@integer(3,1000)'),
-    size: Mock.mock('@integer(20,50)'),
+    size: Mock.mock('@integer(3,1000)'),
   }
 }
 export function BiXieDaoRuCan() {
   return {
     channelType: Mock.mock('@string(5,100)'),
-    code: Mock.mock('@integer(200,200)'),
+    code: 200,
     corpId: Mock.mock('@string(5,100)'),
     redirectUri: Mock.mock('@string(5,100)'),
     state: Mock.mock('@string(5,100)'),
