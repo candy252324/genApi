@@ -893,12 +893,12 @@ export function MemberBirdStatusResp() {
 }
 export function MessageSyncDTO() {
   return {
-    applyType: /'FORWARD'| 'REPLY'| ''/,
+    applyType: /FORWARD|REPLY|/,
     'cardMessageIdList|1-20': ['@string(5,50)'],
     channel: '@string(5,50)',
     clientMessageId: '@guid',
     content: '@string(5,50)',
-    contentType: /'TEXT'|'LINK'|'IMG'|'VIDEO'|'AUDIO'|'VOICE'|'FILE'|'STRUCTUAL'|'PHONE'/,
+    contentType: /TEXT|LINK|IMG|VIDEO|AUDIO|VOICE|FILE|STRUCTUAL|PHONE|/,
     'excludeKeyBorardIds|1-20': ['@string(5,50)'],
     fileId: '@guid',
     forwardMessageId: '@guid',
@@ -1204,7 +1204,7 @@ export function XiaoDaoXiaoXiQiuQianXiangYing() {
     isSameGrateful: '@boolean',
     isTop: '@boolean',
     modified: '@string(5,50)',
-    msgApplyType: /'FORWARD'| 'REPLY'| ''/,
+    msgApplyType: /FORWARD|REPLY|/,
     msgContent: '@string(5,50)',
     msgContentType: '@string(5,50)',
     msgFileUrl: '@image(200x100, @color, @color)',
@@ -1310,10 +1310,10 @@ export function XiaoXiDaoLaJi() {
 }
 export function XiaoXiDuiXiang() {
   return {
-    applyType: /'FORWARD'| 'REPLY'| ''/,
+    applyType: /FORWARD|REPLY|/,
     'cardMessageList|1-20': [ZhuanFaXiaoXiDuiXiang()],
     content: '@string(5,50)',
-    contentType: /'TEXT'|'LINK'|'IMG'|'VIDEO'|'AUDIO'|'VOICE'|'FILE'|'STRUCTUAL'|'PHONE'/,
+    contentType: /TEXT|LINK|IMG|VIDEO|AUDIO|VOICE|FILE|STRUCTUAL|PHONE|/,
     created: '@datetime',
     fileId: '@guid',
     fileName: '@ctitle(5,10)',
@@ -1563,9 +1563,9 @@ export function QingQiuXiaoXiDuBaoKuoYanChangChunHuaJiHuiFuXiaoXiDuRequestReadRe
 }
 export function ZhuanFaXiaoXiDuiXiang() {
   return {
-    applyType: /'FORWARD'| 'REPLY'| ''/,
+    applyType: /FORWARD|REPLY|/,
     content: '@string(5,50)',
-    contentType: /'TEXT'|'LINK'|'IMG'|'VIDEO'|'AUDIO'|'VOICE'|'FILE'|'STRUCTUAL'|'PHONE'/,
+    contentType: /TEXT|LINK|IMG|VIDEO|AUDIO|VOICE|FILE|STRUCTUAL|PHONE|/,
     created: '@datetime',
     fileId: '@guid',
     fileName: '@ctitle(5,10)',

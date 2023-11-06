@@ -2047,7 +2047,7 @@ export function InviteDoorReInfo() {
 }
 export function InviteJoinEchoResp() {
   return {
-    applyType: /'FORWARD'| 'REPLY'| ''/,
+    applyType: /FORWARD|REPLY|/,
     doorCertStatus: '@string(5,50)',
     doorName: '@ctitle(5,10)',
     inviteName: '@ctitle(5,10)',
@@ -2058,7 +2058,7 @@ export function InviteJoinEchoResp() {
 }
 export function InviteLoginReq() {
   return {
-    applyType: /'FORWARD'| 'REPLY'| ''/,
+    applyType: /FORWARD|REPLY|/,
     certificate: '@string(5,50)',
     clientType: '@string(5,50)',
     clientVersion: '@string(5,50)',

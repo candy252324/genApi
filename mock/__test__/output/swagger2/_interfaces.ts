@@ -927,7 +927,7 @@ export function FriendshipDetailResp() {
     isTop: '@boolean',
     job: '@string(5,50)',
     lastAckSequence: '@string(5,50)',
-    msgApplyType: /'FORWARD'| 'REPLY'| ''/,
+    msgApplyType: /FORWARD|REPLY|/,
     msgContent: '@string(5,50)',
     msgContentType: '@string(5,50)',
     msgFileUrl: '@image(200x100, @color, @color)',
@@ -1385,7 +1385,7 @@ export function MaiShaoBingXiaoXiTuiSongimXiaoXi() {
     bizSource: '@string(5,50)',
     bpSenderId: '@guid',
     content: '@string(5,50)',
-    contentType: /'TEXT'|'LINK'|'IMG'|'VIDEO'|'AUDIO'|'VOICE'|'FILE'|'STRUCTUAL'|'PHONE'/,
+    contentType: /TEXT|LINK|IMG|VIDEO|AUDIO|VOICE|FILE|STRUCTUAL|PHONE|/,
     footer: FooterWrapper(),
     'imBirdIdList|1-20': ['@string(5,50)'],
     'receiverBpKeyBorardIdList|1-20': ['@string(5,50)'],
@@ -1464,7 +1464,7 @@ export function XiaoDaoXiaoXiYongDaoXiangYing() {
     isTop: '@boolean',
     lastAckSequence: '@string(5,50)',
     modified: '@string(5,50)',
-    msgApplyType: /'FORWARD'| 'REPLY'| ''/,
+    msgApplyType: /FORWARD|REPLY|/,
     msgContent: '@string(5,50)',
     msgContentType: '@string(5,50)',
     msgFileUrl: '@image(200x100, @color, @color)',
@@ -1663,14 +1663,14 @@ export function XiaoXiack() {
 }
 export function XiaoXiNaBuXiangYingShiTi() {
   return {
-    applyType: /'FORWARD'| 'REPLY'| ''/,
+    applyType: /FORWARD|REPLY|/,
     atKeyBorardIds: '@string(5,50)',
     atKeyBorardNames: '@ctitle(5,10)',
     bpKeyBorardId: '@guid',
     'cardMessageList|1-20': [ZhuanFaXiaoXiDuiXiang()],
     channelFile: FileResp(),
     content: '@string(5,50)',
-    contentType: /'TEXT'|'LINK'|'IMG'|'VIDEO'|'AUDIO'|'VOICE'|'FILE'|'STRUCTUAL'|'PHONE'/,
+    contentType: /TEXT|LINK|IMG|VIDEO|AUDIO|VOICE|FILE|STRUCTUAL|PHONE|/,
     created: '@datetime',
     fileId: '@guid',
     fileName: '@ctitle(5,10)',
@@ -1703,13 +1703,13 @@ export function XiaoXiSaoXue() {
 }
 export function XiaoXiDuiXiang() {
   return {
-    applyType: /'FORWARD'| 'REPLY'| ''/,
+    applyType: /FORWARD|REPLY|/,
     atKeyBorardIds: '@string(5,50)',
     atKeyBorardNames: '@ctitle(5,10)',
     'cardMessageList|1-20': [ZhuanFaXiaoXiDuiXiang()],
     channelFile: FileResp(),
     content: '@string(5,50)',
-    contentType: /'TEXT'|'LINK'|'IMG'|'VIDEO'|'AUDIO'|'VOICE'|'FILE'|'STRUCTUAL'|'PHONE'/,
+    contentType: /TEXT|LINK|IMG|VIDEO|AUDIO|VOICE|FILE|STRUCTUAL|PHONE|/,
     created: '@datetime',
     fileId: '@guid',
     fileName: '@ctitle(5,10)',
@@ -1919,7 +1919,7 @@ export function NiaoWoDuiXiangBirdDetailResp() {
     isPrivate: '@boolean',
     isTop: '@boolean',
     lastAckSequence: '@string(5,50)',
-    msgApplyType: /'FORWARD'| 'REPLY'| ''/,
+    msgApplyType: /FORWARD|REPLY|/,
     msgContent: '@string(5,50)',
     msgContentType: '@string(5,50)',
     msgFileUrl: '@image(200x100, @color, @color)',
@@ -2090,10 +2090,10 @@ export function QingQiuXiaoXiDuBaoKuoYanChangChunHuaJiHuiFuXiaoXiDuRequestReadRe
 }
 export function ZhuanFaXiaoXiDuiXiang() {
   return {
-    applyType: /'FORWARD'| 'REPLY'| ''/,
+    applyType: /FORWARD|REPLY|/,
     channelFile: FileResp(),
     content: '@string(5,50)',
-    contentType: /'TEXT'|'LINK'|'IMG'|'VIDEO'|'AUDIO'|'VOICE'|'FILE'|'STRUCTUAL'|'PHONE'/,
+    contentType: /TEXT|LINK|IMG|VIDEO|AUDIO|VOICE|FILE|STRUCTUAL|PHONE|/,
     created: '@datetime',
     fileId: '@guid',
     fileName: '@ctitle(5,10)',

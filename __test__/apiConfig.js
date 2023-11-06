@@ -76,8 +76,8 @@ module.exports = {
       total: () => {
         return "'@integer(5, 100)'"
       },
-      '/ApplyType|applyType/': "'FORWARD'| 'REPLY'| ''",
-      '/contentType/': "'TEXT'|'LINK'|'IMG'|'VIDEO'|'AUDIO'|'VOICE'|'FILE'|'STRUCTUAL'|'PHONE'",
+      '/ApplyType|applyType/': 'FORWARD|REPLY|', // 若不期望生成空字符串，去除末尾的竖线即可
+      '/contentType/': 'TEXT|LINK|IMG|VIDEO|AUDIO|VOICE|FILE|STRUCTUAL|PHONE|',
       '/url/': "'@url'", // 正则
     },
   },
