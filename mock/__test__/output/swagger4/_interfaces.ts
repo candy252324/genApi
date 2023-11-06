@@ -14,7 +14,7 @@ export function AddHappyDoorReq() {
     createId: '@guid',
     createName: '@ctitle(5,10)',
     createSource: '@string(5,50)',
-    created: '@string(5,50)',
+    created: '@datetime',
     enableSaveOrUpdate: '@boolean',
     doorCode: '@string(5,50)',
     doorName: '@ctitle(5,10)',
@@ -26,7 +26,7 @@ export function AddHappyDoorReq() {
     licenseId: '@guid',
     lng: '@string(5,50)',
     modified: '@string(5,50)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     province: '@province',
     regCatCnt: '@string(5,50)',
     orangeeredCapital: '@string(5,50)',
@@ -66,7 +66,7 @@ export function AddHappyCatReq() {
     createId: '@guid',
     createName: '@ctitle(5,10)',
     createSource: '@string(5,50)',
-    created: '@string(5,50)',
+    created: '@datetime',
     education: '@string(5,50)',
     enableSaveOrUpdate: '@boolean',
     gender: '@string(5,50)',
@@ -79,7 +79,7 @@ export function AddHappyCatReq() {
     modified: '@string(5,50)',
     catName: '@ctitle(5,10)',
     catnelRisk: '@integer(3,1000)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     province: '@province',
     searchStationId: '@guid',
     skCertificateCnt: '@string(5,50)',
@@ -109,7 +109,7 @@ export function AddHappyGladReq() {
     agenciesArea: '@string(5,50)',
     agenciesCity: '@city',
     agenciesCountry: '@string(5,50)',
-    agenciesPhone: '@string(5,50)',
+    agenciesPhone: '@integer(13100000000,18999999999)',
     agenciesProvince: '@province',
     biddingCorpAddr: '@string(5,50)',
     biddingCorpAddrCoordinate: '@string(5,50)',
@@ -119,7 +119,7 @@ export function AddHappyGladReq() {
     biddingCorpCity: '@city',
     biddingCorpCountry: '@string(5,50)',
     biddingCorpName: '@ctitle(5,10)',
-    biddingCorpPhone: '@string(5,50)',
+    biddingCorpPhone: '@integer(13100000000,18999999999)',
     biddingCorpProvince: '@province',
     biddingEndTime: '@datetime',
     biddingOpeningTime: '@datetime',
@@ -132,7 +132,7 @@ export function AddHappyGladReq() {
     createId: '@guid',
     createName: '@ctitle(5,10)',
     createSource: '@string(5,50)',
-    created: '@string(5,50)',
+    created: '@datetime',
     enableSaveOrUpdate: '@boolean',
     fileDownloadEndTime: '@datetime',
     fileDownloadStartTime: '@datetime',
@@ -143,7 +143,7 @@ export function AddHappyGladReq() {
     licenseId: '@guid',
     lng: '@string(5,50)',
     modified: '@string(5,50)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     gladBudget: '@string(5,50)',
     gladName: '@ctitle(5,10)',
     gladNum: '@string(5,50)',
@@ -166,7 +166,7 @@ export function AddHappyReq() {
     createId: '@guid',
     createName: '@ctitle(5,10)',
     createSource: '@string(5,50)',
-    created: '@string(5,50)',
+    created: '@datetime',
     enableSaveOrUpdate: '@boolean',
     id: '@guid',
     isDelete: '@string(5,50)',
@@ -220,7 +220,7 @@ export function AddSignHappyDoorReq() {
     createId: '@guid',
     createName: '@ctitle(5,10)',
     createSource: '@string(5,50)',
-    created: '@string(5,50)',
+    created: '@datetime',
     customerId: '@guid',
     customerType: '@string(5,50)',
     doorCode: '@string(5,50)',
@@ -233,7 +233,7 @@ export function AddSignHappyDoorReq() {
     licenseId: '@guid',
     lng: '@string(5,50)',
     modified: '@string(5,50)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     province: '@province',
     regCatCnt: '@string(5,50)',
     orangeeredCapital: '@string(5,50)',
@@ -262,7 +262,7 @@ export function AddSignHappyCatReq() {
     createId: '@guid',
     createName: '@ctitle(5,10)',
     createSource: '@string(5,50)',
-    created: '@string(5,50)',
+    created: '@datetime',
     customerId: '@guid',
     customerType: '@string(5,50)',
     education: '@string(5,50)',
@@ -273,7 +273,7 @@ export function AddSignHappyCatReq() {
     lng: '@string(5,50)',
     modified: '@string(5,50)',
     catName: '@ctitle(5,10)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     province: '@province',
     signType: '@string(5,50)',
     step: '@integer(3,1000)',
@@ -293,7 +293,7 @@ export function AddSignHappyGladReq() {
     agenciesArea: '@string(5,50)',
     agenciesCity: '@city',
     agenciesCountry: '@string(5,50)',
-    agenciesPhone: '@string(5,50)',
+    agenciesPhone: '@integer(13100000000,18999999999)',
     agenciesProvince: '@province',
     biddingCorpAddr: '@string(5,50)',
     biddingCorpAddrCoordinate: '@string(5,50)',
@@ -303,7 +303,7 @@ export function AddSignHappyGladReq() {
     biddingCorpCity: '@city',
     biddingCorpCountry: '@string(5,50)',
     biddingCorpName: '@ctitle(5,10)',
-    biddingCorpPhone: '@string(5,50)',
+    biddingCorpPhone: '@integer(13100000000,18999999999)',
     biddingCorpProvince: '@province',
     biddingEndTime: '@datetime',
     biddingOpeningTime: '@datetime',
@@ -316,7 +316,7 @@ export function AddSignHappyGladReq() {
     createId: '@guid',
     createName: '@ctitle(5,10)',
     createSource: '@string(5,50)',
-    created: '@string(5,50)',
+    created: '@datetime',
     customerId: '@guid',
     customerType: '@string(5,50)',
     fileDownloadEndTime: '@datetime',
@@ -327,7 +327,7 @@ export function AddSignHappyGladReq() {
     lat: '@string(5,50)',
     lng: '@string(5,50)',
     modified: '@string(5,50)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     gladBudget: '@string(5,50)',
     gladName: '@ctitle(5,10)',
     gladNum: '@string(5,50)',
@@ -1233,7 +1233,7 @@ export function HappyDesktopRulePageReq() {
   return {
     'desktopIdList|1-20': ['@string(5,50)'],
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
   }
 }
 export function HappyDesktopRulePageResp() {
@@ -1285,7 +1285,7 @@ export function HappyDoorInfoResp() {
     corpCertArray: '@string(5,50)',
     corporateName: '@ctitle(5,10)',
     country: '@string(5,50)',
-    created: '@string(5,50)',
+    created: '@datetime',
     customerId: '@guid',
     customerType: '@string(5,50)',
     doorCode: '@string(5,50)',
@@ -1305,7 +1305,7 @@ export function HappyDoorInfoResp() {
     lat: '@string(5,50)',
     licenseId: '@guid',
     lng: '@string(5,50)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     planId: '@guid',
     planScore: '@string(5,50)',
     province: '@province',
@@ -1379,7 +1379,7 @@ export function HappyCatCertificateResp() {
   return {
     certificateNum: '@string(5,50)',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     id: '@guid',
     major: '@string(5,50)',
     name: '@ctitle(5,10)',
@@ -1400,7 +1400,7 @@ export function HappyCatInfoResp() {
     city: '@city',
     coordinate: '@string(5,50)',
     country: '@string(5,50)',
-    created: '@string(5,50)',
+    created: '@datetime',
     customerId: '@guid',
     customerMobile: '@string(5,50)',
     customerName: '@ctitle(5,10)',
@@ -1421,7 +1421,7 @@ export function HappyCatInfoResp() {
     lng: '@string(5,50)',
     catName: '@ctitle(5,10)',
     catnelRisk: '@integer(3,1000)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     planId: '@guid',
     planScore: '@string(5,50)',
     province: '@province',
@@ -1469,7 +1469,7 @@ export function HappyPlanAddCustomerReq() {
 export function HappyPlanCoordinateResp() {
   return {
     coordinate: '@string(5,50)',
-    created: '@string(5,50)',
+    created: '@datetime',
     planId: '@guid',
   }
 }
@@ -1509,7 +1509,7 @@ export function HappyPlanPageReq() {
     date: '@datetime',
     'handlerIdList|1-20': ['@string(5,50)'],
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
   }
 }
 export function HappyPlanPunchReq() {
@@ -1522,7 +1522,7 @@ export function HappyPlanRecommendedReq() {
     happyType: '@string(5,50)',
     date: '@datetime',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
   }
 }
 export function HappyPlanScoreListReq() {
@@ -1540,7 +1540,7 @@ export function HappyGladInfoResp() {
     agenciesArea: '@string(5,50)',
     agenciesCity: '@city',
     agenciesCountry: '@string(5,50)',
-    agenciesPhone: '@string(5,50)',
+    agenciesPhone: '@integer(13100000000,18999999999)',
     agenciesProvince: '@province',
     area: '@string(5,50)',
     biddingCorpAddr: '@string(5,50)',
@@ -1550,7 +1550,7 @@ export function HappyGladInfoResp() {
     biddingCorpCity: '@city',
     biddingCorpCountry: '@string(5,50)',
     biddingCorpName: '@ctitle(5,10)',
-    biddingCorpPhone: '@string(5,50)',
+    biddingCorpPhone: '@integer(13100000000,18999999999)',
     biddingCorpProvince: '@province',
     biddingEndTime: '@datetime',
     biddingOpeningTime: '@datetime',
@@ -1562,7 +1562,7 @@ export function HappyGladInfoResp() {
     city: '@city',
     coordinate: '@string(5,50)',
     country: '@string(5,50)',
-    created: '@string(5,50)',
+    created: '@datetime',
     customerId: '@guid',
     customerType: '@string(5,50)',
     fileDownloadEndTime: '@datetime',
@@ -1579,7 +1579,7 @@ export function HappyGladInfoResp() {
     lat: '@string(5,50)',
     licenseId: '@guid',
     lng: '@string(5,50)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     planId: '@guid',
     planScore: '@string(5,50)',
     gladBudget: '@string(5,50)',
@@ -1661,7 +1661,7 @@ export function HappySubscribeInfoReq() {
   return {
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     doorEnable: '@integer(3,1000)',
     doorJson: '',
     id: '@guid',
@@ -1688,218 +1688,218 @@ export function HappySubscribeInfoResp() {
 export function CharSequence() {}
 export function ComPageHappyDesktopDetailRulePageResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [HappyDesktopDetailRulePageResp()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageHappyPushDetail() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [HappyPushDetail()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageCustomerDoorInfoResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [CustomerDoorInfoResp()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageCustomerCatInfoResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [CustomerCatInfoResp()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageDesktopListResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [DesktopListResp()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageLocationDateInfoResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [LocationDateInfoResp()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageLocationInfoResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [LocationInfoResp()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPagePageHappyResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [PageHappyResp()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPagePageDoorHappyPoolResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [PageDoorHappyPoolResp()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPagePageCatHappyPoolResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [PageCatHappyPoolResp()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPagePageGladHappyPoolResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [PageGladHappyPoolResp()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPagePunchPageResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [PunchPageResp()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageTaskPageListResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [TaskPageListResp()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageTreelong() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [''],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageFenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [FenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageFenYeLvYouRenWu() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [FenYeLvYouRenWu()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageFenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [FenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageFenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [FenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageHuaHuaTiQingQiu() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [HuaHuaTiQingQiu()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageJiQiRenGenJinJiLuXiangYing() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [JiQiRenGenJinJiLuXiangYing()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageDaoRuHuaHuaTiXiangYing() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [DaoRuHuaHuaTiXiangYing()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageSouSuoRenCaiJiQiRenresponse() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [SouSuoRenCaiJiQiRenresponse()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageSouSuoZhiXieChangJiQiRenresponse() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [SouSuoZhiXieChangJiQiRenresponse()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageCaoZuoRiZhiFenYeresponse() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [CaoZuoRiZhiFenYeresponse()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageHongLingJinJiLuFenYeresponse() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [HongLingJinJiLuFenYeresponse()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageLianXiRenHuaHuaTi() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [LianXiRenHuaHuaTi()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageXiangMuFaCaiMengXiangQingrpcresponse() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [XiangMuFaCaiMengXiangQingrpcresponse()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function Comparableobject() {}
@@ -1976,7 +1976,7 @@ export function CustomerDoorAddReq() {
     isImportant: '@integer(3,1000)',
     'labels|1-20': ['@string(5,50)'],
     location: '@string(5,50)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     province: '@province',
     regCatCnt: '@string(5,50)',
     orangeeredCapital: '@integer(3,1000)',
@@ -2005,7 +2005,7 @@ export function CustomerDoorDetailResp() {
     corporateName: '@ctitle(5,10)',
     country: '@string(5,50)',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     customerCode: '@string(5,50)',
     customerSource: '@string(5,50)',
     whiteName: '@ctitle(5,10)',
@@ -2023,7 +2023,7 @@ export function CustomerDoorDetailResp() {
     'labels|1-20': [CustomerLabelResp()],
     licenseId: '@guid',
     location: '@string(5,50)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     province: '@province',
     regCatCnt: '@string(5,50)',
     orangeeredCapital: '@integer(3,1000)',
@@ -2036,7 +2036,7 @@ export function CustomerDoorFromDataReq() {
   return {
     companyName: '@ctitle(5,10)',
     companyNum: '@string(5,50)',
-    size: '@integer(3,1000)',
+    size: 20,
   }
 }
 export function CustomerDoorFromDataResp() {
@@ -2045,7 +2045,7 @@ export function CustomerDoorFromDataResp() {
     companyIprovinceName: '@province',
     companyKey: '@integer(3,1000)',
     companyLegalRepresentative: '@string(5,50)',
-    companyLegalRepresentativePhone: '@string(5,50)',
+    companyLegalRepresentativePhone: '@integer(13100000000,18999999999)',
     companyName: '@ctitle(5,10)',
     companyNum: '@string(5,50)',
     companyGladCnt: '@string(5,50)',
@@ -2081,7 +2081,7 @@ export function CustomerDoorInfoResp() {
     isImportant: '@integer(3,1000)',
     label: '@string(5,50)',
     location: '@string(5,50)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     province: '@province',
     regCatCnt: '@string(5,50)',
     orangeeredCapital: '@integer(3,1000)',
@@ -2137,7 +2137,7 @@ export function CustomerDoorUpReq() {
     isImportant: '@integer(3,1000)',
     'labels|1-20': [CustomerLabelReq()],
     location: '@string(5,50)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     province: '@province',
     regCatCnt: '@string(5,50)',
     orangeeredCapital: '@integer(3,1000)',
@@ -2169,7 +2169,7 @@ export function CustomerInvoiceAddReq() {
     id: '@guid',
     isDefault: '@integer(3,1000)',
     isDelete: '@integer(3,1000)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     sort: '@integer(3,1000)',
     tin: '@string(5,50)',
   }
@@ -2183,7 +2183,7 @@ export function CustomerInvoiceDetailResp() {
     id: '@guid',
     isDefault: '@integer(3,1000)',
     isDelete: '@integer(3,1000)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     sort: '@integer(3,1000)',
     tin: '@string(5,50)',
   }
@@ -2225,7 +2225,7 @@ export function CustomerCatAddReq() {
     'labels|1-20': ['@string(5,50)'],
     location: '@string(5,50)',
     catName: '@ctitle(5,10)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     post: '@string(5,50)',
     province: '@province',
     step: '@integer(3,1000)',
@@ -2241,7 +2241,7 @@ export function CustomerCatAddResp() {
 export function CustomerCatCertificateInfoResp() {
   return {
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     customerId: '@guid',
     id: '@guid',
     major: '@string(5,50)',
@@ -2271,7 +2271,7 @@ export function CustomerCatDetailResp() {
     coordinate: '@string(5,50)',
     country: '@string(5,50)',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     customerCode: '@string(5,50)',
     customerSource: '@string(5,50)',
     whiteName: '@ctitle(5,10)',
@@ -2287,7 +2287,7 @@ export function CustomerCatDetailResp() {
     'labels|1-20': [CustomerLabelResp()],
     location: '@string(5,50)',
     catName: '@ctitle(5,10)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     post: '@string(5,50)',
     province: '@province',
     talentId: '@guid',
@@ -2318,7 +2318,7 @@ export function CustomerCatInfoResp() {
     label: '@string(5,50)',
     catName: '@ctitle(5,10)',
     catnelRisk: '@integer(3,1000)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     province: '@province',
     signId: '@guid',
     signState: '@string(5,50)',
@@ -2370,7 +2370,7 @@ export function CustomerCatUpReq() {
     'labels|1-20': [CustomerLabelReq()],
     location: '@string(5,50)',
     catName: '@ctitle(5,10)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     post: '@string(5,50)',
     province: '@province',
     'titleList|1-20': [CustomerCatTitleReq()],
@@ -2422,10 +2422,10 @@ export function WhiteResp() {
     authStatus: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     whiteCode: '@string(5,50)',
     whiteName: '@ctitle(5,10)',
-    email: '@string(5,50)',
+    email: '@email',
     doorId: '@guid',
     id: '@guid',
     isShow: '@boolean',
@@ -2439,7 +2439,7 @@ export function WhiteResp() {
     orderNum: '@integer(3,1000)',
     parentCode: '@string(5,50)',
     parentId: '@guid',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     profile: '@string(5,50)',
     scaleType: '@string(5,50)',
     scaleTypeDesc: '@string(5,50)',
@@ -2462,7 +2462,7 @@ export function DesktopListResp() {
   return {
     id: '@guid',
     name: '@ctitle(5,10)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
   }
 }
 export function DesktopResp() {
@@ -2488,7 +2488,7 @@ export function FollowAgainReq() {
 export function FollowListReq() {
   return {
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
     taskId: '@guid',
   }
 }
@@ -2503,7 +2503,7 @@ export function ImportListReq() {
   return {
     endTime: '@datetime',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
     startTime: '@datetime',
     taskType: '@integer(3,1000)',
   }
@@ -2621,7 +2621,7 @@ export function LocationInfoResp() {
     city: '@city',
     coordinate: '@string(5,50)',
     country: '@string(5,50)',
-    created: '@string(5,50)',
+    created: '@datetime',
     desktopId: '@guid',
     desktopName: '@ctitle(5,10)',
     fileId: '@guid',
@@ -2636,7 +2636,7 @@ export function PageHappyMixReq() {
     orderColumn: '@string(5,50)',
     orderType: '@integer(3,1000)',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
     type: '@integer(3,1000)',
   }
 }
@@ -2646,7 +2646,7 @@ export function PageHappyResp() {
     happyType: '@string(5,50)',
     'contactPhoneList|1-20': [LianXiRenHuaHuaTi()],
     coordinate: '@string(5,50)',
-    created: '@string(5,50)',
+    created: '@datetime',
     customerId: '@guid',
     customerType: '@string(5,50)',
     dataLocation: '@string(5,50)',
@@ -2674,7 +2674,7 @@ export function PageContactReq() {
     doorId: '@guid',
     name: '@ctitle(5,10)',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
   }
 }
 export function PageCustomerDoorReq() {
@@ -2706,7 +2706,7 @@ export function PageCustomerDoorReq() {
     signDateMax: '@datetime',
     signDateMin: '@datetime',
     signState: '@string(5,50)',
-    size: '@integer(3,1000)',
+    size: 20,
     skAchievementCntMax: '@string(5,50)',
     skAchievementCntMin: '@string(5,50)',
     skQualificationCntMax: '@string(5,50)',
@@ -2734,13 +2734,13 @@ export function PageCustomerCatReq() {
     cat: '@string(5,50)',
     catName: '@ctitle(5,10)',
     catnelRisk: '@boolean',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     province: '@province',
     sign: '@string(5,50)',
     signDateMax: '@datetime',
     signDateMin: '@datetime',
     signState: '@string(5,50)',
-    size: '@integer(3,1000)',
+    size: 20,
     skCertificateCntMax: '@string(5,50)',
     skCertificateCntMin: '@string(5,50)',
   }
@@ -2755,7 +2755,7 @@ export function PageDoorHappyPoolResp() {
     corpCertArray: '@string(5,50)',
     corpCertCnt: '@integer(3,1000)',
     corporateName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     customerId: '@guid',
     customerType: '@string(5,50)',
     dataLocation: '@string(5,50)',
@@ -2777,7 +2777,7 @@ export function PageDoorHappyPoolResp() {
     isRead: '@integer(3,1000)',
     lastFetchTime: '@datetime',
     lastFollowTime: '@datetime',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     planId: '@guid',
     planScore: '@string(5,50)',
     qualicaficationArray: '@string(5,50)',
@@ -2798,7 +2798,7 @@ export function PageLocationByTaskReq() {
   return {
     desktopName: '@ctitle(5,10)',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
     taskId: '@guid',
   }
 }
@@ -2811,7 +2811,7 @@ export function PageLocationReq() {
     'followerIdList|1-20': ['@string(5,50)'],
     page: '@integer(3,1000)',
     province: '@province',
-    size: '@integer(3,1000)',
+    size: 20,
     startTime: '@datetime',
   }
 }
@@ -2831,7 +2831,7 @@ export function PageCatHappyPoolResp() {
     'contactPhoneList|1-20': [LianXiRenHuaHuaTi()],
     coordinate: '@string(5,50)',
     country: '@string(5,50)',
-    created: '@string(5,50)',
+    created: '@datetime',
     customerId: '@guid',
     customerMobile: '@string(5,50)',
     customerName: '@ctitle(5,10)',
@@ -2854,7 +2854,7 @@ export function PageCatHappyPoolResp() {
     licenseId: '@guid',
     catName: '@ctitle(5,10)',
     catnelRisk: '@integer(3,1000)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     planId: '@guid',
     planScore: '@string(5,50)',
     province: '@province',
@@ -2873,7 +2873,7 @@ export function PagePlanResp() {
     happyStatus: '@string(5,50)',
     happyType: '@string(5,50)',
     coordinate: '@string(5,50)',
-    created: '@string(5,50)',
+    created: '@datetime',
     distance: '@string(5,50)',
     followerId: '@guid',
     followerName: '@ctitle(5,10)',
@@ -2904,7 +2904,7 @@ export function PageGladHappyPoolResp() {
     agenciesArea: '@string(5,50)',
     agenciesCity: '@city',
     agenciesCountry: '@string(5,50)',
-    agenciesPhone: '@string(5,50)',
+    agenciesPhone: '@integer(13100000000,18999999999)',
     agenciesProvince: '@province',
     biddingCorpAddr: '@string(5,50)',
     biddingCorpAddrLat: '@string(5,50)',
@@ -2912,7 +2912,7 @@ export function PageGladHappyPoolResp() {
     biddingCorpArea: '@string(5,50)',
     biddingCorpCity: '@city',
     biddingCorpName: '@ctitle(5,10)',
-    biddingCorpPhone: '@string(5,50)',
+    biddingCorpPhone: '@integer(13100000000,18999999999)',
     biddingCorpProvince: '@province',
     biddingEndTime: '@datetime',
     biddingOpeningTime: '@datetime',
@@ -2922,7 +2922,7 @@ export function PageGladHappyPoolResp() {
     happyType: '@string(5,50)',
     'contactPhoneList|1-20': [LianXiRenHuaHuaTi()],
     coordinate: '@string(5,50)',
-    created: '@string(5,50)',
+    created: '@datetime',
     customerId: '@guid',
     customerType: '@string(5,50)',
     dataLocation: '@string(5,50)',
@@ -2939,7 +2939,7 @@ export function PageGladHappyPoolResp() {
     isRead: '@integer(3,1000)',
     lastFetchTime: '@datetime',
     lastFollowTime: '@datetime',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     planId: '@guid',
     planScore: '@string(5,50)',
     gladBudget: '@string(5,50)',
@@ -2993,7 +2993,7 @@ export function PunchPageReq() {
     happyId: '@guid',
     happyType: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
   }
 }
 export function PunchPageResp() {
@@ -3099,7 +3099,7 @@ export function TaskCreateCatReq() {
   return {
     followerId: '@guid',
     followerName: '@ctitle(5,10)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
   }
 }
 export function TaskCreateReq() {
@@ -3126,7 +3126,7 @@ export function TaskInfoResp() {
     'addrList|1-20': [TaskAddrResp()],
     allDays: '@string(5,50)',
     createId: '@guid',
-    created: '@string(5,50)',
+    created: '@datetime',
     dayHappyNum: '@integer(3,1000)',
     dayHappyOpen: '@boolean',
     days: '@string(5,50)',
@@ -3162,7 +3162,7 @@ export function TaskPageListReq() {
     endTime: '@datetime',
     name: '@ctitle(5,10)',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
     startTime: '@datetime',
     taskStatus: '@string(5,50)',
     type: '@integer(3,1000)',
@@ -3173,7 +3173,7 @@ export function TaskPageListResp() {
     'addrList|1-20': [TaskAddrResp()],
     allDays: '@string(5,50)',
     createId: '@guid',
-    created: '@string(5,50)',
+    created: '@datetime',
     dayHappyNum: '@integer(3,1000)',
     dayHappyOpen: '@boolean',
     days: '@string(5,50)',
@@ -3193,7 +3193,7 @@ export function TaskCatResp() {
   return {
     followerId: '@guid',
     followerName: '@ctitle(5,10)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
   }
 }
 export function TaskProgressDetailReq() {
@@ -3211,7 +3211,7 @@ export function TaskProgressDetailResp() {
     followerName: '@ctitle(5,10)',
     lastLocation: '@string(5,50)',
     'locationDataList|1-20': [TaskAddrResp()],
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     progress: TaskProgressResp(),
     taskStatus: '@string(5,50)',
   }
@@ -3284,7 +3284,7 @@ export function VerifyRepeatCatCustomerReq() {
   return {
     id: '@guid',
     catName: '@ctitle(5,10)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
   }
 }
 export function ShangChuanWenJianFanHui() {
@@ -3315,7 +3315,7 @@ export function ZhiXieChangFaCaiMengXiangQingrpcresponse() {
     establishmentTime: '@datetime',
     followerId: '@guid',
     followerName: '@ctitle(5,10)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     regCatCnt: '@string(5,50)',
     orangeeredCapital: '@string(5,50)',
     score: '@integer(3,1000)',
@@ -3337,7 +3337,7 @@ export function FenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu() {
     happyType: '@string(5,50)',
     'contactPhoneList|1-20': [LianXiRenHuaHuaTi()],
     coordinate: '@string(5,50)',
-    created: '@string(5,50)',
+    created: '@datetime',
     customerId: '@guid',
     customerType: '@string(5,50)',
     dataLocation: '@string(5,50)',
@@ -3385,7 +3385,7 @@ export function FenYeLvYouRenCaiFaCaiMengJianDanShuJu() {
     page: '@integer(3,1000)',
     province: '@province',
     receiveType: '@string(5,50)',
-    size: '@integer(3,1000)',
+    size: 20,
     source: '@string(5,50)',
     type: '@integer(3,1000)',
   }
@@ -3423,7 +3423,7 @@ export function FenYeLvYouRenCaiFaCaiMengGongHai() {
     page: '@integer(3,1000)',
     province: '@province',
     receiveType: '@string(5,50)',
-    size: '@integer(3,1000)',
+    size: 20,
     skCertificateCntMax: '@string(5,50)',
     skCertificateCntMin: '@string(5,50)',
     source: '@string(5,50)',
@@ -3458,7 +3458,7 @@ export function FenYeLvYouRenCaiFaCaiMengTuiJian() {
     page: '@integer(3,1000)',
     catnelRisk: '@boolean',
     province: '@province',
-    size: '@integer(3,1000)',
+    size: 20,
     skCertificateCntMax: '@string(5,50)',
     skCertificateCntMin: '@string(5,50)',
     type: '@integer(3,1000)',
@@ -3483,7 +3483,7 @@ export function FenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu() {
     happyType: '@string(5,50)',
     'contactPhoneList|1-20': [LianXiRenHuaHuaTi()],
     coordinate: '@string(5,50)',
-    created: '@string(5,50)',
+    created: '@datetime',
     customerId: '@guid',
     customerType: '@string(5,50)',
     dataLocation: '@string(5,50)',
@@ -3511,7 +3511,7 @@ export function FenYeLvYouZhiXieChangFaCaiMengJianDanShuJu() {
   return {
     name: '@ctitle(5,10)',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
   }
 }
 export function FenYeLvYouZhiXieChangFaCaiMengGongHai() {
@@ -3559,7 +3559,7 @@ export function FenYeLvYouZhiXieChangFaCaiMengGongHai() {
     orangeeredCapitalMin: '@string(5,50)',
     scoreMax: '@integer(3,1000)',
     scoreMin: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
     skAchievementCntMax: '@string(5,50)',
     skAchievementCntMin: '@string(5,50)',
     skQualificationCntMax: '@string(5,50)',
@@ -3605,7 +3605,7 @@ export function FenYeLvYouZhiXieChangFaCaiMengTuiJian() {
     orangeeredCapitalMin: '@string(5,50)',
     scoreMax: '@integer(3,1000)',
     scoreMin: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
     skAchievementCntMax: '@string(5,50)',
     skAchievementCntMin: '@string(5,50)',
     skQualificationCntMax: '@string(5,50)',
@@ -3620,7 +3620,7 @@ export function FenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu() {
     happyType: '@string(5,50)',
     'contactPhoneList|1-20': [LianXiRenHuaHuaTi()],
     coordinate: '@string(5,50)',
-    created: '@string(5,50)',
+    created: '@datetime',
     customerId: '@guid',
     customerType: '@string(5,50)',
     dataLocation: '@string(5,50)',
@@ -3668,7 +3668,7 @@ export function FenYeLvYouXiangMuFaCaiMengJianDanShuJu() {
     page: '@integer(3,1000)',
     province: '@province',
     receiveType: '@string(5,50)',
-    size: '@integer(3,1000)',
+    size: 20,
     source: '@string(5,50)',
     type: '@integer(3,1000)',
   }
@@ -3700,7 +3700,7 @@ export function FenYeLvYouXiangMuFaCaiMengTuiJian() {
     publishStartTime: '@datetime',
     signUpBeginTime: '@datetime',
     signUpEndTime: '@datetime',
-    size: '@integer(3,1000)',
+    size: 20,
     type: '@integer(3,1000)',
     valid: '@guid',
   }
@@ -3730,7 +3730,7 @@ export function YuMiHuaHuaTiQingQiu() {
   return {
     mobile: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
     keyBorardName: '@ctitle(5,10)',
   }
 }
@@ -3740,7 +3740,7 @@ export function FaCaiMengGenJinJiLuQingQiu() {
     happyType: '@string(5,50)',
     'flowType|1-20': ['@string(5,50)'],
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
   }
 }
 export function DiZhi() {
@@ -3775,7 +3775,7 @@ export function JiQiRenGenJinJiLuQingQiu() {
     customerId: '@guid',
     customerType: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
   }
 }
 export function DaoRuHuaHuaTiXiangYing() {
@@ -3787,7 +3787,7 @@ export function DaoRuHuaHuaTiXiangYing() {
     importTime: '@datetime',
     operator: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
     status: '@integer(3,1000)',
     successNum: '@integer(3,1000)',
   }
@@ -3796,7 +3796,7 @@ export function DaoRuHuaHuaTiQingQiu() {
   return {
     endTime: '@datetime',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
     startTime: '@datetime',
     taskType: '@integer(3,1000)',
   }
@@ -3840,7 +3840,7 @@ export function SouSuoRenCaiJiQiRenrequest() {
   return {
     page: '@integer(3,1000)',
     catName: '@ctitle(5,10)',
-    size: '@integer(3,1000)',
+    size: 20,
   }
 }
 export function SouSuoRenCaiJiQiRenresponse() {
@@ -3853,7 +3853,7 @@ export function SouSuoZhiXieChangJiQiRenrequest() {
   return {
     doorName: '@ctitle(5,10)',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
   }
 }
 export function SouSuoZhiXieChangJiQiRenresponse() {
@@ -3868,7 +3868,7 @@ export function CaoZuoRiZhiFenYerequest() {
     bizType: '@string(5,50)',
     operatorId: '@guid',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
   }
 }
 export function CaoZuoRiZhiFenYeresponse() {
@@ -3890,7 +3890,7 @@ export function GuanShuiXiangMuFaCaiMengrpcChongDong() {
     agenciesArea: '@string(5,50)',
     agenciesCity: '@city',
     agenciesCountry: '@string(5,50)',
-    agenciesPhone: '@string(5,50)',
+    agenciesPhone: '@integer(13100000000,18999999999)',
     agenciesProvince: '@province',
     biddingCorpAddr: '@string(5,50)',
     biddingCorpAddrCoordinate: '@string(5,50)',
@@ -3900,7 +3900,7 @@ export function GuanShuiXiangMuFaCaiMengrpcChongDong() {
     biddingCorpCity: '@city',
     biddingCorpCountry: '@string(5,50)',
     biddingCorpName: '@ctitle(5,10)',
-    biddingCorpPhone: '@string(5,50)',
+    biddingCorpPhone: '@integer(13100000000,18999999999)',
     biddingCorpProvince: '@province',
     biddingEndTime: '@datetime',
     biddingOpeningTime: '@datetime',
@@ -3909,7 +3909,7 @@ export function GuanShuiXiangMuFaCaiMengrpcChongDong() {
     fileDownloadEndTime: '@datetime',
     fileDownloadStartTime: '@datetime',
     industryType: '@string(5,50)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     gladBudget: '@string(5,50)',
     gladName: '@ctitle(5,10)',
     gladNum: '@string(5,50)',
@@ -3962,7 +3962,7 @@ export function HongLingJinJiLuFenYerequest() {
     customerId: '@guid',
     customerType: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
   }
 }
 export function HongLingJinJiLuFenYeresponse() {
@@ -3971,7 +3971,7 @@ export function HongLingJinJiLuFenYeresponse() {
     happyName: '@ctitle(5,10)',
     happyType: '@string(5,50)',
     content: '@string(5,50)',
-    created: '@string(5,50)',
+    created: '@datetime',
     customerId: '@guid',
     customerType: '@string(5,50)',
     dealTime: '@datetime',
@@ -4008,7 +4008,7 @@ export function TongJiShuJuPieDataResp() {
     newData: '@integer(3,1000)',
     catData: '@integer(3,1000)',
     gladData: '@integer(3,1000)',
-    total: '@integer(3,1000)',
+    total: '@integer(5, 100)',
   }
 }
 export function LianXiRenHuaHuaTi() {
@@ -4028,7 +4028,7 @@ export function LianXiRenHuaHuaTiQingQiu() {
     page: '@integer(3,1000)',
     relId: '@guid',
     relType: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
     type: '@integer(3,1000)',
   }
 }
@@ -4061,7 +4061,7 @@ export function XiangMuFaCaiMengXiuGairpcrequest() {
     agenciesArea: '@string(5,50)',
     agenciesCity: '@city',
     agenciesCountry: '@string(5,50)',
-    agenciesPhone: '@string(5,50)',
+    agenciesPhone: '@integer(13100000000,18999999999)',
     agenciesProvince: '@province',
     biddingCorpAddr: '@string(5,50)',
     biddingCorpAddrCoordinate: '@string(5,50)',
@@ -4071,7 +4071,7 @@ export function XiangMuFaCaiMengXiuGairpcrequest() {
     biddingCorpCity: '@city',
     biddingCorpCountry: '@string(5,50)',
     biddingCorpName: '@ctitle(5,10)',
-    biddingCorpPhone: '@string(5,50)',
+    biddingCorpPhone: '@integer(13100000000,18999999999)',
     biddingCorpProvince: '@province',
     biddingEndTime: '@datetime',
     biddingOpeningTime: '@datetime',
@@ -4080,7 +4080,7 @@ export function XiangMuFaCaiMengXiuGairpcrequest() {
     fileDownloadEndTime: '@datetime',
     fileDownloadStartTime: '@datetime',
     industryType: '@string(5,50)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     gladBudget: '@string(5,50)',
     gladId: '@guid',
     gladName: '@ctitle(5,10)',
@@ -4121,7 +4121,7 @@ export function XiangMuFaCaiMengGongHaiLvYou() {
     receiveType: '@string(5,50)',
     signUpBeginTime: '@datetime',
     signUpEndTime: '@datetime',
-    size: '@integer(3,1000)',
+    size: 20,
     source: '@string(5,50)',
     taskId: '@guid',
     type: '@integer(3,1000)',
@@ -4132,21 +4132,21 @@ export function XiangMuFaCaiMengFenYeLvYourpcrequest() {
   return {
     page: '@integer(3,1000)',
     gladName: '@ctitle(5,10)',
-    size: '@integer(3,1000)',
+    size: 20,
   }
 }
 export function XiangMuFaCaiMengXiangQingrpcresponse() {
   return {
     agencies: '@string(5,50)',
     agenciesAddr: '@string(5,50)',
-    agenciesPhone: '@string(5,50)',
+    agenciesPhone: '@integer(13100000000,18999999999)',
     biddingCorpAddr: '@string(5,50)',
     biddingCorpName: '@ctitle(5,10)',
-    biddingCorpPhone: '@string(5,50)',
+    biddingCorpPhone: '@integer(13100000000,18999999999)',
     biddingTime: '@datetime',
     biddingType: '@string(5,50)',
     industryType: '@string(5,50)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     gladBudget: '@string(5,50)',
     gladId: '@guid',
     gladName: '@ctitle(5,10)',

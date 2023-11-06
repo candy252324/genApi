@@ -68,8 +68,17 @@ module.exports = {
   mock: {
     /** 自定义的 mock 生成规则 */
     filedJsonPath: {
-      code: 200, // jsonPath
-      '/url/': 'Mock.mock("@url")', // 正则
+      code: 200,
+      size: 20,
+      current: "'@integer(1, 5)'",
+      created: "'@datetime'",
+      // 支持函数
+      total: () => {
+        return "'@integer(5, 100)'"
+      },
+      '/ApplyType|applyType/': "'FORWARD'| 'REPLY'| ''",
+      '/contentType/': "'TEXT'|'LINK'|'IMG'|'VIDEO'|'AUDIO'|'VOICE'|'FILE'|'STRUCTUAL'|'PHONE'",
+      '/url/': "'@url'", // 正则
     },
   },
 }

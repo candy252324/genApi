@@ -321,11 +321,19 @@ function getFieldMockStr({ name, type }) {
     mockStr = '@county'
   } else if (type === 'string' && /username/.test(lowerCaseName)) {
     mockStr = '@cname'
+  } else if (type === 'string' && /department/.test(lowerCaseName)) {
+    mock = getRandomOneFromArr(['财务部', '研发部', '市场部', '运维部', '测试部'])
+  } else if (type === 'string' && /avatar/.test(lowerCaseName)) {
+    mockStr = '@image(200x100, @color, @color)' // 生成一张图片地址
+  } else if (type === 'string' && /phone/.test(lowerCaseName)) {
+    mockStr = '@integer(13100000000,18999999999)' // 电话号码
+  } else if (type === 'string' && /email/.test(lowerCaseName)) {
+    mockStr = '@email' // 邮箱
   } else if (type === 'string' && /name|title/.test(lowerCaseName)) {
     mockStr = '@ctitle(5,10)'
-  } else if (type === 'string' && /avatar/.test(lowerCaseName)) {
-    mockStr = '@image(200x100, @color)' // 生成一张图片地址
-  } else if (type === 'number') {
+  }
+  // 根据类型简单处理
+  else if (type === 'number') {
     mockStr = '@integer(3,1000)'
   } else if (type === 'string') {
     mockStr = '@string(5,50)'
@@ -350,15 +358,16 @@ function getCustomeMockStr(name) {
     return false
   }
 
-  const findRule = Object.keys(filedJsonPath).filter((rule) => {
+  const findRule = Object.keys(filedJsonPath).find((rule) => {
     let matched = false
     // 正则 '/url/': 'Mock.mock("@url")'
     if (rule.startsWith('/') && rule.endsWith('/')) {
-      const reg = new RegExp(rule)
+      const reg = new RegExp(rule.replace(/\//g, ''))
       reg.test(name) && (matched = true)
     }
     // jsonPath  'root.code': 200
     else if (rule.startsWith('root.')) {
+      //  cjh todo
       matched = false
     }
     // 完全匹配  'userName':'@cname'
@@ -367,9 +376,30 @@ function getCustomeMockStr(name) {
     }
     return matched
   })
-  return filedJsonPath[findRule]
+  if (findRule) {
+    const res = filedJsonPath[findRule] || ''
+    // 'abc': ()=>{},
+    if (typeof res === 'function') {
+      return res(name)
+    }
+    // 'abc': "'FORWARD'| 'REPLY'| ''",
+    else if (typeof res === 'string' && res.split('|').length > 1) {
+      return getRandomOneFromArr(res.split('|'))
+    }
+    // 'abc': 'xxx'
+    else {
+      return res
+    }
+  }
 }
 
+/** 从数组中随机取一项
+ * Mock.mock({'example|1':["a","b","c"]}).example
+ */
+function getRandomOneFromArr(arr) {
+  return `Mock.mock({'example|1':[${arr}]}).example`
+  // return arr[Math.floor(Math.random() * arr.length)]
+}
 module.exports = {
   genMock,
 }

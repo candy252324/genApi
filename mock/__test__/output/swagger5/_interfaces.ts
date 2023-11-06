@@ -797,170 +797,170 @@ export function ApiResponseQingMingCaoZhiXiaoChouYu() {
 }
 export function ComPageEntCredPlanResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [EntCredPlanResp()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageTastyCredExamResultResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [TastyCredExamResultResp()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPagestring() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': ['@string(5,50)'],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageYeJiRenLingRiZhi() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [YeJiRenLingRiZhi()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageJuanXinCaiGongZuoYeJi() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [JuanXinCaiGongZuoYeJi()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageJuanXinCaiChiGuanTouShuiGuoDao() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [JuanXinCaiChiGuanTouShuiGuoDao()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageChaXianBanBuLiangGuShiLieBiaoXiangYing() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [ChaXianBanBuLiangGuShiLieBiaoXiangYing()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageChaXianBanFenZhiJiGou() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [ChaXianBanFenZhiJiGou()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageChaXianBanShiXinLianHeChengJieGuShi() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [ChaXianBanShiXinLianHeChengJieGuShi()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageChaXianBanGongChengShuiBeiXiangYing() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [ChaXianBanGongChengShuiBeiXiangYing()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageChaXianBanChiGuanTouJuanXinCaiXiangYing() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [ChaXianBanChiGuanTouJuanXinCaiXiangYing()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageChaXianBanErJiJuanXinCai() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [ChaXianBanErJiJuanXinCai()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageChaXianBanLiangHaoGuShiLieBiaoXiangYing() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [ChaXianBanLiangHaoGuShiLieBiaoXiangYing()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageChaXianBanQingMingCaoZhiXiangYing() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [ChaXianBanQingMingCaoZhiXiangYing()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageChaXianBanHeiMingDanXiangYing() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [ChaXianBanHeiMingDanXiangYing()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [ShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageErJiJuanXinCaiShuiGuoDao() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [ErJiJuanXinCaiShuiGuoDao()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageJiJiXieXiaGongSiXiangYing() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [JiJiXieXiaGongSiXiangYing()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageJiXuDaShuiNiuWeiShengSu() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [JiXuDaShuiNiuWeiShengSu()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageGuanTouShuRenLingRiZhi() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [GuanTouShuRenLingRiZhi0()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageQingMingCaoZhiXiaoChouYu() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [QingMingCaoZhiXiaoChouYu()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function CredentialFilter() {
@@ -1061,7 +1061,7 @@ export function EntCredPlanResp() {
     humanQualificationCate: '@string(5,50)',
     humanQualificationName: '@ctitle(5,10)',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     credId: '@guid',
     currentTastyNum: '@integer(3,1000)',
     currentProjectNum: '@integer(3,1000)',
@@ -1123,7 +1123,7 @@ export function FridayBranchRawResp() {
     branchName: '@ctitle(5,10)',
     establishmentTime: '@datetime',
     head: '@string(5,50)',
-    headPhoneNums: '@string(5,50)',
+    headPhoneNums: '@integer(13100000000,18999999999)',
     id: '@guid',
     status: '@string(5,50)',
     statusNew: '@string(5,50)',
@@ -1153,23 +1153,23 @@ export function FridayCredentialNameReq() {
     industryType: '@string(5,50)',
     name: '@ctitle(5,10)',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
   }
 }
 export function FridayMainUpdateReq() {
   return {
     humanBusinessScope: '@string(5,50)',
-    humanEmail: '@string(5,50)',
+    humanEmail: '@email',
     humanEstablishDate: '@datetime',
     humanLegalRepresentative: '@string(5,50)',
     humanName: '@ctitle(5,10)',
-    humanPhone: '@string(5,50)',
+    humanPhone: '@integer(13100000000,18999999999)',
     humanRegistAddress: '@string(5,50)',
     humanRegistCapital: '@string(5,50)',
     humanWebsite: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     id: '@guid',
     isDelete: '@string(5,50)',
     modified: '@string(5,50)',
@@ -1195,7 +1195,7 @@ export function HrTastyBankRecordDO() {
     createId: '@guid',
     createName: '@ctitle(5,10)',
     createTastyName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     id: '@guid',
     isDelete: '@string(5,50)',
     modified: '@string(5,50)',
@@ -1211,7 +1211,7 @@ export function HrTastyCredentialDO() {
     attachmentUrl: '@url',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     credentialBigType: '@string(5,50)',
     credentialName: '@ctitle(5,10)',
     credentialNo: '@string(5,50)',
@@ -1256,7 +1256,7 @@ export function HrTastyEducationDO() {
     certificateNumber: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     degree: '@string(5,50)',
     degreeAttachmentUrl: '@url',
     diplomaAttachmentUrl: '@url',
@@ -1281,7 +1281,7 @@ export function HrTastyFamilyDO() {
     birthday: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     id: '@guid',
     isDelete: '@string(5,50)',
     mobile: '@string(5,50)',
@@ -1301,7 +1301,7 @@ export function HrTastyGoodBadRecordDO() {
     content: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     date: '@datetime',
     id: '@guid',
     isDelete: '@string(5,50)',
@@ -1321,7 +1321,7 @@ export function HrTastyPatentMonographDO() {
     attachmentUrl: '@url',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     id: '@guid',
     inventorName: '@ctitle(5,10)',
     isDelete: '@string(5,50)',
@@ -1344,7 +1344,7 @@ export function HrTastyProjectDO() {
     constructProject: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     dataLevel: '@string(5,50)',
     endDate: '@datetime',
     id: '@guid',
@@ -1379,7 +1379,7 @@ export function HrTastyWorkHistoryDO() {
     contact: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     departDate: '@datetime',
     departReason: '@string(5,50)',
     description: '@string(5,50)',
@@ -1415,7 +1415,7 @@ export function PageTastyCredExamResultReq() {
     tastyId: '@guid',
     provinceName: '@province',
     queryType: '@string(5,50)',
-    size: '@integer(3,1000)',
+    size: 20,
     title: '@ctitle(5,10)',
   }
 }
@@ -1424,7 +1424,7 @@ export function PageTastyCredExamTimeReq() {
     page: '@integer(3,1000)',
     tastyId: '@guid',
     region: '@string(5,50)',
-    size: '@integer(3,1000)',
+    size: 20,
     title: '@ctitle(5,10)',
   }
 }
@@ -1586,7 +1586,7 @@ export function YeJiRenLingRiZhi() {
     createId: '@guid',
     createName: '@ctitle(5,10)',
     createTime: '@datetime',
-    created: '@string(5,50)',
+    created: '@datetime',
     id: '@guid',
     isDelete: '@string(5,50)',
     modified: '@string(5,50)',
@@ -1608,7 +1608,7 @@ export function GeRenShuiGuoDao() {
     cardValidDate: '@datetime',
     checkForWorkType: '@string(5,50)',
     claimStatus: '@integer(3,1000)',
-    email: '@string(5,50)',
+    email: '@email',
     emergencyContactMobile: '@string(5,50)',
     emergencyContactTasty: '@string(5,50)',
     employmentContractDate: '@datetime',
@@ -1716,7 +1716,7 @@ export function JuanXinCaiGongZuoYeJi0() {
     constructProject: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     dataLevel: '@string(5,50)',
     endDate: '@datetime',
     id: '@guid',
@@ -1798,12 +1798,12 @@ export function JuanXinCaiSuoYouShuiGuoDao() {
     claimStatus: '@integer(3,1000)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     'credentials|1-20': [HrTastyCredentialDO()],
     deptId: '@guid',
     deptName: '@ctitle(5,10)',
     'educations|1-20': [HrTastyEducationDO()],
-    email: '@string(5,50)',
+    email: '@email',
     emergencyContactMobile: '@string(5,50)',
     emergencyContactTasty: '@string(5,50)',
     employmentContractDate: '@datetime',
@@ -1866,7 +1866,7 @@ export function JuanXinCaiChiGuanTouShuiGuoDao() {
     attachmentUrl: '@url',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     credentialBigType: '@string(5,50)',
     credentialName: '@ctitle(5,10)',
     credentialNo: '@string(5,50)',
@@ -1914,7 +1914,7 @@ export function JuanXinCaiChiGuanTouShuiGuoDao0() {
     attachmentUrl: '@url',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     credentialBigType: '@string(5,50)',
     credentialName: '@ctitle(5,10)',
     credentialNo: '@string(5,50)',
@@ -1989,13 +1989,13 @@ export function ChaXianBanFenZhiJiGou() {
   return {
     accountCreateId: '@guid',
     accountCreateName: '@ctitle(5,10)',
-    accountCreatePhoneNums: '@string(5,50)',
+    accountCreatePhoneNums: '@integer(13100000000,18999999999)',
     area: '@string(5,50)',
     associatedStatus: '@integer(3,1000)',
     branchName: '@ctitle(5,10)',
     establishmentTime: '@datetime',
     head: '@string(5,50)',
-    headPhoneNums: '@string(5,50)',
+    headPhoneNums: '@integer(13100000000,18999999999)',
     id: '@guid',
     invitedStatus: '@integer(3,1000)',
     registerStatus: '@integer(3,1000)',
@@ -2008,7 +2008,7 @@ export function ChaXianBanFenZhiJiGouGengXinQingQiu() {
     branchName: '@ctitle(5,10)',
     fridayId: '@guid',
     headName: '@ctitle(5,10)',
-    headPhoneNums: '@string(5,50)',
+    headPhoneNums: '@integer(13100000000,18999999999)',
   }
 }
 export function ChaXianBanShiXinLianHeChengJieGuShi() {
@@ -2024,11 +2024,11 @@ export function ChaXianBanShiXinLianHeChengJieGuShi() {
 export function ChaXianBanGongShangShuiGuoDaoFanHui() {
   return {
     humanBusinessScope: '@string(5,50)',
-    humanEmail: '@string(5,50)',
+    humanEmail: '@email',
     humanEstablishDate: '@datetime',
     humanLegalRepresentative: '@string(5,50)',
     humanNum: '@string(5,50)',
-    humanPhone: '@string(5,50)',
+    humanPhone: '@integer(13100000000,18999999999)',
     humanRegistAddress: '@string(5,50)',
     humanRegistCapital: '@string(5,50)',
     humanWebsite: '@string(5,50)',
@@ -2078,7 +2078,7 @@ export function ChaXianBanChiGuanTouJuanXinCaiHuiZongJiChuShuiGuoDao() {
   return {
     address: '@string(5,50)',
     dimissionDate: '@datetime',
-    email: '@string(5,50)',
+    email: '@email',
     mobile: '@string(5,50)',
     nation: '@string(5,50)',
     tastyGender: '@string(5,50)',
@@ -2098,7 +2098,7 @@ export function ChaXianBanHuiZongFenYeQingQiu() {
     'fridayCredentials|1-20': ['@string(5,50)'],
     fridayName: '@ctitle(5,10)',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
   }
 }
 export function ChaXianBanErJiJuanXinCai() {
@@ -2171,7 +2171,7 @@ export function ChaXianBanQingMingCaoZhiGuanLi() {
   return {
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     credentialType: '@integer(3,1000)',
     id: '@guid',
     isDelete: '@string(5,50)',
@@ -2187,7 +2187,7 @@ export function ChaXianBanQingMingCaoZhiWuShu() {
   return {
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     credentialType: '@integer(3,1000)',
     id: '@guid',
     isDelete: '@string(5,50)',
@@ -2203,7 +2203,7 @@ export function ChaXianBanQingMingCaoZhiWuShu0() {
   return {
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     credentialType: '@integer(3,1000)',
     id: '@guid',
     isDelete: '@string(5,50)',
@@ -2242,7 +2242,7 @@ export function XueXinZhangHao() {
   return {
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     id: '@guid',
     isDelete: '@string(5,50)',
     modified: '@string(5,50)',
@@ -2257,7 +2257,7 @@ export function XueXinZhangHao0() {
   return {
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     id: '@guid',
     isDelete: '@string(5,50)',
     modified: '@string(5,50)',
@@ -2325,7 +2325,7 @@ export function ChiGuanTouJuanXinCaiHuiZongShaiXuanTiaoJian() {
     page: '@integer(3,1000)',
     tastyName: '@ctitle(5,10)',
     registerHuman: '@string(5,50)',
-    size: '@integer(3,1000)',
+    size: 20,
   }
 }
 export function DaShuiNiuJingLiShuiGuoDao() {
@@ -2333,7 +2333,7 @@ export function DaShuiNiuJingLiShuiGuoDao() {
     certificateNumber: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     degree: '@string(5,50)',
     degreeAttachmentUrl: '@url',
     diplomaAttachmentUrl: '@url',
@@ -2377,7 +2377,7 @@ export function XinZengYinXingKaShuiGuoDao() {
     createId: '@guid',
     createName: '@ctitle(5,10)',
     createTastyName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     id: '@guid',
     isDelete: '@string(5,50)',
     modified: '@string(5,50)',
@@ -2399,10 +2399,10 @@ export function GengXinGeRenShuiGuoDao() {
     claimStatus: '@integer(3,1000)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     deptId: '@guid',
     deptName: '@ctitle(5,10)',
-    email: '@string(5,50)',
+    email: '@email',
     emergencyContactMobile: '@string(5,50)',
     emergencyContactTasty: '@string(5,50)',
     employmentContractDate: '@datetime',
@@ -2459,7 +2459,7 @@ export function GengXinDaShuiNiuJingLiShuiGuoDao() {
     certificateNumber: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     degree: '@string(5,50)',
     degreeAttachmentUrl: '@url',
     diplomaAttachmentUrl: '@url',
@@ -2485,7 +2485,7 @@ export function GengXinJiXuDaShuiNiuWeiShengSu() {
     chosenHour: '@integer(3,1000)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     cycle: '@string(5,50)',
     flow: '@string(5,50)',
     hour: '@integer(3,1000)',
@@ -2507,7 +2507,7 @@ export function GengXinYinXingKaShuiGuoDao() {
     createId: '@guid',
     createName: '@ctitle(5,10)',
     createTastyName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     id: '@guid',
     isDelete: '@string(5,50)',
     modified: '@string(5,50)',
@@ -2554,10 +2554,10 @@ export function TianJiaGeRenShuiGuoDao() {
     claimStatus: '@integer(3,1000)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     deptId: '@guid',
     deptName: '@ctitle(5,10)',
-    email: '@string(5,50)',
+    email: '@email',
     emergencyContactMobile: '@string(5,50)',
     emergencyContactTasty: '@string(5,50)',
     employmentContractDate: '@datetime',
@@ -2614,7 +2614,7 @@ export function TianJiaDaShuiNiuJingLiShuiGuoDao() {
     certificateNumber: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     degree: '@string(5,50)',
     degreeAttachmentUrl: '@url',
     diplomaAttachmentUrl: '@url',
@@ -2640,7 +2640,7 @@ export function TianJiaJiXuDaShuiNiuWeiShengSu() {
     chosenHour: '@integer(3,1000)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     cycle: '@string(5,50)',
     flow: '@string(5,50)',
     hour: '@integer(3,1000)',
@@ -2657,7 +2657,7 @@ export function SheBaoZhangHao() {
   return {
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     id: '@guid',
     isDelete: '@string(5,50)',
     modified: '@string(5,50)',
@@ -2672,7 +2672,7 @@ export function SheBaoZhangHao0() {
   return {
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     id: '@guid',
     isDelete: '@string(5,50)',
     modified: '@string(5,50)',
@@ -2730,7 +2730,7 @@ export function NiuNaiMoKuaiJiBenShuiGuoDao() {
 export function NiuNaiMoKuaiGongZuoJingLi() {
   return {
     noodles: '@string(5,50)',
-    noodlesPhoneNum: '@string(5,50)',
+    noodlesPhoneNum: '@integer(13100000000,18999999999)',
     human: '@string(5,50)',
     departDate: '@datetime',
     departDateDesc: '@datetime',
@@ -2743,7 +2743,7 @@ export function NiuNaiMoKuaiGongZuoJingLi() {
 export function NiuNaiMoKuaiBenRenWanChengZhuYaoShuiBeiGaiKuang() {
   return {
     noodles: '@string(5,50)',
-    noodlesPhoneNum: '@string(5,50)',
+    noodlesPhoneNum: '@integer(13100000000,18999999999)',
     human: '@string(5,50)',
     credentialName: '@ctitle(5,10)',
     credentialType: '@string(5,50)',
@@ -2765,7 +2765,7 @@ export function JiXuDaShuiNiuWeiShengSu() {
     chosenHour: '@integer(3,1000)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     cycle: '@string(5,50)',
     flow: '@string(5,50)',
     hour: '@integer(3,1000)',
@@ -2805,7 +2805,7 @@ export function GuanTouShuRenLingRiZhi() {
     createId: '@guid',
     createName: '@ctitle(5,10)',
     createTime: '@datetime',
-    created: '@string(5,50)',
+    created: '@datetime',
     credentialBigType: '@string(5,50)',
     credentialName: '@ctitle(5,10)',
     credentialNo: '@string(5,50)',
@@ -2824,7 +2824,7 @@ export function GuanTouShuRenLingRiZhi0() {
     createId: '@guid',
     createName: '@ctitle(5,10)',
     createTime: '@datetime',
-    created: '@string(5,50)',
+    created: '@datetime',
     credentialBigType: '@string(5,50)',
     credentialName: '@ctitle(5,10)',
     credentialNo: '@string(5,50)',
@@ -2842,7 +2842,7 @@ export function QingMingCaoZhiXiaoChouYu() {
   return {
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     credentialAlias: '@string(5,50)',
     credentialArea: '@string(5,50)',
     credentialEndDate: '@datetime',
@@ -2870,7 +2870,7 @@ export function QingMingCaoZhiXiaoChouYu0() {
   return {
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     credentialAlias: '@string(5,50)',
     credentialArea: '@string(5,50)',
     credentialEndDate: '@datetime',
@@ -2913,7 +2913,7 @@ export function YinXingKaShuiGuoDao() {
     createId: '@guid',
     createName: '@ctitle(5,10)',
     createTastyName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     id: '@guid',
     isDelete: '@string(5,50)',
     modified: '@string(5,50)',

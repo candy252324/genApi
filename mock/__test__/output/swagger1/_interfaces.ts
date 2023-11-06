@@ -61,7 +61,7 @@ export function AliMpLoginReq() {
     deviceCode: '@string(5,50)',
     deviceManufacturer: '@string(5,50)',
     deviceModel: '@string(5,50)',
-    phoneData: '@string(5,50)',
+    phoneData: '@integer(13100000000,18999999999)',
     sign: '@string(5,50)',
   }
 }
@@ -1100,7 +1100,7 @@ export function AuthOrgKeyBorardReq() {
 export function BasePageReq() {
   return {
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
   }
 }
 export function ChannelAppGratefulConfigAddReq() {
@@ -1193,138 +1193,138 @@ export function ComLoginResp() {
 }
 export function ComPage() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [''],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageDesktopAddRecordResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [DesktopAddRecordResp()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageDesktopComplexResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [DesktopComplexResp()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageDesktopResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [DesktopResp()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageDoorCredentialResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [DoorCredentialResp()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageDoorIdentificationResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [DoorIdentificationResp()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageEpDesktopResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [EpDesktopResp()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageInviteDesktopResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [InviteDesktopResp()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageLogLoginResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [LogLoginResp()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageRelationDoorInfo() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [RelationDoorInfo()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageZhiXieChangChuXing() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [ZhiXieChangChuXing()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageGuanLianShenHeXinXi() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [GuanLianShenHeXinXi()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageXiaoYuanZhuoGuanLi() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [XiaoYuanZhuoGuanLi0()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageBiXieDao() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [BiXieDao1()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageBiXieDaoYongDao() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [BiXieDaoYongDao()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageTianJiaDouJiangJiBeiJing() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [TianJiaDouJiangJiBeiJing()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function ComPageFangDongShouHuoDiZhiTianJia() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     'records|1-20': [FangDongShouHuoDiZhiTianJia0()],
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function CompanyInfo() {
@@ -1344,7 +1344,7 @@ export function CompanyInfo() {
     createTime: '@datetime',
     creditCode: '@string(5,50)',
     district: '@string(5,50)',
-    emails: '@string(5,50)',
+    emails: '@email',
     estiblishTime: '@datetime',
     firstPosition: '@string(5,50)',
     labelListV2: '@string(5,50)',
@@ -1352,7 +1352,7 @@ export function CompanyInfo() {
     nameen: '@ctitle(5,10)',
     newtestName: '@ctitle(5,10)',
     orgNumber: '@string(5,50)',
-    phoneNum: '@string(5,50)',
+    phoneNum: '@integer(13100000000,18999999999)',
     province: '@province',
     regCapital: '@string(5,50)',
     regLocation: '@string(5,50)',
@@ -1395,10 +1395,10 @@ export function WhiteDetailResp() {
     channelWhiteName: '@ctitle(5,10)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     whiteCode: '@string(5,50)',
     whiteName: '@ctitle(5,10)',
-    email: '@string(5,50)',
+    email: '@email',
     id: '@guid',
     leaderDesktopId: '@guid',
     leaderDesktopInfo: DesktopComplexResp(),
@@ -1409,7 +1409,7 @@ export function WhiteDetailResp() {
     parentCode: '@string(5,50)',
     parentId: '@guid',
     parentName: '@ctitle(5,10)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     profile: '@string(5,50)',
     scaleType: '@string(5,50)',
     scaleTypeDesc: '@string(5,50)',
@@ -1431,10 +1431,10 @@ export function WhiteLinkDoorResp() {
     ancestors: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     whiteCode: '@string(5,50)',
     whiteName: '@ctitle(5,10)',
-    email: '@string(5,50)',
+    email: '@email',
     doorId: '@guid',
     id: '@guid',
     leaderDesktopId: '@guid',
@@ -1446,7 +1446,7 @@ export function WhiteLinkDoorResp() {
     orderNum: '@integer(3,1000)',
     parentCode: '@string(5,50)',
     parentId: '@guid',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     profile: '@string(5,50)',
     scaleType: '@string(5,50)',
     scaleTypeDesc: '@string(5,50)',
@@ -1462,10 +1462,10 @@ export function WhiteResp() {
     ancestors: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     whiteCode: '@string(5,50)',
     whiteName: '@ctitle(5,10)',
-    email: '@string(5,50)',
+    email: '@email',
     id: '@guid',
     leaderDesktopId: '@guid',
     leaderKeyBorardId: '@guid',
@@ -1476,7 +1476,7 @@ export function WhiteResp() {
     orderNum: '@integer(3,1000)',
     parentCode: '@string(5,50)',
     parentId: '@guid',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     profile: '@string(5,50)',
     scaleType: '@string(5,50)',
     scaleTypeDesc: '@string(5,50)',
@@ -1518,11 +1518,11 @@ export function DesktopAddRecordResp() {
   return {
     addTime: '@datetime',
     adderName: '@ctitle(5,10)',
-    adderPhone: '@string(5,50)',
+    adderPhone: '@integer(13100000000,18999999999)',
     whiteName: '@ctitle(5,10)',
-    email: '@string(5,50)',
+    email: '@email',
     desktopName: '@ctitle(5,10)',
-    desktopPhone: '@string(5,50)',
+    desktopPhone: '@integer(13100000000,18999999999)',
     desktopStatus: '@string(5,50)',
     id: '@guid',
     joinTime: '@datetime',
@@ -1532,7 +1532,7 @@ export function DesktopAddRecordResp() {
 }
 export function DesktopAddReq() {
   return {
-    email: '@string(5,50)',
+    email: '@email',
     mainWhiteId: '@guid',
     mobile: '@string(5,50)',
     nickName: '@ctitle(5,10)',
@@ -1556,9 +1556,9 @@ export function DesktopComplexResp() {
     authStatus: '@boolean',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     'whiteRespList|1-20': [DesktopWhiteResp()],
-    email: '@string(5,50)',
+    email: '@email',
     id: '@guid',
     'jobRespList|1-20': [DesktopJobResp()],
     mobile: '@string(5,50)',
@@ -1617,8 +1617,8 @@ export function DesktopResp() {
   return {
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
-    email: '@string(5,50)',
+    created: '@datetime',
+    email: '@email',
     id: '@guid',
     mobile: '@string(5,50)',
     modified: '@string(5,50)',
@@ -1637,8 +1637,8 @@ export function DesktopRespReq() {
   return {
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
-    email: '@string(5,50)',
+    created: '@datetime',
+    email: '@email',
     id: '@guid',
     mobile: '@string(5,50)',
     modified: '@string(5,50)',
@@ -1656,8 +1656,8 @@ export function DesktopRespRes() {
   return {
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
-    email: '@string(5,50)',
+    created: '@datetime',
+    email: '@email',
     id: '@guid',
     mobile: '@string(5,50)',
     modified: '@string(5,50)',
@@ -1683,7 +1683,7 @@ export function DesktopSimpleListReq() {
     id: '@guid',
     mobile: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
     status: '@string(5,50)',
     keyBorardName: '@ctitle(5,10)',
   }
@@ -1691,7 +1691,7 @@ export function DesktopSimpleListReq() {
 export function DesktopUpReq() {
   return {
     'whiteIds|1-20': ['@string(5,50)'],
-    email: '@string(5,50)',
+    email: '@email',
     id: '@guid',
     'jodIds|1-20': ['@string(5,50)'],
     mainWhiteId: '@guid',
@@ -1741,7 +1741,7 @@ export function DoorAuditReq() {
     endTime: '@datetime',
     franchiseDoorName: '@ctitle(5,10)',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
     startTime: '@datetime',
   }
 }
@@ -1749,10 +1749,10 @@ export function DoorBeneficiaryReq() {
   return {
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     doorAcctId: '@guid',
     doorBeneficiaryGreen: '@string(5,50)',
-    doorBeneficiaryConctactPhone: '@string(5,50)',
+    doorBeneficiaryConctactPhone: '@integer(13100000000,18999999999)',
     doorBeneficiaryIdCardBackId: '@guid',
     doorBeneficiaryIdCardFileId: '@guid',
     doorBeneficiaryIdCardFrontId: '@guid',
@@ -1775,10 +1775,10 @@ export function DoorBeneficiaryResp() {
   return {
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     doorAcctId: '@guid',
     doorBeneficiaryGreen: '@string(5,50)',
-    doorBeneficiaryConctactPhone: '@string(5,50)',
+    doorBeneficiaryConctactPhone: '@integer(13100000000,18999999999)',
     doorBeneficiaryIdCardBackId: '@guid',
     doorBeneficiaryIdCardFileId: '@guid',
     doorBeneficiaryIdCardFrontId: '@guid',
@@ -1828,7 +1828,7 @@ export function DoorIdentificationReq() {
     name: '@ctitle(5,10)',
     page: '@integer(3,1000)',
     serialNum: '@string(5,50)',
-    size: '@integer(3,1000)',
+    size: 20,
     walletStatus: '@string(5,50)',
   }
 }
@@ -1861,7 +1861,7 @@ export function DoorShareholderReq() {
   return {
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     doorAcctId: '@guid',
     doorShareholderIdCardBackFileId: '@guid',
     doorShareholderIdCardFileId: '@guid',
@@ -1882,7 +1882,7 @@ export function DoorShareholderResp() {
   return {
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     doorAcctId: '@guid',
     doorShareholderIdCardBackFileId: '@guid',
     doorShareholderIdCardFileId: '@guid',
@@ -1905,9 +1905,9 @@ export function EpDesktopResp() {
     authStatus: '@boolean',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     'whiteRespList|1-20': [DesktopWhiteResp()],
-    email: '@string(5,50)',
+    email: '@email',
     id: '@guid',
     jmAuthStatus: '@string(5,50)',
     'jobRespList|1-20': [DesktopJobResp()],
@@ -1940,10 +1940,10 @@ export function ExtWhiteResp() {
     ancestors: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     whiteCode: '@string(5,50)',
     whiteName: '@ctitle(5,10)',
-    email: '@string(5,50)',
+    email: '@email',
     desktopId: '@guid',
     id: '@guid',
     leaderDesktopId: '@guid',
@@ -1956,7 +1956,7 @@ export function ExtWhiteResp() {
     orderNum: '@integer(3,1000)',
     parentCode: '@string(5,50)',
     parentId: '@guid',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     profile: '@string(5,50)',
     scaleType: '@string(5,50)',
     scaleTypeDesc: '@string(5,50)',
@@ -1985,7 +1985,7 @@ export function FileSystemResource() {
 export function HeaderEmpowerSmsInfo() {
   return {
     doorId: '@guid',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     gratefulId: '@guid',
   }
 }
@@ -2021,11 +2021,11 @@ export function InviteDesktopResp() {
     desktopStatus: '@string(5,50)',
     id: '@guid',
     inviterName: '@ctitle(5,10)',
-    inviterPhone: '@string(5,50)',
+    inviterPhone: '@integer(13100000000,18999999999)',
     joinTime: '@datetime',
     proposerId: '@guid',
     proposerName: '@ctitle(5,10)',
-    proposerPhone: '@string(5,50)',
+    proposerPhone: '@integer(13100000000,18999999999)',
     refuse: '@string(5,50)',
     shareTime: '@datetime',
     shareType: '@string(5,50)',
@@ -2038,7 +2038,7 @@ export function InviteDoorReInfo() {
     doorId: '@guid',
     handleStatus: '@boolean',
     headerName: '@ctitle(5,10)',
-    headerPhone: '@string(5,50)',
+    headerPhone: '@integer(13100000000,18999999999)',
     inviteCode: '@string(5,50)',
     isHandler: '@boolean',
     reId: '@guid',
@@ -2047,7 +2047,7 @@ export function InviteDoorReInfo() {
 }
 export function InviteJoinEchoResp() {
   return {
-    applyType: '@string(5,50)',
+    applyType: Mock.mock({ 'example|1': ['FORWARD', 'REPLY', ''] }).example,
     doorCertStatus: '@string(5,50)',
     doorName: '@ctitle(5,10)',
     inviteName: '@ctitle(5,10)',
@@ -2058,7 +2058,7 @@ export function InviteJoinEchoResp() {
 }
 export function InviteLoginReq() {
   return {
-    applyType: '@string(5,50)',
+    applyType: Mock.mock({ 'example|1': ['FORWARD', 'REPLY', ''] }).example,
     certificate: '@string(5,50)',
     clientType: '@string(5,50)',
     clientVersion: '@string(5,50)',
@@ -2087,7 +2087,7 @@ export function InviteRePlatFromOrgReq() {
   return {
     doorId: '@guid',
     headerName: '@ctitle(5,10)',
-    headerPhone: '@string(5,50)',
+    headerPhone: '@integer(13100000000,18999999999)',
     reGratefulId: '@guid',
   }
 }
@@ -2113,7 +2113,7 @@ export function JobResp() {
     ancestors: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     id: '@guid',
     jobCode: '@string(5,50)',
     modified: '@string(5,50)',
@@ -2137,7 +2137,7 @@ export function LogLoginResp() {
     browser: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     id: '@guid',
     ipaddr: '@string(5,50)',
     loginLocation: '@string(5,50)',
@@ -2175,7 +2175,7 @@ export function MenuResp() {
     codeCatalog: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     dataPermissions: '@boolean',
     enable: '@boolean',
     iconUrl: '@url',
@@ -2251,11 +2251,11 @@ export function OrderItem() {
 export function OutputStream() {}
 export function PageDesktopAddRecordReq() {
   return {
-    adderNameOrPhone: '@ctitle(5,10)',
-    desktopNameOrPhone: '@ctitle(5,10)',
+    adderNameOrPhone: '@integer(13100000000,18999999999)',
+    desktopNameOrPhone: '@integer(13100000000,18999999999)',
     desktopStatus: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
   }
 }
 export function PageDoorCredentialReq() {
@@ -2267,7 +2267,7 @@ export function PageDoorCredentialReq() {
     office: '@string(5,50)',
     page: '@integer(3,1000)',
     scope: '@string(5,50)',
-    size: '@integer(3,1000)',
+    size: 20,
     validDate: '@datetime',
   }
 }
@@ -2275,36 +2275,36 @@ export function PageInvoiceReq() {
   return {
     dutyNum: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
     title: '@ctitle(5,10)',
   }
 }
 export function PageSysDictDuiXiangnullZhiBuXuLieHua() {
   return {
     countId: '@guid',
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     maxLimit: '@string(5,50)',
     optimizeCountSql: '@boolean',
     'orders|1-20': [OrderItem()],
     pages: '@string(5,50)',
     'records|1-20': [SysDictDuiXiangnullZhiBuXuLieHua()],
     searchCount: '@boolean',
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function PageZhiXieChangBoJuZiXinXi() {
   return {
     countId: '@guid',
-    current: '@string(5,50)',
+    current: '@integer(1, 5)',
     maxLimit: '@string(5,50)',
     optimizeCountSql: '@boolean',
     'orders|1-20': [OrderItem()],
     pages: '@string(5,50)',
     'records|1-20': [ZhiXieChangBoJuZiXinXi0()],
     searchCount: '@boolean',
-    size: '@string(5,50)',
-    total: '@string(5,50)',
+    size: 20,
+    total: '@integer(5, 100)',
   }
 }
 export function CatVerifyReq() {
@@ -2349,7 +2349,7 @@ export function PostResp() {
   return {
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     id: '@guid',
     modified: '@string(5,50)',
     postCode: '@string(5,50)',
@@ -2383,7 +2383,7 @@ export function QueryCertFormResp() {
 export function QueryDesktopByPhoneOrNameReq() {
   return {
     jobId: '@guid',
-    phoneOrName: '@ctitle(5,10)',
+    phoneOrName: '@integer(13100000000,18999999999)',
   }
 }
 export function QueryDoorPageHomeResp() {
@@ -2397,14 +2397,14 @@ export function QueryInviteDesktopReq() {
     applyTimeStart: '@datetime',
     whiteName: '@ctitle(5,10)',
     desktopStatus: '@string(5,50)',
-    inviterPhoneOrName: '@ctitle(5,10)',
+    inviterPhoneOrName: '@integer(13100000000,18999999999)',
     joinTimeEnd: '@datetime',
     joinTimeStart: '@datetime',
     page: '@integer(3,1000)',
-    proposerPhone: '@string(5,50)',
-    proposerPhoneOrName: '@ctitle(5,10)',
+    proposerPhone: '@integer(13100000000,18999999999)',
+    proposerPhoneOrName: '@integer(13100000000,18999999999)',
     shareType: '@string(5,50)',
-    size: '@integer(3,1000)',
+    size: 20,
     status: '@string(5,50)',
   }
 }
@@ -2457,7 +2457,7 @@ export function ReDoorInfo() {
     happyLicenseCode: '@string(5,50)',
     doorName: '@ctitle(5,10)',
     headerName: '@ctitle(5,10)',
-    headerPhone: '@string(5,50)',
+    headerPhone: '@integer(13100000000,18999999999)',
     isAuth: '@string(5,50)',
     serialNo: '@string(5,50)',
   }
@@ -2497,7 +2497,7 @@ export function RelationDoorInfo() {
     auditStatus: '@string(5,50)',
     authCount: '@integer(3,1000)',
     happyLicenseCode: '@string(5,50)',
-    created: '@string(5,50)',
+    created: '@datetime',
     id: '@guid',
     name: '@ctitle(5,10)',
     preDoorName: '@ctitle(5,10)',
@@ -2547,7 +2547,7 @@ export function PinkInfoResq() {
     ancestors: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     whiteCheckStrictly: '@boolean',
     id: '@guid',
     level: '@integer(3,1000)',
@@ -2580,7 +2580,7 @@ export function PinkResq() {
     ancestors: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     whiteCheckStrictly: '@boolean',
     id: '@guid',
     level: '@integer(3,1000)',
@@ -2747,7 +2747,7 @@ export function DouJiangJiFangDongXinXiXiangQingBiao() {
   return {
     area: '@string(5,50)',
     authStatus: '@string(5,50)',
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     city: '@city',
     country: '@string(5,50)',
     init: '@boolean',
@@ -2790,7 +2790,7 @@ export function DouJiangJiFangXingXinXiBoJuZiXinXiJiaShiShiZhiXuYaoChuanRuindivi
     individualBankCardNo: '@string(5,50)',
     individualCompany: '@string(5,50)',
     individualMail: '@string(5,50)',
-    individualReservedPhoneNo: '@string(5,50)',
+    individualReservedPhoneNo: '@integer(13100000000,18999999999)',
     individualVocation: '@string(5,50)',
     issue: '@string(5,50)',
     name: '@ctitle(5,10)',
@@ -2814,7 +2814,7 @@ export function DouJiangJiBeiJingZhuCeZhuanYe() {
 export function ZhiXieChangZhiNenPiaoJiaFangXing() {
   return {
     clerkLoginPassword: '@string(5,50)',
-    clerkPhone: '@string(5,50)',
+    clerkPhone: '@integer(13100000000,18999999999)',
     clerkPink: '@string(5,50)',
     contactNumber: '@string(5,50)',
     doorId: '@guid',
@@ -2833,8 +2833,8 @@ export function ZhiXieChangJianDanFangXing() {
     id: '@guid',
     institutionLegalCatCertificateUrl: '@url',
     legalBankNo: '@string(5,50)',
-    legalBankPhone: '@string(5,50)',
-    legalBankPhoneVerificationCode: '@string(5,50)',
+    legalBankPhone: '@integer(13100000000,18999999999)',
+    legalBankPhoneVerificationCode: '@integer(13100000000,18999999999)',
     legalCat: '@string(5,50)',
     legalCatCardNo: '@string(5,50)',
     licenseFileUrl: '@url',
@@ -2854,7 +2854,7 @@ export function ZhiXieChangJianDanFangXing0() {
     id: '@guid',
     institutionLegalCatCertificateUrl: '@url',
     legalBankNo: '@string(5,50)',
-    legalBankPhone: '@string(5,50)',
+    legalBankPhone: '@integer(13100000000,18999999999)',
     legalCat: '@string(5,50)',
     legalCatCardNo: '@string(5,50)',
     licenseFileUrl: '@url',
@@ -2868,7 +2868,7 @@ export function ZhiXieChangZhuTiXinXi() {
   return {
     area: '@string(5,50)',
     authStatus: '@string(5,50)',
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     chiefly: '@boolean',
     city: '@city',
     claimId: '@guid',
@@ -2876,7 +2876,7 @@ export function ZhiXieChangZhuTiXinXi() {
     country: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     firmSize: '@string(5,50)',
     id: '@guid',
     industryInvolved: '@string(5,50)',
@@ -2906,7 +2906,7 @@ export function ZhiXieChangBoJuZiXinXi() {
     authStatus: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     doorBankCardNo: '@string(5,50)',
     doorBankCode: '@string(5,50)',
     doorBankName: '@ctitle(5,10)',
@@ -2917,7 +2917,7 @@ export function ZhiXieChangBoJuZiXinXi() {
     doorContactIdCardBackId: '@guid',
     doorContactIdCardFrontId: '@guid',
     doorContactName: '@ctitle(5,10)',
-    doorContactPhone: '@string(5,50)',
+    doorContactPhone: '@integer(13100000000,18999999999)',
     doorId: '@guid',
     doorJoinProtocolId: '@guid',
     doorLegalIdCardBackId: '@guid',
@@ -2927,7 +2927,7 @@ export function ZhiXieChangBoJuZiXinXi() {
     doorLegalIdCardValidDate: '@datetime',
     doorLegalIdCardValidStartDate: '@datetime',
     doorLegalName: '@ctitle(5,10)',
-    doorLegalPhone: '@string(5,50)',
+    doorLegalPhone: '@integer(13100000000,18999999999)',
     doorLicenseFileDuplicateId: '@guid',
     doorLicenseFileId: '@guid',
     doorLicenseName: '@ctitle(5,10)',
@@ -2975,7 +2975,7 @@ export function ZhiXieChangBoJuZiXinXi0() {
     authStatus: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
-    created: '@string(5,50)',
+    created: '@datetime',
     doorBankCardNo: '@string(5,50)',
     doorBankCode: '@string(5,50)',
     doorBankName: '@ctitle(5,10)',
@@ -2986,7 +2986,7 @@ export function ZhiXieChangBoJuZiXinXi0() {
     doorContactIdCardBackId: '@guid',
     doorContactIdCardFrontId: '@guid',
     doorContactName: '@ctitle(5,10)',
-    doorContactPhone: '@string(5,50)',
+    doorContactPhone: '@integer(13100000000,18999999999)',
     doorId: '@guid',
     doorJoinProtocolId: '@guid',
     doorLegalIdCardBackId: '@guid',
@@ -2996,7 +2996,7 @@ export function ZhiXieChangBoJuZiXinXi0() {
     doorLegalIdCardValidDate: '@datetime',
     doorLegalIdCardValidStartDate: '@datetime',
     doorLegalName: '@ctitle(5,10)',
-    doorLegalPhone: '@string(5,50)',
+    doorLegalPhone: '@integer(13100000000,18999999999)',
     doorLicenseFileDuplicateId: '@guid',
     doorLicenseFileId: '@guid',
     doorLicenseName: '@ctitle(5,10)',
@@ -3042,11 +3042,11 @@ export function ZhiXieChangChuXing() {
   return {
     area: '@string(5,50)',
     authStatus: '@string(5,50)',
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     city: '@city',
     contactNumber: '@string(5,50)',
     country: '@string(5,50)',
-    created: '@boolean',
+    created: '@datetime',
     firmSize: '@string(5,50)',
     industryInvolved: '@string(5,50)',
     introduction: '@string(5,50)',
@@ -3069,7 +3069,7 @@ export function ZhiXieChangFangDongXinXi() {
   return {
     area: '@string(5,50)',
     authStatus: '@string(5,50)',
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     chiefly: '@boolean',
     city: '@city',
     contactNumber: '@string(5,50)',
@@ -3092,7 +3092,7 @@ export function ZhiXieChangFangDongXinXi() {
 export function ZhiXieChangFangDongXinXiXiangQing() {
   return {
     area: '@string(5,50)',
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     city: '@city',
     contactNumber: '@string(5,50)',
     country: '@string(5,50)',
@@ -3111,7 +3111,7 @@ export function ZhiXieChangFangDongXinXiXiangQing0() {
   return {
     area: '@string(5,50)',
     authStatus: '@string(5,50)',
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     city: '@city',
     contactNumber: '@string(5,50)',
     country: '@string(5,50)',
@@ -3133,7 +3133,7 @@ export function ZhiXieChangFangDongXinXiXiangQing0() {
 export function XiuGaiDouJiangJiXinXi() {
   return {
     area: '@string(5,50)',
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     city: '@city',
     country: '@string(5,50)',
     location: '@string(5,50)',
@@ -3157,17 +3157,17 @@ export function XiuGaiMiMa() {
 export function MaoZiGuanLianFaQiGuanLianXinXi() {
   return {
     applyName: '@ctitle(5,10)',
-    applyPhone: '@string(5,50)',
+    applyPhone: '@integer(13100000000,18999999999)',
     applyTime: '@datetime',
     headerName: '@ctitle(5,10)',
-    headerPhone: '@string(5,50)',
+    headerPhone: '@integer(13100000000,18999999999)',
     initTime: '@datetime',
     inviteName: '@ctitle(5,10)',
-    invitePhone: '@string(5,50)',
+    invitePhone: '@integer(13100000000,18999999999)',
     inviteSource: '@string(5,50)',
     inviteTime: '@datetime',
     invitedName: '@ctitle(5,10)',
-    invitedPhone: '@string(5,50)',
+    invitedPhone: '@integer(13100000000,18999999999)',
     sourceEnum: '@string(5,50)',
     triggerTime: '@datetime',
   }
@@ -3193,7 +3193,7 @@ export function GuanLianMaoZiXiangQing() {
   return {
     auditStatus: '@string(5,50)',
     authCount: '@integer(3,1000)',
-    created: '@string(5,50)',
+    created: '@datetime',
     whiteCount: '@integer(3,1000)',
     id: '@guid',
     preReDoorInfo: ReDoorInfo(),
@@ -3212,10 +3212,10 @@ export function GuanLianShenHeXinXi() {
     auditStatus: '@string(5,50)',
     branchName: '@ctitle(5,10)',
     happyLicenseUrl: '@url',
-    created: '@string(5,50)',
+    created: '@datetime',
     franchiseDoorName: '@ctitle(5,10)',
     headerName: '@ctitle(5,10)',
-    headerPhone: '@string(5,50)',
+    headerPhone: '@integer(13100000000,18999999999)',
     id: '@guid',
     relationStatus: '@string(5,50)',
     serialNo: '@string(5,50)',
@@ -3227,14 +3227,14 @@ export function FenYeChuXingDouJiangJiBeiJing() {
     credentialNo: '@string(5,50)',
     credentialType: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
   }
 }
 export function FenYeChuXingSuoYouZhiXieChang() {
   return {
     name: '@ctitle(5,10)',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
   }
 }
 export function QieHuanMoRenDiZhi() {
@@ -3288,7 +3288,7 @@ export function ShenHeTongGuo() {
     id: '@guid',
     proposerId: '@guid',
     proposerName: '@ctitle(5,10)',
-    proposerPhone: '@string(5,50)',
+    proposerPhone: '@integer(13100000000,18999999999)',
     'pinkId|1-20': ['@guid'],
   }
 }
@@ -3311,7 +3311,7 @@ export function BiXieDaoZhongXinChuXingGuoLvTiaoJian() {
     desktopName: '@ctitle(5,10)',
     doorId: '@guid',
     page: '@integer(3,1000)',
-    size: '@integer(3,1000)',
+    size: 20,
   }
 }
 export function BiXieDaoRuCan() {
@@ -3347,7 +3347,7 @@ export function BiXieDao1() {
     initTime: '@datetime',
     mainDep: '@string(5,50)',
     name: '@ctitle(5,10)',
-    phone: '@string(5,50)',
+    phone: '@integer(13100000000,18999999999)',
     refuseReason: '@string(5,50)',
     source: '@string(5,50)',
   }
@@ -3359,7 +3359,7 @@ export function BiXieDaoYongDao() {
     branchSerialNo: '@string(5,50)',
     doorName: '@ctitle(5,10)',
     headerName: '@ctitle(5,10)',
-    headerPhone: '@string(5,50)',
+    headerPhone: '@integer(13100000000,18999999999)',
     id: '@guid',
     relationStatus: '@string(5,50)',
     serialNo: '@string(5,50)',
