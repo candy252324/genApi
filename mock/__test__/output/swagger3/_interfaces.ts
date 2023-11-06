@@ -844,7 +844,7 @@ export function GetUnreadPageReq() {
 export function BirdF2fKeyBorardListResp() {
   return {
     avatar: '@image(200x100, @color, @color)',
-    avatarUrl: '@url',
+    avatarUrl: '@image(200x100, @color, @color)',
     f2fBirdId: '@guid',
     imKeyBorardId: '@guid',
     keyBorardName: '@ctitle(5,10)',
@@ -893,14 +893,12 @@ export function MemberBirdStatusResp() {
 }
 export function MessageSyncDTO() {
   return {
-    applyType: Mock.mock({ 'example|1': ['FORWARD', 'REPLY', ''] }).example,
+    applyType: /'FORWARD'| 'REPLY'| ''/,
     'cardMessageIdList|1-20': ['@string(5,50)'],
     channel: '@string(5,50)',
     clientMessageId: '@guid',
     content: '@string(5,50)',
-    contentType: Mock.mock({
-      'example|1': ['TEXT', 'LINK', 'IMG', 'VIDEO', 'AUDIO', 'VOICE', 'FILE', 'STRUCTUAL', 'PHONE'],
-    }).example,
+    contentType: /'TEXT'|'LINK'|'IMG'|'VIDEO'|'AUDIO'|'VOICE'|'FILE'|'STRUCTUAL'|'PHONE'/,
     'excludeKeyBorardIds|1-20': ['@string(5,50)'],
     fileId: '@guid',
     forwardMessageId: '@guid',
@@ -956,7 +954,7 @@ export function QueryLastMessageResp() {
     isForceUpdate: '@boolean',
     versionDesc: '@string(5,50)',
     versionName: '@ctitle(5,10)',
-    versionUrl: '@url',
+    versionUrl: '@image(200x100, @color, @color)',
   }
 }
 export function RequestMsgReqDuiXiang() {
@@ -1206,10 +1204,10 @@ export function XiaoDaoXiaoXiQiuQianXiangYing() {
     isSameGrateful: '@boolean',
     isTop: '@boolean',
     modified: '@string(5,50)',
-    msgApplyType: Mock.mock({ 'example|1': ['FORWARD', 'REPLY', ''] }).example,
+    msgApplyType: /'FORWARD'| 'REPLY'| ''/,
     msgContent: '@string(5,50)',
     msgContentType: '@string(5,50)',
-    msgFileUrl: '@url',
+    msgFileUrl: '@image(200x100, @color, @color)',
     msgId: '@guid',
     msgSenderName: '@ctitle(5,10)',
     msgSequence: '@string(5,50)',
@@ -1312,12 +1310,10 @@ export function XiaoXiDaoLaJi() {
 }
 export function XiaoXiDuiXiang() {
   return {
-    applyType: Mock.mock({ 'example|1': ['FORWARD', 'REPLY', ''] }).example,
+    applyType: /'FORWARD'| 'REPLY'| ''/,
     'cardMessageList|1-20': [ZhuanFaXiaoXiDuiXiang()],
     content: '@string(5,50)',
-    contentType: Mock.mock({
-      'example|1': ['TEXT', 'LINK', 'IMG', 'VIDEO', 'AUDIO', 'VOICE', 'FILE', 'STRUCTUAL', 'PHONE'],
-    }).example,
+    contentType: /'TEXT'|'LINK'|'IMG'|'VIDEO'|'AUDIO'|'VOICE'|'FILE'|'STRUCTUAL'|'PHONE'/,
     created: '@datetime',
     fileId: '@guid',
     fileName: '@ctitle(5,10)',
@@ -1325,7 +1321,7 @@ export function XiaoXiDuiXiang() {
     fileText: '@string(5,50)',
     fileTime: '@datetime',
     fileType: '@string(5,50)',
-    fileUrl: '@url',
+    fileUrl: '@image(200x100, @color, @color)',
     birdId: '@guid',
     id: '@guid',
     nickName: '@ctitle(5,10)',
@@ -1387,7 +1383,7 @@ export function BanBen() {
     versionDesc: '@string(5,50)',
     versionName: '@ctitle(5,10)',
     versionNum: '@string(5,50)',
-    versionUrl: '@url',
+    versionUrl: '@image(200x100, @color, @color)',
   }
 }
 export function TongQianCaoSuoYouFangDongKeyBorardListAllGratefulReq() {
@@ -1567,11 +1563,9 @@ export function QingQiuXiaoXiDuBaoKuoYanChangChunHuaJiHuiFuXiaoXiDuRequestReadRe
 }
 export function ZhuanFaXiaoXiDuiXiang() {
   return {
-    applyType: Mock.mock({ 'example|1': ['FORWARD', 'REPLY', ''] }).example,
+    applyType: /'FORWARD'| 'REPLY'| ''/,
     content: '@string(5,50)',
-    contentType: Mock.mock({
-      'example|1': ['TEXT', 'LINK', 'IMG', 'VIDEO', 'AUDIO', 'VOICE', 'FILE', 'STRUCTUAL', 'PHONE'],
-    }).example,
+    contentType: /'TEXT'|'LINK'|'IMG'|'VIDEO'|'AUDIO'|'VOICE'|'FILE'|'STRUCTUAL'|'PHONE'/,
     created: '@datetime',
     fileId: '@guid',
     fileName: '@ctitle(5,10)',
@@ -1579,7 +1573,7 @@ export function ZhuanFaXiaoXiDuiXiang() {
     fileText: '@string(5,50)',
     fileTime: '@datetime',
     fileType: '@string(5,50)',
-    fileUrl: '@url',
+    fileUrl: '@image(200x100, @color, @color)',
     birdId: '@guid',
     id: '@guid',
     senderAvatar: '@image(200x100, @color, @color)',
@@ -1655,17 +1649,17 @@ export function DaDuNanTongQianCaoQiuQianWhiteKeyBorardResp() {
 export function YanChangChunHuaXiaoXiFenYeRequestPageListResp() {
   return {
     applyAvatar: '@image(200x100, @color, @color)',
-    applyAvatarUrl: '@url',
+    applyAvatarUrl: '@image(200x100, @color, @color)',
     applyId: '@guid',
     applyName: '@ctitle(5,10)',
     avatar: '@image(200x100, @color, @color)',
     content: '@string(5,50)',
     inviterAvatar: '@image(200x100, @color, @color)',
-    inviterAvatarUrl: '@url',
+    inviterAvatarUrl: '@image(200x100, @color, @color)',
     inviterId: '@guid',
     inviterName: '@ctitle(5,10)',
     receiverAvatar: '@image(200x100, @color, @color)',
-    receiverAvatarUrl: '@url',
+    receiverAvatarUrl: '@image(200x100, @color, @color)',
     receiverId: '@guid',
     receiverName: '@ctitle(5,10)',
     requestId: '@guid',
@@ -1673,7 +1667,7 @@ export function YanChangChunHuaXiaoXiFenYeRequestPageListResp() {
     gratefulName: '@ctitle(5,10)',
     type: '@integer(3,1000)',
     keyBorardAvatar: '@image(200x100, @color, @color)',
-    keyBorardAvatarUrl: '@url',
+    keyBorardAvatarUrl: '@image(200x100, @color, @color)',
     keyBorardName: '@ctitle(5,10)',
   }
 }

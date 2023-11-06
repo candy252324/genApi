@@ -1121,14 +1121,14 @@ export function ChannelAppGratefulConfigResp() {
     agentId: '@guid',
     appKey: '@string(5,50)',
     appSecret: '@string(5,50)',
-    appUrl: '@url',
+    appUrl: '@image(200x100, @color, @color)',
     channelType: '@string(5,50)',
     corpId: '@guid',
     id: '@guid',
-    manUrl: '@url',
+    manUrl: '@image(200x100, @color, @color)',
     outIp: '@string(5,50)',
-    pcUrl: '@url',
-    recUrl: '@url',
+    pcUrl: '@image(200x100, @color, @color)',
+    recUrl: '@image(200x100, @color, @color)',
     gratefulId: '@guid',
   }
 }
@@ -1369,7 +1369,7 @@ export function CompanyInfo() {
 export function Comparableobject() {}
 export function CorpWehiallAuthUrlResp() {
   return {
-    authUrl: '@url',
+    authUrl: '@image(200x100, @color, @color)',
   }
 }
 export function CurrentAuthResp() {
@@ -2001,7 +2001,7 @@ export function ImportDesktopResp() {
   return {
     'errorDataList|1-20': [ImportDesktopErrorData()],
     errorNum: '@integer(3,1000)',
-    errorUrl: '@url',
+    errorUrl: '@image(200x100, @color, @color)',
     importDate: '@datetime',
     succNum: '@integer(3,1000)',
   }
@@ -2047,7 +2047,7 @@ export function InviteDoorReInfo() {
 }
 export function InviteJoinEchoResp() {
   return {
-    applyType: Mock.mock({ 'example|1': ['FORWARD', 'REPLY', ''] }).example,
+    applyType: /'FORWARD'| 'REPLY'| ''/,
     doorCertStatus: '@string(5,50)',
     doorName: '@ctitle(5,10)',
     inviteName: '@ctitle(5,10)',
@@ -2058,7 +2058,7 @@ export function InviteJoinEchoResp() {
 }
 export function InviteLoginReq() {
   return {
-    applyType: Mock.mock({ 'example|1': ['FORWARD', 'REPLY', ''] }).example,
+    applyType: /'FORWARD'| 'REPLY'| ''/,
     certificate: '@string(5,50)',
     clientType: '@string(5,50)',
     clientVersion: '@string(5,50)',
@@ -2178,7 +2178,7 @@ export function MenuResp() {
     created: '@datetime',
     dataPermissions: '@boolean',
     enable: '@boolean',
-    iconUrl: '@url',
+    iconUrl: '@image(200x100, @color, @color)',
     id: '@guid',
     level: '@integer(3,1000)',
     loginRequired: '@boolean',
@@ -2318,7 +2318,7 @@ export function CatVerifyReq() {
     ocrIdCardFront: '@string(5,50)',
     openBank: '@string(5,50)',
     profession: '@string(5,50)',
-    returnUrl: '@url',
+    returnUrl: '@image(200x100, @color, @color)',
     validStatus: '@boolean',
   }
 }
@@ -2731,7 +2731,7 @@ export function VerificationResp() {
     cardNo: '@string(5,50)',
     cardVaildDate: '@datetime',
     certifyId: '@guid',
-    certifyUrl: '@url',
+    certifyUrl: '@image(200x100, @color, @color)',
     code: 200,
     message: '@string(5,50)',
     ocrIdCardBack: '@string(5,50)',
@@ -2795,8 +2795,8 @@ export function DouJiangJiFangXingXinXiBoJuZiXinXiJiaShiShiZhiXuYaoChuanRuindivi
     issue: '@string(5,50)',
     name: '@ctitle(5,10)',
     nationality: '@string(5,50)',
-    posUrl: '@url',
-    revUrl: '@url',
+    posUrl: '@image(200x100, @color, @color)',
+    revUrl: '@image(200x100, @color, @color)',
     sex: '@string(5,50)',
     startDate: '@datetime',
     keyBorardId: '@guid',
@@ -2831,17 +2831,17 @@ export function ZhiXieChangJianDanFangXing() {
     certificateAuthStatus: '@string(5,50)',
     doorId: '@guid',
     id: '@guid',
-    institutionLegalCatCertificateUrl: '@url',
+    institutionLegalCatCertificateUrl: '@image(200x100, @color, @color)',
     legalBankNo: '@string(5,50)',
     legalBankPhone: '@integer(13100000000,18999999999)',
     legalBankPhoneVerificationCode: '@integer(13100000000,18999999999)',
     legalCat: '@string(5,50)',
     legalCatCardNo: '@string(5,50)',
-    licenseFileUrl: '@url',
+    licenseFileUrl: '@image(200x100, @color, @color)',
     licenseUnifiedCode: '@string(5,50)',
     name: '@ctitle(5,10)',
     orgType: '@string(5,50)',
-    unifiedSocialCreditCodeCertificateUrl: '@url',
+    unifiedSocialCreditCodeCertificateUrl: '@image(200x100, @color, @color)',
   }
 }
 export function ZhiXieChangJianDanFangXing0() {
@@ -2852,16 +2852,16 @@ export function ZhiXieChangJianDanFangXing0() {
     certificateAuthStatus: '@string(5,50)',
     doorId: '@guid',
     id: '@guid',
-    institutionLegalCatCertificateUrl: '@url',
+    institutionLegalCatCertificateUrl: '@image(200x100, @color, @color)',
     legalBankNo: '@string(5,50)',
     legalBankPhone: '@integer(13100000000,18999999999)',
     legalCat: '@string(5,50)',
     legalCatCardNo: '@string(5,50)',
-    licenseFileUrl: '@url',
+    licenseFileUrl: '@image(200x100, @color, @color)',
     licenseUnifiedCode: '@string(5,50)',
     name: '@ctitle(5,10)',
     orgType: '@string(5,50)',
-    unifiedSocialCreditCodeCertificateUrl: '@url',
+    unifiedSocialCreditCodeCertificateUrl: '@image(200x100, @color, @color)',
   }
 }
 export function ZhiXieChangZhuTiXinXi() {
@@ -2887,7 +2887,7 @@ export function ZhiXieChangZhuTiXinXi() {
     legalIdCardNo: '@string(5,50)',
     legalCat: '@string(5,50)',
     licenseUnifiedCode: '@string(5,50)',
-    licenseUnifiedUrl: '@url',
+    licenseUnifiedUrl: '@image(200x100, @color, @color)',
     location: '@string(5,50)',
     modified: '@string(5,50)',
     name: '@ctitle(5,10)',
@@ -3080,7 +3080,7 @@ export function ZhiXieChangFangDongXinXi() {
     introduction: '@string(5,50)',
     legalCat: '@string(5,50)',
     licenseUnifiedCode: '@string(5,50)',
-    licenseUnifiedUrl: '@url',
+    licenseUnifiedUrl: '@image(200x100, @color, @color)',
     location: '@string(5,50)',
     name: '@ctitle(5,10)',
     province: '@province',
@@ -3211,7 +3211,7 @@ export function GuanLianShenHeXinXi() {
     auditClassificationEnum: '@string(5,50)',
     auditStatus: '@string(5,50)',
     branchName: '@ctitle(5,10)',
-    happyLicenseUrl: '@url',
+    happyLicenseUrl: '@image(200x100, @color, @color)',
     created: '@datetime',
     franchiseDoorName: '@ctitle(5,10)',
     headerName: '@ctitle(5,10)',
@@ -3402,7 +3402,7 @@ export function XiaoYanJieGuo() {
     dataSyncHandleTypeEnum: '@string(5,50)',
     failedMessage: '@string(5,50)',
     resultFlag: '@boolean',
-    skipUrl: '@url',
+    skipUrl: '@image(200x100, @color, @color)',
     systemName: '@ctitle(5,10)',
     systemNameStr: '@ctitle(5,10)',
   }

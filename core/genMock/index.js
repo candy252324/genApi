@@ -309,8 +309,6 @@ function getFieldMockStr({ name, type }) {
     mockStr = '@datetime' // 处理成日期
   } else if (/(.*)id$/.test(lowerCaseName)) {
     mockStr = '@guid' // 处理成 id
-  } else if (type === 'string' && /url/.test(lowerCaseName)) {
-    mockStr = '@url'
   } else if (type === 'string' && /color/.test(lowerCaseName)) {
     mockStr = '@color'
   } else if (type === 'string' && /province/.test(lowerCaseName)) {
@@ -322,8 +320,8 @@ function getFieldMockStr({ name, type }) {
   } else if (type === 'string' && /username/.test(lowerCaseName)) {
     mockStr = '@cname'
   } else if (type === 'string' && /department/.test(lowerCaseName)) {
-    mock = getRandomOneFromArr(['财务部', '研发部', '市场部', '运维部', '测试部'])
-  } else if (type === 'string' && /avatar/.test(lowerCaseName)) {
+    mock = getRandomOneFromArr('财务部|研发部|市场部|运维部|测试部')
+  } else if (type === 'string' && /url|link|avatar/.test(lowerCaseName)) {
     mockStr = '@image(200x100, @color, @color)' // 生成一张图片地址
   } else if (type === 'string' && /phone/.test(lowerCaseName)) {
     mockStr = '@integer(13100000000,18999999999)' // 电话号码
@@ -382,9 +380,9 @@ function getCustomeMockStr(name) {
     if (typeof res === 'function') {
       return res(name)
     }
-    // 'abc': "'FORWARD'| 'REPLY'| ''",
-    else if (typeof res === 'string' && res.split('|').length > 1) {
-      return getRandomOneFromArr(res.split('|'))
+    // 'abc': 'FORWARD|REPLY|',
+    else if (typeof res === 'string' && res.indexOf('|') > -1) {
+      return getRandomOneFromArr(res)
     }
     // 'abc': 'xxx'
     else {
@@ -393,12 +391,12 @@ function getCustomeMockStr(name) {
   }
 }
 
-/** 从数组中随机取一项
- * Mock.mock({'example|1':["a","b","c"]}).example
+/** 从竖线分隔的数据中随机取一项  Mock.mock({ 'regexp': /abc|eed|/})
+ * @param str 竖线分隔的字符串，如： 'FORWARD|REPLY|'
+ * @return 正则： /FORWARD|REPLY|/
  */
-function getRandomOneFromArr(arr) {
-  return `Mock.mock({'example|1':[${arr}]}).example`
-  // return arr[Math.floor(Math.random() * arr.length)]
+function getRandomOneFromArr(str) {
+  return `/${str}/`
 }
 module.exports = {
   genMock,
