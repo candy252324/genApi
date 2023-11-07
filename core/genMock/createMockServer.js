@@ -13,7 +13,6 @@ fs.readFile(path.resolve(__dirname, './data.cache.json'), 'utf-8', (err, data) =
 })
 
 function createServer(allApiData) {
-  console.log('开始创建server---------')
   const server = http.createServer((req, res) => {
     res.writeHead(200, {
       'Content-Type': 'application/json',
@@ -56,5 +55,7 @@ function createServer(allApiData) {
     }
   })
 
-  server.listen(8000)
+  server.listen(8090, () => {
+    console.log('\x1B[32m%s\x1B[0m', 'mock 服务启动成功: http://localhost:8090')
+  })
 }

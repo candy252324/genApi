@@ -50,6 +50,7 @@ program.helpInformation = () => {
   genapi --help               输出帮助信息
   genapi init [-f,--force]    生成 apiConfig 配置文件
   genapi now                  生成接口
+  genapi mock-server          启动本地mock服务器
 `
 }
 
