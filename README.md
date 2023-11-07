@@ -67,3 +67,32 @@ module.exports = {
   fileName: () => {},
 }
 ```
+
+### 生成 mock
+
+在 apiConfig 配置文件中添加 mock 配置，用于给字段自定义 mock 规则。
+
+注：如不需要生成 mock, 需显示的配置`mock:false`。
+
+```js
+// apiConfig.js
+module.exports = {
+  mock: {
+    // 自定义mock规则
+    fieldRule: {
+      // 完全匹配，字段名为 code, 则生成的 mock 值为 200
+      code: 200,
+      // 完全匹配，字段名为 loginStatus, 则生成的 mock 值为 'ONLINE' 或 'OFFLINE' 或 ''
+      loginStatus: 'ONLINE|OFFLINE|',
+      // 完全匹配，字段名为 loginStatus2, 则生成的 mock 值为 'ONLINE' 或 'OFFLINE'
+      loginStatus2: 'ONLINE|OFFLINE',
+      // 正则匹配，若字段名匹配正则表达式 /fileAddress|imageAddress/， 则生成的 mock 值为一个随机的 url
+      '/fileAddress|imageAddress/': "'@url'",
+      // mock 值可以是一个函数
+      total: () => {
+        return "'@integer(5, 100)'"
+      },
+    },
+  },
+}
+```
