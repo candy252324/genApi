@@ -70,28 +70,36 @@ module.exports = {
 
 ### 生成 mock
 
-在 apiConfig 配置文件中添加 mock 配置，用于给字段自定义 mock 规则。
+执行 `genapi now` 除了会在项目目录中生成 api 外，还会自动在 `/node_modules/@cxxgo/genapi/mock` 目录下生成 mock 数据。使用的时候只要在项目入口文件中 `import '@cxxgo/genapi/mock/index'` 即可。
 
-注：如不需要生成 mock, 需显示的配置`mock:false`。
+> 注：如不需要生成 mock, 需显示的配置`mock:false`。
+
+本工具基于 [better-mock](https://www.npmjs.com/package/better-mock), XHR 和 fetch 请求均可以拦截。
+工具本身有内置的 mock 生成规则，当然你也可以有自己的规则，配置规则和 [mockjs](http://mockjs.com/examples.html#String) 完全一致。
+
+以下 mock 规则配置示例：
 
 ```js
 // apiConfig.js
 module.exports = {
   mock: {
-    // 自定义mock规则
+    // 根据字段自定义mock规则
     fieldRule: {
-      // 完全匹配，字段名为 code, 则生成的 mock 值为 200
+      // 完全匹配，值为数字
       code: 200,
-      // 完全匹配，字段名为 loginStatus, 则生成的 mock 值为 'ONLINE' 或 'OFFLINE' 或 ''
-      loginStatus: 'ONLINE|OFFLINE|',
-      // 完全匹配，字段名为 loginStatus2, 则生成的 mock 值为 'ONLINE' 或 'OFFLINE'
-      loginStatus2: 'ONLINE|OFFLINE',
-      // 正则匹配，若字段名匹配正则表达式 /fileAddress|imageAddress/， 则生成的 mock 值为一个随机的 url
-      '/fileAddress|imageAddress/': "'@url'",
-      // mock 值可以是一个函数
+      // 完全匹配，值为字符串
+      size: '20',
+      // 完全匹配，值为mock字符串
+      created: '@datetime',
+      // 完全匹配，值为函数
       total: () => {
-        return "'@integer(5, 100)'"
+        return +this.size * 10 || 100
       },
+      // 正则匹配，值为mock字符串
+      '/url/': '@url',
+      // 正则匹配，值为正则, 改示例的含义是：字段 loginStatus 的值为 'ONLINE' 或 'OFFLINE' 或 ''，
+      // 若不期望生成空字符串，去除末尾的竖线即可
+      loginStatus: 'ONLINE|OFFLINE|',
     },
   },
 }

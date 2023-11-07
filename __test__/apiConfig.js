@@ -66,7 +66,7 @@ module.exports = {
   // 是否生成 mock 数据
   // mock: false,
   mock: {
-    /** 自定义的 mock 生成规则 */
+    /** 自定义 mock 生成规则 */
     fieldRule: {
       // 完全匹配，值为数字
       code: 200,
