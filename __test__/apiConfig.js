@@ -67,7 +67,7 @@ module.exports = {
   // mock: false,
   mock: {
     /** 自定义的 mock 生成规则 */
-    filedJsonPath: {
+    fieldRule: {
       code: 200,
       size: 20,
       current: "'@integer(1, 5)'",
