@@ -478,7 +478,7 @@ export function ApiResponseYanChangChunHuaXiaoXiXiangQingRequestDetailResp() {
 export function BasePageReq() {
   return {
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function ComLoginReq() {
@@ -496,90 +496,112 @@ export function ComLoginReq() {
 }
 export function ComPageCommonSearchResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [CommonSearchResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageContactResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [ContactResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageDoorMainInfoResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [DoorMainInfoResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageFriendshipResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [FriendshipResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageSearchBeforeAddFriendResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [SearchBeforeAddFriendResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageXiaoDaoXiaoXiQiuQianXiangYing() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [XiaoDaoXiaoXiQiuQianXiangYing()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageXiaoXiDuiXiang() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [XiaoXiDuiXiang()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageBuLuoDuiXiangBirdResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [BuLuoDuiXiangBirdResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageBuLuoChengYuanXinXiDuiXiangBirdMemberResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [BuLuoChengYuanXinXiDuiXiangBirdMemberResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageDaDuNanTongQianCaoQiuQianWhiteKeyBorardResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [DaDuNanTongQianCaoQiuQianWhiteKeyBorardResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageYanChangChunHuaXiaoXiFenYeRequestPageListResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [YanChangChunHuaXiaoXiFenYeRequestPageListResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function CommonSearchReq() {
@@ -587,7 +609,7 @@ export function CommonSearchReq() {
     imKeyBorardId: '@guid',
     keywords: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     type: '@string(5,50)',
   }
 }
@@ -611,7 +633,9 @@ export function CommonSearchResp() {
     name: '@ctitle(5,10)',
     ownerId: '@guid',
     post: '@string(5,50)',
-    total: '@integer(5, 100)',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ContactReq() {
@@ -620,7 +644,7 @@ export function ContactReq() {
     imKeyBorardId: '@guid',
     keywords: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function ContactResp() {
@@ -647,7 +671,9 @@ export function ContactResp() {
     remark: '@string(5,50)',
     status: '@string(5,50)',
     gratefulName: '@ctitle(5,10)',
-    total: '@integer(5, 100)',
+    total: () => {
+      return +this.size * 10 || 100
+    },
     keyBorardStatus: '@string(5,50)',
   }
 }
@@ -773,7 +799,7 @@ export function ForwardListReq() {
     imKeyBorardId: '@guid',
     keyword: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     type: '@string(5,50)',
   }
 }
@@ -786,7 +812,9 @@ export function ForwardListResp() {
     isFriendship: '@boolean',
     name: '@ctitle(5,10)',
     gratefulName: '@ctitle(5,10)',
-    total: '@integer(5, 100)',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function FriendshipDetailReq() {
@@ -898,7 +926,7 @@ export function MessageSyncDTO() {
     channel: '@string(5,50)',
     clientMessageId: '@guid',
     content: '@string(5,50)',
-    contentType: /TEXT|LINK|IMG|VIDEO|AUDIO|VOICE|FILE|STRUCTUAL|PHONE|/,
+    contentType: '@string(5,50)',
     'excludeKeyBorardIds|1-20': ['@string(5,50)'],
     fileId: '@guid',
     forwardMessageId: '@guid',
@@ -1005,7 +1033,7 @@ export function SearchBeforeAddFriendReq() {
     isShowGratefulName: '@boolean',
     keyword: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function SearchBeforeAddFriendResp() {
@@ -1048,7 +1076,9 @@ export function SearchResp() {
     name: '@ctitle(5,10)',
     ownerId: '@guid',
     post: '@string(5,50)',
-    total: '@integer(5, 100)',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function SwitchKeyBorardListResp() {
@@ -1170,7 +1200,9 @@ export function XiaoDaoXiaoXi() {
     nickName: '@ctitle(5,10)',
     post: '@string(5,50)',
     receiver: '@string(5,50)',
-    total: '@integer(5, 100)',
+    total: () => {
+      return +this.size * 10 || 100
+    },
     keyBorardName: '@ctitle(5,10)',
   }
 }
@@ -1212,7 +1244,9 @@ export function XiaoDaoXiaoXiQiuQianXiangYing() {
     msgSenderName: '@ctitle(5,10)',
     msgSequence: '@string(5,50)',
     msgTime: '@datetime',
-    total: '@integer(5, 100)',
+    total: () => {
+      return +this.size * 10 || 100
+    },
     unreadCount: '@integer(3,1000)',
     unreadSum: '@integer(3,1000)',
     keyBorardid: '@guid',
@@ -1275,7 +1309,7 @@ export function LiShiXiaoXiMessageHistoryReq() {
     orderType: '@integer(3,1000)',
     page: '@integer(3,1000)',
     sequence: '@string(5,50)',
-    size: 20,
+    size: '20',
   }
 }
 export function HaoYouFriendshipReq() {
@@ -1292,7 +1326,7 @@ export function HaoYouQiuQianLvYouFriendshipQueryReq() {
     imKeyBorardId: '@guid',
     keyword: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function XiaoXiack() {
@@ -1313,7 +1347,7 @@ export function XiaoXiDuiXiang() {
     applyType: /FORWARD|REPLY|/,
     'cardMessageList|1-20': [ZhuanFaXiaoXiDuiXiang()],
     content: '@string(5,50)',
-    contentType: /TEXT|LINK|IMG|VIDEO|AUDIO|VOICE|FILE|STRUCTUAL|PHONE|/,
+    contentType: '@string(5,50)',
     created: '@datetime',
     fileId: '@guid',
     fileName: '@ctitle(5,10)',
@@ -1336,7 +1370,7 @@ export function XiaoXiSouSuoShiTi() {
     birdId: '@guid',
     keywords: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     type: '@string(5,50)',
     keyBorardId: '@guid',
   }
@@ -1433,7 +1467,7 @@ export function BuLuoFenYeBirdPageListReq() {
     keyword: '@string(5,50)',
     name: '@ctitle(5,10)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function BuLuoDuiXiangBirdDetailResp() {
@@ -1458,7 +1492,9 @@ export function BuLuoDuiXiangBirdDetailResp() {
     ownerId: '@guid',
     status: '@string(5,50)',
     gratefulId: '@guid',
-    total: '@integer(5, 100)',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function BuLuoDuiXiangBirdResp() {
@@ -1471,7 +1507,9 @@ export function BuLuoDuiXiangBirdResp() {
     imBirdId: '@guid',
     name: '@ctitle(5,10)',
     ownerId: '@guid',
-    total: '@integer(5, 100)',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function BuLuoChengYuanXinXiDuiXiangBirdMemberResp() {
@@ -1496,7 +1534,7 @@ export function BuLuoChengYuanFenYeBirdMemberPageReq() {
     keyword: '@string(5,50)',
     memberType: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function BuLuoChengYuanDaoLaJiBirdMemberDelReq() {
@@ -1550,7 +1588,7 @@ export function QingQiuXiaoXiQiuQianRequestPageListReq() {
     imKeyBorardId: '@guid',
     keyword: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     type: '@integer(3,1000)',
   }
 }
@@ -1565,7 +1603,7 @@ export function ZhuanFaXiaoXiDuiXiang() {
   return {
     applyType: /FORWARD|REPLY|/,
     content: '@string(5,50)',
-    contentType: /TEXT|LINK|IMG|VIDEO|AUDIO|VOICE|FILE|STRUCTUAL|PHONE|/,
+    contentType: '@string(5,50)',
     created: '@datetime',
     fileId: '@guid',
     fileName: '@ctitle(5,10)',
@@ -1625,7 +1663,7 @@ export function DaDuNanTongQianCaoFenYeKeyBorardPageReq() {
     imKeyBorardId: '@guid',
     keyword: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     gratefulId: '@guid',
   }
 }
@@ -1692,7 +1730,9 @@ export function YanChangChunHuaXiaoXiXiangQingRequestDetailResp() {
     remark: '@string(5,50)',
     requestId: '@guid',
     status: '@integer(3,1000)',
-    total: '@integer(5, 100)',
+    total: () => {
+      return +this.size * 10 || 100
+    },
     type: '@integer(3,1000)',
   }
 }

@@ -68,17 +68,20 @@ module.exports = {
   mock: {
     /** 自定义的 mock 生成规则 */
     fieldRule: {
+      // 完全匹配，值为数字
       code: 200,
-      size: 20,
-      current: "'@integer(1, 5)'",
-      created: "'@datetime'",
-      // 支持函数
+      // 完全匹配，值为字符串
+      size: '20',
+      // 完全匹配，值为mock字符串
+      created: '@datetime',
+      // 完全匹配，值为函数
       total: () => {
-        return "'@integer(5, 100)'"
+        return +this.size * 10 || 100
       },
-      '/ApplyType|applyType/': 'FORWARD|REPLY|', // 若不期望生成空字符串，去除末尾的竖线即可
-      '/contentType/': 'TEXT|LINK|IMG|VIDEO|AUDIO|VOICE|FILE|STRUCTUAL|PHONE|',
-      '/url/': "'@url'", // 正则
+      // 正则匹配，值为mock字符串
+      '/url/': '@url',
+      // 正则匹配，值为正则, 若不期望生成空字符串，去除末尾的竖线即可
+      '/ApplyType|applyType/': /FORWARD|REPLY|/,
     },
   },
 }

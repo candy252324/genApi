@@ -1233,7 +1233,7 @@ export function HappyDesktopRulePageReq() {
   return {
     'desktopIdList|1-20': ['@string(5,50)'],
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function HappyDesktopRulePageResp() {
@@ -1509,7 +1509,7 @@ export function HappyPlanPageReq() {
     date: '@datetime',
     'handlerIdList|1-20': ['@string(5,50)'],
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function HappyPlanPunchReq() {
@@ -1522,7 +1522,7 @@ export function HappyPlanRecommendedReq() {
     happyType: '@string(5,50)',
     date: '@datetime',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function HappyPlanScoreListReq() {
@@ -1688,218 +1688,272 @@ export function HappySubscribeInfoResp() {
 export function CharSequence() {}
 export function ComPageHappyDesktopDetailRulePageResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [HappyDesktopDetailRulePageResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageHappyPushDetail() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [HappyPushDetail()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageCustomerDoorInfoResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [CustomerDoorInfoResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageCustomerCatInfoResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [CustomerCatInfoResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageDesktopListResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [DesktopListResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageLocationDateInfoResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [LocationDateInfoResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageLocationInfoResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [LocationInfoResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPagePageHappyResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [PageHappyResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPagePageDoorHappyPoolResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [PageDoorHappyPoolResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPagePageCatHappyPoolResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [PageCatHappyPoolResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPagePageGladHappyPoolResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [PageGladHappyPoolResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPagePunchPageResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [PunchPageResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageTaskPageListResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [TaskPageListResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageTreelong() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [''],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageFenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [FenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageFenYeLvYouRenWu() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [FenYeLvYouRenWu()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageFenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [FenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageFenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [FenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageHuaHuaTiQingQiu() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [HuaHuaTiQingQiu()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageJiQiRenGenJinJiLuXiangYing() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [JiQiRenGenJinJiLuXiangYing()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageDaoRuHuaHuaTiXiangYing() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [DaoRuHuaHuaTiXiangYing()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageSouSuoRenCaiJiQiRenresponse() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [SouSuoRenCaiJiQiRenresponse()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageSouSuoZhiXieChangJiQiRenresponse() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [SouSuoZhiXieChangJiQiRenresponse()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageCaoZuoRiZhiFenYeresponse() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [CaoZuoRiZhiFenYeresponse()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageHongLingJinJiLuFenYeresponse() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [HongLingJinJiLuFenYeresponse()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageLianXiRenHuaHuaTi() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [LianXiRenHuaHuaTi()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageXiangMuFaCaiMengXiangQingrpcresponse() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [XiangMuFaCaiMengXiangQingrpcresponse()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function Comparableobject() {}
@@ -2036,7 +2090,7 @@ export function CustomerDoorFromDataReq() {
   return {
     companyName: '@ctitle(5,10)',
     companyNum: '@string(5,50)',
-    size: 20,
+    size: '20',
   }
 }
 export function CustomerDoorFromDataResp() {
@@ -2488,7 +2542,7 @@ export function FollowAgainReq() {
 export function FollowListReq() {
   return {
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     taskId: '@guid',
   }
 }
@@ -2503,7 +2557,7 @@ export function ImportListReq() {
   return {
     endTime: '@datetime',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     startTime: '@datetime',
     taskType: '@integer(3,1000)',
   }
@@ -2636,7 +2690,7 @@ export function PageHappyMixReq() {
     orderColumn: '@string(5,50)',
     orderType: '@integer(3,1000)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     type: '@integer(3,1000)',
   }
 }
@@ -2674,7 +2728,7 @@ export function PageContactReq() {
     doorId: '@guid',
     name: '@ctitle(5,10)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function PageCustomerDoorReq() {
@@ -2706,7 +2760,7 @@ export function PageCustomerDoorReq() {
     signDateMax: '@datetime',
     signDateMin: '@datetime',
     signState: '@string(5,50)',
-    size: 20,
+    size: '20',
     skAchievementCntMax: '@string(5,50)',
     skAchievementCntMin: '@string(5,50)',
     skQualificationCntMax: '@string(5,50)',
@@ -2740,7 +2794,7 @@ export function PageCustomerCatReq() {
     signDateMax: '@datetime',
     signDateMin: '@datetime',
     signState: '@string(5,50)',
-    size: 20,
+    size: '20',
     skCertificateCntMax: '@string(5,50)',
     skCertificateCntMin: '@string(5,50)',
   }
@@ -2798,7 +2852,7 @@ export function PageLocationByTaskReq() {
   return {
     desktopName: '@ctitle(5,10)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     taskId: '@guid',
   }
 }
@@ -2811,7 +2865,7 @@ export function PageLocationReq() {
     'followerIdList|1-20': ['@string(5,50)'],
     page: '@integer(3,1000)',
     province: '@province',
-    size: 20,
+    size: '20',
     startTime: '@datetime',
   }
 }
@@ -2993,7 +3047,7 @@ export function PunchPageReq() {
     happyId: '@guid',
     happyType: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function PunchPageResp() {
@@ -3162,7 +3216,7 @@ export function TaskPageListReq() {
     endTime: '@datetime',
     name: '@ctitle(5,10)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     startTime: '@datetime',
     taskStatus: '@string(5,50)',
     type: '@integer(3,1000)',
@@ -3385,7 +3439,7 @@ export function FenYeLvYouRenCaiFaCaiMengJianDanShuJu() {
     page: '@integer(3,1000)',
     province: '@province',
     receiveType: '@string(5,50)',
-    size: 20,
+    size: '20',
     source: '@string(5,50)',
     type: '@integer(3,1000)',
   }
@@ -3423,7 +3477,7 @@ export function FenYeLvYouRenCaiFaCaiMengGongHai() {
     page: '@integer(3,1000)',
     province: '@province',
     receiveType: '@string(5,50)',
-    size: 20,
+    size: '20',
     skCertificateCntMax: '@string(5,50)',
     skCertificateCntMin: '@string(5,50)',
     source: '@string(5,50)',
@@ -3458,7 +3512,7 @@ export function FenYeLvYouRenCaiFaCaiMengTuiJian() {
     page: '@integer(3,1000)',
     catnelRisk: '@boolean',
     province: '@province',
-    size: 20,
+    size: '20',
     skCertificateCntMax: '@string(5,50)',
     skCertificateCntMin: '@string(5,50)',
     type: '@integer(3,1000)',
@@ -3511,7 +3565,7 @@ export function FenYeLvYouZhiXieChangFaCaiMengJianDanShuJu() {
   return {
     name: '@ctitle(5,10)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function FenYeLvYouZhiXieChangFaCaiMengGongHai() {
@@ -3559,7 +3613,7 @@ export function FenYeLvYouZhiXieChangFaCaiMengGongHai() {
     orangeeredCapitalMin: '@string(5,50)',
     scoreMax: '@integer(3,1000)',
     scoreMin: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     skAchievementCntMax: '@string(5,50)',
     skAchievementCntMin: '@string(5,50)',
     skQualificationCntMax: '@string(5,50)',
@@ -3605,7 +3659,7 @@ export function FenYeLvYouZhiXieChangFaCaiMengTuiJian() {
     orangeeredCapitalMin: '@string(5,50)',
     scoreMax: '@integer(3,1000)',
     scoreMin: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     skAchievementCntMax: '@string(5,50)',
     skAchievementCntMin: '@string(5,50)',
     skQualificationCntMax: '@string(5,50)',
@@ -3668,7 +3722,7 @@ export function FenYeLvYouXiangMuFaCaiMengJianDanShuJu() {
     page: '@integer(3,1000)',
     province: '@province',
     receiveType: '@string(5,50)',
-    size: 20,
+    size: '20',
     source: '@string(5,50)',
     type: '@integer(3,1000)',
   }
@@ -3700,7 +3754,7 @@ export function FenYeLvYouXiangMuFaCaiMengTuiJian() {
     publishStartTime: '@datetime',
     signUpBeginTime: '@datetime',
     signUpEndTime: '@datetime',
-    size: 20,
+    size: '20',
     type: '@integer(3,1000)',
     valid: '@guid',
   }
@@ -3730,7 +3784,7 @@ export function YuMiHuaHuaTiQingQiu() {
   return {
     mobile: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     keyBorardName: '@ctitle(5,10)',
   }
 }
@@ -3740,7 +3794,7 @@ export function FaCaiMengGenJinJiLuQingQiu() {
     happyType: '@string(5,50)',
     'flowType|1-20': ['@string(5,50)'],
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function DiZhi() {
@@ -3775,7 +3829,7 @@ export function JiQiRenGenJinJiLuQingQiu() {
     customerId: '@guid',
     customerType: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function DaoRuHuaHuaTiXiangYing() {
@@ -3787,7 +3841,7 @@ export function DaoRuHuaHuaTiXiangYing() {
     importTime: '@datetime',
     operator: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     status: '@integer(3,1000)',
     successNum: '@integer(3,1000)',
   }
@@ -3796,7 +3850,7 @@ export function DaoRuHuaHuaTiQingQiu() {
   return {
     endTime: '@datetime',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     startTime: '@datetime',
     taskType: '@integer(3,1000)',
   }
@@ -3840,7 +3894,7 @@ export function SouSuoRenCaiJiQiRenrequest() {
   return {
     page: '@integer(3,1000)',
     catName: '@ctitle(5,10)',
-    size: 20,
+    size: '20',
   }
 }
 export function SouSuoRenCaiJiQiRenresponse() {
@@ -3853,7 +3907,7 @@ export function SouSuoZhiXieChangJiQiRenrequest() {
   return {
     doorName: '@ctitle(5,10)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function SouSuoZhiXieChangJiQiRenresponse() {
@@ -3868,7 +3922,7 @@ export function CaoZuoRiZhiFenYerequest() {
     bizType: '@string(5,50)',
     operatorId: '@guid',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function CaoZuoRiZhiFenYeresponse() {
@@ -3962,7 +4016,7 @@ export function HongLingJinJiLuFenYerequest() {
     customerId: '@guid',
     customerType: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function HongLingJinJiLuFenYeresponse() {
@@ -4008,7 +4062,9 @@ export function TongJiShuJuPieDataResp() {
     newData: '@integer(3,1000)',
     catData: '@integer(3,1000)',
     gladData: '@integer(3,1000)',
-    total: '@integer(5, 100)',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function LianXiRenHuaHuaTi() {
@@ -4028,7 +4084,7 @@ export function LianXiRenHuaHuaTiQingQiu() {
     page: '@integer(3,1000)',
     relId: '@guid',
     relType: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     type: '@integer(3,1000)',
   }
 }
@@ -4121,7 +4177,7 @@ export function XiangMuFaCaiMengGongHaiLvYou() {
     receiveType: '@string(5,50)',
     signUpBeginTime: '@datetime',
     signUpEndTime: '@datetime',
-    size: 20,
+    size: '20',
     source: '@string(5,50)',
     taskId: '@guid',
     type: '@integer(3,1000)',
@@ -4132,7 +4188,7 @@ export function XiangMuFaCaiMengFenYeLvYourpcrequest() {
   return {
     page: '@integer(3,1000)',
     gladName: '@ctitle(5,10)',
-    size: 20,
+    size: '20',
   }
 }
 export function XiangMuFaCaiMengXiangQingrpcresponse() {

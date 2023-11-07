@@ -634,7 +634,7 @@ export function AtListAndAckSequenceResp() {
 export function BasePageReq() {
   return {
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function ComLoginReq() {
@@ -654,106 +654,132 @@ export function ComLoginReq() {
 }
 export function ComPageCommonSearchResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [CommonSearchResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageContactResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [ContactResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageFriendshipResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [FriendshipResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageSearchBeforeAddFriendResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [SearchBeforeAddFriendResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageKeyBorardBlackResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [KeyBorardBlackResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageWaiBuZhiXieChangChuCan() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [WaiBuZhiXieChangChuCan()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageWaiBuShuiDaoXiangYing() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [WaiBuShuiDaoXiangYing()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageXiaoXiNaBuXiangYingShiTi() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [XiaoXiNaBuXiangYingShiTi()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageXiaoXiDuiXiang() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [XiaoXiDuiXiang()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageNiaoWoDuiXiangBirdResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [NiaoWoDuiXiangBirdResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageNiaoWoChengYuanXinXiDuiXiangBirdMemberResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [NiaoWoChengYuanXinXiDuiXiangBirdMemberResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageDaDuNanTongQianCaoYongDaoWhiteKeyBorardResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [DaDuNanTongQianCaoYongDaoWhiteKeyBorardResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageYanChangChunHuaXiaoXiFenYeRequestPageListResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [YanChangChunHuaXiaoXiFenYeRequestPageListResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function CommonSearchReq() {
@@ -762,7 +788,7 @@ export function CommonSearchReq() {
     isForward: '@boolean',
     keywords: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     type: '@string(5,50)',
   }
 }
@@ -786,7 +812,9 @@ export function CommonSearchResp() {
     name: '@ctitle(5,10)',
     ownerId: '@guid',
     post: '@string(5,50)',
-    total: '@integer(5, 100)',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ContactReq() {
@@ -797,7 +825,7 @@ export function ContactReq() {
     imKeyBorardId: '@guid',
     keywords: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function ContactResp() {
@@ -825,7 +853,9 @@ export function ContactResp() {
     remark: '@string(5,50)',
     status: '@string(5,50)',
     gratefulName: '@ctitle(5,10)',
-    total: '@integer(5, 100)',
+    total: () => {
+      return +this.size * 10 || 100
+    },
     keyBorardStatus: '@string(5,50)',
   }
 }
@@ -875,7 +905,7 @@ export function ForwardListReq() {
     imKeyBorardId: '@guid',
     keyword: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     type: '@string(5,50)',
   }
 }
@@ -888,7 +918,9 @@ export function ForwardListResp() {
     isFriendship: '@boolean',
     name: '@ctitle(5,10)',
     gratefulName: '@ctitle(5,10)',
-    total: '@integer(5, 100)',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function FriendshipDetailReq() {
@@ -1027,7 +1059,7 @@ export function InnerBirdMemberBirdListReq() {
     keyword: '@string(5,50)',
     name: '@ctitle(5,10)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function InviteToBirdReq() {
@@ -1090,7 +1122,7 @@ export function MsgSearchReq() {
     birdId: '@guid',
     keywords: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     type: '@string(5,50)',
     keyBorardId: '@guid',
   }
@@ -1136,7 +1168,7 @@ export function RemoteAutoBirdReq() {
     cityId: '@guid',
     endTime: '@datetime',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     startTime: '@datetime',
   }
 }
@@ -1164,7 +1196,7 @@ export function SearchBeforeAddFriendReq() {
     isShowGratefulName: '@boolean',
     keyword: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function SearchBeforeAddFriendResp() {
@@ -1209,7 +1241,9 @@ export function SearchResp() {
     name: '@ctitle(5,10)',
     ownerId: '@guid',
     post: '@string(5,50)',
-    total: '@integer(5, 100)',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function SetRcvMsgReq() {
@@ -1256,10 +1290,12 @@ export function GratefulInfoRespLvKeXinXi() {
 }
 export function UnReadComPageXiaoDaoXiaoXiYongDaoXiangYing() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [XiaoDaoXiaoXiYongDaoXiangYing()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
     unreadSum: '@integer(3,1000)',
   }
 }
@@ -1385,7 +1421,7 @@ export function MaiShaoBingXiaoXiTuiSongimXiaoXi() {
     bizSource: '@string(5,50)',
     bpSenderId: '@guid',
     content: '@string(5,50)',
-    contentType: /TEXT|LINK|IMG|VIDEO|AUDIO|VOICE|FILE|STRUCTUAL|PHONE|/,
+    contentType: '@string(5,50)',
     footer: FooterWrapper(),
     'imBirdIdList|1-20': ['@string(5,50)'],
     'receiverBpKeyBorardIdList|1-20': ['@string(5,50)'],
@@ -1426,7 +1462,9 @@ export function XiaoDaoXiaoXi() {
     post: '@string(5,50)',
     privateImBirdId: '@guid',
     receiver: '@string(5,50)',
-    total: '@integer(5, 100)',
+    total: () => {
+      return +this.size * 10 || 100
+    },
     keyBorardName: '@ctitle(5,10)',
   }
 }
@@ -1473,7 +1511,9 @@ export function XiaoDaoXiaoXiYongDaoXiangYing() {
     msgSequence: '@string(5,50)',
     msgTime: '@datetime',
     privateBirdId: '@guid',
-    total: '@integer(5, 100)',
+    total: () => {
+      return +this.size * 10 || 100
+    },
     unreadCount: '@integer(3,1000)',
     unreadSum: '@integer(3,1000)',
     keyBorardid: '@guid',
@@ -1526,7 +1566,7 @@ export function NaBuXiaoXiSouSuoQingQiu() {
     birdId: '@guid',
     keywords: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     type: '@string(5,50)',
   }
 }
@@ -1565,7 +1605,7 @@ export function LiShiXiaoXiMessageHistoryReq() {
     orderType: '@integer(3,1000)',
     page: '@integer(3,1000)',
     sequence: '@string(5,50)',
-    size: 20,
+    size: '20',
   }
 }
 export function WaiBuZhiXieChangChuCan() {
@@ -1603,7 +1643,7 @@ export function WaiBuZhiXieChangSouSuoRuCan() {
     doorName: '@ctitle(5,10)',
     flag: '@boolean',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function WaiBuShuiDaoXiangYing() {
@@ -1627,7 +1667,7 @@ export function WaiBuShuiDaoXiangYing() {
 export function WaiBuShuiDaoSouSuoRuCan() {
   return {
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     gratefulId: '@guid',
     keyBorardName: '@ctitle(5,10)',
   }
@@ -1647,7 +1687,7 @@ export function HaoYouYongDaoChuXingFriendshipQueryReq() {
     isForward: '@boolean',
     keyword: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function WenJianPiLiangBaoCunXiangYingShiTi() {
@@ -1670,7 +1710,7 @@ export function XiaoXiNaBuXiangYingShiTi() {
     'cardMessageList|1-20': [ZhuanFaXiaoXiDuiXiang()],
     channelFile: FileResp(),
     content: '@string(5,50)',
-    contentType: /TEXT|LINK|IMG|VIDEO|AUDIO|VOICE|FILE|STRUCTUAL|PHONE|/,
+    contentType: '@string(5,50)',
     created: '@datetime',
     fileId: '@guid',
     fileName: '@ctitle(5,10)',
@@ -1709,7 +1749,7 @@ export function XiaoXiDuiXiang() {
     'cardMessageList|1-20': [ZhuanFaXiaoXiDuiXiang()],
     channelFile: FileResp(),
     content: '@string(5,50)',
-    contentType: /TEXT|LINK|IMG|VIDEO|AUDIO|VOICE|FILE|STRUCTUAL|PHONE|/,
+    contentType: '@string(5,50)',
     created: '@datetime',
     fileId: '@guid',
     fileName: '@ctitle(5,10)',
@@ -1894,7 +1934,7 @@ export function NiaoWoFenYeBirdPageListReq() {
     keyword: '@string(5,50)',
     name: '@ctitle(5,10)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function NiaoWoDuiXiangBirdDetailResp() {
@@ -1932,7 +1972,9 @@ export function NiaoWoDuiXiangBirdDetailResp() {
     ownerId: '@guid',
     status: '@string(5,50)',
     gratefulId: '@guid',
-    total: '@integer(5, 100)',
+    total: () => {
+      return +this.size * 10 || 100
+    },
     unreadCount: '@integer(3,1000)',
   }
 }
@@ -1948,7 +1990,9 @@ export function NiaoWoDuiXiangBirdResp() {
     imBirdId: '@guid',
     name: '@ctitle(5,10)',
     ownerId: '@guid',
-    total: '@integer(5, 100)',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function NiaoWoChengYuanXinXiDuiXiangBirdMemberResp() {
@@ -1977,7 +2021,7 @@ export function NiaoWoChengYuanFenYeBirdMemberPageReq() {
     memberType: '@string(5,50)',
     needFriendRelation: '@boolean',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     sortE: '@string(5,50)',
   }
 }
@@ -2077,7 +2121,7 @@ export function QingQiuXiaoXiYongDaoRequestPageListReq() {
     imKeyBorardId: '@guid',
     keyword: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     type: '@integer(3,1000)',
   }
 }
@@ -2093,7 +2137,7 @@ export function ZhuanFaXiaoXiDuiXiang() {
     applyType: /FORWARD|REPLY|/,
     channelFile: FileResp(),
     content: '@string(5,50)',
-    contentType: /TEXT|LINK|IMG|VIDEO|AUDIO|VOICE|FILE|STRUCTUAL|PHONE|/,
+    contentType: '@string(5,50)',
     created: '@datetime',
     fileId: '@guid',
     fileName: '@ctitle(5,10)',
@@ -2144,7 +2188,7 @@ export function DaDuNanTongQianCaoFenYeKeyBorardPageReq() {
     isForward: '@boolean',
     keyword: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     gratefulId: '@guid',
   }
 }
@@ -2214,7 +2258,9 @@ export function YanChangChunHuaXiaoXiXiangQingRequestDetailResp() {
     remark: '@string(5,50)',
     requestId: '@guid',
     status: '@integer(3,1000)',
-    total: '@integer(5, 100)',
+    total: () => {
+      return +this.size * 10 || 100
+    },
     type: '@integer(3,1000)',
   }
 }

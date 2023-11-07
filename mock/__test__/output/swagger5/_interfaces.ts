@@ -797,170 +797,212 @@ export function ApiResponseQingMingCaoZhiXiaoChouYu() {
 }
 export function ComPageEntCredPlanResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [EntCredPlanResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageTastyCredExamResultResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [TastyCredExamResultResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPagestring() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': ['@string(5,50)'],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageYeJiRenLingRiZhi() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [YeJiRenLingRiZhi()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageJuanXinCaiGongZuoYeJi() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [JuanXinCaiGongZuoYeJi()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageJuanXinCaiChiGuanTouShuiGuoDao() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [JuanXinCaiChiGuanTouShuiGuoDao()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageChaXianBanBuLiangGuShiLieBiaoXiangYing() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [ChaXianBanBuLiangGuShiLieBiaoXiangYing()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageChaXianBanFenZhiJiGou() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [ChaXianBanFenZhiJiGou()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageChaXianBanShiXinLianHeChengJieGuShi() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [ChaXianBanShiXinLianHeChengJieGuShi()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageChaXianBanGongChengShuiBeiXiangYing() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [ChaXianBanGongChengShuiBeiXiangYing()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageChaXianBanChiGuanTouJuanXinCaiXiangYing() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [ChaXianBanChiGuanTouJuanXinCaiXiangYing()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageChaXianBanErJiJuanXinCai() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [ChaXianBanErJiJuanXinCai()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageChaXianBanLiangHaoGuShiLieBiaoXiangYing() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [ChaXianBanLiangHaoGuShiLieBiaoXiangYing()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageChaXianBanQingMingCaoZhiXiangYing() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [ChaXianBanQingMingCaoZhiXiangYing()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageChaXianBanHeiMingDanXiangYing() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [ChaXianBanHeiMingDanXiangYing()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [ShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageErJiJuanXinCaiShuiGuoDao() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [ErJiJuanXinCaiShuiGuoDao()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageJiJiXieXiaGongSiXiangYing() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [JiJiXieXiaGongSiXiangYing()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageJiXuDaShuiNiuWeiShengSu() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [JiXuDaShuiNiuWeiShengSu()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageGuanTouShuRenLingRiZhi() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [GuanTouShuRenLingRiZhi0()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageQingMingCaoZhiXiaoChouYu() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [QingMingCaoZhiXiaoChouYu()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function CredentialFilter() {
@@ -1153,7 +1195,7 @@ export function FridayCredentialNameReq() {
     industryType: '@string(5,50)',
     name: '@ctitle(5,10)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function FridayMainUpdateReq() {
@@ -1415,7 +1457,7 @@ export function PageTastyCredExamResultReq() {
     tastyId: '@guid',
     provinceName: '@province',
     queryType: '@string(5,50)',
-    size: 20,
+    size: '20',
     title: '@ctitle(5,10)',
   }
 }
@@ -1424,7 +1466,7 @@ export function PageTastyCredExamTimeReq() {
     page: '@integer(3,1000)',
     tastyId: '@guid',
     region: '@string(5,50)',
-    size: 20,
+    size: '20',
     title: '@ctitle(5,10)',
   }
 }
@@ -2098,7 +2140,7 @@ export function ChaXianBanHuiZongFenYeQingQiu() {
     'fridayCredentials|1-20': ['@string(5,50)'],
     fridayName: '@ctitle(5,10)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function ChaXianBanErJiJuanXinCai() {
@@ -2325,7 +2367,7 @@ export function ChiGuanTouJuanXinCaiHuiZongShaiXuanTiaoJian() {
     page: '@integer(3,1000)',
     tastyName: '@ctitle(5,10)',
     registerHuman: '@string(5,50)',
-    size: 20,
+    size: '20',
   }
 }
 export function DaShuiNiuJingLiShuiGuoDao() {

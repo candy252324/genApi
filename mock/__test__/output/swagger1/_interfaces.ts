@@ -1100,7 +1100,7 @@ export function AuthOrgKeyBorardReq() {
 export function BasePageReq() {
   return {
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function ChannelAppGratefulConfigAddReq() {
@@ -1193,138 +1193,172 @@ export function ComLoginResp() {
 }
 export function ComPage() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [''],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageDesktopAddRecordResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [DesktopAddRecordResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageDesktopComplexResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [DesktopComplexResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageDesktopResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [DesktopResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageDoorCredentialResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [DoorCredentialResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageDoorIdentificationResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [DoorIdentificationResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageEpDesktopResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [EpDesktopResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageInviteDesktopResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [InviteDesktopResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageLogLoginResp() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [LogLoginResp()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageRelationDoorInfo() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [RelationDoorInfo()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageZhiXieChangChuXing() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [ZhiXieChangChuXing()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageGuanLianShenHeXinXi() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [GuanLianShenHeXinXi()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageXiaoYuanZhuoGuanLi() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [XiaoYuanZhuoGuanLi0()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageBiXieDao() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [BiXieDao1()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageBiXieDaoYongDao() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [BiXieDaoYongDao()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageTianJiaDouJiangJiBeiJing() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [TianJiaDouJiangJiBeiJing()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function ComPageFangDongShouHuoDiZhiTianJia() {
   return {
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     'records|1-20': [FangDongShouHuoDiZhiTianJia0()],
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function CompanyInfo() {
@@ -1683,7 +1717,7 @@ export function DesktopSimpleListReq() {
     id: '@guid',
     mobile: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     status: '@string(5,50)',
     keyBorardName: '@ctitle(5,10)',
   }
@@ -1741,7 +1775,7 @@ export function DoorAuditReq() {
     endTime: '@datetime',
     franchiseDoorName: '@ctitle(5,10)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     startTime: '@datetime',
   }
 }
@@ -1828,7 +1862,7 @@ export function DoorIdentificationReq() {
     name: '@ctitle(5,10)',
     page: '@integer(3,1000)',
     serialNum: '@string(5,50)',
-    size: 20,
+    size: '20',
     walletStatus: '@string(5,50)',
   }
 }
@@ -2255,7 +2289,7 @@ export function PageDesktopAddRecordReq() {
     desktopNameOrPhone: '@integer(13100000000,18999999999)',
     desktopStatus: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function PageDoorCredentialReq() {
@@ -2267,7 +2301,7 @@ export function PageDoorCredentialReq() {
     office: '@string(5,50)',
     page: '@integer(3,1000)',
     scope: '@string(5,50)',
-    size: 20,
+    size: '20',
     validDate: '@datetime',
   }
 }
@@ -2275,36 +2309,40 @@ export function PageInvoiceReq() {
   return {
     dutyNum: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
     title: '@ctitle(5,10)',
   }
 }
 export function PageSysDictDuiXiangnullZhiBuXuLieHua() {
   return {
     countId: '@guid',
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     maxLimit: '@string(5,50)',
     optimizeCountSql: '@boolean',
     'orders|1-20': [OrderItem()],
     pages: '@string(5,50)',
     'records|1-20': [SysDictDuiXiangnullZhiBuXuLieHua()],
     searchCount: '@boolean',
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function PageZhiXieChangBoJuZiXinXi() {
   return {
     countId: '@guid',
-    current: '@integer(1, 5)',
+    current: '@string(5,50)',
     maxLimit: '@string(5,50)',
     optimizeCountSql: '@boolean',
     'orders|1-20': [OrderItem()],
     pages: '@string(5,50)',
     'records|1-20': [ZhiXieChangBoJuZiXinXi0()],
     searchCount: '@boolean',
-    size: 20,
-    total: '@integer(5, 100)',
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
 export function CatVerifyReq() {
@@ -2404,7 +2442,7 @@ export function QueryInviteDesktopReq() {
     proposerPhone: '@integer(13100000000,18999999999)',
     proposerPhoneOrName: '@integer(13100000000,18999999999)',
     shareType: '@string(5,50)',
-    size: 20,
+    size: '20',
     status: '@string(5,50)',
   }
 }
@@ -3227,14 +3265,14 @@ export function FenYeChuXingDouJiangJiBeiJing() {
     credentialNo: '@string(5,50)',
     credentialType: '@string(5,50)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function FenYeChuXingSuoYouZhiXieChang() {
   return {
     name: '@ctitle(5,10)',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function QieHuanMoRenDiZhi() {
@@ -3311,7 +3349,7 @@ export function BiXieDaoZhongXinChuXingGuoLvTiaoJian() {
     desktopName: '@ctitle(5,10)',
     doorId: '@guid',
     page: '@integer(3,1000)',
-    size: 20,
+    size: '20',
   }
 }
 export function BiXieDaoRuCan() {

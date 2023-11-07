@@ -376,18 +376,12 @@ function getCustomeMockStr(name) {
   })
   if (findRule) {
     const res = fieldRule[findRule] || ''
-    // 'abc': ()=>{},
-    if (typeof res === 'function') {
-      return res(name)
+    // 如果是字符串,加个引号,
+    if (typeof res === 'string') {
+      return `\'${res}\'`
     }
-    // 'abc': 'FORWARD|REPLY|',
-    else if (typeof res === 'string' && res.indexOf('|') > -1) {
-      return getRandomOneFromArr(res)
-    }
-    // 'abc': 'xxx'
-    else {
-      return res
-    }
+    // 其它情况（数字，正则，函数），直接返回
+    return res
   }
 }
 
