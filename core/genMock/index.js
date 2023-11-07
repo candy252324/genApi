@@ -48,6 +48,8 @@ function genMock(config) {
         if (allData.length === apiList.length) {
           // 所有站点的 swagger 都解析完成，开始写入 index.js
           writeIndexToFile(allData)
+          // 写入缓存
+          fs.writeFileSync(path.resolve(__dirname, './data.cache.json'), JSON.stringify(allData))
         }
       })
   })
@@ -103,6 +105,7 @@ function parseData(jsonData, configOptions) {
   console.log(`mock 数据生成中...`)
   writeMockToFile(apiList, { interfaces, absOutputDir })
   writeInterfaceToFile(interfaces, absOutputDir)
+  writeInterfaceToFile(interfaces, absOutputDir, true) // cmd格式， 用于 mock server
   return apiList
 }
 
@@ -222,10 +225,14 @@ function writeMockToFile(apiList, { interfaces, absOutputDir }) {
 }
 
 /** interface 写入 */
-function writeInterfaceToFile(definitions, absOutputDir) {
-  let str = 'import Mock from "better-mock"\n'
+function writeInterfaceToFile(definitions, absOutputDir, cmd = false) {
+  let str = cmd ? '' : 'import Mock from "better-mock"\n'
   definitions.forEach((item, index) => {
-    str += `export function ${item.name}() {`
+    if (cmd) {
+      str += `function ${item.name}() {`
+    } else {
+      str += `export function ${item.name}() {`
+    }
     if (item?.properties && item.properties?.length) {
       let mockRes = ''
       item.properties.forEach((it) => {
@@ -235,7 +242,17 @@ function writeInterfaceToFile(definitions, absOutputDir) {
     }
     str += '\n}\n'
   })
-  const targetFile = path.join(absOutputDir, `_interfaces.js`)
+
+  if (cmd) {
+    const exportStr = definitions.reduce((pre, cur, index) => {
+      const last = index === definitions.length - 1 ? '}' : ''
+      pre = `${pre}${cur.name},\n${last}`
+      return pre
+    }, 'module.exports = {')
+
+    str += exportStr
+  }
+  const targetFile = path.join(absOutputDir, cmd ? `_interfaces.cmd.js` : `_interfaces.js`)
   fs.access(absOutputDir, (err) => {
     if (err) {
       // 若目标目录不存在，则创建
@@ -394,4 +411,5 @@ function getRandomOneFromArr(str) {
 }
 module.exports = {
   genMock,
+  mockPath,
 }

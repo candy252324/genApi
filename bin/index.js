@@ -34,6 +34,14 @@ program.command('now').action(() => {
   }
 })
 
+program.command('mock-server').action(() => {
+  if (!fs.existsSync(configFilePath)) {
+    console.log('缺少配置文件，执行 genapi init 生成')
+    return
+  }
+  require('../core/genMock/createMockServer')
+})
+
 program.helpInformation = () => {
   return `
   命令                        作用
