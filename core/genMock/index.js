@@ -235,7 +235,7 @@ function writeInterfaceToFile(definitions, absOutputDir) {
     }
     str += '\n}\n'
   })
-  const targetFile = path.join(absOutputDir, `_interfaces.ts`)
+  const targetFile = path.join(absOutputDir, `_interfaces.js`)
   fs.access(absOutputDir, (err) => {
     if (err) {
       // 若目标目录不存在，则创建
