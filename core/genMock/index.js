@@ -12,13 +12,13 @@ const CWD = process.cwd()
 const mockPath = path.join(__dirname, '../../', 'mock')
 let apiConfig = {}
 /** 用于自定义的 mock 生成规则
- *  fieldRule: {
+ *  fieldRules: {
       'root.code': 200, // jsonPath
       '/url/': 'Mock.mock("@url")', // 正则
       userName: '@cname', // 完全匹配
     },
  */
-let fieldRule = {}
+let fieldRules = {}
 
 /**
  * // 解析过的所有的api站点的数据
@@ -33,7 +33,7 @@ let allData = []
 function genMock(config) {
   apiConfig = config
   allData = []
-  fieldRule = config?.mock?.fieldRule || {}
+  fieldRules = config?.mock?.fieldRules || {}
   cleanDir(mockPath)
   const apiList = apiConfig.apiList.filter((item) => item.tag)
   apiList.forEach((item, index) => {
@@ -369,11 +369,11 @@ function getFieldMockStr({ name, type }) {
 /** 用户自定义的 mock 规则 */
 function getCustomeMockStr(name) {
   // 不存在用户自定义的 mock 规则
-  if (!fieldRule || !Object.keys(fieldRule).length) {
+  if (!fieldRules || !Object.keys(fieldRules).length) {
     return false
   }
 
-  const findRule = Object.keys(fieldRule).find((rule) => {
+  const findRule = Object.keys(fieldRules).find((rule) => {
     let matched = false
     // 正则 '/url/': 'Mock.mock("@url")'
     if (rule.startsWith('/') && rule.endsWith('/')) {
@@ -392,7 +392,7 @@ function getCustomeMockStr(name) {
     return matched
   })
   if (findRule) {
-    const res = fieldRule[findRule] || ''
+    const res = fieldRules[findRule] || ''
     // 如果是字符串,加个引号,
     if (typeof res === 'string') {
       return `\'${res}\'`
