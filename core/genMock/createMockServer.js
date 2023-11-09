@@ -9,11 +9,15 @@ function createServer() {
   const server = http.createServer()
 
   server.on('request', async (req, res) => {
+    const _url = req.url.split('?')[0]
+    const _method = req.method
+
     const allApiData = await getApiData()
     res.writeHead(200, {
       'Content-Type': 'application/json',
-      'Access-Control-Allow-Headers': '*', // 设置 post 请求允许跨域
-      'Access-Control-Allow-Origin': '*', // 设置 get 请求允许跨域
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': '*',
+      'Access-Control-Allow-Methods': '*',
     })
 
     // {
@@ -28,7 +32,12 @@ function createServer() {
     ;(allApiData || []).forEach((item) => {
       ;(item.apiList || []).forEach((it) => {
         ;(it.apis || []).forEach((theOne) => {
-          if (theOne.url === req.url) {
+          if (
+            isSameApi(
+              { url: theOne.url.split('?')[0], method: theOne.method },
+              { url: req.url.split('?')[0], method: req.method }
+            )
+          ) {
             obj.url = theOne.url
             obj.method = theOne.method
             obj.outputInterface = theOne.outputInterface
@@ -38,18 +47,22 @@ function createServer() {
         })
       })
     })
-    try {
-      const { outputDir, outputInterface } = obj
-      const cmdInterfacePath = path.join(mockPath, outputDir, './_interfaces.cmd.js') // 'D:\____own____\genApi\mock' +  '/src/api'
-      delete require.cache[require.resolve(cmdInterfacePath)] // 删除require缓存, 保证拿到最新的mock数据
-
-      const interface = require(cmdInterfacePath)
-      const interfaceFn = interface[outputInterface] // interface.GreenBookGratefulInfoResp
-      const mockObj = Mock.mock(interfaceFn()) // Mock.mock(interface.GreenBookGratefulInfoResp())
-      res.end(JSON.stringify(mockObj))
-    } catch (error) {
-      console.log(error)
-      res.end(JSON.stringify(error))
+    if (Object.keys(obj).length) {
+      try {
+        const { outputDir, outputInterface } = obj
+        const cmdInterfacePath = path.join(mockPath, outputDir, './_interfaces.cmd.js') // 'D:\____own____\genApi\mock' +  '/src/api'
+        delete require.cache[require.resolve(cmdInterfacePath)] // 删除require缓存, 保证拿到最新的mock数据
+        const interface = require(cmdInterfacePath)
+        const interfaceFn = interface[outputInterface] // interface.GreenBookGratefulInfoResp
+        const mockObj = Mock.mock(interfaceFn()) // Mock.mock(interface.GreenBookGratefulInfoResp())
+        res.end(JSON.stringify(mockObj))
+      } catch (error) {
+        console.log(`${_url} 接口出错`, error)
+        res.end('接口解析出错')
+      }
+    } else {
+      console.log('没有找到对应的api', _url)
+      res.end('没有找到对应的api')
     }
   })
 
@@ -69,4 +82,28 @@ function getApiData() {
       resolve(JSON.parse(data))
     })
   })
+}
+
+/** 判断是否是同一个api */
+function isSameApi(theOne, req) {
+  const { url, method } = theOne
+  const { url: _url, method: _method } = req
+  const methodIsSame = method && _method && method.toLowerCase() === _method.toLowerCase()
+
+  if (!methodIsSame) {
+    return false
+  }
+  if (url === _url) {
+    return true
+  }
+
+  // url示例:  /wygtech-hr/api/v1/person/bank-record/${id}
+  // _url示例: /wygtech-hr/api/v1/person/bank-record/123456
+  if (url.indexOf('${') !== -1) {
+    // 将 '/wygtech-hr/api/v1/person/bank-record/${id}'  处理成 '/wygtech-hr/api/v1/person/bank-record/(.*)?'
+    const regStr = url.replace(/\$\{(.*)?\}/g, '(.*)?')
+    const reg = new RegExp(regStr) //   /\/wygtech-hr\/api\/v1\/person\/bank-record\/(.*)?/
+    return reg.test(url)
+  }
+  return false
 }
