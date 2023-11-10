@@ -61,8 +61,12 @@ function createServer() {
         res.end('接口解析出错')
       }
     } else {
-      console.log('没有找到对应的api', _url)
-      res.end('没有找到对应的api')
+      if (_method.toLowerCase() === 'options') {
+        res.end()
+      } else {
+        console.log('没有找到对应的api', _url)
+        res.end('没有找到对应的api')
+      }
     }
   })
 
