@@ -113,6 +113,7 @@ function hasChinese(str) {
 function handleJsType(origintype) {
   const typeEnmu = {
     integer: 'number',
+    float: 'number',
     string: 'string',
     long: 'string',
     boolean: 'boolean',
