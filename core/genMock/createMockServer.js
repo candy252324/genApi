@@ -109,7 +109,6 @@ function isSameApi(theOne, req) {
     // 将 '/wygtech-hr/api/v1/person/bank-record/${id}'  处理成 '/wygtech-hr/api/v1/person/bank-record/(.*)?'
     const regStr = url.replace(/\$\{(.*)?\}/g, '(.*)?')
     const reg = new RegExp(regStr) //   /\/wygtech-hr\/api\/v1\/person\/bank-record\/(.*)?/
-    console.log(111111)
     return reg.test(_url)
   }
   return false
