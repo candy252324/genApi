@@ -4,6 +4,7 @@
   "description": "",
   "main": "genapi",
   "scripts": {
+    "build": "node ./scripts/build.js",
     "test": "node ./__test__/index.js",
     "replace": "node ./scripts/replaceStr.js"
   },
@@ -35,5 +36,8 @@
     "commander": "^11.0.0",
     "js-pinyin": "^0.2.4",
     "prettier": "^2.8.8"
+  },
+  "devDependencies": {
+    "rollup": "^4.4.0"
   }
 }
