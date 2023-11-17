@@ -29,9 +29,9 @@ function createServer() {
     // }
     let obj = {}
     // 找到 url 相同的api
-    ;(allApiData || []).forEach((item) => {
-      ;(item.apiList || []).forEach((it) => {
-        ;(it.apis || []).forEach((theOne) => {
+    ;(allApiData || []).find((item) => {
+      return (item.apiList || []).find((it) => {
+        return (it.apis || []).find((theOne) => {
           if (
             isSameApi(
               { url: theOne.url.split('?')[0], method: theOne.method },
@@ -43,10 +43,12 @@ function createServer() {
             obj.outputInterface = theOne.outputInterface
             obj.namespace = it.namespace
             obj.outputDir = item.outputDir
+            return true
           }
         })
       })
     })
+
     if (Object.keys(obj).length) {
       try {
         const { outputDir, outputInterface } = obj
@@ -107,7 +109,8 @@ function isSameApi(theOne, req) {
     // 将 '/wygtech-hr/api/v1/person/bank-record/${id}'  处理成 '/wygtech-hr/api/v1/person/bank-record/(.*)?'
     const regStr = url.replace(/\$\{(.*)?\}/g, '(.*)?')
     const reg = new RegExp(regStr) //   /\/wygtech-hr\/api\/v1\/person\/bank-record\/(.*)?/
-    return reg.test(url)
+    console.log(111111)
+    return reg.test(_url)
   }
   return false
 }
