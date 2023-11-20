@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 const commander = require('commander')
 const pkgJson = require('../package.json')
-const { init } = require('../core/init/index')
+const { init, parser, genApi, genMock } = require('../dist/index')
 const { CONFIG_FILE_NAME } = require('../core/constant')
 
 const CWD = process.cwd()
@@ -24,23 +24,22 @@ program.command('now').action(() => {
     console.log('缺少配置文件，执行 genapi init 生成')
     return
   }
-  // 生成api
-  const { genApi } = require('../core/genApi/index')
-  genApi(apiConfig)
+
+  const dataParsered = parser(apiConfig)
+  genApi(dataParsered)
   // 生成mock
   if (apiConfig.mock !== false) {
-    const { genMock } = require('../core/genMock/index')
     genMock(apiConfig)
   }
 })
 
-program.command('mock-server').action(() => {
-  if (!fs.existsSync(configFilePath)) {
-    console.log('缺少配置文件，执行 genapi init 生成')
-    return
-  }
-  require('../core/genMock/createMockServer')
-})
+// program.command('mock-server').action(() => {
+//   if (!fs.existsSync(configFilePath)) {
+//     console.log('缺少配置文件，执行 genapi init 生成')
+//     return
+//   }
+//   require('../core/genMock/createMockServer')
+// })
 
 program.helpInformation = () => {
   return `

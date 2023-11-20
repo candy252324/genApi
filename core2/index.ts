@@ -1,8 +1,10 @@
+import { init } from './init/index'
+import { parser } from './parser/index'
 import { genApi } from './genApi/index'
 import { genMock } from './genMock/index'
-import { parser } from './parser/index'
 
 export default {
+  init,
   genApi,
   genMock,
   parser,
