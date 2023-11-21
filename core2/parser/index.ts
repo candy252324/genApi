@@ -1,11 +1,11 @@
-import path from 'node:path'
-import fs from 'node:fs'
-import axios from 'axios'
 import { IApi, IApiConfig } from '../type'
+import { handleApiModel } from './handleApiModel'
+import { handleInterface } from './handleInterface'
+import { readSwagger } from './readSwagger'
+import { saveParseredDataToLocal } from './localData'
+import { IApiModel, IInterface } from './types'
 
-const CWD = process.cwd()
-
-export function parser(apiConfig: IApiConfig) {
+export async function parser(apiConfig: IApiConfig) {
   validateApiConfig(apiConfig)
   const apiList: IApi[] = apiConfig.apiList
     .filter((item) => item.tag)
@@ -17,12 +17,12 @@ export function parser(apiConfig: IApiConfig) {
       }
     })
 
-  parseParaller(apiList).then((res) => {
-    console.log('全部解析完成')
-  })
+  const res = await parseParaller(apiList)
+  saveParseredDataToLocal(res)
+  return res
 }
 
-function parseParaller(apiList: IApi[]) {
+function parseParaller(apiList: IApi[]): Promise<{ apiModel: IApiModel[]; interafce: IInterface[] }[]> {
   const fns = []
   apiList.forEach((item) => {
     fns.push(parseFn(item))
@@ -31,37 +31,21 @@ function parseParaller(apiList: IApi[]) {
 }
 
 async function parseFn(apiStation: IApi) {
-  const swaggerJson = await readSwagger(apiStation.swaggerUrl)
-  return swaggerJson
-}
-
-function readSwagger(swaggerUrl: string) {
-  return new Promise((resolve, reject) => {
-    if (swaggerUrl.includes('http')) {
-      // 从swagger url 读取数据
-      axios
-        .get(swaggerUrl)
-        .then((res) => {
-          if (res.status === 200) {
-            try {
-              resolve(res.data)
-            } catch (error) {
-              console.log(error)
-            }
-          }
-        })
-        .catch(() => {
-          console.log('\x1B[31m%s\x1B[0m', 'swagger地址访问异常👿')
-        })
-    } else {
-      // 从本地读取数据
-      const filePath = path.resolve(CWD, swaggerUrl)
-      fs.readFile(filePath, 'utf-8', (err: any, data) => {
-        if (err) throw new Error(err)
-        resolve(JSON.parse(data))
-      })
-    }
-  })
+  const swaggerJson = (await readSwagger(apiStation.swaggerUrl)) as any
+  let apis: IApiModel[] = []
+  let interafces: IInterface[] = []
+  if (swaggerJson) {
+    apis = handleApiModel(swaggerJson.paths, {
+      ignore: apiStation.ignore,
+      fileName: apiStation.fileName,
+    })
+    interafces = handleInterface(swaggerJson.definitions)
+  }
+  return {
+    ...apiStation,
+    apis,
+    interafces,
+  }
 }
 
 /** 校验 apiConfig  */
