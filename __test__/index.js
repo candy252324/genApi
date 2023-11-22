@@ -6,5 +6,7 @@
 // genMock(apiConfig) // 生成mock
 
 const apiConfig = require('./apiConfig')
-const { parser } = require('../dist/index')
-parser(apiConfig)
+const { parser, genApi } = require('../dist/index')
+parser(apiConfig).then((parseredData) => {
+  genApi(parseredData)
+})

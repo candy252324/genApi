@@ -1,5 +1,5 @@
 import pinyin from 'js-pinyin'
-import { IInterface } from './types'
+import { IInterface } from '../types'
 import { handleWeirdName, hasChinese, handleJsType } from '../utils'
 
 /** 入参格式

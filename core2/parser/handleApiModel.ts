@@ -1,4 +1,4 @@
-import { IApiModel, IParams } from './types'
+import { IApiModel, IParams } from '../types'
 import {
   getUrl,
   getApiName,

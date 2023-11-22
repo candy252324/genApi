@@ -53,10 +53,8 @@ export function getApiName(url, method) {
   // 如果处理后的接口名称正好是 js 关键字，则默认加上Fn, 如，delete 处理成 deleteFn
   return jsKeyWords.includes(name) ? `${name}Fn` : name
 }
-/**
- * 获取接口所属文件名称
- * 将 /api/user/create 转化为 user
- */
+
+/** 获取接口所属文件名称 */
 export function getFileName(url: string, userFileName: any) {
   let theFileName = ''
   //  用户传入的 fileName 是个方法
@@ -67,12 +65,19 @@ export function getFileName(url: string, userFileName: any) {
   else if (userFileName && typeof userFileName === 'string') {
     theFileName = userFileName
   }
-  // 使用默认的 fileName 生成规则
+  // 使用默认的 fileName 生成规则, 如 /api/user/create 处理成 user
   else {
     const arr = url.split('/')
-    return arr.find((item) => item && item !== 'api')
+    theFileName = arr.find((item) => item && item !== 'api')
   }
-  return theFileName
+
+  // 如果用户传入的 fileName 后缀是 ts 或 js , 则认为是有效的 fileName， 否则默认生成 .ts 文件
+  const ext = theFileName.split('.').pop()
+  if (ext === 'ts' || ext === 'js') {
+    return theFileName
+  } else {
+    return theFileName + '.ts'
+  }
 }
 /**
  * 获取接口方法
@@ -181,7 +186,18 @@ export function saveDataToLocal(thePath, data) {
   if (!fs.existsSync(theDirname)) {
     fs.mkdirSync(theDirname, { recursive: true })
   }
-  const _data = typeof data === 'string' ? data : JSON.stringify(data)
+  let _data = ''
+  if (typeof data === 'string') {
+    _data = data
+  } else {
+    // JSON.stringify 会丢失不可枚举类型（如函数），这里将函数处理成字符串
+    _data = JSON.stringify(data, (k, v) => {
+      if (typeof v === 'function') {
+        return `${v}`
+      }
+      return v
+    })
+  }
   fs.writeFileSync(path.join(thePath), _data)
 }
 

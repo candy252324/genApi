@@ -1,13 +1,12 @@
-import { IApi, IApiConfig } from '../type'
+import { IApiStation, IApiConfig, IApiModel, IInterface, IParsered } from '../types'
 import { handleApiModel } from './handleApiModel'
 import { handleInterface } from './handleInterface'
 import { readSwagger } from './readSwagger'
 import { saveParseredDataToLocal } from './localData'
-import { IApiModel, IInterface } from './types'
 
 export async function parser(apiConfig: IApiConfig) {
   validateApiConfig(apiConfig)
-  const apiList: IApi[] = apiConfig.apiList
+  const apiList: IApiStation[] = apiConfig.apiList
     .filter((item) => item.tag)
     .map((item) => {
       return {
@@ -22,7 +21,7 @@ export async function parser(apiConfig: IApiConfig) {
   return res
 }
 
-function parseParaller(apiList: IApi[]): Promise<{ apiModel: IApiModel[]; interafce: IInterface[] }[]> {
+function parseParaller(apiList: IApiStation[]): Promise<IParsered[]> {
   const fns = []
   apiList.forEach((item) => {
     fns.push(parseFn(item))
@@ -30,21 +29,21 @@ function parseParaller(apiList: IApi[]): Promise<{ apiModel: IApiModel[]; intera
   return Promise.all(fns)
 }
 
-async function parseFn(apiStation: IApi) {
+async function parseFn(apiStation: IApiStation) {
   const swaggerJson = (await readSwagger(apiStation.swaggerUrl)) as any
   let apis: IApiModel[] = []
-  let interafces: IInterface[] = []
+  let interfaces: IInterface[] = []
   if (swaggerJson) {
     apis = handleApiModel(swaggerJson.paths, {
       ignore: apiStation.ignore,
       fileName: apiStation.fileName,
     })
-    interafces = handleInterface(swaggerJson.definitions)
+    interfaces = handleInterface(swaggerJson.definitions)
   }
   return {
     ...apiStation,
     apis,
-    interafces,
+    interfaces,
   }
 }
 
