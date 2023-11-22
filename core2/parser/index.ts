@@ -11,6 +11,7 @@ export async function parser(apiConfig: IApiConfig) {
     .map((item) => {
       return {
         ...item,
+        httpTpl: item.httpTpl || apiConfig.httpTpl || '',
         apiBody: item.apiBody || apiConfig.apiBody,
         fileName: item.fileName || apiConfig.fileName,
       }

@@ -1,7 +1,7 @@
 export interface IApiStation {
   /** swagger 地址(可以是服务端地址也可以是 swagger json 本地文件路径) */
   swaggerUrl: string
-  /** 输出到哪个目录中 */
+  /** 输出到哪个目录中, cjh todo 校验 */
   outputDir: string
   /** 是否生成(默认为 true) */
   tag?: boolean
@@ -30,7 +30,7 @@ export interface IApiConfig {
   /** 接口列表 */
   apiList: IApiStation[]
   /** 文件头部引入内容 */
-  httpTpl: string
+  httpTpl?: string
   /** api 结构 */
   apiBody: Function
   /** 文件名称生成规则 */
