@@ -11,7 +11,7 @@ import {
 
 /** 生成 api 数据模型 */
 export function handleApiModel(paths, { ignore, fileName }) {
-  const apiList: IApiModel[] = []
+  const apis: IApiModel[] = []
   for (const key in paths) {
     const isIgnore = ignore && ignore.test(key) // 不需要生成的 api
     if (!isIgnore) {
@@ -41,7 +41,7 @@ export function handleApiModel(paths, { ignore, fileName }) {
         if (outputInterface === 'Void' || outputInterface === 'void') {
           outputInterface = ''
         }
-        apiList.push({
+        apis.push({
           name,
           url,
           method,
@@ -53,7 +53,7 @@ export function handleApiModel(paths, { ignore, fileName }) {
       })
     }
   }
-  return apiList
+  return apis
 }
 
 /** 处理入参 */

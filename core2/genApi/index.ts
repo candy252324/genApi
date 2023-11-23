@@ -20,23 +20,23 @@ function genParaller(data: IParsered[]) {
 /** 生成单个站点的api */
 function genStation(data: IParsered) {
   const outputDir = path.join(CWD, data.outputDir) // 文件输出目录
-  const fileGroup = [] // [{fileName:"", apis:[]}]
+  const apiGroup = [] // [{fileName:"", apis:[]}]
   // 按文件所属文件名称给 api 分组
   ;(data.apis || []).forEach((item) => {
     const { fileName } = item
-    const idx = fileGroup.findIndex((item) => item.fileName === fileName)
+    const idx = apiGroup.findIndex((item) => item.fileName === fileName)
     if (idx > -1) {
-      fileGroup[idx].apis.push(item)
+      apiGroup[idx].apis.push(item)
     } else {
-      fileGroup.push({ fileName, apis: [item] })
+      apiGroup.push({ fileName, apis: [item] })
     }
   })
 
   console.log(`总共 ${(data.apis || []).length} 个接口生成中...`)
-  writeApi(fileGroup, { outputDir, apiBody: data.apiBody, httpTpl: data.httpTpl })
+  writeApi(apiGroup, { outputDir, apiBody: data.apiBody, httpTpl: data.httpTpl })
 
   // 只有当后缀是 ts 时才生成 interface
-  const ext = fileGroup[0]?.fileName?.split('.').pop()
+  const ext = apiGroup[0]?.fileName?.split('.').pop()
   if (ext === 'ts') {
     writeInterface(data.interfaces, { outputDir })
   }

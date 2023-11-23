@@ -6,11 +6,11 @@ import { IApiModel, IParams } from '../types'
 
 /** api 写入 */
 export function writeApi(
-  apiList: { fileName: string; apis: IApiModel[] }[],
+  apiGroup: { fileName: string; apis: IApiModel[] }[],
   config: { outputDir: string; apiBody: Function; httpTpl: string }
 ) {
   const { outputDir, apiBody, httpTpl } = config
-  apiList.forEach((item) => {
+  apiGroup.forEach((item) => {
     let tplStr = `${httpTpl || ''}`
     let apiStr = ''
     const fileName = item.fileName

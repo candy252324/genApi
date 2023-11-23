@@ -164,6 +164,16 @@ export function isJsType(type) {
   return ['number', 'string', 'boolean', 'object', 'File'].includes(type)
 }
 
+/** 将路径转化成小驼峰格式的名称，如： '/src/api' => 'srcApi' */
+export function transformPathToName(thePath: string) {
+  return thePath
+    .replace(/^\//, '') // 去除开头的 /
+    .replace(/\/\w/g, (matched, index) => {
+      const letter = matched.replace('/', '')
+      return index === 0 ? letter : letter.toUpperCase()
+    })
+}
+
 /** 清空某个目录下所有的文件/文件夹 */
 export function cleanDir(folderPath) {
   //判断文件夹是否存在
