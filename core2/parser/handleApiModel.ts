@@ -1,13 +1,5 @@
 import { IApiModel, IParams } from '../types'
-import {
-  getUrl,
-  getApiName,
-  getFileName,
-  getMethod,
-  upperCaseFirseLetter,
-  handleWeirdName,
-  handleJsType,
-} from '../utils'
+import { getUrl, getApiName, getFileNameAndExt, handleWeirdName, handleJsType } from '../utils'
 
 /** 生成 api 数据模型 */
 export function handleApiModel(paths, { ignore, fileName }) {
@@ -21,7 +13,7 @@ export function handleApiModel(paths, { ignore, fileName }) {
         const obj = objs[method]
         const url = getUrl(key)
         const name = getApiName(url, apiHasSameUrl > 1 ? method : '')
-        const theFileName = getFileName(url, fileName)
+        const theFileObj = getFileNameAndExt(url, fileName)
         const summary = obj.summary // 接口注释
         const parameters = getParameters(obj.parameters) // 入参
         const resScheme = obj?.responses['200']?.schema // 出参模型
@@ -48,7 +40,8 @@ export function handleApiModel(paths, { ignore, fileName }) {
           summary,
           parameters,
           outputInterface,
-          fileName: theFileName,
+          fileName: theFileObj.fileName,
+          ext: theFileObj.ext,
         })
       })
     }

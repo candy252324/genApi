@@ -1,12 +1,10 @@
-import fs from 'node:fs'
 import path from 'node:path'
-import { exec } from 'node:child_process'
-import axios from 'axios'
 import { writeMockIndex } from './writeMockIndex'
 import { writeMockInterface } from './writeMockInterface'
 import { writeMockApi } from './writeMockApi'
-import { IParsered, IApiConfig, IMock } from '../types'
+import { IParsered, IMock, IApiGroup } from '../types'
 import { MOCK_OUTPUT_DIR } from '../constant'
+import { groupApiByFileName } from '../utils'
 
 export async function genMock(data: IParsered[], mockConfig: IMock) {
   console.log(`mock 数据生成中...`)
@@ -16,29 +14,21 @@ export async function genMock(data: IParsered[], mockConfig: IMock) {
 /** 生成所有站点的 mock 数据 */
 function genMockParaller(data: IParsered[], mockConfig: IMock) {
   const fn = []
+  const groupApiList = [] // 所有站点的 apiGroup 数据
   data.forEach((item) => {
-    fn.push(genStationMock(item, mockConfig))
+    const apiGroup = groupApiByFileName(item.apis)
+    groupApiList.push({ outputDir: item.outputDir, apiGroup })
+    fn.push(genStationMock(item, apiGroup, mockConfig))
   })
+  // 将所有站点的 mock 接口写入入口文件 mock/index.js
+  fn.push(writeMockIndex(groupApiList, { mockRootPath: MOCK_OUTPUT_DIR }))
   return Promise.all(fn)
 }
 
 /** 生成单个站点的 mock数据 */
-function genStationMock(data: IParsered, mockConfig: IMock) {
-  const apiGroup = [] // [{fileName:"", apis:[]}]
-  // 按文件所属文件名称给 api 分组
-  ;(data.apis || []).forEach((item) => {
-    const { fileName } = item
-    const idx = apiGroup.findIndex((item) => item.fileName === fileName)
-    if (idx > -1) {
-      apiGroup[idx].apis.push(item)
-    } else {
-      apiGroup.push({ fileName, apis: [item] })
-    }
-  })
-
+function genStationMock(data: IParsered, apiGroup: IApiGroup[], mockConfig: IMock) {
   const outputDir = path.join(MOCK_OUTPUT_DIR, data.outputDir)
-  writeMockIndex(apiGroup, { outputDir: data.outputDir })
-  writeMockApi(apiGroup, { absOutputDir: outputDir })
-  writeMockInterface(data.interfaces, outputDir)
-  writeMockInterface(data.interfaces, outputDir, true) // cmd格式， 用于 mock server
+  writeMockApi(apiGroup, { absOutputDir: outputDir, fieldRules: mockConfig.fieldRules })
+  writeMockInterface(data.interfaces, { absOutputDir: outputDir, fieldRules: mockConfig.fieldRules })
+  writeMockInterface(data.interfaces, { absOutputDir: outputDir, cmd: true, fieldRules: mockConfig.fieldRules }) // cmd格式， 用于 mock server
 }

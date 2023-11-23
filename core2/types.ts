@@ -65,8 +65,10 @@ export interface IApiModel {
   parameters: IParams[]
   /** 接口出参 interface */
   outputInterface: string
-  /** 接口所属文件名称， 如 user.ts */
+  /** 接口所属文件名称（不包含后缀，如 user）*/
   fileName: string
+  /** 后缀（ts 或 js, 不包含点号） */
+  ext: string
 }
 
 export interface IInterface {
@@ -86,4 +88,13 @@ export interface IInterface {
 export interface IParsered extends IApiStation {
   apis: IApiModel[]
   interfaces: IInterface[]
+}
+
+export interface IApiGroup {
+  /** api 所属文件名称， 如 user */
+  fileName: string
+  /** 后缀（ts 或 js, 不包含点号） */
+  ext: string
+  /** 该文件名内所有的接口 */
+  apis: IApiModel[]
 }

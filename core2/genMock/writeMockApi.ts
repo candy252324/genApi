@@ -3,13 +3,13 @@ import path from 'node:path'
 import { exec } from 'node:child_process'
 import { handleJsType } from '../utils'
 import { getFieldMockStr } from './mockUtils'
-import { IApiModel } from '../types'
+import { IApiGroup } from '../types'
 
 /**
  * mock写入
- * @param {*} apiGroup  [{fileName:"user.ts", apis:[]}, {fileName:"role", apis:[]}]
+ * @param {*} apiGroup  [{fileName:"user", apis:[]}, {fileName:"role", apis:[]}]
  */
-export function writeMockApi(apiGroup: { fileName: string; apis: IApiModel[] }[], { absOutputDir }) {
+export function writeMockApi(apiGroup: IApiGroup[], { absOutputDir, fieldRules }) {
   apiGroup.forEach((item) => {
     const fileName = item.fileName
     let mockStr = `import Mock from 'better-mock'\n\n`
@@ -28,7 +28,7 @@ export function writeMockApi(apiGroup: { fileName: string; apis: IApiModel[] }[]
       }
       // 出参是简单类型
       else if (handleJsType(outputInterface)) {
-        const { isCustome, mockStr } = getFieldMockStr({ name, type: outputInterface })
+        const { isCustome, mockStr } = getFieldMockStr({ name, type: outputInterface, fieldRules })
         _outputInterface = isCustome ? mockStr : `\'${mockStr}\'`
       } else {
         _outputInterface = `${outputInterface}()`
@@ -54,8 +54,7 @@ export function writeMockApi(apiGroup: { fileName: string; apis: IApiModel[] }[]
         fs.mkdirSync(absOutputDir, { recursive: true })
       }
       // 写入目标目录
-      const _fileName = fileName.replace(/\.(ts|js)$/, '') // 去除 .ts 或 .js 后缀
-      const targetFile = path.join(absOutputDir, `${_fileName}.js`)
+      const targetFile = path.join(absOutputDir, `${fileName}.js`)
       fs.writeFileSync(targetFile, `${importStr}\n${mockStr}\n`)
 
       // 格式化

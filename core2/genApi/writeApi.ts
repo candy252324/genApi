@@ -2,18 +2,14 @@ import path from 'node:path'
 import fs from 'node:fs'
 import { exec } from 'node:child_process'
 import { handleJsType } from '../utils'
-import { IApiModel, IParams } from '../types'
+import { IParams, IApiGroup } from '../types'
 
 /** api 写入 */
-export function writeApi(
-  apiGroup: { fileName: string; apis: IApiModel[] }[],
-  config: { outputDir: string; apiBody: Function; httpTpl: string }
-) {
+export function writeApi(apiGroup: IApiGroup[], config: { outputDir: string; apiBody: Function; httpTpl: string }) {
   const { outputDir, apiBody, httpTpl } = config
   apiGroup.forEach((item) => {
     let tplStr = `${httpTpl || ''}`
     let apiStr = ''
-    const fileName = item.fileName
     let fileUsedInterface = [] // 当前文件用到的 interface
     item.apis.forEach((api) => {
       const { name, url, method, summary, parameters, outputInterface } = api
@@ -56,7 +52,7 @@ export function writeApi(
         fs.mkdirSync(outputDir, { recursive: true })
       }
       // 写入目标目录
-      const targetFile = path.join(outputDir, `${fileName}`)
+      const targetFile = path.join(outputDir, `${item.fileName}.${item.ext}`)
       fs.writeFileSync(targetFile, `${tplStr}\n${importStr}\n${apiStr}`)
 
       exec(`prettier --write ${targetFile}`)

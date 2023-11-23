@@ -1,10 +1,9 @@
-let fieldRules = {}
 /** 获取简单数据类型的 mock */
-export function getFieldMockStr({ name, type }) {
+export function getFieldMockStr({ name, type, fieldRules }) {
   const lowerCaseName = name.toLowerCase()
   let mockStr = ''
   let isCustome = false // 使用用户自定义规则
-  const customeMockStr = getCustomeMockStr(name)
+  const customeMockStr = getCustomeMockStr(name, fieldRules)
   // 处理用户自定义的 mock 规则
   if (customeMockStr) {
     mockStr = customeMockStr
@@ -56,7 +55,7 @@ export function getFieldMockStr({ name, type }) {
 }
 
 /** 用户自定义的 mock 规则 */
-export function getCustomeMockStr(name) {
+export function getCustomeMockStr(name, fieldRules) {
   // 不存在用户自定义的 mock 规则
   if (!fieldRules || !Object.keys(fieldRules).length) {
     return false

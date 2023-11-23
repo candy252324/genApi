@@ -1,6 +1,7 @@
-const path = require('node:path')
-const fs = require('node:fs')
-const pinyin = require('js-pinyin')
+import path from 'node:path'
+import fs from 'node:fs'
+import pinyin from 'js-pinyin'
+import { IApiModel, IParsered, IApiGroup } from './types'
 
 const jsKeyWords = [
   'delete',
@@ -54,8 +55,8 @@ export function getApiName(url, method) {
   return jsKeyWords.includes(name) ? `${name}Fn` : name
 }
 
-/** 获取接口所属文件名称 */
-export function getFileName(url: string, userFileName: any) {
+/** 获取接口所属文件名称和后缀 */
+export function getFileNameAndExt(url: string, userFileName: any) {
   let theFileName = ''
   //  用户传入的 fileName 是个方法
   if (userFileName && typeof userFileName === 'function') {
@@ -74,9 +75,15 @@ export function getFileName(url: string, userFileName: any) {
   // 如果用户传入的 fileName 后缀是 ts 或 js , 则认为是有效的 fileName， 否则默认生成 .ts 文件
   const ext = theFileName.split('.').pop()
   if (ext === 'ts' || ext === 'js') {
-    return theFileName
+    return {
+      fileName: theFileName.replace(/\.(ts|js)$/, ''),
+      ext: ext,
+    }
   } else {
-    return theFileName + '.ts'
+    return {
+      fileName: theFileName,
+      ext: 'ts',
+    }
   }
 }
 /**
@@ -172,6 +179,22 @@ export function transformPathToName(thePath: string) {
       const letter = matched.replace('/', '')
       return index === 0 ? letter : letter.toUpperCase()
     })
+}
+
+/** 按所属文件名称给 api 分组 */
+export function groupApiByFileName(apis: IApiModel[]) {
+  const apiGroup: IApiGroup[] = [] // [{fileName:"", apis:[]}]
+  // 按文件所属文件名称给 api 分组
+  ;(apis || []).forEach((item) => {
+    const { fileName, ext } = item
+    const idx = apiGroup.findIndex((item) => item.fileName === fileName)
+    if (idx > -1) {
+      apiGroup[idx].apis.push(item)
+    } else {
+      apiGroup.push({ fileName, ext, apis: [item] })
+    }
+  })
+  return apiGroup
 }
 
 /** 清空某个目录下所有的文件/文件夹 */

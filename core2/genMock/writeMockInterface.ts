@@ -5,7 +5,7 @@ import { getFieldMockStr } from './mockUtils'
 import { IInterface } from '../types'
 
 /** interface 写入 */
-export function writeMockInterface(interfaces: IInterface[], absOutputDir, cmd = false) {
+export function writeMockInterface(interfaces: IInterface[], { absOutputDir, cmd = false, fieldRules }) {
   let str = cmd ? '' : 'import Mock from "better-mock"\n'
   interfaces.forEach((item, index) => {
     if (cmd) {
@@ -16,7 +16,7 @@ export function writeMockInterface(interfaces: IInterface[], absOutputDir, cmd =
     if (item?.properties && item.properties?.length) {
       let mockRes = ''
       item.properties.forEach((it) => {
-        mockRes += getInterfaceMock(it)
+        mockRes += getInterfaceMock(it, fieldRules)
       })
       str += `\nreturn ${mockRes ? '{\n' + mockRes + '\n}' : ''}`
     }
@@ -58,7 +58,7 @@ export function writeMockInterface(interfaces: IInterface[], absOutputDir, cmd =
    *    }]
    *  }
    */
-function getInterfaceMock(model) {
+function getInterfaceMock(model, fieldRules) {
   const { name, type, isSimpleJsType, isArray } = model
 
   let _mockStr = ''
@@ -66,7 +66,7 @@ function getInterfaceMock(model) {
   let isFn = false
   let _isCustome = false
   if (type === 'string' || type === 'number' || type === 'boolean' || type === 'any' || type === 'File') {
-    const { mockStr, isCustome } = getFieldMockStr({ name, type })
+    const { mockStr, isCustome } = getFieldMockStr({ name, type, fieldRules })
     _mockStr = mockStr
     _isCustome = isCustome
   } else if (type === 'object') {
