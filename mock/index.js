@@ -124,7 +124,7 @@ import * as __test__OutputSwagger4statistics from '././__test__/output/swagger4/
 import * as __test__OutputSwagger4travel from '././__test__/output/swagger4/travel.js'
 import * as __test__OutputSwagger4keyBorard from '././__test__/output/swagger4/keyBorard.js'
 import * as __test__OutputSwagger4inner from '././__test__/output/swagger4/inner.js'
-import * as __test__OutputSwagger5thk from '././__test__/output/swagger5/thk.js'
+import * as __test__OutputSwagger5swagger5Api from '././__test__/output/swagger5/swagger5Api.js'
 Mock.mock(/\/api\/blue\/acc\/queryAcc/, 'post', __test__OutputSwagger1blue.blueAccQueryAcc)
 Mock.mock(/\/api\/blue\/door\/addDoor/, 'post', __test__OutputSwagger1blue.blueDoorAddDoor)
 Mock.mock(/\/api\/blue\/door\/createDoor/, 'post', __test__OutputSwagger1blue.blueDoorCreateDoor)
@@ -1146,615 +1146,735 @@ Mock.mock(/\/inner\/customer\/cat\/pageList/, 'post', __test__OutputSwagger4inne
 Mock.mock(/\/inner\/customer\/cat\/update/, 'post', __test__OutputSwagger4inner.innerCustomerCatUpdate)
 Mock.mock(/\/inner\/import\/importExcelByUrl/, 'post', __test__OutputSwagger4inner.innerImportImportExcelByUrl)
 Mock.mock(/\/inner\/import\/importList/, 'post', __test__OutputSwagger4inner.innerImportImportList)
-Mock.mock(/\/thk\/api\/common\/v1\/enum-info/, 'get', __test__OutputSwagger5thk.thkApiCommonV1Enuminfo)
-Mock.mock(/\/thk\/api\/common\/v1\/enum\/all/, 'get', __test__OutputSwagger5thk.thkApiCommonV1EnumAll)
+Mock.mock(/\/thk\/api\/common\/v1\/enum-info/, 'get', __test__OutputSwagger5swagger5Api.thkApiCommonV1Enuminfo)
+Mock.mock(/\/thk\/api\/common\/v1\/enum\/all/, 'get', __test__OutputSwagger5swagger5Api.thkApiCommonV1EnumAll)
 Mock.mock(
   /\/thk\/api\/sys-dict\/api\/common\/v1\/areaInfo/,
   'get',
-  __test__OutputSwagger5thk.thkApiSysdictApiCommonV1AreaInfo
+  __test__OutputSwagger5swagger5Api.thkApiSysdictApiCommonV1AreaInfo
 )
 Mock.mock(
   /\/thk\/api\/sys-dict\/api\/common\/v1\/certificationCertList/,
   'get',
-  __test__OutputSwagger5thk.thkApiSysdictApiCommonV1CertificationCertList
+  __test__OutputSwagger5swagger5Api.thkApiSysdictApiCommonV1CertificationCertList
 )
 Mock.mock(
   /\/thk\/api\/sys-dict\/api\/common\/v1\/humanStatusList/,
   'get',
-  __test__OutputSwagger5thk.thkApiSysdictApiCommonV1HumanStatusList
+  __test__OutputSwagger5swagger5Api.thkApiSysdictApiCommonV1HumanStatusList
 )
 Mock.mock(
   /\/thk\/api\/sys-dict\/api\/common\/v1\/siteManagementTasty/,
   'get',
-  __test__OutputSwagger5thk.thkApiSysdictApiCommonV1SiteManagementTasty
+  __test__OutputSwagger5swagger5Api.thkApiSysdictApiCommonV1SiteManagementTasty
 )
 Mock.mock(
   /\/thk\/api\/sys-dict\/api\/common\/v1\/skilledWorkList/,
   'get',
-  __test__OutputSwagger5thk.thkApiSysdictApiCommonV1SkilledWorkList
+  __test__OutputSwagger5swagger5Api.thkApiSysdictApiCommonV1SkilledWorkList
 )
 Mock.mock(
   /\/thk\/api\/sys-dict\/api\/common\/v1\/specialWorkList/,
   'get',
-  __test__OutputSwagger5thk.thkApiSysdictApiCommonV1SpecialWorkList
+  __test__OutputSwagger5swagger5Api.thkApiSysdictApiCommonV1SpecialWorkList
 )
 Mock.mock(
   /\/thk\/api\/sys-dict\/api\/common\/v1\/thirdCertificationList/,
   'get',
-  __test__OutputSwagger5thk.thkApiSysdictApiCommonV1ThirdCertificationList
+  __test__OutputSwagger5swagger5Api.thkApiSysdictApiCommonV1ThirdCertificationList
 )
 Mock.mock(
   /\/thk\/api\/sys-dict\/api\/common\/v1\/titleLevelList/,
   'get',
-  __test__OutputSwagger5thk.thkApiSysdictApiCommonV1TitleLevelList
+  __test__OutputSwagger5swagger5Api.thkApiSysdictApiCommonV1TitleLevelList
 )
 Mock.mock(
   /\/thk\/api\/sys-dict\/v1\/getCertificateOfRegistration/,
   'get',
-  __test__OutputSwagger5thk.thkApiSysdictV1GetCertificateOfRegistration
+  __test__OutputSwagger5swagger5Api.thkApiSysdictV1GetCertificateOfRegistration
 )
 Mock.mock(
   /\/thk\/api\/sys-dict\/v1\/getCertificateOfRegistrationLabelValue/,
   'get',
-  __test__OutputSwagger5thk.thkApiSysdictV1GetCertificateOfRegistrationLabelValue
+  __test__OutputSwagger5swagger5Api.thkApiSysdictV1GetCertificateOfRegistrationLabelValue
 )
 Mock.mock(
   /\/thk\/api\/sys-dict\/v1\/getFridayQualification/,
   'get',
-  __test__OutputSwagger5thk.thkApiSysdictV1GetFridayQualification
+  __test__OutputSwagger5swagger5Api.thkApiSysdictV1GetFridayQualification
 )
 Mock.mock(
   /\/thk\/api\/sys-dict\/v1\/getFridayQualificationWithCancel/,
   'get',
-  __test__OutputSwagger5thk.thkApiSysdictV1GetFridayQualificationWithCancel
+  __test__OutputSwagger5swagger5Api.thkApiSysdictV1GetFridayQualificationWithCancel
 )
 Mock.mock(
   /\/thk\/api\/v1\/config\/continue-education/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1ConfigContinueeducationPost
+  __test__OutputSwagger5swagger5Api.thkApiV1ConfigContinueeducationPost
 )
 Mock.mock(
   /\/thk\/api\/v1\/config\/continue-education/,
   'put',
-  __test__OutputSwagger5thk.thkApiV1ConfigContinueeducationPut
+  __test__OutputSwagger5swagger5Api.thkApiV1ConfigContinueeducationPut
 )
 Mock.mock(
   /\/thk\/api\/v1\/config\/continue-education\/page/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1ConfigContinueeducationPage
+  __test__OutputSwagger5swagger5Api.thkApiV1ConfigContinueeducationPage
 )
 Mock.mock(
   /\/thk\/api\/v1\/config\/continue-education\/.*/,
   'delete',
-  __test__OutputSwagger5thk.thkApiV1ConfigContinueeducationId
+  __test__OutputSwagger5swagger5Api.thkApiV1ConfigContinueeducationId
 )
 Mock.mock(
   /\/thk\/api\/v1\/config\/cred-alert\/need-alert/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1ConfigCredalertNeedalert
+  __test__OutputSwagger5swagger5Api.thkApiV1ConfigCredalertNeedalert
 )
-Mock.mock(/\/thk\/api\/v1\/config\/cred-alert\/update/, 'put', __test__OutputSwagger5thk.thkApiV1ConfigCredalertUpdate)
+Mock.mock(
+  /\/thk\/api\/v1\/config\/cred-alert\/update/,
+  'put',
+  __test__OutputSwagger5swagger5Api.thkApiV1ConfigCredalertUpdate
+)
 Mock.mock(
   /\/thk\/api\/v1\/config\/credential-standard/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1ConfigCredentialstandardPost
+  __test__OutputSwagger5swagger5Api.thkApiV1ConfigCredentialstandardPost
 )
 Mock.mock(
   /\/thk\/api\/v1\/config\/credential-standard/,
   'put',
-  __test__OutputSwagger5thk.thkApiV1ConfigCredentialstandardPut
+  __test__OutputSwagger5swagger5Api.thkApiV1ConfigCredentialstandardPut
 )
 Mock.mock(
   /\/thk\/api\/v1\/config\/credential-standard\/export/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1ConfigCredentialstandardExport
+  __test__OutputSwagger5swagger5Api.thkApiV1ConfigCredentialstandardExport
 )
 Mock.mock(
   /\/thk\/api\/v1\/config\/credential-standard\/export\/model/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1ConfigCredentialstandardExportModel
+  __test__OutputSwagger5swagger5Api.thkApiV1ConfigCredentialstandardExportModel
 )
 Mock.mock(
   /\/thk\/api\/v1\/config\/credential-standard\/getDetail/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1ConfigCredentialstandardGetDetail
+  __test__OutputSwagger5swagger5Api.thkApiV1ConfigCredentialstandardGetDetail
 )
 Mock.mock(
   /\/thk\/api\/v1\/config\/credential-standard\/getQueryChain/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1ConfigCredentialstandardGetQueryChain
+  __test__OutputSwagger5swagger5Api.thkApiV1ConfigCredentialstandardGetQueryChain
 )
 Mock.mock(
   /\/thk\/api\/v1\/config\/credential-standard\/getRelativeList/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1ConfigCredentialstandardGetRelativeList
+  __test__OutputSwagger5swagger5Api.thkApiV1ConfigCredentialstandardGetRelativeList
 )
 Mock.mock(
   /\/thk\/api\/v1\/config\/credential-standard\/page/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1ConfigCredentialstandardPage
+  __test__OutputSwagger5swagger5Api.thkApiV1ConfigCredentialstandardPage
 )
 Mock.mock(
   /\/thk\/api\/v1\/config\/credential-standard\/unit/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1ConfigCredentialstandardUnit
+  __test__OutputSwagger5swagger5Api.thkApiV1ConfigCredentialstandardUnit
 )
 Mock.mock(
   /\/thk\/api\/v1\/config\/credential-standard\/upload/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1ConfigCredentialstandardUpload
+  __test__OutputSwagger5swagger5Api.thkApiV1ConfigCredentialstandardUpload
 )
 Mock.mock(
   /\/thk\/api\/v1\/config\/credential-warning/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1ConfigCredentialwarningGet
+  __test__OutputSwagger5swagger5Api.thkApiV1ConfigCredentialwarningGet
 )
 Mock.mock(
   /\/thk\/api\/v1\/config\/credential-warning/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1ConfigCredentialwarningPost
+  __test__OutputSwagger5swagger5Api.thkApiV1ConfigCredentialwarningPost
 )
 Mock.mock(
   /\/thk\/api\/v1\/config\/credential-warning/,
   'put',
-  __test__OutputSwagger5thk.thkApiV1ConfigCredentialwarningPut
+  __test__OutputSwagger5swagger5Api.thkApiV1ConfigCredentialwarningPut
 )
 Mock.mock(
   /\/thk\/api\/v1\/data\/board\/fridayCredential/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1DataBoardFridayCredential
+  __test__OutputSwagger5swagger5Api.thkApiV1DataBoardFridayCredential
 )
-Mock.mock(/\/thk\/api\/v1\/data\/board\/get\/date/, 'get', __test__OutputSwagger5thk.thkApiV1DataBoardGetDate)
+Mock.mock(/\/thk\/api\/v1\/data\/board\/get\/date/, 'get', __test__OutputSwagger5swagger5Api.thkApiV1DataBoardGetDate)
 Mock.mock(
   /\/thk\/api\/v1\/data\/board\/get\/escalation/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1DataBoardGetEscalation
+  __test__OutputSwagger5swagger5Api.thkApiV1DataBoardGetEscalation
 )
 Mock.mock(
   /\/thk\/api\/v1\/data\/board\/listQualificationCate/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1DataBoardListQualificationCate
+  __test__OutputSwagger5swagger5Api.thkApiV1DataBoardListQualificationCate
 )
-Mock.mock(/\/thk\/api\/v1\/friday\/bad\/behavior\/list/, 'get', __test__OutputSwagger5thk.thkApiV1FridayBadBehaviorList)
-Mock.mock(/\/thk\/api\/v1\/friday\/bad\/behavior\/page/, 'get', __test__OutputSwagger5thk.thkApiV1FridayBadBehaviorPage)
-Mock.mock(/\/thk\/api\/v1\/friday\/black\/list/, 'get', __test__OutputSwagger5thk.thkApiV1FridayBlackList)
-Mock.mock(/\/thk\/api\/v1\/friday\/black\/page/, 'get', __test__OutputSwagger5thk.thkApiV1FridayBlackPage)
+Mock.mock(
+  /\/thk\/api\/v1\/friday\/bad\/behavior\/list/,
+  'get',
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayBadBehaviorList
+)
+Mock.mock(
+  /\/thk\/api\/v1\/friday\/bad\/behavior\/page/,
+  'get',
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayBadBehaviorPage
+)
+Mock.mock(/\/thk\/api\/v1\/friday\/black\/list/, 'get', __test__OutputSwagger5swagger5Api.thkApiV1FridayBlackList)
+Mock.mock(/\/thk\/api\/v1\/friday\/black\/page/, 'get', __test__OutputSwagger5swagger5Api.thkApiV1FridayBlackPage)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/branch\/export\/create-account-template/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1FridayBranchExportCreateaccounttemplate
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayBranchExportCreateaccounttemplate
 )
-Mock.mock(/\/thk\/api\/v1\/friday\/branch\/page/, 'get', __test__OutputSwagger5thk.thkApiV1FridayBranchPage)
-Mock.mock(/\/thk\/api\/v1\/friday\/branch\/raw-branch/, 'get', __test__OutputSwagger5thk.thkApiV1FridayBranchRawbranch)
+Mock.mock(/\/thk\/api\/v1\/friday\/branch\/page/, 'get', __test__OutputSwagger5swagger5Api.thkApiV1FridayBranchPage)
+Mock.mock(
+  /\/thk\/api\/v1\/friday\/branch\/raw-branch/,
+  'get',
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayBranchRawbranch
+)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/branch\/statusCount/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayBranchStatusCount
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayBranchStatusCount
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/branch\/update\/nameOrPhone/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1FridayBranchUpdateNameOrPhone
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayBranchUpdateNameOrPhone
 )
-Mock.mock(/\/thk\/api\/v1\/friday\/cred-plan\/all-cred/, 'get', __test__OutputSwagger5thk.thkApiV1FridayCredplanAllcred)
+Mock.mock(
+  /\/thk\/api\/v1\/friday\/cred-plan\/all-cred/,
+  'get',
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredplanAllcred
+)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/cred-plan\/available-apply-cred/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayCredplanAvailableapplycred
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredplanAvailableapplycred
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/cred-plan\/filtered-cred/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayCredplanFilteredcred
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredplanFilteredcred
 )
-Mock.mock(/\/thk\/api\/v1\/friday\/cred-plan\/list/, 'get', __test__OutputSwagger5thk.thkApiV1FridayCredplanList)
+Mock.mock(
+  /\/thk\/api\/v1\/friday\/cred-plan\/list/,
+  'get',
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredplanList
+)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/cred-plan\/plan-detail/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayCredplanPlandetail
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredplanPlandetail
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/cred-plan\/pre-level/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayCredplanPrelevel
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredplanPrelevel
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/cred-plan\/save-plan/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1FridayCredplanSaveplan
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredplanSaveplan
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/cred-plan\/single-cred/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayCredplanSinglecred
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredplanSinglecred
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/cred-plan\/start-plan/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1FridayCredplanStartplan
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredplanStartplan
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/cred-plan\/validate-credit/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1FridayCredplanValidatecredit
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredplanValidatecredit
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/cred-plan\/validate-tasty/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1FridayCredplanValidatetasty
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredplanValidatetasty
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/cred-plan\/validate-project/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1FridayCredplanValidateproject
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredplanValidateproject
 )
-Mock.mock(/\/thk\/api\/v1\/friday\/credential\/add/, 'post', __test__OutputSwagger5thk.thkApiV1FridayCredentialAdd)
+Mock.mock(
+  /\/thk\/api\/v1\/friday\/credential\/add/,
+  'post',
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredentialAdd
+)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/credential\/cred-overview/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayCredentialCredoverview
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredentialCredoverview
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/credential\/credential-nature/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayCredentialCredentialnature
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredentialCredentialnature
 )
-Mock.mock(/\/thk\/api\/v1\/friday\/credential\/delete/, 'get', __test__OutputSwagger5thk.thkApiV1FridayCredentialDelete)
+Mock.mock(
+  /\/thk\/api\/v1\/friday\/credential\/delete/,
+  'get',
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredentialDelete
+)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/credential\/expire-alert/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayCredentialExpirealert
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredentialExpirealert
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/credential\/get\/escalation/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayCredentialGetEscalation
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredentialGetEscalation
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/credential\/get\/escalation\/tastyDetail/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayCredentialGetEscalationTastyDetail
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredentialGetEscalationTastyDetail
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/credential\/get\/escalation2/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayCredentialGetEscalation2
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredentialGetEscalation2
 )
-Mock.mock(/\/thk\/api\/v1\/friday\/credential\/list/, 'get', __test__OutputSwagger5thk.thkApiV1FridayCredentialList)
+Mock.mock(
+  /\/thk\/api\/v1\/friday\/credential\/list/,
+  'get',
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredentialList
+)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/credential\/list-name/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1FridayCredentialListname
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredentialListname
 )
-Mock.mock(/\/thk\/api\/v1\/friday\/credential\/page/, 'get', __test__OutputSwagger5thk.thkApiV1FridayCredentialPage)
+Mock.mock(
+  /\/thk\/api\/v1\/friday\/credential\/page/,
+  'get',
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredentialPage
+)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/credential\/update/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1FridayCredentialUpdate
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredentialUpdate
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/credential\/update-batch/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1FridayCredentialUpdatebatch
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayCredentialUpdatebatch
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/dishonesty\/punishment\/list/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayDishonestyPunishmentList
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayDishonestyPunishmentList
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/dishonesty\/punishment\/page/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayDishonestyPunishmentPage
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayDishonestyPunishmentPage
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/good\/behavior\/list/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayGoodBehaviorList
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayGoodBehaviorList
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/good\/behavior\/page/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayGoodBehaviorPage
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayGoodBehaviorPage
 )
-Mock.mock(/\/thk\/api\/v1\/friday\/main\/all-count/, 'get', __test__OutputSwagger5thk.thkApiV1FridayMainAllcount)
+Mock.mock(
+  /\/thk\/api\/v1\/friday\/main\/all-count/,
+  'get',
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayMainAllcount
+)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/main\/appPreviewFridayInfo/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayMainAppPreviewFridayInfo
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayMainAppPreviewFridayInfo
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/main\/appSaveFridayInfo/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayMainAppSaveFridayInfo
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayMainAppSaveFridayInfo
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/main\/appSyncFriday/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayMainAppSyncFriday
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayMainAppSyncFriday
 )
-Mock.mock(/\/thk\/api\/v1\/friday\/main\/get/, 'get', __test__OutputSwagger5thk.thkApiV1FridayMainGet)
+Mock.mock(/\/thk\/api\/v1\/friday\/main\/get/, 'get', __test__OutputSwagger5swagger5Api.thkApiV1FridayMainGet)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/main\/getInnerByTenantIdTest/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayMainGetInnerByTenantIdTest
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayMainGetInnerByTenantIdTest
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/main\/ignore\/tenant\/get/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayMainIgnoreTenantGet
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayMainIgnoreTenantGet
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/main\/ignore\/tenant\/list/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayMainIgnoreTenantList
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayMainIgnoreTenantList
 )
-Mock.mock(/\/thk\/api\/v1\/friday\/main\/list/, 'get', __test__OutputSwagger5thk.thkApiV1FridayMainList)
+Mock.mock(/\/thk\/api\/v1\/friday\/main\/list/, 'get', __test__OutputSwagger5swagger5Api.thkApiV1FridayMainList)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/main\/mulclaim\/human\/detail/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayMainMulclaimHumanDetail
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayMainMulclaimHumanDetail
 )
-Mock.mock(/\/thk\/api\/v1\/friday\/main\/page/, 'get', __test__OutputSwagger5thk.thkApiV1FridayMainPage)
-Mock.mock(/\/thk\/api\/v1\/friday\/main\/update/, 'put', __test__OutputSwagger5thk.thkApiV1FridayMainUpdate)
+Mock.mock(/\/thk\/api\/v1\/friday\/main\/page/, 'get', __test__OutputSwagger5swagger5Api.thkApiV1FridayMainPage)
+Mock.mock(/\/thk\/api\/v1\/friday\/main\/update/, 'put', __test__OutputSwagger5swagger5Api.thkApiV1FridayMainUpdate)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/boss\/export/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayTastyCredentialBossExport
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayTastyCredentialBossExport
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/boss\/export\/attachment/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayTastyCredentialBossExportAttachment
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayTastyCredentialBossExportAttachment
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/boss\/page/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayTastyCredentialBossPage
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayTastyCredentialBossPage
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/curriculum\/vitae/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayTastyCredentialCurriculumVitae
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayTastyCredentialCurriculumVitae
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/curriculum\/vitae\/export/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1FridayTastyCredentialCurriculumVitaeExport
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayTastyCredentialCurriculumVitaeExport
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/curriculum\/vitae\/list/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayTastyCredentialCurriculumVitaeList
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayTastyCredentialCurriculumVitaeList
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/export/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayTastyCredentialExport
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayTastyCredentialExport
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/export\/attachment/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayTastyCredentialExportAttachment
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayTastyCredentialExportAttachment
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/list\/human/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayTastyCredentialListHuman
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayTastyCredentialListHuman
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/list\/registerHuman/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayTastyCredentialListRegisterHuman
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayTastyCredentialListRegisterHuman
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/list\/safetyProduction/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayTastyCredentialListSafetyProduction
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayTastyCredentialListSafetyProduction
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/list\/unit/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayTastyCredentialListUnit
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayTastyCredentialListUnit
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/page/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayTastyCredentialPage
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayTastyCredentialPage
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/pageFriday/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1FridayTastyCredentialPageFriday
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayTastyCredentialPageFriday
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/summary/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1FridayTastyCredentialSummary
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayTastyCredentialSummary
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/update\/mark/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1FridayTastyCredentialUpdateMark
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayTastyCredentialUpdateMark
 )
-Mock.mock(/\/thk\/api\/v1\/friday\/tasty\/list/, 'get', __test__OutputSwagger5thk.thkApiV1FridayTastyList)
-Mock.mock(/\/thk\/api\/v1\/friday\/tasty\/page/, 'get', __test__OutputSwagger5thk.thkApiV1FridayTastyPage)
+Mock.mock(/\/thk\/api\/v1\/friday\/tasty\/list/, 'get', __test__OutputSwagger5swagger5Api.thkApiV1FridayTastyList)
+Mock.mock(/\/thk\/api\/v1\/friday\/tasty\/page/, 'get', __test__OutputSwagger5swagger5Api.thkApiV1FridayTastyPage)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/project\/get\/projectTypes/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayProjectGetProjectTypes
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayProjectGetProjectTypes
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/project\/industry-major/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayProjectIndustrymajor
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayProjectIndustrymajor
 )
-Mock.mock(/\/thk\/api\/v1\/friday\/project\/list/, 'get', __test__OutputSwagger5thk.thkApiV1FridayProjectList)
-Mock.mock(/\/thk\/api\/v1\/friday\/project\/page/, 'get', __test__OutputSwagger5thk.thkApiV1FridayProjectPage)
+Mock.mock(/\/thk\/api\/v1\/friday\/project\/list/, 'get', __test__OutputSwagger5swagger5Api.thkApiV1FridayProjectList)
+Mock.mock(/\/thk\/api\/v1\/friday\/project\/page/, 'get', __test__OutputSwagger5swagger5Api.thkApiV1FridayProjectPage)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/project\/project-stage/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1FridayProjectProjectstage
+  __test__OutputSwagger5swagger5Api.thkApiV1FridayProjectProjectstage
 )
-Mock.mock(/\/thk\/api\/v1\/file\/ocrFromBigData/, 'post', __test__OutputSwagger5thk.thkApiV1FileOcrFromBigData)
-Mock.mock(/\/thk\/api\/v1\/file\/signedUrl/, 'post', __test__OutputSwagger5thk.thkApiV1FileSignedUrl)
-Mock.mock(/\/thk\/api\/v1\/tasty/, 'get', __test__OutputSwagger5thk.thkApiV1TastyGet)
-Mock.mock(/\/thk\/api\/v1\/tasty/, 'post', __test__OutputSwagger5thk.thkApiV1TastyPost)
-Mock.mock(/\/thk\/api\/v1\/tasty/, 'put', __test__OutputSwagger5thk.thkApiV1TastyPut)
-Mock.mock(/\/thk\/api\/v1\/tasty\/all/, 'get', __test__OutputSwagger5thk.thkApiV1TastyAll)
-Mock.mock(/\/thk\/api\/v1\/tasty\/all-count/, 'get', __test__OutputSwagger5thk.thkApiV1TastyAllcount)
-Mock.mock(/\/thk\/api\/v1\/tasty\/bank-record/, 'get', __test__OutputSwagger5thk.thkApiV1TastyBankrecordGet)
-Mock.mock(/\/thk\/api\/v1\/tasty\/bank-record/, 'post', __test__OutputSwagger5thk.thkApiV1TastyBankrecordPost)
-Mock.mock(/\/thk\/api\/v1\/tasty\/bank-record/, 'put', __test__OutputSwagger5thk.thkApiV1TastyBankrecordPut)
-Mock.mock(/\/thk\/api\/v1\/tasty\/bank-record\/.*/, 'delete', __test__OutputSwagger5thk.thkApiV1TastyBankrecordId)
+Mock.mock(/\/thk\/api\/v1\/file\/ocrFromBigData/, 'post', __test__OutputSwagger5swagger5Api.thkApiV1FileOcrFromBigData)
+Mock.mock(/\/thk\/api\/v1\/file\/signedUrl/, 'post', __test__OutputSwagger5swagger5Api.thkApiV1FileSignedUrl)
+Mock.mock(/\/thk\/api\/v1\/tasty/, 'get', __test__OutputSwagger5swagger5Api.thkApiV1TastyGet)
+Mock.mock(/\/thk\/api\/v1\/tasty/, 'post', __test__OutputSwagger5swagger5Api.thkApiV1TastyPost)
+Mock.mock(/\/thk\/api\/v1\/tasty/, 'put', __test__OutputSwagger5swagger5Api.thkApiV1TastyPut)
+Mock.mock(/\/thk\/api\/v1\/tasty\/all/, 'get', __test__OutputSwagger5swagger5Api.thkApiV1TastyAll)
+Mock.mock(/\/thk\/api\/v1\/tasty\/all-count/, 'get', __test__OutputSwagger5swagger5Api.thkApiV1TastyAllcount)
+Mock.mock(/\/thk\/api\/v1\/tasty\/bank-record/, 'get', __test__OutputSwagger5swagger5Api.thkApiV1TastyBankrecordGet)
+Mock.mock(/\/thk\/api\/v1\/tasty\/bank-record/, 'post', __test__OutputSwagger5swagger5Api.thkApiV1TastyBankrecordPost)
+Mock.mock(/\/thk\/api\/v1\/tasty\/bank-record/, 'put', __test__OutputSwagger5swagger5Api.thkApiV1TastyBankrecordPut)
+Mock.mock(
+  /\/thk\/api\/v1\/tasty\/bank-record\/.*/,
+  'delete',
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyBankrecordId
+)
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/cred-upgrade\/condition-overview/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1TastyCredupgradeConditionoverview
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredupgradeConditionoverview
 )
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/cred-upgrade\/exam-policy-notice/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1TastyCredupgradeExampolicynotice
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredupgradeExampolicynotice
 )
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/cred-upgrade\/exam-result-show/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1TastyCredupgradeExamresultshow
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredupgradeExamresultshow
 )
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/cred-upgrade\/exam-time/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1TastyCredupgradeExamtime
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredupgradeExamtime
 )
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/cred-upgrade\/up-recommend/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1TastyCredupgradeUprecommend
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredupgradeUprecommend
 )
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential/, 'get', __test__OutputSwagger5thk.thkApiV1TastyCredentialGet)
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential/, 'post', __test__OutputSwagger5thk.thkApiV1TastyCredentialPost)
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential/, 'put', __test__OutputSwagger5thk.thkApiV1TastyCredentialPut)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential/, 'get', __test__OutputSwagger5swagger5Api.thkApiV1TastyCredentialGet)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential/, 'post', __test__OutputSwagger5swagger5Api.thkApiV1TastyCredentialPost)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential/, 'put', __test__OutputSwagger5swagger5Api.thkApiV1TastyCredentialPut)
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/credential-claim-log/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1TastyCredentialclaimlogPost
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredentialclaimlogPost
 )
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/credential-claim-log/,
   'put',
-  __test__OutputSwagger5thk.thkApiV1TastyCredentialclaimlogPut
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredentialclaimlogPut
 )
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/credential-claim-log\/page/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1TastyCredentialclaimlogPage
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredentialclaimlogPage
 )
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/credential-claim-log\/validate/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1TastyCredentialclaimlogValidate
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredentialclaimlogValidate
 )
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/credential-claim-log\/.*/,
   'delete',
-  __test__OutputSwagger5thk.thkApiV1TastyCredentialclaimlogId
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredentialclaimlogId
 )
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential-project/, 'get', __test__OutputSwagger5thk.thkApiV1TastyCredentialproject)
+Mock.mock(
+  /\/thk\/api\/v1\/tasty\/credential-project/,
+  'get',
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredentialproject
+)
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/credential-project\/save/,
   'post',
-  __test__OutputSwagger5thk.thkApiV1TastyCredentialprojectSave
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredentialprojectSave
 )
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/batch/, 'post', __test__OutputSwagger5thk.thkApiV1TastyCredentialBatch)
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/cancel/, 'post', __test__OutputSwagger5thk.thkApiV1TastyCredentialCancel)
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/claim/, 'post', __test__OutputSwagger5thk.thkApiV1TastyCredentialClaim)
+Mock.mock(
+  /\/thk\/api\/v1\/tasty\/credential\/batch/,
+  'post',
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredentialBatch
+)
+Mock.mock(
+  /\/thk\/api\/v1\/tasty\/credential\/cancel/,
+  'post',
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredentialCancel
+)
+Mock.mock(
+  /\/thk\/api\/v1\/tasty\/credential\/claim/,
+  'post',
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredentialClaim
+)
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/credential\/continue-education/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1TastyCredentialContinueeducation
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredentialContinueeducation
 )
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/count/, 'get', __test__OutputSwagger5thk.thkApiV1TastyCredentialCount)
+Mock.mock(
+  /\/thk\/api\/v1\/tasty\/credential\/count/,
+  'get',
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredentialCount
+)
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/credential\/count-info/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1TastyCredentialCountinfo
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredentialCountinfo
 )
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/credential\/credentials/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1TastyCredentialCredentials
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredentialCredentials
 )
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/page/, 'get', __test__OutputSwagger5thk.thkApiV1TastyCredentialPage)
+Mock.mock(
+  /\/thk\/api\/v1\/tasty\/credential\/page/,
+  'get',
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredentialPage
+)
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/credential\/register/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1TastyCredentialRegister
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredentialRegister
 )
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/credential\/register-info/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1TastyCredentialRegisterinfo
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredentialRegisterinfo
 )
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/request/, 'get', __test__OutputSwagger5thk.thkApiV1TastyCredentialRequest)
+Mock.mock(
+  /\/thk\/api\/v1\/tasty\/credential\/request/,
+  'get',
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredentialRequest
+)
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/credential\/uploadCertificateBatch/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1TastyCredentialUploadCertificateBatch
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredentialUploadCertificateBatch
 )
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/.*/, 'delete', __test__OutputSwagger5thk.thkApiV1TastyCredentialId)
-Mock.mock(/\/thk\/api\/v1\/tasty\/education/, 'get', __test__OutputSwagger5thk.thkApiV1TastyEducationGet)
-Mock.mock(/\/thk\/api\/v1\/tasty\/education/, 'post', __test__OutputSwagger5thk.thkApiV1TastyEducationPost)
-Mock.mock(/\/thk\/api\/v1\/tasty\/education/, 'put', __test__OutputSwagger5thk.thkApiV1TastyEducationPut)
-Mock.mock(/\/thk\/api\/v1\/tasty\/education\/batch/, 'post', __test__OutputSwagger5thk.thkApiV1TastyEducationBatch)
-Mock.mock(/\/thk\/api\/v1\/tasty\/education\/school/, 'get', __test__OutputSwagger5thk.thkApiV1TastyEducationSchool)
-Mock.mock(/\/thk\/api\/v1\/tasty\/education\/.*/, 'delete', __test__OutputSwagger5thk.thkApiV1TastyEducationId)
-Mock.mock(/\/thk\/api\/v1\/tasty\/family/, 'get', __test__OutputSwagger5thk.thkApiV1TastyFamilyGet)
-Mock.mock(/\/thk\/api\/v1\/tasty\/family/, 'post', __test__OutputSwagger5thk.thkApiV1TastyFamilyPost)
-Mock.mock(/\/thk\/api\/v1\/tasty\/introduction/, 'get', __test__OutputSwagger5thk.thkApiV1TastyIntroduction)
-Mock.mock(/\/thk\/api\/v1\/tasty\/project/, 'post', __test__OutputSwagger5thk.thkApiV1TastyProjectPost)
-Mock.mock(/\/thk\/api\/v1\/tasty\/project/, 'put', __test__OutputSwagger5thk.thkApiV1TastyProjectPut)
+Mock.mock(
+  /\/thk\/api\/v1\/tasty\/credential\/.*/,
+  'delete',
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyCredentialId
+)
+Mock.mock(/\/thk\/api\/v1\/tasty\/education/, 'get', __test__OutputSwagger5swagger5Api.thkApiV1TastyEducationGet)
+Mock.mock(/\/thk\/api\/v1\/tasty\/education/, 'post', __test__OutputSwagger5swagger5Api.thkApiV1TastyEducationPost)
+Mock.mock(/\/thk\/api\/v1\/tasty\/education/, 'put', __test__OutputSwagger5swagger5Api.thkApiV1TastyEducationPut)
+Mock.mock(
+  /\/thk\/api\/v1\/tasty\/education\/batch/,
+  'post',
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyEducationBatch
+)
+Mock.mock(
+  /\/thk\/api\/v1\/tasty\/education\/school/,
+  'get',
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyEducationSchool
+)
+Mock.mock(/\/thk\/api\/v1\/tasty\/education\/.*/, 'delete', __test__OutputSwagger5swagger5Api.thkApiV1TastyEducationId)
+Mock.mock(/\/thk\/api\/v1\/tasty\/family/, 'get', __test__OutputSwagger5swagger5Api.thkApiV1TastyFamilyGet)
+Mock.mock(/\/thk\/api\/v1\/tasty\/family/, 'post', __test__OutputSwagger5swagger5Api.thkApiV1TastyFamilyPost)
+Mock.mock(/\/thk\/api\/v1\/tasty\/introduction/, 'get', __test__OutputSwagger5swagger5Api.thkApiV1TastyIntroduction)
+Mock.mock(/\/thk\/api\/v1\/tasty\/project/, 'post', __test__OutputSwagger5swagger5Api.thkApiV1TastyProjectPost)
+Mock.mock(/\/thk\/api\/v1\/tasty\/project/, 'put', __test__OutputSwagger5swagger5Api.thkApiV1TastyProjectPut)
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/project-claim-log\/page/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1TastyProjectclaimlogPage
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyProjectclaimlogPage
 )
-Mock.mock(/\/thk\/api\/v1\/tasty\/project\/batch/, 'post', __test__OutputSwagger5thk.thkApiV1TastyProjectBatch)
-Mock.mock(/\/thk\/api\/v1\/tasty\/project\/cancel/, 'post', __test__OutputSwagger5thk.thkApiV1TastyProjectCancel)
-Mock.mock(/\/thk\/api\/v1\/tasty\/project\/claim/, 'post', __test__OutputSwagger5thk.thkApiV1TastyProjectClaim)
-Mock.mock(/\/thk\/api\/v1\/tasty\/project\/page/, 'get', __test__OutputSwagger5thk.thkApiV1TastyProjectPage)
+Mock.mock(/\/thk\/api\/v1\/tasty\/project\/batch/, 'post', __test__OutputSwagger5swagger5Api.thkApiV1TastyProjectBatch)
+Mock.mock(
+  /\/thk\/api\/v1\/tasty\/project\/cancel/,
+  'post',
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyProjectCancel
+)
+Mock.mock(/\/thk\/api\/v1\/tasty\/project\/claim/, 'post', __test__OutputSwagger5swagger5Api.thkApiV1TastyProjectClaim)
+Mock.mock(/\/thk\/api\/v1\/tasty\/project\/page/, 'get', __test__OutputSwagger5swagger5Api.thkApiV1TastyProjectPage)
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/project\/professional/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1TastyProjectProfessional
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyProjectProfessional
 )
-Mock.mock(/\/thk\/api\/v1\/tasty\/project\/projects/, 'get', __test__OutputSwagger5thk.thkApiV1TastyProjectProjects)
+Mock.mock(
+  /\/thk\/api\/v1\/tasty\/project\/projects/,
+  'get',
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyProjectProjects
+)
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/project\/queryProjectByIdAbdName/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1TastyProjectQueryProjectByIdAbdName
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyProjectQueryProjectByIdAbdName
 )
-Mock.mock(/\/thk\/api\/v1\/tasty\/project\/.*/, 'delete', __test__OutputSwagger5thk.thkApiV1TastyProjectId)
+Mock.mock(/\/thk\/api\/v1\/tasty\/project\/.*/, 'delete', __test__OutputSwagger5swagger5Api.thkApiV1TastyProjectId)
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/tool\/majorInEducation/,
   'get',
-  __test__OutputSwagger5thk.thkApiV1TastyToolMajorInEducation
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyToolMajorInEducation
 )
-Mock.mock(/\/thk\/api\/v1\/tasty\/work-history/, 'get', __test__OutputSwagger5thk.thkApiV1TastyWorkhistoryGet)
-Mock.mock(/\/thk\/api\/v1\/tasty\/work-history/, 'post', __test__OutputSwagger5thk.thkApiV1TastyWorkhistoryPost)
-Mock.mock(/\/thk\/api\/v1\/tasty\/work-history/, 'put', __test__OutputSwagger5thk.thkApiV1TastyWorkhistoryPut)
-Mock.mock(/\/thk\/api\/v1\/tasty\/work-history\/batch/, 'post', __test__OutputSwagger5thk.thkApiV1TastyWorkhistoryBatch)
-Mock.mock(/\/thk\/api\/v1\/tasty\/work-history\/.*/, 'delete', __test__OutputSwagger5thk.thkApiV1TastyWorkhistoryId)
-Mock.mock(/\/thk\/api\/v1\/tasty\/.*/, 'delete', __test__OutputSwagger5thk.thkApiV1TastyId)
-Mock.mock(/\/thk\/api\/v1\/store\/social-insurance/, 'get', __test__OutputSwagger5thk.thkApiV1StoreSocialinsuranceGet)
-Mock.mock(/\/thk\/api\/v1\/store\/social-insurance/, 'post', __test__OutputSwagger5thk.thkApiV1StoreSocialinsurancePost)
-Mock.mock(/\/thk\/api\/v1\/store\/social-insurance/, 'put', __test__OutputSwagger5thk.thkApiV1StoreSocialinsurancePut)
+Mock.mock(/\/thk\/api\/v1\/tasty\/work-history/, 'get', __test__OutputSwagger5swagger5Api.thkApiV1TastyWorkhistoryGet)
+Mock.mock(/\/thk\/api\/v1\/tasty\/work-history/, 'post', __test__OutputSwagger5swagger5Api.thkApiV1TastyWorkhistoryPost)
+Mock.mock(/\/thk\/api\/v1\/tasty\/work-history/, 'put', __test__OutputSwagger5swagger5Api.thkApiV1TastyWorkhistoryPut)
+Mock.mock(
+  /\/thk\/api\/v1\/tasty\/work-history\/batch/,
+  'post',
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyWorkhistoryBatch
+)
+Mock.mock(
+  /\/thk\/api\/v1\/tasty\/work-history\/.*/,
+  'delete',
+  __test__OutputSwagger5swagger5Api.thkApiV1TastyWorkhistoryId
+)
+Mock.mock(/\/thk\/api\/v1\/tasty\/.*/, 'delete', __test__OutputSwagger5swagger5Api.thkApiV1TastyId)
+Mock.mock(
+  /\/thk\/api\/v1\/store\/social-insurance/,
+  'get',
+  __test__OutputSwagger5swagger5Api.thkApiV1StoreSocialinsuranceGet
+)
+Mock.mock(
+  /\/thk\/api\/v1\/store\/social-insurance/,
+  'post',
+  __test__OutputSwagger5swagger5Api.thkApiV1StoreSocialinsurancePost
+)
+Mock.mock(
+  /\/thk\/api\/v1\/store\/social-insurance/,
+  'put',
+  __test__OutputSwagger5swagger5Api.thkApiV1StoreSocialinsurancePut
+)
 Mock.mock(
   /\/thk\/api\/v1\/store\/social-insurance\/.*/,
   'delete',
-  __test__OutputSwagger5thk.thkApiV1StoreSocialinsuranceId
+  __test__OutputSwagger5swagger5Api.thkApiV1StoreSocialinsuranceId
 )
-Mock.mock(/\/thk\/api\/v1\/store\/student-info/, 'get', __test__OutputSwagger5thk.thkApiV1StoreStudentinfoGet)
-Mock.mock(/\/thk\/api\/v1\/store\/student-info/, 'post', __test__OutputSwagger5thk.thkApiV1StoreStudentinfoPost)
-Mock.mock(/\/thk\/api\/v1\/store\/student-info/, 'put', __test__OutputSwagger5thk.thkApiV1StoreStudentinfoPut)
-Mock.mock(/\/thk\/api\/v1\/store\/student-info\/.*/, 'delete', __test__OutputSwagger5thk.thkApiV1StoreStudentinfoId)
+Mock.mock(/\/thk\/api\/v1\/store\/student-info/, 'get', __test__OutputSwagger5swagger5Api.thkApiV1StoreStudentinfoGet)
+Mock.mock(/\/thk\/api\/v1\/store\/student-info/, 'post', __test__OutputSwagger5swagger5Api.thkApiV1StoreStudentinfoPost)
+Mock.mock(/\/thk\/api\/v1\/store\/student-info/, 'put', __test__OutputSwagger5swagger5Api.thkApiV1StoreStudentinfoPut)
+Mock.mock(
+  /\/thk\/api\/v1\/store\/student-info\/.*/,
+  'delete',
+  __test__OutputSwagger5swagger5Api.thkApiV1StoreStudentinfoId
+)
