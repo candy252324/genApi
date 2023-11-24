@@ -4,13 +4,13 @@ import commander from 'commander'
 import { init, parser, genApi, genMock } from '../index'
 import { CONFIG_FILE_NAME } from '../constant'
 
-const pkgJson = require('../package.json')
+import { version } from '../../package.json'
 const CWD = process.cwd()
 const program = commander.program // commander 实例
 const configFilePath = path.join(CWD, CONFIG_FILE_NAME)
 const apiConfig = require(configFilePath)
 
-program.version(pkgJson.version)
+program.version(version)
 
 // 注册命令
 program

@@ -1,4 +1,5 @@
 const typescript = require('rollup-plugin-typescript2')
+const json =require('@rollup/plugin-json')
 
 module.exports = [
   {
@@ -8,6 +9,7 @@ module.exports = [
       format: 'cjs',
     },
     plugins: [
+      json(),
       typescript({
         include: ['core/**'],
       }),
@@ -20,6 +22,7 @@ module.exports = [
       format: 'cjs',
     },
     plugins: [
+      json(),
       typescript({
         include: ['core/**'],
       }),
