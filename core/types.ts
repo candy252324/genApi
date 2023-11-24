@@ -19,9 +19,9 @@ export interface IApiStation {
 
 export interface IMock {
   /** 本地启动的 mock 服务端口号 */
-  port: number
+  port?: number
   /** 自定义 mock 生成规则 */
-  fieldRules: {
+  fieldRules?: {
     [key: string]: any
   }
 }

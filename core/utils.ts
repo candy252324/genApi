@@ -1,5 +1,6 @@
 import path from 'node:path'
 import fs from 'node:fs'
+import net from 'node:net'
 import pinyin from 'js-pinyin'
 import { IApiModel, IParsered, IApiGroup } from './types'
 
@@ -237,4 +238,23 @@ export function saveDataToLocal(thePath, data) {
 /** 从本地读取数据 */
 export function readDataFromLocal(path) {
   return fs.readFileSync(path, 'utf-8')
+}
+
+/** 判断端口是否被占用, 如果占用，返回新的可用端口号 */
+export function portIsOccupied(port) {
+  const server = net.createServer().listen(port)
+  return new Promise((resolve, reject) => {
+    server.on('listening', () => {
+      server.close()
+      resolve(port)
+    })
+
+    server.on('error', (err: any) => {
+      if (err.code === 'EADDRINUSE') {
+        resolve(portIsOccupied(port + 1))
+      } else {
+        reject(err)
+      }
+    })
+  })
 }

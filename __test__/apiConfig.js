@@ -66,6 +66,7 @@ module.exports = {
   // 是否生成 mock 数据
   // mock: false,
   mock: {
+    port: 8090,
     /** 自定义 mock 生成规则 */
     fieldRules: {
       // 完全匹配，值为数字

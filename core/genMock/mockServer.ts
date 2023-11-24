@@ -1,10 +1,12 @@
 import http from 'node:http'
 import path from 'node:path'
 import Mock from 'better-mock'
-import { MOCK_OUTPUT_DIR } from '../constant'
+import { portIsOccupied } from '../utils'
+import { MOCK_OUTPUT_DIR, MOCK_SERVER_PORT } from '../constant'
 import { getParseredDataFromLocal } from '../parser/localData'
 
-export function createMockServer() {
+export async function createMockServer() {
+  const port = await portIsOccupied(MOCK_SERVER_PORT)
   const server = http.createServer()
 
   server.on('request', async (req, res) => {
@@ -68,8 +70,8 @@ export function createMockServer() {
     }
   })
 
-  server.listen(8090, () => {
-    console.log('\x1B[32m%s\x1B[0m', 'mock 服务启动成功: http://localhost:8090')
+  server.listen(port, () => {
+    console.log('\x1B[32m%s\x1B[0m', `mock 服务启动成功: http://localhost:${port}`)
   })
 }
 
