@@ -10,7 +10,7 @@ export function writeApi(apiGroup: IApiGroup[], config: { outputDir: string; api
   apiGroup.forEach((item) => {
     let tplStr = `${httpTpl || ''}`
     let apiStr = ''
-    let fileUsedInterface = [] // 当前文件用到的 interface
+    let fileUsedInterface: string[] = [] // 当前文件用到的 interface
     item.apis.forEach((api) => {
       const { name, url, method, summary, parameters, outputInterface } = api
       // 出参存在且不是简单类型

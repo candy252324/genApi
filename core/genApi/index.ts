@@ -11,7 +11,7 @@ export async function genApi(data: IParsered[]) {
 }
 
 function genParaller(data: IParsered[]) {
-  const fns = []
+  const fns: void[] = []
   data.forEach((item) => {
     fns.push(genStation(item))
   })
@@ -23,7 +23,7 @@ function genStation(data: IParsered) {
   const outputDir = path.join(CWD, data.outputDir) // 文件输出目录
   const apiGroup = groupApiByFileName(data.apis)
   console.log(`总共 ${(data.apis || []).length} 个接口生成中...`)
-  writeApi(apiGroup, { outputDir, apiBody: data.apiBody, httpTpl: data.httpTpl })
+  writeApi(apiGroup, { outputDir, apiBody: data.apiBody!, httpTpl: data.httpTpl || '' })
 
   // 只有当后缀是 ts 时才生成 interface
   const ext = apiGroup[0]?.ext

@@ -13,8 +13,8 @@ export async function genMock(data: IParsered[], mockConfig: IMock) {
 
 /** 生成所有站点的 mock 数据 */
 function genMockParaller(data: IParsered[], mockConfig: IMock) {
-  const fn = []
-  const groupApiList = [] // 所有站点的 apiGroup 数据
+  const fn: any[] = []
+  const groupApiList: { outputDir: string; apiGroup: IApiGroup[] }[] = [] // 所有站点的 apiGroup 数据
   data.forEach((item) => {
     const apiGroup = groupApiByFileName(item.apis)
     groupApiList.push({ outputDir: item.outputDir, apiGroup })

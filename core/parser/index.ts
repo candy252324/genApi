@@ -23,14 +23,14 @@ export async function parser(apiConfig: IApiConfig) {
 }
 
 function parseParaller(apiList: IApiStation[]): Promise<IParsered[]> {
-  const fns = []
+  const fns: Promise<IParsered>[] = []
   apiList.forEach((item) => {
     fns.push(parseFn(item))
   })
   return Promise.all(fns)
 }
 
-async function parseFn(apiStation: IApiStation) {
+async function parseFn(apiStation: IApiStation): Promise<IParsered> {
   const swaggerJson = (await readSwagger(apiStation.swaggerUrl)) as any
   let apis: IApiModel[] = []
   let interfaces: IInterface[] = []
@@ -51,7 +51,7 @@ async function parseFn(apiStation: IApiStation) {
 /** 校验 apiConfig  */
 function validateApiConfig(apiConfig: IApiConfig) {
   const apiList = apiConfig.apiList.filter((item) => item.tag)
-  if (!apiConfig.apiBody && !apiList.every((item) => !!item.apiBody)) {
+  if (!apiConfig.apiBody && apiList.some((item) => !item.apiBody)) {
     throw new Error('请传入 apiBody , 必须是一个函数')
   }
   if (apiList.some((item) => !item.swaggerUrl)) {
