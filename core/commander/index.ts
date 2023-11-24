@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import commander from 'commander'
-import { init, parser, genApi, genMock } from '../index'
+import { init, parser, genApi, genMock, createMockServer } from '../index'
 import { CONFIG_FILE_NAME } from '../constant'
 
 import { version } from '../../package.json'
@@ -10,37 +10,38 @@ const program = commander.program // commander 实例
 const configFilePath = path.join(CWD, CONFIG_FILE_NAME)
 const apiConfig = require(configFilePath)
 
-program.version(version)
+export function registerCommand() {
+  program.version(version)
 
-// 注册命令
-program
-  .command('init')
-  .option('-f --force', 'force 是否覆盖本地的 apiConfig 文件')
-  .action((options) => init(options))
+  // 注册命令
+  program
+    .command('init')
+    .option('-f --force', 'force 是否覆盖本地的 apiConfig 文件')
+    .action((options) => init(options))
 
-program.command('now').action(() => {
-  if (!fs.existsSync(configFilePath)) {
-    console.log('缺少配置文件，执行 genapi init 生成')
-    return
-  }
-  parser(apiConfig).then((parseredData) => {
-    genApi(parseredData)
-    if (apiConfig.mock !== false) {
-      genMock(parseredData, apiConfig.mock)
+  program.command('now').action(() => {
+    if (!fs.existsSync(configFilePath)) {
+      console.log('缺少配置文件，执行 genapi init 生成')
+      return
     }
+    parser(apiConfig).then((parseredData) => {
+      genApi(parseredData)
+      if (apiConfig.mock !== false) {
+        genMock(parseredData, apiConfig.mock)
+      }
+    })
   })
-})
 
-// program.command('mock-server').action(() => {
-//   if (!fs.existsSync(configFilePath)) {
-//     console.log('缺少配置文件，执行 genapi init 生成')
-//     return
-//   }
-//   require('../core/genMock/createMockServer')
-// })
+  program.command('mock-server').action(() => {
+    if (!fs.existsSync(configFilePath)) {
+      console.log('缺少配置文件，执行 genapi init 生成')
+      return
+    }
+    createMockServer()
+  })
 
-program.helpInformation = () => {
-  return `
+  program.helpInformation = () => {
+    return `
   命令                        作用
   ----------------------------------------------------------
   genapi --version            输出版本号
@@ -49,6 +50,7 @@ program.helpInformation = () => {
   genapi now                  生成接口
   genapi mock-server          启动本地mock服务器
 `
-}
+  }
 
-program.parse(process.argv)
+  program.parse(process.argv)
+}

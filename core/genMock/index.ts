@@ -4,10 +4,11 @@ import { writeMockInterface } from './writeMockInterface'
 import { writeMockApi } from './writeMockApi'
 import { IParsered, IMock, IApiGroup } from '../types'
 import { MOCK_OUTPUT_DIR } from '../constant'
-import { groupApiByFileName } from '../utils'
+import { groupApiByFileName, cleanDir } from '../utils'
 
 export async function genMock(data: IParsered[], mockConfig: IMock) {
   console.log(`mock 数据生成中...`)
+  cleanDir(MOCK_OUTPUT_DIR)
   await genMockParaller(data, mockConfig)
 }
 
