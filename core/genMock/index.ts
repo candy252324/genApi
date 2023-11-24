@@ -28,7 +28,7 @@ function genMockParaller(data: IParsered[], mockConfig: IMock) {
 /** 生成单个站点的 mock数据 */
 function genStationMock(data: IParsered, apiGroup: IApiGroup[], mockConfig: IMock) {
   const outputDir = path.join(MOCK_OUTPUT_DIR, data.outputDir)
-  writeMockApi(apiGroup, { absOutputDir: outputDir, fieldRules: mockConfig.fieldRules })
-  writeMockInterface(data.interfaces, { absOutputDir: outputDir, fieldRules: mockConfig.fieldRules })
-  writeMockInterface(data.interfaces, { absOutputDir: outputDir, cmd: true, fieldRules: mockConfig.fieldRules }) // cmd格式， 用于 mock server
+  writeMockApi(apiGroup, { absOutputDir: outputDir, fieldRules: mockConfig?.fieldRules })
+  writeMockInterface(data.interfaces, { absOutputDir: outputDir, fieldRules: mockConfig?.fieldRules })
+  writeMockInterface(data.interfaces, { absOutputDir: outputDir, cmd: true, fieldRules: mockConfig?.fieldRules }) // cmd格式， 用于 mock server
 }
