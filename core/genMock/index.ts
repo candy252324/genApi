@@ -21,6 +21,6 @@ function genMockParaller(data: IParsered[], mockConfig: IMock) {
 
 /** 生成单个站点的 mock数据 */
 function genStationMock(data: IParsered, mockConfig: IMock) {
-  const outputDir = path.join(MOCK_OUTPUT_DIR, data.outputDir)
-  writeMockInterface(data.interfaces, { absOutputDir: outputDir, fieldRules: mockConfig?.fieldRules }) // cmd格式， 用于 mock server
+  const outputDir = path.join(MOCK_OUTPUT_DIR, data.stationFlag) // xxx/mock/station0
+  writeMockInterface(data.interfaces, { outputDir, fieldRules: mockConfig?.fieldRules })
 }

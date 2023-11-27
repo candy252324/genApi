@@ -5,7 +5,7 @@ import { getFieldMockStr } from './mockUtils'
 import { IInterface } from '../types'
 
 /** interface 写入 */
-export function writeMockInterface(interfaces: IInterface[], { absOutputDir, fieldRules }) {
+export function writeMockInterface(interfaces: IInterface[], { outputDir, fieldRules }) {
   let str = ''
   interfaces.forEach((item) => {
     str += `function ${item.name}() {`
@@ -27,11 +27,11 @@ export function writeMockInterface(interfaces: IInterface[], { absOutputDir, fie
   }, 'module.exports = {')
 
   str += exportStr
-  const targetFile = path.join(absOutputDir, `_interfaces.cmd.js`)
-  fs.access(absOutputDir, (err) => {
+  const targetFile = path.join(outputDir, `_interfaces.cmd.js`)
+  fs.access(outputDir, (err) => {
     if (err) {
       // 若目标目录不存在，则创建
-      fs.mkdirSync(absOutputDir, { recursive: true })
+      fs.mkdirSync(outputDir, { recursive: true })
     }
     fs.writeFileSync(targetFile, str)
     // 格式化

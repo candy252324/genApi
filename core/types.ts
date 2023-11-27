@@ -86,6 +86,8 @@ export interface IInterface {
 }
 
 export interface IParsered extends IApiStation {
+  /** swagger 站点标记，如 station0 station1 */
+  stationFlag: string
   apis: IApiModel[]
   interfaces: IInterface[]
 }

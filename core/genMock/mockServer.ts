@@ -25,10 +25,9 @@ export async function createMockServer() {
     //   url: '/api/chat/pageList',
     //   method: 'post',
     //   outputInterface: 'ApiResponseUnReadComPageHuiHuaLieBiaoXiangYing',
-    //   namespace: 'chat',
-    //   outputDir: '/src/api'
+    //   stationFlag: 'station0'
     // }
-    let obj: { url: string; method: string; outputInterface: string; outputDir: string } = {} as any
+    let obj: { url: string; method: string; outputInterface: string; stationFlag: string } = {} as any
     // 找到 url 相同的api
     ;(allApiData || []).find((item) => {
       return (item.apis || []).find((theOne) => {
@@ -41,7 +40,7 @@ export async function createMockServer() {
           obj.url = theOne.url
           obj.method = theOne.method
           obj.outputInterface = theOne.outputInterface
-          obj.outputDir = item.outputDir
+          obj.stationFlag = item.stationFlag
           return true
         }
       })
@@ -49,8 +48,8 @@ export async function createMockServer() {
 
     if (Object.keys(obj).length) {
       try {
-        const { outputDir, outputInterface } = obj
-        const cmdInterfacePath = path.join(MOCK_OUTPUT_DIR, outputDir, './_interfaces.cmd.js') // 'D:\____own____\genApi\mock' +  '/src/api'
+        const { stationFlag, outputInterface } = obj
+        const cmdInterfacePath = path.join(MOCK_OUTPUT_DIR, stationFlag, './_interfaces.cmd.js') // 'D:\____own____\genApi\mock' +  'station0'
         delete require.cache[require.resolve(cmdInterfacePath)] // 删除require缓存, 保证拿到最新的mock数据
         const theInterface = require(cmdInterfacePath)
         const interfaceFn = theInterface[outputInterface] // interface.GreenBookGratefulInfoResp

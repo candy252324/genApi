@@ -24,13 +24,13 @@ export async function parser(apiConfig: IApiConfig) {
 
 function parseParaller(apiList: IApiStation[]): Promise<IParsered[]> {
   const fns: Promise<IParsered>[] = []
-  apiList.forEach((item) => {
-    fns.push(parseFn(item))
+  apiList.forEach((item, index) => {
+    fns.push(parseFn(item, index))
   })
   return Promise.all(fns)
 }
 
-async function parseFn(apiStation: IApiStation): Promise<IParsered> {
+async function parseFn(apiStation: IApiStation, stationIndex: number): Promise<IParsered> {
   const swaggerJson = (await readSwagger(apiStation.swaggerUrl)) as any
   let apis: IApiModel[] = []
   let interfaces: IInterface[] = []
@@ -43,6 +43,7 @@ async function parseFn(apiStation: IApiStation): Promise<IParsered> {
   }
   return {
     ...apiStation,
+    stationFlag: `station${stationIndex}`,
     apis,
     interfaces,
   }
