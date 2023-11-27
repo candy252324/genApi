@@ -5,14 +5,11 @@ import { getFieldMockStr } from './mockUtils'
 import { IInterface } from '../types'
 
 /** interface 写入 */
-export function writeMockInterface(interfaces: IInterface[], { absOutputDir, cmd = false, fieldRules }) {
-  let str = cmd ? '' : 'import Mock from "better-mock"\n'
-  interfaces.forEach((item, index) => {
-    if (cmd) {
-      str += `function ${item.name}() {`
-    } else {
-      str += `export function ${item.name}() {`
-    }
+export function writeMockInterface(interfaces: IInterface[], { absOutputDir, fieldRules }) {
+  let str = ''
+  interfaces.forEach((item) => {
+    str += `function ${item.name}() {`
+
     if (item?.properties && item.properties?.length) {
       let mockRes = ''
       item.properties.forEach((it) => {
@@ -23,16 +20,14 @@ export function writeMockInterface(interfaces: IInterface[], { absOutputDir, cmd
     str += '\n}\n'
   })
 
-  if (cmd) {
-    const exportStr = interfaces.reduce((pre, cur, index) => {
-      const last = index === interfaces.length - 1 ? '}' : ''
-      pre = `${pre}${cur.name},\n${last}`
-      return pre
-    }, 'module.exports = {')
+  const exportStr = interfaces.reduce((pre, cur, index) => {
+    const last = index === interfaces.length - 1 ? '}' : ''
+    pre = `${pre}${cur.name},\n${last}`
+    return pre
+  }, 'module.exports = {')
 
-    str += exportStr
-  }
-  const targetFile = path.join(absOutputDir, cmd ? `_interfaces.cmd.js` : `_interfaces.js`)
+  str += exportStr
+  const targetFile = path.join(absOutputDir, `_interfaces.cmd.js`)
   fs.access(absOutputDir, (err) => {
     if (err) {
       // 若目标目录不存在，则创建
