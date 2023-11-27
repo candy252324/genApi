@@ -1,6 +1,6 @@
 import http from 'node:http'
 import path from 'node:path'
-import Mock from 'better-mock'
+import Mock from 'mockjs'
 import { portIsOccupied } from '../utils'
 import { MOCK_OUTPUT_DIR, MOCK_SERVER_PORT } from '../constant'
 import { getParseredDataFromLocal } from '../parser/localData'
