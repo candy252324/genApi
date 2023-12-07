@@ -56,6 +56,7 @@ function handleInterfaceModal(obj): Omit<IInterface, 'name'> {
     isSimpleJsType, // 是否是简单数据 就是 js 类型
     type: additionalProperties ? handleWeirdName(additionalProperties) : handleItemsType(obj),
     description: obj.description || '',
+    enums: obj.enum && Array.isArray(obj.enum) ? obj.enum : undefined,
   }
 }
 

@@ -395,13 +395,13 @@ export interface ComLoginReq {
   blue?: string
   /** 密码凭长春花：微信：code */
   certificate?: string
-  clientType?: string
+  clientType?: 'ALI_MP' | 'ANDROID' | 'DEVICE_END' | 'H5' | 'IOS' | 'MOBILE_END' | 'PC' | 'WECHAT_MP'
   clientVersion?: string
   deviceCode?: string
   deviceManufacturer?: string
   deviceModel?: string
   /** 登录模式 */
-  loginModeEnum?: string
+  loginModeEnum?: 'CORP_WEIXIN' | 'DINGDING' | 'MOBILE_CODE_FAST' | 'ONE_CLICK' | 'PASSWORD' | 'TOKEN' | 'VERIFICATION_CODE' | 'WECHAT' | 'WECHAT_FAST'
   /** 滑块验长春花唯一标示 */
   uuid?: string
 }

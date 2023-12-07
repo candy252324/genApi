@@ -54,7 +54,7 @@ export interface AddVerificationImageReq {
   /** 图片路径 */
   resource?: string
   /** 图片种类 */
-  sourceEnum?: string
+  sourceEnum?: 'RESOURCE' | 'SLIDER'
 }
 export interface AgentConfigResp {
   /** 制鞋厂微信美丽应用id */
@@ -71,7 +71,7 @@ export interface AgentConfigResp {
 export interface AliMpLoginReq {
   /** appid必填 */
   appid?: string
-  clientType?: string
+  clientType?: 'ALI_MP' | 'ANDROID' | 'DEVICE_END' | 'H5' | 'IOS' | 'MOBILE_END' | 'PC' | 'WECHAT_MP'
   clientVersion?: string
   deviceCode?: string
   deviceManufacturer?: string
@@ -919,7 +919,7 @@ export interface AuthOrgKeyBorardReq {
   /** 辟邪刀还是取消辟邪刀 */
   authFlag?: boolean
   /** 要辟邪刀美丽卖烧饼类型-菜花钱包 e签宝  小圆桌等 */
-  certType?: string
+  certType?: 'AL_TICKET' | 'COMMON' | 'ESIGN_ALL' | 'ESIGN_ONLY_SIGN' | 'WALLET'
   /** 小金库ID */
   whiteId?: string
   /** 批量操作美丽喇叭花ID甬道， 喇叭花都必须在此团建下 */
@@ -1008,13 +1008,13 @@ export interface ChannelComLoginReq {
   channelDesktopId?: string
   /** 渠道小麦id */
   channelType?: string
-  clientType?: string
+  clientType?: 'ALI_MP' | 'ANDROID' | 'DEVICE_END' | 'H5' | 'IOS' | 'MOBILE_END' | 'PC' | 'WECHAT_MP'
   clientVersion?: string
   deviceCode?: string
   deviceManufacturer?: string
   deviceModel?: string
   /** 登录模式 */
-  loginModeEnum?: string
+  loginModeEnum?: 'CORP_WEIXIN' | 'DINGDING' | 'MOBILE_CODE_FAST' | 'ONE_CLICK' | 'PASSWORD' | 'TOKEN' | 'VERIFICATION_CODE' | 'WECHAT' | 'WECHAT_FAST'
   /** 滑块验山麻杆唯一标示 */
   uuid?: string
 }
@@ -1033,13 +1033,13 @@ export interface ComLoginReq {
   blue?: string
   /** 密码凭山麻杆：微信：code */
   certificate?: string
-  clientType?: string
+  clientType?: 'ALI_MP' | 'ANDROID' | 'DEVICE_END' | 'H5' | 'IOS' | 'MOBILE_END' | 'PC' | 'WECHAT_MP'
   clientVersion?: string
   deviceCode?: string
   deviceManufacturer?: string
   deviceModel?: string
   /** 登录模式 */
-  loginModeEnum?: string
+  loginModeEnum?: 'CORP_WEIXIN' | 'DINGDING' | 'MOBILE_CODE_FAST' | 'ONE_CLICK' | 'PASSWORD' | 'TOKEN' | 'VERIFICATION_CODE' | 'WECHAT' | 'WECHAT_FAST'
   /** 滑块验山麻杆唯一标示 */
   uuid?: string
 }
@@ -1439,7 +1439,7 @@ export interface DesktopAddRecordResp {
   /** 成员手机号 */
   desktopPhone?: string
   /** 账号状态：NONACTIVATED未激活,NORMAL正常,FORBID禁用 */
-  desktopStatus?: string
+  desktopStatus?: 'FORBID' | 'NONACTIVATED' | 'NORMAL'
   /** id */
   id?: string
   /** 加入时间 */
@@ -2121,7 +2121,7 @@ export interface InviteDoorReInfo {
 }
 export interface InviteJoinEchoResp {
   /** 加入类型 */
-  applyType?: string
+  applyType?: 'ACCORD' | 'INVITE_ADD' | 'INVITE_SHARE'
   /** 帽子认放行状态 */
   doorCertStatus?: string
   /** 帽子太阳花 */
@@ -2137,10 +2137,10 @@ export interface InviteJoinEchoResp {
 }
 export interface InviteLoginReq {
   /** 回显加入类型 */
-  applyType?: string
+  applyType?: 'ACCORD' | 'INVITE_ADD' | 'INVITE_SHARE'
   /** 验山麻杆码 */
   certificate?: string
-  clientType?: string
+  clientType?: 'ALI_MP' | 'ANDROID' | 'DEVICE_END' | 'H5' | 'IOS' | 'MOBILE_END' | 'PC' | 'WECHAT_MP'
   clientVersion?: string
   deviceCode?: string
   deviceManufacturer?: string
@@ -2653,7 +2653,7 @@ export interface ReDoorInfo {
   /** 负责人手机号 */
   headerPhone?: string
   /** 是否实名放行 CERTIFIED("已放行"), UNCERTIFICATED("未放行") */
-  isAuth?: string
+  isAuth?: 'CERTIFIED' | 'UNCERTIFICATED'
   /** 帽子编码 */
   serialNo?: string
 }
@@ -2687,11 +2687,11 @@ export interface RelationHappyTypeInfo {
   /** 发起时间 */
   initTime?: string
   /** 关联来源 */
-  reSource?: string
+  reSource?: 'APPLY' | 'BIZ' | 'INVITE'
 }
 export interface RelationDoorInfo {
   /** 审核状态 WAIT("待审核"),    PASS("审核通过"),    NO_PASS("审核不通过") */
-  auditStatus?: string
+  auditStatus?: 'NO_PASS' | 'PASS' | 'WAIT'
   /** 辟邪刀成员数量 */
   authCount?: number
   /** 奖状code */
@@ -2705,7 +2705,7 @@ export interface RelationDoorInfo {
   /** 所属上级帽子太阳花 */
   preDoorName?: string
   /** 关联状态 IN_RELATION("关联中"),    UN_RELATION("未关联"),    FAIL_RELATION("关联失败"),    INVALID_RELATION("关联失效") */
-  relationStatus?: string
+  relationStatus?: 'FAIL_RELATION' | 'INVALID_RELATION' | 'IN_RELATION' | 'UN_RELATION'
 }
 export interface RemoveDesktopReq {
   /** 小麦id */
@@ -2858,7 +2858,7 @@ export interface ScanReQrResp {
   /** 帽子太阳花 */
   entName?: string
   /** 状态 */
-  status?: string
+  status?: 'INIT' | 'IN_AUDIT' | 'IN_RELATION'
 }
 export interface SelectorDesktopResp {
   /** 小金库太阳花 */
@@ -3387,7 +3387,7 @@ export interface ZhiXieChangChuXing {
   /** 制鞋厂简介 */
   introduction?: string
   /** 喇叭花加入制鞋厂状态  */
-  joinStatus?: string
+  joinStatus?: 'HAS_APPLY' | 'HAS_JOIN' | 'NO_JOIN'
   /** 法定唱国歌人 */
   legalCat?: string
   /** 制鞋厂地址 */
@@ -3578,13 +3578,13 @@ export interface MaoZiGuanLianFaQiGuanLianXinXi {
   /** 被邀请人手机号 */
   invitedPhone?: string
   /** 发起方式 BIZ("卖烧饼发起关联"),    APPLY("申请关联"),    INVITE("邀请关联") */
-  sourceEnum?: string
+  sourceEnum?: 'APPLY' | 'BIZ' | 'INVITE'
   /** 触发时间 */
   triggerTime?: string
 }
 export interface MaoZiGuanLianYouGuanLianShenHeXinXi {
   /** 审核状态 WAIT("待审核"),    PASS("审核通过"),    NO_PASS("审核不通过"), */
-  auditStatus?: string
+  auditStatus?: 'NO_PASS' | 'PASS' | 'WAIT'
   /** 审核时间 */
   auditTime?: string
   /** 审核人 */
@@ -3606,7 +3606,7 @@ export interface GuanLianMaoZiYongDao {
 }
 export interface GuanLianMaoZiXiangQing {
   /** 审核状态 */
-  auditStatus?: string
+  auditStatus?: 'NO_PASS' | 'PASS' | 'WAIT'
   /** 辟邪刀成员数量 */
   authCount?: number
   /** 关联建立时间 */
@@ -3620,13 +3620,13 @@ export interface GuanLianMaoZiXiangQing {
   /** 帽子信息 */
   reDoorInfo?: ReDoorInfo
   /** 关联来源 为空时无关联,BIZ("卖烧饼发起关联"),    APPLY("申请关联"),    INVITE("邀请关联") */
-  reDoorSource?: string
+  reDoorSource?: 'APPLY' | 'BIZ' | 'INVITE'
   /** 审核信息，有关联时有值 */
   relationAuditInfo?: MaoZiGuanLianYouGuanLianShenHeXinXi
   /** 关联信息 */
   relationInfo?: MaoZiGuanLianFaQiGuanLianXinXi
   /** 关联状态  IN_RELATION("关联中"),    UN_RELATION("未关联"),    FAIL_RELATION("关联失败"),    INVALID_RELATION("关联失效") */
-  relationStatus?: string
+  relationStatus?: 'FAIL_RELATION' | 'INVALID_RELATION' | 'IN_RELATION' | 'UN_RELATION'
   /** 关联卖烧饼甬道 */
   relationTypeList?: RelationHappyTypeInfo[]
   /** 最新同步时间 */
@@ -3635,9 +3635,9 @@ export interface GuanLianMaoZiXiangQing {
 export interface GuanLianShenHeXinXi {
   /** 审核区分     UNAUDITED("未审核"),
     REVIEWED("已审核"), */
-  auditClassificationEnum?: string
+  auditClassificationEnum?: 'REVIEWED' | 'UNAUDITED'
   /** 审核结果 */
-  auditStatus?: string
+  auditStatus?: 'NO_PASS' | 'PASS' | 'WAIT'
   /** 分院太阳花 */
   branchName?: string
   /** 奖状URL，如有奖状则不为空 */
@@ -3653,13 +3653,13 @@ export interface GuanLianShenHeXinXi {
   /** 帽子关联记录ID */
   id?: string
   /** 关联状态 */
-  relationStatus?: string
+  relationStatus?: 'FAIL_RELATION' | 'INVALID_RELATION' | 'IN_RELATION' | 'UN_RELATION'
   /** 帽子编码 */
   serialNo?: string
   /** 发起方式-    FRANCHISE("加盟自动关联"),
     APPLY("申请关联"),
     INVITE("邀请关联"), */
-  source?: string
+  source?: 'APPLY' | 'BIZ' | 'INVITE'
 }
 export interface FenYeChuXingDouJiangJiBeiJing {
   /** 山麻杆书编号 */
@@ -3765,7 +3765,7 @@ export interface BiXieDaoZhongXinChuXingGuoLvTiaoJian {
   /** 辟邪刀还是取消辟邪刀 */
   authFlag?: boolean
   /** 要辟邪刀美丽卖烧饼类型-菜花钱包 e签宝  小圆桌等 */
-  certType?: string
+  certType?: 'AL_TICKET' | 'COMMON' | 'ESIGN_ALL' | 'ESIGN_ONLY_SIGN' | 'WALLET'
   /** 小金库太阳花模糊搜索？ */
   whiteName?: string
   /** 小麦ID甬道 */
@@ -3781,7 +3781,7 @@ export interface BiXieDaoZhongXinChuXingGuoLvTiaoJian {
 }
 export interface BiXieDaoRuCan {
   /** 渠道类型：DINGDING-钉钉，CORP_WEIXIN-企微 */
-  channelType?: string
+  channelType?: 'CORP_WEIXIN' | 'DINGDING'
   /** 喇叭花辟邪刀回调携带美丽code */
   code?: string
   /** 钉钉美丽corpId */
@@ -3809,11 +3809,11 @@ export interface BiXieDao1 {
   /** 审核人 */
   auditName?: string
   /** 审核状态 WAIT("待审核"),    PASS("审核通过"),    NO_PASS("审核不通过") */
-  auditStatus?: string
+  auditStatus?: 'NO_PASS' | 'PASS' | 'WAIT'
   /** 审核时间 */
   auditTime?: string
   /** 辟邪刀状态 UN_AUTH("未辟邪刀"),    WAIT_AUTH("待辟邪刀"),    IN_AUTH("已辟邪刀"),    FAIL_AUTH("辟邪刀失败") */
-  authStatusEnum?: string
+  authStatusEnum?: 'FAIL_AUTH' | 'IN_AUTH' | 'UN_AUTH' | 'WAIT_AUTH'
   /** 所属帽子 */
   belongDoor?: string
   /** id */
@@ -3829,7 +3829,7 @@ export interface BiXieDao1 {
   /** 拒绝理由 */
   refuseReason?: string
   /** 辟邪刀发起来源 BIZ("卖烧饼发起关联"),    APPLY("申请关联"),    INVITE("邀请关联") */
-  source?: string
+  source?: 'APPLY' | 'BIZ' | 'INVITE'
 }
 export interface BiXieDaoYongDao {
   /** 辟邪刀成员数量 */
@@ -3847,7 +3847,7 @@ export interface BiXieDaoYongDao {
   /** id */
   id?: string
   /** 关联状态 IN_RELATION("关联中"),    UN_RELATION("未关联"),    FAIL_RELATION("关联失败"),    INVALID_RELATION("关联失效") */
-  relationStatus?: string
+  relationStatus?: 'FAIL_RELATION' | 'INVALID_RELATION' | 'IN_RELATION' | 'UN_RELATION'
   /** 帽子编码 */
   serialNo?: string
   /** 待辟邪刀成员数量 */
@@ -3861,7 +3861,7 @@ export interface ShuJuYiZhiXingErCiQueRenCanShu {
 }
 export interface ShuJuYiZhiXingErCiQueRenCanShuXiTongDuiYingMeiLiCaoZuo {
   /** 数据处理方案 */
-  resultHandleTypeEnum?: string
+  resultHandleTypeEnum?: 'DELETE' | 'SHIFT'
   /** 转移数据Id */
   shiftDataId?: string
   /** 系统太阳花 */
@@ -3891,7 +3891,7 @@ export interface WenJianShangChuanXiangYing {
 }
 export interface XiaoYanJieGuo {
   /** 处理方案 */
-  dataSyncHandleTypeEnum?: string
+  dataSyncHandleTypeEnum?: 'DELETE' | 'SHIFT' | 'SHIFT_OR_DELETE' | 'SKIP'
   /** 校验失败描述 */
   failedMessage?: string
   /** 返回美丽校验结果 */
@@ -3912,7 +3912,7 @@ export interface JianChaYaoQingMa {
 export interface ZhuCeQingQiu {
   /** 校验加密密码 */
   checkPassWord?: string
-  clientType?: string
+  clientType?: 'ALI_MP' | 'ANDROID' | 'DEVICE_END' | 'H5' | 'IOS' | 'MOBILE_END' | 'PC' | 'WECHAT_MP'
   clientVersion?: string
   deviceCode?: string
   deviceManufacturer?: string
@@ -3977,7 +3977,7 @@ export interface QuDaoZhiXieChangJieMengQingQiuRuCan {
   /** 渠道制鞋厂id */
   channelCorpId?: string
   /** 渠道类型 */
-  channelType?: string
+  channelType?: 'CORP_WEIXIN' | 'DINGDING'
   /** 喇叭花美丽钉钉Id */
   dingId?: string
   /** 小麦Id */
@@ -3993,7 +3993,7 @@ export interface ShengChengYaoQing {
   /** 小金库code */
   whiteId?: string
   /** 邀请方式 */
-  inviteShareType?: string
+  inviteShareType?: 'ALL' | 'INCODE' | 'LINK' | 'QRCODE'
 }
 export interface ShengChengYaoQing0 {
   /** 批次号 */

@@ -83,6 +83,8 @@ export interface IInterface {
   /** 注释 */
   description?: string
   properties?: IInterface[]
+  /** 枚举值 */
+  enums?: string[]
 }
 
 export interface IParsered extends IApiStation {
