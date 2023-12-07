@@ -120,7 +120,6 @@ function getParameters(parameters): IParams[] {
   // 有入参
   if (parameters && parameters.length) {
     return parameters.map((item) => {
-      let interafce = ''
       let type = '' // 如：string, number, boolean, UserInterface
       let isArray = false // 是否是数组
       let isSimpleJsType = false //  是否是简单 js 类型

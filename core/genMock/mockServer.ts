@@ -27,7 +27,7 @@ export async function createMockServer() {
     //   outputInterface: 'ApiResponseUnReadComPageHuiHuaLieBiaoXiangYing',
     //   stationFlag: 'station0'
     // }
-    let obj: { url: string; method: string; outputInterface: string; stationFlag: string } = {} as any
+    const obj: { url: string; method: string; outputInterface: string; stationFlag: string } = {} as any
     // 找到 url 相同的api
     ;(allApiData || []).find((item) => {
       return (item.apis || []).find((theOne) => {

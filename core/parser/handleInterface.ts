@@ -1,6 +1,5 @@
-import pinyin from 'js-pinyin'
 import { IInterface } from '../types'
-import { handleWeirdName, hasChinese, handleJsType } from '../utils'
+import { handleWeirdName, handleJsType } from '../utils'
 
 /** 入参格式
  * "ApiResponse«AddUserReq»": {

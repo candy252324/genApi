@@ -7,7 +7,7 @@ import { IParams, IApiGroup } from '../types'
 export function writeApi(apiGroup: IApiGroup[], config: { outputDir: string; apiBody: Function; httpTpl: string }) {
   const { outputDir, apiBody, httpTpl } = config
   apiGroup.forEach((item) => {
-    let tplStr = `${httpTpl || ''}`
+    const tplStr = `${httpTpl || ''}`
     let apiStr = ''
     let fileUsedInterface: string[] = [] // 当前文件用到的 interface
     item.apis.forEach((api) => {
