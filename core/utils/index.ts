@@ -1,8 +1,10 @@
 import path from 'node:path'
 import fs from 'node:fs'
 import net from 'node:net'
+import { exec } from 'node:child_process'
 import pinyin from 'js-pinyin'
-import { IApiModel, IParsered, IApiGroup } from './types'
+import { IApiModel, IParsered, IApiGroup } from '../types'
+import { createFolder } from './file'
 
 const jsKeyWords = [
   'delete',
@@ -198,28 +200,19 @@ export function groupApiByFileName(apis: IApiModel[]) {
   return apiGroup
 }
 
-/** 清空某个目录下所有的文件/文件夹 */
-export function cleanDir(folderPath) {
-  //判断文件夹是否存在
-  if (fs.existsSync(folderPath)) {
-    fs.readdirSync(folderPath).forEach((file, index, arr) => {
-      const dir = `${folderPath}/${file}`
-      if (fs.lstatSync(dir).isFile()) {
-        fs.unlinkSync(dir) // 删除文件
-      } else if (fs.lstatSync(dir).isDirectory()) {
-        cleanDir(dir) // 递归
-        fs.rmdirSync(dir) // 删除当前目录
-      }
-    })
-  }
+/** 将内容写入目标文件，并进行格式化
+ * @param targetFile 目标文件
+ * @param content 内容
+ */
+export function writeAndPrettify(targetFile: string, content: string) {
+  createFolder(targetFile)
+  fs.writeFileSync(targetFile, content)
+  exec(`prettier --write ${targetFile}`)
 }
 
 /** 将数据保存到本地 */
 export function saveDataToLocal(thePath, data) {
-  const theDirname = path.dirname(thePath)
-  if (!fs.existsSync(theDirname)) {
-    fs.mkdirSync(theDirname, { recursive: true })
-  }
+  createFolder(thePath)
   let _data = ''
   if (typeof data === 'string') {
     _data = data

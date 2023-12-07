@@ -2,7 +2,7 @@ import path from 'node:path'
 import { writeMockInterface } from './writeMockInterface'
 import { IParsered, IMock } from '../types'
 import { MOCK_OUTPUT_DIR } from '../constant'
-import { cleanDir } from '../utils'
+import { cleanDir } from '../utils/file'
 
 export async function genMock(data: IParsered[], mockConfig: IMock) {
   console.log(`mock 数据生成中...`)

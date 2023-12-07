@@ -1,7 +1,6 @@
 import path from 'node:path'
-import fs from 'node:fs'
-import { exec } from 'node:child_process'
-import { handleJsType } from '../utils'
+
+import { handleJsType, writeAndPrettify } from '../utils'
 import { IParams, IApiGroup } from '../types'
 
 /** api 写入 */
@@ -45,18 +44,8 @@ export function writeApi(apiGroup: IApiGroup[], config: { outputDir: string; api
       })
       importStr += `} from './_interfaces'`
     }
-
-    fs.access(outputDir, (err) => {
-      if (err) {
-        // 若目标目录不存在，则创建
-        fs.mkdirSync(outputDir, { recursive: true })
-      }
-      // 写入目标目录
-      const targetFile = path.join(outputDir, `${item.fileName}.${item.ext}`)
-      fs.writeFileSync(targetFile, `${tplStr}\n${importStr}\n${apiStr}`)
-
-      exec(`prettier --write ${targetFile}`)
-    })
+    const targetFile = path.join(outputDir, `${item.fileName}.${item.ext}`)
+    writeAndPrettify(targetFile, `${tplStr}\n${importStr}\n${apiStr}`)
   })
 }
 

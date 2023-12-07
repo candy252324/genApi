@@ -1,8 +1,7 @@
-import fs from 'node:fs'
 import path from 'node:path'
-import { exec } from 'node:child_process'
 import { getFieldMockStr } from './mockUtils'
 import { IInterface } from '../types'
+import { writeAndPrettify } from '../utils'
 
 /** interface 写入 */
 export function writeMockInterface(interfaces: IInterface[], { outputDir, fieldRules }) {
@@ -28,15 +27,7 @@ export function writeMockInterface(interfaces: IInterface[], { outputDir, fieldR
 
   str += exportStr
   const targetFile = path.join(outputDir, `_interfaces.cmd.js`)
-  fs.access(outputDir, (err) => {
-    if (err) {
-      // 若目标目录不存在，则创建
-      fs.mkdirSync(outputDir, { recursive: true })
-    }
-    fs.writeFileSync(targetFile, str)
-    // 格式化
-    exec(`prettier --write ${targetFile}`)
-  })
+  writeAndPrettify(targetFile, str)
 }
 
 /** 生成 mock

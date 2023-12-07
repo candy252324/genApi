@@ -1,6 +1,6 @@
 import path from 'node:path'
-import fs from 'node:fs'
 import { IInterface } from '../types'
+import { writeAndPrettify } from '../utils'
 
 /** interface 写入 */
 export function writeInterface(interfaces: IInterface[], config: { outputDir: string }) {
@@ -12,29 +12,16 @@ export function writeInterface(interfaces: IInterface[], config: { outputDir: st
       item.properties.forEach((it) => {
         const description = it.description ? `/** ${it.description} */` : ''
         const type = handleType({ type: it.type, enums: it.enums })
-        // 有注释
-        if (description) {
-          str += `
+
+        str += `
   ${description ? description : ''}
   ${it.name}?: ${type}${it.isArray ? '[]' : ''}`
-        }
-        // 没注释
-        else {
-          str += `
-  ${it.name}?: ${type}${it.isArray ? '[]' : ''}`
-        }
       })
     }
     str += '\n}\n'
   })
   const targetFile = path.join(outputDir, `_interfaces.ts`)
-  fs.access(outputDir, (err) => {
-    if (err) {
-      // 若目标目录不存在，则创建
-      fs.mkdirSync(outputDir, { recursive: true })
-    }
-    fs.writeFileSync(targetFile, str)
-  })
+  writeAndPrettify(targetFile, str)
 }
 
 /** 处理类型，如果有枚举，则处理成 a|b|c 的格式，否则直接返回类型，如 string, number */
