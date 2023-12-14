@@ -1014,7 +1014,16 @@ export interface ChannelComLoginReq {
   deviceManufacturer?: string
   deviceModel?: string
   /** 登录模式 */
-  loginModeEnum?: 'CORP_WEIXIN' | 'DINGDING' | 'MOBILE_CODE_FAST' | 'ONE_CLICK' | 'PASSWORD' | 'TOKEN' | 'VERIFICATION_CODE' | 'WECHAT' | 'WECHAT_FAST'
+  loginModeEnum?:
+    | 'CORP_WEIXIN'
+    | 'DINGDING'
+    | 'MOBILE_CODE_FAST'
+    | 'ONE_CLICK'
+    | 'PASSWORD'
+    | 'TOKEN'
+    | 'VERIFICATION_CODE'
+    | 'WECHAT'
+    | 'WECHAT_FAST'
   /** 滑块验山麻杆唯一标示 */
   uuid?: string
 }
@@ -1026,8 +1035,7 @@ export interface ChannelKeyBorardResp {
   /** 渠道类型(DINGDING 钉钉，CORP_WEIXIN 企微) */
   channelType?: string
 }
-export interface CharSequence {
-}
+export interface CharSequence {}
 export interface ComLoginReq {
   /** 身份标识:邮箱，手机号，微信appid,xxx */
   blue?: string
@@ -1039,7 +1047,16 @@ export interface ComLoginReq {
   deviceManufacturer?: string
   deviceModel?: string
   /** 登录模式 */
-  loginModeEnum?: 'CORP_WEIXIN' | 'DINGDING' | 'MOBILE_CODE_FAST' | 'ONE_CLICK' | 'PASSWORD' | 'TOKEN' | 'VERIFICATION_CODE' | 'WECHAT' | 'WECHAT_FAST'
+  loginModeEnum?:
+    | 'CORP_WEIXIN'
+    | 'DINGDING'
+    | 'MOBILE_CODE_FAST'
+    | 'ONE_CLICK'
+    | 'PASSWORD'
+    | 'TOKEN'
+    | 'VERIFICATION_CODE'
+    | 'WECHAT'
+    | 'WECHAT_FAST'
   /** 滑块验山麻杆唯一标示 */
   uuid?: string
 }
@@ -1223,8 +1240,7 @@ export interface CompanyInfo {
   /** 网址 */
   websites?: string
 }
-export interface Comparableobject {
-}
+export interface Comparableobject {}
 export interface CorpWehiallAuthUrlResp {
   /** 辟邪刀链接 */
   authUrl?: string
@@ -2063,8 +2079,7 @@ export interface InitAgengConfigReq {
   /** 需要初始化ageng_config美丽页面url */
   initPage?: string
 }
-export interface InputStream {
-}
+export interface InputStream {}
 export interface InviteDesktopResp {
   /** 申请理由 */
   applyReason?: string
@@ -2390,8 +2405,7 @@ export interface OrderItem {
   asc?: boolean
   column?: string
 }
-export interface OutputStream {
-}
+export interface OutputStream {}
 export interface PageDesktopAddRecordReq {
   /** 添加人姓名/手机号 */
   adderNameOrPhone?: string

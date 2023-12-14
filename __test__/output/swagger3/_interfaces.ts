@@ -401,7 +401,16 @@ export interface ComLoginReq {
   deviceManufacturer?: string
   deviceModel?: string
   /** 登录模式 */
-  loginModeEnum?: 'CORP_WEIXIN' | 'DINGDING' | 'MOBILE_CODE_FAST' | 'ONE_CLICK' | 'PASSWORD' | 'TOKEN' | 'VERIFICATION_CODE' | 'WECHAT' | 'WECHAT_FAST'
+  loginModeEnum?:
+    | 'CORP_WEIXIN'
+    | 'DINGDING'
+    | 'MOBILE_CODE_FAST'
+    | 'ONE_CLICK'
+    | 'PASSWORD'
+    | 'TOKEN'
+    | 'VERIFICATION_CODE'
+    | 'WECHAT'
+    | 'WECHAT_FAST'
   /** 滑块验长春花唯一标示 */
   uuid?: string
 }
@@ -1159,8 +1168,7 @@ export interface KeyBorardBindReq {
   /** 铜钱草ID */
   imKeyBorardId?: string
 }
-export interface KeyBorardBindResp {
-}
+export interface KeyBorardBindResp {}
 export interface KeyBorardCancelReq {
   imKeyBorardId?: string
   /** 短信验长春花码 */

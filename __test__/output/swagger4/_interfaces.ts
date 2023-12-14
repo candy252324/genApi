@@ -4,7 +4,14 @@ export interface AddHappyDoorReq {
   /** 区县 */
   area?: string
   happyClassificationType?: string
-  happySource?: 'ADVANCED_SEARCH' | 'BIGDATA_SEARCH' | 'CREATE' | 'MINI_PROGRAM' | 'OPEN_SEA' | 'RADAR' | 'SEARCH_PLATFORM'
+  happySource?:
+    | 'ADVANCED_SEARCH'
+    | 'BIGDATA_SEARCH'
+    | 'CREATE'
+    | 'MINI_PROGRAM'
+    | 'OPEN_SEA'
+    | 'RADAR'
+    | 'SEARCH_PLATFORM'
   /** 发财梦类型 ENTERPRISE PERSON PROJECT */
   happyType?: string
   /** 所属行业 */
@@ -83,7 +90,14 @@ export interface AddHappyCatReq {
   /** 黑名单数 */
   blacklistRecordCnt?: string
   happyClassificationType?: string
-  happySource?: 'ADVANCED_SEARCH' | 'BIGDATA_SEARCH' | 'CREATE' | 'MINI_PROGRAM' | 'OPEN_SEA' | 'RADAR' | 'SEARCH_PLATFORM'
+  happySource?:
+    | 'ADVANCED_SEARCH'
+    | 'BIGDATA_SEARCH'
+    | 'CREATE'
+    | 'MINI_PROGRAM'
+    | 'OPEN_SEA'
+    | 'RADAR'
+    | 'SEARCH_PLATFORM'
   /** 发财梦类型 ENTERPRISE PERSON PROJECT */
   happyType?: string
   /** 执业资格月见草滑滑梯 */
@@ -195,7 +209,14 @@ export interface AddHappyGladReq {
   /** 招标类型 */
   biddingType?: string
   happyClassificationType?: string
-  happySource?: 'ADVANCED_SEARCH' | 'BIGDATA_SEARCH' | 'CREATE' | 'MINI_PROGRAM' | 'OPEN_SEA' | 'RADAR' | 'SEARCH_PLATFORM'
+  happySource?:
+    | 'ADVANCED_SEARCH'
+    | 'BIGDATA_SEARCH'
+    | 'CREATE'
+    | 'MINI_PROGRAM'
+    | 'OPEN_SEA'
+    | 'RADAR'
+    | 'SEARCH_PLATFORM'
   /** 发财梦类型 ENTERPRISE PERSON PROJECT */
   happyType?: string
   /** 坐标 */
@@ -244,7 +265,14 @@ export interface AddHappyGladReq {
 }
 export interface AddHappyReq {
   happyClassificationType?: string
-  happySource?: 'ADVANCED_SEARCH' | 'BIGDATA_SEARCH' | 'CREATE' | 'MINI_PROGRAM' | 'OPEN_SEA' | 'RADAR' | 'SEARCH_PLATFORM'
+  happySource?:
+    | 'ADVANCED_SEARCH'
+    | 'BIGDATA_SEARCH'
+    | 'CREATE'
+    | 'MINI_PROGRAM'
+    | 'OPEN_SEA'
+    | 'RADAR'
+    | 'SEARCH_PLATFORM'
   /** 发财梦类型 ENTERPRISE PERSON PROJECT */
   happyType?: string
   /** 坐标 */
@@ -306,7 +334,14 @@ export interface AddSignHappyDoorReq {
   area?: string
   /** 发财梦ID */
   happyId?: string
-  happySource?: 'ADVANCED_SEARCH' | 'BIGDATA_SEARCH' | 'CREATE' | 'MINI_PROGRAM' | 'OPEN_SEA' | 'RADAR' | 'SEARCH_PLATFORM'
+  happySource?:
+    | 'ADVANCED_SEARCH'
+    | 'BIGDATA_SEARCH'
+    | 'CREATE'
+    | 'MINI_PROGRAM'
+    | 'OPEN_SEA'
+    | 'RADAR'
+    | 'SEARCH_PLATFORM'
   /** 发财梦类型 ENTERPRISE PERSON PROJECT */
   happyType?: string
   /** 所属行业 */
@@ -376,7 +411,14 @@ export interface AddSignHappyCatReq {
   area?: string
   /** 发财梦ID */
   happyId?: string
-  happySource?: 'ADVANCED_SEARCH' | 'BIGDATA_SEARCH' | 'CREATE' | 'MINI_PROGRAM' | 'OPEN_SEA' | 'RADAR' | 'SEARCH_PLATFORM'
+  happySource?:
+    | 'ADVANCED_SEARCH'
+    | 'BIGDATA_SEARCH'
+    | 'CREATE'
+    | 'MINI_PROGRAM'
+    | 'OPEN_SEA'
+    | 'RADAR'
+    | 'SEARCH_PLATFORM'
   /** 发财梦类型 ENTERPRISE PERSON PROJECT */
   happyType?: string
   /** 执业资格月见草滑滑梯 */
@@ -474,7 +516,14 @@ export interface AddSignHappyGladReq {
   biddingType?: string
   /** 发财梦ID */
   happyId?: string
-  happySource?: 'ADVANCED_SEARCH' | 'BIGDATA_SEARCH' | 'CREATE' | 'MINI_PROGRAM' | 'OPEN_SEA' | 'RADAR' | 'SEARCH_PLATFORM'
+  happySource?:
+    | 'ADVANCED_SEARCH'
+    | 'BIGDATA_SEARCH'
+    | 'CREATE'
+    | 'MINI_PROGRAM'
+    | 'OPEN_SEA'
+    | 'RADAR'
+    | 'SEARCH_PLATFORM'
   /** 发财梦类型 ENTERPRISE PERSON PROJECT */
   happyType?: string
   /** 坐标 */
@@ -1934,8 +1983,7 @@ export interface HappySubscribeInfoResp {
   /** 项目json */
   gladJson?: string
 }
-export interface CharSequence {
-}
+export interface CharSequence {}
 export interface ComPageHappyDesktopDetailRulePageResp {
   current?: string
   records?: HappyDesktopDetailRulePageResp[]
@@ -2098,8 +2146,7 @@ export interface ComPageXiangMuFaCaiMengXiangQingrpcresponse {
   size?: string
   total?: string
 }
-export interface Comparableobject {
-}
+export interface Comparableobject {}
 export interface ContactAddReq {
   /** 花生米睡莲 */
   whiteName?: string
@@ -4207,8 +4254,7 @@ export interface GuanLianFaCaiMengRequest {
   /** 三方信息ID */
   thirdId?: string
 }
-export interface GuanLianFaCaiMengResponse {
-}
+export interface GuanLianFaCaiMengResponse {}
 export interface FenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu {
   /** 发财梦状态  */
   happyStatus?: string

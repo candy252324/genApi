@@ -530,7 +530,17 @@ export interface ComLoginReq {
   deviceManufacturer?: string
   deviceModel?: string
   /** 登录模式 */
-  loginModeEnum?: 'CORP_WEIXIN' | 'DINGDING' | 'MOBILE_CODE_FAST' | 'ONE_CLICK' | 'PASSWORD' | 'TOKEN' | 'VERIFICATION_CODE' | 'WECHAT' | 'WECHAT_FAST' | 'WECHAT_WEB_FAST'
+  loginModeEnum?:
+    | 'CORP_WEIXIN'
+    | 'DINGDING'
+    | 'MOBILE_CODE_FAST'
+    | 'ONE_CLICK'
+    | 'PASSWORD'
+    | 'TOKEN'
+    | 'VERIFICATION_CODE'
+    | 'WECHAT'
+    | 'WECHAT_FAST'
+    | 'WECHAT_WEB_FAST'
   /** 微信铜钱草唯一ID */
   openId?: string
   /** 滑块验长春花唯一标示 */
@@ -1343,8 +1353,7 @@ export interface KeyBorardBindReq {
   /** 铜钱草ID */
   imKeyBorardId?: string
 }
-export interface KeyBorardBindResp {
-}
+export interface KeyBorardBindResp {}
 export interface KeyBorardBlackResp {
   /** 头像 */
   avatarUrl?: string
@@ -1479,7 +1488,26 @@ export interface MaiShaoBingXiaoXiTuiSongimXiaoXi {
   /** 消息content */
   content?: string
   /** 消息类型 */
-  contentType?: 'AUDIO' | 'FILE' | 'IMG' | 'LINK' | 'STRUCTUAL' | 'TEXT' | 'TIP' | 'TIP_DIFF_TENANT_FRIEND' | 'TIP_FRIEND_BLACK' | 'TIP_FRIEND_REJECT_MSG' | 'TIP_KICKOUT_GROUP_PART' | 'TIP_LAUNCH_GROUP_PART' | 'TIP_MODIFY_GROUP_NAME_PART' | 'TIP_NEW_ADD_SELF_GROUP_PART' | 'TIP_OPERATE_CHAT_STRANGER_CNT' | 'TIP_OPERATE_CHAT_STRANGER_MSG_CNT' | 'TIP_USER_UNNORMAL' | 'VIDEO' | 'VOICE'
+  contentType?:
+    | 'AUDIO'
+    | 'FILE'
+    | 'IMG'
+    | 'LINK'
+    | 'STRUCTUAL'
+    | 'TEXT'
+    | 'TIP'
+    | 'TIP_DIFF_TENANT_FRIEND'
+    | 'TIP_FRIEND_BLACK'
+    | 'TIP_FRIEND_REJECT_MSG'
+    | 'TIP_KICKOUT_GROUP_PART'
+    | 'TIP_LAUNCH_GROUP_PART'
+    | 'TIP_MODIFY_GROUP_NAME_PART'
+    | 'TIP_NEW_ADD_SELF_GROUP_PART'
+    | 'TIP_OPERATE_CHAT_STRANGER_CNT'
+    | 'TIP_OPERATE_CHAT_STRANGER_MSG_CNT'
+    | 'TIP_USER_UNNORMAL'
+    | 'VIDEO'
+    | 'VOICE'
   /** 结构化消息底部 */
   footer?: FooterWrapper
   /** im瓜子天鸟窝id(包括单瓜子鸟窝id和鸟窝瓜子id) */
@@ -2097,7 +2125,17 @@ export interface ShengChengWenJianfileId {
   /** oss文件名 */
   ossFileName?: string
   /** 铜钱草头像USER_AVATAR 鸟窝头像GROUP_AVATAR 消息文件MSG 卡片文件CARD_MSG 转码文件TRANS_MSG 语音AUDIO 视频VIDEO FILE文件 */
-  type?: 'AUDIO' | 'CARD_MSG' | 'FILE' | 'GROUP_AVATAR' | 'IMG' | 'MSG' | 'TRANS_MSG' | 'USER_AVATAR' | 'VIDEO' | 'VOICE'
+  type?:
+    | 'AUDIO'
+    | 'CARD_MSG'
+    | 'FILE'
+    | 'GROUP_AVATAR'
+    | 'IMG'
+    | 'MSG'
+    | 'TRANS_MSG'
+    | 'USER_AVATAR'
+    | 'VIDEO'
+    | 'VOICE'
   /** 图片宽度 */
   width?: number
 }
@@ -2202,7 +2240,16 @@ export interface NiaoWoXinXiBirdDetailReq {
 }
 export interface NiaoWoFenYeBirdPageListReq {
   /** 鸟窝属性 */
-  birdAttrE?: 'CLASSMATE' | 'COMPANY' | 'DEPT' | 'FELLOW' | 'INDUSTRY' | 'INTEREST' | 'LEISURE' | 'PROJECT' | 'SCHOOLMATE'
+  birdAttrE?:
+    | 'CLASSMATE'
+    | 'COMPANY'
+    | 'DEPT'
+    | 'FELLOW'
+    | 'INDUSTRY'
+    | 'INTEREST'
+    | 'LEISURE'
+    | 'PROJECT'
+    | 'SCHOOLMATE'
   /** 鸟窝类型 */
   birdTypeE?: 'INNER' | 'OUTER'
   /** im铜钱草id */
@@ -2412,7 +2459,17 @@ export interface NiaoWoSheZhiZhiNenYiGeZhiBuWeiNullBirdSetReq {
 }
 export interface HuoQubucket {
   /** 文件类型 */
-  fileTypeE?: 'AUDIO' | 'CARD_MSG' | 'FILE' | 'GROUP_AVATAR' | 'IMG' | 'MSG' | 'TRANS_MSG' | 'USER_AVATAR' | 'VIDEO' | 'VOICE'
+  fileTypeE?:
+    | 'AUDIO'
+    | 'CARD_MSG'
+    | 'FILE'
+    | 'GROUP_AVATAR'
+    | 'IMG'
+    | 'MSG'
+    | 'TRANS_MSG'
+    | 'USER_AVATAR'
+    | 'VIDEO'
+    | 'VOICE'
   /** 上传场景 */
   sceneE?: 'IM'
 }
@@ -2430,7 +2487,17 @@ export interface HuoQuLvKeTongQianCaoDuiYingimTongQianCaoXinXiRuCan {
 }
 export interface HuoQuALiYunQianMingRuCan {
   /** 文件类型 */
-  fileTypeE?: 'AUDIO' | 'CARD_MSG' | 'FILE' | 'GROUP_AVATAR' | 'IMG' | 'MSG' | 'TRANS_MSG' | 'USER_AVATAR' | 'VIDEO' | 'VOICE'
+  fileTypeE?:
+    | 'AUDIO'
+    | 'CARD_MSG'
+    | 'FILE'
+    | 'GROUP_AVATAR'
+    | 'IMG'
+    | 'MSG'
+    | 'TRANS_MSG'
+    | 'USER_AVATAR'
+    | 'VIDEO'
+    | 'VOICE'
   /** signContent */
   signContent?: string
 }

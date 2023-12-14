@@ -6,16 +6,14 @@ import { writeAndPrettify } from '../utils'
 export function writeInterface(interfaces: IInterface[], config: { outputDir: string }) {
   const { outputDir } = config
   let str = ''
-  interfaces.forEach((item, index) => {
-    str += `export interface ${item.name} {`
+  interfaces.forEach((item) => {
+    str += `export interface ${item.name} {\n`
     if (item?.properties && item.properties?.length) {
       item.properties.forEach((it) => {
         const description = it.description ? `/** ${it.description} */` : ''
         const type = handleType({ type: it.type, enums: it.enums })
-
-        str += `
-  ${description ? description : ''}
-  ${it.name}?: ${type}${it.isArray ? '[]' : ''}`
+        str += description ? `${description}\n` : '' // 注释
+        str += `${it.name}?: ${type}${it.isArray ? '[]' : ''}\n` //  userName?: boolean
       })
     }
     str += '\n}\n'
