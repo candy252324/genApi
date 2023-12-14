@@ -1,7 +1,10 @@
 import path from 'node:path'
+import { writeMockIndex } from './writeMockIndex'
 import { writeMockInterface } from './writeMockInterface'
-import { IParsered, IMock } from '../types'
+import { writeMockApi } from './writeMockApi'
+import { IParsered, IMock, IApiGroup } from '../types'
 import { MOCK_OUTPUT_DIR } from '../constant'
+import { groupApiByFileName } from '../utils'
 import { cleanDir } from '../utils/file'
 
 export async function genMock(data: IParsered[], mockConfig: IMock) {
@@ -13,14 +16,21 @@ export async function genMock(data: IParsered[], mockConfig: IMock) {
 /** 生成所有站点的 mock 数据 */
 function genMockParaller(data: IParsered[], mockConfig: IMock) {
   const fn: any[] = []
+  const groupApiList: { outputDir: string; stationFlag: string; apiGroup: IApiGroup[] }[] = [] // 所有站点的 apiGroup 数据
   data.forEach((item) => {
-    fn.push(genStationMock(item, mockConfig))
+    const apiGroup = groupApiByFileName(item.apis)
+    groupApiList.push({ outputDir: item.outputDir, stationFlag: item.stationFlag, apiGroup })
+    fn.push(genStationMock(item, apiGroup, mockConfig))
   })
+  // 将所有站点的 mock 接口写入入口文件 mock/index.js
+  fn.push(writeMockIndex(groupApiList, { mockRootPath: MOCK_OUTPUT_DIR }))
   return Promise.all(fn)
 }
 
 /** 生成单个站点的 mock数据 */
-function genStationMock(data: IParsered, mockConfig: IMock) {
+function genStationMock(data: IParsered, apiGroup: IApiGroup[], mockConfig: IMock) {
   const outputDir = path.join(MOCK_OUTPUT_DIR, data.stationFlag) // xxx/mock/station0
+  writeMockApi(apiGroup, { absOutputDir: outputDir, fieldRules: mockConfig?.fieldRules })
   writeMockInterface(data.interfaces, { outputDir, fieldRules: mockConfig?.fieldRules })
+  writeMockInterface(data.interfaces, { outputDir, fieldRules: mockConfig?.fieldRules, cmd: true }) // cmd格式， 用于 mock server
 }

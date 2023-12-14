@@ -1007,13 +1007,13 @@ function ComPageQingMingCaoZhiXiaoChouYu() {
 function CredentialFilter() {
   return {
     approveTime: '@datetime',
-    attachmentUrl: '@image(200x100, @color)',
+    attachmentUrl: '@image(200x100, @color, @color)',
     credentialBigType: '@string(5,50)',
     credentialName: '@ctitle(5,10)',
     credentialNo: '@string(5,50)',
     credentialSmallType: '@string(5,50)',
     dataSource: '@string(5,50)',
-    evaluationAttachmentUrl: '@image(200x100, @color)',
+    evaluationAttachmentUrl: '@image(200x100, @color, @color)',
     expireDateRangeEnd: '@datetime',
     expireDateRangeStart: '@datetime',
     hasAttachment: '@integer(3,1000)',
@@ -1091,7 +1091,7 @@ function EntCredPlanMainResp() {
     preVersionId: '@guid',
     standardTastyNum: '@integer(3,1000)',
     standardProjectNum: '@integer(3,1000)',
-    standardURL: '@image(200x100, @color)',
+    standardURL: '@image(200x100, @color, @color)',
     target: '@string(5,50)',
     type: '@integer(3,1000)',
   }
@@ -1229,8 +1229,8 @@ function FridaySummary() {
 }
 function HrTastyBankRecordDO() {
   return {
-    attachmentUrlBack: '@image(200x100, @color)',
-    attachmentUrlFace: '@image(200x100, @color)',
+    attachmentUrlBack: '@image(200x100, @color, @color)',
+    attachmentUrlFace: '@image(200x100, @color, @color)',
     bankNo: '@string(5,50)',
     bankOpenAddress: '@string(5,50)',
     createId: '@guid',
@@ -1249,7 +1249,7 @@ function HrTastyBankRecordDO() {
 function HrTastyCredentialDO() {
   return {
     approveTime: '@datetime',
-    attachmentUrl: '@image(200x100, @color)',
+    attachmentUrl: '@image(200x100, @color, @color)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
     created: '@datetime',
@@ -1258,7 +1258,7 @@ function HrTastyCredentialDO() {
     credentialNo: '@string(5,50)',
     credentialSmallType: '@string(5,50)',
     dataSource: '@string(5,50)',
-    evaluationAttachmentUrl: '@image(200x100, @color)',
+    evaluationAttachmentUrl: '@image(200x100, @color, @color)',
     expireDate: '@datetime',
     hasAttachment: '@integer(3,1000)',
     id: '@guid',
@@ -1299,8 +1299,8 @@ function HrTastyEducationDO() {
     createName: '@ctitle(5,10)',
     created: '@datetime',
     degree: '@string(5,50)',
-    degreeAttachmentUrl: '@image(200x100, @color)',
-    diplomaAttachmentUrl: '@image(200x100, @color)',
+    degreeAttachmentUrl: '@image(200x100, @color, @color)',
+    diplomaAttachmentUrl: '@image(200x100, @color, @color)',
     educationBackground: '@string(5,50)',
     educationForm: '@string(5,50)',
     educationType: '@string(5,50)',
@@ -1338,7 +1338,7 @@ function HrTastyFamilyDO() {
 }
 function HrTastyGoodBadRecordDO() {
   return {
-    attachmentUrl: '@image(200x100, @color)',
+    attachmentUrl: '@image(200x100, @color, @color)',
     content: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
@@ -1359,7 +1359,7 @@ function HrTastyPatentMonographDO() {
   return {
     applyDate: '@datetime',
     applyNum: '@string(5,50)',
-    attachmentUrl: '@image(200x100, @color)',
+    attachmentUrl: '@image(200x100, @color, @color)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
     created: '@datetime',
@@ -1437,7 +1437,7 @@ function HrTastyWorkHistoryDO() {
     salary: '@string(5,50)',
     updateId: '@datetime',
     updateName: '@datetime',
-    workHistoryAttachmentUrl: '@image(200x100, @color)',
+    workHistoryAttachmentUrl: '@image(200x100, @color, @color)',
     workTime: '@datetime',
   }
 }
@@ -1445,7 +1445,7 @@ function OcrBigDataReq() {
   return {
     base64: '@string(5,50)',
     fileName: '@ctitle(5,10)',
-    fileUrl: '@image(200x100, @color)',
+    fileUrl: '@image(200x100, @color, @color)',
   }
 }
 function PageTastyCredExamResultReq() {
@@ -1509,8 +1509,8 @@ function TastyCredUpRecommendResp() {
   return {
     applyCondition: '@string(5,50)',
     applyTime: '@datetime',
-    applyURL: '@image(200x100, @color)',
-    eduURL: '@image(200x100, @color)',
+    applyURL: '@image(200x100, @color, @color)',
+    eduURL: '@image(200x100, @color, @color)',
     title: '@ctitle(5,10)',
   }
 }
@@ -1594,7 +1594,7 @@ function PlanTastyResp() {
 function SignUrlReq() {
   return {
     bucket: '@string(5,50)',
-    callbackUrl: '@image(200x100, @color)',
+    callbackUrl: '@image(200x100, @color, @color)',
     path: '@string(5,50)',
     userAndTenantInfo: '@string(5,50)',
   }
@@ -1681,7 +1681,7 @@ function GeRenShuiGuoDao() {
     politicalOutlook: '@string(5,50)',
     regularDate: '@datetime',
     relatedMobile: '@string(5,50)',
-    signImgUrl: '@image(200x100, @color)',
+    signImgUrl: '@image(200x100, @color, @color)',
     socialSecurityHuman: '@string(5,50)',
     trialDate: '@datetime',
     usedName: '@ctitle(5,10)',
@@ -1713,7 +1713,7 @@ function GeRenGongZuoJingLi() {
     refererMobile: '@string(5,50)',
     remark: '@string(5,50)',
     salary: '@string(5,50)',
-    workHistoryAttachmentUrl: '@image(200x100, @color)',
+    workHistoryAttachmentUrl: '@image(200x100, @color, @color)',
     workTime: '@datetime',
   }
 }
@@ -1802,7 +1802,7 @@ function JuanXinCaiGongZuoJingLi() {
     refererMobile: '@string(5,50)',
     remark: '@string(5,50)',
     salary: '@string(5,50)',
-    workHistoryAttachmentUrl: '@image(200x100, @color)',
+    workHistoryAttachmentUrl: '@image(200x100, @color, @color)',
     workTime: '@datetime',
   }
 }
@@ -1822,7 +1822,7 @@ function JuanXinCaiGongZuoJingLi0() {
     refererMobile: '@string(5,50)',
     remark: '@string(5,50)',
     salary: '@string(5,50)',
-    workHistoryAttachmentUrl: '@image(200x100, @color)',
+    workHistoryAttachmentUrl: '@image(200x100, @color, @color)',
     workTime: '@datetime',
   }
 }
@@ -1887,7 +1887,7 @@ function JuanXinCaiSuoYouShuiGuoDao() {
     'projects|1-20': [HrTastyProjectDO()],
     regularDate: '@datetime',
     relatedMobile: '@string(5,50)',
-    signImgUrl: '@image(200x100, @color)',
+    signImgUrl: '@image(200x100, @color, @color)',
     socialSecurityHuman: '@string(5,50)',
     tenantId: '@guid',
     trialDate: '@datetime',
@@ -1904,7 +1904,7 @@ function JuanXinCaiSuoYouShuiGuoDao() {
 function JuanXinCaiChiGuanTouShuiGuoDao() {
   return {
     approveTime: '@datetime',
-    attachmentUrl: '@image(200x100, @color)',
+    attachmentUrl: '@image(200x100, @color, @color)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
     created: '@datetime',
@@ -1913,7 +1913,7 @@ function JuanXinCaiChiGuanTouShuiGuoDao() {
     credentialNo: '@string(5,50)',
     credentialSmallType: '@string(5,50)',
     dataSource: '@string(5,50)',
-    evaluationAttachmentUrl: '@image(200x100, @color)',
+    evaluationAttachmentUrl: '@image(200x100, @color, @color)',
     expireDate: '@datetime',
     hasAttachment: '@integer(3,1000)',
     id: '@guid',
@@ -1952,7 +1952,7 @@ function JuanXinCaiChiGuanTouShuiGuoDao() {
 function JuanXinCaiChiGuanTouShuiGuoDao0() {
   return {
     approveTime: '@datetime',
-    attachmentUrl: '@image(200x100, @color)',
+    attachmentUrl: '@image(200x100, @color, @color)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
     created: '@datetime',
@@ -1961,7 +1961,7 @@ function JuanXinCaiChiGuanTouShuiGuoDao0() {
     credentialNo: '@string(5,50)',
     credentialSmallType: '@string(5,50)',
     dataSource: '@string(5,50)',
-    evaluationAttachmentUrl: '@image(200x100, @color)',
+    evaluationAttachmentUrl: '@image(200x100, @color, @color)',
     expireDate: '@datetime',
     hasAttachment: '@integer(3,1000)',
     id: '@guid',
@@ -2376,8 +2376,8 @@ function DaShuiNiuJingLiShuiGuoDao() {
     createName: '@ctitle(5,10)',
     created: '@datetime',
     degree: '@string(5,50)',
-    degreeAttachmentUrl: '@image(200x100, @color)',
-    diplomaAttachmentUrl: '@image(200x100, @color)',
+    degreeAttachmentUrl: '@image(200x100, @color, @color)',
+    diplomaAttachmentUrl: '@image(200x100, @color, @color)',
     educationBackground: '@string(5,50)',
     educationForm: '@string(5,50)',
     educationType: '@string(5,50)',
@@ -2411,8 +2411,8 @@ function ShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing() {
 }
 function XinZengYinXingKaShuiGuoDao() {
   return {
-    attachmentUrlBack: '@image(200x100, @color)',
-    attachmentUrlFace: '@image(200x100, @color)',
+    attachmentUrlBack: '@image(200x100, @color, @color)',
+    attachmentUrlFace: '@image(200x100, @color, @color)',
     bankNo: '@string(5,50)',
     bankOpenAddress: '@string(5,50)',
     createId: '@guid',
@@ -2482,7 +2482,7 @@ function GengXinGeRenShuiGuoDao() {
     postName: '@ctitle(5,10)',
     regularDate: '@datetime',
     relatedMobile: '@string(5,50)',
-    signImgUrl: '@image(200x100, @color)',
+    signImgUrl: '@image(200x100, @color, @color)',
     socialSecurityHuman: '@string(5,50)',
     tenantId: '@guid',
     trialDate: '@datetime',
@@ -2502,8 +2502,8 @@ function GengXinDaShuiNiuJingLiShuiGuoDao() {
     createName: '@ctitle(5,10)',
     created: '@datetime',
     degree: '@string(5,50)',
-    degreeAttachmentUrl: '@image(200x100, @color)',
-    diplomaAttachmentUrl: '@image(200x100, @color)',
+    degreeAttachmentUrl: '@image(200x100, @color, @color)',
+    diplomaAttachmentUrl: '@image(200x100, @color, @color)',
     educationBackground: '@string(5,50)',
     educationForm: '@string(5,50)',
     educationType: '@string(5,50)',
@@ -2541,8 +2541,8 @@ function GengXinJiXuDaShuiNiuWeiShengSu() {
 }
 function GengXinYinXingKaShuiGuoDao() {
   return {
-    attachmentUrlBack: '@image(200x100, @color)',
-    attachmentUrlFace: '@image(200x100, @color)',
+    attachmentUrlBack: '@image(200x100, @color, @color)',
+    attachmentUrlFace: '@image(200x100, @color, @color)',
     bankNo: '@string(5,50)',
     bankOpenAddress: '@string(5,50)',
     createId: '@guid',
@@ -2637,7 +2637,7 @@ function TianJiaGeRenShuiGuoDao() {
     postName: '@ctitle(5,10)',
     regularDate: '@datetime',
     relatedMobile: '@string(5,50)',
-    signImgUrl: '@image(200x100, @color)',
+    signImgUrl: '@image(200x100, @color, @color)',
     socialSecurityHuman: '@string(5,50)',
     tenantId: '@guid',
     trialDate: '@datetime',
@@ -2657,8 +2657,8 @@ function TianJiaDaShuiNiuJingLiShuiGuoDao() {
     createName: '@ctitle(5,10)',
     created: '@datetime',
     degree: '@string(5,50)',
-    degreeAttachmentUrl: '@image(200x100, @color)',
-    diplomaAttachmentUrl: '@image(200x100, @color)',
+    degreeAttachmentUrl: '@image(200x100, @color, @color)',
+    diplomaAttachmentUrl: '@image(200x100, @color, @color)',
     educationBackground: '@string(5,50)',
     educationForm: '@string(5,50)',
     educationType: '@string(5,50)',
@@ -2947,8 +2947,8 @@ function QingMingCaoZhiXiaoChouYuWuShuLianDongNinMengDeRuShuBiaoGeShi() {
 }
 function YinXingKaShuiGuoDao() {
   return {
-    attachmentUrlBack: '@image(200x100, @color)',
-    attachmentUrlFace: '@image(200x100, @color)',
+    attachmentUrlBack: '@image(200x100, @color, @color)',
+    attachmentUrlFace: '@image(200x100, @color, @color)',
     bankNo: '@string(5,50)',
     bankOpenAddress: '@string(5,50)',
     createId: '@guid',

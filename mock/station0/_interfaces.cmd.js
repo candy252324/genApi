@@ -1120,14 +1120,14 @@ function ChannelAppGratefulConfigResp() {
     agentId: '@guid',
     appKey: '@string(5,50)',
     appSecret: '@string(5,50)',
-    appUrl: '@image(200x100, @color)',
+    appUrl: '@image(200x100, @color, @color)',
     channelType: '@string(5,50)',
     corpId: '@guid',
     id: '@guid',
-    manUrl: '@image(200x100, @color)',
+    manUrl: '@image(200x100, @color, @color)',
     outIp: '@string(5,50)',
-    pcUrl: '@image(200x100, @color)',
-    recUrl: '@image(200x100, @color)',
+    pcUrl: '@image(200x100, @color, @color)',
+    recUrl: '@image(200x100, @color, @color)',
     gratefulId: '@guid',
   }
 }
@@ -1402,7 +1402,7 @@ function CompanyInfo() {
 function Comparableobject() {}
 function CorpWehiallAuthUrlResp() {
   return {
-    authUrl: '@image(200x100, @color)',
+    authUrl: '@image(200x100, @color, @color)',
   }
 }
 function CurrentAuthResp() {
@@ -2034,7 +2034,7 @@ function ImportDesktopResp() {
   return {
     'errorDataList|1-20': [ImportDesktopErrorData()],
     errorNum: '@integer(3,1000)',
-    errorUrl: '@image(200x100, @color)',
+    errorUrl: '@image(200x100, @color, @color)',
     importDate: '@datetime',
     succNum: '@integer(3,1000)',
   }
@@ -2211,7 +2211,7 @@ function MenuResp() {
     created: '@datetime',
     dataPermissions: '@boolean',
     enable: '@boolean',
-    iconUrl: '@image(200x100, @color)',
+    iconUrl: '@image(200x100, @color, @color)',
     id: '@guid',
     level: '@integer(3,1000)',
     loginRequired: '@boolean',
@@ -2355,7 +2355,7 @@ function CatVerifyReq() {
     ocrIdCardFront: '@string(5,50)',
     openBank: '@string(5,50)',
     profession: '@string(5,50)',
-    returnUrl: '@image(200x100, @color)',
+    returnUrl: '@image(200x100, @color, @color)',
     validStatus: '@boolean',
   }
 }
@@ -2768,7 +2768,7 @@ function VerificationResp() {
     cardNo: '@string(5,50)',
     cardVaildDate: '@datetime',
     certifyId: '@guid',
-    certifyUrl: '@image(200x100, @color)',
+    certifyUrl: '@image(200x100, @color, @color)',
     code: 200,
     message: '@string(5,50)',
     ocrIdCardBack: '@string(5,50)',
@@ -2784,7 +2784,7 @@ function DouJiangJiFangDongXinXiXiangQingBiao() {
   return {
     area: '@string(5,50)',
     authStatus: '@string(5,50)',
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     city: '@city',
     country: '@string(5,50)',
     init: '@boolean',
@@ -2832,8 +2832,8 @@ function DouJiangJiFangXingXinXiBoJuZiXinXiJiaShiShiZhiXuYaoChuanRuindividualBan
     issue: '@string(5,50)',
     name: '@ctitle(5,10)',
     nationality: '@string(5,50)',
-    posUrl: '@image(200x100, @color)',
-    revUrl: '@image(200x100, @color)',
+    posUrl: '@image(200x100, @color, @color)',
+    revUrl: '@image(200x100, @color, @color)',
     sex: '@string(5,50)',
     startDate: '@datetime',
     keyBorardId: '@guid',
@@ -2868,17 +2868,17 @@ function ZhiXieChangJianDanFangXing() {
     certificateAuthStatus: '@string(5,50)',
     doorId: '@guid',
     id: '@guid',
-    institutionLegalCatCertificateUrl: '@image(200x100, @color)',
+    institutionLegalCatCertificateUrl: '@image(200x100, @color, @color)',
     legalBankNo: '@string(5,50)',
     legalBankPhone: '@integer(13100000000,18999999999)',
     legalBankPhoneVerificationCode: '@integer(13100000000,18999999999)',
     legalCat: '@string(5,50)',
     legalCatCardNo: '@string(5,50)',
-    licenseFileUrl: '@image(200x100, @color)',
+    licenseFileUrl: '@image(200x100, @color, @color)',
     licenseUnifiedCode: '@string(5,50)',
     name: '@ctitle(5,10)',
     orgType: '@string(5,50)',
-    unifiedSocialCreditCodeCertificateUrl: '@image(200x100, @color)',
+    unifiedSocialCreditCodeCertificateUrl: '@image(200x100, @color, @color)',
   }
 }
 function ZhiXieChangJianDanFangXing0() {
@@ -2889,23 +2889,23 @@ function ZhiXieChangJianDanFangXing0() {
     certificateAuthStatus: '@string(5,50)',
     doorId: '@guid',
     id: '@guid',
-    institutionLegalCatCertificateUrl: '@image(200x100, @color)',
+    institutionLegalCatCertificateUrl: '@image(200x100, @color, @color)',
     legalBankNo: '@string(5,50)',
     legalBankPhone: '@integer(13100000000,18999999999)',
     legalCat: '@string(5,50)',
     legalCatCardNo: '@string(5,50)',
-    licenseFileUrl: '@image(200x100, @color)',
+    licenseFileUrl: '@image(200x100, @color, @color)',
     licenseUnifiedCode: '@string(5,50)',
     name: '@ctitle(5,10)',
     orgType: '@string(5,50)',
-    unifiedSocialCreditCodeCertificateUrl: '@image(200x100, @color)',
+    unifiedSocialCreditCodeCertificateUrl: '@image(200x100, @color, @color)',
   }
 }
 function ZhiXieChangZhuTiXinXi() {
   return {
     area: '@string(5,50)',
     authStatus: '@string(5,50)',
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     chiefly: '@boolean',
     city: '@city',
     claimId: '@guid',
@@ -2924,7 +2924,7 @@ function ZhiXieChangZhuTiXinXi() {
     legalIdCardNo: '@string(5,50)',
     legalCat: '@string(5,50)',
     licenseUnifiedCode: '@string(5,50)',
-    licenseUnifiedUrl: '@image(200x100, @color)',
+    licenseUnifiedUrl: '@image(200x100, @color, @color)',
     location: '@string(5,50)',
     modified: '@string(5,50)',
     name: '@ctitle(5,10)',
@@ -3079,7 +3079,7 @@ function ZhiXieChangChuXing() {
   return {
     area: '@string(5,50)',
     authStatus: '@string(5,50)',
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     city: '@city',
     contactNumber: '@string(5,50)',
     country: '@string(5,50)',
@@ -3106,7 +3106,7 @@ function ZhiXieChangFangDongXinXi() {
   return {
     area: '@string(5,50)',
     authStatus: '@string(5,50)',
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     chiefly: '@boolean',
     city: '@city',
     contactNumber: '@string(5,50)',
@@ -3117,7 +3117,7 @@ function ZhiXieChangFangDongXinXi() {
     introduction: '@string(5,50)',
     legalCat: '@string(5,50)',
     licenseUnifiedCode: '@string(5,50)',
-    licenseUnifiedUrl: '@image(200x100, @color)',
+    licenseUnifiedUrl: '@image(200x100, @color, @color)',
     location: '@string(5,50)',
     name: '@ctitle(5,10)',
     province: '@province',
@@ -3129,7 +3129,7 @@ function ZhiXieChangFangDongXinXi() {
 function ZhiXieChangFangDongXinXiXiangQing() {
   return {
     area: '@string(5,50)',
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     city: '@city',
     contactNumber: '@string(5,50)',
     country: '@string(5,50)',
@@ -3148,7 +3148,7 @@ function ZhiXieChangFangDongXinXiXiangQing0() {
   return {
     area: '@string(5,50)',
     authStatus: '@string(5,50)',
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     city: '@city',
     contactNumber: '@string(5,50)',
     country: '@string(5,50)',
@@ -3170,7 +3170,7 @@ function ZhiXieChangFangDongXinXiXiangQing0() {
 function XiuGaiDouJiangJiXinXi() {
   return {
     area: '@string(5,50)',
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     city: '@city',
     country: '@string(5,50)',
     location: '@string(5,50)',
@@ -3248,7 +3248,7 @@ function GuanLianShenHeXinXi() {
     auditClassificationEnum: '@string(5,50)',
     auditStatus: '@string(5,50)',
     branchName: '@ctitle(5,10)',
-    happyLicenseUrl: '@image(200x100, @color)',
+    happyLicenseUrl: '@image(200x100, @color, @color)',
     created: '@datetime',
     franchiseDoorName: '@ctitle(5,10)',
     headerName: '@ctitle(5,10)',
@@ -3439,7 +3439,7 @@ function XiaoYanJieGuo() {
     dataSyncHandleTypeEnum: '@string(5,50)',
     failedMessage: '@string(5,50)',
     resultFlag: '@boolean',
-    skipUrl: '@image(200x100, @color)',
+    skipUrl: '@image(200x100, @color, @color)',
     systemName: '@ctitle(5,10)',
     systemNameStr: '@ctitle(5,10)',
   }

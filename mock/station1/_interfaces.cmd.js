@@ -6,7 +6,7 @@ function AddBirdResp() {
 }
 function GreenBookGratefulInfoResp() {
   return {
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     checked: '@boolean',
     kind: '@string(5,50)',
     showImBirdId: '@guid',
@@ -793,12 +793,12 @@ function CommonSearchReq() {
 }
 function CommonSearchResp() {
   return {
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     hiallType: '@string(5,50)',
     company: '@string(5,50)',
     createType: '@string(5,50)',
     birdAttr: '@string(5,50)',
-    birdAvatar: '@image(200x100, @color)',
+    birdAvatar: '@image(200x100, @color, @color)',
     birdType: '@string(5,50)',
     imBirdId: '@guid',
     imKeyBorardId: '@guid',
@@ -829,8 +829,8 @@ function ContactReq() {
 }
 function ContactResp() {
   return {
-    avatar: '@image(200x100, @color)',
-    hiallAvatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
+    hiallAvatar: '@image(200x100, @color, @color)',
     hiallStatus: '@string(5,50)',
     hiallType: '@string(5,50)',
     createType: '@string(5,50)',
@@ -867,7 +867,7 @@ function EnterBirdReq() {
 function FileDTO() {
   return {
     fileName: '@ctitle(5,10)',
-    ossUrl: '@image(200x100, @color)',
+    ossUrl: '@image(200x100, @color, @color)',
   }
 }
 function FileResp() {
@@ -878,7 +878,7 @@ function FileResp() {
     fileText: '@string(5,50)',
     fileTime: '@datetime',
     fileType: '@string(5,50)',
-    fileUrl: '@image(200x100, @color)',
+    fileUrl: '@image(200x100, @color, @color)',
     height: '@integer(3,1000)',
     width: '@integer(3,1000)',
   }
@@ -910,7 +910,7 @@ function ForwardListReq() {
 }
 function ForwardListResp() {
   return {
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     hiallType: '@string(5,50)',
     imBirdId: '@guid',
     imKeyBorardId: '@guid',
@@ -935,7 +935,7 @@ function FriendshipDetailReq() {
 function FriendshipDetailResp() {
   return {
     addFriend: '@boolean',
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     hiallType: '@string(5,50)',
     childCompany: '@string(5,50)',
     company: '@string(5,50)',
@@ -961,7 +961,7 @@ function FriendshipDetailResp() {
     msgApplyType: /FORWARD|REPLY|/,
     msgContent: '@string(5,50)',
     msgContentType: '@string(5,50)',
-    msgFileUrl: '@image(200x100, @color)',
+    msgFileUrl: '@image(200x100, @color, @color)',
     msgId: '@guid',
     msgSenderName: '@ctitle(5,10)',
     msgSequence: '@string(5,50)',
@@ -980,7 +980,7 @@ function FriendshipDetailResp() {
 }
 function FriendshipResp() {
   return {
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     imBirdId: '@guid',
     imKeyBorardId: '@guid',
     pinyin: '@string(5,50)',
@@ -1015,7 +1015,7 @@ function GetUnreadPageReq() {
 }
 function BirdF2fKeyBorardListResp() {
   return {
-    avatarUrl: '@image(200x100, @color)',
+    avatarUrl: '@image(200x100, @color, @color)',
     f2fBirdId: '@guid',
     imKeyBorardId: '@guid',
     keyBorardName: '@ctitle(5,10)',
@@ -1128,7 +1128,7 @@ function MsgSearchReq() {
 }
 function PhoneFriendshipResp() {
   return {
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     imBirdId: '@guid',
     imKeyBorardId: '@guid',
     isFriend: '@boolean',
@@ -1149,7 +1149,7 @@ function PutFileResp() {
     happyId: '@guid',
     fileId: '@guid',
     originalFileName: '@ctitle(5,10)',
-    signUrl: '@image(200x100, @color)',
+    signUrl: '@image(200x100, @color, @color)',
     url: '@url',
   }
 }
@@ -1159,7 +1159,7 @@ function QueryLastMessageResp() {
     isForceUpdate: '@boolean',
     versionDesc: '@string(5,50)',
     versionName: '@ctitle(5,10)',
-    versionUrl: '@image(200x100, @color)',
+    versionUrl: '@image(200x100, @color, @color)',
   }
 }
 function RemoteAutoBirdReq() {
@@ -1200,7 +1200,7 @@ function SearchBeforeAddFriendReq() {
 }
 function SearchBeforeAddFriendResp() {
   return {
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     channel: '@string(5,50)',
     imKeyBorardId: '@guid',
     isFriend: '@boolean',
@@ -1227,7 +1227,7 @@ function SearchReq() {
 }
 function SearchResp() {
   return {
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     hiallType: '@string(5,50)',
     company: '@string(5,50)',
     createType: '@string(5,50)',
@@ -1261,7 +1261,7 @@ function SetShowPhoneReq() {
 }
 function SwitchKeyBorardListResp() {
   return {
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     imKeyBorardId: '@guid',
     phone: '@integer(13100000000,18999999999)',
     satoken: '@string(5,50)',
@@ -1276,7 +1276,7 @@ function SwitchKeyBorardReq() {
 }
 function GratefulInfoRespLvKeXinXi() {
   return {
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     channel: '@string(5,50)',
     checked: '@boolean',
     kind: '@string(5,50)',
@@ -1326,7 +1326,7 @@ function KeyBorardBindReq() {
 function KeyBorardBindResp() {}
 function KeyBorardBlackResp() {
   return {
-    avatarUrl: '@image(200x100, @color)',
+    avatarUrl: '@image(200x100, @color, @color)',
     id: '@guid',
     imKeyBorardId: '@guid',
     gratefulName: '@ctitle(5,10)',
@@ -1356,7 +1356,7 @@ function KeyBorardListAllGratefulResp() {
 }
 function KeyBorardRespDuiXiang() {
   return {
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     whiteId: '@guid',
     whiteName: '@ctitle(5,10)',
     email: '@email',
@@ -1436,7 +1436,7 @@ function ErWeiMa() {
 }
 function XiaoDaoXiaoXi() {
   return {
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     channel: '@string(5,50)',
     hiallName: '@ctitle(5,10)',
     hiallType: '@string(5,50)',
@@ -1481,7 +1481,7 @@ function XiaoDaoXiaoXiYongDaoXiangYing() {
   return {
     bizSource: '@string(5,50)',
     channel: '@string(5,50)',
-    hiallAvatar: '@image(200x100, @color)',
+    hiallAvatar: '@image(200x100, @color, @color)',
     hiallCompany: '@string(5,50)',
     hiallJob: '@string(5,50)',
     hiallName: '@ctitle(5,10)',
@@ -1504,7 +1504,7 @@ function XiaoDaoXiaoXiYongDaoXiangYing() {
     msgApplyType: /FORWARD|REPLY|/,
     msgContent: '@string(5,50)',
     msgContentType: '@string(5,50)',
-    msgFileUrl: '@image(200x100, @color)',
+    msgFileUrl: '@image(200x100, @color, @color)',
     msgId: '@guid',
     msgSenderName: '@ctitle(5,10)',
     msgSequence: '@string(5,50)',
@@ -1534,7 +1534,7 @@ function XiuGaiBeiZhuModifyfriendRemarkReq() {
 }
 function XiuGaiTongQianCaoTouXiang() {
   return {
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
   }
 }
 function XiuGaiNiaoWoTaiYangHuaRuCanModifyBirdNameReq() {
@@ -1571,7 +1571,7 @@ function NaBuXiaoXiSouSuoQingQiu() {
 }
 function NaBuNiaoWoBaoCunRuCan() {
   return {
-    avatarUrl: '@image(200x100, @color)',
+    avatarUrl: '@image(200x100, @color, @color)',
     bizId: '@guid',
     bizSource: '@string(5,50)',
     desc: '@string(5,50)',
@@ -1611,7 +1611,7 @@ function WaiBuZhiXieChangChuCan() {
   return {
     area: '@string(5,50)',
     authStatus: '@string(5,50)',
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     chiefly: '@boolean',
     city: '@city',
     contactNumber: '@string(5,50)',
@@ -1627,7 +1627,7 @@ function WaiBuZhiXieChangChuCan() {
     legalIdCardNo: '@string(5,50)',
     legalCat: '@string(5,50)',
     licenseUnifiedCode: '@string(5,50)',
-    licenseUnifiedUrl: '@image(200x100, @color)',
+    licenseUnifiedUrl: '@image(200x100, @color, @color)',
     location: '@string(5,50)',
     mark: '@string(5,50)',
     name: '@ctitle(5,10)',
@@ -1647,7 +1647,7 @@ function WaiBuZhiXieChangSouSuoRuCan() {
 }
 function WaiBuShuiDaoXiangYing() {
   return {
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     bpKeyBorardId: '@guid',
     channel: '@string(5,50)',
     desktopNickName: '@ctitle(5,10)',
@@ -1717,7 +1717,7 @@ function XiaoXiNaBuXiangYingShiTi() {
     fileText: '@string(5,50)',
     fileTime: '@datetime',
     fileType: '@string(5,50)',
-    fileUrl: '@image(200x100, @color)',
+    fileUrl: '@image(200x100, @color, @color)',
     footer: FooterWrapper(),
     birdId: '@guid',
     height: '@integer(3,1000)',
@@ -1725,7 +1725,7 @@ function XiaoXiNaBuXiangYingShiTi() {
     isAlarm: '@boolean',
     isSystem: '@boolean',
     nickName: '@ctitle(5,10)',
-    senderAvatar: '@image(200x100, @color)',
+    senderAvatar: '@image(200x100, @color, @color)',
     senderId: '@guid',
     senderName: '@ctitle(5,10)',
     sequence: '@string(5,50)',
@@ -1756,7 +1756,7 @@ function XiaoXiDuiXiang() {
     fileText: '@string(5,50)',
     fileTime: '@datetime',
     fileType: '@string(5,50)',
-    fileUrl: '@image(200x100, @color)',
+    fileUrl: '@image(200x100, @color, @color)',
     footer: FooterWrapper(),
     birdId: '@guid',
     height: '@integer(3,1000)',
@@ -1764,7 +1764,7 @@ function XiaoXiDuiXiang() {
     isAlarm: '@boolean',
     isSystem: '@boolean',
     nickName: '@ctitle(5,10)',
-    senderAvatar: '@image(200x100, @color)',
+    senderAvatar: '@image(200x100, @color, @color)',
     senderId: '@guid',
     senderName: '@ctitle(5,10)',
     sequence: '@string(5,50)',
@@ -1826,7 +1826,7 @@ function BanBen() {
     versionDesc: '@string(5,50)',
     versionName: '@ctitle(5,10)',
     versionNum: '@string(5,50)',
-    versionUrl: '@image(200x100, @color)',
+    versionUrl: '@image(200x100, @color, @color)',
   }
 }
 function BanBen0() {
@@ -1837,7 +1837,7 @@ function BanBen0() {
     versionDesc: '@string(5,50)',
     versionName: '@ctitle(5,10)',
     versionNum: '@string(5,50)',
-    versionUrl: '@image(200x100, @color)',
+    versionUrl: '@image(200x100, @color, @color)',
   }
 }
 function ShengChengWenJianfileId() {
@@ -1877,7 +1877,7 @@ function DengLuXiangYingShiTi() {
 }
 function LvKeTongQianCaoDaoimTongQianCaoXiangYingShiTi() {
   return {
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     avatarId: '@guid',
     bpKeyBorardId: '@guid',
     email: '@email',
@@ -1938,7 +1938,7 @@ function NiaoWoFenYeBirdPageListReq() {
 }
 function NiaoWoDuiXiangBirdDetailResp() {
   return {
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     createType: '@string(5,50)',
     whiteId: '@guid',
     whitePath: '@string(5,50)',
@@ -1961,7 +1961,7 @@ function NiaoWoDuiXiangBirdDetailResp() {
     msgApplyType: /FORWARD|REPLY|/,
     msgContent: '@string(5,50)',
     msgContentType: '@string(5,50)',
-    msgFileUrl: '@image(200x100, @color)',
+    msgFileUrl: '@image(200x100, @color, @color)',
     msgId: '@guid',
     msgSenderName: '@ctitle(5,10)',
     msgSequence: '@string(5,50)',
@@ -1979,7 +1979,7 @@ function NiaoWoDuiXiangBirdDetailResp() {
 }
 function NiaoWoDuiXiangBirdResp() {
   return {
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     bizId: '@guid',
     bizSource: '@string(5,50)',
     hiallType: '@string(5,50)',
@@ -2001,7 +2001,7 @@ function NiaoWoChengYuanXinXiDuiXiangBirdMemberResp() {
     isFriendship: '@boolean',
     isNotice: '@boolean',
     isTop: '@boolean',
-    memberAvatar: '@image(200x100, @color)',
+    memberAvatar: '@image(200x100, @color, @color)',
     memberAvatarId: '@guid',
     memberName: '@ctitle(5,10)',
     memberPhone: '@integer(13100000000,18999999999)',
@@ -2144,13 +2144,13 @@ function ZhuanFaXiaoXiDuiXiang() {
     fileText: '@string(5,50)',
     fileTime: '@datetime',
     fileType: '@string(5,50)',
-    fileUrl: '@image(200x100, @color)',
+    fileUrl: '@image(200x100, @color, @color)',
     forwardMessageFooter: FooterWrapper(),
     forwardMessageIsAlarm: '@boolean',
     forwardMessageTitle: '@ctitle(5,10)',
     birdId: '@guid',
     id: '@guid',
-    senderAvatar: '@image(200x100, @color)',
+    senderAvatar: '@image(200x100, @color, @color)',
     senderId: '@guid',
     senderName: '@ctitle(5,10)',
     sequence: '@string(5,50)',
@@ -2199,7 +2199,7 @@ function DaDuNanTongQianCaoYongDaoWhiteListReq() {
 }
 function DaDuNanTongQianCaoYongDaoWhiteKeyBorardResp() {
   return {
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     avatarId: '@guid',
     imKeyBorardId: '@guid',
     isForward: '@boolean',
@@ -2211,46 +2211,46 @@ function DaDuNanTongQianCaoYongDaoWhiteKeyBorardResp() {
 }
 function YanChangChunHuaXiaoXiFenYeRequestPageListResp() {
   return {
-    applyAvatar: '@image(200x100, @color)',
-    applyAvatarUrl: '@image(200x100, @color)',
+    applyAvatar: '@image(200x100, @color, @color)',
+    applyAvatarUrl: '@image(200x100, @color, @color)',
     applyId: '@guid',
     applyName: '@ctitle(5,10)',
-    avatar: '@image(200x100, @color)',
+    avatar: '@image(200x100, @color, @color)',
     content: '@string(5,50)',
-    inviterAvatar: '@image(200x100, @color)',
-    inviterAvatarUrl: '@image(200x100, @color)',
+    inviterAvatar: '@image(200x100, @color, @color)',
+    inviterAvatarUrl: '@image(200x100, @color, @color)',
     inviterId: '@guid',
     inviterName: '@ctitle(5,10)',
-    receiverAvatar: '@image(200x100, @color)',
-    receiverAvatarUrl: '@image(200x100, @color)',
+    receiverAvatar: '@image(200x100, @color, @color)',
+    receiverAvatarUrl: '@image(200x100, @color, @color)',
     receiverId: '@guid',
     receiverName: '@ctitle(5,10)',
     requestId: '@guid',
     status: '@integer(3,1000)',
     gratefulName: '@ctitle(5,10)',
     type: '@integer(3,1000)',
-    keyBorardAvatar: '@image(200x100, @color)',
-    keyBorardAvatarUrl: '@image(200x100, @color)',
+    keyBorardAvatar: '@image(200x100, @color, @color)',
+    keyBorardAvatarUrl: '@image(200x100, @color, @color)',
     keyBorardId: '@guid',
     keyBorardName: '@ctitle(5,10)',
   }
 }
 function YanChangChunHuaXiaoXiXiangQingRequestDetailResp() {
   return {
-    applyAvatar: '@image(200x100, @color)',
+    applyAvatar: '@image(200x100, @color, @color)',
     applyId: '@guid',
     applyName: '@ctitle(5,10)',
     applyGratefulName: '@ctitle(5,10)',
     channel: '@string(5,50)',
     content: '@string(5,50)',
     created: '@datetime',
-    inviterAvatar: '@image(200x100, @color)',
+    inviterAvatar: '@image(200x100, @color, @color)',
     inviterId: '@guid',
     inviterName: '@ctitle(5,10)',
     inviterGratefulName: '@ctitle(5,10)',
     isFriendshipOrHasSameGrateful: '@boolean',
     'msgList|1-20': [QingQiuHuiFuXiaoXiYongDaoReqMsgDetailResp()],
-    receiverAvatar: '@image(200x100, @color)',
+    receiverAvatar: '@image(200x100, @color, @color)',
     receiverId: '@guid',
     receiverName: '@ctitle(5,10)',
     receiverGratefulName: '@ctitle(5,10)',

@@ -2,3 +2,4 @@
 package-lock.json
 data.cache.json
 /dist
+yarn-error.log

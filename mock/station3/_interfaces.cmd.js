@@ -45,7 +45,7 @@ function AddHappyCatCertificateReq() {
     id: '@guid',
     major: '@string(5,50)',
     name: '@ctitle(5,10)',
-    pictureUrl: '@image(200x100, @color)',
+    pictureUrl: '@image(200x100, @color, @color)',
   }
 }
 function AddHappyCatReq() {
@@ -95,7 +95,7 @@ function AddHappyCatTitleReq() {
     id: '@guid',
     level: '@string(5,50)',
     major: '@string(5,50)',
-    pictureUrl: '@image(200x100, @color)',
+    pictureUrl: '@image(200x100, @color, @color)',
   }
 }
 function AddHappyGladReq() {
@@ -153,7 +153,7 @@ function AddHappyGladReq() {
     type: '@string(5,50)',
     updateId: '@datetime',
     updateName: '@datetime',
-    webPageUrl: '@image(200x100, @color)',
+    webPageUrl: '@image(200x100, @color, @color)',
   }
 }
 function AddHappyReq() {
@@ -336,7 +336,7 @@ function AddSignHappyGladReq() {
     type: '@string(5,50)',
     updateId: '@datetime',
     updateName: '@datetime',
-    webPageUrl: '@image(200x100, @color)',
+    webPageUrl: '@image(200x100, @color, @color)',
   }
 }
 function AddSignHappyResp() {
@@ -1382,7 +1382,7 @@ function HappyCatCertificateResp() {
     id: '@guid',
     major: '@string(5,50)',
     name: '@ctitle(5,10)',
-    pictureUrl: '@image(200x100, @color)',
+    pictureUrl: '@image(200x100, @color, @color)',
     orangeered: '@string(5,50)',
   }
 }
@@ -1438,7 +1438,7 @@ function HappyCatTitleResp() {
     id: '@guid',
     level: '@string(5,50)',
     major: '@string(5,50)',
-    pictureUrl: '@image(200x100, @color)',
+    pictureUrl: '@image(200x100, @color, @color)',
   }
 }
 function HappyPlanAddHappyListReq() {
@@ -1597,7 +1597,7 @@ function HappyGladInfoResp() {
     gratefulId: '@guid',
     thirdId: '@guid',
     valid: '@guid',
-    webPageUrl: '@image(200x100, @color)',
+    webPageUrl: '@image(200x100, @color, @color)',
   }
 }
 function HappyPushDetail() {
@@ -2023,7 +2023,7 @@ function CustomerDoorAddReq() {
     doorName: '@ctitle(5,10)',
     doorStatus: '@string(5,50)',
     establishmentTime: '@datetime',
-    'fileUrlList|1-20': ['@image(200x100, @color)'],
+    'fileUrlList|1-20': ['@image(200x100, @color, @color)'],
     higherDoor: '@string(5,50)',
     'invoiceList|1-20': [CustomerInvoiceAddReq()],
     isImportant: '@integer(3,1000)',
@@ -2068,7 +2068,7 @@ function CustomerDoorDetailResp() {
     doorName: '@ctitle(5,10)',
     doorStatus: '@string(5,50)',
     establishmentTime: '@datetime',
-    'fileUrlList|1-20': ['@image(200x100, @color)'],
+    'fileUrlList|1-20': ['@image(200x100, @color, @color)'],
     higherDoor: '@string(5,50)',
     id: '@guid',
     'invoiceList|1-20': [CustomerInvoiceDetailResp()],
@@ -2128,7 +2128,7 @@ function CustomerDoorInfoResp() {
     doorName: '@ctitle(5,10)',
     doorStatus: '@string(5,50)',
     establishmentTime: '@datetime',
-    'fileUrlList|1-20': ['@image(200x100, @color)'],
+    'fileUrlList|1-20': ['@image(200x100, @color, @color)'],
     id: '@guid',
     isCooperation: '@integer(3,1000)',
     isImportant: '@integer(3,1000)',
@@ -2183,7 +2183,7 @@ function CustomerDoorUpReq() {
     doorName: '@ctitle(5,10)',
     doorStatus: '@string(5,50)',
     establishmentTime: '@datetime',
-    'fileUrlList|1-20': ['@image(200x100, @color)'],
+    'fileUrlList|1-20': ['@image(200x100, @color, @color)'],
     higherDoor: '@string(5,50)',
     id: '@guid',
     'invoiceList|1-20': [CustomerInvoiceAddReq()],
@@ -2271,7 +2271,7 @@ function CustomerCatAddReq() {
     education: '@string(5,50)',
     doorAddr: '@string(5,50)',
     doorName: '@ctitle(5,10)',
-    'fileUrlList|1-20': ['@image(200x100, @color)'],
+    'fileUrlList|1-20': ['@image(200x100, @color, @color)'],
     gender: '@string(5,50)',
     'invoiceList|1-20': [CustomerInvoiceAddReq()],
     isImportant: '@integer(3,1000)',
@@ -2299,7 +2299,7 @@ function CustomerCatCertificateInfoResp() {
     id: '@guid',
     major: '@string(5,50)',
     name: '@ctitle(5,10)',
-    pictureUrl: '@image(200x100, @color)',
+    pictureUrl: '@image(200x100, @color, @color)',
     orangeered: '@string(5,50)',
   }
 }
@@ -2332,7 +2332,7 @@ function CustomerCatDetailResp() {
     education: '@string(5,50)',
     doorAddr: '@string(5,50)',
     doorName: '@ctitle(5,10)',
-    'fileUrlList|1-20': ['@image(200x100, @color)'],
+    'fileUrlList|1-20': ['@image(200x100, @color, @color)'],
     gender: '@string(5,50)',
     id: '@guid',
     'invoiceList|1-20': [CustomerInvoiceDetailResp()],
@@ -2386,7 +2386,7 @@ function CustomerCatTitleInfoResp() {
     id: '@guid',
     level: '@string(5,50)',
     major: '@string(5,50)',
-    pictureUrl: '@image(200x100, @color)',
+    pictureUrl: '@image(200x100, @color, @color)',
   }
 }
 function CustomerCatTitleReq() {
@@ -2415,7 +2415,7 @@ function CustomerCatUpReq() {
     education: '@string(5,50)',
     doorAddr: '@string(5,50)',
     doorName: '@ctitle(5,10)',
-    'fileUrlList|1-20': ['@image(200x100, @color)'],
+    'fileUrlList|1-20': ['@image(200x100, @color, @color)'],
     gender: '@string(5,50)',
     id: '@guid',
     'invoiceList|1-20': [CustomerInvoiceAddReq()],
@@ -2548,7 +2548,7 @@ function FollowListReq() {
 function ImportExcelByUrlReq() {
   return {
     fileName: '@ctitle(5,10)',
-    fileUrl: '@image(200x100, @color)',
+    fileUrl: '@image(200x100, @color, @color)',
     taskType: '@integer(3,1000)',
   }
 }
@@ -3059,7 +3059,7 @@ function PunchPageResp() {
     coordinate: '@string(5,50)',
     country: '@string(5,50)',
     createName: '@ctitle(5,10)',
-    'imageUrlList|1-20': ['@image(200x100, @color)'],
+    'imageUrlList|1-20': ['@image(200x100, @color, @color)'],
     location: '@string(5,50)',
     province: '@province',
     punchTime: '@datetime',
@@ -3306,7 +3306,7 @@ function TravelLoginReq() {
 }
 function TravelLoginResp() {
   return {
-    redirectUrl: '@image(200x100, @color)',
+    redirectUrl: '@image(200x100, @color, @color)',
   }
 }
 function TreeNodeConfig() {
@@ -3342,7 +3342,7 @@ function VerifyRepeatCatCustomerReq() {
 }
 function ShangChuanWenJianFanHui() {
   return {
-    fileUrl: '@image(200x100, @color)',
+    fileUrl: '@image(200x100, @color, @color)',
     id: '@guid',
   }
 }
@@ -3776,7 +3776,7 @@ function HuaHuaTiQingQiu() {
     followType: '@string(5,50)',
     follower: '@string(5,50)',
     id: '@guid',
-    'imageUrlList|1-20': ['@image(200x100, @color)'],
+    'imageUrlList|1-20': ['@image(200x100, @color, @color)'],
   }
 }
 function YuMiHuaHuaTiQingQiu() {
@@ -3820,7 +3820,7 @@ function JiQiRenGenJinJiLuXiangYing() {
     followType: '@string(5,50)',
     follower: '@string(5,50)',
     id: '@guid',
-    'imageUrlList|1-20': ['@image(200x100, @color)'],
+    'imageUrlList|1-20': ['@image(200x100, @color, @color)'],
   }
 }
 function JiQiRenGenJinJiLuQingQiu() {
@@ -3836,7 +3836,7 @@ function DaoRuHuaHuaTiXiangYing() {
     'failData|1-20': [FailData()],
     failNum: '@integer(3,1000)',
     fileName: '@ctitle(5,10)',
-    fileUrl: '@image(200x100, @color)',
+    fileUrl: '@image(200x100, @color, @color)',
     importTime: '@datetime',
     operator: '@string(5,50)',
     page: '@integer(3,1000)',

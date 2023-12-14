@@ -27,7 +27,7 @@ export function getFieldMockStr({ name, type, fieldRules }) {
   } else if (type === 'string' && /department/.test(lowerCaseName)) {
     mockStr = getRandomOneFromArr('财务部|研发部|市场部|运维部|测试部')
   } else if (type === 'string' && /url|link|avatar/.test(lowerCaseName)) {
-    mockStr = '@image(200x100, @color)' // 生成一张图片地址
+    mockStr = '@image(200x100, @color, @color)' // 生成一张图片地址
   } else if (type === 'string' && /phone/.test(lowerCaseName)) {
     mockStr = '@integer(13100000000,18999999999)' // 电话号码
   } else if (type === 'string' && /email/.test(lowerCaseName)) {

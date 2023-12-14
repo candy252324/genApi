@@ -4,11 +4,14 @@ import { IInterface } from '../types'
 import { writeAndPrettify } from '../utils'
 
 /** interface 写入 */
-export function writeMockInterface(interfaces: IInterface[], { outputDir, fieldRules }) {
-  let str = ''
+export function writeMockInterface(interfaces: IInterface[], { outputDir, cmd = false, fieldRules }) {
+  let str = cmd ? '' : 'import Mock from "better-mock"\n'
   interfaces.forEach((item) => {
-    str += `function ${item.name}() {`
-
+    if (cmd) {
+      str += `function ${item.name}() {`
+    } else {
+      str += `export function ${item.name}() {`
+    }
     if (item?.properties && item.properties?.length) {
       let mockRes = ''
       item.properties.forEach((it) => {
@@ -19,14 +22,16 @@ export function writeMockInterface(interfaces: IInterface[], { outputDir, fieldR
     str += '\n}\n'
   })
 
-  const exportStr = interfaces.reduce((pre, cur, index) => {
-    const last = index === interfaces.length - 1 ? '}' : ''
-    pre = `${pre}${cur.name},\n${last}`
-    return pre
-  }, 'module.exports = {')
+  if (cmd) {
+    const exportStr = interfaces.reduce((pre, cur, index) => {
+      const last = index === interfaces.length - 1 ? '}' : ''
+      pre = `${pre}${cur.name},\n${last}`
+      return pre
+    }, 'module.exports = {')
 
-  str += exportStr
-  const targetFile = path.join(outputDir, `_interfaces.cmd.js`)
+    str += exportStr
+  }
+  const targetFile = path.join(outputDir, cmd ? `_interfaces.cmd.js` : `_interfaces.js`)
   writeAndPrettify(targetFile, str)
 }
 
