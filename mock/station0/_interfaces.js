@@ -41,7 +41,7 @@ export function AddVerificationImageReq() {
   return {
     name: '@ctitle(5,10)',
     resource: '@string(5,50)',
-    sourceEnum: '@string(5,50)',
+    sourceEnum: /RESOURCE|SLIDER/,
   }
 }
 export function AgentConfigResp() {
@@ -56,7 +56,7 @@ export function AgentConfigResp() {
 export function AliMpLoginReq() {
   return {
     appid: '@guid',
-    clientType: '@string(5,50)',
+    clientType: /ALI_MP|ANDROID|DEVICE_END|H5|IOS|MOBILE_END|PC|WECHAT_MP/,
     clientVersion: '@string(5,50)',
     deviceCode: '@string(5,50)',
     deviceManufacturer: '@string(5,50)',
@@ -1091,7 +1091,7 @@ export function AuthDoorOrgInfoResp() {
 export function AuthOrgKeyBorardReq() {
   return {
     authFlag: '@boolean',
-    certType: '@string(5,50)',
+    certType: /AL_TICKET|COMMON|ESIGN_ALL|ESIGN_ONLY_SIGN|WALLET/,
     whiteId: '@guid',
     'desktopIds|1-20': ['@string(5,50)'],
     doorId: '@guid',
@@ -1152,12 +1152,13 @@ export function ChannelComLoginReq() {
     channelCorpId: '@guid',
     channelDesktopId: '@guid',
     channelType: '@string(5,50)',
-    clientType: '@string(5,50)',
+    clientType: /ALI_MP|ANDROID|DEVICE_END|H5|IOS|MOBILE_END|PC|WECHAT_MP/,
     clientVersion: '@string(5,50)',
     deviceCode: '@string(5,50)',
     deviceManufacturer: '@string(5,50)',
     deviceModel: '@string(5,50)',
-    loginModeEnum: '@string(5,50)',
+    loginModeEnum:
+      /CORP_WEIXIN|DINGDING|MOBILE_CODE_FAST|ONE_CLICK|PASSWORD|TOKEN|VERIFICATION_CODE|WECHAT|WECHAT_FAST/,
     uuid: '@guid',
   }
 }
@@ -1173,12 +1174,13 @@ export function ComLoginReq() {
   return {
     blue: '@string(5,50)',
     certificate: '@string(5,50)',
-    clientType: '@string(5,50)',
+    clientType: /ALI_MP|ANDROID|DEVICE_END|H5|IOS|MOBILE_END|PC|WECHAT_MP/,
     clientVersion: '@string(5,50)',
     deviceCode: '@string(5,50)',
     deviceManufacturer: '@string(5,50)',
     deviceModel: '@string(5,50)',
-    loginModeEnum: '@string(5,50)',
+    loginModeEnum:
+      /CORP_WEIXIN|DINGDING|MOBILE_CODE_FAST|ONE_CLICK|PASSWORD|TOKEN|VERIFICATION_CODE|WECHAT|WECHAT_FAST/,
     uuid: '@guid',
   }
 }
@@ -1557,7 +1559,7 @@ export function DesktopAddRecordResp() {
     email: '@email',
     desktopName: '@ctitle(5,10)',
     desktopPhone: '@integer(13100000000,18999999999)',
-    desktopStatus: '@string(5,50)',
+    desktopStatus: /FORBID|NONACTIVATED|NORMAL/,
     id: '@guid',
     joinTime: '@datetime',
     refuse: '@string(5,50)',
@@ -2081,7 +2083,7 @@ export function InviteDoorReInfo() {
 }
 export function InviteJoinEchoResp() {
   return {
-    applyType: /FORWARD|REPLY|/,
+    applyType: /ACCORD|INVITE_ADD|INVITE_SHARE/,
     doorCertStatus: '@string(5,50)',
     doorName: '@ctitle(5,10)',
     inviteName: '@ctitle(5,10)',
@@ -2092,9 +2094,9 @@ export function InviteJoinEchoResp() {
 }
 export function InviteLoginReq() {
   return {
-    applyType: /FORWARD|REPLY|/,
+    applyType: /ACCORD|INVITE_ADD|INVITE_SHARE/,
     certificate: '@string(5,50)',
-    clientType: '@string(5,50)',
+    clientType: /ALI_MP|ANDROID|DEVICE_END|H5|IOS|MOBILE_END|PC|WECHAT_MP/,
     clientVersion: '@string(5,50)',
     deviceCode: '@string(5,50)',
     deviceManufacturer: '@string(5,50)',
@@ -2496,7 +2498,7 @@ export function ReDoorInfo() {
     doorName: '@ctitle(5,10)',
     headerName: '@ctitle(5,10)',
     headerPhone: '@integer(13100000000,18999999999)',
-    isAuth: '@string(5,50)',
+    isAuth: /CERTIFIED|UNCERTIFICATED/,
     serialNo: '@string(5,50)',
   }
 }
@@ -2527,19 +2529,19 @@ export function RelationHappyTypeInfo() {
   return {
     happyType: '@string(5,50)',
     initTime: '@datetime',
-    reSource: '@string(5,50)',
+    reSource: /APPLY|BIZ|INVITE/,
   }
 }
 export function RelationDoorInfo() {
   return {
-    auditStatus: '@string(5,50)',
+    auditStatus: /NO_PASS|PASS|WAIT/,
     authCount: '@integer(3,1000)',
     happyLicenseCode: '@string(5,50)',
     created: '@datetime',
     id: '@guid',
     name: '@ctitle(5,10)',
     preDoorName: '@ctitle(5,10)',
-    relationStatus: '@string(5,50)',
+    relationStatus: /FAIL_RELATION|INVALID_RELATION|IN_RELATION|UN_RELATION/,
   }
 }
 export function RemoveDesktopReq() {
@@ -2664,7 +2666,7 @@ export function ScanReQrResp() {
   return {
     auditId: '@guid',
     entName: '@ctitle(5,10)',
-    status: '@string(5,50)',
+    status: /INIT|IN_AUDIT|IN_RELATION/,
   }
 }
 export function SelectorDesktopResp() {
@@ -3088,7 +3090,7 @@ export function ZhiXieChangChuXing() {
     firmSize: '@string(5,50)',
     industryInvolved: '@string(5,50)',
     introduction: '@string(5,50)',
-    joinStatus: '@string(5,50)',
+    joinStatus: /HAS_APPLY|HAS_JOIN|NO_JOIN/,
     legalCat: '@string(5,50)',
     location: '@string(5,50)',
     name: '@ctitle(5,10)',
@@ -3206,13 +3208,13 @@ export function MaoZiGuanLianFaQiGuanLianXinXi() {
     inviteTime: '@datetime',
     invitedName: '@ctitle(5,10)',
     invitedPhone: '@integer(13100000000,18999999999)',
-    sourceEnum: '@string(5,50)',
+    sourceEnum: /APPLY|BIZ|INVITE/,
     triggerTime: '@datetime',
   }
 }
 export function MaoZiGuanLianYouGuanLianShenHeXinXi() {
   return {
-    auditStatus: '@string(5,50)',
+    auditStatus: /NO_PASS|PASS|WAIT/,
     auditTime: '@datetime',
     name: '@ctitle(5,10)',
     reason: '@string(5,50)',
@@ -3229,25 +3231,25 @@ export function GuanLianMaoZiYongDao() {
 }
 export function GuanLianMaoZiXiangQing() {
   return {
-    auditStatus: '@string(5,50)',
+    auditStatus: /NO_PASS|PASS|WAIT/,
     authCount: '@integer(3,1000)',
     created: '@datetime',
     whiteCount: '@integer(3,1000)',
     id: '@guid',
     preReDoorInfo: ReDoorInfo(),
     reDoorInfo: ReDoorInfo(),
-    reDoorSource: '@string(5,50)',
+    reDoorSource: /APPLY|BIZ|INVITE/,
     relationAuditInfo: MaoZiGuanLianYouGuanLianShenHeXinXi(),
     relationInfo: MaoZiGuanLianFaQiGuanLianXinXi(),
-    relationStatus: '@string(5,50)',
+    relationStatus: /FAIL_RELATION|INVALID_RELATION|IN_RELATION|UN_RELATION/,
     'relationTypeList|1-20': [RelationHappyTypeInfo()],
     syncTime: '@datetime',
   }
 }
 export function GuanLianShenHeXinXi() {
   return {
-    auditClassificationEnum: '@string(5,50)',
-    auditStatus: '@string(5,50)',
+    auditClassificationEnum: /REVIEWED|UNAUDITED/,
+    auditStatus: /NO_PASS|PASS|WAIT/,
     branchName: '@ctitle(5,10)',
     happyLicenseUrl: '@image(200x100, @color, @color)',
     created: '@datetime',
@@ -3255,9 +3257,9 @@ export function GuanLianShenHeXinXi() {
     headerName: '@ctitle(5,10)',
     headerPhone: '@integer(13100000000,18999999999)',
     id: '@guid',
-    relationStatus: '@string(5,50)',
+    relationStatus: /FAIL_RELATION|INVALID_RELATION|IN_RELATION|UN_RELATION/,
     serialNo: '@string(5,50)',
-    source: '@string(5,50)',
+    source: /APPLY|BIZ|INVITE/,
   }
 }
 export function FenYeChuXingDouJiangJiBeiJing() {
@@ -3342,7 +3344,7 @@ export function ZhaoHuiMiMa() {
 export function BiXieDaoZhongXinChuXingGuoLvTiaoJian() {
   return {
     authFlag: '@boolean',
-    certType: '@string(5,50)',
+    certType: /AL_TICKET|COMMON|ESIGN_ALL|ESIGN_ONLY_SIGN|WALLET/,
     whiteName: '@ctitle(5,10)',
     'desktopIds|1-20': ['@string(5,50)'],
     desktopMobile: '@string(5,50)',
@@ -3354,7 +3356,7 @@ export function BiXieDaoZhongXinChuXingGuoLvTiaoJian() {
 }
 export function BiXieDaoRuCan() {
   return {
-    channelType: '@string(5,50)',
+    channelType: /CORP_WEIXIN|DINGDING/,
     code: 200,
     corpId: '@guid',
     redirectUri: '@string(5,50)',
@@ -3377,9 +3379,9 @@ export function BiXieDao0() {
 export function BiXieDao1() {
   return {
     auditName: '@ctitle(5,10)',
-    auditStatus: '@string(5,50)',
+    auditStatus: /NO_PASS|PASS|WAIT/,
     auditTime: '@datetime',
-    authStatusEnum: '@string(5,50)',
+    authStatusEnum: /FAIL_AUTH|IN_AUTH|UN_AUTH|WAIT_AUTH/,
     belongDoor: '@string(5,50)',
     id: '@guid',
     initTime: '@datetime',
@@ -3387,7 +3389,7 @@ export function BiXieDao1() {
     name: '@ctitle(5,10)',
     phone: '@integer(13100000000,18999999999)',
     refuseReason: '@string(5,50)',
-    source: '@string(5,50)',
+    source: /APPLY|BIZ|INVITE/,
   }
 }
 export function BiXieDaoYongDao() {
@@ -3399,7 +3401,7 @@ export function BiXieDaoYongDao() {
     headerName: '@ctitle(5,10)',
     headerPhone: '@integer(13100000000,18999999999)',
     id: '@guid',
-    relationStatus: '@string(5,50)',
+    relationStatus: /FAIL_RELATION|INVALID_RELATION|IN_RELATION|UN_RELATION/,
     serialNo: '@string(5,50)',
     waitAuthCount: '@integer(3,1000)',
   }
@@ -3413,7 +3415,7 @@ export function ShuJuYiZhiXingErCiQueRenCanShu() {
 }
 export function ShuJuYiZhiXingErCiQueRenCanShuXiTongDuiYingMeiLiCaoZuo() {
   return {
-    resultHandleTypeEnum: '@string(5,50)',
+    resultHandleTypeEnum: /DELETE|SHIFT/,
     shiftDataId: '@guid',
     systemName: '@ctitle(5,10)',
   }
@@ -3437,7 +3439,7 @@ export function WenJianShangChuanXiangYing() {
 }
 export function XiaoYanJieGuo() {
   return {
-    dataSyncHandleTypeEnum: '@string(5,50)',
+    dataSyncHandleTypeEnum: /DELETE|SHIFT|SHIFT_OR_DELETE|SKIP/,
     failedMessage: '@string(5,50)',
     resultFlag: '@boolean',
     skipUrl: '@image(200x100, @color, @color)',
@@ -3454,7 +3456,7 @@ export function JianChaYaoQingMa() {
 export function ZhuCeQingQiu() {
   return {
     checkPassWord: '@string(5,50)',
-    clientType: '@string(5,50)',
+    clientType: /ALI_MP|ANDROID|DEVICE_END|H5|IOS|MOBILE_END|PC|WECHAT_MP/,
     clientVersion: '@string(5,50)',
     deviceCode: '@string(5,50)',
     deviceManufacturer: '@string(5,50)',
@@ -3498,7 +3500,7 @@ export function TianJiaDouJiangJiBeiJing0() {
 export function QuDaoZhiXieChangJieMengQingQiuRuCan() {
   return {
     channelCorpId: '@guid',
-    channelType: '@string(5,50)',
+    channelType: /CORP_WEIXIN|DINGDING/,
     dingId: '@guid',
     desktopId: '@guid',
     gratefulId: '@guid',
@@ -3509,7 +3511,7 @@ export function ShengChengYaoQing() {
   return {
     audit: '@boolean',
     whiteId: '@guid',
-    inviteShareType: '@string(5,50)',
+    inviteShareType: /ALL|INCODE|LINK|QRCODE/,
   }
 }
 export function ShengChengYaoQing0() {

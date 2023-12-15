@@ -7,8 +7,8 @@ import { CONFIG_FILE_NAME } from '../constant'
 import { version } from '../../package.json'
 const CWD = process.cwd()
 const program = commander.program // commander 实例
-// const configFilePath = path.join(CWD, CONFIG_FILE_NAME)
-const configFilePath = path.join(CWD, '__test__', CONFIG_FILE_NAME)
+const configFilePath = path.join(CWD, CONFIG_FILE_NAME)
+// const configFilePath = path.join(CWD, '__test__', CONFIG_FILE_NAME)
 const apiConfig = require(configFilePath)
 
 export function registerCommand() {

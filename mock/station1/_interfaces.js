@@ -641,13 +641,14 @@ export function ComLoginReq() {
   return {
     blue: '@string(5,50)',
     certificate: '@string(5,50)',
-    clientType: '@string(5,50)',
+    clientType: /ALI_MP|ANDROID|DEVICE_END|H5|IOS|MOBILE_END|PC|WECHAT_MP/,
     clientVersion: '@string(5,50)',
     code: 200,
     deviceCode: '@string(5,50)',
     deviceManufacturer: '@string(5,50)',
     deviceModel: '@string(5,50)',
-    loginModeEnum: '@string(5,50)',
+    loginModeEnum:
+      /CORP_WEIXIN|DINGDING|MOBILE_CODE_FAST|ONE_CLICK|PASSWORD|TOKEN|VERIFICATION_CODE|WECHAT|WECHAT_FAST|WECHAT_WEB_FAST/,
     openId: '@guid',
     uuid: '@guid',
   }
@@ -819,9 +820,9 @@ export function CommonSearchResp() {
 }
 export function ContactReq() {
   return {
-    hiallEnum: '@string(5,50)',
+    hiallEnum: /CHAT|GROUP/,
     excludeMemberImBirdId: '@guid',
-    birdTypeE: '@string(5,50)',
+    birdTypeE: /INNER|OUTER/,
     imKeyBorardId: '@guid',
     keywords: '@string(5,50)',
     page: '@integer(3,1000)',
@@ -887,15 +888,15 @@ export function FileResp() {
 export function FooterDetailDTO() {
   return {
     content: '@string(5,50)',
-    footerTypeE: '@string(5,50)',
-    methodType: '@string(5,50)',
+    footerTypeE: /BUTTON|LINK|TEXT/,
+    methodType: /GET|POST/,
     param: '',
     url: '@url',
   }
 }
 export function FooterWrapper() {
   return {
-    cardTypeE: '@string(5,50)',
+    cardTypeE: /CARD_BUTTON|CARD_LINK/,
     'details|1-20': [FooterDetailDTO()],
   }
 }
@@ -1025,7 +1026,7 @@ export function BirdF2fKeyBorardListResp() {
 export function BirdFileUploadReq() {
   return {
     bizId: '@guid',
-    bizSource: '@string(5,50)',
+    bizSource: /BASE_PLATFORM_SENDER|BIGDATA|CRM|FLEX_WORK|HR_OA_SCHOOL|OA/,
     bpSenderId: '@guid',
     'fileList|1-20': [FileDTO()],
   }
@@ -1048,7 +1049,7 @@ export function BirdTransferReq() {
 export function InnerBirdDissolveReq() {
   return {
     bizId: '@guid',
-    bizSource: '@string(5,50)',
+    bizSource: /BASE_PLATFORM_SENDER|BIGDATA|CRM|FLEX_WORK|HR_OA_SCHOOL|OA/,
     imBirdId: '@guid',
     ownerBpKeyBorardId: '@guid',
   }
@@ -1399,7 +1400,7 @@ export function aliyunSTSJianQuanFanHuiZhi() {
 export function mockJiaRenRuNiaoWoRuCan() {
   return {
     bizId: '@guid',
-    bizSourceE: '@string(5,50)',
+    bizSourceE: /BASE_PLATFORM_SENDER|BIGDATA|CRM|FLEX_WORK|HR_OA_SCHOOL|OA/,
     cityId: '@guid',
     'imKeyBorardIds|1-20': ['@string(5,50)'],
     schoolName: '@ctitle(5,10)',
@@ -1418,10 +1419,11 @@ export function MaiShaoBingXiaoXiTuiSongimXiaoXi() {
   return {
     atBpKeyBorardIds: '@string(5,50)',
     'bizIdList|1-20': ['@string(5,50)'],
-    bizSource: '@string(5,50)',
+    bizSource: /BASE_PLATFORM_SENDER|BIGDATA|CRM|FLEX_WORK|HR_OA_SCHOOL|OA/,
     bpSenderId: '@guid',
     content: '@string(5,50)',
-    contentType: '@string(5,50)',
+    contentType:
+      /AUDIO|FILE|IMG|LINK|STRUCTUAL|TEXT|TIP|TIP_DIFF_TENANT_FRIEND|TIP_FRIEND_BLACK|TIP_FRIEND_REJECT_MSG|TIP_KICKOUT_GROUP_PART|TIP_LAUNCH_GROUP_PART|TIP_MODIFY_GROUP_NAME_PART|TIP_NEW_ADD_SELF_GROUP_PART|TIP_OPERATE_CHAT_STRANGER_CNT|TIP_OPERATE_CHAT_STRANGER_MSG_CNT|TIP_USER_UNNORMAL|VIDEO|VOICE/,
     footer: FooterWrapper(),
     'imBirdIdList|1-20': ['@string(5,50)'],
     'receiverBpKeyBorardIdList|1-20': ['@string(5,50)'],
@@ -1574,7 +1576,7 @@ export function NaBuNiaoWoBaoCunRuCan() {
   return {
     avatarUrl: '@image(200x100, @color, @color)',
     bizId: '@guid',
-    bizSource: '@string(5,50)',
+    bizSource: /BASE_PLATFORM_SENDER|BIGDATA|CRM|FLEX_WORK|HR_OA_SCHOOL|OA/,
     desc: '@string(5,50)',
     'memberBpKeyBorardIdList|1-20': ['@string(5,50)'],
     name: '@ctitle(5,10)',
@@ -1584,7 +1586,7 @@ export function NaBuNiaoWoBaoCunRuCan() {
 export function NaBuNiaoWoBaoCunNiaoWoChengYuanRuCan() {
   return {
     bizId: '@guid',
-    bizSource: '@string(5,50)',
+    bizSource: /BASE_PLATFORM_SENDER|BIGDATA|CRM|FLEX_WORK|HR_OA_SCHOOL|OA/,
     'memberBpKeyBorardIdList|1-20': ['@string(5,50)'],
     ownerBpKeyBorardId: '@guid',
   }
@@ -1850,7 +1852,7 @@ export function ShengChengWenJianfileId() {
     height: '@integer(3,1000)',
     originalFileName: '@ctitle(5,10)',
     ossFileName: '@ctitle(5,10)',
-    type: '@string(5,50)',
+    type: /AUDIO|CARD_MSG|FILE|GROUP_AVATAR|IMG|MSG|TRANS_MSG|USER_AVATAR|VIDEO|VOICE/,
     width: '@integer(3,1000)',
   }
 }
@@ -1928,8 +1930,8 @@ export function NiaoWoXinXiBirdDetailReq() {
 }
 export function NiaoWoFenYeBirdPageListReq() {
   return {
-    birdAttrE: '@string(5,50)',
-    birdTypeE: '@string(5,50)',
+    birdAttrE: /CLASSMATE|COMPANY|DEPT|FELLOW|INDUSTRY|INTEREST|LEISURE|PROJECT|SCHOOLMATE/,
+    birdTypeE: /INNER|OUTER/,
     imKeyBorardId: '@guid',
     keyword: '@string(5,50)',
     name: '@ctitle(5,10)',
@@ -2022,7 +2024,7 @@ export function NiaoWoChengYuanFenYeBirdMemberPageReq() {
     needFriendRelation: '@boolean',
     page: '@integer(3,1000)',
     size: '20',
-    sortE: '@string(5,50)',
+    sortE: /GBK_NAME_ASC|GBK_NAME_DESC|TYPE_CREATED_ASC/,
   }
 }
 export function NiaoWoChengYuanYongDaoChuXingRuCan() {
@@ -2032,7 +2034,7 @@ export function NiaoWoChengYuanYongDaoChuXingRuCan() {
     isDeleteMember: '@boolean',
     keyword: '@string(5,50)',
     memberType: '@string(5,50)',
-    sortE: '@string(5,50)',
+    sortE: /GBK_NAME_ASC|GBK_NAME_DESC|TYPE_CREATED_ASC/,
   }
 }
 export function NiaoWoChengYuanSaoXueBirdMemberDelReq() {
@@ -2069,8 +2071,8 @@ export function NiaoWoSheZhiZhiNenYiGeZhiBuWeiNullBirdSetReq() {
 }
 export function HuoQubucket() {
   return {
-    fileTypeE: '@string(5,50)',
-    sceneE: '@string(5,50)',
+    fileTypeE: /AUDIO|CARD_MSG|FILE|GROUP_AVATAR|IMG|MSG|TRANS_MSG|USER_AVATAR|VIDEO|VOICE/,
+    sceneE: /IM/,
   }
 }
 export function HuoQuLvKeTongQianCaoDuiYingimTongQianCaoXinXiRuCan() {
@@ -2084,7 +2086,7 @@ export function HuoQuLvKeTongQianCaoDuiYingimTongQianCaoXinXiRuCan() {
 }
 export function HuoQuALiYunQianMingRuCan() {
   return {
-    fileTypeE: '@string(5,50)',
+    fileTypeE: /AUDIO|CARD_MSG|FILE|GROUP_AVATAR|IMG|MSG|TRANS_MSG|USER_AVATAR|VIDEO|VOICE/,
     signContent: '@string(5,50)',
   }
 }

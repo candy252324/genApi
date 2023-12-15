@@ -49,14 +49,16 @@ export function writeMockInterface(interfaces: IInterface[], { outputDir, cmd = 
    *    }]
    *  }
    */
-function getInterfaceMock(model, fieldRules) {
-  const { name, type, isSimpleJsType, isArray } = model
+function getInterfaceMock(model: IInterface, fieldRules) {
+  const { name, type, isArray, enums } = model
 
   let _mockStr = ''
   // 如果是简单类型
   let isFn = false
   let _isCustome = false
-  if (type === 'string' || type === 'number' || type === 'boolean' || type === 'any' || type === 'File') {
+  if (enums?.length) {
+    _mockStr = `/${enums.join('|')}/` // 处理枚举 /A|B|C/,
+  } else if (type === 'string' || type === 'number' || type === 'boolean' || type === 'any' || type === 'File') {
     const { mockStr, isCustome } = getFieldMockStr({ name, type, fieldRules })
     _mockStr = mockStr
     _isCustome = isCustome
@@ -66,6 +68,7 @@ function getInterfaceMock(model, fieldRules) {
     isFn = true
     _mockStr = `${type}()`
   }
+
   if (isArray) {
     if (isFn || _isCustome) {
       return `\'${name}|1-20\': [${_mockStr}],\n`
@@ -73,7 +76,7 @@ function getInterfaceMock(model, fieldRules) {
       return `\'${name}|1-20\': [\'${_mockStr}\'],\n`
     }
   } else {
-    if (isFn || _isCustome) {
+    if (isFn || _isCustome || enums?.length) {
       return `${name}: ${_mockStr},\n`
     } else {
       return `${name}: \'${_mockStr}\',\n`

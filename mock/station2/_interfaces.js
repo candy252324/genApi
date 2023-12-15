@@ -485,12 +485,13 @@ export function ComLoginReq() {
   return {
     blue: '@string(5,50)',
     certificate: '@string(5,50)',
-    clientType: '@string(5,50)',
+    clientType: /ALI_MP|ANDROID|DEVICE_END|H5|IOS|MOBILE_END|PC|WECHAT_MP/,
     clientVersion: '@string(5,50)',
     deviceCode: '@string(5,50)',
     deviceManufacturer: '@string(5,50)',
     deviceModel: '@string(5,50)',
-    loginModeEnum: '@string(5,50)',
+    loginModeEnum:
+      /CORP_WEIXIN|DINGDING|MOBILE_CODE_FAST|ONE_CLICK|PASSWORD|TOKEN|VERIFICATION_CODE|WECHAT|WECHAT_FAST/,
     uuid: '@guid',
   }
 }

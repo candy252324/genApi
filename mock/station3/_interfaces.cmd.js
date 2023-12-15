@@ -3,7 +3,7 @@ function AddHappyDoorReq() {
     addr: '@string(5,50)',
     area: '@string(5,50)',
     happyClassificationType: '@string(5,50)',
-    happySource: '@string(5,50)',
+    happySource: /ADVANCED_SEARCH|BIGDATA_SEARCH|CREATE|MINI_PROGRAM|OPEN_SEA|RADAR|SEARCH_PLATFORM/,
     happyType: '@string(5,50)',
     categoryName: '@ctitle(5,10)',
     city: '@city',
@@ -35,7 +35,7 @@ function AddHappyDoorReq() {
     skQualificationCnt: '@string(5,50)',
     step: '@integer(3,1000)',
     thirdId: '@guid',
-    type: '@string(5,50)',
+    type: /ENTERPRISE|PERSON|POOL|PROJECT/,
     updateId: '@datetime',
     updateName: '@datetime',
   }
@@ -56,7 +56,7 @@ function AddHappyCatReq() {
     badBehaviorCnt: '@string(5,50)',
     blacklistRecordCnt: '@string(5,50)',
     happyClassificationType: '@string(5,50)',
-    happySource: '@string(5,50)',
+    happySource: /ADVANCED_SEARCH|BIGDATA_SEARCH|CREATE|MINI_PROGRAM|OPEN_SEA|RADAR|SEARCH_PLATFORM/,
     happyType: '@string(5,50)',
     'certificateList|1-20': [AddHappyCatCertificateReq()],
     city: '@city',
@@ -85,7 +85,7 @@ function AddHappyCatReq() {
     step: '@integer(3,1000)',
     thirdId: '@guid',
     'titleList|1-20': [AddHappyCatTitleReq()],
-    type: '@string(5,50)',
+    type: /ENTERPRISE|PERSON|POOL|PROJECT/,
     updateId: '@datetime',
     updateName: '@datetime',
   }
@@ -125,7 +125,7 @@ function AddHappyGladReq() {
     biddingStartTime: '@datetime',
     biddingType: '@string(5,50)',
     happyClassificationType: '@string(5,50)',
-    happySource: '@string(5,50)',
+    happySource: /ADVANCED_SEARCH|BIGDATA_SEARCH|CREATE|MINI_PROGRAM|OPEN_SEA|RADAR|SEARCH_PLATFORM/,
     happyType: '@string(5,50)',
     coordinate: '@string(5,50)',
     createId: '@guid',
@@ -150,7 +150,7 @@ function AddHappyGladReq() {
     searchStationId: '@guid',
     step: '@integer(3,1000)',
     thirdId: '@guid',
-    type: '@string(5,50)',
+    type: /ENTERPRISE|PERSON|POOL|PROJECT/,
     updateId: '@datetime',
     updateName: '@datetime',
     webPageUrl: '@image(200x100, @color, @color)',
@@ -159,7 +159,7 @@ function AddHappyGladReq() {
 function AddHappyReq() {
   return {
     happyClassificationType: '@string(5,50)',
-    happySource: '@string(5,50)',
+    happySource: /ADVANCED_SEARCH|BIGDATA_SEARCH|CREATE|MINI_PROGRAM|OPEN_SEA|RADAR|SEARCH_PLATFORM/,
     happyType: '@string(5,50)',
     coordinate: '@string(5,50)',
     createId: '@guid',
@@ -176,7 +176,7 @@ function AddHappyReq() {
     searchStationId: '@guid',
     step: '@integer(3,1000)',
     thirdId: '@guid',
-    type: '@string(5,50)',
+    type: /ENTERPRISE|PERSON|POOL|PROJECT/,
     updateId: '@datetime',
     updateName: '@datetime',
   }
@@ -209,7 +209,7 @@ function AddSignHappyDoorReq() {
     addr: '@string(5,50)',
     area: '@string(5,50)',
     happyId: '@guid',
-    happySource: '@string(5,50)',
+    happySource: /ADVANCED_SEARCH|BIGDATA_SEARCH|CREATE|MINI_PROGRAM|OPEN_SEA|RADAR|SEARCH_PLATFORM/,
     happyType: '@string(5,50)',
     categoryName: '@ctitle(5,10)',
     city: '@city',
@@ -241,7 +241,7 @@ function AddSignHappyDoorReq() {
     skAchievementCnt: '@string(5,50)',
     skQualificationCnt: '@string(5,50)',
     step: '@integer(3,1000)',
-    type: '@string(5,50)',
+    type: /ENTERPRISE|PERSON|POOL|PROJECT/,
     updateId: '@datetime',
     updateName: '@datetime',
   }
@@ -252,7 +252,7 @@ function AddSignHappyCatReq() {
     addr: '@string(5,50)',
     area: '@string(5,50)',
     happyId: '@guid',
-    happySource: '@string(5,50)',
+    happySource: /ADVANCED_SEARCH|BIGDATA_SEARCH|CREATE|MINI_PROGRAM|OPEN_SEA|RADAR|SEARCH_PLATFORM/,
     happyType: '@string(5,50)',
     'certificateList|1-20': [AddHappyCatCertificateReq()],
     city: '@city',
@@ -277,7 +277,7 @@ function AddSignHappyCatReq() {
     signType: '@string(5,50)',
     step: '@integer(3,1000)',
     'titleList|1-20': [AddHappyCatTitleReq()],
-    type: '@string(5,50)',
+    type: /ENTERPRISE|PERSON|POOL|PROJECT/,
     updateId: '@datetime',
     updateName: '@datetime',
   }
@@ -309,7 +309,7 @@ function AddSignHappyGladReq() {
     biddingStartTime: '@datetime',
     biddingType: '@string(5,50)',
     happyId: '@guid',
-    happySource: '@string(5,50)',
+    happySource: /ADVANCED_SEARCH|BIGDATA_SEARCH|CREATE|MINI_PROGRAM|OPEN_SEA|RADAR|SEARCH_PLATFORM/,
     happyType: '@string(5,50)',
     coordinate: '@string(5,50)',
     createId: '@guid',
@@ -333,7 +333,7 @@ function AddSignHappyGladReq() {
     gladType: '@string(5,50)',
     signType: '@string(5,50)',
     step: '@integer(3,1000)',
-    type: '@string(5,50)',
+    type: /ENTERPRISE|PERSON|POOL|PROJECT/,
     updateId: '@datetime',
     updateName: '@datetime',
     webPageUrl: '@image(200x100, @color, @color)',
@@ -2454,7 +2454,7 @@ function DeleteReq() {
 function WhiteListReq() {
   return {
     parentId: '@guid',
-    scaleType: '@string(5,50)',
+    scaleType: /COMPANY|DEPT/,
   }
 }
 function WhiteNoteResp() {
