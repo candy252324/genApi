@@ -3,30 +3,30 @@ module.exports = {
     {
       swaggerUrl: './__test__/json/swagger1.json',
       outputDir: './__test__/output/swagger1',
-      tag: true,
+      dontGen: false,
     },
     {
       swaggerUrl: './__test__/json/swagger2.json',
       outputDir: './__test__/output/swagger2',
-      tag: true,
-      ignore: '',
+      dontGen: false,
+      exclude: '',
     },
     {
       swaggerUrl: './__test__/json/swagger3.json',
       outputDir: './__test__/output/swagger3',
-      tag: true,
+      dontGen: false,
     },
     {
       swaggerUrl: './__test__/json/swagger4.json',
       outputDir: './__test__/output/swagger4',
-      tag: true,
-      ignore: /\/abc\/|\/test\//, // 路径带 /abc/ 和 /test/ 的接口不生成
+      dontGen: false,
+      exclude: /\/abc\/|\/test\//, // 路径带 /abc/ 和 /test/ 的接口不生成
     },
     {
       swaggerUrl: './__test__/json/swagger5.json',
       outputDir: './__test__/output/swagger5',
-      tag: true,
-      ignore: /\/test\//, // 路径带 /abc/ 和 /test/ 的接口不生成
+      dontGen: false,
+      exclude: /\/test\//, // 路径带 /abc/ 和 /test/ 的接口不生成
       // 配置接口所属文件名称
       fileName: ({ url }) => {
         return 'swagger5Api' // 所有的api都放在这个文件里

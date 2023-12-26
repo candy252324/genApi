@@ -2,11 +2,11 @@ import { IApiModel, IParams } from '../types'
 import { getUrl, getApiName, getFileNameAndExt, handleWeirdName, handleJsType } from '../utils'
 
 /** 生成 api 数据模型 */
-export function handleApiModel(paths, { ignore, fileName }) {
+export function handleApiModel(paths, { exclude, include, fileName }) {
   const apis: IApiModel[] = []
   for (const key in paths) {
-    const isIgnore = ignore && ignore.test(key) // 不需要生成的 api
-    if (!isIgnore) {
+    const _needGen = needGen({ exclude, include, apiPath: key })
+    if (_needGen) {
       const objs = paths[key]
       const apiHasSameUrl = Object.keys(objs).length // url 相同，但是方法不同的接口数量
       Object.keys(objs).forEach((method) => {
@@ -47,6 +47,35 @@ export function handleApiModel(paths, { ignore, fileName }) {
     }
   }
   return apis
+}
+
+/** 判断某个接口是否需要生成 */
+function needGen({ exclude, include, apiPath }) {
+  if (!exclude && !include) {
+    return true
+  }
+  const excludeIsReg = exclude && Object.prototype.toString.call(exclude) === '[object RegExp]'
+  const excludeIsString = exclude && Object.prototype.toString.call(exclude) === '[object String]'
+
+  const includeIsReg = include && Object.prototype.toString.call(include) === '[object RegExp]'
+  const includeIsString = include && Object.prototype.toString.call(include) === '[object String]'
+
+  // 字符串全等或正则匹配
+  const isExclude = (excludeIsReg && exclude.test(apiPath)) || (excludeIsString && exclude === apiPath)
+  const isInclude = (includeIsReg && include.test(apiPath)) || (includeIsString && include === apiPath)
+
+  // 只配置了 include 没配置 exclude
+  if (include && !exclude) {
+    return isInclude
+  }
+  // 只配置了 exclude 没配置 include
+  else if (exclude && !include) {
+    return !isExclude
+  }
+  // exclude 和 include 都配置了
+  else if (include && exclude) {
+    return !isExclude && isInclude
+  }
 }
 
 /** 处理入参 */

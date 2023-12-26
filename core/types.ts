@@ -3,10 +3,12 @@ export interface IApiStation {
   swaggerUrl: string
   /** 输出到哪个目录中, cjh todo 校验 */
   outputDir: string
-  /** 是否生成(默认为 true) */
-  tag?: boolean
+  /** 是否不生成( 设为true，则不生成 ) */
+  dontGen?: boolean
+  /** 需要生成的接口 */
+  include?: RegExp | string
   /** 无需生成的接口 */
-  ignore?: RegExp
+  exclude?: RegExp | string
   /** 接口前缀 cjh todo */
   prefix?: string
   /** 文件头部引入内容 */
