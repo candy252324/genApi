@@ -27,6 +27,7 @@ module.exports = {
       outputDir: './__test__/output/swagger5',
       dontGen: false,
       exclude: /\/test\//, // 路径带 /abc/ 和 /test/ 的接口不生成
+      httpTpl: 'const myRequest:any=()=>{}', // 文件头部引入内容
       // 配置接口所属文件名称
       fileName: ({ url }) => {
         return 'swagger5Api' // 所有的api都放在这个文件里
@@ -38,7 +39,7 @@ module.exports = {
         /** ${summary || '后端没写注释'} */
         export function ${name}  (${pstr1}) :Promise<${outputInterface || undefined}>{
           ${pstr3 ? pstr3 : ''}
-          return request.${method}(${quotationMark}${url}${quotationMark}, ${pstr2})
+          return myRequest.${method}(${quotationMark}${url}${quotationMark}, ${pstr2})
         }`
       },
     },
