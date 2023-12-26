@@ -51,18 +51,17 @@ export function handleApiModel(paths, { exclude, include, fileName }) {
 
 /** 判断某个接口是否需要生成 */
 function needGen({ exclude, include, apiPath }) {
-  if (!exclude && !include) {
+  // 没配置 exclude 和 include
+  const notSetExclude = !exclude || (Array.isArray(exclude) && !exclude.length)
+  const notSetInclude = !include || (Array.isArray(include) && !include.length)
+  if (notSetExclude && notSetInclude) {
     return true
   }
-  const excludeIsReg = exclude && Object.prototype.toString.call(exclude) === '[object RegExp]'
-  const excludeIsString = exclude && Object.prototype.toString.call(exclude) === '[object String]'
+  const excludeArr = Array.isArray(exclude) ? exclude : [exclude]
+  const includeArr = Array.isArray(include) ? include : [include]
 
-  const includeIsReg = include && Object.prototype.toString.call(include) === '[object RegExp]'
-  const includeIsString = include && Object.prototype.toString.call(include) === '[object String]'
-
-  // 字符串全等或正则匹配
-  const isExclude = (excludeIsReg && exclude.test(apiPath)) || (excludeIsString && exclude === apiPath)
-  const isInclude = (includeIsReg && include.test(apiPath)) || (includeIsString && include === apiPath)
+  const isExclude = matchExp(excludeArr, apiPath) // 该 api 不需要生成
+  const isInclude = matchExp(includeArr, apiPath) // 该 api 需要生成
 
   // 只配置了 include 没配置 exclude
   if (include && !exclude) {
@@ -76,6 +75,15 @@ function needGen({ exclude, include, apiPath }) {
   else if (include && exclude) {
     return !isExclude && isInclude
   }
+}
+
+function matchExp(expArr: any[], apiPath: string) {
+  return expArr.some((exp) => {
+    const expIsReg = exp && Object.prototype.toString.call(exp) === '[object RegExp]'
+    const expIsString = exp && Object.prototype.toString.call(exp) === '[object String]'
+    // 字符串全等或正则匹配
+    return (expIsReg && exp.test(apiPath)) || (expIsString && exp === apiPath)
+  })
 }
 
 /** 处理入参 */

@@ -1794,3 +1794,28 @@ export function thkApiV1StoreStudentinfoId(data: { id?: string }): Promise<ApiRe
   const { id } = data
   return myRequest.delete(`/thk/api/v1/store/student-info/${id}`)
 }
+
+/** 测试模板 */
+export function thkTestExportbranch(data: { humanId?: string }): Promise<any> {
+  return myRequest.get('/thk/test/export-branch', data)
+}
+
+/** 测试导出excel */
+export function thkTestExportexcel(): Promise<any> {
+  return myRequest.get('/thk/test/export-excel')
+}
+
+/** 罐头书合并 */
+export function thkTestMerge(): Promise<any> {
+  return myRequest.post('/thk/test/merge')
+}
+
+/** test1 */
+export function thkTestTest1(): Promise<any> {
+  return myRequest.get('/thk/test/test1')
+}
+
+/** test2 */
+export function thkTestTest2(): Promise<any> {
+  return myRequest.get('/thk/test/test2')
+}

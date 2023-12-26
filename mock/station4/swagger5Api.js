@@ -645,3 +645,18 @@ export const thkApiV1StoreStudentinfoPut = () => Mock.mock(ApiResponseboolean())
 
 /** 删除学信账号密码 */
 export const thkApiV1StoreStudentinfoId = () => Mock.mock(ApiResponseboolean())
+
+/** 测试模板 */
+export const thkTestExportbranch = () => Mock.mock('')
+
+/** 测试导出excel */
+export const thkTestExportexcel = () => Mock.mock('')
+
+/** 罐头书合并 */
+export const thkTestMerge = () => Mock.mock('')
+
+/** test1 */
+export const thkTestTest1 = () => Mock.mock('')
+
+/** test2 */
+export const thkTestTest2 = () => Mock.mock('')

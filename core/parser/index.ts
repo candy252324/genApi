@@ -7,7 +7,7 @@ import { saveParseredDataToLocal } from './localData'
 export async function parser(apiConfig: IApiConfig) {
   validateApiConfig(apiConfig)
   const apiList: IApiStation[] = apiConfig.apiList
-    .filter((item) => !item.dontGen)
+    .filter((item) => item.gen !== false)
     .map((item) => {
       return {
         ...item,
@@ -52,7 +52,7 @@ async function parseFn(apiStation: IApiStation, stationIndex: number): Promise<I
 
 /** 校验 apiConfig  */
 function validateApiConfig(apiConfig: IApiConfig) {
-  const apiList = apiConfig.apiList.filter((item) => !item.dontGen)
+  const apiList = apiConfig.apiList.filter((item) => item.gen !== false)
   if (!apiConfig.apiBody && apiList.some((item) => !item.apiBody)) {
     throw new Error('请传入 apiBody , 必须是一个函数')
   }

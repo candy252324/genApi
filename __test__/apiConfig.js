@@ -3,30 +3,31 @@ module.exports = {
     {
       swaggerUrl: './__test__/json/swagger1.json',
       outputDir: './__test__/output/swagger1',
-      dontGen: false,
+      gen: true,
     },
     {
       swaggerUrl: './__test__/json/swagger2.json',
       outputDir: './__test__/output/swagger2',
-      dontGen: false,
+      gen: true,
       exclude: '',
     },
     {
       swaggerUrl: './__test__/json/swagger3.json',
       outputDir: './__test__/output/swagger3',
-      dontGen: false,
+      gen: true,
     },
     {
       swaggerUrl: './__test__/json/swagger4.json',
       outputDir: './__test__/output/swagger4',
-      dontGen: false,
+      gen: true,
       exclude: /\/abc\/|\/test\//, // 路径带 /abc/ 和 /test/ 的接口不生成
     },
     {
       swaggerUrl: './__test__/json/swagger5.json',
       outputDir: './__test__/output/swagger5',
-      dontGen: false,
-      exclude: /\/test\//, // 路径带 /abc/ 和 /test/ 的接口不生成
+      gen: true,
+      // include: [/thk\/api\/common\/v1\/enum/, '/thk/api/v1/config/credential-standard'],
+      // exclude: [/credential-standard/],
       httpTpl: 'const myRequest:any=()=>{}', // 文件头部引入内容
       // 配置接口所属文件名称
       fileName: ({ url }) => {

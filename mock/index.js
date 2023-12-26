@@ -1406,3 +1406,8 @@ Mock.mock(/\/thk\/api\/v1\/store\/student-info/, 'get', station4swagger5Api.thkA
 Mock.mock(/\/thk\/api\/v1\/store\/student-info/, 'post', station4swagger5Api.thkApiV1StoreStudentinfoPost)
 Mock.mock(/\/thk\/api\/v1\/store\/student-info/, 'put', station4swagger5Api.thkApiV1StoreStudentinfoPut)
 Mock.mock(/\/thk\/api\/v1\/store\/student-info\/.*/, 'delete', station4swagger5Api.thkApiV1StoreStudentinfoId)
+Mock.mock(/\/thk\/test\/export-branch/, 'get', station4swagger5Api.thkTestExportbranch)
+Mock.mock(/\/thk\/test\/export-excel/, 'get', station4swagger5Api.thkTestExportexcel)
+Mock.mock(/\/thk\/test\/merge/, 'post', station4swagger5Api.thkTestMerge)
+Mock.mock(/\/thk\/test\/test1/, 'get', station4swagger5Api.thkTestTest1)
+Mock.mock(/\/thk\/test\/test2/, 'get', station4swagger5Api.thkTestTest2)
