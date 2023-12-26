@@ -1,12 +1,13 @@
 {
   "name": "@cxxgo/genapi",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "",
   "main": "genapi",
   "scripts": {
     "build": "node ./scripts/build.js",
     "test": "node ./__test__/index.js",
-    "replace": "node ./scripts/replaceStr.js"
+    "replace": "node ./scripts/replaceStr.js",
+    "prepublish": "npm run build"
   },
   "bin": {
     "genapi": "bin/index.js"
@@ -14,6 +15,7 @@
   "files": [
     "bin",
     "core",
+    "dist",
     ".prettierrc.js"
   ],
   "publishConfig": {
