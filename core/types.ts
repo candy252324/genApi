@@ -9,13 +9,13 @@ export interface IApiStation {
   include?: RegExp | string | RegExp[] | string[]
   /** 无需生成的接口 */
   exclude?: RegExp | string | RegExp[] | string[]
-  /** 接口前缀 cjh todo */
-  prefix?: string
   /** 文件头部引入内容 */
   httpTpl?: string
-  /** 单个站点配置定制化的文件名称生成规则（需包含后缀，如无后缀默处理成.ts）*/
+  /** 文件名称生成规则*/
   fileName?: string | Function
-  /** 单个站点配置定制化的 api 结构 */
+  /** 文件后缀, 可选值：ts 或 js， 默认 ts */
+  fileExt?: 'ts' | 'js' | '.ts' | '.js'
+  /** api 结构 */
   apiBody?: Function
 }
 
@@ -35,8 +35,10 @@ export interface IApiConfig {
   httpTpl?: string
   /** api 结构 */
   apiBody: Function
-  /** 文件名称生成规则 */
-  fileName?: Function
+  /** 文件名称生成规则*/
+  fileName?: string | Function
+  /** 文件后缀, 可选值：ts 或 js， 默认 ts */
+  fileExt?: 'ts' | 'js' | '.ts' | '.js'
   mock?: boolean | IMock
 }
 
@@ -69,8 +71,8 @@ export interface IApiModel {
   outputInterface: string
   /** 接口所属文件名称（不包含后缀，如 user）*/
   fileName: string
-  /** 后缀（ts 或 js, 不包含点号） */
-  ext: string
+  /** 文件后缀（ts 或 js, 不包含点号） */
+  fileExt: 'ts' | 'js'
 }
 
 export interface IInterface {
@@ -100,7 +102,7 @@ export interface IApiGroup {
   /** api 所属文件名称， 如 user */
   fileName: string
   /** 后缀（ts 或 js, 不包含点号） */
-  ext: string
+  fileExt: 'ts' | 'js'
   /** 该文件名内所有的接口 */
   apis: IApiModel[]
 }

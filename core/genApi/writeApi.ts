@@ -16,21 +16,23 @@ export function writeApi(
     let fileUsedInterface: string[] = [] // 当前文件用到的 interface
     item.apis.forEach((api) => {
       const { name, url, method, summary, parameters, outputInterface } = api
-
       /** 是否是无效的 interface */
       let isInvalidInterface = false
-      // 出参存在且是interface
-      if (outputInterface && typeIsInterface(outputInterface)) {
-        // 没找到则处理成 any, 防止后端接口写了错误的 interface
-        const findInterface = allInterfaces.find((i) => i.name === outputInterface)
-        if (findInterface) {
-          fileUsedInterface.push(outputInterface)
-        } else {
-          isInvalidInterface = true
+
+      if (item.fileExt === 'ts') {
+        // 出参存在且是interface
+        if (outputInterface && typeIsInterface(outputInterface)) {
+          // 没找到则处理成 any, 防止后端接口写了错误的 interface
+          const findInterface = allInterfaces.find((i) => i.name === outputInterface)
+          if (findInterface) {
+            fileUsedInterface.push(outputInterface)
+          } else {
+            isInvalidInterface = true
+          }
         }
+        // 入参需要引入的interface
+        ;(parameters || []).forEach((item) => !item.isSimpleJsType && item.type && fileUsedInterface.push(item.type))
       }
-      // 入参需要引入的interface
-      ;(parameters || []).forEach((item) => !item.isSimpleJsType && item.type && fileUsedInterface.push(item.type))
 
       const { p1, p2, p3 } = getParamStr(parameters)
       const apiBodyStr = apiBody({
@@ -57,7 +59,7 @@ export function writeApi(
       })
       importStr += `} from './_interfaces'`
     }
-    const targetFile = path.join(outputDir, `${item.fileName}.${item.ext}`)
+    const targetFile = path.join(outputDir, `${item.fileName}.${item.fileExt}`)
     writeAndPrettify(targetFile, `${tplStr}\n${importStr}\n${apiStr}`)
   })
 }

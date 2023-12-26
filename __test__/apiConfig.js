@@ -46,16 +46,6 @@ module.exports = {
     },
   ],
   httpTpl: 'const request:any=()=>{}', // 文件头部引入内容
-  /**
-   * @param url 接口路径
-   * @param method 请求方法，小写的，如：get, post
-   * @param summary 后端写的注释
-   * @param name 接口名称，由接口路径处理得到， 如：/api/variable/create 处理成 variableCreate
-   * @param parameters 接口入参,格式： [{in:"body",type:"IUserModel"},{in:"query",type:string}]
-   * @param outputInterface 出参interface
-   * @param pstr1 由 parameters 处理得到的
-   * @param pstr2 由 parameters 处理得到的
-   */
   apiBody: ({ url, method, summary, name, parameters, outputInterface, pstr1, pstr2, pstr3 }) => {
     const quotationMark = pstr3 ? '`' : "'"
     return `

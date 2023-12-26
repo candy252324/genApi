@@ -26,7 +26,7 @@ function genStation(data: IParsered) {
   writeApi(apiGroup, data.interfaces, { outputDir, apiBody: data.apiBody!, httpTpl: data.httpTpl || '' })
 
   // 只有当后缀是 ts 时才生成 interface
-  const ext = apiGroup[0]?.ext
+  const ext = apiGroup[0]?.fileExt
   if (ext === 'ts') {
     writeInterface(data.interfaces, { outputDir })
   }

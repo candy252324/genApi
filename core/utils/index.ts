@@ -58,8 +58,8 @@ export function getApiName(url, method) {
   return jsKeyWords.includes(name) ? `${name}Fn` : name
 }
 
-/** 获取接口所属文件名称和后缀 */
-export function getFileNameAndExt(url: string, userFileName: any) {
+/** 获取接口所属文件名称*/
+export function getFileName(url: string, userFileName: any) {
   let theFileName = ''
   //  用户传入的 fileName 是个方法
   if (userFileName && typeof userFileName === 'function') {
@@ -74,20 +74,15 @@ export function getFileNameAndExt(url: string, userFileName: any) {
     const arr = url.split('/')
     theFileName = arr.find((item) => item && item !== 'api')
   }
+  return theFileName
+}
 
-  // 如果用户传入的 fileName 后缀是 ts 或 js , 则认为是有效的 fileName， 否则默认生成 .ts 文件
-  const ext = theFileName.split('.').pop()
-  if (ext === 'ts' || ext === 'js') {
-    return {
-      fileName: theFileName.replace(/\.(ts|js)$/, ''),
-      ext: ext,
-    }
-  } else {
-    return {
-      fileName: theFileName,
-      ext: 'ts',
-    }
-  }
+/** 获取文件后缀, 默认 ts */
+export function getFileExt(userFileExt: any): 'ts' | 'js' {
+  let ext: 'ts' | 'js' = 'ts'
+  if (/^\.?js$/.test(userFileExt)) ext = 'js'
+  if (/^\.?ts$/.test(userFileExt)) ext = 'ts'
+  return ext
 }
 /**
  * 获取接口方法
@@ -193,12 +188,12 @@ export function groupApiByFileName(apis: IApiModel[]) {
   const apiGroup: IApiGroup[] = [] // [{fileName:"", apis:[]}]
   // 按文件所属文件名称给 api 分组
   ;(apis || []).forEach((item) => {
-    const { fileName, ext } = item
+    const { fileName, fileExt } = item
     const idx = apiGroup.findIndex((item) => item.fileName === fileName)
     if (idx > -1) {
       apiGroup[idx].apis.push(item)
     } else {
-      apiGroup.push({ fileName, ext, apis: [item] })
+      apiGroup.push({ fileName, fileExt, apis: [item] })
     }
   })
   return apiGroup

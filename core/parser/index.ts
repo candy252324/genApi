@@ -39,6 +39,7 @@ async function parseFn(apiStation: IApiStation, stationIndex: number): Promise<I
       include: apiStation.include,
       exclude: apiStation.exclude,
       fileName: apiStation.fileName,
+      fileExt: apiStation.fileExt,
     })
     interfaces = handleInterface(swaggerJson.definitions)
   }

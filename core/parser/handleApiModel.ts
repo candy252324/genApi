@@ -1,8 +1,11 @@
-import { IApiModel, IParams } from '../types'
-import { getUrl, getApiName, getFileNameAndExt, handleWeirdName, handleJsType } from '../utils'
+import { IApiModel, IParams, IApiStation } from '../types'
+import { getUrl, getApiName, getFileName, getFileExt, handleWeirdName, handleJsType } from '../utils'
 
 /** 生成 api 数据模型 */
-export function handleApiModel(paths, { exclude, include, fileName }) {
+export function handleApiModel(
+  paths,
+  { exclude, include, fileName, fileExt }: Pick<IApiStation, 'exclude' | 'include' | 'fileName' | 'fileExt'>
+) {
   const apis: IApiModel[] = []
   for (const key in paths) {
     const _needGen = needGen({ exclude, include, apiPath: key })
@@ -13,7 +16,8 @@ export function handleApiModel(paths, { exclude, include, fileName }) {
         const obj = objs[method]
         const url = getUrl(key)
         const name = getApiName(url, apiHasSameUrl > 1 ? method : '')
-        const theFileObj = getFileNameAndExt(url, fileName)
+        const theFileName = getFileName(url, fileName)
+        const theFileExt = getFileExt(fileExt)
         const summary = obj.summary // 接口注释
         const parameters = getParameters(obj.parameters) // 入参
         const resScheme = obj?.responses['200']?.schema // 出参模型
@@ -40,8 +44,8 @@ export function handleApiModel(paths, { exclude, include, fileName }) {
           summary,
           parameters,
           outputInterface,
-          fileName: theFileObj.fileName,
-          ext: theFileObj.ext,
+          fileName: theFileName,
+          fileExt: theFileExt,
         })
       })
     }
