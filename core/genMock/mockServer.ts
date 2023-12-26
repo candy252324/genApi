@@ -13,7 +13,6 @@ export async function createMockServer() {
     const _url = req.url.split('?')[0]
     const _method = req.method
 
-    const allApiData = getParseredDataFromLocal()
     res.writeHead(200, {
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*',
@@ -21,50 +20,49 @@ export async function createMockServer() {
       'Access-Control-Allow-Methods': '*',
     })
 
-    // {
-    //   url: '/api/chat/pageList',
-    //   method: 'post',
-    //   outputInterface: 'ApiResponseUnReadComPageHuiHuaLieBiaoXiangYing',
-    //   stationFlag: 'station0'
-    // }
-    const obj: { url: string; method: string; outputInterface: string; stationFlag: string } = {} as any
-    // 找到 url 相同的api
-    ;(allApiData || []).find((item) => {
-      return (item.apis || []).find((theOne) => {
-        if (
-          isSameApi(
-            { url: theOne.url.split('?')[0], method: theOne.method },
-            { url: req.url.split('?')[0], method: req.method }
-          )
-        ) {
-          obj.url = theOne.url
-          obj.method = theOne.method
-          obj.outputInterface = theOne.outputInterface
-          obj.stationFlag = item.stationFlag
-          return true
-        }
-      })
-    })
-
-    if (Object.keys(obj).length) {
-      try {
-        const { stationFlag, outputInterface } = obj
-        const cmdInterfacePath = path.join(MOCK_OUTPUT_DIR, stationFlag, './_interfaces.cmd.js') // 'D:\____own____\genApi\mock' +  'station0'
-        delete require.cache[require.resolve(cmdInterfacePath)] // 删除require缓存, 保证拿到最新的mock数据
-        const theInterface = require(cmdInterfacePath)
-        const interfaceFn = theInterface[outputInterface] // interface.GreenBookGratefulInfoResp
-        const mockObj = Mock.mock(interfaceFn()) // Mock.mock(interface.GreenBookGratefulInfoResp())
-        res.end(JSON.stringify(mockObj))
-      } catch (error) {
-        console.log(`${_url} 接口出错`, error)
-        res.end('接口解析出错')
-      }
+    if (_url === '/') {
+      res.end('本地mock服务已启动！')
     } else {
-      if (_method.toLowerCase() === 'options') {
-        res.end()
+      const allApiData = getParseredDataFromLocal()
+      const obj: { url: string; method: string; outputInterface: string; stationFlag: string } = {} as any
+      // 找到 url 相同的api
+      ;(allApiData || []).find((item) => {
+        return (item.apis || []).find((theOne) => {
+          if (
+            isSameApi(
+              { url: theOne.url.split('?')[0], method: theOne.method },
+              { url: req.url.split('?')[0], method: req.method }
+            )
+          ) {
+            obj.url = theOne.url
+            obj.method = theOne.method
+            obj.outputInterface = theOne.outputInterface
+            obj.stationFlag = item.stationFlag
+            return true
+          }
+        })
+      })
+
+      if (Object.keys(obj).length) {
+        try {
+          const { stationFlag, outputInterface } = obj
+          const cmdInterfacePath = path.join(MOCK_OUTPUT_DIR, stationFlag, './_interfaces.cmd.js') // 'D:\____own____\genApi\mock' +  'station0'
+          delete require.cache[require.resolve(cmdInterfacePath)] // 删除require缓存, 保证拿到最新的mock数据
+          const theInterface = require(cmdInterfacePath)
+          const interfaceFn = theInterface[outputInterface] // interface.GreenBookGratefulInfoResp
+          const mockObj = Mock.mock(interfaceFn()) // Mock.mock(interface.GreenBookGratefulInfoResp())
+          res.end(JSON.stringify(mockObj))
+        } catch (error) {
+          console.log(`${_url} 接口出错`, error)
+          res.end('接口解析出错')
+        }
       } else {
-        console.log('没有找到对应的api', _url)
-        res.end('没有找到对应的api')
+        if (_method.toLowerCase() === 'options') {
+          res.end()
+        } else {
+          console.log('没有找到对应的api', _url)
+          res.end('没有找到对应的api')
+        }
       }
     }
   })
