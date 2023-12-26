@@ -74,7 +74,7 @@ export interface IApiModel {
 }
 
 export interface IInterface {
-  // 原始 key 处理后结果，如： ApiResponse
+  /** 原始 key 处理后结果，如： ApiResponse */
   name: string
   /** 是否是数组 */
   isArray?: boolean

@@ -174,6 +174,10 @@ export function isJsType(type) {
   return ['number', 'string', 'boolean', 'object', 'File'].includes(type)
 }
 
+export function typeIsInterface(type) {
+  return !['number', 'string', 'boolean', 'object', 'File', 'any'].includes(type)
+}
+
 /** 将路径转化成小驼峰格式的名称，如： '/src/api' => 'srcApi' */
 export function transformPathToName(thePath: string) {
   return thePath

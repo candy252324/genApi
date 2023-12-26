@@ -1,10 +1,14 @@
 import path from 'node:path'
 
-import { handleJsType, writeAndPrettify } from '../utils'
-import { IParams, IApiGroup } from '../types'
+import { typeIsInterface, writeAndPrettify } from '../utils'
+import { IParams, IApiGroup, IInterface } from '../types'
 
 /** api 写入 */
-export function writeApi(apiGroup: IApiGroup[], config: { outputDir: string; apiBody: Function; httpTpl: string }) {
+export function writeApi(
+  apiGroup: IApiGroup[],
+  allInterfaces: IInterface[],
+  config: { outputDir: string; apiBody: Function; httpTpl: string }
+) {
   const { outputDir, apiBody, httpTpl } = config
   apiGroup.forEach((item) => {
     const tplStr = `${httpTpl || ''}`
@@ -12,9 +16,18 @@ export function writeApi(apiGroup: IApiGroup[], config: { outputDir: string; api
     let fileUsedInterface: string[] = [] // 当前文件用到的 interface
     item.apis.forEach((api) => {
       const { name, url, method, summary, parameters, outputInterface } = api
-      // 出参存在且不是简单类型
-      if (outputInterface && !handleJsType(outputInterface)) {
-        fileUsedInterface.push(outputInterface)
+
+      /** 是否是无效的 interface */
+      let isInvalidInterface = false
+      // 出参存在且是interface
+      if (outputInterface && typeIsInterface(outputInterface)) {
+        // 没找到则处理成 any, 防止后端接口写了错误的 interface
+        const findInterface = allInterfaces.find((i) => i.name === outputInterface)
+        if (findInterface) {
+          fileUsedInterface.push(outputInterface)
+        } else {
+          isInvalidInterface = true
+        }
       }
       // 入参需要引入的interface
       ;(parameters || []).forEach((item) => !item.isSimpleJsType && item.type && fileUsedInterface.push(item.type))
@@ -26,7 +39,7 @@ export function writeApi(apiGroup: IApiGroup[], config: { outputDir: string; api
         method,
         summary,
         parameters,
-        outputInterface: outputInterface || 'any', // 出参不存在，处理成any
+        outputInterface: isInvalidInterface || !outputInterface ? 'any' : outputInterface, // 出参不存在，处理成any
         pstr1: p1,
         pstr2: p2,
         pstr3: p3,

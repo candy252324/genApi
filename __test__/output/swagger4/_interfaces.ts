@@ -1674,7 +1674,7 @@ export interface HappyPlanAddCustomerReq {
   /** 待添加机器人数据 */
   addCustomerList?: HappyPlanAddCustomerListReq[]
   /** 日期 */
-  dateList?: ErrorModelNamenamespacejavatimenameLocalDateTime[]
+  dateList?: any[]
 }
 export interface HappyPlanCoordinateResp {
   /** 坐标 */
