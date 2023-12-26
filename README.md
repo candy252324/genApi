@@ -73,9 +73,9 @@ module.exports = {
 执行 `genapi now` 除了会在项目目录中生成 api 外，还会自动在 `/node_modules/@cxxgo/genapi/mock` 目录下生成 mock 数据。使用方式有两种：
 
 - 方式 1：在项目入口文件中 `import '@cxxgo/genapi/mock/index'`
+  这种方式基于 [better-mock](https://www.npmjs.com/package/better-mock), XHR 和 fetch 请求均可以拦截。
 - 方式 2：执行 `genapi mock-server`, 会启动 `http://locahost:8090` 的本地服务，直接访问这个地址即可
 
-本工具基于 [better-mock](https://www.npmjs.com/package/better-mock), XHR 和 fetch 请求均可以拦截。
 工具本身有内置的 mock 生成规则，当然你也可以有自己的规则，配置规则和 [mockjs](http://mockjs.com/examples.html#String) 完全一致。
 
 > 注：如不需要生成 mock, 需显示的配置`mock:false`。

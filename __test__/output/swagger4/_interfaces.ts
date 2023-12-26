@@ -4,7 +4,14 @@ export interface AddHappyDoorReq {
   /** 区县 */
   area?: string
   happyClassificationType?: string
-  happySource?: string
+  happySource?:
+    | 'ADVANCED_SEARCH'
+    | 'BIGDATA_SEARCH'
+    | 'CREATE'
+    | 'MINI_PROGRAM'
+    | 'OPEN_SEA'
+    | 'RADAR'
+    | 'SEARCH_PLATFORM'
   /** 发财梦类型 ENTERPRISE PERSON PROJECT */
   happyType?: string
   /** 所属行业 */
@@ -58,7 +65,7 @@ export interface AddHappyDoorReq {
   step?: number
   /** 三方id */
   thirdId?: string
-  type?: string
+  type?: 'ENTERPRISE' | 'PERSON' | 'POOL' | 'PROJECT'
   updateId?: string
   updateName?: string
 }
@@ -83,7 +90,14 @@ export interface AddHappyCatReq {
   /** 黑名单数 */
   blacklistRecordCnt?: string
   happyClassificationType?: string
-  happySource?: string
+  happySource?:
+    | 'ADVANCED_SEARCH'
+    | 'BIGDATA_SEARCH'
+    | 'CREATE'
+    | 'MINI_PROGRAM'
+    | 'OPEN_SEA'
+    | 'RADAR'
+    | 'SEARCH_PLATFORM'
   /** 发财梦类型 ENTERPRISE PERSON PROJECT */
   happyType?: string
   /** 执业资格月见草滑滑梯 */
@@ -132,7 +146,7 @@ export interface AddHappyCatReq {
   thirdId?: string
   /** 职称滑滑梯 */
   titleList?: AddHappyCatTitleReq[]
-  type?: string
+  type?: 'ENTERPRISE' | 'PERSON' | 'POOL' | 'PROJECT'
   updateId?: string
   updateName?: string
 }
@@ -195,7 +209,14 @@ export interface AddHappyGladReq {
   /** 招标类型 */
   biddingType?: string
   happyClassificationType?: string
-  happySource?: string
+  happySource?:
+    | 'ADVANCED_SEARCH'
+    | 'BIGDATA_SEARCH'
+    | 'CREATE'
+    | 'MINI_PROGRAM'
+    | 'OPEN_SEA'
+    | 'RADAR'
+    | 'SEARCH_PLATFORM'
   /** 发财梦类型 ENTERPRISE PERSON PROJECT */
   happyType?: string
   /** 坐标 */
@@ -236,7 +257,7 @@ export interface AddHappyGladReq {
   step?: number
   /** 三方id */
   thirdId?: string
-  type?: string
+  type?: 'ENTERPRISE' | 'PERSON' | 'POOL' | 'PROJECT'
   updateId?: string
   updateName?: string
   /** 原网页url */
@@ -244,7 +265,14 @@ export interface AddHappyGladReq {
 }
 export interface AddHappyReq {
   happyClassificationType?: string
-  happySource?: string
+  happySource?:
+    | 'ADVANCED_SEARCH'
+    | 'BIGDATA_SEARCH'
+    | 'CREATE'
+    | 'MINI_PROGRAM'
+    | 'OPEN_SEA'
+    | 'RADAR'
+    | 'SEARCH_PLATFORM'
   /** 发财梦类型 ENTERPRISE PERSON PROJECT */
   happyType?: string
   /** 坐标 */
@@ -269,7 +297,7 @@ export interface AddHappyReq {
   step?: number
   /** 三方id */
   thirdId?: string
-  type?: string
+  type?: 'ENTERPRISE' | 'PERSON' | 'POOL' | 'PROJECT'
   updateId?: string
   updateName?: string
 }
@@ -306,7 +334,14 @@ export interface AddSignHappyDoorReq {
   area?: string
   /** 发财梦ID */
   happyId?: string
-  happySource?: string
+  happySource?:
+    | 'ADVANCED_SEARCH'
+    | 'BIGDATA_SEARCH'
+    | 'CREATE'
+    | 'MINI_PROGRAM'
+    | 'OPEN_SEA'
+    | 'RADAR'
+    | 'SEARCH_PLATFORM'
   /** 发财梦类型 ENTERPRISE PERSON PROJECT */
   happyType?: string
   /** 所属行业 */
@@ -363,7 +398,7 @@ export interface AddSignHappyDoorReq {
   skQualificationCnt?: string
   /** 步骤   1需要验月见草  2直接灌水 */
   step?: number
-  type?: string
+  type?: 'ENTERPRISE' | 'PERSON' | 'POOL' | 'PROJECT'
   updateId?: string
   updateName?: string
 }
@@ -376,7 +411,14 @@ export interface AddSignHappyCatReq {
   area?: string
   /** 发财梦ID */
   happyId?: string
-  happySource?: string
+  happySource?:
+    | 'ADVANCED_SEARCH'
+    | 'BIGDATA_SEARCH'
+    | 'CREATE'
+    | 'MINI_PROGRAM'
+    | 'OPEN_SEA'
+    | 'RADAR'
+    | 'SEARCH_PLATFORM'
   /** 发财梦类型 ENTERPRISE PERSON PROJECT */
   happyType?: string
   /** 执业资格月见草滑滑梯 */
@@ -419,7 +461,7 @@ export interface AddSignHappyCatReq {
   step?: number
   /** 职称滑滑梯 */
   titleList?: AddHappyCatTitleReq[]
-  type?: string
+  type?: 'ENTERPRISE' | 'PERSON' | 'POOL' | 'PROJECT'
   updateId?: string
   updateName?: string
 }
@@ -474,7 +516,14 @@ export interface AddSignHappyGladReq {
   biddingType?: string
   /** 发财梦ID */
   happyId?: string
-  happySource?: string
+  happySource?:
+    | 'ADVANCED_SEARCH'
+    | 'BIGDATA_SEARCH'
+    | 'CREATE'
+    | 'MINI_PROGRAM'
+    | 'OPEN_SEA'
+    | 'RADAR'
+    | 'SEARCH_PLATFORM'
   /** 发财梦类型 ENTERPRISE PERSON PROJECT */
   happyType?: string
   /** 坐标 */
@@ -515,7 +564,7 @@ export interface AddSignHappyGladReq {
   signType?: string
   /** 步骤   1需要验月见草  2直接灌水 */
   step?: number
-  type?: string
+  type?: 'ENTERPRISE' | 'PERSON' | 'POOL' | 'PROJECT'
   updateId?: string
   updateName?: string
   /** 原网页url */
@@ -1625,7 +1674,7 @@ export interface HappyPlanAddCustomerReq {
   /** 待添加机器人数据 */
   addCustomerList?: HappyPlanAddCustomerListReq[]
   /** 日期 */
-  dateList?: ErrorModelNamenamespacejavatimenameLocalDateTime[]
+  dateList?: any[]
 }
 export interface HappyPlanCoordinateResp {
   /** 坐标 */
@@ -1934,8 +1983,7 @@ export interface HappySubscribeInfoResp {
   /** 项目json */
   gladJson?: string
 }
-export interface CharSequence {
-}
+export interface CharSequence {}
 export interface ComPageHappyDesktopDetailRulePageResp {
   current?: string
   records?: HappyDesktopDetailRulePageResp[]
@@ -2098,8 +2146,7 @@ export interface ComPageXiangMuFaCaiMengXiangQingrpcresponse {
   size?: string
   total?: string
 }
-export interface Comparableobject {
-}
+export interface Comparableobject {}
 export interface ContactAddReq {
   /** 花生米睡莲 */
   whiteName?: string
@@ -2898,7 +2945,7 @@ export interface WhiteListReq {
   /** 父花生米id */
   parentId?: string
   /** DEPT:花生米,COMPANY:帽子 */
-  scaleType?: string
+  scaleType?: 'COMPANY' | 'DEPT'
 }
 export interface WhiteNoteResp {
   desktopCount?: number
@@ -4207,8 +4254,7 @@ export interface GuanLianFaCaiMengRequest {
   /** 三方信息ID */
   thirdId?: string
 }
-export interface GuanLianFaCaiMengResponse {
-}
+export interface GuanLianFaCaiMengResponse {}
 export interface FenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu {
   /** 发财梦状态  */
   happyStatus?: string

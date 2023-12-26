@@ -3,30 +3,32 @@ module.exports = {
     {
       swaggerUrl: './__test__/json/swagger1.json',
       outputDir: './__test__/output/swagger1',
-      tag: true,
+      gen: true,
     },
     {
       swaggerUrl: './__test__/json/swagger2.json',
       outputDir: './__test__/output/swagger2',
-      tag: true,
-      ignore: '',
+      gen: true,
+      exclude: '',
     },
     {
       swaggerUrl: './__test__/json/swagger3.json',
       outputDir: './__test__/output/swagger3',
-      tag: true,
+      gen: true,
     },
     {
       swaggerUrl: './__test__/json/swagger4.json',
       outputDir: './__test__/output/swagger4',
-      tag: true,
-      ignore: /\/abc\/|\/test\//, // 路径带 /abc/ 和 /test/ 的接口不生成
+      gen: true,
+      exclude: /\/abc\/|\/test\//, // 路径带 /abc/ 和 /test/ 的接口不生成
     },
     {
       swaggerUrl: './__test__/json/swagger5.json',
       outputDir: './__test__/output/swagger5',
-      tag: true,
-      ignore: /\/test\//, // 路径带 /abc/ 和 /test/ 的接口不生成
+      gen: true,
+      // include: [/thk\/api\/common\/v1\/enum/, '/thk/api/v1/config/credential-standard'],
+      // exclude: [/credential-standard/],
+      httpTpl: 'const myRequest:any=()=>{}', // 文件头部引入内容
       // 配置接口所属文件名称
       fileName: ({ url }) => {
         return 'swagger5Api' // 所有的api都放在这个文件里
@@ -38,7 +40,7 @@ module.exports = {
         /** ${summary || '后端没写注释'} */
         export function ${name}  (${pstr1}) :Promise<${outputInterface || undefined}>{
           ${pstr3 ? pstr3 : ''}
-          return request.${method}(${quotationMark}${url}${quotationMark}, ${pstr2})
+          return myRequest.${method}(${quotationMark}${url}${quotationMark}, ${pstr2})
         }`
       },
     },
@@ -66,6 +68,7 @@ module.exports = {
   // 是否生成 mock 数据
   // mock: false,
   mock: {
+    port: 8090,
     /** 自定义 mock 生成规则 */
     fieldRules: {
       // 完全匹配，值为数字

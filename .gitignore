@@ -1,3 +1,5 @@
 /node_modules
 package-lock.json
-data.cache.json
+/temp/parseredData.json
+/dist
+yarn-error.log

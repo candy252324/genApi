@@ -1,11 +1,13 @@
 {
   "name": "@cxxgo/genapi",
-  "version": "1.0.4",
+  "version": "1.0.8",
   "description": "",
   "main": "genapi",
   "scripts": {
+    "build": "node ./scripts/build.js",
     "test": "node ./__test__/index.js",
-    "replace": "node ./scripts/replaceStr.js"
+    "replace": "node ./scripts/replaceStr.js",
+    "prepublish": "npm run build"
   },
   "bin": {
     "genapi": "bin/index.js"
@@ -13,6 +15,7 @@
   "files": [
     "bin",
     "core",
+    "dist",
     ".prettierrc.js"
   ],
   "publishConfig": {
@@ -30,10 +33,21 @@
   },
   "homepage": "https://github.com/candy252324/genApi#readme",
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
     "axios": "^1.4.0",
     "better-mock": "^0.3.7",
     "commander": "^11.0.0",
+    "eslint": "^8.55.0",
     "js-pinyin": "^0.2.4",
     "prettier": "^2.8.8"
+  },
+  "devDependencies": {
+    "@rollup/plugin-json": "^6.0.1",
+    "@types/node": "^20.9.2",
+    "rollup": "^4.4.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
   }
 }
