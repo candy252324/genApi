@@ -23,6 +23,8 @@ export async function createMockServer(mockConfig: IMock) {
 
     if (_url === '/') {
       res.end('本地mock服务已启动！')
+    } else if (_url === '/favicon.ico') {
+      res.end()
     } else {
       const allApiData = getParseredDataFromLocal()
       const obj: { url: string; method: string; outputInterface: string; stationFlag: string } = {} as any
