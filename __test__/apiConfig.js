@@ -59,7 +59,7 @@ module.exports = {
   // mock: false,
   mock: {
     port: 8090,
-    // rewrite: (path) => `/staff${path}`,
+    // rewrite: (path) => `/event-center${path}`,
     /** 自定义 mock 生成规则 */
     fieldRules: {
       // 完全匹配，值为数字

@@ -1,4 +1,4 @@
-# api 自动生成工具
+# api 自动生成工具（swagger2.0 ）
 
 ### 使用方法
 
@@ -21,8 +21,9 @@ module.exports = {
     {
       swaggerUrl: 'http://xxx', // swagger json 在线地址或本地文件路径
       outputDir: './api', // 输出路径
-      tag: true, // 是否生成
-      ignore: /\/test\//, // 路径带 /test/ 的接口不生成
+      gen: true, // 是否生成
+      exclude: [/\/test/, '/api/inner/log'], // 无需生成的接口, 优先级比 include 高
+      include: /\/user/, // 需要生成的接口，优先级比 exclude 低
     },
   ],
   httpTpl: 'const request:any=()=>{}', // 文件头部引入的内容
@@ -41,10 +42,11 @@ module.exports = {
     const arr = url.split('/')
     return arr.find((item) => item && item !== 'api')
   },
+  fileExt: 'ts', // 文件后缀, 可选值：ts 或 js， 默认 ts
 }
 ```
 
-支持每个 swagger 站点配置不同的 `fileName` 和 `apiBody` 生成规则：
+支持每个 swagger 站点配置不同的`httpTpl`、 `fileName` 和 `apiBody` 生成规则：
 
 ```js
 module.exports = {
@@ -52,12 +54,13 @@ module.exports = {
     {
       swaggerUrl: 'http://xxx1',
       outputDir: './api1',
-      tag: true,
+      gen: true,
     },
     {
       swaggerUrl: 'http://xxx2',
       outputDir: './api2',
-      tag: true,
+      gen: true,
+      httpTpl: 'const myRequest:any=()=>{}', // 配置不同的 httpTpl
       apiBody: () => {}, // 使用不同的 `apiBody` 生成规则
       fileName: () => {}, // 使用不同的`fileName`  生成规则
     },
@@ -72,13 +75,21 @@ module.exports = {
 
 执行 `genapi now` 除了会在项目目录中生成 api 外，还会自动在 `/node_modules/@cxxgo/genapi/mock` 目录下生成 mock 数据。使用方式有两种：
 
-- 方式 1：在项目入口文件中 `import '@cxxgo/genapi/mock/index'`
-  这种方式基于 [better-mock](https://www.npmjs.com/package/better-mock), XHR 和 fetch 请求均可以拦截。
-- 方式 2：执行 `genapi mock-server`, 会启动 `http://locahost:8090` 的本地服务，直接访问这个地址即可
+> 注：如不需要生成 mock, 需显示的配置`mock:false`。
+
+#### mock 使用方式 1
+
+在项目入口文件中 `import '@cxxgo/genapi/mock/index'`
+
+这种方式基于 [better-mock](https://www.npmjs.com/package/better-mock), XHR 和 fetch 请求均可以拦截。
+
+#### mock 使用方式 2
+
+执行 `genapi mock-server`, 会启动 `http://locahost:8090` 的本地服务，直接访问这个地址即可
+
+#### mock 数据生成规则配置
 
 工具本身有内置的 mock 生成规则，当然你也可以有自己的规则，配置规则和 [mockjs](http://mockjs.com/examples.html#String) 完全一致。
-
-> 注：如不需要生成 mock, 需显示的配置`mock:false`。
 
 以下 mock 规则配置示例：
 
@@ -86,6 +97,8 @@ module.exports = {
 // apiConfig.js
 module.exports = {
   mock: {
+    port: 8090, // mock 服务端口号，默认 8090
+    rewrite: (path) => `/event-center${path}`, // mock 服务接口重写规则
     // 根据字段自定义mock规则
     fieldRules: {
       // 完全匹配，值为数字
