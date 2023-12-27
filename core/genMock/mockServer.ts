@@ -4,8 +4,9 @@ import Mock from 'better-mock'
 import { portIsOccupied } from '../utils'
 import { MOCK_OUTPUT_DIR, MOCK_SERVER_PORT } from '../constant'
 import { getParseredDataFromLocal } from '../parser/localData'
+import { IMock } from '../types'
 
-export async function createMockServer() {
+export async function createMockServer(mockConfig: IMock) {
   const port = await portIsOccupied(MOCK_SERVER_PORT)
   const server = http.createServer()
 
@@ -31,7 +32,8 @@ export async function createMockServer() {
           if (
             isSameApi(
               { url: theOne.url.split('?')[0], method: theOne.method },
-              { url: req.url.split('?')[0], method: req.method }
+              { url: req.url.split('?')[0], method: req.method },
+              mockConfig
             )
           ) {
             obj.url = theOne.url
@@ -73,25 +75,30 @@ export async function createMockServer() {
 }
 
 /** 判断是否是同一个api */
-function isSameApi(theOne: { url: string; method: string }, req) {
-  const { url, method } = theOne
-  const { url: _url, method: _method } = req
-  const methodIsSame = method && _method && method.toLowerCase() === _method.toLowerCase()
+function isSameApi(theOne: { url: string; method: string }, req, mockConfig: IMock) {
+  const { url: reqUrl, method: reqMethod } = req
+  const method = theOne.method
+  let url = theOne.url
+  if (mockConfig?.rewrite && typeof mockConfig.rewrite === 'function') {
+    url = mockConfig.rewrite(url)
+  }
+
+  const methodIsSame = method && reqMethod && method.toLowerCase() === reqMethod.toLowerCase()
 
   if (!methodIsSame) {
     return false
   }
-  if (url === _url) {
+  if (url === reqUrl) {
     return true
   }
 
-  // url示例:  /wygtech-hr/api/v1/person/bank-record/${id}
-  // _url示例: /wygtech-hr/api/v1/person/bank-record/123456
+  // url示例:  /api/v1/person/bank-record/${id}
+  // reqUrl示例: /api/v1/person/bank-record/123456
   if (url.indexOf('${') !== -1) {
-    // 将 '/wygtech-hr/api/v1/person/bank-record/${id}'  处理成 '/wygtech-hr/api/v1/person/bank-record/(.*)?'
+    // 将 '/api/v1/person/bank-record/${id}'  处理成 '/api/v1/person/bank-record/(.*)?'
     const regStr = url.replace(/\$\{(.*)?\}/g, '(.*)?')
-    const reg = new RegExp(regStr) //   /\/wygtech-hr\/api\/v1\/person\/bank-record\/(.*)?/
-    return reg.test(_url)
+    const reg = new RegExp(regStr) //   /\/api\/v1\/person\/bank-record\/(.*)?/
+    return reg.test(reqUrl)
   }
   return false
 }

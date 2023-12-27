@@ -38,7 +38,7 @@ export function registerCommand() {
       console.log('缺少配置文件，执行 genapi init 生成')
       return
     }
-    createMockServer()
+    createMockServer(apiConfig?.mock)
   })
 
   program.helpInformation = () => {
