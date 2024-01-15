@@ -41,7 +41,7 @@ export function handleApiModel(
           name,
           url,
           method,
-          summary: summary.replace(/\n/g, ''), // 去除注释中的换行符
+          summary: summary.replace(/\n/g, ' '), // 去除注释中的换行符
           parameters,
           outputInterface,
           fileName: theFileName,

@@ -98,7 +98,7 @@ function getParamStr(parameters: IParams[]) {
   else if (avaliableParam.every((p) => p.in === 'path')) {
     const str = avaliableParam.reduce((pre, cur) => {
       let desc = cur.description?.trim()
-      desc = desc.replace(/\n/g, '') // 去除注释中的换行符
+      desc = desc.replace(/\n/g, ' ') // 去除注释中的换行符
       desc = desc && desc !== cur.name.trim() ? `\n// ${desc}\n` : '' // 有注释且和名字不一样
       return `${pre}${desc}${cur.name}?:${cur.type}${cur.isArray ? '[]' : ''},`
     }, '')
@@ -110,7 +110,7 @@ function getParamStr(parameters: IParams[]) {
   else if (avaliableParam.every((p) => p.in === 'query' || p.in === 'body')) {
     const str = avaliableParam.reduce((pre, cur) => {
       let desc = cur.description?.trim()
-      desc = desc.replace(/\n/g, '') // 去除注释中的换行符
+      desc = desc.replace(/\n/g, ' ') // 去除注释中的换行符
       desc = desc && desc !== cur.name.trim() ? `\n// ${desc}\n` : '' // 有注释且和名字不一样
       return `${pre}${desc}${cur.name}?:${cur.type}${cur.isArray ? '[]' : ''},`
     }, '')
@@ -127,7 +127,7 @@ function getParamStr(parameters: IParams[]) {
     const notInPathParam = avaliableParam.filter((p) => p.in !== 'path')
     const str = avaliableParam.reduce((pre, cur) => {
       let desc = cur.description?.trim() || ''
-      desc = desc.replace(/\n/g, '') // 去除注释中的换行符
+      desc = desc.replace(/\n/g, ' ') // 去除注释中的换行符
       desc = desc && desc !== cur.name.trim() ? `\n// ${desc}\n` : '' // 有注释且和名字不一样
       return `${pre}${desc}${cur.name}?:${cur.type}${cur.isArray ? '[]' : ''},`
     }, '')
