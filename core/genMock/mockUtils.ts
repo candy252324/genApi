@@ -22,9 +22,9 @@ export function getFieldMockStr({ name, type, fieldRules }) {
     mockStr = '@city'
   } else if (type === 'string' && /county/.test(lowerCaseName)) {
     mockStr = '@county'
-  } else if (type === 'string' && /ratio|percent/.test(lowerCaseName)) {
+  } else if (type === 'number' && /Ratio|Percent|Rate/.test(name)) {
     mockStr = '@float(0,1)' // 比例
-  } else if (type === 'string' && /count|amount/.test(lowerCaseName)) {
+  } else if (type === 'number' && /Count|Amount/.test(lowerCaseName)) {
     mockStr = '@integer(10,10000)' // 数量
   } else if (type === 'string' && /username/.test(lowerCaseName)) {
     mockStr = '@cname'

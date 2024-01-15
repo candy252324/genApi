@@ -125,6 +125,7 @@ import * as station3travel from './station3/travel.js'
 import * as station3keyBorard from './station3/keyBorard.js'
 import * as station3inner from './station3/inner.js'
 import * as station4swagger5Api from './station4/swagger5Api.js'
+import * as station5franchisecenter from './station5/franchise-center.js'
 Mock.mock(/\/api\/blue\/acc\/queryAcc/, 'post', station0blue.blueAccQueryAcc)
 Mock.mock(/\/api\/blue\/door\/addDoor/, 'post', station0blue.blueDoorAddDoor)
 Mock.mock(/\/api\/blue\/door\/createDoor/, 'post', station0blue.blueDoorCreateDoor)
@@ -1411,3 +1412,4 @@ Mock.mock(/\/thk\/test\/export-excel/, 'get', station4swagger5Api.thkTestExporte
 Mock.mock(/\/thk\/test\/merge/, 'post', station4swagger5Api.thkTestMerge)
 Mock.mock(/\/thk\/test\/test1/, 'get', station4swagger5Api.thkTestTest1)
 Mock.mock(/\/thk\/test\/test2/, 'get', station4swagger5Api.thkTestTest2)
+Mock.mock(/\/franchise-center\/api\/enterprise\/list/, 'get', station5franchisecenter.franchisecenterApiEnterpriseList)

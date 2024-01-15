@@ -1,0 +1,196 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "彩虹中心-test, common-test, sa-client-test-接口文档",
+    "title": "彩虹中心-test, common-test, sa-client-test-接口文档"
+  },
+  "basePath": "/",
+  "tags": [
+    { "name": "人员列表", "description": "Common Employee Controller" },
+    { "name": "西蓝花管理", "description": "Enterprise Controller" },
+    { "name": "西蓝花管理-大数据", "description": "Enterprise Big Data Controller" },
+    { "name": "分西蓝花-成员授权", "description": "Branch Employee Controller" },
+    { "name": "彩虹管理-分西蓝花开办指南", "description": "Enterprise Guide Controller" },
+    { "name": "彩虹管理-彩虹套餐", "description": "Package Controller" },
+    { "name": "彩虹管理-彩虹类型配置", "description": "Cooperate Type Config Controller" },
+    { "name": "彩虹管理-彩虹资质配置", "description": "Credential Config Controller" },
+    { "name": "彩虹管理-物流", "description": "Logistics Controller" },
+    { "name": "彩虹管理-自动推广", "description": "Package Auto Push Controller" },
+    { "name": "授权管理", "description": "Sign Enterprise Controller" },
+    { "name": "授权管理-西蓝花关联", "description": "Enterprise Re Controller" },
+    { "name": "文件上传-文件识别", "description": "File Controller" },
+    { "name": "枚举值-枚举值下拉", "description": "Common Enums Controller" },
+    { "name": "摇篮信息", "description": "Plat From Enterprise Controller" },
+    { "name": "消防车管理", "description": "Sign Controller" },
+    { "name": "消防车补充协议", "description": "Sign Supply Agreement Controller" },
+    { "name": "终止协议", "description": "Term Agreement Controller" },
+    { "name": "终止管理-注销(行政、财务)清单", "description": "Terminate Archive Controller" },
+    { "name": "终止管理-项目清单", "description": "Terminate Project Controller" },
+    { "name": "结算规则", "description": "Fee Rule Controller" }
+  ],
+  "paths": {
+    "/franchise-center/api/enterprise/list": {
+      "get": {
+        "tags": ["西蓝花管理"],
+        "summary": "西蓝花列表",
+        "operationId": "listUsingGET",
+        "produces": ["*/*"],
+        "parameters": [
+          { "name": "city", "in": "query", "description": "市", "required": false, "type": "string" },
+          {
+            "name": "cooperateStatus",
+            "in": "query",
+            "description": "UN_COOPERATE(\"未合作\"),\n    IN_COOPERATE(\"合作中\"),\n    EXPIRE_COOPERATE(\"合作到期\"),\n    TERMINATE_COOPERATING(\"终止合作中\"),\n    TERMINATE_LOG_OFF(\"终止待注销\"),\n    FORWARD_LOG_OFF(\"终止已注销\"),\n    EXPIRE_LOG_OFF(\"到期已注销\"),",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "EXPIRE_COOPERATE",
+              "EXPIRE_LOG_OFF",
+              "FORWARD_LOG_OFF",
+              "IN_COOPERATE",
+              "TERMINATE_COOPERATING",
+              "TERMINATE_LOG_OFF",
+              "UN_COOPERATE"
+            ]
+          },
+          {
+            "name": "cooperateTypeFirst",
+            "in": "query",
+            "description": "西蓝花类型 合作种类一级分类",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "cooperateTypeSecond",
+            "in": "query",
+            "description": "西蓝花性质 合作种类二级分类",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "cooperateTypeThird",
+            "in": "query",
+            "description": "西蓝花性质 合作种类三级分类",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "西蓝花id",
+            "required": false,
+            "type": "integer",
+            "format": "int64"
+          },
+          { "name": "letter", "in": "query", "description": "字母", "required": false, "type": "string" },
+          { "name": "name", "in": "query", "description": "西蓝花名称", "required": false, "type": "string" },
+          { "name": "page", "in": "query", "required": false, "type": "integer", "format": "int32" },
+          { "name": "province", "in": "query", "description": "省", "required": false, "type": "string" },
+          { "name": "size", "in": "query", "required": false, "type": "integer", "format": "int32" }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«ComPage«西蓝花列表»»",
+              "originalRef": "ApiResponse«ComPage«西蓝花列表»»"
+            }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }]
+      }
+    }
+  },
+  "securityDefinitions": { "satoken": { "type": "apiKey", "name": "satoken", "in": "header" } },
+  "definitions": {
+    "ApiResponse«ComPage«西蓝花列表»»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "$ref": "#/definitions/ComPage«西蓝花列表»", "originalRef": "ComPage«西蓝花列表»" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«ComPage«西蓝花列表»»"
+    },
+    "ComPage«西蓝花列表»": {
+      "type": "object",
+      "properties": {
+        "current": { "type": "integer", "format": "int64" },
+        "records": { "type": "array", "items": { "$ref": "#/definitions/西蓝花列表", "originalRef": "西蓝花列表" } },
+        "size": { "type": "integer", "format": "int64" },
+        "total": { "type": "integer", "format": "int64" }
+      },
+      "title": "ComPage«西蓝花列表»"
+    },
+    "西蓝花列表": {
+      "type": "object",
+      "properties": {
+        "actualResponsiblePerson": { "type": "string", "description": "实际责任人" },
+        "aidedManagementName": { "type": "string", "description": "分管人姓名" },
+        "area": { "type": "string", "description": "区" },
+        "areaCode": { "type": "string", "description": "地区码" },
+        "areaScope": { "type": "string", "description": "彩虹区域范围： ALL全国彩虹 PART区域彩虹 APPOINT制定区域" },
+        "beginDate": { "type": "string", "format": "date", "description": "合作开始时间" },
+        "branchSerialNo": { "type": "string", "description": "分院编码" },
+        "businessAddress": { "type": "string", "description": "实际营业地址" },
+        "businessLevel": { "type": "string", "description": "经营级别" },
+        "businessLicenseAuditStatus": {
+          "type": "string",
+          "description": "门牌号审核状态：待审核-AWAIT 通过-PASS 拒绝-REFUSE 屏蔽-SHIELD"
+        },
+        "businessLicenseAuthStatus": {
+          "type": "string",
+          "description": "门牌号锁定状态: 未锁定 UNCERTIFICATED, 已锁定 CERTIFIED"
+        },
+        "businessLicenseUrl": { "type": "string", "description": "门牌号url" },
+        "businessScope": { "type": "string", "description": "经营范围" },
+        "businessUserName": { "type": "string", "description": "商务人员" },
+        "city": { "type": "string", "description": "市" },
+        "cooperateStatus": { "type": "string", "description": "合作状态" },
+        "cooperateType": { "type": "string", "description": "合作类型" },
+        "cooperateTypeFirst": { "type": "string", "description": "西蓝花类型 合作种类一级分类" },
+        "cooperateTypeSecond": { "type": "string", "description": "西蓝花性质 合作种类二级分类" },
+        "cooperateTypeThird": { "type": "string", "description": "西蓝花性质 合作种类三级分类" },
+        "country": { "type": "string", "description": "国家" },
+        "creditCode": { "type": "string", "description": "社会统一信用代码" },
+        "empowerReId": { "type": "integer", "format": "int64", "description": "摇篮西蓝花关联id" },
+        "endDate": { "type": "string", "format": "date", "description": "合作到期时间" },
+        "enterpriseBranchName": { "type": "string", "description": "分院名称" },
+        "firstCooperationTime": { "type": "string", "format": "date-time", "description": "首次合作时间" },
+        "franchiseEnterpriseId": {
+          "type": "integer",
+          "format": "int64",
+          "description": "彩虹西蓝花在摇篮中心的西蓝花ID"
+        },
+        "franchiseTenantId": { "type": "integer", "format": "int64", "description": "彩虹西蓝花的-摇篮ID" },
+        "headerName": { "type": "string", "description": "西蓝花管理员姓名" },
+        "headerPhone": { "type": "string", "description": "西蓝花管理员电话" },
+        "headerUserId": { "type": "integer", "format": "int64", "description": "西蓝花管理员ID-摇篮中心员工ID" },
+        "id": { "type": "integer", "format": "int64", "description": "西蓝花ID" },
+        "introduceEmployeeId": { "type": "integer", "format": "int64", "description": "介绍人id" },
+        "introduceEmployeeName": { "type": "string", "description": "介绍人" },
+        "investment": { "type": "number", "description": "投资金额" },
+        "legalPerson": { "type": "string", "description": "法人" },
+        "legalPersonPhone": { "type": "string", "description": "法人电话" },
+        "location": { "type": "string", "description": "详细地址" },
+        "mainBusinessStage": { "type": "string", "description": "主营阶段" },
+        "name": { "type": "string", "description": "西蓝花名称" },
+        "personType": { "type": "integer", "format": "int32", "description": "人员类型 0:不是注册人员 1:是注册人员" },
+        "pinyin": { "type": "string", "description": "西蓝花首字母" },
+        "platformEnterpriseId": { "type": "integer", "format": "int64" },
+        "province": { "type": "string", "description": "省" },
+        "relateContractNum": { "type": "string", "description": "关联合同数量" },
+        "serialNo": { "type": "string", "description": "西蓝花编码" },
+        "signId": { "type": "integer", "format": "int64", "description": "最新消防车表ID" },
+        "tenantId": { "type": "integer", "format": "int64" }
+      },
+      "title": "西蓝花列表"
+    }
+  }
+}

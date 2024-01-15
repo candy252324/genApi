@@ -18,7 +18,7 @@ export function handleApiModel(
         const name = getApiName(url, apiHasSameUrl > 1 ? method : '')
         const theFileName = getFileName(url, fileName)
         const theFileExt = getFileExt(fileExt)
-        const summary = obj.summary // 接口注释
+        const summary = obj.summary?.trim() || '' // 接口注释
         const parameters = getParameters(obj.parameters) // 入参
         const resScheme = obj?.responses['200']?.schema // 出参模型
 
@@ -41,7 +41,7 @@ export function handleApiModel(
           name,
           url,
           method,
-          summary,
+          summary: summary.replace(/\n/g, ''), // 去除注释中的换行符
           parameters,
           outputInterface,
           fileName: theFileName,

@@ -44,6 +44,11 @@ module.exports = {
         }`
       },
     },
+    {
+      swaggerUrl: './__test__/json/mess.json',
+      outputDir: './__test__/output/mess',
+      gen: true,
+    },
   ],
   httpTpl: 'const request:any=()=>{}', // 文件头部引入内容
   apiBody: ({ url, method, summary, name, parameters, outputInterface, pstr1, pstr2, pstr3 }) => {
