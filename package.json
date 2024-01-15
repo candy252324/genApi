@@ -1,6 +1,6 @@
 {
   "name": "@cxxgo/genapi",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "",
   "main": "genapi",
   "scripts": {
