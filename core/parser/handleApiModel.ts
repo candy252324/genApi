@@ -21,9 +21,9 @@ export function handleApiModel(
       Object.keys(objs).forEach((method) => {
         const obj = objs[method]
         const url = getUrl(key)
-        const buildInApiName = getApiName(url, apiHasSameUrl > 1 ? method : '') // 内置生成的接口名称
+        const defaultApiName = getApiName(url, apiHasSameUrl > 1 ? method : '') // 内置生成的接口名称
         // 优先使用用户传入的 apiName 生成规则
-        const name = apiName ? apiName({ url, method, buildInApiName }) : buildInApiName
+        const name = apiName ? apiName({ url, method, defaultApiName }) : defaultApiName
         const theFileName = getFileName(url, fileName)
         const theFileExt = getFileExt(fileExt)
         const summary = obj.summary?.trim() || '' // 接口注释

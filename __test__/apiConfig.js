@@ -49,9 +49,9 @@ module.exports = {
       outputDir: './__test__/output/mess',
       gen: true,
       // 自定义接口名称生成规则
-      apiName: ({ url, method, buildInApiName }) => {
+      apiName: ({ url, method, defaultApiName }) => {
         // franchisecenterApiEnterpriseList => enterpriseList
-        return buildInApiName.replace('franchisecenterApi', '').replace(/^\S/, (s) => s.toLowerCase())
+        return defaultApiName.replace('franchisecenterApi', '').replace(/^\S/, (s) => s.toLowerCase())
       },
     },
   ],
