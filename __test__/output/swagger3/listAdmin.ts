@@ -1,5 +1,5 @@
 const request: any = () => {}
-import type { ApiResponseListBuLuoChengYuanXinXiDuiXiangBirdMemberResp } from './_interfaces'
+import type { ApiResponseListBuLuoChengYuanXinXiDuiXiangBirdMemberResp } from './_interfaces.ts'
 
 /** 部落管理员秋千(含部落主) */
 export function listAdmin(data: {

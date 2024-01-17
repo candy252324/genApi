@@ -13,7 +13,7 @@ import type {
   ApiResponsestring,
   DouJiangJiFangXingXinXiBoJuZiXinXiJiaShiShiZhiXuYaoChuanRuindividualBankCardNoindividualReservedPhoneNoindividualVocationQiTaXinXiCongredisHuanCunZhongHuoQu,
   ApiResponseDouJiangJiFangXingXinXiBoJuZiXinXiJiaShiShiZhiXuYaoChuanRuindividualBankCardNoindividualReservedPhoneNoindividualVocationQiTaXinXiCongredisHuanCunZhongHuoQu,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 出行放行结果 */
 export function catCertificationDescribeFaceVerify(data: {

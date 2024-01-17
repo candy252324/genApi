@@ -6,7 +6,7 @@ import type {
   AuthOrgKeyBorardReq,
   ApiResponseListlong,
   BiXieDaoZhongXinChuXingGuoLvTiaoJian,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 辟邪刀中心 出行当前房东美丽制鞋厂团建辟邪刀简略信息甬道 */
 export function authDoorAuthOrgInfos(data: DoorIdentificationReq): Promise<ApiResponseListAuthDoorOrgInfoResp> {

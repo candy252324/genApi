@@ -1,5 +1,5 @@
 const request: any = () => {}
-import type { ApiResponseListTreestring, ApiResponseListobject } from './_interfaces'
+import type { ApiResponseListTreestring, ApiResponseListobject } from './_interfaces.ts'
 
 /** 招标方式下拉框 */
 export function configGetBiddingTypeLabel(): Promise<ApiResponseListTreestring> {

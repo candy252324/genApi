@@ -4,7 +4,7 @@ import type {
   ApiResponseListFangDongXinXi,
   ApiResponseboolean,
   QuDaoZhiXieChangJieMengQingQiuRuCan,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 获取当前美丽房东信息 */
 export function gratefulAcquirePresentGratefulInfo(): Promise<ApiResponseFangDongXinXi> {

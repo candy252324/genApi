@@ -4,7 +4,7 @@ import type {
   CustomerFollowReq,
   ApiResponseComPageJiQiRenGenJinJiLuXiangYing,
   JiQiRenGenJinJiLuQingQiu,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 跟进 */
 export function customerFollowFollow(data: CustomerFollowReq): Promise<ApiResponseVoid> {

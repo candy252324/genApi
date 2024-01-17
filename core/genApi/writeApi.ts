@@ -57,7 +57,7 @@ export function writeApi(
       fileUsedInterface.forEach((item, index) => {
         importStr += index === 0 ? `${item}` : `,${item}`
       })
-      importStr += `} from './_interfaces'`
+      importStr += `} from './_interfaces.${item.fileExt}'`
     }
     const targetFile = path.join(outputDir, `${item.fileName}.${item.fileExt}`)
     writeAndPrettify(targetFile, `${tplStr}\n${importStr}\n${apiStr}`)

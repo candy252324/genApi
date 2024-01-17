@@ -9,7 +9,7 @@ import type {
   ZhiXieChangChuXing0,
   ApiResponseComPageZhiXieChangChuXing,
   FenYeChuXingSuoYouZhiXieChang,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 账号信息 */
 export function blueAccQueryAcc(): Promise<ApiResponseQueryAccInfoResp> {

@@ -10,7 +10,7 @@ import type {
   ApiResponseQianMingWenJianXiangYing,
   HuoQuALiYunQianMingRuCan,
   UploadFileReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 阿里云STS鉴权 */
 export function fileGetAliyunStsSign(): Promise<ApiResponsealiyunSTSJianQuanFanHuiZhi> {

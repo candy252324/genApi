@@ -1,5 +1,5 @@
 const request: any = () => {}
-import type { ApiResponseShangChuanWenJianFanHui } from './_interfaces'
+import type { ApiResponseShangChuanWenJianFanHui } from './_interfaces.ts'
 
 /** 上传文件 */
 export function fileUploadFile(data: {

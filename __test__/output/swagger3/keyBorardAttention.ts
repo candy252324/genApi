@@ -1,5 +1,5 @@
 const request: any = () => {}
-import type { ApiResponseobject } from './_interfaces'
+import type { ApiResponseobject } from './_interfaces.ts'
 
 /** 取消关注 */
 export function keyBorardAttentionRemove(data: {

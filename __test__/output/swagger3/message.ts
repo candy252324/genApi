@@ -10,7 +10,7 @@ import type {
   LiShiXiaoXiMessageHistoryReq,
   XiaoXiSouSuoShiTi,
   MessageSyncDTO,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 确认收到消息 */
 export function messageAck(data: XiaoXiack): Promise<ApiResponseobject> {

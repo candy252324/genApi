@@ -11,7 +11,7 @@ import type {
   ApiResponseListTaskProgressDetailResp,
   TaskProgressDetailReq,
   ApiResponseListTaskProgressCatResp,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 修改发财梦任务状态 */
 export function happyTaskChangeStatus(data: TaskChangeStatusReq): Promise<ApiResponseboolean> {

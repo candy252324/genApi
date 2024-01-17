@@ -48,6 +48,11 @@ module.exports = {
       swaggerUrl: './__test__/json/mess.json',
       outputDir: './__test__/output/mess',
       gen: true,
+      // 自定义接口名称生成规则
+      apiName: ({ url, method, buildInApiName }) => {
+        // franchisecenterApiEnterpriseList => enterpriseList
+        return buildInApiName.replace('franchisecenterApi', '').replace(/^\S/, (s) => s.toLowerCase())
+      },
     },
   ],
   httpTpl: 'const request:any=()=>{}', // 文件头部引入内容

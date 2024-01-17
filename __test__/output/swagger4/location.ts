@@ -18,7 +18,7 @@ import type {
   FenYeLvYouRenCaiFaCaiMengGongHai,
   ApiResponseComPagePageGladHappyPoolResp,
   XiangMuFaCaiMengGongHaiLvYou,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 打卡记录灌水 */
 export function locationAdd(data: LocationAddReq): Promise<ApiResponselong> {

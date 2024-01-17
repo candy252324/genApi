@@ -13,7 +13,7 @@ import type {
   NiaoWoChengYuanFenYeBirdMemberPageReq,
   NiaoWoChengYuanJiaShiBirdMemberSaveReq,
   BirdSetNoticeAndTopReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 管理员扫雪鸟窝成员 */
 export function birdMemberDelete(data: NiaoWoChengYuanSaoXueBirdMemberDelReq): Promise<ApiResponse> {

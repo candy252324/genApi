@@ -1,5 +1,10 @@
 const request: any = () => {}
-import type { ApiResponseVoid, BiXieDao, ApiResponseBiXieDao, ApiResponseComPageBiXieDaoYongDao } from './_interfaces'
+import type {
+  ApiResponseVoid,
+  BiXieDao,
+  ApiResponseBiXieDao,
+  ApiResponseComPageBiXieDaoYongDao,
+} from './_interfaces.ts'
 
 /** 执行审核 */
 export function auditAuthExecute(data: BiXieDao): Promise<ApiResponseVoid> {

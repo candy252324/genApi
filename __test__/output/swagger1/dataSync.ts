@@ -1,5 +1,5 @@
 const request: any = () => {}
-import type { ApiResponseShuJuYiZhiXingCaoZuoFanHuiJieGuo } from './_interfaces'
+import type { ApiResponseShuJuYiZhiXingCaoZuoFanHuiJieGuo } from './_interfaces.ts'
 
 /** 根据流水号出行结果 */
 export function dataSyncCheckResult(data: {

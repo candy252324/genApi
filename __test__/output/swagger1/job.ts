@@ -9,7 +9,7 @@ import type {
   ApiResponseListTreelong,
   QueryJobReq,
   RemoveDesktopReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 添加成员 */
 export function jobAddDesktop(data: JobAddDesktopReq[]): Promise<ApiResponseboolean> {

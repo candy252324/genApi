@@ -8,7 +8,7 @@ import type {
   ContactReq,
   ApiResponseUnReadComPageXiaoDaoXiaoXiYongDaoXiangYing,
   XiaoDaoXiaoXiYongDao,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 清除小道消息[上帝减去对应聪明未读消息总量] */
 export function hiallClearHiall(data: QingKongXiaoXiJiLu): Promise<ApiResponseobject> {

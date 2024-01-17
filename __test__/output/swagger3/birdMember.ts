@@ -11,7 +11,7 @@ import type {
   ApiResponseComPageBuLuoChengYuanXinXiDuiXiangBirdMemberResp,
   BuLuoChengYuanFenYeBirdMemberPageReq,
   BuLuoChengYuanJiaShiBirdMemberSaveReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 管理员倒垃圾部落成员 */
 export function birdMemberDelete(data: BuLuoChengYuanDaoLaJiBirdMemberDelReq): Promise<ApiResponse> {

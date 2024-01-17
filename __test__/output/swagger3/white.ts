@@ -7,7 +7,7 @@ import type {
   TongQianCaoSuoYouFangDongKeyBorardListAllGratefulReq,
   ApiResponseComPageDaDuNanTongQianCaoQiuQianWhiteKeyBorardResp,
   DaDuNanTongQianCaoFenYeKeyBorardPageReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 获取子大肚腩秋千+团建架构imgrouid */
 export function whiteList(data: DaDuNanQiuQianWhiteListReq): Promise<ApiResponseListDaDuNanXinXiWhiteResp> {

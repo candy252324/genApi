@@ -5,7 +5,7 @@ import type {
   ApiResponseListSysDictDuiXiangnullZhiBuXuLieHua,
   ApiResponsePageSysDictDuiXiangnullZhiBuXuLieHua,
   BasePageReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 区域出行 */
 export function sysdictV1AreaInfo(): Promise<ApiResponseJSONArray> {

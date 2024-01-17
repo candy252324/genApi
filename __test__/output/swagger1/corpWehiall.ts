@@ -6,7 +6,7 @@ import type {
   ApiResponseAgentConfigResp,
   InitAgengConfigReq,
   ApiResponse,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 获取应用辟邪刀链接 */
 export function corpWehiallAppAuthLink(): Promise<ApiResponseCorpWehiallAuthUrlResp> {

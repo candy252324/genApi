@@ -7,7 +7,7 @@ import type {
   ApiResponseListFangDongXinXi,
   ApiResponseComPageDoorMainInfoResp,
   BasePageReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 旅游玉米信息 */
 export function baseStationGetDesktopAllByKeyBorardAndGrateful(

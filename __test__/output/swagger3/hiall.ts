@@ -8,7 +8,7 @@ import type {
   ApiResponseComPageXiaoDaoXiaoXiQiuQianXiangYing,
   XiaoDaoXiaoXiQiuQian,
   ApiResponseXiaoDaoXiaoXi,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 清空小道消息 */
 export function hiallClearHiall(data: QingKongXiaoXiJiLu): Promise<ApiResponseobject> {

@@ -1,5 +1,5 @@
 const request: any = () => {}
-import type { ApiResponse, ApiResponseBanBen, BanBen0 } from './_interfaces'
+import type { ApiResponse, ApiResponseBanBen, BanBen0 } from './_interfaces.ts'
 
 /** 加湿铜钱草老乡鸟窝信息 */
 export function adminAddFellowBirdMember(data: { phone?: string }): Promise<ApiResponse> {

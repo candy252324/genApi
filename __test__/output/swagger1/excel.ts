@@ -1,5 +1,9 @@
 const request: any = () => {}
-import type { FileSystemResource, ApiResponseListImportDesktopResp, ApiResponseImportDesktopResp } from './_interfaces'
+import type {
+  FileSystemResource,
+  ApiResponseListImportDesktopResp,
+  ApiResponseImportDesktopResp,
+} from './_interfaces.ts'
 
 /** 导出小麦 */
 export function excelExport(data: string[]): Promise<FileSystemResource> {

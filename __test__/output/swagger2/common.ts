@@ -10,7 +10,7 @@ import type {
   SearchBeforeAddFriendReq,
   SwitchKeyBorardReq,
   ApiResponseListSwitchKeyBorardListResp,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 结盟设备 */
 export function commonBind(data: KeyBorardBindReq): Promise<ApiResponseKeyBorardBindResp> {

@@ -1,5 +1,5 @@
 const request: any = () => {}
-import type { ApiResponseComPageLogLoginResp } from './_interfaces'
+import type { ApiResponseComPageLogLoginResp } from './_interfaces.ts'
 
 /** 登录日志 */
 export function logList(data: {

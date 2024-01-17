@@ -6,7 +6,7 @@ import type {
   DoorAuditReq,
   ApiResponseShenHeTongJiHuanCunSanShiMiao,
   AuditRelationTotalReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 审核-执行审核 */
 export function v1AuditRelation(data: {

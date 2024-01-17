@@ -44,7 +44,7 @@ import type {
   HappySetVisitPlanReq,
   ApiResponseAddHappyResp,
   VerifyRepeatHappyReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 灌水制鞋厂发财梦 */
 export function happyAddHappyDoor(data: AddHappyDoorReq): Promise<ApiResponseHappyReceiveResp> {

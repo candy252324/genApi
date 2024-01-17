@@ -10,7 +10,7 @@ import type {
   ApiResponseComPageFriendshipResp,
   HaoYouQiuQianLvYouFriendshipQueryReq,
   ApiResponsestring,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 倒垃圾好友 */
 export function friendshipDelete(data: HaoYouFriendshipReq): Promise<ApiResponse> {

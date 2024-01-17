@@ -14,7 +14,7 @@ import type {
   HaoYouYongDaoChuXingFriendshipQueryReq,
   SetRcvMsgReq,
   SetShowPhoneReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 扫雪好友 */
 export function friendshipDelete(data: HaoYouFriendshipReq): Promise<ApiResponsestring> {

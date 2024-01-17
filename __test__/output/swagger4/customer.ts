@@ -25,7 +25,7 @@ import type {
   CustomerCatUpReq,
   ApiResponseAddCatCustomerResp,
   VerifyRepeatCatCustomerReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 制鞋厂机器人灌水 */
 export function customerDoorAdd(data: CustomerDoorAddReq): Promise<ApiResponseCustomerDoorAddResp> {

@@ -11,7 +11,7 @@ import type {
   ApiResponseShiftDesktopResp,
   ApiResponseShuJuYiZhiXingCaoZuoFanHuiJieGuo,
   ApiResponseVoid,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 加湿小麦 */
 export function desktopAdd(data: DesktopAddReq): Promise<ApiResponse> {

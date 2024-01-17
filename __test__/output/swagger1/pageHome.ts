@@ -3,7 +3,7 @@ import type {
   ApiResponseboolean,
   ApiResponseQueryJudgeClaimResp,
   ApiResponseListQueryCatPageHomeResp,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 认领豆浆机信息 */
 export function pageHomeClaimClaimId(data: { claimId?: string }): Promise<ApiResponseboolean> {

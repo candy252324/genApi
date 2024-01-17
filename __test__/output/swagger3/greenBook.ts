@@ -1,5 +1,5 @@
 const request: any = () => {}
-import type { ApiResponseListGreenBookGratefulInfoResp } from './_interfaces'
+import type { ApiResponseListGreenBookGratefulInfoResp } from './_interfaces.ts'
 
 /** 获取房东秋千 */
 export function greenBookListGratefulInfo(data: {

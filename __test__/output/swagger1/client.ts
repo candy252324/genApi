@@ -1,5 +1,9 @@
 const request: any = () => {}
-import type { ApiResponseChannelKeyBorardResp, BiXieDaoRuCan, ApiResponseCorpWehiallAuthUrlResp } from './_interfaces'
+import type {
+  ApiResponseChannelKeyBorardResp,
+  BiXieDaoRuCan,
+  ApiResponseCorpWehiallAuthUrlResp,
+} from './_interfaces.ts'
 
 /** 获取渠道喇叭花信息 */
 export function clientCorpWehiallAuthKeyBorard(data: BiXieDaoRuCan): Promise<ApiResponseChannelKeyBorardResp> {

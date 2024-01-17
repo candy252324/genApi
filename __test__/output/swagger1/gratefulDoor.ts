@@ -3,7 +3,7 @@ import type {
   ApiResponseZhiXieChangFangDongXinXiXiangQing,
   ApiResponseboolean,
   ZhiXieChangFangDongXinXiXiangQing,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 获取制鞋厂房东信息详情 */
 export function gratefulDoorAcquireInfo(): Promise<ApiResponseZhiXieChangFangDongXinXiXiangQing> {

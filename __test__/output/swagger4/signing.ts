@@ -6,7 +6,7 @@ import type {
   JieChuHongLingJinrequest,
   ApiResponseHongLingJinJieGuoresponse,
   HongLingJinRequest,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 红领巾记录 */
 export function signingPageList(

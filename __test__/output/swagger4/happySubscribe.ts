@@ -6,7 +6,7 @@ import type {
   ApiResponseHappySubscribeInfoResp,
   HappyPushInfoResp,
   ApiResponseComPageHappyPushDetail,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 发财梦分派取消操作 */
 export function happySubscribeCancelPush(data: { id?: string }): Promise<ApiResponse> {

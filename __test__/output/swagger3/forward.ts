@@ -6,7 +6,7 @@ import type {
   ForwardListReq,
   ApiResponseComPageCommonSearchResp,
   CommonSearchReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 转发 创建小道消息/发起瓜子天/进入部落瓜子 */
 export function forwardCheckAndCreate(data: ChuangJianXiaoDaoXiaoXi): Promise<ApiResponseXiaoDaoXiaoXi> {

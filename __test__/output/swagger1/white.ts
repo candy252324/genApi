@@ -10,7 +10,7 @@ import type {
   ApiResponseWhiteDetailResp,
   ApiResponseListWhiteResp,
   ApiResponseListSelectorDesktopResp,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 加湿小金库 */
 export function whiteAddWhite(data: WhiteAddReq): Promise<ApiResponse> {

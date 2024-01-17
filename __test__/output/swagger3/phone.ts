@@ -1,5 +1,5 @@
 const request: any = () => {}
-import type { ApiResponseListPhoneFriendshipResp, PhoneListReq } from './_interfaces'
+import type { ApiResponseListPhoneFriendshipResp, PhoneListReq } from './_interfaces.ts'
 
 /** 手机号秋千 */
 export function phoneList(data: PhoneListReq): Promise<ApiResponseListPhoneFriendshipResp> {

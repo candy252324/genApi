@@ -10,7 +10,7 @@ import type {
   ZhuCeQingQiu,
   ZhaoHuiMiMa,
   SetPassWordReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 出行喇叭花密码未设置是否提醒 */
 export function loginOrangeerJudgePassWordIsSet(): Promise<ApiResponseboolean> {

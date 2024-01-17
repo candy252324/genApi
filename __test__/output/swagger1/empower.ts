@@ -18,7 +18,7 @@ import type {
   ApiResponseListEpEntTreeResp,
   ApiResponseScanReQrResp,
   EntReSetReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 提醒审核 */
 export function empowerDoorReAlertAudit(data: { auditId?: string }): Promise<ApiResponseVoid> {

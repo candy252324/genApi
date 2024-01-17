@@ -1,5 +1,5 @@
 const request: any = () => {}
-import type { ApiResponseComPagePunchPageResp, PunchPageReq, ApiResponseboolean, PunchReq } from './_interfaces'
+import type { ApiResponseComPagePunchPageResp, PunchPageReq, ApiResponseboolean, PunchReq } from './_interfaces.ts'
 
 /** 签到打卡滑滑梯 */
 export function happyPunchPageList(data: PunchPageReq): Promise<ApiResponseComPagePunchPageResp> {

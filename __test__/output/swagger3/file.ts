@@ -1,5 +1,5 @@
 const request: any = () => {}
-import type { ApiResponsePutFileResp } from './_interfaces'
+import type { ApiResponsePutFileResp } from './_interfaces.ts'
 
 /** 直接表单提交文件到oss,返回图片访问链接 */
 export function filePutOssFile(data: {

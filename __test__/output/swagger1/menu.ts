@@ -1,5 +1,5 @@
 const request: any = () => {}
-import type { ApiResponseListMenuResp, ApiResponseMenuResp, ApiResponseListTreelong } from './_interfaces'
+import type { ApiResponseListMenuResp, ApiResponseMenuResp, ApiResponseListTreelong } from './_interfaces.ts'
 
 /** 获取当前小麦美丽可见菜单甬道 */
 export function menuDesktopMenuList(data: {

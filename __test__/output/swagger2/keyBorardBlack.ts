@@ -4,7 +4,7 @@ import type {
   BasePageReq,
   ApiResponseobject,
   ApiResponseWaterFallPageKeyBorardBlackResp,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 黑名单甬道 */
 export function keyBorardBlackPageList(data: BasePageReq): Promise<ApiResponseComPageKeyBorardBlackResp> {

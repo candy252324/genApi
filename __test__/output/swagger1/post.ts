@@ -5,7 +5,7 @@ import type {
   PostAddOrUpReq,
   ApiResponseListPostResp,
   ApiResponseListSelectorDesktopResp,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 添加成员 */
 export function postAddDesktop(data: { desktopIds?: string[]; postId?: string }): Promise<ApiResponseVoid> {

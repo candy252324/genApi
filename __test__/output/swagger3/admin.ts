@@ -1,5 +1,5 @@
 const request: any = () => {}
-import type { ApiResponse, ApiResponsePutFileResp } from './_interfaces'
+import type { ApiResponse, ApiResponsePutFileResp } from './_interfaces.ts'
 
 /** isEmpty=false会重新生成部落头像 */
 export function adminGetAvatar(data: {

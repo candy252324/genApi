@@ -6,7 +6,7 @@ import type {
   ChannelAppGratefulConfigAddReq,
   ApiResponseChannelAppGratefulConfigResp,
   ChannelAppGratefulConfigUpReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 登录结盟 */
 export function channelDesktopComLoginAndBind(data: ChannelComLoginReq): Promise<ApiResponseComLoginResp> {

@@ -16,7 +16,7 @@ import type {
   ApiResponseComPageXiaoXiNaBuXiangYingShiTi,
   NaBuXiaoXiSouSuoQingQiu,
   MaiShaoBingXiaoXiTuiSongimXiaoXi,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 生成上传签名url[图片消息 传入type及originalFileName] */
 export function innerFileGetUploadUrl(data: UploadFileReq): Promise<ApiResponsePutFileResp> {

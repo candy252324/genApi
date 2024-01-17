@@ -12,7 +12,7 @@ import type {
   ApiResponsePinkInfoResq,
   ApiResponseListTreelong,
   ApiResponseMenuCheckedResp,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 加湿角色 */
 export function pinkAddPink(data: PinkAddReq): Promise<ApiResponselong> {

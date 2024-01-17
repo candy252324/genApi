@@ -1,8 +1,8 @@
 const request: any = () => {}
-import type { ApiResponseComPageXiLanHuaLieBiao } from './_interfaces'
+import type { ApiResponseComPageXiLanHuaLieBiao } from './_interfaces.ts'
 
 /** 西蓝花列表 */
-export function franchisecenterApiEnterpriseList(data: {
+export function enterpriseList(data: {
   // 市
   city?: string
   // UN_COOPERATE("未合作"),     IN_COOPERATE("合作中"),     EXPIRE_COOPERATE("合作到期"),     TERMINATE_COOPERATING("终止合作中"),     TERMINATE_LOG_OFF("终止待注销"),     FORWARD_LOG_OFF("终止已注销"),     EXPIRE_LOG_OFF("到期已注销"),

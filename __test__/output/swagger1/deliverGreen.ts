@@ -5,7 +5,7 @@ import type {
   QieHuanMoRenDiZhi,
   ApiResponseComPageFangDongShouHuoDiZhiTianJia,
   BasePageReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 添加地址 */
 export function deliverGreenAddGreen(data: FangDongShouHuoDiZhiTianJia): Promise<ApiResponseboolean> {

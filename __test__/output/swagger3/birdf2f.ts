@@ -5,7 +5,7 @@ import type {
   ApiResponseListBirdF2fKeyBorardListResp,
   SaveRandomReq,
   ApiResponse,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 进入部落瓜子 */
 export function birdf2fEnterBird(data: EnterBirdReq): Promise<ApiResponselong> {

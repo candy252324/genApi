@@ -2,7 +2,7 @@ const request: any = () => {}
 import type {
   ApiResponseComPageBuLuoChengYuanXinXiDuiXiangBirdMemberResp,
   BuLuoChengYuanFenYeBirdMemberPageReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 根据birdId分页旅游成员秋千 */
 export function pageList(data: {

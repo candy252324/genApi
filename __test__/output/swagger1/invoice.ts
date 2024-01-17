@@ -5,7 +5,7 @@ import type {
   ApiResponseJSONArray,
   ApiResponseComPageXiaoYuanZhuoGuanLi,
   PageInvoiceReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 添加开票 */
 export function invoiceAdd(data: XiaoYuanZhuoGuanLi): Promise<ApiResponseboolean> {

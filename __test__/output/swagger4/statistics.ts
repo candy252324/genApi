@@ -6,7 +6,7 @@ import type {
   ZhuZhuangTuTongJiHistogramDataReq,
   ApiResponseRankResp,
   PaiMingTongJiRankDataReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** APP统计【成交发财梦】 */
 export function statisticsAppDealData(data: PaiMingTongJiPieDataReq): Promise<ApiResponseTongJiShuJuPieDataResp> {

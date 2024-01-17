@@ -117,7 +117,7 @@ import type {
   SheBaoZhangHao0,
   ApiResponseXueXinZhangHao,
   XueXinZhangHao,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 2-枚举值的下拉列表 */
 export function thkApiCommonV1Enuminfo(data: { name?: string }): Promise<ApiResponseMapstringobject> {

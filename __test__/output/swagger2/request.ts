@@ -14,7 +14,7 @@ import type {
   ApiResponseComPageYanChangChunHuaXiaoXiFenYeRequestPageListResp,
   QingQiuXiaoXiYongDaoRequestPageListReq,
   QingQiuXiaoXiDuBaoKuoYanChangChunHuaJiHuiFuXiaoXiDuRequestReadReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 添加好友申请 */
 export function requestAddFriend(data: TianJiaHaoYouAddFriendReq): Promise<ApiResponse> {

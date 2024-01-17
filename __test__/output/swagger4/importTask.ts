@@ -4,7 +4,7 @@ import type {
   ImportExcelByUrlReq,
   ApiResponseComPageDaoRuHuaHuaTiXiangYing,
   DaoRuHuaHuaTiQingQiu,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 导入excel文件操作 */
 export function importTaskImportExcel(data: {

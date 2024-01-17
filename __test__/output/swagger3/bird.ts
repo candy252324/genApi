@@ -10,7 +10,7 @@ import type {
   ApiResponseBuLuoDuiXiangBirdResp,
   ChuangJianGengXinDuiXiangBirdSaveReq,
   BirdTransferReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 部落信息详情 */
 export function birdDetail(data: BuLuoXinXiBirdDetailReq): Promise<ApiResponseBuLuoDuiXiangBirdDetailResp> {

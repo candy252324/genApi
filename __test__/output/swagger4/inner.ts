@@ -29,7 +29,7 @@ import type {
   InnerRpcImportExcelByUrlReq,
   ApiResponseComPageDaoRuHuaHuaTiXiangYing,
   InnerRpcImportListReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** gladSignInfo */
 export function innerHappyGladSignInfo(data: InnerRpclong): Promise<ApiResponseGladSignInfoResp> {

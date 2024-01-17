@@ -5,7 +5,7 @@ import type {
   ApiResponseboolean,
   TianJiaDouJiangJiBeiJing0,
   ApiResponse,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 分页出行豆浆机背景 */
 export function catCredentialPageCatCredential(

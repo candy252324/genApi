@@ -3,7 +3,7 @@ import type {
   ApiResponseDesktopNoActiveResp,
   ApiResponseSendActiveMessageResp,
   SendActiveMessageReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 根据小金库code出行未激活小麦甬道 */
 export function activeNoActiveList(data: { whiteCode?: string }): Promise<ApiResponseDesktopNoActiveResp> {

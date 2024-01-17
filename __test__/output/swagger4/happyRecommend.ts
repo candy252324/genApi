@@ -6,7 +6,7 @@ import type {
   FenYeLvYouRenCaiFaCaiMengTuiJian,
   ApiResponseComPagePageGladHappyPoolResp,
   FenYeLvYouXiangMuFaCaiMengTuiJian,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 制鞋厂发财梦滑滑梯 */
 export function happyRecommendPageDoorHappy(

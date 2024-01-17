@@ -7,7 +7,7 @@ import type {
   ApiResponseListTreelong,
   ApiResponseListDesktopResp,
   ListDesktopReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 旅游铜钱草花生米信息 */
 export function whiteAcquireWhiteInfo(data: WhiteReq): Promise<ApiResponseListWhiteNoteResp> {

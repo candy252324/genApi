@@ -1,5 +1,9 @@
 const request: any = () => {}
-import type { FileSystemResource, PageDesktopAddRecordReq, ApiResponseComPageDesktopAddRecordResp } from './_interfaces'
+import type {
+  FileSystemResource,
+  PageDesktopAddRecordReq,
+  ApiResponseComPageDesktopAddRecordResp,
+} from './_interfaces.ts'
 
 /** 导出未激活成员甬道 */
 export function desktopAddRecordExport(data: PageDesktopAddRecordReq): Promise<FileSystemResource> {

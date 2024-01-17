@@ -7,7 +7,7 @@ import type {
   PageDoorCredentialReq,
   ApiResponseOcrHappyLicenseBO,
   OcrImageReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 添加制鞋厂背景 */
 export function enterCredentialAdd(data: AddOrUpdateCredentialReq): Promise<ApiResponseboolean> {

@@ -21,7 +21,7 @@ import type {
   ApiResponseQueryJudgeClaimResp,
   ApiResponseQueryDoorPageHomeResp,
   ApiResponseWhiteLinkDoorResp,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 钱包临时使用，后面切换版本。分页出行小麦信息【房东id, 姓名，手机号，状态】 */
 export function doorIdentificationBaseInfoDesktopList(data: {

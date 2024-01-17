@@ -17,7 +17,7 @@ import type {
   ApiResponseInviteSetResp,
   ApiResponseboolean,
   AddOrUpdateInviteSetReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 取消屏蔽喇叭花 */
 export function inviteAuditCancelShieldId(data: { id?: string }): Promise<ApiResponsestring> {

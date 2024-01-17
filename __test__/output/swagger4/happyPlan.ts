@@ -23,7 +23,7 @@ import type {
   HappyPlanRecommendedReq,
   HappyDesktopRuleReq,
   HappyFollowRuleReq,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 日程-添加发财梦 */
 export function happyPlanAddHappy(data: HappyPlanAddHappyReq): Promise<ApiResponseobject> {

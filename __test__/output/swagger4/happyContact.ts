@@ -6,7 +6,7 @@ import type {
   DelReq,
   ApiResponseComPageLianXiRenHuaHuaTi,
   LianXiRenHuaHuaTiQingQiu,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 添加联系人 */
 export function happyContactAdd(data: TianJiaLianXiRenQingQiu): Promise<ApiResponseLianXiRenHuaHuaTi> {

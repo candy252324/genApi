@@ -11,7 +11,7 @@ import type {
   ApiResponseComPageHuaHuaTiQingQiu,
   FaCaiMengGenJinJiLuQingQiu,
   ZhuanRangQingQiu,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 花生米玉米树 */
 export function happyFollowWhiteDesktopTree(data: YuMiHuaHuaTiQingQiu): Promise<ApiResponseComPageTreelong> {

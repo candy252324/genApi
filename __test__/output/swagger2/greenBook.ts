@@ -5,7 +5,7 @@ import type {
   WaiBuShuiDaoSouSuoRuCan,
   ApiResponseComPageWaiBuZhiXieChangChuCan,
   WaiBuZhiXieChangSouSuoRuCan,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 获取旅客甬道 */
 export function greenBookListGratefulInfo(): Promise<ApiResponseListGreenBookGratefulInfoResp> {

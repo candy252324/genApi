@@ -10,7 +10,7 @@ import type {
   ApiResponseQueryLastMessageResp,
   SheZhiMoRenZhiXieChang,
   TianJiaWoWeiHaoYouCongMingFangShi,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 注销账号 */
 export function keyBorardCancel(data: KeyBorardCancelReq): Promise<ApiResponse> {

@@ -4,7 +4,7 @@ import type {
   ApiResponseboolean,
   XiuGaiMiMa,
   XiuGaiDouJiangJiXinXi,
-} from './_interfaces'
+} from './_interfaces.ts'
 
 /** 获取豆浆机房东信息详情 */
 export function gratefulCatAcquireInfo(): Promise<ApiResponseDouJiangJiFangDongXinXiXiangQingBiao> {
