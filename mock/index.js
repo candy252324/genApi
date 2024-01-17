@@ -1412,4 +1412,4 @@ Mock.mock(/\/thk\/test\/export-excel/, 'get', station4swagger5Api.thkTestExporte
 Mock.mock(/\/thk\/test\/merge/, 'post', station4swagger5Api.thkTestMerge)
 Mock.mock(/\/thk\/test\/test1/, 'get', station4swagger5Api.thkTestTest1)
 Mock.mock(/\/thk\/test\/test2/, 'get', station4swagger5Api.thkTestTest2)
-Mock.mock(/\/franchise-center\/api\/enterprise\/list/, 'get', station5franchisecenter.franchisecenterApiEnterpriseList)
+Mock.mock(/\/franchise-center\/api\/enterprise\/list/, 'get', station5franchisecenter.enterpriseList)
