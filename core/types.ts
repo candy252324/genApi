@@ -11,12 +11,14 @@ export interface IApiStation {
   exclude?: RegExp | string | RegExp[] | string[]
   /** 文件头部引入内容 */
   httpTpl?: string
-  /** 文件名称生成规则*/
+  /** 自定义文件名称生成规则 */
   fileName?: string | Function
-  /** 文件后缀, 可选值：ts 或 js， 默认 ts */
-  fileExt?: 'ts' | 'js' | '.ts' | '.js'
+  /** 自定义接口名称生成规则 */
+  apiName?: Function
   /** api 结构 */
   apiBody?: Function
+  /** 文件后缀, 可选值：ts 或 js， 默认 ts */
+  fileExt?: 'ts' | 'js' | '.ts' | '.js'
 }
 
 export interface IMock {
@@ -37,8 +39,10 @@ export interface IApiConfig {
   httpTpl?: string
   /** api 结构 */
   apiBody: Function
-  /** 文件名称生成规则*/
+  /** 自定义文件名称生成规则*/
   fileName?: string | Function
+  /** 自定义接口名称生成规则*/
+  apiName?: Function
   /** 文件后缀, 可选值：ts 或 js， 默认 ts */
   fileExt?: 'ts' | 'js' | '.ts' | '.js'
   mock?: boolean | IMock

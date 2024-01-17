@@ -4,7 +4,13 @@ import { getUrl, getApiName, getFileName, getFileExt, handleWeirdName, handleJsT
 /** 生成 api 数据模型 */
 export function handleApiModel(
   paths,
-  { exclude, include, fileName, fileExt }: Pick<IApiStation, 'exclude' | 'include' | 'fileName' | 'fileExt'>
+  {
+    exclude,
+    include,
+    fileName,
+    fileExt,
+    apiName,
+  }: Pick<IApiStation, 'exclude' | 'include' | 'fileName' | 'fileExt' | 'apiName'>
 ) {
   const apis: IApiModel[] = []
   for (const key in paths) {
@@ -15,7 +21,9 @@ export function handleApiModel(
       Object.keys(objs).forEach((method) => {
         const obj = objs[method]
         const url = getUrl(key)
-        const name = getApiName(url, apiHasSameUrl > 1 ? method : '')
+        const buildInApiName = getApiName(url, apiHasSameUrl > 1 ? method : '') // 内置生成的接口名称
+        // 优先使用用户传入的 apiName 生成规则
+        const name = apiName ? apiName({ url, method, buildInApiName }) : buildInApiName
         const theFileName = getFileName(url, fileName)
         const theFileExt = getFileExt(fileExt)
         const summary = obj.summary?.trim() || '' // 接口注释

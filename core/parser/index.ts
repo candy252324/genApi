@@ -14,6 +14,7 @@ export async function parser(apiConfig: IApiConfig) {
         httpTpl: item.httpTpl || apiConfig.httpTpl || '',
         apiBody: item.apiBody || apiConfig.apiBody,
         fileName: item.fileName || apiConfig.fileName,
+        apiName: item.apiName || apiConfig.apiName,
       }
     })
 
@@ -39,6 +40,7 @@ async function parseFn(apiStation: IApiStation, stationIndex: number): Promise<I
       include: apiStation.include,
       exclude: apiStation.exclude,
       fileName: apiStation.fileName,
+      apiName: apiStation.apiName,
       fileExt: apiStation.fileExt,
     })
     interfaces = handleInterface(swaggerJson.definitions)
@@ -56,6 +58,12 @@ function validateApiConfig(apiConfig: IApiConfig) {
   const apiList = apiConfig.apiList.filter((item) => item.gen !== false)
   if (!apiConfig.apiBody && apiList.some((item) => !item.apiBody)) {
     throw new Error('请传入 apiBody , 必须是一个函数')
+  }
+  if (
+    (apiConfig.apiName && typeof apiConfig.apiName !== 'function') ||
+    apiList.some((item) => item.apiName && typeof item.apiName !== 'function')
+  ) {
+    throw new Error('apiName 必须是一个函数')
   }
   if (apiList.some((item) => !item.swaggerUrl)) {
     throw new Error('请传入 swaggerUrl')
