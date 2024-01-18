@@ -5,9 +5,11 @@
   "main": "genapi",
   "scripts": {
     "build": "node ./scripts/build.js",
-    "test": "node ./__test__/index.js",
+    "test": "yarn build && yarn link && genapi now -c ./__test__/apiConfig.js",
+    "test:init": "yarn build && yarn link && genapi init",
+    "test:mock-server": "yarn build && yarn link && genapi mock-server",
     "replace": "node ./scripts/replaceStr.js",
-    "prepublish": "npm run build"
+    "prepublish": "yarn build"
   },
   "bin": {
     "genapi": "bin/index.js"
@@ -40,7 +42,8 @@
     "commander": "^11.0.0",
     "eslint": "^8.55.0",
     "js-pinyin": "^0.2.4",
-    "prettier": "^2.8.8"
+    "prettier": "^2.8.8",
+    "unconfig": "^0.3.11"
   },
   "devDependencies": {
     "@rollup/plugin-json": "^6.0.1",

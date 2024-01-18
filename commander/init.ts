@@ -1,16 +1,13 @@
 import fs from 'node:fs'
-import path from 'node:path'
-import { CONFIG_FILE_NAME } from '../constant'
+import { DEFAULT_CONFIG_PATH } from '../core/constant'
 import { apiConfigTpl } from './template'
-
-const CWD = process.cwd()
 
 /**
  * 初始化配置文件
  * @param force 强制覆盖本地配置文件
  */
 export function init(options) {
-  const configFilePath = path.join(CWD, CONFIG_FILE_NAME)
+  const configFilePath = DEFAULT_CONFIG_PATH
   // 强制初始化，覆盖本地 apiconfig
   if (options?.force) {
     writeConfigFile(configFilePath)

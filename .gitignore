@@ -1,5 +1,7 @@
 /node_modules
 package-lock.json
-/temp/parseredData.json
+apiConfig.js
+apiConfig.ts
+/temp
 /dist
 yarn-error.log
