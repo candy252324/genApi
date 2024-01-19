@@ -1,7 +1,17 @@
 /node_modules
 package-lock.json
+yarn-error.log
+/dist
+
+# 解析后数据的存储目录
+/temp
+
+# 执行 yarn test:init 在项目根目录下生成的配置文件
 apiConfig.js
 apiConfig.ts
-/temp
-/dist
-yarn-error.log
+
+
+# 在用户目录下执行 genapi 生成的 mock 数据路径为 path.join(__dirname,'../mock')，
+# 如果是 npm link 方式执行的，其实指向的是本项目的根路径，设置提交忽略
+/mock
+
