@@ -15,7 +15,7 @@ export async function now(options) {
   }
   saveConfigPathToLocal(configFilePath)
 
-  const { config } = (await loadConfig(configFilePath)) as { config: IApiConfig }
+  const { config } = await loadConfig(configFilePath)
   parser(config).then((parseredData) => {
     genApi(parseredData)
     if (config.mock !== false) {

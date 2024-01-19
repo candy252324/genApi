@@ -2,11 +2,13 @@ import http from 'node:http'
 import path from 'node:path'
 import Mock from 'better-mock'
 import { portIsOccupied } from '../utils'
-import { MOCK_OUTPUT_DIR, MOCK_SERVER_PORT } from '../constant'
+import { MOCK_SERVER_PORT } from '../constant'
+import { getMockPath } from './mockUtils'
 import { getParseredDataFromLocal } from '../parser/localData'
 import { IMock } from '../types'
 
 export async function createMockServer(mockConfig: IMock) {
+  const MOCK_OUTPUT_DIR = await getMockPath()
   const port = await portIsOccupied(MOCK_SERVER_PORT)
   const server = http.createServer()
 

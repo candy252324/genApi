@@ -1,8 +1,9 @@
 {
   "name": "@cxxgo/genapi",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "",
   "main": "genapi",
+  "buildInFlag": "cxx-genapi-tool",
   "scripts": {
     "build": "node ./scripts/build.js",
     "test": "yarn build && yarn link && genapi now -c ./__test__/apiConfig.js",

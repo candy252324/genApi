@@ -13,8 +13,5 @@ export const PARSERED_DATA_LOCAL_PATH = path.join(__dirname, '../temp/parseredDa
 /** 用户配置的本地存储路径 */
 export const USER_CONFIG_LOCAL_PATH = path.join(__dirname, '../temp/userConfig.json')
 
-/** mock 数据存放路径 */
-export const MOCK_OUTPUT_DIR = path.join(__dirname, '../mock')
-
 /** mock 服务默认端口号 */
 export const MOCK_SERVER_PORT = 8090

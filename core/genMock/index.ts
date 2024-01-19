@@ -3,11 +3,14 @@ import { writeMockIndex } from './writeMockIndex'
 import { writeMockInterface } from './writeMockInterface'
 import { writeMockApi } from './writeMockApi'
 import { IParsered, IMock, IApiGroup } from '../types'
-import { MOCK_OUTPUT_DIR } from '../constant'
+import { getMockPath } from './mockUtils'
 import { groupApiByFileName } from '../utils'
 import { cleanDir } from '../utils/file'
 
+let MOCK_OUTPUT_DIR = '' // mock 数据输出路径
+
 export async function genMock(data: IParsered[], mockConfig: IMock) {
+  MOCK_OUTPUT_DIR = await getMockPath()
   console.log(`mock 数据生成中...`)
   cleanDir(MOCK_OUTPUT_DIR)
   await genMockParaller(data, mockConfig)
