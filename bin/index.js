@@ -5,7 +5,7 @@ const commander = require('commander')
 const program = commander.program
 
 const pkgJson = require('../package.json')
-const { init, now, mockServer } = require('../dist/commander')
+const { init, now, mockServer } = require('../dist/index')
 
 program.version(pkgJson.version)
 
@@ -19,7 +19,9 @@ program
   .command('now')
   .option('-c --config <configPath>', '配置文件路径')
   .action((options) => {
+    console.log()
     console.log(`当前版本: ${pkgJson.version}`)
+    console.log()
     now(options)
   })
 
