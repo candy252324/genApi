@@ -22,7 +22,7 @@ function getCommonTpl(needComment = false) {
       apiList: [
         {
           swaggerUrl: '', ${needComment ? '// swagger json 的 url 或 本地swagger.json路径' : ''}
-          outputDir: '/src/api', ${needComment ? '// 输出到哪个目录中' : ''}
+          outputDir: '/src/api', ${needComment ? '// 输出目录' : ''}
           gen: true, ${needComment ? '// 是否生成' : ''}
         },
       ],

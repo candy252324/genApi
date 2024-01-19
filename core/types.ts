@@ -4,7 +4,7 @@ export interface UserConfig {
   /** 文件头部引入内容 */
   httpTpl?: string
   /** api 结构 */
-  apiBody: Function
+  apiBody: (data: IApibodyParam) => string
   /** 自定义文件名称生成规则*/
   fileName?: string | Function
   /** 自定义接口名称生成规则*/
@@ -16,7 +16,7 @@ export interface UserConfig {
 export interface IApiStation {
   /** swagger 地址(可以是服务端地址也可以是 swagger json 本地文件路径) */
   swaggerUrl: string
-  /** 输出到哪个目录中, cjh todo 校验 */
+  /** 输出目录 */
   outputDir: string
   /** 是否生成(默认true, 设为false，则不生成 ) */
   gen?: boolean
@@ -31,9 +31,30 @@ export interface IApiStation {
   /** 自定义接口名称生成规则 */
   apiName?: Function
   /** api 结构 */
-  apiBody?: Function
+  apiBody?: (data: IApibodyParam) => string
   /** 文件后缀, 可选值：ts 或 js， 默认 ts */
   fileExt?: 'ts' | 'js' | '.ts' | '.js'
+}
+
+export interface IApibodyParam {
+  /** 接口名称，如 getUserList */
+  name: string
+  /** 接口路径 */
+  url: string
+  /** 请求方法（小写，如 get、post） */
+  method: string
+  /** 后端注释 */
+  summary: string
+  /** 接口输出数据模型 */
+  outputInterface: string
+  /** 接口入参 */
+  parameters: IParams[]
+  /** 值如 data: { id: string }, 由 parameters 处理得到  */
+  pstr1: string
+  /** 值如 data, 由 parameters 处理得到 */
+  pstr2: string
+  /** 当路径中存在参数时，会有值，值如 const { id } = data , 由 parameters 处理得到 */
+  pstr3: string
 }
 
 export interface IMock {
