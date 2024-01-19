@@ -5,7 +5,7 @@
   "buildInFlag": "cxx-genapi-tool",
   "scripts": {
     "build": "node ./scripts/build.js",
-    "test": "yarn build && yarn link && genapi now -c ./__test__/apiConfig.js",
+    "test": "yarn build && yarn link && genapi now -c ./__test__/apiConfig.ts",
     "test:init": "yarn build && yarn link && genapi init",
     "test:mock-server": "yarn build && yarn link && genapi mock-server",
     "replace": "node ./scripts/replaceStr.js",

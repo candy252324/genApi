@@ -10,7 +10,8 @@ export function handleApiModel(
     fileName,
     fileExt,
     apiName,
-  }: Pick<IApiStation, 'exclude' | 'include' | 'fileName' | 'fileExt' | 'apiName'>
+    apiPath,
+  }: Pick<IApiStation, 'exclude' | 'include' | 'fileName' | 'fileExt' | 'apiName' | 'apiPath'>
 ) {
   const apis: IApiModel[] = []
   for (const key in paths) {
@@ -20,11 +21,12 @@ export function handleApiModel(
       const apiHasSameUrl = Object.keys(objs).length // url 相同，但是方法不同的接口数量
       Object.keys(objs).forEach((method) => {
         const obj = objs[method]
-        const url = getUrl(key)
-        const defaultApiName = getApiName(url, apiHasSameUrl > 1 ? method : '') // 内置生成的接口名称
+        const theUrl = getUrl(key)
+        const url = apiPath ? apiPath({ url: theUrl }) : theUrl // 经用户 apiPath() 函数处理过后的 url
+        const defaultApiName = getApiName(theUrl, apiHasSameUrl > 1 ? method : '') // 内置生成的接口名称
         // 优先使用用户传入的 apiName 生成规则
-        const name = apiName ? apiName({ url, method, defaultApiName }) : defaultApiName
-        const theFileName = getFileName(url, fileName)
+        const name = apiName ? apiName({ url, originUrl: theUrl, method, defaultApiName }) : defaultApiName
+        const theFileName = getFileName({ url, originUrl: theUrl, userFileName: fileName })
         const theFileExt = getFileExt(fileExt)
         const summary = obj.summary?.trim() || '' // 接口注释
         const parameters = getParameters(obj.parameters) // 入参
@@ -48,6 +50,7 @@ export function handleApiModel(
         apis.push({
           name,
           url,
+          originUrl: theUrl,
           method,
           summary: summary.replace(/\n/g, ' '), // 去除注释中的换行符
           parameters,

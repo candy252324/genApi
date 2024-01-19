@@ -7,6 +7,10 @@ import { genApi } from '../core/genApi'
 import { genMock } from '../core/genMock'
 
 export async function now(options) {
+  if (options?.config && !fs.existsSync(options.config)) {
+    console.log(`通过--config参数传入的配置文件 ${options.config} 不存在`)
+    return
+  }
   // 优先判断用户是否通过 --config 参数传入了配置文件
   const configFilePath =
     options?.config && fs.existsSync(options.config)

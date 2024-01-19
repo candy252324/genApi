@@ -1,4 +1,6 @@
-module.exports = {
+import { type UserConfig } from '../core/types'
+
+const config: UserConfig = {
   apiList: [
     {
       swaggerUrl: './__test__/json/swagger1.json',
@@ -30,8 +32,11 @@ module.exports = {
       // exclude: [/credential-standard/],
       httpTpl: 'const myRequest:any=()=>{}', // 文件头部引入内容
       // 配置接口所属文件名称
-      fileName: ({ url }) => {
+      fileName: () => {
         return 'swagger5Api' // 所有的api都放在这个文件里
+      },
+      apiPath: ({ url }) => {
+        return `/prefix${url}`
       },
       // 可以有自己的apibody
       apiBody: ({ url, method, summary, name, parameters, outputInterface, pstr1, pstr2, pstr3 }) => {
@@ -89,3 +94,5 @@ module.exports = {
     },
   },
 }
+
+export default config

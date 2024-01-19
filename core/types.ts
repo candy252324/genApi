@@ -5,10 +5,12 @@ export interface UserConfig {
   httpTpl?: string
   /** api 结构 */
   apiBody: Function
-  /** 自定义文件名称生成规则*/
-  fileName?: string | Function
-  /** 自定义接口名称生成规则*/
-  apiName?: Function
+  /** 接口所属文件名称*/
+  fileName?: string | ((data: FileNameFnParam) => string)
+  /** 接口名称*/
+  apiName?: (data: ApiNameFnParam) => string
+  /** 接口路径重写（如：加前缀 /abc/def => /prefix/abc/def）*/
+  apiPath?: (data: { url: string }) => string
   /** 文件后缀, 可选值：ts 或 js， 默认 ts */
   fileExt?: 'ts' | 'js' | '.ts' | '.js'
   mock?: boolean | IMock
@@ -26,10 +28,12 @@ export interface IApiStation {
   exclude?: RegExp | string | RegExp[] | string[]
   /** 文件头部引入内容 */
   httpTpl?: string
-  /** 自定义文件名称生成规则 */
-  fileName?: string | Function
-  /** 自定义接口名称生成规则 */
-  apiName?: Function
+  /** 接口所属文件名称*/
+  fileName?: string | ((data: FileNameFnParam) => string)
+  /** 接口名称*/
+  apiName?: (data: ApiNameFnParam) => string
+  /** 接口路径重写（如：加前缀 /abc/def => /prefix/abc/def）*/
+  apiPath?: (data: { url: string }) => string
   /** api 结构 */
   apiBody?: Function
   /** 文件后缀, 可选值：ts 或 js， 默认 ts */
@@ -64,6 +68,8 @@ export interface IParams {
 export interface IApiModel {
   /** 接口路径 */
   url: string
+  /** 接口原本路径（即重写前路径） */
+  originUrl: string
   /** 请求方法 */
   method: string
   /** 接口名称, 如 getUserList */
@@ -110,4 +116,22 @@ export interface IApiGroup {
   fileExt: 'ts' | 'js'
   /** 该文件名内所有的接口 */
   apis: IApiModel[]
+}
+
+export interface ApiNameFnParam {
+  /** 接口路径 */
+  url: string
+  /** 接口原本路径（即重写前路径） */
+  originUrl: string
+  /** 请求方法（小写） */
+  method: string
+  /** 接口名称默认值 */
+  defaultApiName: string
+}
+
+export interface FileNameFnParam {
+  /** 接口路径 */
+  url: string
+  /** 接口原本路径（即重写前路径） */
+  originUrl: string
 }
