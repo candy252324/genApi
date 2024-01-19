@@ -1,10 +1,10 @@
-import { IApiStation, IApiConfig, IApiModel, IInterface, IParsered } from '../types'
+import { IApiStation, UserConfig, IApiModel, IInterface, IParsered } from '../types'
 import { handleApiModel } from './handleApiModel'
 import { handleInterface } from './handleInterface'
 import { readSwagger } from './readSwagger'
 import { saveParseredDataToLocal } from './localData'
 
-export async function parser(apiConfig: IApiConfig) {
+export async function parser(apiConfig: UserConfig) {
   validateApiConfig(apiConfig)
   const apiList: IApiStation[] = apiConfig.apiList
     .filter((item) => item.gen !== false)
@@ -54,7 +54,7 @@ async function parseFn(apiStation: IApiStation, stationIndex: number): Promise<I
 }
 
 /** 校验 apiConfig  */
-function validateApiConfig(apiConfig: IApiConfig) {
+function validateApiConfig(apiConfig: UserConfig) {
   const apiList = apiConfig.apiList.filter((item) => item.gen !== false)
   if (!apiConfig.apiBody && apiList.some((item) => !item.apiBody)) {
     throw new Error('请传入 apiBody , 必须是一个函数')

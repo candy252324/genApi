@@ -2,7 +2,6 @@
   "name": "@cxxgo/genapi",
   "version": "1.0.13",
   "description": "",
-  "main": "genapi",
   "buildInFlag": "cxx-genapi-tool",
   "scripts": {
     "build": "node ./scripts/build.js",
@@ -12,6 +11,8 @@
     "replace": "node ./scripts/replaceStr.js",
     "prepublish": "yarn build"
   },
+  "main": "./dist/index.js",
+  "types": "./dist/type.d.ts",
   "bin": {
     "genapi": "bin/index.js"
   },
@@ -49,6 +50,7 @@
     "@rollup/plugin-json": "^6.0.1",
     "@types/node": "^20.9.2",
     "rollup": "^4.4.0",
+    "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-typescript2": "^0.36.0",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2"

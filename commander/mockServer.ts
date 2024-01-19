@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import { getConfigPathFromLoal } from '../core/parser/localData'
 import { loadConfig } from '../core/utils/loadConfig'
 import { createMockServer } from '../core/genMock/mockServer'
-import { IApiConfig } from '../core/types'
+import { UserConfig } from '../core/types'
 
 export async function mockServer() {
   const configFilePath = getConfigPathFromLoal()
@@ -11,6 +11,6 @@ export async function mockServer() {
     return
   }
   // cjh todo 处理没有本地数据的情况
-  const { config } = (await loadConfig(configFilePath)) as { config: IApiConfig }
+  const { config } = (await loadConfig(configFilePath)) as { config: UserConfig }
   createMockServer(config?.mock as any)
 }

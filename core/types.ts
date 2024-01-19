@@ -1,3 +1,18 @@
+export interface UserConfig {
+  /** 接口列表 */
+  apiList: IApiStation[]
+  /** 文件头部引入内容 */
+  httpTpl?: string
+  /** api 结构 */
+  apiBody: Function
+  /** 自定义文件名称生成规则*/
+  fileName?: string | Function
+  /** 自定义接口名称生成规则*/
+  apiName?: Function
+  /** 文件后缀, 可选值：ts 或 js， 默认 ts */
+  fileExt?: 'ts' | 'js' | '.ts' | '.js'
+  mock?: boolean | IMock
+}
 export interface IApiStation {
   /** swagger 地址(可以是服务端地址也可以是 swagger json 本地文件路径) */
   swaggerUrl: string
@@ -30,22 +45,6 @@ export interface IMock {
   fieldRules?: {
     [key: string]: any
   }
-}
-
-export interface IApiConfig {
-  /** 接口列表 */
-  apiList: IApiStation[]
-  /** 文件头部引入内容 */
-  httpTpl?: string
-  /** api 结构 */
-  apiBody: Function
-  /** 自定义文件名称生成规则*/
-  fileName?: string | Function
-  /** 自定义接口名称生成规则*/
-  apiName?: Function
-  /** 文件后缀, 可选值：ts 或 js， 默认 ts */
-  fileExt?: 'ts' | 'js' | '.ts' | '.js'
-  mock?: boolean | IMock
 }
 
 export interface IParams {
