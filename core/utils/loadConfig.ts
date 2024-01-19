@@ -14,6 +14,7 @@ export async function loadConfig(configPath: string): Promise<{ config?: any; so
     })
     return { config, sources }
   } catch (error) {
+    console.log(error)
     return {}
   }
 }

@@ -1,4 +1,5 @@
-export const apiConfigTpl = `module.exports = {
+const commonTpl = `
+{
   apiList: [
     {
       swaggerUrl: '', // swagger json 的 url 或 本地swagger.json相对根目录的路径
@@ -19,3 +20,10 @@ export const apiConfigTpl = `module.exports = {
   },
 }
 `
+
+export const apiConfigTpl_ts = `
+// ts ts
+module.exports = ${commonTpl}
+`
+
+export const apiConfigTpl_js = `module.exports = ${commonTpl}`

@@ -10,7 +10,7 @@ export async function mockServer() {
     console.log('缺少配置文件，执行 genapi init 生成')
     return
   }
-
+  // cjh todo 处理没有本地数据的情况
   const { config } = (await loadConfig(configFilePath)) as { config: IApiConfig }
   createMockServer(config?.mock as any)
 }

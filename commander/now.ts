@@ -5,11 +5,15 @@ import { saveConfigPathToLocal } from '../core/parser/localData'
 import { parser } from '../core/parser'
 import { genApi } from '../core/genApi'
 import { genMock } from '../core/genMock'
-import { IApiConfig } from '../core/types'
 
 export async function now(options) {
-  const configFilePath = options?.config ?? DEFAULT_CONFIG_PATH // 配置文件绝对路径
-  if (!fs.existsSync(configFilePath)) {
+  // 优先判断用户是否通过 --config 参数传入了配置文件
+  const configFilePath =
+    options?.config && fs.existsSync(options.config)
+      ? options?.config
+      : Object.values(DEFAULT_CONFIG_PATH).find((confPath) => fs.existsSync(confPath))
+
+  if (!configFilePath) {
     console.log('缺少配置文件，执行 genapi init 生成')
     return
   }
