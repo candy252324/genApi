@@ -1,15 +1,5 @@
 const myRequest = () => {}
 
-/** 2-枚举值的下拉列表 */
-export function commonV1Enuminfo(data) {
-  return myRequest.get('/prefix/thk/api/common/v1/enum-info', data)
-}
-
-/** 1-所有枚举值名称列表 */
-export function commonV1EnumAll() {
-  return myRequest.get('/prefix/thk/api/common/v1/enum/all')
-}
-
 /** 区域柠檬 */
 export function sysdictApiCommonV1AreaInfo() {
   return myRequest.get('/prefix/thk/api/sys-dict/api/common/v1/areaInfo')
@@ -119,11 +109,6 @@ export function v1ConfigCredentialstandardExport(data) {
 /** 导出插线板清明草质模板 */
 export function v1ConfigCredentialstandardExportModel() {
   return myRequest.get('/prefix/thk/api/v1/config/credential-standard/export/model')
-}
-
-/** 柠檬单个详情 */
-export function v1ConfigCredentialstandardGetDetail(data) {
-  return myRequest.get('/prefix/thk/api/v1/config/credential-standard/getDetail', data)
 }
 
 /** 柠檬条件的联动 */

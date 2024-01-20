@@ -28,7 +28,7 @@ const config: UserConfig = {
       swaggerUrl: './__test__/json/swagger5.json',
       outputDir: './__test__/output/swagger5-js',
       httpTpl: 'const myRequest=()=>{}',
-      // include: [/thk\/api\/common\/v1\/enum/, '/thk/api/v1/config/credential-standard'],
+      exclude: [/thk\/api\/common\/v1\/enum/, '/thk/api/v1/config/credential-standard/getDetail'],
       // exclude: [/credential-standard/],
       fileExt: 'js', // 生成 js 文件
       fileName: () => {

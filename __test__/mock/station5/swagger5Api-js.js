@@ -1,11 +1,8 @@
 import Mock from 'better-mock'
 import {
-  ApiResponseMapstringobject,
-  ApiResponseMapstringstring,
   ApiResponseJSONArray,
   ApiResponseboolean,
   ApiResponseComPageJiXuDaShuiNiuWeiShengSu,
-  ApiResponseQingMingCaoZhiXiaoChouYu,
   ApiResponseListMap,
   ApiResponseComPageQingMingCaoZhiXiaoChouYu,
   ApiResponseSetstring,
@@ -52,6 +49,7 @@ import {
   ApiResponseListChaXianBanGongChengShuiBeiXiangYing,
   ApiResponseComPageChaXianBanGongChengShuiBeiXiangYing,
   ApiResponseJSONObject,
+  ApiResponseMapstringstring,
   ApiResponseGeRenShuiGuoDao,
   ApiResponseJuanXinCaiSuoYouShuiGuoDao,
   ApiResponseTastyAllCountResp,
@@ -80,12 +78,6 @@ import {
   ApiResponseSheBaoZhangHao,
   ApiResponseXueXinZhangHao,
 } from './_interfaces'
-
-/** 2-枚举值的下拉列表 */
-export const commonV1Enuminfo = () => Mock.mock(ApiResponseMapstringobject())
-
-/** 1-所有枚举值名称列表 */
-export const commonV1EnumAll = () => Mock.mock(ApiResponseMapstringstring())
 
 /** 区域柠檬 */
 export const sysdictApiCommonV1AreaInfo = () => Mock.mock(ApiResponseJSONArray())
@@ -152,9 +144,6 @@ export const v1ConfigCredentialstandardExport = () => Mock.mock('')
 
 /** 导出插线板清明草质模板 */
 export const v1ConfigCredentialstandardExportModel = () => Mock.mock('')
-
-/** 柠檬单个详情 */
-export const v1ConfigCredentialstandardGetDetail = () => Mock.mock(ApiResponseQingMingCaoZhiXiaoChouYu())
 
 /** 柠檬条件的联动 */
 export const v1ConfigCredentialstandardGetQueryChain = () => Mock.mock(ApiResponseListMap())

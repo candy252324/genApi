@@ -1301,8 +1301,6 @@ Mock.mock(/\/thk\/test\/export-excel/, 'get', station4thk.thkTestExportexcel)
 Mock.mock(/\/thk\/test\/merge/, 'post', station4thk.thkTestMerge)
 Mock.mock(/\/thk\/test\/test1/, 'get', station4thk.thkTestTest1)
 Mock.mock(/\/thk\/test\/test2/, 'get', station4thk.thkTestTest2)
-Mock.mock(/\/prefix\/thk\/api\/common\/v1\/enum-info/, 'get', station5swagger5Apijs.commonV1Enuminfo)
-Mock.mock(/\/prefix\/thk\/api\/common\/v1\/enum\/all/, 'get', station5swagger5Apijs.commonV1EnumAll)
 Mock.mock(
   /\/prefix\/thk\/api\/sys-dict\/api\/common\/v1\/areaInfo/,
   'get',
@@ -1408,11 +1406,6 @@ Mock.mock(
   /\/prefix\/thk\/api\/v1\/config\/credential-standard\/export\/model/,
   'get',
   station5swagger5Apijs.v1ConfigCredentialstandardExportModel
-)
-Mock.mock(
-  /\/prefix\/thk\/api\/v1\/config\/credential-standard\/getDetail/,
-  'get',
-  station5swagger5Apijs.v1ConfigCredentialstandardGetDetail
 )
 Mock.mock(
   /\/prefix\/thk\/api\/v1\/config\/credential-standard\/getQueryChain/,
