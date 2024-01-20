@@ -29,14 +29,21 @@ export async function staticServer(reqUrl: string, res) {
   }
 }
 
-export const sendFile = async (resp, pathname) => {
+export const sendFile = async (res, pathname) => {
   // 使用promise-style的readFile API异步读取文件的数据，然后返回给客户端
   const data = await fs.promises.readFile(pathname)
-  resp.end(data)
+  const ext = pathname.split('.').pop()
+  const contentTypeMap = {
+    js: 'application/javascript',
+  }
+  res.writeHead(200, {
+    'Content-Type': contentTypeMap[ext] || '',
+  })
+  res.end(data)
 }
 
 // cjh todo  目录嵌套资源访问有问题
-export const sendDirectory = async (resp, pathname) => {
+export const sendDirectory = async (res, pathname) => {
   // 使用promise-style的readdir API异步读取文件夹的目录信息，然后返回给客户端
   const fileList = await fs.promises.readdir(pathname, { withFileTypes: true })
   // 这里保存一下子资源相对于根目录的相对路径，用于后面客户端继续访问子资源
@@ -54,5 +61,5 @@ export const sendDirectory = async (resp, pathname) => {
 
   content += '</ul>'
   // 返回当前的目录结构给客户端
-  resp.end(`<h1>Content of ${relativePath || 'root directory'}:</h1>${content}`)
+  res.end(`<h1>Content of ${relativePath || 'root directory'}:</h1>${content}`)
 }
