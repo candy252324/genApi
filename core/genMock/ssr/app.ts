@@ -2,9 +2,9 @@
 import { createSSRApp } from 'vue'
 import { IParsered } from '../../types'
 
-export function createApp(allApiData: IParsered[]) {
+export function createApp(allApiData?: IParsered[]) {
   return createSSRApp({
-    data: () => ({ allApiData }),
+    data: () => ({ allApiData: allApiData || [] }),
     methods: {
       getColor(method: string) {
         switch (method) {
@@ -20,29 +20,36 @@ export function createApp(allApiData: IParsered[]) {
       },
     },
     template: `
-      <div v-for="(item,index) in allApiData" :key="index">
-        <h2>{{item.swaggerUrl}}</h2>
-        <div v-for="(api,idx) in item.apis" :key="idx" style="
-          display: flex;
-          align-items: center;
-          margin:4px;
-          border-radius: 2px;
-          color: #333;
-          font-size: 14px;
-        ">
-          <span 
-            style="
-              margin-right:8px;
-              padding: 4px 8px;             
-              color: #fff;
-              border-radius: 4px
-            "
-            :style="{'background-color':getColor(api.method)}"
-          >{{api.method}}</span>
-          <a v-if="api.method==='get'" :href="api.url">{{api.url}}</a>
-          <span v-else>
-            {{api.url}}
-          </span>
+        <div v-for="(item,index) in allApiData" :key="index">
+          <div style="
+            margin: 20px;
+            word-break: break-all;
+            font-size:16px;
+            font-weight:bold;
+          ">{{item.swaggerUrl}}</div>
+          <div v-for="(api,idx) in item.apis" :key="idx" style="
+            display: flex;
+            align-items: center;
+            margin:8px 20px;
+            color: #333;
+            font-size: 14px;
+          ">
+            <span 
+              style="
+                min-width:56px;
+                margin-right:8px;
+                padding: 3px 0;   
+                text-align: center;          
+                color: #fff;
+                border-radius: 4px;
+                user-select: none;
+              "
+              :style="{'background-color':getColor(api.method)}"
+            >{{api.method}}</span>
+            <a v-if="api.method==='get'" :href="api.url">{{api.url}}</a>
+            <span v-else>
+              {{api.url}}
+            </span>
         </div>
       </div>
     `,

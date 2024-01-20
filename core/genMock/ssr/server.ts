@@ -27,8 +27,8 @@ export function ssrServer(allApiData: IParsered[], res) {
         </script>
         <script type="module" src="/static/client.js"></script>
         <body>
-            本地mock服务已启动！
-            <div id="app">${html}</div>
+          <div style="margin:20px">mock服务启动成功！🚀🚀🚀</div>
+          <div id="app">${html}</div>
         </body>
       </html>
       `)
