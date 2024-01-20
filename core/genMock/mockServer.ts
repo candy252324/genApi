@@ -1,11 +1,14 @@
 import http from 'node:http'
 import path from 'node:path'
 import Mock from 'better-mock'
+
 import { portIsOccupied } from '../utils'
 import { MOCK_SERVER_PORT } from '../constant'
 import { getMockPath } from './mockUtils'
 import { getParseredDataFromLocal } from '../parser/localData'
 import { IMock } from '../types'
+import { staticServer } from './ssr/staticServer'
+import { ssrServer } from './ssr/server'
 
 export async function createMockServer(mockConfig: IMock) {
   const MOCK_OUTPUT_DIR = await getMockPath()
@@ -16,18 +19,26 @@ export async function createMockServer(mockConfig: IMock) {
     const _url = req.url.split('?')[0]
     const _method = req.method
 
-    res.writeHead(200, {
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Headers': '*',
-      'Access-Control-Allow-Methods': '*',
-    })
-
+    // 访问首页
     if (_url === '/') {
-      res.end('本地mock服务已启动！')
+      const allApiData = getParseredDataFromLocal()
+      ssrServer(allApiData, res)
     } else if (_url === '/favicon.ico') {
       res.end()
-    } else {
+    }
+    // 访问静态资源目录
+    else if (_url.split('/')[1] === 'static') {
+      staticServer(_url, res)
+    }
+    // 访问接口
+    else {
+      res.writeHead(200, {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': '*',
+        'Access-Control-Allow-Methods': '*',
+      })
+
       const allApiData = getParseredDataFromLocal()
       const obj: { url: string; method: string; outputInterface: string; stationFlag: string } = {} as any
       // 找到 url 相同的api
@@ -66,8 +77,7 @@ export async function createMockServer(mockConfig: IMock) {
         if (_method.toLowerCase() === 'options') {
           res.end()
         } else {
-          console.log('没有找到对应的api', _url)
-          res.end('没有找到对应的api')
+          res.end(`资源不存在${_url}`)
         }
       }
     }

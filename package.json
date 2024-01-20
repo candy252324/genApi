@@ -44,7 +44,8 @@
     "eslint": "^8.55.0",
     "js-pinyin": "^0.2.4",
     "prettier": "^2.8.8",
-    "unconfig": "^0.3.11"
+    "unconfig": "^0.3.11",
+    "vue": "^3.4.15"
   },
   "devDependencies": {
     "@rollup/plugin-json": "^6.0.1",

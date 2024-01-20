@@ -18,6 +18,18 @@ module.exports = [
   //   ],
   // },
   {
+    input: 'core/genMock/ssr/client.ts',
+    output: {
+      file: 'static/client.js',
+      format: 'es',
+    },
+    plugins: [
+      typescript({
+        include: ['core/genMock/ssr/**'],
+      }),
+    ],
+  },
+  {
     input: 'commander/index.ts',
     output: {
       file: 'dist/index.js',
