@@ -6,7 +6,7 @@ const CWD = process.cwd()
 /** 静态资源托管, 直接返回文件内容 */
 export async function staticServer(reqUrl: string, res) {
   try {
-    const fileUrl = path.join(CWD, reqUrl)
+    const fileUrl = path.join(CWD, reqUrl) // http://localhost:8088/static
     // 读取资源的信息, fs.Stats对象
     const stat = await fs.promises.stat(fileUrl)
 
@@ -30,7 +30,6 @@ export async function staticServer(reqUrl: string, res) {
 }
 
 export const sendFile = async (res, pathname) => {
-  // 使用promise-style的readFile API异步读取文件的数据，然后返回给客户端
   const data = await fs.promises.readFile(pathname)
   const ext = pathname.split('.').pop()
   const contentTypeMap = {
@@ -42,24 +41,22 @@ export const sendFile = async (res, pathname) => {
   res.end(data)
 }
 
-// cjh todo  目录嵌套资源访问有问题
 export const sendDirectory = async (res, pathname) => {
-  // 使用promise-style的readdir API异步读取文件夹的目录信息，然后返回给客户端
   const fileList = await fs.promises.readdir(pathname, { withFileTypes: true })
-  // 这里保存一下子资源相对于根目录的相对路径，用于后面客户端继续访问子资源
+  // 相对路径，如 http://localhost:8088/static/example 相对 http://localhost:8088 的结果为 'static/example'
   const relativePath = path.relative(process.cwd(), pathname)
 
   // 构造返回的html结构体
   let content = '<ul>'
   fileList.forEach((file) => {
+    const filePath = path.join('/', relativePath, file.name) // /static/example/test.txt
     content += `
       <li>
-        <a href=${relativePath}/${file.name}>${file.name}${file.isDirectory() ? '/' : ''}
+        <a href=${filePath}>${file.name}${file.isDirectory() ? '/' : ''}
         </a>
       </li>`
   })
-
   content += '</ul>'
-  // 返回当前的目录结构给客户端
+
   res.end(`<h1>Content of ${relativePath || 'root directory'}:</h1>${content}`)
 }
