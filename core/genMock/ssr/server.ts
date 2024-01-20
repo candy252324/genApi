@@ -11,19 +11,26 @@ export function ssrServer(allApiData: IParsered[], res) {
   // app.mount('#app')
   renderToString(app).then((html) => {
     res.end(`
-        <!DOCTYPE html>
-        <html>
+      <!DOCTYPE html>
+      <html>
         <head>
-            <meta charset="UTF-8">
-            <link ref="icon' href="/static/favicon.ico">
-            <title>mock</title>
+          <meta charset="UTF-8">
+          <link ref="icon' href="/static/favicon.ico">
+          <title>mock</title>
         </head>
-            <script type="module" src="/static/client.js"></script>
-            <body>
-                本地mock服务已启动！
-                <div id="app">${html}</div>
-            </body>
-        </html>
-        `)
+        <script type="importmap">
+          {
+            "imports": {
+              "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+            }
+          }
+        </script>
+        <script type="module" src="/static/client.js"></script>
+        <body>
+            本地mock服务已启动！
+            <div id="app">${html}</div>
+        </body>
+      </html>
+      `)
   })
 }
