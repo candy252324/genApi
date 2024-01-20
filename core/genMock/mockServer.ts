@@ -67,11 +67,14 @@ export async function createMockServer(mockConfig: IMock) {
           delete require.cache[require.resolve(cmdInterfacePath)] // 删除require缓存, 保证拿到最新的mock数据
           const theInterface = require(cmdInterfacePath)
           const interfaceFn = theInterface[outputInterface] // interface.GreenBookGratefulInfoResp
-          const mockObj = Mock.mock(interfaceFn()) // Mock.mock(interface.GreenBookGratefulInfoResp())
-          res.end(JSON.stringify(mockObj))
+          if (interfaceFn && typeof interfaceFn === 'function') {
+            const mockObj = Mock.mock(interfaceFn()) // Mock.mock(interface.GreenBookGratefulInfoResp())
+            res.end(JSON.stringify(mockObj))
+          } else {
+            res.end()
+          }
         } catch (error) {
-          console.log(`${_url} 接口出错`, error)
-          res.end('接口解析出错')
+          res.end(`接口解析出错 ${error}`)
         }
       } else {
         if (_method.toLowerCase() === 'options') {
