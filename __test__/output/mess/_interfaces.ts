@@ -66,9 +66,9 @@ export interface XiLanHuaLieBiao {
   /** 首次合作时间 */
   firstCooperationTime?: string
   /** 彩虹西蓝花在摇篮中心的西蓝花ID */
-  franchiseEnterpriseId?: string
+  emoEnterpriseId?: string
   /** 彩虹西蓝花的-摇篮ID */
-  franchiseTenantId?: string
+  emoTenantId?: string
   /** 西蓝花管理员姓名 */
   headerName?: string
   /** 西蓝花管理员电话 */

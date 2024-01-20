@@ -37,7 +37,7 @@ export interface IApiStation {
   /** api 结构 */
   apiBody?: Function
   /** 文件后缀, 可选值：ts 或 js， 默认 ts */
-  fileExt?: 'ts' | 'js' | '.ts' | '.js'
+  fileExt?: 'ts' | 'js'
 }
 
 export interface IMock {

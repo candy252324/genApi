@@ -23,7 +23,6 @@ function getCommonTpl(needComment = false) {
         {
           swaggerUrl: '', ${needComment ? '// swagger json 的 url 或 本地swagger.json路径' : ''}
           outputDir: '/src/api', ${needComment ? '// 输出到哪个目录中' : ''}
-          gen: true, ${needComment ? '// 是否生成' : ''}
         },
       ],
       httpTpl: "import request from './request/index'", ${needComment ? '// 文件头部引入内容' : ''}
