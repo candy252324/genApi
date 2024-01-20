@@ -9,7 +9,7 @@ import { IMock } from '../types'
 
 export async function createMockServer(mockConfig: IMock) {
   const MOCK_OUTPUT_DIR = await getMockPath()
-  const port = await portIsOccupied(MOCK_SERVER_PORT)
+  const port = await portIsOccupied(mockConfig.port || MOCK_SERVER_PORT)
   const server = http.createServer()
 
   server.on('request', async (req, res) => {

@@ -73,7 +73,7 @@ const config: UserConfig = {
   // 是否生成 mock 数据
   // mock: false,
   mock: {
-    port: 8090,
+    port: 8088,
     // rewrite: (path) => `/event-center${path}`,
     /** 自定义 mock 生成规则 */
     fieldRules: {
