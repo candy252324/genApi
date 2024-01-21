@@ -1,16 +1,14 @@
 import http from 'node:http'
 import path from 'node:path'
 import Mock from 'better-mock'
-
 import { portIsOccupied } from '../utils'
 import { MOCK_SERVER_PORT } from '../constant'
 import { getMockPath } from './mockUtils'
-import { getParseredDataFromLocal } from '../parser/localData'
-import { IMock } from '../types'
+import { IMock, IParsered } from '../types'
 import { staticServer } from './ssr/staticServer'
 import { ssrServer } from './ssr/server'
 
-export async function createMockServer(mockConfig: IMock) {
+export async function createMockServer(mockConfig: IMock, allApiData: IParsered[]) {
   const MOCK_OUTPUT_DIR = await getMockPath()
   const port = await portIsOccupied(mockConfig.port || MOCK_SERVER_PORT)
   const server = http.createServer()
@@ -21,7 +19,6 @@ export async function createMockServer(mockConfig: IMock) {
 
     // 访问首页
     if (_url === '/') {
-      const allApiData = getParseredDataFromLocal()
       ssrServer(allApiData, res)
     } else if (_url === '/favicon.ico') {
       res.end()
@@ -39,7 +36,6 @@ export async function createMockServer(mockConfig: IMock) {
         'Access-Control-Allow-Methods': '*',
       })
 
-      const allApiData = getParseredDataFromLocal()
       const obj: { url: string; method: string; outputInterface: string; stationFlag: string } = {} as any
       // 找到 url 相同的api
       ;(allApiData || []).find((item) => {

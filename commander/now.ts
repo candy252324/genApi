@@ -1,6 +1,4 @@
-import fs from 'node:fs'
-import { DEFAULT_CONFIG_PATH } from '../core/constant'
-import { loadConfig } from '../core/utils/loadConfig'
+import { loadConfig, getConfigPath } from '../core/utils/config'
 import { saveConfigPathToLocal } from '../core/parser/localData'
 import { parser } from '../core/parser'
 import { genApi } from '../core/genApi'
@@ -13,22 +11,10 @@ export async function now(options: {
   /** 是否生成 mock 数据 */
   mock: boolean
 }) {
-  if (options?.config && !fs.existsSync(options.config)) {
-    console.log(`通过--config参数传入的配置文件 ${options.config} 不存在`)
-    return
-  }
-  // 优先判断用户是否通过 --config 参数传入了配置文件
-  const configFilePath =
-    options?.config && fs.existsSync(options.config)
-      ? options?.config
-      : Object.values(DEFAULT_CONFIG_PATH).find((confPath) => fs.existsSync(confPath))
+  const configFilePath = getConfigPath(options.config)
+  if (!configFilePath) return
 
-  if (!configFilePath) {
-    console.log('缺少配置文件，执行 genapi init 生成')
-    return
-  }
   saveConfigPathToLocal(configFilePath)
-
   const { config } = (await loadConfig(configFilePath)) as { config: UserConfig }
   parser(config).then((parseredData) => {
     genApi(parseredData)

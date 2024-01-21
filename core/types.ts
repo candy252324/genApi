@@ -64,7 +64,7 @@ export interface IParams {
   description: string // 注释
   in: 'header' | 'body' | 'query' | 'path' // 可能值： body ,header, query, path...
   /** 是否是简单 js 类型 */
-  isSimpleJsType: boolean //   cjh todo
+  isSimpleJsType: boolean
   /** 是否是数组 */
   isArray: boolean
   /** 入参类型，string, number, boolean, UserInterface */
