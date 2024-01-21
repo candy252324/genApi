@@ -13,7 +13,7 @@ export interface UserConfig {
   apiPath?: (data: { url: string }) => string
   /** 文件后缀, 可选值：ts 或 js， 默认 ts */
   fileExt?: 'ts' | 'js' | '.ts' | '.js'
-  mock?: boolean | IMock
+  mock?: IMock
 }
 export interface IApiStation {
   /** swagger 地址(可以是服务端地址也可以是 swagger json 本地文件路径) */
