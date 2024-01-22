@@ -108,3 +108,11 @@ export interface XiLanHuaLieBiao {
   signId?: string
   tenantId?: string
 }
+export interface ApiResponseListListlong {
+  code?: number
+  data?: any[]
+  msg?: string
+  success?: boolean
+  timestamp?: string
+  traceId?: string
+}

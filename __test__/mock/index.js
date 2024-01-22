@@ -1880,3 +1880,8 @@ Mock.mock(/\/prefix\/thk\/test\/merge/, 'post', station5swagger5Apijs.thkTestMer
 Mock.mock(/\/prefix\/thk\/test\/test1/, 'get', station5swagger5Apijs.thkTestTest1)
 Mock.mock(/\/prefix\/thk\/test\/test2/, 'get', station5swagger5Apijs.thkTestTest2)
 Mock.mock(/\/emo-center\/api\/enterprise\/list/, 'get', station6emocenter.emocenterApiEnterpriseList)
+Mock.mock(
+  /\/emo-center\/api\/feeRule\/getCooperateTypeIdsByFeeId/,
+  'get',
+  station6emocenter.emocenterApiFeeRuleGetCooperateTypeIdsByFeeId
+)

@@ -80,6 +80,37 @@
         },
         "security": [{ "satoken": ["global"] }]
       }
+    },
+    "/emo-center/api/feeRule/getCooperateTypeIdsByFeeId": {
+      "get": {
+        "tags": ["武术规则"],
+        "summary": "查询合作类型根据武术规则ID",
+        "operationId": "getCooperateTypeIdsByFeeIdUsingGET",
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "feeId",
+            "in": "query",
+            "description": "feeId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«List«List«long»»»",
+              "originalRef": "ApiResponse«List«List«long»»»"
+            }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }]
+      }
     }
   },
   "securityDefinitions": { "satoken": { "type": "apiKey", "name": "satoken", "in": "header" } },
@@ -169,6 +200,18 @@
         "tenantId": { "type": "integer", "format": "int64" }
       },
       "title": "西蓝花列表"
+    },
+    "ApiResponse«List«List«long»»»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "type": "array", "items": { "type": "array", "items": { "type": "integer", "format": "int64" } } },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«List«List«long»»»"
     }
   }
 }

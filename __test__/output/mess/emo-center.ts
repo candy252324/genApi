@@ -1,5 +1,5 @@
 const request: any = () => {}
-import type { ApiResponseComPageXiLanHuaLieBiao } from './_interfaces.ts'
+import type { ApiResponseComPageXiLanHuaLieBiao, ApiResponseListListlong } from './_interfaces.ts'
 
 /** 西蓝花列表 */
 export function emocenterApiEnterpriseList(data: {
@@ -25,4 +25,11 @@ export function emocenterApiEnterpriseList(data: {
   size?: number
 }): Promise<ApiResponseComPageXiLanHuaLieBiao> {
   return request.get('/emo-center/api/enterprise/list', data)
+}
+
+/** 查询合作类型根据武术规则ID */
+export function emocenterApiFeeRuleGetCooperateTypeIdsByFeeId(data: {
+  feeId?: string
+}): Promise<ApiResponseListListlong> {
+  return request.get('/emo-center/api/feeRule/getCooperateTypeIdsByFeeId', data)
 }
