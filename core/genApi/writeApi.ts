@@ -1,13 +1,13 @@
 import path from 'node:path'
 
 import { typeIsInterface, writeAndPrettify } from '../utils'
-import { IParams, IApiGroup, IInterface } from '../types'
+import { IParams, IApiGroup, IInterface, IParsered } from '../types'
 
 /** api 写入 */
 export function writeApi(
   apiGroup: IApiGroup[],
   allInterfaces: IInterface[],
-  config: { outputDir: string; apiBody: Function; httpTpl: string }
+  config: Pick<IParsered, 'outputDir' | 'apiBody' | 'httpTpl'>
 ) {
   const { outputDir, apiBody, httpTpl } = config
   apiGroup.forEach((item) => {

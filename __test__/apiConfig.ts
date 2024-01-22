@@ -35,7 +35,7 @@ const config: UserConfig = {
         return 'swagger5Api-js'
       },
       // 添加前缀
-      apiPath: ({ url }) => {
+      pathRewrite: ({ url }) => {
         return `/prefix${url}`
       },
       // 自定义接口名称生成规则

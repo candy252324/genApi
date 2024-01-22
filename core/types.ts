@@ -4,13 +4,13 @@ export interface UserConfig {
   /** 文件头部引入内容 */
   httpTpl?: string
   /** api 结构 */
-  apiBody: Function
+  apiBody?: (data: IApibodyParam) => string
   /** 接口所属文件名称*/
   fileName?: string | ((data: FileNameFnParam) => string)
   /** 接口名称*/
   apiName?: (data: ApiNameFnParam) => string
   /** 接口路径重写（如：加前缀 /abc/def => /prefix/abc/def）*/
-  apiPath?: (data: { url: string }) => string
+  pathRewrite?: (data: { url: string }) => string
   /** 文件后缀, 可选值：ts 或 js， 默认 ts */
   fileExt?: 'ts' | 'js' | '.ts' | '.js'
   mock?: IMock
@@ -23,7 +23,7 @@ export interface IApiStation {
   /** 是否生成(默认true, 设为false，则不生成 ) */
   gen?: boolean
   /** 无需生成的接口, 支持正则匹配和字符串完全匹配
-   * 注1. 匹配的是原本的 url，而非通过 apiPath 函数重写后的 url
+   * 注1. 匹配的是原本的 url，而非通过 pathRewrite 函数重写后的 url
    * 注2. 不判断方法，即 如果有两个接口路径相同方法不同，都不会生成
    */
   exclude?: RegExp | string | (RegExp | string)[]
@@ -39,7 +39,7 @@ export interface IApiStation {
   /** 接口名称*/
   apiName?: (data: ApiNameFnParam) => string
   /** 接口路径重写（如：加前缀 /abc/def => /prefix/abc/def）*/
-  apiPath?: (data: { url: string }) => string
+  pathRewrite?: (data: { url: string }) => string
   /** api 结构 */
   apiBody?: (data: IApibodyParam) => string
   /** 文件后缀, 可选值：ts 或 js， 默认 ts */
@@ -51,6 +51,8 @@ export interface IApibodyParam {
   name: string
   /** 接口路径 */
   url: string
+  /** 接口原本路径（即重写前路径） */
+  originUrl: string
   /** 请求方法（小写，如 get、post） */
   method: string
   /** 后端注释 */
@@ -71,7 +73,7 @@ export interface IMock {
   /** 本地启动的 mock 服务端口号 */
   port?: number
   /** mock 路径重写 */
-  rewrite?: Function
+  rewrite?: (data: { url: string }) => string
   /** 自定义 mock 生成规则 */
   fieldRules?: {
     [key: string]: any

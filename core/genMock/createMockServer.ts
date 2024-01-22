@@ -93,7 +93,7 @@ function isSameApi(theOne: { url: string; method: string }, req, mockConfig: IMo
   const method = theOne.method
   let url = theOne.url
   if (mockConfig?.rewrite && typeof mockConfig.rewrite === 'function') {
-    url = mockConfig.rewrite(url)
+    url = mockConfig.rewrite({ url })
   }
 
   const methodIsSame = method && reqMethod && method.toLowerCase() === reqMethod.toLowerCase()

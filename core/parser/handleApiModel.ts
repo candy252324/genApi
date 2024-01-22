@@ -10,8 +10,8 @@ export function handleApiModel(
     fileName,
     fileExt,
     apiName,
-    apiPath,
-  }: Pick<IApiStation, 'exclude' | 'include' | 'fileName' | 'fileExt' | 'apiName' | 'apiPath'>
+    pathRewrite,
+  }: Pick<IApiStation, 'exclude' | 'include' | 'fileName' | 'fileExt' | 'apiName' | 'pathRewrite'>
 ) {
   const apis: IApiModel[] = []
   for (const key in paths) {
@@ -22,7 +22,7 @@ export function handleApiModel(
       Object.keys(objs).forEach((method) => {
         const obj = objs[method]
         const theUrl = getUrl(key)
-        const url = apiPath ? apiPath({ url: theUrl }) : theUrl // 经用户 apiPath() 函数处理过后的 url
+        const url = pathRewrite ? pathRewrite({ url: theUrl }) : theUrl // 经用户 pathRewrite() 函数处理过后的 url
         const defaultApiName = getApiName(theUrl, apiHasSameUrl > 1 ? method : '') // 内置生成的接口名称
         // 优先使用用户传入的 apiName 生成规则
         const name = apiName ? apiName({ url, originUrl: theUrl, method, defaultApiName }) : defaultApiName
