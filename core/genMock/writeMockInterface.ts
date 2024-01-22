@@ -58,6 +58,9 @@ function getInterfaceMock(model: IInterface, fieldRules) {
   let _isCustome = false
   if (enums?.length) {
     _mockStr = `/${enums.join('|')}/` // 处理枚举 /A|B|C/,
+  } else if (!type) {
+    // 处理异常情况，防止出现 'data|1-20': [()] 的情况，正常应该是  'data|1-20': [UserInfo()]
+    _mockStr = ''
   } else if (type === 'string' || type === 'number' || type === 'boolean' || type === 'any' || type === 'File') {
     const { mockStr, isCustome } = getFieldMockStr({ name, type, fieldRules })
     _mockStr = mockStr
