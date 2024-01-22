@@ -4,31 +4,38 @@ import Mock from 'better-mock'
 import { portIsOccupied } from '../utils'
 import { MOCK_SERVER_PORT } from '../constant'
 import { getMockPath } from './mockUtils'
-import { getParseredDataFromLocal } from '../parser/localData'
-import { IMock } from '../types'
+import { IMock, IParsered } from '../types'
+import { staticServer } from './ssr/staticServer'
+import { ssrServer } from './ssr/server'
 
-export async function createMockServer(mockConfig: IMock) {
+export async function createMockServer(mockConfig: IMock, allApiData: IParsered[]) {
   const MOCK_OUTPUT_DIR = await getMockPath()
-  const port = await portIsOccupied(MOCK_SERVER_PORT)
+  const port = await portIsOccupied(mockConfig.port || MOCK_SERVER_PORT)
   const server = http.createServer()
 
   server.on('request', async (req, res) => {
     const _url = req.url.split('?')[0]
     const _method = req.method
 
-    res.writeHead(200, {
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Headers': '*',
-      'Access-Control-Allow-Methods': '*',
-    })
-
+    // 访问首页
     if (_url === '/') {
-      res.end('本地mock服务已启动！')
+      ssrServer(allApiData, res)
     } else if (_url === '/favicon.ico') {
       res.end()
-    } else {
-      const allApiData = getParseredDataFromLocal()
+    }
+    // 访问静态资源目录
+    else if (_url.split('/')[1] === 'static') {
+      staticServer(_url, res)
+    }
+    // 访问接口
+    else {
+      res.writeHead(200, {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': '*',
+        'Access-Control-Allow-Methods': '*',
+      })
+
       const obj: { url: string; method: string; outputInterface: string; stationFlag: string } = {} as any
       // 找到 url 相同的api
       ;(allApiData || []).find((item) => {
@@ -56,18 +63,20 @@ export async function createMockServer(mockConfig: IMock) {
           delete require.cache[require.resolve(cmdInterfacePath)] // 删除require缓存, 保证拿到最新的mock数据
           const theInterface = require(cmdInterfacePath)
           const interfaceFn = theInterface[outputInterface] // interface.GreenBookGratefulInfoResp
-          const mockObj = Mock.mock(interfaceFn()) // Mock.mock(interface.GreenBookGratefulInfoResp())
-          res.end(JSON.stringify(mockObj))
+          if (interfaceFn && typeof interfaceFn === 'function') {
+            const mockObj = Mock.mock(interfaceFn()) // Mock.mock(interface.GreenBookGratefulInfoResp())
+            res.end(JSON.stringify(mockObj))
+          } else {
+            res.end()
+          }
         } catch (error) {
-          console.log(`${_url} 接口出错`, error)
-          res.end('接口解析出错')
+          res.end(`接口解析出错 ${error}`)
         }
       } else {
         if (_method.toLowerCase() === 'options') {
           res.end()
         } else {
-          console.log('没有找到对应的api', _url)
-          res.end('没有找到对应的api')
+          res.end(`资源不存在${_url}`)
         }
       }
     }

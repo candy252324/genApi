@@ -5,31 +5,9 @@
     "title": "彩虹中心-test, common-test, sa-client-test-接口文档"
   },
   "basePath": "/",
-  "tags": [
-    { "name": "人员列表", "description": "Common Employee Controller" },
-    { "name": "西蓝花管理", "description": "Enterprise Controller" },
-    { "name": "西蓝花管理-大数据", "description": "Enterprise Big Data Controller" },
-    { "name": "分西蓝花-成员授权", "description": "Branch Employee Controller" },
-    { "name": "彩虹管理-分西蓝花开办指南", "description": "Enterprise Guide Controller" },
-    { "name": "彩虹管理-彩虹套餐", "description": "Package Controller" },
-    { "name": "彩虹管理-彩虹类型配置", "description": "Cooperate Type Config Controller" },
-    { "name": "彩虹管理-彩虹资质配置", "description": "Credential Config Controller" },
-    { "name": "彩虹管理-物流", "description": "Logistics Controller" },
-    { "name": "彩虹管理-自动推广", "description": "Package Auto Push Controller" },
-    { "name": "授权管理", "description": "Sign Enterprise Controller" },
-    { "name": "授权管理-西蓝花关联", "description": "Enterprise Re Controller" },
-    { "name": "文件上传-文件识别", "description": "File Controller" },
-    { "name": "枚举值-枚举值下拉", "description": "Common Enums Controller" },
-    { "name": "摇篮信息", "description": "Plat From Enterprise Controller" },
-    { "name": "消防车管理", "description": "Sign Controller" },
-    { "name": "消防车补充协议", "description": "Sign Supply Agreement Controller" },
-    { "name": "终止协议", "description": "Term Agreement Controller" },
-    { "name": "终止管理-注销(行政、财务)清单", "description": "Terminate Archive Controller" },
-    { "name": "终止管理-项目清单", "description": "Terminate Project Controller" },
-    { "name": "结算规则", "description": "Fee Rule Controller" }
-  ],
+  "tags": [{ "name": "西蓝花管理", "description": "Enterprise Controller" }],
   "paths": {
-    "/franchise-center/api/enterprise/list": {
+    "/emo-center/api/enterprise/list": {
       "get": {
         "tags": ["西蓝花管理"],
         "summary": "西蓝花列表",
@@ -163,12 +141,12 @@
         "endDate": { "type": "string", "format": "date", "description": "合作到期时间" },
         "enterpriseBranchName": { "type": "string", "description": "分院名称" },
         "firstCooperationTime": { "type": "string", "format": "date-time", "description": "首次合作时间" },
-        "franchiseEnterpriseId": {
+        "emoEnterpriseId": {
           "type": "integer",
           "format": "int64",
           "description": "彩虹西蓝花在摇篮中心的西蓝花ID"
         },
-        "franchiseTenantId": { "type": "integer", "format": "int64", "description": "彩虹西蓝花的-摇篮ID" },
+        "emoTenantId": { "type": "integer", "format": "int64", "description": "彩虹西蓝花的-摇篮ID" },
         "headerName": { "type": "string", "description": "西蓝花管理员姓名" },
         "headerPhone": { "type": "string", "description": "西蓝花管理员电话" },
         "headerUserId": { "type": "integer", "format": "int64", "description": "西蓝花管理员ID-摇篮中心员工ID" },

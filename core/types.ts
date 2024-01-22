@@ -4,14 +4,16 @@ export interface UserConfig {
   /** 文件头部引入内容 */
   httpTpl?: string
   /** api 结构 */
-  apiBody: (data: IApibodyParam) => string
-  /** 自定义文件名称生成规则*/
-  fileName?: string | Function
-  /** 自定义接口名称生成规则*/
-  apiName?: Function
+  apiBody: Function
+  /** 接口所属文件名称*/
+  fileName?: string | ((data: FileNameFnParam) => string)
+  /** 接口名称*/
+  apiName?: (data: ApiNameFnParam) => string
+  /** 接口路径重写（如：加前缀 /abc/def => /prefix/abc/def）*/
+  apiPath?: (data: { url: string }) => string
   /** 文件后缀, 可选值：ts 或 js， 默认 ts */
   fileExt?: 'ts' | 'js' | '.ts' | '.js'
-  mock?: boolean | IMock
+  mock?: IMock
 }
 export interface IApiStation {
   /** swagger 地址(可以是服务端地址也可以是 swagger json 本地文件路径) */
@@ -20,20 +22,28 @@ export interface IApiStation {
   outputDir: string
   /** 是否生成(默认true, 设为false，则不生成 ) */
   gen?: boolean
-  /** 需要生成的接口 */
-  include?: RegExp | string | RegExp[] | string[]
-  /** 无需生成的接口 */
-  exclude?: RegExp | string | RegExp[] | string[]
+  /** 无需生成的接口, 支持正则匹配和字符串完全匹配
+   * 注1. 匹配的是原本的 url，而非通过 apiPath 函数重写后的 url
+   * 注2. 不判断方法，即 如果有两个接口路径相同方法不同，都不会生成
+   */
+  exclude?: RegExp | string | (RegExp | string)[]
+  /** 只需生成的接口，支持正则匹配和字符串完全匹配
+   * 注1：通exclude 一样，只匹配原本路径，不判断方法
+   * 注2：优先级比 exclude 低，即 如果一个接口同时被 exclude 和 include 规则匹配，这个接口将不会生成
+   */
+  include?: RegExp | string | (RegExp | string)[]
   /** 文件头部引入内容 */
   httpTpl?: string
-  /** 自定义文件名称生成规则 */
-  fileName?: string | Function
-  /** 自定义接口名称生成规则 */
-  apiName?: Function
+  /** 接口所属文件名称*/
+  fileName?: string | ((data: FileNameFnParam) => string)
+  /** 接口名称*/
+  apiName?: (data: ApiNameFnParam) => string
+  /** 接口路径重写（如：加前缀 /abc/def => /prefix/abc/def）*/
+  apiPath?: (data: { url: string }) => string
   /** api 结构 */
   apiBody?: (data: IApibodyParam) => string
   /** 文件后缀, 可选值：ts 或 js， 默认 ts */
-  fileExt?: 'ts' | 'js' | '.ts' | '.js'
+  fileExt?: 'ts' | 'js'
 }
 
 export interface IApibodyParam {
@@ -75,7 +85,7 @@ export interface IParams {
   description: string // 注释
   in: 'header' | 'body' | 'query' | 'path' // 可能值： body ,header, query, path...
   /** 是否是简单 js 类型 */
-  isSimpleJsType: boolean //   cjh todo
+  isSimpleJsType: boolean
   /** 是否是数组 */
   isArray: boolean
   /** 入参类型，string, number, boolean, UserInterface */
@@ -85,6 +95,8 @@ export interface IParams {
 export interface IApiModel {
   /** 接口路径 */
   url: string
+  /** 接口原本路径（即重写前路径） */
+  originUrl: string
   /** 请求方法 */
   method: string
   /** 接口名称, 如 getUserList */
@@ -131,4 +143,22 @@ export interface IApiGroup {
   fileExt: 'ts' | 'js'
   /** 该文件名内所有的接口 */
   apis: IApiModel[]
+}
+
+export interface ApiNameFnParam {
+  /** 接口路径 */
+  url: string
+  /** 接口原本路径（即重写前路径） */
+  originUrl: string
+  /** 请求方法（小写） */
+  method: string
+  /** 接口名称默认值 */
+  defaultApiName: string
+}
+
+export interface FileNameFnParam {
+  /** 接口路径 */
+  url: string
+  /** 接口原本路径（即重写前路径） */
+  originUrl: string
 }

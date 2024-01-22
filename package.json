@@ -5,7 +5,7 @@
   "buildInFlag": "cxx-genapi-tool",
   "scripts": {
     "build": "node ./scripts/build.js",
-    "test": "yarn build && yarn link && genapi now -c ./__test__/apiConfig.js",
+    "test": "yarn build && yarn link && genapi now -c ./__test__/apiConfig.ts",
     "test:init": "yarn build && yarn link && genapi init",
     "test:mock-server": "yarn build && yarn link && genapi mock-server",
     "replace": "node ./scripts/replaceStr.js",
@@ -19,6 +19,7 @@
   "files": [
     "bin",
     "dist",
+    "static",
     ".prettierrc.js"
   ],
   "publishConfig": {
@@ -44,7 +45,8 @@
     "eslint": "^8.55.0",
     "js-pinyin": "^0.2.4",
     "prettier": "^2.8.8",
-    "unconfig": "^0.3.11"
+    "unconfig": "^0.3.11",
+    "vue": "^3.4.15"
   },
   "devDependencies": {
     "@rollup/plugin-json": "^6.0.1",

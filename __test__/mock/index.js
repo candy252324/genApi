@@ -124,8 +124,9 @@ import * as station3statistics from './station3/statistics.js'
 import * as station3travel from './station3/travel.js'
 import * as station3keyBorard from './station3/keyBorard.js'
 import * as station3inner from './station3/inner.js'
-import * as station4swagger5Api from './station4/swagger5Api.js'
-import * as station5franchisecenter from './station5/franchise-center.js'
+import * as station4thk from './station4/thk.js'
+import * as station5swagger5Apijs from './station5/swagger5Api-js.js'
+import * as station6emocenter from './station6/emo-center.js'
 Mock.mock(/\/api\/blue\/acc\/queryAcc/, 'post', station0blue.blueAccQueryAcc)
 Mock.mock(/\/api\/blue\/door\/addDoor/, 'post', station0blue.blueDoorAddDoor)
 Mock.mock(/\/api\/blue\/door\/createDoor/, 'post', station0blue.blueDoorCreateDoor)
@@ -903,513 +904,979 @@ Mock.mock(/\/inner\/customer\/cat\/pageList/, 'post', station3inner.innerCustome
 Mock.mock(/\/inner\/customer\/cat\/update/, 'post', station3inner.innerCustomerCatUpdate)
 Mock.mock(/\/inner\/import\/importExcelByUrl/, 'post', station3inner.innerImportImportExcelByUrl)
 Mock.mock(/\/inner\/import\/importList/, 'post', station3inner.innerImportImportList)
-Mock.mock(/\/thk\/api\/common\/v1\/enum-info/, 'get', station4swagger5Api.thkApiCommonV1Enuminfo)
-Mock.mock(/\/thk\/api\/common\/v1\/enum\/all/, 'get', station4swagger5Api.thkApiCommonV1EnumAll)
-Mock.mock(
-  /\/thk\/api\/sys-dict\/api\/common\/v1\/areaInfo/,
-  'get',
-  station4swagger5Api.thkApiSysdictApiCommonV1AreaInfo
-)
+Mock.mock(/\/thk\/api\/common\/v1\/enum-info/, 'get', station4thk.thkApiCommonV1Enuminfo)
+Mock.mock(/\/thk\/api\/common\/v1\/enum\/all/, 'get', station4thk.thkApiCommonV1EnumAll)
+Mock.mock(/\/thk\/api\/sys-dict\/api\/common\/v1\/areaInfo/, 'get', station4thk.thkApiSysdictApiCommonV1AreaInfo)
 Mock.mock(
   /\/thk\/api\/sys-dict\/api\/common\/v1\/certificationCertList/,
   'get',
-  station4swagger5Api.thkApiSysdictApiCommonV1CertificationCertList
+  station4thk.thkApiSysdictApiCommonV1CertificationCertList
 )
 Mock.mock(
   /\/thk\/api\/sys-dict\/api\/common\/v1\/humanStatusList/,
   'get',
-  station4swagger5Api.thkApiSysdictApiCommonV1HumanStatusList
+  station4thk.thkApiSysdictApiCommonV1HumanStatusList
 )
 Mock.mock(
   /\/thk\/api\/sys-dict\/api\/common\/v1\/siteManagementTasty/,
   'get',
-  station4swagger5Api.thkApiSysdictApiCommonV1SiteManagementTasty
+  station4thk.thkApiSysdictApiCommonV1SiteManagementTasty
 )
 Mock.mock(
   /\/thk\/api\/sys-dict\/api\/common\/v1\/skilledWorkList/,
   'get',
-  station4swagger5Api.thkApiSysdictApiCommonV1SkilledWorkList
+  station4thk.thkApiSysdictApiCommonV1SkilledWorkList
 )
 Mock.mock(
   /\/thk\/api\/sys-dict\/api\/common\/v1\/specialWorkList/,
   'get',
-  station4swagger5Api.thkApiSysdictApiCommonV1SpecialWorkList
+  station4thk.thkApiSysdictApiCommonV1SpecialWorkList
 )
 Mock.mock(
   /\/thk\/api\/sys-dict\/api\/common\/v1\/thirdCertificationList/,
   'get',
-  station4swagger5Api.thkApiSysdictApiCommonV1ThirdCertificationList
+  station4thk.thkApiSysdictApiCommonV1ThirdCertificationList
 )
 Mock.mock(
   /\/thk\/api\/sys-dict\/api\/common\/v1\/titleLevelList/,
   'get',
-  station4swagger5Api.thkApiSysdictApiCommonV1TitleLevelList
+  station4thk.thkApiSysdictApiCommonV1TitleLevelList
 )
 Mock.mock(
   /\/thk\/api\/sys-dict\/v1\/getCertificateOfRegistration/,
   'get',
-  station4swagger5Api.thkApiSysdictV1GetCertificateOfRegistration
+  station4thk.thkApiSysdictV1GetCertificateOfRegistration
 )
 Mock.mock(
   /\/thk\/api\/sys-dict\/v1\/getCertificateOfRegistrationLabelValue/,
   'get',
-  station4swagger5Api.thkApiSysdictV1GetCertificateOfRegistrationLabelValue
+  station4thk.thkApiSysdictV1GetCertificateOfRegistrationLabelValue
 )
-Mock.mock(
-  /\/thk\/api\/sys-dict\/v1\/getFridayQualification/,
-  'get',
-  station4swagger5Api.thkApiSysdictV1GetFridayQualification
-)
+Mock.mock(/\/thk\/api\/sys-dict\/v1\/getFridayQualification/, 'get', station4thk.thkApiSysdictV1GetFridayQualification)
 Mock.mock(
   /\/thk\/api\/sys-dict\/v1\/getFridayQualificationWithCancel/,
   'get',
-  station4swagger5Api.thkApiSysdictV1GetFridayQualificationWithCancel
+  station4thk.thkApiSysdictV1GetFridayQualificationWithCancel
 )
-Mock.mock(/\/thk\/api\/v1\/config\/continue-education/, 'post', station4swagger5Api.thkApiV1ConfigContinueeducationPost)
-Mock.mock(/\/thk\/api\/v1\/config\/continue-education/, 'put', station4swagger5Api.thkApiV1ConfigContinueeducationPut)
-Mock.mock(
-  /\/thk\/api\/v1\/config\/continue-education\/page/,
-  'get',
-  station4swagger5Api.thkApiV1ConfigContinueeducationPage
-)
-Mock.mock(
-  /\/thk\/api\/v1\/config\/continue-education\/.*/,
-  'delete',
-  station4swagger5Api.thkApiV1ConfigContinueeducationId
-)
-Mock.mock(/\/thk\/api\/v1\/config\/cred-alert\/need-alert/, 'get', station4swagger5Api.thkApiV1ConfigCredalertNeedalert)
-Mock.mock(/\/thk\/api\/v1\/config\/cred-alert\/update/, 'put', station4swagger5Api.thkApiV1ConfigCredalertUpdate)
-Mock.mock(
-  /\/thk\/api\/v1\/config\/credential-standard/,
-  'post',
-  station4swagger5Api.thkApiV1ConfigCredentialstandardPost
-)
-Mock.mock(/\/thk\/api\/v1\/config\/credential-standard/, 'put', station4swagger5Api.thkApiV1ConfigCredentialstandardPut)
+Mock.mock(/\/thk\/api\/v1\/config\/continue-education/, 'post', station4thk.thkApiV1ConfigContinueeducationPost)
+Mock.mock(/\/thk\/api\/v1\/config\/continue-education/, 'put', station4thk.thkApiV1ConfigContinueeducationPut)
+Mock.mock(/\/thk\/api\/v1\/config\/continue-education\/page/, 'get', station4thk.thkApiV1ConfigContinueeducationPage)
+Mock.mock(/\/thk\/api\/v1\/config\/continue-education\/.*/, 'delete', station4thk.thkApiV1ConfigContinueeducationId)
+Mock.mock(/\/thk\/api\/v1\/config\/cred-alert\/need-alert/, 'get', station4thk.thkApiV1ConfigCredalertNeedalert)
+Mock.mock(/\/thk\/api\/v1\/config\/cred-alert\/update/, 'put', station4thk.thkApiV1ConfigCredalertUpdate)
+Mock.mock(/\/thk\/api\/v1\/config\/credential-standard/, 'post', station4thk.thkApiV1ConfigCredentialstandardPost)
+Mock.mock(/\/thk\/api\/v1\/config\/credential-standard/, 'put', station4thk.thkApiV1ConfigCredentialstandardPut)
 Mock.mock(
   /\/thk\/api\/v1\/config\/credential-standard\/export/,
   'get',
-  station4swagger5Api.thkApiV1ConfigCredentialstandardExport
+  station4thk.thkApiV1ConfigCredentialstandardExport
 )
 Mock.mock(
   /\/thk\/api\/v1\/config\/credential-standard\/export\/model/,
   'get',
-  station4swagger5Api.thkApiV1ConfigCredentialstandardExportModel
+  station4thk.thkApiV1ConfigCredentialstandardExportModel
 )
 Mock.mock(
   /\/thk\/api\/v1\/config\/credential-standard\/getDetail/,
   'get',
-  station4swagger5Api.thkApiV1ConfigCredentialstandardGetDetail
+  station4thk.thkApiV1ConfigCredentialstandardGetDetail
 )
 Mock.mock(
   /\/thk\/api\/v1\/config\/credential-standard\/getQueryChain/,
   'post',
-  station4swagger5Api.thkApiV1ConfigCredentialstandardGetQueryChain
+  station4thk.thkApiV1ConfigCredentialstandardGetQueryChain
 )
 Mock.mock(
   /\/thk\/api\/v1\/config\/credential-standard\/getRelativeList/,
   'post',
-  station4swagger5Api.thkApiV1ConfigCredentialstandardGetRelativeList
+  station4thk.thkApiV1ConfigCredentialstandardGetRelativeList
 )
-Mock.mock(
-  /\/thk\/api\/v1\/config\/credential-standard\/page/,
-  'get',
-  station4swagger5Api.thkApiV1ConfigCredentialstandardPage
-)
-Mock.mock(
-  /\/thk\/api\/v1\/config\/credential-standard\/unit/,
-  'get',
-  station4swagger5Api.thkApiV1ConfigCredentialstandardUnit
-)
+Mock.mock(/\/thk\/api\/v1\/config\/credential-standard\/page/, 'get', station4thk.thkApiV1ConfigCredentialstandardPage)
+Mock.mock(/\/thk\/api\/v1\/config\/credential-standard\/unit/, 'get', station4thk.thkApiV1ConfigCredentialstandardUnit)
 Mock.mock(
   /\/thk\/api\/v1\/config\/credential-standard\/upload/,
   'post',
-  station4swagger5Api.thkApiV1ConfigCredentialstandardUpload
+  station4thk.thkApiV1ConfigCredentialstandardUpload
 )
-Mock.mock(/\/thk\/api\/v1\/config\/credential-warning/, 'get', station4swagger5Api.thkApiV1ConfigCredentialwarningGet)
-Mock.mock(/\/thk\/api\/v1\/config\/credential-warning/, 'post', station4swagger5Api.thkApiV1ConfigCredentialwarningPost)
-Mock.mock(/\/thk\/api\/v1\/config\/credential-warning/, 'put', station4swagger5Api.thkApiV1ConfigCredentialwarningPut)
-Mock.mock(/\/thk\/api\/v1\/data\/board\/fridayCredential/, 'get', station4swagger5Api.thkApiV1DataBoardFridayCredential)
-Mock.mock(/\/thk\/api\/v1\/data\/board\/get\/date/, 'get', station4swagger5Api.thkApiV1DataBoardGetDate)
-Mock.mock(/\/thk\/api\/v1\/data\/board\/get\/escalation/, 'get', station4swagger5Api.thkApiV1DataBoardGetEscalation)
+Mock.mock(/\/thk\/api\/v1\/config\/credential-warning/, 'get', station4thk.thkApiV1ConfigCredentialwarningGet)
+Mock.mock(/\/thk\/api\/v1\/config\/credential-warning/, 'post', station4thk.thkApiV1ConfigCredentialwarningPost)
+Mock.mock(/\/thk\/api\/v1\/config\/credential-warning/, 'put', station4thk.thkApiV1ConfigCredentialwarningPut)
+Mock.mock(/\/thk\/api\/v1\/data\/board\/fridayCredential/, 'get', station4thk.thkApiV1DataBoardFridayCredential)
+Mock.mock(/\/thk\/api\/v1\/data\/board\/get\/date/, 'get', station4thk.thkApiV1DataBoardGetDate)
+Mock.mock(/\/thk\/api\/v1\/data\/board\/get\/escalation/, 'get', station4thk.thkApiV1DataBoardGetEscalation)
 Mock.mock(
   /\/thk\/api\/v1\/data\/board\/listQualificationCate/,
   'get',
-  station4swagger5Api.thkApiV1DataBoardListQualificationCate
+  station4thk.thkApiV1DataBoardListQualificationCate
 )
-Mock.mock(/\/thk\/api\/v1\/friday\/bad\/behavior\/list/, 'get', station4swagger5Api.thkApiV1FridayBadBehaviorList)
-Mock.mock(/\/thk\/api\/v1\/friday\/bad\/behavior\/page/, 'get', station4swagger5Api.thkApiV1FridayBadBehaviorPage)
-Mock.mock(/\/thk\/api\/v1\/friday\/black\/list/, 'get', station4swagger5Api.thkApiV1FridayBlackList)
-Mock.mock(/\/thk\/api\/v1\/friday\/black\/page/, 'get', station4swagger5Api.thkApiV1FridayBlackPage)
+Mock.mock(/\/thk\/api\/v1\/friday\/bad\/behavior\/list/, 'get', station4thk.thkApiV1FridayBadBehaviorList)
+Mock.mock(/\/thk\/api\/v1\/friday\/bad\/behavior\/page/, 'get', station4thk.thkApiV1FridayBadBehaviorPage)
+Mock.mock(/\/thk\/api\/v1\/friday\/black\/list/, 'get', station4thk.thkApiV1FridayBlackList)
+Mock.mock(/\/thk\/api\/v1\/friday\/black\/page/, 'get', station4thk.thkApiV1FridayBlackPage)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/branch\/export\/create-account-template/,
   'post',
-  station4swagger5Api.thkApiV1FridayBranchExportCreateaccounttemplate
+  station4thk.thkApiV1FridayBranchExportCreateaccounttemplate
 )
-Mock.mock(/\/thk\/api\/v1\/friday\/branch\/page/, 'get', station4swagger5Api.thkApiV1FridayBranchPage)
-Mock.mock(/\/thk\/api\/v1\/friday\/branch\/raw-branch/, 'get', station4swagger5Api.thkApiV1FridayBranchRawbranch)
-Mock.mock(/\/thk\/api\/v1\/friday\/branch\/statusCount/, 'get', station4swagger5Api.thkApiV1FridayBranchStatusCount)
+Mock.mock(/\/thk\/api\/v1\/friday\/branch\/page/, 'get', station4thk.thkApiV1FridayBranchPage)
+Mock.mock(/\/thk\/api\/v1\/friday\/branch\/raw-branch/, 'get', station4thk.thkApiV1FridayBranchRawbranch)
+Mock.mock(/\/thk\/api\/v1\/friday\/branch\/statusCount/, 'get', station4thk.thkApiV1FridayBranchStatusCount)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/branch\/update\/nameOrPhone/,
   'post',
-  station4swagger5Api.thkApiV1FridayBranchUpdateNameOrPhone
+  station4thk.thkApiV1FridayBranchUpdateNameOrPhone
 )
-Mock.mock(/\/thk\/api\/v1\/friday\/cred-plan\/all-cred/, 'get', station4swagger5Api.thkApiV1FridayCredplanAllcred)
+Mock.mock(/\/thk\/api\/v1\/friday\/cred-plan\/all-cred/, 'get', station4thk.thkApiV1FridayCredplanAllcred)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/cred-plan\/available-apply-cred/,
   'get',
-  station4swagger5Api.thkApiV1FridayCredplanAvailableapplycred
+  station4thk.thkApiV1FridayCredplanAvailableapplycred
 )
-Mock.mock(
-  /\/thk\/api\/v1\/friday\/cred-plan\/filtered-cred/,
-  'get',
-  station4swagger5Api.thkApiV1FridayCredplanFilteredcred
-)
-Mock.mock(/\/thk\/api\/v1\/friday\/cred-plan\/list/, 'get', station4swagger5Api.thkApiV1FridayCredplanList)
-Mock.mock(/\/thk\/api\/v1\/friday\/cred-plan\/plan-detail/, 'get', station4swagger5Api.thkApiV1FridayCredplanPlandetail)
-Mock.mock(/\/thk\/api\/v1\/friday\/cred-plan\/pre-level/, 'get', station4swagger5Api.thkApiV1FridayCredplanPrelevel)
-Mock.mock(/\/thk\/api\/v1\/friday\/cred-plan\/save-plan/, 'post', station4swagger5Api.thkApiV1FridayCredplanSaveplan)
-Mock.mock(/\/thk\/api\/v1\/friday\/cred-plan\/single-cred/, 'get', station4swagger5Api.thkApiV1FridayCredplanSinglecred)
-Mock.mock(/\/thk\/api\/v1\/friday\/cred-plan\/start-plan/, 'post', station4swagger5Api.thkApiV1FridayCredplanStartplan)
+Mock.mock(/\/thk\/api\/v1\/friday\/cred-plan\/filtered-cred/, 'get', station4thk.thkApiV1FridayCredplanFilteredcred)
+Mock.mock(/\/thk\/api\/v1\/friday\/cred-plan\/list/, 'get', station4thk.thkApiV1FridayCredplanList)
+Mock.mock(/\/thk\/api\/v1\/friday\/cred-plan\/plan-detail/, 'get', station4thk.thkApiV1FridayCredplanPlandetail)
+Mock.mock(/\/thk\/api\/v1\/friday\/cred-plan\/pre-level/, 'get', station4thk.thkApiV1FridayCredplanPrelevel)
+Mock.mock(/\/thk\/api\/v1\/friday\/cred-plan\/save-plan/, 'post', station4thk.thkApiV1FridayCredplanSaveplan)
+Mock.mock(/\/thk\/api\/v1\/friday\/cred-plan\/single-cred/, 'get', station4thk.thkApiV1FridayCredplanSinglecred)
+Mock.mock(/\/thk\/api\/v1\/friday\/cred-plan\/start-plan/, 'post', station4thk.thkApiV1FridayCredplanStartplan)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/cred-plan\/validate-credit/,
   'post',
-  station4swagger5Api.thkApiV1FridayCredplanValidatecredit
+  station4thk.thkApiV1FridayCredplanValidatecredit
 )
-Mock.mock(
-  /\/thk\/api\/v1\/friday\/cred-plan\/validate-tasty/,
-  'post',
-  station4swagger5Api.thkApiV1FridayCredplanValidatetasty
-)
+Mock.mock(/\/thk\/api\/v1\/friday\/cred-plan\/validate-tasty/, 'post', station4thk.thkApiV1FridayCredplanValidatetasty)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/cred-plan\/validate-project/,
   'post',
-  station4swagger5Api.thkApiV1FridayCredplanValidateproject
+  station4thk.thkApiV1FridayCredplanValidateproject
 )
-Mock.mock(/\/thk\/api\/v1\/friday\/credential\/add/, 'post', station4swagger5Api.thkApiV1FridayCredentialAdd)
-Mock.mock(
-  /\/thk\/api\/v1\/friday\/credential\/cred-overview/,
-  'get',
-  station4swagger5Api.thkApiV1FridayCredentialCredoverview
-)
+Mock.mock(/\/thk\/api\/v1\/friday\/credential\/add/, 'post', station4thk.thkApiV1FridayCredentialAdd)
+Mock.mock(/\/thk\/api\/v1\/friday\/credential\/cred-overview/, 'get', station4thk.thkApiV1FridayCredentialCredoverview)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/credential\/credential-nature/,
   'get',
-  station4swagger5Api.thkApiV1FridayCredentialCredentialnature
+  station4thk.thkApiV1FridayCredentialCredentialnature
 )
-Mock.mock(/\/thk\/api\/v1\/friday\/credential\/delete/, 'get', station4swagger5Api.thkApiV1FridayCredentialDelete)
-Mock.mock(
-  /\/thk\/api\/v1\/friday\/credential\/expire-alert/,
-  'get',
-  station4swagger5Api.thkApiV1FridayCredentialExpirealert
-)
+Mock.mock(/\/thk\/api\/v1\/friday\/credential\/delete/, 'get', station4thk.thkApiV1FridayCredentialDelete)
+Mock.mock(/\/thk\/api\/v1\/friday\/credential\/expire-alert/, 'get', station4thk.thkApiV1FridayCredentialExpirealert)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/credential\/get\/escalation/,
   'get',
-  station4swagger5Api.thkApiV1FridayCredentialGetEscalation
+  station4thk.thkApiV1FridayCredentialGetEscalation
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/credential\/get\/escalation\/tastyDetail/,
   'get',
-  station4swagger5Api.thkApiV1FridayCredentialGetEscalationTastyDetail
+  station4thk.thkApiV1FridayCredentialGetEscalationTastyDetail
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/credential\/get\/escalation2/,
   'get',
-  station4swagger5Api.thkApiV1FridayCredentialGetEscalation2
+  station4thk.thkApiV1FridayCredentialGetEscalation2
 )
-Mock.mock(/\/thk\/api\/v1\/friday\/credential\/list/, 'get', station4swagger5Api.thkApiV1FridayCredentialList)
-Mock.mock(/\/thk\/api\/v1\/friday\/credential\/list-name/, 'post', station4swagger5Api.thkApiV1FridayCredentialListname)
-Mock.mock(/\/thk\/api\/v1\/friday\/credential\/page/, 'get', station4swagger5Api.thkApiV1FridayCredentialPage)
-Mock.mock(/\/thk\/api\/v1\/friday\/credential\/update/, 'post', station4swagger5Api.thkApiV1FridayCredentialUpdate)
-Mock.mock(
-  /\/thk\/api\/v1\/friday\/credential\/update-batch/,
-  'post',
-  station4swagger5Api.thkApiV1FridayCredentialUpdatebatch
-)
+Mock.mock(/\/thk\/api\/v1\/friday\/credential\/list/, 'get', station4thk.thkApiV1FridayCredentialList)
+Mock.mock(/\/thk\/api\/v1\/friday\/credential\/list-name/, 'post', station4thk.thkApiV1FridayCredentialListname)
+Mock.mock(/\/thk\/api\/v1\/friday\/credential\/page/, 'get', station4thk.thkApiV1FridayCredentialPage)
+Mock.mock(/\/thk\/api\/v1\/friday\/credential\/update/, 'post', station4thk.thkApiV1FridayCredentialUpdate)
+Mock.mock(/\/thk\/api\/v1\/friday\/credential\/update-batch/, 'post', station4thk.thkApiV1FridayCredentialUpdatebatch)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/dishonesty\/punishment\/list/,
   'get',
-  station4swagger5Api.thkApiV1FridayDishonestyPunishmentList
+  station4thk.thkApiV1FridayDishonestyPunishmentList
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/dishonesty\/punishment\/page/,
   'get',
-  station4swagger5Api.thkApiV1FridayDishonestyPunishmentPage
+  station4thk.thkApiV1FridayDishonestyPunishmentPage
 )
-Mock.mock(/\/thk\/api\/v1\/friday\/good\/behavior\/list/, 'get', station4swagger5Api.thkApiV1FridayGoodBehaviorList)
-Mock.mock(/\/thk\/api\/v1\/friday\/good\/behavior\/page/, 'get', station4swagger5Api.thkApiV1FridayGoodBehaviorPage)
-Mock.mock(/\/thk\/api\/v1\/friday\/main\/all-count/, 'get', station4swagger5Api.thkApiV1FridayMainAllcount)
+Mock.mock(/\/thk\/api\/v1\/friday\/good\/behavior\/list/, 'get', station4thk.thkApiV1FridayGoodBehaviorList)
+Mock.mock(/\/thk\/api\/v1\/friday\/good\/behavior\/page/, 'get', station4thk.thkApiV1FridayGoodBehaviorPage)
+Mock.mock(/\/thk\/api\/v1\/friday\/main\/all-count/, 'get', station4thk.thkApiV1FridayMainAllcount)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/main\/appPreviewFridayInfo/,
   'get',
-  station4swagger5Api.thkApiV1FridayMainAppPreviewFridayInfo
+  station4thk.thkApiV1FridayMainAppPreviewFridayInfo
 )
-Mock.mock(
-  /\/thk\/api\/v1\/friday\/main\/appSaveFridayInfo/,
-  'get',
-  station4swagger5Api.thkApiV1FridayMainAppSaveFridayInfo
-)
-Mock.mock(/\/thk\/api\/v1\/friday\/main\/appSyncFriday/, 'get', station4swagger5Api.thkApiV1FridayMainAppSyncFriday)
-Mock.mock(/\/thk\/api\/v1\/friday\/main\/get/, 'get', station4swagger5Api.thkApiV1FridayMainGet)
+Mock.mock(/\/thk\/api\/v1\/friday\/main\/appSaveFridayInfo/, 'get', station4thk.thkApiV1FridayMainAppSaveFridayInfo)
+Mock.mock(/\/thk\/api\/v1\/friday\/main\/appSyncFriday/, 'get', station4thk.thkApiV1FridayMainAppSyncFriday)
+Mock.mock(/\/thk\/api\/v1\/friday\/main\/get/, 'get', station4thk.thkApiV1FridayMainGet)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/main\/getInnerByTenantIdTest/,
   'get',
-  station4swagger5Api.thkApiV1FridayMainGetInnerByTenantIdTest
+  station4thk.thkApiV1FridayMainGetInnerByTenantIdTest
 )
-Mock.mock(
-  /\/thk\/api\/v1\/friday\/main\/ignore\/tenant\/get/,
-  'get',
-  station4swagger5Api.thkApiV1FridayMainIgnoreTenantGet
-)
-Mock.mock(
-  /\/thk\/api\/v1\/friday\/main\/ignore\/tenant\/list/,
-  'get',
-  station4swagger5Api.thkApiV1FridayMainIgnoreTenantList
-)
-Mock.mock(/\/thk\/api\/v1\/friday\/main\/list/, 'get', station4swagger5Api.thkApiV1FridayMainList)
+Mock.mock(/\/thk\/api\/v1\/friday\/main\/ignore\/tenant\/get/, 'get', station4thk.thkApiV1FridayMainIgnoreTenantGet)
+Mock.mock(/\/thk\/api\/v1\/friday\/main\/ignore\/tenant\/list/, 'get', station4thk.thkApiV1FridayMainIgnoreTenantList)
+Mock.mock(/\/thk\/api\/v1\/friday\/main\/list/, 'get', station4thk.thkApiV1FridayMainList)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/main\/mulclaim\/human\/detail/,
   'get',
-  station4swagger5Api.thkApiV1FridayMainMulclaimHumanDetail
+  station4thk.thkApiV1FridayMainMulclaimHumanDetail
 )
-Mock.mock(/\/thk\/api\/v1\/friday\/main\/page/, 'get', station4swagger5Api.thkApiV1FridayMainPage)
-Mock.mock(/\/thk\/api\/v1\/friday\/main\/update/, 'put', station4swagger5Api.thkApiV1FridayMainUpdate)
+Mock.mock(/\/thk\/api\/v1\/friday\/main\/page/, 'get', station4thk.thkApiV1FridayMainPage)
+Mock.mock(/\/thk\/api\/v1\/friday\/main\/update/, 'put', station4thk.thkApiV1FridayMainUpdate)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/boss\/export/,
   'get',
-  station4swagger5Api.thkApiV1FridayTastyCredentialBossExport
+  station4thk.thkApiV1FridayTastyCredentialBossExport
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/boss\/export\/attachment/,
   'get',
-  station4swagger5Api.thkApiV1FridayTastyCredentialBossExportAttachment
+  station4thk.thkApiV1FridayTastyCredentialBossExportAttachment
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/boss\/page/,
   'get',
-  station4swagger5Api.thkApiV1FridayTastyCredentialBossPage
+  station4thk.thkApiV1FridayTastyCredentialBossPage
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/curriculum\/vitae/,
   'get',
-  station4swagger5Api.thkApiV1FridayTastyCredentialCurriculumVitae
+  station4thk.thkApiV1FridayTastyCredentialCurriculumVitae
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/curriculum\/vitae\/export/,
   'post',
-  station4swagger5Api.thkApiV1FridayTastyCredentialCurriculumVitaeExport
+  station4thk.thkApiV1FridayTastyCredentialCurriculumVitaeExport
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/curriculum\/vitae\/list/,
   'get',
-  station4swagger5Api.thkApiV1FridayTastyCredentialCurriculumVitaeList
+  station4thk.thkApiV1FridayTastyCredentialCurriculumVitaeList
 )
-Mock.mock(
-  /\/thk\/api\/v1\/friday\/tasty\/credential\/export/,
-  'get',
-  station4swagger5Api.thkApiV1FridayTastyCredentialExport
-)
+Mock.mock(/\/thk\/api\/v1\/friday\/tasty\/credential\/export/, 'get', station4thk.thkApiV1FridayTastyCredentialExport)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/export\/attachment/,
   'get',
-  station4swagger5Api.thkApiV1FridayTastyCredentialExportAttachment
+  station4thk.thkApiV1FridayTastyCredentialExportAttachment
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/list\/human/,
   'get',
-  station4swagger5Api.thkApiV1FridayTastyCredentialListHuman
+  station4thk.thkApiV1FridayTastyCredentialListHuman
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/list\/registerHuman/,
   'get',
-  station4swagger5Api.thkApiV1FridayTastyCredentialListRegisterHuman
+  station4thk.thkApiV1FridayTastyCredentialListRegisterHuman
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/list\/safetyProduction/,
   'get',
-  station4swagger5Api.thkApiV1FridayTastyCredentialListSafetyProduction
+  station4thk.thkApiV1FridayTastyCredentialListSafetyProduction
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/list\/unit/,
   'get',
-  station4swagger5Api.thkApiV1FridayTastyCredentialListUnit
+  station4thk.thkApiV1FridayTastyCredentialListUnit
 )
-Mock.mock(
-  /\/thk\/api\/v1\/friday\/tasty\/credential\/page/,
-  'get',
-  station4swagger5Api.thkApiV1FridayTastyCredentialPage
-)
+Mock.mock(/\/thk\/api\/v1\/friday\/tasty\/credential\/page/, 'get', station4thk.thkApiV1FridayTastyCredentialPage)
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/pageFriday/,
   'post',
-  station4swagger5Api.thkApiV1FridayTastyCredentialPageFriday
+  station4thk.thkApiV1FridayTastyCredentialPageFriday
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/summary/,
   'post',
-  station4swagger5Api.thkApiV1FridayTastyCredentialSummary
+  station4thk.thkApiV1FridayTastyCredentialSummary
 )
 Mock.mock(
   /\/thk\/api\/v1\/friday\/tasty\/credential\/update\/mark/,
   'post',
-  station4swagger5Api.thkApiV1FridayTastyCredentialUpdateMark
+  station4thk.thkApiV1FridayTastyCredentialUpdateMark
 )
-Mock.mock(/\/thk\/api\/v1\/friday\/tasty\/list/, 'get', station4swagger5Api.thkApiV1FridayTastyList)
-Mock.mock(/\/thk\/api\/v1\/friday\/tasty\/page/, 'get', station4swagger5Api.thkApiV1FridayTastyPage)
-Mock.mock(
-  /\/thk\/api\/v1\/friday\/project\/get\/projectTypes/,
-  'get',
-  station4swagger5Api.thkApiV1FridayProjectGetProjectTypes
-)
-Mock.mock(
-  /\/thk\/api\/v1\/friday\/project\/industry-major/,
-  'get',
-  station4swagger5Api.thkApiV1FridayProjectIndustrymajor
-)
-Mock.mock(/\/thk\/api\/v1\/friday\/project\/list/, 'get', station4swagger5Api.thkApiV1FridayProjectList)
-Mock.mock(/\/thk\/api\/v1\/friday\/project\/page/, 'get', station4swagger5Api.thkApiV1FridayProjectPage)
-Mock.mock(
-  /\/thk\/api\/v1\/friday\/project\/project-stage/,
-  'get',
-  station4swagger5Api.thkApiV1FridayProjectProjectstage
-)
-Mock.mock(/\/thk\/api\/v1\/file\/ocrFromBigData/, 'post', station4swagger5Api.thkApiV1FileOcrFromBigData)
-Mock.mock(/\/thk\/api\/v1\/file\/signedUrl/, 'post', station4swagger5Api.thkApiV1FileSignedUrl)
-Mock.mock(/\/thk\/api\/v1\/tasty/, 'get', station4swagger5Api.thkApiV1TastyGet)
-Mock.mock(/\/thk\/api\/v1\/tasty/, 'post', station4swagger5Api.thkApiV1TastyPost)
-Mock.mock(/\/thk\/api\/v1\/tasty/, 'put', station4swagger5Api.thkApiV1TastyPut)
-Mock.mock(/\/thk\/api\/v1\/tasty\/all/, 'get', station4swagger5Api.thkApiV1TastyAll)
-Mock.mock(/\/thk\/api\/v1\/tasty\/all-count/, 'get', station4swagger5Api.thkApiV1TastyAllcount)
-Mock.mock(/\/thk\/api\/v1\/tasty\/bank-record/, 'get', station4swagger5Api.thkApiV1TastyBankrecordGet)
-Mock.mock(/\/thk\/api\/v1\/tasty\/bank-record/, 'post', station4swagger5Api.thkApiV1TastyBankrecordPost)
-Mock.mock(/\/thk\/api\/v1\/tasty\/bank-record/, 'put', station4swagger5Api.thkApiV1TastyBankrecordPut)
-Mock.mock(/\/thk\/api\/v1\/tasty\/bank-record\/.*/, 'delete', station4swagger5Api.thkApiV1TastyBankrecordId)
+Mock.mock(/\/thk\/api\/v1\/friday\/tasty\/list/, 'get', station4thk.thkApiV1FridayTastyList)
+Mock.mock(/\/thk\/api\/v1\/friday\/tasty\/page/, 'get', station4thk.thkApiV1FridayTastyPage)
+Mock.mock(/\/thk\/api\/v1\/friday\/project\/get\/projectTypes/, 'get', station4thk.thkApiV1FridayProjectGetProjectTypes)
+Mock.mock(/\/thk\/api\/v1\/friday\/project\/industry-major/, 'get', station4thk.thkApiV1FridayProjectIndustrymajor)
+Mock.mock(/\/thk\/api\/v1\/friday\/project\/list/, 'get', station4thk.thkApiV1FridayProjectList)
+Mock.mock(/\/thk\/api\/v1\/friday\/project\/page/, 'get', station4thk.thkApiV1FridayProjectPage)
+Mock.mock(/\/thk\/api\/v1\/friday\/project\/project-stage/, 'get', station4thk.thkApiV1FridayProjectProjectstage)
+Mock.mock(/\/thk\/api\/v1\/file\/ocrFromBigData/, 'post', station4thk.thkApiV1FileOcrFromBigData)
+Mock.mock(/\/thk\/api\/v1\/file\/signedUrl/, 'post', station4thk.thkApiV1FileSignedUrl)
+Mock.mock(/\/thk\/api\/v1\/tasty/, 'get', station4thk.thkApiV1TastyGet)
+Mock.mock(/\/thk\/api\/v1\/tasty/, 'post', station4thk.thkApiV1TastyPost)
+Mock.mock(/\/thk\/api\/v1\/tasty/, 'put', station4thk.thkApiV1TastyPut)
+Mock.mock(/\/thk\/api\/v1\/tasty\/all/, 'get', station4thk.thkApiV1TastyAll)
+Mock.mock(/\/thk\/api\/v1\/tasty\/all-count/, 'get', station4thk.thkApiV1TastyAllcount)
+Mock.mock(/\/thk\/api\/v1\/tasty\/bank-record/, 'get', station4thk.thkApiV1TastyBankrecordGet)
+Mock.mock(/\/thk\/api\/v1\/tasty\/bank-record/, 'post', station4thk.thkApiV1TastyBankrecordPost)
+Mock.mock(/\/thk\/api\/v1\/tasty\/bank-record/, 'put', station4thk.thkApiV1TastyBankrecordPut)
+Mock.mock(/\/thk\/api\/v1\/tasty\/bank-record\/.*/, 'delete', station4thk.thkApiV1TastyBankrecordId)
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/cred-upgrade\/condition-overview/,
   'get',
-  station4swagger5Api.thkApiV1TastyCredupgradeConditionoverview
+  station4thk.thkApiV1TastyCredupgradeConditionoverview
 )
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/cred-upgrade\/exam-policy-notice/,
   'post',
-  station4swagger5Api.thkApiV1TastyCredupgradeExampolicynotice
+  station4thk.thkApiV1TastyCredupgradeExampolicynotice
 )
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/cred-upgrade\/exam-result-show/,
   'get',
-  station4swagger5Api.thkApiV1TastyCredupgradeExamresultshow
+  station4thk.thkApiV1TastyCredupgradeExamresultshow
 )
-Mock.mock(
-  /\/thk\/api\/v1\/tasty\/cred-upgrade\/exam-time/,
-  'post',
-  station4swagger5Api.thkApiV1TastyCredupgradeExamtime
-)
-Mock.mock(
-  /\/thk\/api\/v1\/tasty\/cred-upgrade\/up-recommend/,
-  'get',
-  station4swagger5Api.thkApiV1TastyCredupgradeUprecommend
-)
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential/, 'get', station4swagger5Api.thkApiV1TastyCredentialGet)
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential/, 'post', station4swagger5Api.thkApiV1TastyCredentialPost)
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential/, 'put', station4swagger5Api.thkApiV1TastyCredentialPut)
-Mock.mock(
-  /\/thk\/api\/v1\/tasty\/credential-claim-log/,
-  'post',
-  station4swagger5Api.thkApiV1TastyCredentialclaimlogPost
-)
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential-claim-log/, 'put', station4swagger5Api.thkApiV1TastyCredentialclaimlogPut)
-Mock.mock(
-  /\/thk\/api\/v1\/tasty\/credential-claim-log\/page/,
-  'get',
-  station4swagger5Api.thkApiV1TastyCredentialclaimlogPage
-)
+Mock.mock(/\/thk\/api\/v1\/tasty\/cred-upgrade\/exam-time/, 'post', station4thk.thkApiV1TastyCredupgradeExamtime)
+Mock.mock(/\/thk\/api\/v1\/tasty\/cred-upgrade\/up-recommend/, 'get', station4thk.thkApiV1TastyCredupgradeUprecommend)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential/, 'get', station4thk.thkApiV1TastyCredentialGet)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential/, 'post', station4thk.thkApiV1TastyCredentialPost)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential/, 'put', station4thk.thkApiV1TastyCredentialPut)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential-claim-log/, 'post', station4thk.thkApiV1TastyCredentialclaimlogPost)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential-claim-log/, 'put', station4thk.thkApiV1TastyCredentialclaimlogPut)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential-claim-log\/page/, 'get', station4thk.thkApiV1TastyCredentialclaimlogPage)
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/credential-claim-log\/validate/,
   'get',
-  station4swagger5Api.thkApiV1TastyCredentialclaimlogValidate
+  station4thk.thkApiV1TastyCredentialclaimlogValidate
 )
-Mock.mock(
-  /\/thk\/api\/v1\/tasty\/credential-claim-log\/.*/,
-  'delete',
-  station4swagger5Api.thkApiV1TastyCredentialclaimlogId
-)
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential-project/, 'get', station4swagger5Api.thkApiV1TastyCredentialproject)
-Mock.mock(
-  /\/thk\/api\/v1\/tasty\/credential-project\/save/,
-  'post',
-  station4swagger5Api.thkApiV1TastyCredentialprojectSave
-)
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/batch/, 'post', station4swagger5Api.thkApiV1TastyCredentialBatch)
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/cancel/, 'post', station4swagger5Api.thkApiV1TastyCredentialCancel)
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/claim/, 'post', station4swagger5Api.thkApiV1TastyCredentialClaim)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential-claim-log\/.*/, 'delete', station4thk.thkApiV1TastyCredentialclaimlogId)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential-project/, 'get', station4thk.thkApiV1TastyCredentialproject)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential-project\/save/, 'post', station4thk.thkApiV1TastyCredentialprojectSave)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/batch/, 'post', station4thk.thkApiV1TastyCredentialBatch)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/cancel/, 'post', station4thk.thkApiV1TastyCredentialCancel)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/claim/, 'post', station4thk.thkApiV1TastyCredentialClaim)
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/credential\/continue-education/,
   'get',
-  station4swagger5Api.thkApiV1TastyCredentialContinueeducation
+  station4thk.thkApiV1TastyCredentialContinueeducation
 )
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/count/, 'get', station4swagger5Api.thkApiV1TastyCredentialCount)
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/count-info/, 'get', station4swagger5Api.thkApiV1TastyCredentialCountinfo)
-Mock.mock(
-  /\/thk\/api\/v1\/tasty\/credential\/credentials/,
-  'get',
-  station4swagger5Api.thkApiV1TastyCredentialCredentials
-)
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/page/, 'get', station4swagger5Api.thkApiV1TastyCredentialPage)
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/register/, 'get', station4swagger5Api.thkApiV1TastyCredentialRegister)
-Mock.mock(
-  /\/thk\/api\/v1\/tasty\/credential\/register-info/,
-  'get',
-  station4swagger5Api.thkApiV1TastyCredentialRegisterinfo
-)
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/request/, 'get', station4swagger5Api.thkApiV1TastyCredentialRequest)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/count/, 'get', station4thk.thkApiV1TastyCredentialCount)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/count-info/, 'get', station4thk.thkApiV1TastyCredentialCountinfo)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/credentials/, 'get', station4thk.thkApiV1TastyCredentialCredentials)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/page/, 'get', station4thk.thkApiV1TastyCredentialPage)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/register/, 'get', station4thk.thkApiV1TastyCredentialRegister)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/register-info/, 'get', station4thk.thkApiV1TastyCredentialRegisterinfo)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/request/, 'get', station4thk.thkApiV1TastyCredentialRequest)
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/credential\/uploadCertificateBatch/,
   'get',
-  station4swagger5Api.thkApiV1TastyCredentialUploadCertificateBatch
+  station4thk.thkApiV1TastyCredentialUploadCertificateBatch
 )
-Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/.*/, 'delete', station4swagger5Api.thkApiV1TastyCredentialId)
-Mock.mock(/\/thk\/api\/v1\/tasty\/education/, 'get', station4swagger5Api.thkApiV1TastyEducationGet)
-Mock.mock(/\/thk\/api\/v1\/tasty\/education/, 'post', station4swagger5Api.thkApiV1TastyEducationPost)
-Mock.mock(/\/thk\/api\/v1\/tasty\/education/, 'put', station4swagger5Api.thkApiV1TastyEducationPut)
-Mock.mock(/\/thk\/api\/v1\/tasty\/education\/batch/, 'post', station4swagger5Api.thkApiV1TastyEducationBatch)
-Mock.mock(/\/thk\/api\/v1\/tasty\/education\/school/, 'get', station4swagger5Api.thkApiV1TastyEducationSchool)
-Mock.mock(/\/thk\/api\/v1\/tasty\/education\/.*/, 'delete', station4swagger5Api.thkApiV1TastyEducationId)
-Mock.mock(/\/thk\/api\/v1\/tasty\/family/, 'get', station4swagger5Api.thkApiV1TastyFamilyGet)
-Mock.mock(/\/thk\/api\/v1\/tasty\/family/, 'post', station4swagger5Api.thkApiV1TastyFamilyPost)
-Mock.mock(/\/thk\/api\/v1\/tasty\/introduction/, 'get', station4swagger5Api.thkApiV1TastyIntroduction)
-Mock.mock(/\/thk\/api\/v1\/tasty\/project/, 'post', station4swagger5Api.thkApiV1TastyProjectPost)
-Mock.mock(/\/thk\/api\/v1\/tasty\/project/, 'put', station4swagger5Api.thkApiV1TastyProjectPut)
-Mock.mock(/\/thk\/api\/v1\/tasty\/project-claim-log\/page/, 'get', station4swagger5Api.thkApiV1TastyProjectclaimlogPage)
-Mock.mock(/\/thk\/api\/v1\/tasty\/project\/batch/, 'post', station4swagger5Api.thkApiV1TastyProjectBatch)
-Mock.mock(/\/thk\/api\/v1\/tasty\/project\/cancel/, 'post', station4swagger5Api.thkApiV1TastyProjectCancel)
-Mock.mock(/\/thk\/api\/v1\/tasty\/project\/claim/, 'post', station4swagger5Api.thkApiV1TastyProjectClaim)
-Mock.mock(/\/thk\/api\/v1\/tasty\/project\/page/, 'get', station4swagger5Api.thkApiV1TastyProjectPage)
-Mock.mock(/\/thk\/api\/v1\/tasty\/project\/professional/, 'get', station4swagger5Api.thkApiV1TastyProjectProfessional)
-Mock.mock(/\/thk\/api\/v1\/tasty\/project\/projects/, 'get', station4swagger5Api.thkApiV1TastyProjectProjects)
+Mock.mock(/\/thk\/api\/v1\/tasty\/credential\/.*/, 'delete', station4thk.thkApiV1TastyCredentialId)
+Mock.mock(/\/thk\/api\/v1\/tasty\/education/, 'get', station4thk.thkApiV1TastyEducationGet)
+Mock.mock(/\/thk\/api\/v1\/tasty\/education/, 'post', station4thk.thkApiV1TastyEducationPost)
+Mock.mock(/\/thk\/api\/v1\/tasty\/education/, 'put', station4thk.thkApiV1TastyEducationPut)
+Mock.mock(/\/thk\/api\/v1\/tasty\/education\/batch/, 'post', station4thk.thkApiV1TastyEducationBatch)
+Mock.mock(/\/thk\/api\/v1\/tasty\/education\/school/, 'get', station4thk.thkApiV1TastyEducationSchool)
+Mock.mock(/\/thk\/api\/v1\/tasty\/education\/.*/, 'delete', station4thk.thkApiV1TastyEducationId)
+Mock.mock(/\/thk\/api\/v1\/tasty\/family/, 'get', station4thk.thkApiV1TastyFamilyGet)
+Mock.mock(/\/thk\/api\/v1\/tasty\/family/, 'post', station4thk.thkApiV1TastyFamilyPost)
+Mock.mock(/\/thk\/api\/v1\/tasty\/introduction/, 'get', station4thk.thkApiV1TastyIntroduction)
+Mock.mock(/\/thk\/api\/v1\/tasty\/project/, 'post', station4thk.thkApiV1TastyProjectPost)
+Mock.mock(/\/thk\/api\/v1\/tasty\/project/, 'put', station4thk.thkApiV1TastyProjectPut)
+Mock.mock(/\/thk\/api\/v1\/tasty\/project-claim-log\/page/, 'get', station4thk.thkApiV1TastyProjectclaimlogPage)
+Mock.mock(/\/thk\/api\/v1\/tasty\/project\/batch/, 'post', station4thk.thkApiV1TastyProjectBatch)
+Mock.mock(/\/thk\/api\/v1\/tasty\/project\/cancel/, 'post', station4thk.thkApiV1TastyProjectCancel)
+Mock.mock(/\/thk\/api\/v1\/tasty\/project\/claim/, 'post', station4thk.thkApiV1TastyProjectClaim)
+Mock.mock(/\/thk\/api\/v1\/tasty\/project\/page/, 'get', station4thk.thkApiV1TastyProjectPage)
+Mock.mock(/\/thk\/api\/v1\/tasty\/project\/professional/, 'get', station4thk.thkApiV1TastyProjectProfessional)
+Mock.mock(/\/thk\/api\/v1\/tasty\/project\/projects/, 'get', station4thk.thkApiV1TastyProjectProjects)
 Mock.mock(
   /\/thk\/api\/v1\/tasty\/project\/queryProjectByIdAbdName/,
   'get',
-  station4swagger5Api.thkApiV1TastyProjectQueryProjectByIdAbdName
+  station4thk.thkApiV1TastyProjectQueryProjectByIdAbdName
 )
-Mock.mock(/\/thk\/api\/v1\/tasty\/project\/.*/, 'delete', station4swagger5Api.thkApiV1TastyProjectId)
-Mock.mock(/\/thk\/api\/v1\/tasty\/tool\/majorInEducation/, 'get', station4swagger5Api.thkApiV1TastyToolMajorInEducation)
-Mock.mock(/\/thk\/api\/v1\/tasty\/work-history/, 'get', station4swagger5Api.thkApiV1TastyWorkhistoryGet)
-Mock.mock(/\/thk\/api\/v1\/tasty\/work-history/, 'post', station4swagger5Api.thkApiV1TastyWorkhistoryPost)
-Mock.mock(/\/thk\/api\/v1\/tasty\/work-history/, 'put', station4swagger5Api.thkApiV1TastyWorkhistoryPut)
-Mock.mock(/\/thk\/api\/v1\/tasty\/work-history\/batch/, 'post', station4swagger5Api.thkApiV1TastyWorkhistoryBatch)
-Mock.mock(/\/thk\/api\/v1\/tasty\/work-history\/.*/, 'delete', station4swagger5Api.thkApiV1TastyWorkhistoryId)
-Mock.mock(/\/thk\/api\/v1\/tasty\/.*/, 'delete', station4swagger5Api.thkApiV1TastyId)
-Mock.mock(/\/thk\/api\/v1\/store\/social-insurance/, 'get', station4swagger5Api.thkApiV1StoreSocialinsuranceGet)
-Mock.mock(/\/thk\/api\/v1\/store\/social-insurance/, 'post', station4swagger5Api.thkApiV1StoreSocialinsurancePost)
-Mock.mock(/\/thk\/api\/v1\/store\/social-insurance/, 'put', station4swagger5Api.thkApiV1StoreSocialinsurancePut)
-Mock.mock(/\/thk\/api\/v1\/store\/social-insurance\/.*/, 'delete', station4swagger5Api.thkApiV1StoreSocialinsuranceId)
-Mock.mock(/\/thk\/api\/v1\/store\/student-info/, 'get', station4swagger5Api.thkApiV1StoreStudentinfoGet)
-Mock.mock(/\/thk\/api\/v1\/store\/student-info/, 'post', station4swagger5Api.thkApiV1StoreStudentinfoPost)
-Mock.mock(/\/thk\/api\/v1\/store\/student-info/, 'put', station4swagger5Api.thkApiV1StoreStudentinfoPut)
-Mock.mock(/\/thk\/api\/v1\/store\/student-info\/.*/, 'delete', station4swagger5Api.thkApiV1StoreStudentinfoId)
-Mock.mock(/\/thk\/test\/export-branch/, 'get', station4swagger5Api.thkTestExportbranch)
-Mock.mock(/\/thk\/test\/export-excel/, 'get', station4swagger5Api.thkTestExportexcel)
-Mock.mock(/\/thk\/test\/merge/, 'post', station4swagger5Api.thkTestMerge)
-Mock.mock(/\/thk\/test\/test1/, 'get', station4swagger5Api.thkTestTest1)
-Mock.mock(/\/thk\/test\/test2/, 'get', station4swagger5Api.thkTestTest2)
-Mock.mock(/\/franchise-center\/api\/enterprise\/list/, 'get', station5franchisecenter.enterpriseList)
+Mock.mock(/\/thk\/api\/v1\/tasty\/project\/.*/, 'delete', station4thk.thkApiV1TastyProjectId)
+Mock.mock(/\/thk\/api\/v1\/tasty\/tool\/majorInEducation/, 'get', station4thk.thkApiV1TastyToolMajorInEducation)
+Mock.mock(/\/thk\/api\/v1\/tasty\/work-history/, 'get', station4thk.thkApiV1TastyWorkhistoryGet)
+Mock.mock(/\/thk\/api\/v1\/tasty\/work-history/, 'post', station4thk.thkApiV1TastyWorkhistoryPost)
+Mock.mock(/\/thk\/api\/v1\/tasty\/work-history/, 'put', station4thk.thkApiV1TastyWorkhistoryPut)
+Mock.mock(/\/thk\/api\/v1\/tasty\/work-history\/batch/, 'post', station4thk.thkApiV1TastyWorkhistoryBatch)
+Mock.mock(/\/thk\/api\/v1\/tasty\/work-history\/.*/, 'delete', station4thk.thkApiV1TastyWorkhistoryId)
+Mock.mock(/\/thk\/api\/v1\/tasty\/.*/, 'delete', station4thk.thkApiV1TastyId)
+Mock.mock(/\/thk\/api\/v1\/store\/social-insurance/, 'get', station4thk.thkApiV1StoreSocialinsuranceGet)
+Mock.mock(/\/thk\/api\/v1\/store\/social-insurance/, 'post', station4thk.thkApiV1StoreSocialinsurancePost)
+Mock.mock(/\/thk\/api\/v1\/store\/social-insurance/, 'put', station4thk.thkApiV1StoreSocialinsurancePut)
+Mock.mock(/\/thk\/api\/v1\/store\/social-insurance\/.*/, 'delete', station4thk.thkApiV1StoreSocialinsuranceId)
+Mock.mock(/\/thk\/api\/v1\/store\/student-info/, 'get', station4thk.thkApiV1StoreStudentinfoGet)
+Mock.mock(/\/thk\/api\/v1\/store\/student-info/, 'post', station4thk.thkApiV1StoreStudentinfoPost)
+Mock.mock(/\/thk\/api\/v1\/store\/student-info/, 'put', station4thk.thkApiV1StoreStudentinfoPut)
+Mock.mock(/\/thk\/api\/v1\/store\/student-info\/.*/, 'delete', station4thk.thkApiV1StoreStudentinfoId)
+Mock.mock(/\/thk\/test\/export-branch/, 'get', station4thk.thkTestExportbranch)
+Mock.mock(/\/thk\/test\/export-excel/, 'get', station4thk.thkTestExportexcel)
+Mock.mock(/\/thk\/test\/merge/, 'post', station4thk.thkTestMerge)
+Mock.mock(/\/thk\/test\/test1/, 'get', station4thk.thkTestTest1)
+Mock.mock(/\/thk\/test\/test2/, 'get', station4thk.thkTestTest2)
+Mock.mock(
+  /\/prefix\/thk\/api\/sys-dict\/api\/common\/v1\/areaInfo/,
+  'get',
+  station5swagger5Apijs.sysdictApiCommonV1AreaInfo
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/sys-dict\/api\/common\/v1\/certificationCertList/,
+  'get',
+  station5swagger5Apijs.sysdictApiCommonV1CertificationCertList
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/sys-dict\/api\/common\/v1\/humanStatusList/,
+  'get',
+  station5swagger5Apijs.sysdictApiCommonV1HumanStatusList
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/sys-dict\/api\/common\/v1\/siteManagementTasty/,
+  'get',
+  station5swagger5Apijs.sysdictApiCommonV1SiteManagementTasty
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/sys-dict\/api\/common\/v1\/skilledWorkList/,
+  'get',
+  station5swagger5Apijs.sysdictApiCommonV1SkilledWorkList
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/sys-dict\/api\/common\/v1\/specialWorkList/,
+  'get',
+  station5swagger5Apijs.sysdictApiCommonV1SpecialWorkList
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/sys-dict\/api\/common\/v1\/thirdCertificationList/,
+  'get',
+  station5swagger5Apijs.sysdictApiCommonV1ThirdCertificationList
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/sys-dict\/api\/common\/v1\/titleLevelList/,
+  'get',
+  station5swagger5Apijs.sysdictApiCommonV1TitleLevelList
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/sys-dict\/v1\/getCertificateOfRegistration/,
+  'get',
+  station5swagger5Apijs.sysdictV1GetCertificateOfRegistration
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/sys-dict\/v1\/getCertificateOfRegistrationLabelValue/,
+  'get',
+  station5swagger5Apijs.sysdictV1GetCertificateOfRegistrationLabelValue
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/sys-dict\/v1\/getFridayQualification/,
+  'get',
+  station5swagger5Apijs.sysdictV1GetFridayQualification
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/sys-dict\/v1\/getFridayQualificationWithCancel/,
+  'get',
+  station5swagger5Apijs.sysdictV1GetFridayQualificationWithCancel
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/config\/continue-education/,
+  'post',
+  station5swagger5Apijs.v1ConfigContinueeducationPost
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/config\/continue-education/,
+  'put',
+  station5swagger5Apijs.v1ConfigContinueeducationPut
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/config\/continue-education\/page/,
+  'get',
+  station5swagger5Apijs.v1ConfigContinueeducationPage
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/config\/continue-education\/.*/,
+  'delete',
+  station5swagger5Apijs.v1ConfigContinueeducationId
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/config\/cred-alert\/need-alert/,
+  'get',
+  station5swagger5Apijs.v1ConfigCredalertNeedalert
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/config\/cred-alert\/update/, 'put', station5swagger5Apijs.v1ConfigCredalertUpdate)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/config\/credential-standard/,
+  'post',
+  station5swagger5Apijs.v1ConfigCredentialstandardPost
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/config\/credential-standard/,
+  'put',
+  station5swagger5Apijs.v1ConfigCredentialstandardPut
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/config\/credential-standard\/export/,
+  'get',
+  station5swagger5Apijs.v1ConfigCredentialstandardExport
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/config\/credential-standard\/export\/model/,
+  'get',
+  station5swagger5Apijs.v1ConfigCredentialstandardExportModel
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/config\/credential-standard\/getQueryChain/,
+  'post',
+  station5swagger5Apijs.v1ConfigCredentialstandardGetQueryChain
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/config\/credential-standard\/getRelativeList/,
+  'post',
+  station5swagger5Apijs.v1ConfigCredentialstandardGetRelativeList
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/config\/credential-standard\/page/,
+  'get',
+  station5swagger5Apijs.v1ConfigCredentialstandardPage
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/config\/credential-standard\/unit/,
+  'get',
+  station5swagger5Apijs.v1ConfigCredentialstandardUnit
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/config\/credential-standard\/upload/,
+  'post',
+  station5swagger5Apijs.v1ConfigCredentialstandardUpload
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/config\/credential-warning/,
+  'get',
+  station5swagger5Apijs.v1ConfigCredentialwarningGet
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/config\/credential-warning/,
+  'post',
+  station5swagger5Apijs.v1ConfigCredentialwarningPost
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/config\/credential-warning/,
+  'put',
+  station5swagger5Apijs.v1ConfigCredentialwarningPut
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/data\/board\/fridayCredential/,
+  'get',
+  station5swagger5Apijs.v1DataBoardFridayCredential
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/data\/board\/get\/date/, 'get', station5swagger5Apijs.v1DataBoardGetDate)
+Mock.mock(/\/prefix\/thk\/api\/v1\/data\/board\/get\/escalation/, 'get', station5swagger5Apijs.v1DataBoardGetEscalation)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/data\/board\/listQualificationCate/,
+  'get',
+  station5swagger5Apijs.v1DataBoardListQualificationCate
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/bad\/behavior\/list/, 'get', station5swagger5Apijs.v1FridayBadBehaviorList)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/bad\/behavior\/page/, 'get', station5swagger5Apijs.v1FridayBadBehaviorPage)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/black\/list/, 'get', station5swagger5Apijs.v1FridayBlackList)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/black\/page/, 'get', station5swagger5Apijs.v1FridayBlackPage)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/branch\/export\/create-account-template/,
+  'post',
+  station5swagger5Apijs.v1FridayBranchExportCreateaccounttemplate
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/branch\/page/, 'get', station5swagger5Apijs.v1FridayBranchPage)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/branch\/raw-branch/, 'get', station5swagger5Apijs.v1FridayBranchRawbranch)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/branch\/statusCount/, 'get', station5swagger5Apijs.v1FridayBranchStatusCount)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/branch\/update\/nameOrPhone/,
+  'post',
+  station5swagger5Apijs.v1FridayBranchUpdateNameOrPhone
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/cred-plan\/all-cred/, 'get', station5swagger5Apijs.v1FridayCredplanAllcred)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/cred-plan\/available-apply-cred/,
+  'get',
+  station5swagger5Apijs.v1FridayCredplanAvailableapplycred
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/cred-plan\/filtered-cred/,
+  'get',
+  station5swagger5Apijs.v1FridayCredplanFilteredcred
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/cred-plan\/list/, 'get', station5swagger5Apijs.v1FridayCredplanList)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/cred-plan\/plan-detail/,
+  'get',
+  station5swagger5Apijs.v1FridayCredplanPlandetail
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/cred-plan\/pre-level/, 'get', station5swagger5Apijs.v1FridayCredplanPrelevel)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/cred-plan\/save-plan/,
+  'post',
+  station5swagger5Apijs.v1FridayCredplanSaveplan
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/cred-plan\/single-cred/,
+  'get',
+  station5swagger5Apijs.v1FridayCredplanSinglecred
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/cred-plan\/start-plan/,
+  'post',
+  station5swagger5Apijs.v1FridayCredplanStartplan
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/cred-plan\/validate-credit/,
+  'post',
+  station5swagger5Apijs.v1FridayCredplanValidatecredit
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/cred-plan\/validate-tasty/,
+  'post',
+  station5swagger5Apijs.v1FridayCredplanValidatetasty
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/cred-plan\/validate-project/,
+  'post',
+  station5swagger5Apijs.v1FridayCredplanValidateproject
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/credential\/add/, 'post', station5swagger5Apijs.v1FridayCredentialAdd)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/credential\/cred-overview/,
+  'get',
+  station5swagger5Apijs.v1FridayCredentialCredoverview
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/credential\/credential-nature/,
+  'get',
+  station5swagger5Apijs.v1FridayCredentialCredentialnature
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/credential\/delete/, 'get', station5swagger5Apijs.v1FridayCredentialDelete)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/credential\/expire-alert/,
+  'get',
+  station5swagger5Apijs.v1FridayCredentialExpirealert
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/credential\/get\/escalation/,
+  'get',
+  station5swagger5Apijs.v1FridayCredentialGetEscalation
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/credential\/get\/escalation\/tastyDetail/,
+  'get',
+  station5swagger5Apijs.v1FridayCredentialGetEscalationTastyDetail
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/credential\/get\/escalation2/,
+  'get',
+  station5swagger5Apijs.v1FridayCredentialGetEscalation2
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/credential\/list/, 'get', station5swagger5Apijs.v1FridayCredentialList)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/credential\/list-name/,
+  'post',
+  station5swagger5Apijs.v1FridayCredentialListname
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/credential\/page/, 'get', station5swagger5Apijs.v1FridayCredentialPage)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/credential\/update/, 'post', station5swagger5Apijs.v1FridayCredentialUpdate)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/credential\/update-batch/,
+  'post',
+  station5swagger5Apijs.v1FridayCredentialUpdatebatch
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/dishonesty\/punishment\/list/,
+  'get',
+  station5swagger5Apijs.v1FridayDishonestyPunishmentList
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/dishonesty\/punishment\/page/,
+  'get',
+  station5swagger5Apijs.v1FridayDishonestyPunishmentPage
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/good\/behavior\/list/, 'get', station5swagger5Apijs.v1FridayGoodBehaviorList)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/good\/behavior\/page/, 'get', station5swagger5Apijs.v1FridayGoodBehaviorPage)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/main\/all-count/, 'get', station5swagger5Apijs.v1FridayMainAllcount)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/main\/appPreviewFridayInfo/,
+  'get',
+  station5swagger5Apijs.v1FridayMainAppPreviewFridayInfo
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/main\/appSaveFridayInfo/,
+  'get',
+  station5swagger5Apijs.v1FridayMainAppSaveFridayInfo
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/main\/appSyncFriday/, 'get', station5swagger5Apijs.v1FridayMainAppSyncFriday)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/main\/get/, 'get', station5swagger5Apijs.v1FridayMainGet)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/main\/getInnerByTenantIdTest/,
+  'get',
+  station5swagger5Apijs.v1FridayMainGetInnerByTenantIdTest
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/main\/ignore\/tenant\/get/,
+  'get',
+  station5swagger5Apijs.v1FridayMainIgnoreTenantGet
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/main\/ignore\/tenant\/list/,
+  'get',
+  station5swagger5Apijs.v1FridayMainIgnoreTenantList
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/main\/list/, 'get', station5swagger5Apijs.v1FridayMainList)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/main\/mulclaim\/human\/detail/,
+  'get',
+  station5swagger5Apijs.v1FridayMainMulclaimHumanDetail
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/main\/page/, 'get', station5swagger5Apijs.v1FridayMainPage)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/main\/update/, 'put', station5swagger5Apijs.v1FridayMainUpdate)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/tasty\/credential\/boss\/export/,
+  'get',
+  station5swagger5Apijs.v1FridayTastyCredentialBossExport
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/tasty\/credential\/boss\/export\/attachment/,
+  'get',
+  station5swagger5Apijs.v1FridayTastyCredentialBossExportAttachment
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/tasty\/credential\/boss\/page/,
+  'get',
+  station5swagger5Apijs.v1FridayTastyCredentialBossPage
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/tasty\/credential\/curriculum\/vitae/,
+  'get',
+  station5swagger5Apijs.v1FridayTastyCredentialCurriculumVitae
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/tasty\/credential\/curriculum\/vitae\/export/,
+  'post',
+  station5swagger5Apijs.v1FridayTastyCredentialCurriculumVitaeExport
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/tasty\/credential\/curriculum\/vitae\/list/,
+  'get',
+  station5swagger5Apijs.v1FridayTastyCredentialCurriculumVitaeList
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/tasty\/credential\/export/,
+  'get',
+  station5swagger5Apijs.v1FridayTastyCredentialExport
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/tasty\/credential\/export\/attachment/,
+  'get',
+  station5swagger5Apijs.v1FridayTastyCredentialExportAttachment
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/tasty\/credential\/list\/human/,
+  'get',
+  station5swagger5Apijs.v1FridayTastyCredentialListHuman
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/tasty\/credential\/list\/registerHuman/,
+  'get',
+  station5swagger5Apijs.v1FridayTastyCredentialListRegisterHuman
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/tasty\/credential\/list\/safetyProduction/,
+  'get',
+  station5swagger5Apijs.v1FridayTastyCredentialListSafetyProduction
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/tasty\/credential\/list\/unit/,
+  'get',
+  station5swagger5Apijs.v1FridayTastyCredentialListUnit
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/tasty\/credential\/page/,
+  'get',
+  station5swagger5Apijs.v1FridayTastyCredentialPage
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/tasty\/credential\/pageFriday/,
+  'post',
+  station5swagger5Apijs.v1FridayTastyCredentialPageFriday
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/tasty\/credential\/summary/,
+  'post',
+  station5swagger5Apijs.v1FridayTastyCredentialSummary
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/tasty\/credential\/update\/mark/,
+  'post',
+  station5swagger5Apijs.v1FridayTastyCredentialUpdateMark
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/tasty\/list/, 'get', station5swagger5Apijs.v1FridayTastyList)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/tasty\/page/, 'get', station5swagger5Apijs.v1FridayTastyPage)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/project\/get\/projectTypes/,
+  'get',
+  station5swagger5Apijs.v1FridayProjectGetProjectTypes
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/project\/industry-major/,
+  'get',
+  station5swagger5Apijs.v1FridayProjectIndustrymajor
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/project\/list/, 'get', station5swagger5Apijs.v1FridayProjectList)
+Mock.mock(/\/prefix\/thk\/api\/v1\/friday\/project\/page/, 'get', station5swagger5Apijs.v1FridayProjectPage)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/friday\/project\/project-stage/,
+  'get',
+  station5swagger5Apijs.v1FridayProjectProjectstage
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/file\/ocrFromBigData/, 'post', station5swagger5Apijs.v1FileOcrFromBigData)
+Mock.mock(/\/prefix\/thk\/api\/v1\/file\/signedUrl/, 'post', station5swagger5Apijs.v1FileSignedUrl)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty/, 'get', station5swagger5Apijs.v1TastyGet)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty/, 'post', station5swagger5Apijs.v1TastyPost)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty/, 'put', station5swagger5Apijs.v1TastyPut)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/all/, 'get', station5swagger5Apijs.v1TastyAll)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/all-count/, 'get', station5swagger5Apijs.v1TastyAllcount)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/bank-record/, 'get', station5swagger5Apijs.v1TastyBankrecordGet)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/bank-record/, 'post', station5swagger5Apijs.v1TastyBankrecordPost)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/bank-record/, 'put', station5swagger5Apijs.v1TastyBankrecordPut)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/bank-record\/.*/, 'delete', station5swagger5Apijs.v1TastyBankrecordId)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/tasty\/cred-upgrade\/condition-overview/,
+  'get',
+  station5swagger5Apijs.v1TastyCredupgradeConditionoverview
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/tasty\/cred-upgrade\/exam-policy-notice/,
+  'post',
+  station5swagger5Apijs.v1TastyCredupgradeExampolicynotice
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/tasty\/cred-upgrade\/exam-result-show/,
+  'get',
+  station5swagger5Apijs.v1TastyCredupgradeExamresultshow
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/tasty\/cred-upgrade\/exam-time/,
+  'post',
+  station5swagger5Apijs.v1TastyCredupgradeExamtime
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/tasty\/cred-upgrade\/up-recommend/,
+  'get',
+  station5swagger5Apijs.v1TastyCredupgradeUprecommend
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/credential/, 'get', station5swagger5Apijs.v1TastyCredentialGet)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/credential/, 'post', station5swagger5Apijs.v1TastyCredentialPost)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/credential/, 'put', station5swagger5Apijs.v1TastyCredentialPut)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/tasty\/credential-claim-log/,
+  'post',
+  station5swagger5Apijs.v1TastyCredentialclaimlogPost
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/tasty\/credential-claim-log/,
+  'put',
+  station5swagger5Apijs.v1TastyCredentialclaimlogPut
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/tasty\/credential-claim-log\/page/,
+  'get',
+  station5swagger5Apijs.v1TastyCredentialclaimlogPage
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/tasty\/credential-claim-log\/validate/,
+  'get',
+  station5swagger5Apijs.v1TastyCredentialclaimlogValidate
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/tasty\/credential-claim-log\/.*/,
+  'delete',
+  station5swagger5Apijs.v1TastyCredentialclaimlogId
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/credential-project/, 'get', station5swagger5Apijs.v1TastyCredentialproject)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/tasty\/credential-project\/save/,
+  'post',
+  station5swagger5Apijs.v1TastyCredentialprojectSave
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/credential\/batch/, 'post', station5swagger5Apijs.v1TastyCredentialBatch)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/credential\/cancel/, 'post', station5swagger5Apijs.v1TastyCredentialCancel)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/credential\/claim/, 'post', station5swagger5Apijs.v1TastyCredentialClaim)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/tasty\/credential\/continue-education/,
+  'get',
+  station5swagger5Apijs.v1TastyCredentialContinueeducation
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/credential\/count/, 'get', station5swagger5Apijs.v1TastyCredentialCount)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/tasty\/credential\/count-info/,
+  'get',
+  station5swagger5Apijs.v1TastyCredentialCountinfo
+)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/tasty\/credential\/credentials/,
+  'get',
+  station5swagger5Apijs.v1TastyCredentialCredentials
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/credential\/page/, 'get', station5swagger5Apijs.v1TastyCredentialPage)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/credential\/register/, 'get', station5swagger5Apijs.v1TastyCredentialRegister)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/tasty\/credential\/register-info/,
+  'get',
+  station5swagger5Apijs.v1TastyCredentialRegisterinfo
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/credential\/request/, 'get', station5swagger5Apijs.v1TastyCredentialRequest)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/tasty\/credential\/uploadCertificateBatch/,
+  'get',
+  station5swagger5Apijs.v1TastyCredentialUploadCertificateBatch
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/credential\/.*/, 'delete', station5swagger5Apijs.v1TastyCredentialId)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/education/, 'get', station5swagger5Apijs.v1TastyEducationGet)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/education/, 'post', station5swagger5Apijs.v1TastyEducationPost)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/education/, 'put', station5swagger5Apijs.v1TastyEducationPut)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/education\/batch/, 'post', station5swagger5Apijs.v1TastyEducationBatch)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/education\/school/, 'get', station5swagger5Apijs.v1TastyEducationSchool)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/education\/.*/, 'delete', station5swagger5Apijs.v1TastyEducationId)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/family/, 'get', station5swagger5Apijs.v1TastyFamilyGet)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/family/, 'post', station5swagger5Apijs.v1TastyFamilyPost)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/introduction/, 'get', station5swagger5Apijs.v1TastyIntroduction)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/project/, 'post', station5swagger5Apijs.v1TastyProjectPost)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/project/, 'put', station5swagger5Apijs.v1TastyProjectPut)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/tasty\/project-claim-log\/page/,
+  'get',
+  station5swagger5Apijs.v1TastyProjectclaimlogPage
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/project\/batch/, 'post', station5swagger5Apijs.v1TastyProjectBatch)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/project\/cancel/, 'post', station5swagger5Apijs.v1TastyProjectCancel)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/project\/claim/, 'post', station5swagger5Apijs.v1TastyProjectClaim)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/project\/page/, 'get', station5swagger5Apijs.v1TastyProjectPage)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/tasty\/project\/professional/,
+  'get',
+  station5swagger5Apijs.v1TastyProjectProfessional
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/project\/projects/, 'get', station5swagger5Apijs.v1TastyProjectProjects)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/tasty\/project\/queryProjectByIdAbdName/,
+  'get',
+  station5swagger5Apijs.v1TastyProjectQueryProjectByIdAbdName
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/project\/.*/, 'delete', station5swagger5Apijs.v1TastyProjectId)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/tasty\/tool\/majorInEducation/,
+  'get',
+  station5swagger5Apijs.v1TastyToolMajorInEducation
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/work-history/, 'get', station5swagger5Apijs.v1TastyWorkhistoryGet)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/work-history/, 'post', station5swagger5Apijs.v1TastyWorkhistoryPost)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/work-history/, 'put', station5swagger5Apijs.v1TastyWorkhistoryPut)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/work-history\/batch/, 'post', station5swagger5Apijs.v1TastyWorkhistoryBatch)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/work-history\/.*/, 'delete', station5swagger5Apijs.v1TastyWorkhistoryId)
+Mock.mock(/\/prefix\/thk\/api\/v1\/tasty\/.*/, 'delete', station5swagger5Apijs.v1TastyId)
+Mock.mock(/\/prefix\/thk\/api\/v1\/store\/social-insurance/, 'get', station5swagger5Apijs.v1StoreSocialinsuranceGet)
+Mock.mock(/\/prefix\/thk\/api\/v1\/store\/social-insurance/, 'post', station5swagger5Apijs.v1StoreSocialinsurancePost)
+Mock.mock(/\/prefix\/thk\/api\/v1\/store\/social-insurance/, 'put', station5swagger5Apijs.v1StoreSocialinsurancePut)
+Mock.mock(
+  /\/prefix\/thk\/api\/v1\/store\/social-insurance\/.*/,
+  'delete',
+  station5swagger5Apijs.v1StoreSocialinsuranceId
+)
+Mock.mock(/\/prefix\/thk\/api\/v1\/store\/student-info/, 'get', station5swagger5Apijs.v1StoreStudentinfoGet)
+Mock.mock(/\/prefix\/thk\/api\/v1\/store\/student-info/, 'post', station5swagger5Apijs.v1StoreStudentinfoPost)
+Mock.mock(/\/prefix\/thk\/api\/v1\/store\/student-info/, 'put', station5swagger5Apijs.v1StoreStudentinfoPut)
+Mock.mock(/\/prefix\/thk\/api\/v1\/store\/student-info\/.*/, 'delete', station5swagger5Apijs.v1StoreStudentinfoId)
+Mock.mock(/\/prefix\/thk\/test\/export-branch/, 'get', station5swagger5Apijs.thkTestExportbranch)
+Mock.mock(/\/prefix\/thk\/test\/export-excel/, 'get', station5swagger5Apijs.thkTestExportexcel)
+Mock.mock(/\/prefix\/thk\/test\/merge/, 'post', station5swagger5Apijs.thkTestMerge)
+Mock.mock(/\/prefix\/thk\/test\/test1/, 'get', station5swagger5Apijs.thkTestTest1)
+Mock.mock(/\/prefix\/thk\/test\/test2/, 'get', station5swagger5Apijs.thkTestTest2)
+Mock.mock(/\/emo-center\/api\/enterprise\/list/, 'get', station6emocenter.emocenterApiEnterpriseList)

@@ -59,11 +59,12 @@ export function getApiName(url, method) {
 }
 
 /** 获取接口所属文件名称*/
-export function getFileName(url: string, userFileName: any) {
+export function getFileName(data: { url: string; originUrl: string; userFileName: string | Function }) {
+  const { url, userFileName, originUrl } = data
   let theFileName = ''
   //  用户传入的 fileName 是个方法
   if (userFileName && typeof userFileName === 'function') {
-    theFileName = userFileName({ url })
+    theFileName = userFileName({ url, originUrl })
   }
   //  用户传入的 fileName 是个字符串
   else if (userFileName && typeof userFileName === 'string') {
@@ -71,7 +72,7 @@ export function getFileName(url: string, userFileName: any) {
   }
   // 使用默认的 fileName 生成规则, 如 /api/user/create 处理成 user
   else {
-    const arr = url.split('/')
+    const arr = originUrl.split('/')
     theFileName = arr.find((item) => item && item !== 'api')
   }
   return theFileName

@@ -7,11 +7,14 @@ yarn-error.log
 /temp
 
 # 执行 yarn test:init 在项目根目录下生成的配置文件
-apiConfig.js
-apiConfig.ts
+/apiConfig.js
+/apiConfig.ts
 
 
 # 在用户目录下执行 genapi 生成的 mock 数据路径为 path.join(__dirname,'../mock')，
 # 如果是 npm link 方式执行的，其实指向的是本项目的根路径，设置提交忽略
 /mock
+
+# ssr 打包后的客户端页面代码
+/static/client.js
 

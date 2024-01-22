@@ -1,5 +1,5 @@
 import path from 'node:path'
-import { loadConfig } from '../utils/loadConfig'
+import { loadConfig } from '../utils/config'
 
 /** 获取简单数据类型的 mock */
 export function getFieldMockStr({ name, type, fieldRules }) {
@@ -74,11 +74,6 @@ export function getCustomeMockStr(name, fieldRules) {
     if (rule.startsWith('/') && rule.endsWith('/')) {
       const reg = new RegExp(rule.replace(/\//g, ''))
       reg.test(name) && (matched = true)
-    }
-    // jsonPath  'root.code': 200
-    else if (rule.startsWith('root.')) {
-      //  cjh todo
-      matched = false
     }
     // 完全匹配  'userName':'@cname'
     else if (rule === name) {

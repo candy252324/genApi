@@ -18,6 +18,7 @@ program
 program
   .command('now')
   .option('-c --config <configPath>', '配置文件路径')
+  .option('--no-mock', '是否不生成 mock 数据')
   .action((options) => {
     console.log()
     console.log(`当前版本: ${pkgJson.version}`)

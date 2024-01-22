@@ -9,6 +9,7 @@ import { cleanDir } from '../utils/file'
 
 let MOCK_OUTPUT_DIR = '' // mock 数据输出路径
 
+/** 生成 mock 数据 */
 export async function genMock(data: IParsered[], mockConfig: IMock) {
   MOCK_OUTPUT_DIR = await getMockPath()
   console.log(`mock 数据生成中...`)
