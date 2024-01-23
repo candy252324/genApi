@@ -110,3 +110,25 @@ export function JobCategoryConfigResp() {
     updateName: '@datetime',
   }
 }
+export function HappyPlanAddCustomerReq() {
+  return {
+    'addCustomerList|1-20': [HappyPlanAddCustomerListReq()],
+    'dateList|1-20': [ErrorModelNamenamespacejavatimenameLocalDateTime()],
+  }
+}
+export function HappyPlanAddCustomerListReq() {
+  return {
+    customerType: '@string(5,50)',
+    id: '@guid',
+  }
+}
+export function ApiResponseobject() {
+  return {
+    code: 200,
+    data: '',
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}

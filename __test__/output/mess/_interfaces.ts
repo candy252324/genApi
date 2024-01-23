@@ -156,3 +156,23 @@ export interface JobCategoryConfigResp {
   /** 修改人name */
   updateName?: string
 }
+export interface HappyPlanAddCustomerReq {
+  /** 待添加机器人数据 */
+  addCustomerList?: HappyPlanAddCustomerListReq[]
+  /** 日期 */
+  dateList?: any[]
+}
+export interface HappyPlanAddCustomerListReq {
+  /** 机器人类型 */
+  customerType?: string
+  /** 机器人ID */
+  id?: string
+}
+export interface ApiResponseobject {
+  code?: number
+  data?: any
+  msg?: string
+  success?: boolean
+  timestamp?: string
+  traceId?: string
+}

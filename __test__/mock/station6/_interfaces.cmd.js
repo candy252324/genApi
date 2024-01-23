@@ -109,6 +109,28 @@ function JobCategoryConfigResp() {
     updateName: '@datetime',
   }
 }
+function HappyPlanAddCustomerReq() {
+  return {
+    'addCustomerList|1-20': [HappyPlanAddCustomerListReq()],
+    'dateList|1-20': [ErrorModelNamenamespacejavatimenameLocalDateTime()],
+  }
+}
+function HappyPlanAddCustomerListReq() {
+  return {
+    customerType: '@string(5,50)',
+    id: '@guid',
+  }
+}
+function ApiResponseobject() {
+  return {
+    code: 200,
+    data: '',
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
 module.exports = {
   ApiResponseComPageXiLanHuaLieBiao,
   ComPageXiLanHuaLieBiao,
@@ -116,4 +138,7 @@ module.exports = {
   ApiResponseListListlong,
   ApiResponseListJobCategoryConfigResp,
   JobCategoryConfigResp,
+  HappyPlanAddCustomerReq,
+  HappyPlanAddCustomerListReq,
+  ApiResponseobject,
 }

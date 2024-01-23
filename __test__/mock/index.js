@@ -127,6 +127,7 @@ import * as station3inner from './station3/inner.js'
 import * as station4thk from './station4/thk.js'
 import * as station5swagger5Apijs from './station5/swagger5Api-js.js'
 import * as station6emocenter from './station6/emo-center.js'
+import * as station6happyPlan from './station6/happyPlan.js'
 Mock.mock(/\/api\/blue\/acc\/queryAcc/, 'post', station0blue.blueAccQueryAcc)
 Mock.mock(/\/api\/blue\/door\/addDoor/, 'post', station0blue.blueDoorAddDoor)
 Mock.mock(/\/api\/blue\/door\/createDoor/, 'post', station0blue.blueDoorCreateDoor)
@@ -1890,3 +1891,4 @@ Mock.mock(
   'get',
   station6emocenter.emocenterApiAdminJobCategoryByParentIds
 )
+Mock.mock(/\/api\/happyPlan\/addCustomer/, 'get', station6happyPlan.happyPlanAddCustomer)
