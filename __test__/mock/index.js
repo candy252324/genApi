@@ -1885,3 +1885,8 @@ Mock.mock(
   'get',
   station6emocenter.emocenterApiFeeRuleGetCooperateTypeIdsByFeeId
 )
+Mock.mock(
+  /\/emo-center\/api\/admin\/jobCategory\/byParentIds/,
+  'get',
+  station6emocenter.emocenterApiAdminJobCategoryByParentIds
+)

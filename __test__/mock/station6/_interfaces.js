@@ -81,3 +81,32 @@ export function ApiResponseListListlong() {
     traceId: '@guid',
   }
 }
+export function ApiResponseListJobCategoryConfigResp() {
+  return {
+    code: 200,
+    'data|1-20': [JobCategoryConfigResp()],
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+export function JobCategoryConfigResp() {
+  return {
+    'children|1-20': [JobCategoryConfigResp()],
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
+    id: '@guid',
+    isEnable: '@integer(3,1000)',
+    leaf: '@boolean',
+    level: '@string(5,50)',
+    modified: '@string(5,50)',
+    name: '@ctitle(5,10)',
+    parentId: '@guid',
+    parentName: '@ctitle(5,10)',
+    rootName: '@ctitle(5,10)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+  }
+}

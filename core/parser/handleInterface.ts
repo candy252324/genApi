@@ -1,5 +1,5 @@
 import { IInterface } from '../types'
-import { handleWeirdName, handleJsType } from '../utils'
+import { handleWeirdName, handleJsType, handleDescription } from '../utils'
 
 /** 入参格式
  * "ApiResponse«AddUserReq»": {
@@ -52,9 +52,9 @@ function handleInterfaceModal(obj): Omit<IInterface, 'name'> {
 
   return {
     isArray, // 是否是数组
-    isSimpleJsType, // 是否是简单数据 就是 js 类型
+    isSimpleJsType, // 是否是简单类型
     type: additionalProperties ? handleWeirdName(additionalProperties) : handleItemsType(obj),
-    description: obj.description || '',
+    description: handleDescription(obj.description),
     enums: obj.enum && Array.isArray(obj.enum) ? obj.enum : undefined,
   }
 }

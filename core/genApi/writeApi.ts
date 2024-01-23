@@ -1,6 +1,6 @@
 import path from 'node:path'
 
-import { typeIsInterface, writeAndPrettify } from '../utils'
+import { typeIsInterface, writeAndPrettify, handleDescription } from '../utils'
 import { IParams, IApiGroup, IInterface, IParsered } from '../types'
 
 /** api 写入 */
@@ -98,8 +98,7 @@ function getParamStr(parameters: IParams[]) {
   // 所有的参数都 in path
   else if (avaliableParam.every((p) => p.in === 'path')) {
     const str = avaliableParam.reduce((pre, cur) => {
-      let desc = cur.description?.trim()
-      desc = desc.replace(/\n/g, ' ') // 去除注释中的换行符
+      let desc = handleDescription(cur.description)
       desc = desc && desc !== cur.name.trim() ? `\n// ${desc}\n` : '' // 有注释且和名字不一样
       return `${pre}${desc}${cur.name}?:${cur.type}${cur.isArray ? '[]' : ''},`
     }, '')
@@ -110,8 +109,7 @@ function getParamStr(parameters: IParams[]) {
   // 所有的参数都 in query 或 in body
   else if (avaliableParam.every((p) => p.in === 'query' || p.in === 'body')) {
     const str = avaliableParam.reduce((pre, cur) => {
-      let desc = cur.description?.trim()
-      desc = desc.replace(/\n/g, ' ') // 去除注释中的换行符
+      let desc = handleDescription(cur.description)
       desc = desc && desc !== cur.name.trim() ? `\n// ${desc}\n` : '' // 有注释且和名字不一样
       return `${pre}${desc}${cur.name}?:${cur.type}${cur.isArray ? '[]' : ''},`
     }, '')
@@ -127,8 +125,7 @@ function getParamStr(parameters: IParams[]) {
     const inPathParam = avaliableParam.filter((p) => p.in === 'path')
     const notInPathParam = avaliableParam.filter((p) => p.in !== 'path')
     const str = avaliableParam.reduce((pre, cur) => {
-      let desc = cur.description?.trim() || ''
-      desc = desc.replace(/\n/g, ' ') // 去除注释中的换行符
+      let desc = handleDescription(cur.description)
       desc = desc && desc !== cur.name.trim() ? `\n// ${desc}\n` : '' // 有注释且和名字不一样
       return `${pre}${desc}${cur.name}?:${cur.type}${cur.isArray ? '[]' : ''},`
     }, '')

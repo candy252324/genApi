@@ -10,7 +10,7 @@
     "/emo-center/api/enterprise/list": {
       "get": {
         "tags": ["西蓝花管理"],
-        "summary": "西蓝花列表",
+        "summary": "这个接口注释、入参注释、出参注释\n都有换行符\n，导致报错",
         "operationId": "listUsingGET",
         "produces": ["*/*"],
         "parameters": [
@@ -84,7 +84,7 @@
     "/emo-center/api/feeRule/getCooperateTypeIdsByFeeId": {
       "get": {
         "tags": ["武术规则"],
-        "summary": "查询合作类型根据武术规则ID",
+        "summary": "这个接口处理后的 parsedData 里的type为空，导出出现形如 'data|1-20': [()]  的错误mock数据",
         "operationId": "getCooperateTypeIdsByFeeIdUsingGET",
         "produces": ["*/*"],
         "parameters": [
@@ -103,6 +103,46 @@
             "schema": {
               "$ref": "#/definitions/ApiResponse«List«List«long»»»",
               "originalRef": "ApiResponse«List«List«long»»»"
+            }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }]
+      }
+    },
+    "/emo-center/api/admin/jobCategory/byParentIds": {
+      "get": {
+        "tags": ["能力标签配置"],
+        "summary": "这个接口出参树形结构，同样的children 结构导致 mock 函数死循环了",
+        "operationId": "queryByParentIdUsingGET_1",
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "isEnable",
+            "in": "query",
+            "description": "isEnable",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "parentIds",
+            "in": "query",
+            "description": "parentIds",
+            "required": true,
+            "type": "array",
+            "items": { "type": "integer", "format": "int64" },
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«List«JobCategoryConfigResp»»",
+              "originalRef": "ApiResponse«List«JobCategoryConfigResp»»"
             }
           },
           "401": { "description": "Unauthorized" },
@@ -144,7 +184,7 @@
         "aidedManagementName": { "type": "string", "description": "分管人姓名" },
         "area": { "type": "string", "description": "区" },
         "areaCode": { "type": "string", "description": "地区码" },
-        "areaScope": { "type": "string", "description": "彩虹区域范围： ALL全国彩虹 PART区域彩虹 APPOINT制定区域" },
+        "areaScope": { "type": "string", "description": "彩虹区域范围：\n ALL全国彩虹 PART区域彩虹 APPOINT制定区域" },
         "beginDate": { "type": "string", "format": "date", "description": "合作开始时间" },
         "branchSerialNo": { "type": "string", "description": "分院编码" },
         "businessAddress": { "type": "string", "description": "实际营业地址" },
@@ -212,6 +252,46 @@
         "traceId": { "type": "string" }
       },
       "title": "ApiResponse«List«List«long»»»"
+    },
+    "ApiResponse«List«JobCategoryConfigResp»»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/JobCategoryConfigResp", "originalRef": "JobCategoryConfigResp" }
+        },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«List«JobCategoryConfigResp»»"
+    },
+    "JobCategoryConfigResp": {
+      "type": "object",
+      "properties": {
+        "children": {
+          "type": "array",
+          "description": "子集",
+          "items": { "$ref": "#/definitions/JobCategoryConfigResp", "originalRef": "JobCategoryConfigResp" }
+        },
+        "createId": { "type": "integer", "format": "int64", "description": "创建人id" },
+        "createName": { "type": "string", "description": "创建人name" },
+        "created": { "type": "string", "format": "date-time", "description": "创建时间" },
+        "id": { "type": "integer", "format": "int64", "description": "id" },
+        "isEnable": { "type": "integer", "format": "int32", "description": "标签状态 0：未启用,1：已启用" },
+        "leaf": { "type": "boolean", "description": "是否是叶子结点，0：非叶子结点，1：叶子结点" },
+        "level": { "type": "integer", "format": "int64", "description": "标签所处层级" },
+        "modified": { "type": "string", "format": "date-time", "description": "修改时间" },
+        "name": { "type": "string", "description": "名称" },
+        "parentId": { "type": "integer", "format": "int64", "description": "父类目id，默认值0代表当前标签为一级类目" },
+        "parentName": { "type": "string", "description": "父级类目" },
+        "rootName": { "type": "string", "description": "一级类目" },
+        "updateId": { "type": "integer", "format": "int64", "description": "修改人id" },
+        "updateName": { "type": "string", "description": "修改人name" }
+      },
+      "title": "JobCategoryConfigResp"
     }
   }
 }

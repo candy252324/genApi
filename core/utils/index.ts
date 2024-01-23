@@ -125,6 +125,12 @@ export function handleWeirdName(originKey) {
   return str
 }
 
+/** 处理注释 (去除首位空格，去除换行符，多个空格合并成一个空格) */
+export function handleDescription(desc?: string) {
+  if (!desc) return ''
+  return desc.trim().replace(/\n/g, ' ').replace(/\s+/g, ' ')
+}
+
 /** 首字母大写 */
 export function upperCaseFirseLetter(str) {
   return str.slice(0, 1).toUpperCase() + str.slice(1)

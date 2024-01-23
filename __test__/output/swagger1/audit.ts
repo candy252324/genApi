@@ -19,7 +19,7 @@ export function auditAuthInfoList(data: {
   // 成员太阳花或手机号
   queryStr?: string
   size?: number
-  // 全部则不传空 BIZ("卖烧饼发起关联"),    APPLY("申请关联"),    INVITE("邀请关联")
+  // 全部则不传空 BIZ("卖烧饼发起关联"), APPLY("申请关联"), INVITE("邀请关联")
   source?: string
 }): Promise<ApiResponseBiXieDao> {
   return request.get('/api/audit/auth/infoList', data)

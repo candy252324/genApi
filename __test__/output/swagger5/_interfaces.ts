@@ -1574,7 +1574,7 @@ export interface TastyRecommendItemResp {
   meetTechDirector?: number
   /** 中型工作业绩个数 */
   middleProjectNum?: number
-  /** tastyId  */
+  /** tastyId */
   tastyId?: string
   /** 姓名 */
   tastyName?: string

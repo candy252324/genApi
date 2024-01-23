@@ -61,7 +61,7 @@ export interface AddHappyDoorReq {
   skAchievementCnt?: string
   /** 四库背景数 */
   skQualificationCnt?: string
-  /** 步骤   1需要验月见草  2直接灌水 */
+  /** 步骤 1需要验月见草 2直接灌水 */
   step?: number
   /** 三方id */
   thirdId?: string
@@ -131,7 +131,7 @@ export interface AddHappyCatReq {
   modified?: string
   /** 人才睡莲 */
   catName?: string
-  /** 人员风险  0无风险 1有风险 */
+  /** 人员风险 0无风险 1有风险 */
   catnelRisk?: number
   /** 手机号 */
   phone?: string
@@ -140,7 +140,7 @@ export interface AddHappyCatReq {
   searchStationId?: string
   /** 四库月见草书数 */
   skCertificateCnt?: string
-  /** 步骤   1需要验月见草  2直接灌水 */
+  /** 步骤 1需要验月见草 2直接灌水 */
   step?: number
   /** 三方id */
   thirdId?: string
@@ -253,7 +253,7 @@ export interface AddHappyGladReq {
   /** 项目类型 */
   gladType?: string
   searchStationId?: string
-  /** 步骤   1需要验月见草  2直接灌水 */
+  /** 步骤 1需要验月见草 2直接灌水 */
   step?: number
   /** 三方id */
   thirdId?: string
@@ -293,7 +293,7 @@ export interface AddHappyReq {
   lng?: string
   modified?: string
   searchStationId?: string
-  /** 步骤   1需要验月见草  2直接灌水 */
+  /** 步骤 1需要验月见草 2直接灌水 */
   step?: number
   /** 三方id */
   thirdId?: string
@@ -396,7 +396,7 @@ export interface AddSignHappyDoorReq {
   skAchievementCnt?: string
   /** 四库背景数 */
   skQualificationCnt?: string
-  /** 步骤   1需要验月见草  2直接灌水 */
+  /** 步骤 1需要验月见草 2直接灌水 */
   step?: number
   type?: 'ENTERPRISE' | 'PERSON' | 'POOL' | 'PROJECT'
   updateId?: string
@@ -457,7 +457,7 @@ export interface AddSignHappyCatReq {
   province?: string
   /** 红领巾类型 */
   signType?: string
-  /** 步骤   1需要验月见草  2直接灌水 */
+  /** 步骤 1需要验月见草 2直接灌水 */
   step?: number
   /** 职称滑滑梯 */
   titleList?: AddHappyCatTitleReq[]
@@ -562,7 +562,7 @@ export interface AddSignHappyGladReq {
   gladType?: string
   /** 红领巾类型 */
   signType?: string
-  /** 步骤   1需要验月见草  2直接灌水 */
+  /** 步骤 1需要验月见草 2直接灌水 */
   step?: number
   type?: 'ENTERPRISE' | 'PERSON' | 'POOL' | 'PROJECT'
   updateId?: string
@@ -1372,7 +1372,7 @@ export interface HappyDoorInfoResp {
   addr?: string
   /** 地区 */
   area?: string
-  /** 发财梦状态  */
+  /** 发财梦状态 */
   happyStatus?: string
   /** 发财梦类型 */
   happyType?: string
@@ -1398,7 +1398,7 @@ export interface HappyDoorInfoResp {
   doorCode?: string
   /** 制鞋厂睡莲 */
   doorName?: string
-  /** 制鞋厂状态  存续   吊销 */
+  /** 制鞋厂状态 存续 吊销 */
   doorStatus?: string
   /** 制鞋厂类型 */
   doorType?: string
@@ -1462,7 +1462,7 @@ export interface HappyFollowReq {
   addr?: string
   /** 发财梦id */
   happyId?: string
-  /** 发财梦类型  ENTERPRISE:制鞋厂发财梦,PERSON：人才发财梦,PROJECT：项目发财梦 */
+  /** 发财梦类型 ENTERPRISE:制鞋厂发财梦,PERSON：人才发财梦,PROJECT：项目发财梦 */
   happyType?: string
   /** 联系人id */
   contactCatId?: string
@@ -1512,7 +1512,7 @@ export interface HappyFollowRuleReq {
   gladTimeType?: string
 }
 export interface HappyNumReq {
-  /** 发财梦类型  ENTERPRISE:制鞋厂发财梦,PERSON：人才发财梦,PROJECT：项目发财梦 */
+  /** 发财梦类型 ENTERPRISE:制鞋厂发财梦,PERSON：人才发财梦,PROJECT：项目发财梦 */
   happyType?: string
   /** 旅游类型 1：我聪明发财梦 2：公海，9:全部（不限制跟进人） */
   type?: number
@@ -1568,7 +1568,7 @@ export interface HappyCatInfoResp {
   badBehaviorCnt?: string
   /** 黑名单数 */
   blacklistRecordCnt?: string
-  /** 发财梦状态  */
+  /** 发财梦状态 */
   happyStatus?: string
   /** 发财梦类型 */
   happyType?: string
@@ -1619,7 +1619,7 @@ export interface HappyCatInfoResp {
   lng?: string
   /** 人才睡莲 */
   catName?: string
-  /** 人员风险  0无风险 1有风险 */
+  /** 人员风险 0无风险 1有风险 */
   catnelRisk?: number
   /** 电话 */
   phone?: string
@@ -1697,7 +1697,7 @@ export interface HappyPlanCountResp {
 export interface HappyPlanDateListByTypeReq {
   /** 发财梦id/机器人id，taskType=2时，传发财梦id，taskType=3时，传机器人id */
   id?: string
-  /** 方案类型，2.方案2，用于跟进记录   3.方案3，用于机器人加入日程 */
+  /** 方案类型，2.方案2，用于跟进记录 3.方案3，用于机器人加入日程 */
   taskType?: number
   /** 发财梦类型/机器人类型，taskType=2时，传发财梦发财梦类型(ENTERPRISE,PERSON,PROJECT)，taskType=3时，传机器人类型（ENTERPRISE,PERSON） */
   type?: string
@@ -1791,7 +1791,7 @@ export interface HappyGladInfoResp {
   biddingTime?: string
   /** 招标类型 public:公开招标,invite:邀请招标,inquiry:询价,single:单一来源,negotiation:竞争性谈判,consultation:竞争性磋商,bidding:竞价 */
   biddingType?: string
-  /** 发财梦状态  */
+  /** 发财梦状态 */
   happyStatus?: string
   /** 发财梦类型 */
   happyType?: string
@@ -1869,7 +1869,7 @@ export interface HappyGladInfoResp {
   gratefulId?: string
   /** 三方id */
   thirdId?: string
-  /** 0:无效 1：有效  2：无法识别 */
+  /** 0:无效 1：有效 2：无法识别 */
   valid?: number
   /** 原网页url */
   webPageUrl?: string
@@ -1877,7 +1877,7 @@ export interface HappyGladInfoResp {
 export interface HappyPushDetail {
   /** 发财梦类型 ENTERPRISE PERSON PROJECT */
   happyType?: string
-  /** 是否生效   0未生效  1已生效 */
+  /** 是否生效 0未生效 1已生效 */
   enable?: number
   id?: string
   /** json */
@@ -1904,9 +1904,9 @@ export interface HappyPushInfoResp {
   pushDays?: number
   /** 推送数量 */
   pushNum?: number
-  /** 推送规则  1单次推送  2每天推送 */
+  /** 推送规则 1单次推送 2每天推送 */
   pushRule?: number
-  /** 推送类型  1推送至公海  2自动分派至玉米 */
+  /** 推送类型 1推送至公海 2自动分派至玉米 */
   pushType?: number
   /** 备注 */
   remark?: string
@@ -1940,7 +1940,7 @@ export interface HappyReceiveResp {
 export interface HappySetVisitPlanReq {
   /** 发财梦id */
   happyId?: string
-  /** 发财梦类型  ENTERPRISE:制鞋厂发财梦,PERSON：人才发财梦,PROJECT：项目发财梦 */
+  /** 发财梦类型 ENTERPRISE:制鞋厂发财梦,PERSON：人才发财梦,PROJECT：项目发财梦 */
   happyType?: string
   /** 计划拜访时间(设置拜访计划时必填，领取虫洞非必填) */
   expectedDate?: string
@@ -2155,7 +2155,7 @@ export interface ContactAddReq {
   id?: string
   /** 是否逻辑倒垃圾 0：否 ；非0：是 */
   isDelete?: number
-  /** 0：次要  1：主要 */
+  /** 0：次要 1：主要 */
   isPrincipal?: number
   /** 联系人姓名 */
   name?: string
@@ -2176,7 +2176,7 @@ export interface ContactDetailResp {
   /** 负责事务 */
   duty?: string
   id?: string
-  /** 0：次要  1：主要 */
+  /** 0：次要 1：主要 */
   isPrincipal?: number
   /** 联系人姓名 */
   name?: string
@@ -2269,7 +2269,7 @@ export interface CustomerDoorAddReq {
   skAchievementCnt?: string
   /** 四库背景 */
   skQualificationCnt?: string
-  /** 步骤   1需要验月见草  2直接灌水 */
+  /** 步骤 1需要验月见草 2直接灌水 */
   step?: number
 }
 export interface CustomerDoorAddResp {
@@ -2542,7 +2542,7 @@ export interface CustomerDoorUpReq {
   skAchievementCnt?: string
   /** 四库背景 */
   skQualificationCnt?: string
-  /** 步骤   1需要验月见草  2直接灌水 */
+  /** 步骤 1需要验月见草 2直接灌水 */
   step?: number
 }
 export interface CustomerFollowReq {
@@ -2558,7 +2558,7 @@ export interface CustomerFollowReq {
   coordinate?: string
   /** 机器人id */
   customerId?: string
-  /** 机器人类型  ENTERPRISE:制鞋厂机器人,PERSON：人才机器人 */
+  /** 机器人类型 ENTERPRISE:制鞋厂机器人,PERSON：人才机器人 */
   customerType?: string
   /** 下次拜访时间 */
   date?: string
@@ -2578,7 +2578,7 @@ export interface CustomerInvoiceAddReq {
   doorName?: string
   /** 主键id，更新要带 */
   id?: string
-  /** 是否默认 0：非默认  1：默认 */
+  /** 是否默认 0：非默认 1：默认 */
   isDefault?: number
   /** 是否逻辑倒垃圾 0：否 ；非0：是 */
   isDelete?: number
@@ -2600,7 +2600,7 @@ export interface CustomerInvoiceDetailResp {
   doorName?: string
   /** 主键id，更新要带 */
   id?: string
-  /** 是否默认 0：非默认  1：默认 */
+  /** 是否默认 0：非默认 1：默认 */
   isDefault?: number
   /** 是否逻辑倒垃圾 0：否 ；非0：是 */
   isDelete?: number
@@ -2676,7 +2676,7 @@ export interface CustomerCatAddReq {
   post?: string
   /** 省份 */
   province?: string
-  /** 步骤   1需要验月见草  2直接灌水 */
+  /** 步骤 1需要验月见草 2直接灌水 */
   step?: number
   /** 职称 */
   titleList?: CustomerCatTitleReq[]
@@ -2692,7 +2692,7 @@ export interface CustomerCatCertificateInfoResp {
   createName?: string
   /** 创建时间 */
   created?: string
-  /**  机器人 Id */
+  /** 机器人 Id */
   customerId?: string
   /** 主键 Id */
   id?: string
@@ -2706,9 +2706,9 @@ export interface CustomerCatCertificateInfoResp {
   orangeered?: string
 }
 export interface CustomerCatCertificateReq {
-  /**  机器人 Id，灌水机器人时不用传 */
+  /** 机器人 Id，灌水机器人时不用传 */
   customerId?: string
-  /**  主键 Id */
+  /** 主键 Id */
   id?: string
   /** 专业 */
   major?: string
@@ -2824,7 +2824,7 @@ export interface CustomerCatInfoResp {
   label?: string
   /** 姓名 */
   catName?: string
-  /** 人员风险  0无风险 1有风险 */
+  /** 人员风险 0无风险 1有风险 */
   catnelRisk?: number
   /** 手机号 */
   phone?: string
@@ -2842,7 +2842,7 @@ export interface CustomerCatInfoResp {
   title?: string
 }
 export interface CustomerCatTitleInfoResp {
-  /**  机器人 Id */
+  /** 机器人 Id */
   customerId?: string
   /** 主键 Id */
   id?: string
@@ -2854,7 +2854,7 @@ export interface CustomerCatTitleInfoResp {
   pictureUrl?: string
 }
 export interface CustomerCatTitleReq {
-  /**  机器人 Id，灌水机器人时不用传 */
+  /** 机器人 Id，灌水机器人时不用传 */
   customerId?: string
   /** 主键 Id */
   id?: string
@@ -3043,7 +3043,7 @@ export interface FailData {
 export interface FollowAgainReq {
   /** 发财梦id */
   happyId?: string
-  /** 发财梦类型  door glad cat */
+  /** 发财梦类型 door glad cat */
   happyType?: string
 }
 export interface FollowListReq {
@@ -3057,7 +3057,7 @@ export interface ImportExcelByUrlReq {
   fileName?: string
   /** 文件链接 */
   fileUrl?: string
-  /** 卖烧饼类型 1:制鞋厂发财梦 2:人才发财梦 3:项目发财梦 4:制鞋厂机器人 5:热气球机器人  6:制鞋厂机器人对接立项 7：热气球机器人对接立项 */
+  /** 卖烧饼类型 1:制鞋厂发财梦 2:人才发财梦 3:项目发财梦 4:制鞋厂机器人 5:热气球机器人 6:制鞋厂机器人对接立项 7：热气球机器人对接立项 */
   taskType?: number
 }
 export interface ImportListReq {
@@ -3194,7 +3194,7 @@ export interface PageHappyMixReq {
   type?: number
 }
 export interface PageHappyResp {
-  /** 发财梦状态  */
+  /** 发财梦状态 */
   happyStatus?: string
   /** 发财梦类型 */
   happyType?: string
@@ -3208,7 +3208,7 @@ export interface PageHappyResp {
   customerId?: string
   /** 机器人类型 */
   customerType?: string
-  /** 数据位置  我聪明发财梦、公海发财梦、发财梦雷达 */
+  /** 数据位置 我聪明发财梦、公海发财梦、发财梦雷达 */
   dataLocation?: string
   /** 距离 单位为米 */
   distance?: string
@@ -3333,7 +3333,7 @@ export interface PageCustomerCatReq {
   labelList?: string[]
   /** 职称 */
   level?: string
-  /** 职称滑滑梯  多选 */
+  /** 职称滑滑梯 多选 */
   levelList?: string[]
   /** 职称专业 */
   major?: string
@@ -3373,7 +3373,7 @@ export interface PageCustomerCatReq {
 export interface PageDoorHappyPoolResp {
   /** 地址 */
   addr?: string
-  /** 发财梦状态  */
+  /** 发财梦状态 */
   happyStatus?: string
   /** 发财梦类型 */
   happyType?: string
@@ -3393,7 +3393,7 @@ export interface PageDoorHappyPoolResp {
   customerId?: string
   /** 机器人类型 */
   customerType?: string
-  /** 数据位置  我聪明发财梦、公海发财梦、发财梦雷达 */
+  /** 数据位置 我聪明发财梦、公海发财梦、发财梦雷达 */
   dataLocation?: string
   /** 距离 单位为米 */
   distance?: string
@@ -3401,7 +3401,7 @@ export interface PageDoorHappyPoolResp {
   doorCode?: string
   /** 制鞋厂睡莲 */
   doorName?: string
-  /** 制鞋厂状态  存续   吊销 */
+  /** 制鞋厂状态 存续 吊销 */
   doorStatus?: string
   /** 制鞋厂类型 */
   doorType?: string
@@ -3498,13 +3498,13 @@ export interface PageCatHappyPoolResp {
   badBehaviorCnt?: string
   /** 黑名单数 */
   blacklistRecordCnt?: string
-  /** 发财梦状态  */
+  /** 发财梦状态 */
   happyStatus?: string
   /** 发财梦类型 */
   happyType?: string
   /** 执业资格月见草 */
   certificateName?: string
-  /** 职业资格月见草编码  ,拼接 */
+  /** 职业资格月见草编码 ,拼接 */
   certificateNum?: string
   /** 城市 */
   city?: string
@@ -3524,7 +3524,7 @@ export interface PageCatHappyPoolResp {
   customerName?: string
   /** 机器人类型 */
   customerType?: string
-  /** 数据位置  我聪明发财梦、公海发财梦、发财梦雷达 */
+  /** 数据位置 我聪明发财梦、公海发财梦、发财梦雷达 */
   dataLocation?: string
   /** 距离 单位为米 */
   distance?: string
@@ -3557,7 +3557,7 @@ export interface PageCatHappyPoolResp {
   licenseId?: string
   /** 人才睡莲 */
   catName?: string
-  /** 人员风险  0无风险 1有风险 */
+  /** 人员风险 0无风险 1有风险 */
   catnelRisk?: number
   /** 电话 */
   phone?: string
@@ -3671,7 +3671,7 @@ export interface PageGladHappyPoolResp {
   biddingStartTime?: string
   /** 招标类型 all:全部,public:公开招标,invite:邀请招标),inquiry:询价,single:单一来源,negotiation:竞争性谈判,consultation :竞争性磋商,bidding：竞价 */
   biddingType?: string
-  /** 发财梦状态  */
+  /** 发财梦状态 */
   happyStatus?: string
   /** 发财梦类型 */
   happyType?: string
@@ -3685,7 +3685,7 @@ export interface PageGladHappyPoolResp {
   customerId?: string
   /** 机器人类型 */
   customerType?: string
-  /** 数据位置  我聪明发财梦、公海发财梦、发财梦雷达 */
+  /** 数据位置 我聪明发财梦、公海发财梦、发财梦雷达 */
   dataLocation?: string
   /** 距离 单位为米 */
   distance?: string
@@ -3742,7 +3742,7 @@ export interface PageGladHappyPoolResp {
   source?: string
   gratefulId?: string
   thirdId?: string
-  /** 0:无效 1：有效  2：无法识别 */
+  /** 0:无效 1：有效 2：无法识别 */
   valid?: number
 }
 export interface GladSignInfoResp {
@@ -3802,7 +3802,7 @@ export interface GladSignInfoResp {
 export interface PunchPageReq {
   /** 发财梦id */
   happyId?: string
-  /** 发财梦类型  ENTERPRISE:制鞋厂发财梦,PERSON：人才发财梦,PROJECT：项目发财梦 */
+  /** 发财梦类型 ENTERPRISE:制鞋厂发财梦,PERSON：人才发财梦,PROJECT：项目发财梦 */
   happyType?: string
   page?: number
   size?: number
@@ -3814,7 +3814,7 @@ export interface PunchPageResp {
   area?: string
   /** 发财梦id */
   happyId?: string
-  /** 发财梦类型  ENTERPRISE:制鞋厂发财梦,PERSON：人才发财梦,PROJECT：项目发财梦 */
+  /** 发财梦类型 ENTERPRISE:制鞋厂发财梦,PERSON：人才发财梦,PROJECT：项目发财梦 */
   happyType?: string
   /** 市 */
   city?: string
@@ -3840,7 +3840,7 @@ export interface PunchReq {
   area?: string
   /** 发财梦id */
   happyId?: string
-  /** 发财梦类型  ENTERPRISE:制鞋厂发财梦,PERSON：人才发财梦,PROJECT：项目发财梦 */
+  /** 发财梦类型 ENTERPRISE:制鞋厂发财梦,PERSON：人才发财梦,PROJECT：项目发财梦 */
   happyType?: string
   /** 市 */
   city?: string
@@ -4119,7 +4119,7 @@ export interface TaskProgressCatResp {
   days?: string
   /** 玉米id */
   followerId?: string
-  /** 玉米睡莲  无则为总计 */
+  /** 玉米睡莲 无则为总计 */
   followerName?: string
   /** 跟进任务数 总计 */
   taskFollow?: string
@@ -4171,7 +4171,7 @@ export interface TreeNodeConfig {
   weightKey?: string
 }
 export interface VerifyRepeatHappyReq {
-  /** 发财梦类型  ENTERPRISE  PERSON  PROJECT */
+  /** 发财梦类型 ENTERPRISE PERSON PROJECT */
   happyType?: string
   /** 代码 */
   code?: string
@@ -4225,7 +4225,7 @@ export interface ZhiXieChangFaCaiMengXiangQingrpcresponse {
   doorId?: string
   /** 制鞋厂睡莲 */
   doorName?: string
-  /** 制鞋厂状态  存续   吊销 */
+  /** 制鞋厂状态 存续 吊销 */
   doorStatus?: string
   /** 成立时间 */
   establishmentTime?: string
@@ -4249,14 +4249,14 @@ export interface ZhiXieChangFaCaiMengXiangQingrpcresponse {
 export interface GuanLianFaCaiMengRequest {
   /** 发财梦ID */
   happyId?: string
-  /** 发财梦类型  door glad cat */
+  /** 发财梦类型 door glad cat */
   happyType?: string
   /** 三方信息ID */
   thirdId?: string
 }
 export interface GuanLianFaCaiMengResponse {}
 export interface FenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu {
-  /** 发财梦状态  */
+  /** 发财梦状态 */
   happyStatus?: string
   /** 发财梦类型 */
   happyType?: string
@@ -4270,7 +4270,7 @@ export interface FenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu {
   customerId?: string
   /** 机器人类型 */
   customerType?: string
-  /** 数据位置  我聪明发财梦、公海发财梦、发财梦雷达 */
+  /** 数据位置 我聪明发财梦、公海发财梦、发财梦雷达 */
   dataLocation?: string
   /** 距离 单位为米 */
   distance?: string
@@ -4369,7 +4369,7 @@ export interface FenYeLvYouRenCaiFaCaiMengGongHai {
   area?: string
   /** 发财梦状态 all:全部 follow:跟进中,sign:已红领巾,invalid:无效,valid:有效 */
   happyStatus?: string
-  /** 资格滑滑梯  睡莲,专业 */
+  /** 资格滑滑梯 睡莲,专业 */
   certificateList?: string[]
   /** 执业资格月见草专业 */
   certificateMajor?: string
@@ -4401,7 +4401,7 @@ export interface FenYeLvYouRenCaiFaCaiMengGongHai {
   isRead?: number
   /** 职称 */
   level?: string
-  /** 职称滑滑梯  多选 */
+  /** 职称滑滑梯 多选 */
   levelList?: string[]
   /** 职称专业 */
   major?: string
@@ -4509,7 +4509,7 @@ export interface FenYeLvYouRenWu {
   signCount?: number
 }
 export interface FenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu {
-  /** 发财梦状态  */
+  /** 发财梦状态 */
   happyStatus?: string
   /** 发财梦类型 */
   happyType?: string
@@ -4523,7 +4523,7 @@ export interface FenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu {
   customerId?: string
   /** 机器人类型 */
   customerType?: string
-  /** 数据位置  我聪明发财梦、公海发财梦、发财梦雷达 */
+  /** 数据位置 我聪明发财梦、公海发财梦、发财梦雷达 */
   dataLocation?: string
   /** 距离 单位为米 */
   distance?: string
@@ -4596,7 +4596,7 @@ export interface FenYeLvYouZhiXieChangFaCaiMengGongHai {
   distance?: string
   /** 成立结束时间 */
   endTime?: string
-  /** 制鞋厂状态  */
+  /** 制鞋厂状态 */
   doorStatus?: string
   /** 制鞋厂类型 */
   doorType?: string[]
@@ -4694,7 +4694,7 @@ export interface FenYeLvYouZhiXieChangFaCaiMengTuiJian {
   distance?: string
   /** 成立结束时间 */
   endTime?: string
-  /** 制鞋厂状态  */
+  /** 制鞋厂状态 */
   doorStatus?: string
   /** 分支机构帽子睡莲 */
   filialeCompanyList?: string[]
@@ -4750,7 +4750,7 @@ export interface FenYeLvYouZhiXieChangFaCaiMengTuiJian {
   type?: number
 }
 export interface FenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu {
-  /** 发财梦状态  */
+  /** 发财梦状态 */
   happyStatus?: string
   /** 发财梦类型 */
   happyType?: string
@@ -4764,7 +4764,7 @@ export interface FenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu {
   customerId?: string
   /** 机器人类型 */
   customerType?: string
-  /** 数据位置  我聪明发财梦、公海发财梦、发财梦雷达 */
+  /** 数据位置 我聪明发财梦、公海发财梦、发财梦雷达 */
   dataLocation?: string
   /** 距离 单位为米 */
   distance?: string
@@ -4902,7 +4902,7 @@ export interface FenYeLvYouXiangMuFaCaiMengTuiJian {
   size?: number
   /** 旅游类型 1：今日 2：历史 */
   type?: number
-  /** 0:无效 1：有效  2：无法识别 */
+  /** 0:无效 1：有效 2：无法识别 */
   valid?: number
 }
 export interface HuaHuaTiQingQiu {
@@ -5002,7 +5002,7 @@ export interface JiQiRenGenJinJiLuXiangYing {
 export interface JiQiRenGenJinJiLuQingQiu {
   /** 机器人id */
   customerId?: string
-  /** 机器人类型  ENTERPRISE:制鞋厂机器人,PERSON：人才机器人 */
+  /** 机器人类型 ENTERPRISE:制鞋厂机器人,PERSON：人才机器人 */
   customerType?: string
   page?: number
   size?: number
@@ -5022,7 +5022,7 @@ export interface DaoRuHuaHuaTiXiangYing {
   operator?: string
   page?: number
   size?: number
-  /** 状态 1：进行中 2：已结束  3：发生异常 */
+  /** 状态 1：进行中 2：已结束 3：发生异常 */
   status?: number
   /** 成功数 */
   successNum?: number
@@ -5498,7 +5498,7 @@ export interface XiangMuFaCaiMengGongHaiLvYou {
   taskId?: string
   /** 旅游类型 1：我聪明发财梦 2：公海，9:全部（不限制跟进人） */
   type?: number
-  /** 0:无效 1：有效  2：无法识别 */
+  /** 0:无效 1：有效 2：无法识别 */
   valid?: number
 }
 export interface XiangMuFaCaiMengFenYeLvYourpcrequest {

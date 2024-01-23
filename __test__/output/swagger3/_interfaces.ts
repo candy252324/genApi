@@ -1449,7 +1449,7 @@ export interface ChuangJianGengXinDuiXiangBirdSaveReq {
 export interface LiShiXiaoXiMessageHistoryReq {
   /** im部落ID */
   imBirdId?: string
-  /** 1 查更新好看数据  0 查更老好看数据 */
+  /** 1 查更新好看数据 0 查更老好看数据 */
   orderType?: number
   page?: number
   /** 消息序列号，默认为 0 */
@@ -1985,7 +1985,7 @@ export interface YanChangChunHuaXiaoXiFenYeRequestPageListResp {
   receiverName?: string
   /** 请求id */
   requestId?: string
-  /** 0未同意 1已同意 2入部落拒绝  3已过期 */
+  /** 0未同意 1已同意 2入部落拒绝 3已过期 */
   status?: number
   /** 房东睡莲 */
   gratefulName?: string
@@ -2035,7 +2035,7 @@ export interface YanChangChunHuaXiaoXiXiangQingRequestDetailResp {
   remark?: string
   /** 请求id */
   requestId?: string
-  /** 0未同意 1已同意 2入部落拒绝  3已过期 */
+  /** 0未同意 1已同意 2入部落拒绝 3已过期 */
   status?: number
   /** 部落成员数量 */
   total?: number

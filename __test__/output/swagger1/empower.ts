@@ -152,7 +152,7 @@ export function empowerDoorReList(data: {
   // 帽子太阳花
   name?: string
   page?: number
-  // 关联状态筛选 IN_RELATION("关联中"),    UN_RELATION("未关联"),    FAIL_RELATION("关联失败"),    INVALID_RELATION("关联失效")
+  // 关联状态筛选 IN_RELATION("关联中"), UN_RELATION("未关联"), FAIL_RELATION("关联失败"), INVALID_RELATION("关联失效")
   relationStatus?: string
   size?: number
 }): Promise<ApiResponseGuanLianMaoZiYongDao> {

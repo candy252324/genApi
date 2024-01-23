@@ -116,3 +116,43 @@ export interface ApiResponseListListlong {
   timestamp?: string
   traceId?: string
 }
+export interface ApiResponseListJobCategoryConfigResp {
+  code?: number
+  data?: JobCategoryConfigResp[]
+  msg?: string
+  success?: boolean
+  timestamp?: string
+  traceId?: string
+}
+export interface JobCategoryConfigResp {
+  /** 子集 */
+  children?: JobCategoryConfigResp[]
+  /** 创建人id */
+  createId?: string
+  /** 创建人name */
+  createName?: string
+  /** 创建时间 */
+  created?: string
+  /** id */
+  id?: string
+  /** 标签状态 0：未启用,1：已启用 */
+  isEnable?: number
+  /** 是否是叶子结点，0：非叶子结点，1：叶子结点 */
+  leaf?: boolean
+  /** 标签所处层级 */
+  level?: string
+  /** 修改时间 */
+  modified?: string
+  /** 名称 */
+  name?: string
+  /** 父类目id，默认值0代表当前标签为一级类目 */
+  parentId?: string
+  /** 父级类目 */
+  parentName?: string
+  /** 一级类目 */
+  rootName?: string
+  /** 修改人id */
+  updateId?: string
+  /** 修改人name */
+  updateName?: string
+}

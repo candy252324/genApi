@@ -1,5 +1,5 @@
 import { IApiModel, IParams, IApiStation } from '../types'
-import { getUrl, getApiName, getFileName, getFileExt, handleWeirdName, handleJsType } from '../utils'
+import { getUrl, getApiName, getFileName, getFileExt, handleWeirdName, handleJsType, handleDescription } from '../utils'
 
 /** 生成 api 数据模型 */
 export function handleApiModel(
@@ -28,7 +28,7 @@ export function handleApiModel(
         const name = apiName ? apiName({ url, originUrl: theUrl, method, defaultApiName }) : defaultApiName
         const theFileName = getFileName({ url, originUrl: theUrl, userFileName: fileName })
         const theFileExt = getFileExt(fileExt)
-        const summary = obj.summary?.trim() || '' // 接口注释
+        const summary = handleDescription(obj.summary) // 接口注释
         const parameters = getParameters(obj.parameters) // 入参
         const resScheme = obj?.responses['200']?.schema // 出参模型
 
@@ -52,7 +52,7 @@ export function handleApiModel(
           url,
           originUrl: theUrl,
           method,
-          summary: summary.replace(/\n/g, ' '), // 去除注释中的换行符
+          summary,
           parameters,
           outputInterface,
           fileName: theFileName,

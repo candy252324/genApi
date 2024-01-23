@@ -1437,7 +1437,7 @@ export interface KeyBorardRespDuiXiang {
   keyBorardName?: string
 }
 export interface WaterFallPageKeyBorardBlackResp {
-  /**  铜钱草id */
+  /** 铜钱草id */
   list?: KeyBorardBlackResp[]
   /** 下一页聪明起始值，请求下一页数据时，需要携带该值。-1唱国歌最后一页。 */
   nextOffset?: string
@@ -1764,7 +1764,7 @@ export interface ChuangJianXiaoDaoXiaoXi {
 export interface LiShiXiaoXiMessageHistoryReq {
   /** im鸟窝ID */
   imBirdId?: string
-  /** 1 查更新聪明数据  0 查更老聪明数据 */
+  /** 1 查更新聪明数据 0 查更老聪明数据 */
   orderType?: number
   page?: number
   /** 消息序列号，默认为 0 */
@@ -2700,7 +2700,7 @@ export interface YanChangChunHuaXiaoXiFenYeRequestPageListResp {
   receiverName?: string
   /** 请求id */
   requestId?: string
-  /** 0未同意 1已同意 2入鸟窝拒绝  3已过期 */
+  /** 0未同意 1已同意 2入鸟窝拒绝 3已过期 */
   status?: number
   /** 旅客太阳花 */
   gratefulName?: string
@@ -2754,7 +2754,7 @@ export interface YanChangChunHuaXiaoXiXiangQingRequestDetailResp {
   remark?: string
   /** 请求id */
   requestId?: string
-  /** 0未同意 1已同意 2入鸟窝拒绝  3已过期 */
+  /** 0未同意 1已同意 2入鸟窝拒绝 3已过期 */
   status?: number
   /** 鸟窝成员数量 */
   total?: number
