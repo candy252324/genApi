@@ -132,7 +132,7 @@ export interface IInterface {
 }
 
 export interface IParsered extends IApiStation {
-  /** swagger 站点标记，如 station0 station1 */
+  /** swagger 站点标记，由 outputDir 路径拼接而成 */
   stationFlag: string
   apis: IApiModel[]
   interfaces: IInterface[]

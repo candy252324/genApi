@@ -1,4 +1,5 @@
 import { IApiStation, UserConfig, IApiModel, IInterface, IParsered } from '../types'
+import { handleWeirdName } from '../utils/index'
 import { handleApiModel } from './handleApiModel'
 import { handleInterface } from './handleInterface'
 import { readSwagger } from './readSwagger'
@@ -49,7 +50,7 @@ async function parseFn(apiStation: IApiStation, stationIndex: number): Promise<I
   }
   return {
     ...apiStation,
-    stationFlag: `station${stationIndex}`,
+    stationFlag: `${handleWeirdName(apiStation.outputDir)}`,
     apis,
     interfaces,
   }
