@@ -19,7 +19,7 @@ export async function createMockServer(mockConfig: IMock, allApiData: IParsered[
 
     // 访问首页
     if (_url === '/') {
-      ssrServer(allApiData, res)
+      ssrServer(allApiData, mockConfig, res)
     } else if (_url === '/favicon.ico') {
       res.end()
     }
