@@ -18,21 +18,16 @@ const config: UserConfig = {
     {
       swaggerUrl: './__test__/json/swagger4.json',
       outputDir: './__test__/output/swagger4',
-      exclude: /\/abc\/|\/test\//, // 路径带 /abc/ 和 /test/ 的接口不生成
     },
     {
-      swaggerUrl: './__test__/json/swagger5.json',
-      outputDir: './__test__/output/swagger5',
-    },
-    {
-      swaggerUrl: './__test__/json/swagger5.json',
-      outputDir: './__test__/output/swagger5-js',
+      swaggerUrl: './__test__/json/swagger4.json',
+      outputDir: './__test__/output/swagger4-js',
       httpTpl: 'const myRequest=()=>{}',
       exclude: [/thk\/api\/common\/v1\/enum/, '/thk/api/v1/config/credential-standard/getDetail'],
       // exclude: [/credential-standard/],
       fileExt: 'js', // 生成 js 文件
       fileName: () => {
-        return 'swagger5Api-js'
+        return 'swagger4Api-js'
       },
       // 添加前缀
       pathRewrite: ({ url }) => {

@@ -1,350 +1,7 @@
-function AddHappyDoorReq() {
+function AddTastyCredentialProjectReq() {
   return {
-    addr: '@string(5,50)',
-    area: '@string(5,50)',
-    happyClassificationType: '@string(5,50)',
-    happySource: /ADVANCED_SEARCH|BIGDATA_SEARCH|CREATE|MINI_PROGRAM|OPEN_SEA|RADAR|SEARCH_PLATFORM/,
-    happyType: '@string(5,50)',
-    categoryName: '@ctitle(5,10)',
-    city: '@city',
-    coordinate: '@string(5,50)',
-    corporateName: '@ctitle(5,10)',
-    country: '@string(5,50)',
-    createId: '@guid',
-    createName: '@ctitle(5,10)',
-    createSource: '@string(5,50)',
-    created: '@datetime',
-    enableSaveOrUpdate: '@boolean',
-    doorCode: '@string(5,50)',
-    doorName: '@ctitle(5,10)',
-    doorStatus: '@string(5,50)',
-    establishmentTime: '@datetime',
-    id: '@guid',
-    isDelete: '@string(5,50)',
-    lat: '@string(5,50)',
-    licenseId: '@guid',
-    lng: '@string(5,50)',
-    modified: '@string(5,50)',
-    phone: '@integer(13100000000,18999999999)',
-    province: '@province',
-    regCatCnt: '@string(5,50)',
-    orangeeredCapital: '@string(5,50)',
-    score: '@integer(3,1000)',
-    searchStationId: '@guid',
-    skAchievementCnt: '@string(5,50)',
-    skQualificationCnt: '@string(5,50)',
-    step: '@integer(3,1000)',
-    thirdId: '@guid',
-    type: /ENTERPRISE|PERSON|POOL|PROJECT/,
-    updateId: '@datetime',
-    updateName: '@datetime',
-  }
-}
-function AddHappyCatCertificateReq() {
-  return {
-    id: '@guid',
-    major: '@string(5,50)',
-    name: '@ctitle(5,10)',
-    pictureUrl: '@image(200x100, @color, @color)',
-  }
-}
-function AddHappyCatReq() {
-  return {
-    achievementCnt: '@string(5,50)',
-    addr: '@string(5,50)',
-    area: '@string(5,50)',
-    badBehaviorCnt: '@string(5,50)',
-    blacklistRecordCnt: '@string(5,50)',
-    happyClassificationType: '@string(5,50)',
-    happySource: /ADVANCED_SEARCH|BIGDATA_SEARCH|CREATE|MINI_PROGRAM|OPEN_SEA|RADAR|SEARCH_PLATFORM/,
-    happyType: '@string(5,50)',
-    'certificateList|1-20': [AddHappyCatCertificateReq()],
-    city: '@city',
-    coordinate: '@string(5,50)',
-    country: '@string(5,50)',
-    createId: '@guid',
-    createName: '@ctitle(5,10)',
-    createSource: '@string(5,50)',
-    created: '@datetime',
-    education: '@string(5,50)',
-    enableSaveOrUpdate: '@boolean',
-    gender: '@string(5,50)',
-    goodBehaviorCnt: '@string(5,50)',
-    id: '@guid',
-    isDelete: '@string(5,50)',
-    lat: '@string(5,50)',
-    licenseId: '@guid',
-    lng: '@string(5,50)',
-    modified: '@string(5,50)',
-    catName: '@ctitle(5,10)',
-    catnelRisk: '@integer(3,1000)',
-    phone: '@integer(13100000000,18999999999)',
-    province: '@province',
-    searchStationId: '@guid',
-    skCertificateCnt: '@string(5,50)',
-    step: '@integer(3,1000)',
-    thirdId: '@guid',
-    'titleList|1-20': [AddHappyCatTitleReq()],
-    type: /ENTERPRISE|PERSON|POOL|PROJECT/,
-    updateId: '@datetime',
-    updateName: '@datetime',
-  }
-}
-function AddHappyCatTitleReq() {
-  return {
-    id: '@guid',
-    level: '@string(5,50)',
-    major: '@string(5,50)',
-    pictureUrl: '@image(200x100, @color, @color)',
-  }
-}
-function AddHappyGladReq() {
-  return {
-    agencies: '@string(5,50)',
-    agenciesAddr: '@string(5,50)',
-    agenciesAddrCoordinate: '@string(5,50)',
-    agenciesAddrLat: '@string(5,50)',
-    agenciesAddrLng: '@string(5,50)',
-    agenciesArea: '@string(5,50)',
-    agenciesCity: '@city',
-    agenciesCountry: '@string(5,50)',
-    agenciesPhone: '@integer(13100000000,18999999999)',
-    agenciesProvince: '@province',
-    biddingCorpAddr: '@string(5,50)',
-    biddingCorpAddrCoordinate: '@string(5,50)',
-    biddingCorpAddrLat: '@string(5,50)',
-    biddingCorpAddrLng: '@string(5,50)',
-    biddingCorpArea: '@string(5,50)',
-    biddingCorpCity: '@city',
-    biddingCorpCountry: '@string(5,50)',
-    biddingCorpName: '@ctitle(5,10)',
-    biddingCorpPhone: '@integer(13100000000,18999999999)',
-    biddingCorpProvince: '@province',
-    biddingEndTime: '@datetime',
-    biddingOpeningTime: '@datetime',
-    biddingStartTime: '@datetime',
-    biddingType: '@string(5,50)',
-    happyClassificationType: '@string(5,50)',
-    happySource: /ADVANCED_SEARCH|BIGDATA_SEARCH|CREATE|MINI_PROGRAM|OPEN_SEA|RADAR|SEARCH_PLATFORM/,
-    happyType: '@string(5,50)',
-    coordinate: '@string(5,50)',
-    createId: '@guid',
-    createName: '@ctitle(5,10)',
-    createSource: '@string(5,50)',
-    created: '@datetime',
-    enableSaveOrUpdate: '@boolean',
-    fileDownloadEndTime: '@datetime',
-    fileDownloadStartTime: '@datetime',
-    id: '@guid',
-    industryType: '@string(5,50)',
-    isDelete: '@string(5,50)',
-    lat: '@string(5,50)',
-    licenseId: '@guid',
-    lng: '@string(5,50)',
-    modified: '@string(5,50)',
-    phone: '@integer(13100000000,18999999999)',
-    gladBudget: '@string(5,50)',
-    gladName: '@ctitle(5,10)',
-    gladNum: '@string(5,50)',
-    gladType: '@string(5,50)',
-    searchStationId: '@guid',
-    step: '@integer(3,1000)',
-    thirdId: '@guid',
-    type: /ENTERPRISE|PERSON|POOL|PROJECT/,
-    updateId: '@datetime',
-    updateName: '@datetime',
-    webPageUrl: '@image(200x100, @color, @color)',
-  }
-}
-function AddHappyReq() {
-  return {
-    happyClassificationType: '@string(5,50)',
-    happySource: /ADVANCED_SEARCH|BIGDATA_SEARCH|CREATE|MINI_PROGRAM|OPEN_SEA|RADAR|SEARCH_PLATFORM/,
-    happyType: '@string(5,50)',
-    coordinate: '@string(5,50)',
-    createId: '@guid',
-    createName: '@ctitle(5,10)',
-    createSource: '@string(5,50)',
-    created: '@datetime',
-    enableSaveOrUpdate: '@boolean',
-    id: '@guid',
-    isDelete: '@string(5,50)',
-    lat: '@string(5,50)',
-    licenseId: '@guid',
-    lng: '@string(5,50)',
-    modified: '@string(5,50)',
-    searchStationId: '@guid',
-    step: '@integer(3,1000)',
-    thirdId: '@guid',
-    type: /ENTERPRISE|PERSON|POOL|PROJECT/,
-    updateId: '@datetime',
-    updateName: '@datetime',
-  }
-}
-function AddHappyResp() {
-  return {
-    failCnt: '@integer(3,1000)',
-    id: '@guid',
-    licenseId: '@guid',
-    'list|1-20': [''],
-    gladName: '@ctitle(5,10)',
-    receiveName: '@ctitle(5,10)',
-    successCnt: '@integer(3,1000)',
-  }
-}
-function AddCustomerResp() {
-  return {
-    'list|1-20': [CustomerDoorInfoResp()],
-    repeatType: '@string(5,50)',
-  }
-}
-function AddCatCustomerResp() {
-  return {
-    'list|1-20': [CustomerCatInfoResp()],
-    repeatType: '@string(5,50)',
-  }
-}
-function AddSignHappyDoorReq() {
-  return {
-    addr: '@string(5,50)',
-    area: '@string(5,50)',
-    happyId: '@guid',
-    happySource: /ADVANCED_SEARCH|BIGDATA_SEARCH|CREATE|MINI_PROGRAM|OPEN_SEA|RADAR|SEARCH_PLATFORM/,
-    happyType: '@string(5,50)',
-    categoryName: '@ctitle(5,10)',
-    city: '@city',
-    coordinate: '@string(5,50)',
-    corporateName: '@ctitle(5,10)',
-    country: '@string(5,50)',
-    createId: '@guid',
-    createName: '@ctitle(5,10)',
-    createSource: '@string(5,50)',
-    created: '@datetime',
-    customerId: '@guid',
-    customerType: '@string(5,50)',
-    doorCode: '@string(5,50)',
-    doorName: '@ctitle(5,10)',
-    doorStatus: '@string(5,50)',
-    establishmentTime: '@datetime',
-    id: '@guid',
-    isDelete: '@string(5,50)',
-    lat: '@string(5,50)',
-    licenseId: '@guid',
-    lng: '@string(5,50)',
-    modified: '@string(5,50)',
-    phone: '@integer(13100000000,18999999999)',
-    province: '@province',
-    regCatCnt: '@string(5,50)',
-    orangeeredCapital: '@string(5,50)',
-    score: '@integer(3,1000)',
-    signType: '@string(5,50)',
-    skAchievementCnt: '@string(5,50)',
-    skQualificationCnt: '@string(5,50)',
-    step: '@integer(3,1000)',
-    type: /ENTERPRISE|PERSON|POOL|PROJECT/,
-    updateId: '@datetime',
-    updateName: '@datetime',
-  }
-}
-function AddSignHappyCatReq() {
-  return {
-    achievementCnt: '@string(5,50)',
-    addr: '@string(5,50)',
-    area: '@string(5,50)',
-    happyId: '@guid',
-    happySource: /ADVANCED_SEARCH|BIGDATA_SEARCH|CREATE|MINI_PROGRAM|OPEN_SEA|RADAR|SEARCH_PLATFORM/,
-    happyType: '@string(5,50)',
-    'certificateList|1-20': [AddHappyCatCertificateReq()],
-    city: '@city',
-    coordinate: '@string(5,50)',
-    country: '@string(5,50)',
-    createId: '@guid',
-    createName: '@ctitle(5,10)',
-    createSource: '@string(5,50)',
-    created: '@datetime',
-    customerId: '@guid',
-    customerType: '@string(5,50)',
-    education: '@string(5,50)',
-    gender: '@string(5,50)',
-    id: '@guid',
-    isDelete: '@string(5,50)',
-    lat: '@string(5,50)',
-    lng: '@string(5,50)',
-    modified: '@string(5,50)',
-    catName: '@ctitle(5,10)',
-    phone: '@integer(13100000000,18999999999)',
-    province: '@province',
-    signType: '@string(5,50)',
-    step: '@integer(3,1000)',
-    'titleList|1-20': [AddHappyCatTitleReq()],
-    type: /ENTERPRISE|PERSON|POOL|PROJECT/,
-    updateId: '@datetime',
-    updateName: '@datetime',
-  }
-}
-function AddSignHappyGladReq() {
-  return {
-    agencies: '@string(5,50)',
-    agenciesAddr: '@string(5,50)',
-    agenciesAddrCoordinate: '@string(5,50)',
-    agenciesAddrLat: '@string(5,50)',
-    agenciesAddrLng: '@string(5,50)',
-    agenciesArea: '@string(5,50)',
-    agenciesCity: '@city',
-    agenciesCountry: '@string(5,50)',
-    agenciesPhone: '@integer(13100000000,18999999999)',
-    agenciesProvince: '@province',
-    biddingCorpAddr: '@string(5,50)',
-    biddingCorpAddrCoordinate: '@string(5,50)',
-    biddingCorpAddrLat: '@string(5,50)',
-    biddingCorpAddrLng: '@string(5,50)',
-    biddingCorpArea: '@string(5,50)',
-    biddingCorpCity: '@city',
-    biddingCorpCountry: '@string(5,50)',
-    biddingCorpName: '@ctitle(5,10)',
-    biddingCorpPhone: '@integer(13100000000,18999999999)',
-    biddingCorpProvince: '@province',
-    biddingEndTime: '@datetime',
-    biddingOpeningTime: '@datetime',
-    biddingStartTime: '@datetime',
-    biddingType: '@string(5,50)',
-    happyId: '@guid',
-    happySource: /ADVANCED_SEARCH|BIGDATA_SEARCH|CREATE|MINI_PROGRAM|OPEN_SEA|RADAR|SEARCH_PLATFORM/,
-    happyType: '@string(5,50)',
-    coordinate: '@string(5,50)',
-    createId: '@guid',
-    createName: '@ctitle(5,10)',
-    createSource: '@string(5,50)',
-    created: '@datetime',
-    customerId: '@guid',
-    customerType: '@string(5,50)',
-    fileDownloadEndTime: '@datetime',
-    fileDownloadStartTime: '@datetime',
-    id: '@guid',
-    industryType: '@string(5,50)',
-    isDelete: '@string(5,50)',
-    lat: '@string(5,50)',
-    lng: '@string(5,50)',
-    modified: '@string(5,50)',
-    phone: '@integer(13100000000,18999999999)',
-    gladBudget: '@string(5,50)',
-    gladName: '@ctitle(5,10)',
-    gladNum: '@string(5,50)',
-    gladType: '@string(5,50)',
-    signType: '@string(5,50)',
-    step: '@integer(3,1000)',
-    type: /ENTERPRISE|PERSON|POOL|PROJECT/,
-    updateId: '@datetime',
-    updateName: '@datetime',
-    webPageUrl: '@image(200x100, @color, @color)',
-  }
-}
-function AddSignHappyResp() {
-  return {
-    happyId: '@guid',
-    'list|1-20': [''],
-    mobile: '@string(5,50)',
-    signId: '@guid',
+    'addHrTastyCredentialReqList|1-20': [JuanXinCaiChiGuanTouShuiGuoDao0()],
+    'addHrTastyProjectReqList|1-20': [JuanXinCaiGongZuoYeJi()],
   }
 }
 function ApiResponse() {
@@ -357,597 +14,257 @@ function ApiResponse() {
     traceId: '@guid',
   }
 }
-function ApiResponseAddHappyResp() {
+function ApiResponseComPageEntCredPlanResp() {
   return {
     code: 200,
-    data: AddHappyResp(),
+    data: ComPageEntCredPlanResp(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseAddCustomerResp() {
+function ApiResponseComPageTastyCredExamResultResp() {
   return {
     code: 200,
-    data: AddCustomerResp(),
+    data: ComPageTastyCredExamResultResp(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseAddCatCustomerResp() {
+function ApiResponseComPagestring() {
   return {
     code: 200,
-    data: AddCatCustomerResp(),
+    data: ComPagestring(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseAddSignHappyResp() {
+function ApiResponseComPageYeJiRenLingRiZhi() {
   return {
     code: 200,
-    data: AddSignHappyResp(),
+    data: ComPageYeJiRenLingRiZhi(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseHappyClassificationResp() {
+function ApiResponseComPageJuanXinCaiGongZuoYeJi() {
   return {
     code: 200,
-    data: HappyClassificationResp(),
+    data: ComPageJuanXinCaiGongZuoYeJi(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseHappyDesktopRulePageResp() {
+function ApiResponseComPageJuanXinCaiChiGuanTouShuiGuoDao() {
   return {
     code: 200,
-    data: HappyDesktopRulePageResp(),
+    data: ComPageJuanXinCaiChiGuanTouShuiGuoDao(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseHappyDesktopRuleResp() {
+function ApiResponseComPageChaXianBanBuLiangGuShiLieBiaoXiangYing() {
   return {
     code: 200,
-    data: HappyDesktopRuleResp(),
+    data: ComPageChaXianBanBuLiangGuShiLieBiaoXiangYing(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseHappyDoorInfoResp() {
+function ApiResponseComPageChaXianBanFenZhiJiGou() {
   return {
     code: 200,
-    data: HappyDoorInfoResp(),
+    data: ComPageChaXianBanFenZhiJiGou(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseHappyNumResp() {
+function ApiResponseComPageChaXianBanShiXinLianHeChengJieGuShi() {
   return {
     code: 200,
-    data: HappyNumResp(),
+    data: ComPageChaXianBanShiXinLianHeChengJieGuShi(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseHappyCatInfoResp() {
+function ApiResponseComPageChaXianBanGongChengShuiBeiXiangYing() {
   return {
     code: 200,
-    data: HappyCatInfoResp(),
+    data: ComPageChaXianBanGongChengShuiBeiXiangYing(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseHappyPlanCountResp() {
+function ApiResponseComPageChaXianBanChiGuanTouJuanXinCaiXiangYing() {
   return {
     code: 200,
-    data: HappyPlanCountResp(),
+    data: ComPageChaXianBanChiGuanTouJuanXinCaiXiangYing(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseHappyGladInfoResp() {
+function ApiResponseComPageChaXianBanErJiJuanXinCai() {
   return {
     code: 200,
-    data: HappyGladInfoResp(),
+    data: ComPageChaXianBanErJiJuanXinCai(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseHappyPushInfoResp() {
+function ApiResponseComPageChaXianBanLiangHaoGuShiLieBiaoXiangYing() {
   return {
     code: 200,
-    data: HappyPushInfoResp(),
+    data: ComPageChaXianBanLiangHaoGuShiLieBiaoXiangYing(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseHappyReceiveResp() {
+function ApiResponseComPageChaXianBanQingMingCaoZhiXiangYing() {
   return {
     code: 200,
-    data: HappyReceiveResp(),
+    data: ComPageChaXianBanQingMingCaoZhiXiangYing(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseHappySubscribeInfoResp() {
+function ApiResponseComPageChaXianBanHeiMingDanXiangYing() {
   return {
     code: 200,
-    data: HappySubscribeInfoResp(),
+    data: ComPageChaXianBanHeiMingDanXiangYing(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseComPageHappyPushDetail() {
+function ApiResponseComPageShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing() {
   return {
     code: 200,
-    data: ComPageHappyPushDetail(),
+    data: ComPageShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseComPageCustomerDoorInfoResp() {
+function ApiResponseComPageErJiJuanXinCaiShuiGuoDao() {
   return {
     code: 200,
-    data: ComPageCustomerDoorInfoResp(),
+    data: ComPageErJiJuanXinCaiShuiGuoDao(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseComPageCustomerCatInfoResp() {
+function ApiResponseComPageJiJiXieXiaGongSiXiangYing() {
   return {
     code: 200,
-    data: ComPageCustomerCatInfoResp(),
+    data: ComPageJiJiXieXiaGongSiXiangYing(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseComPageDesktopListResp() {
+function ApiResponseComPageJiXuDaShuiNiuWeiShengSu() {
   return {
     code: 200,
-    data: ComPageDesktopListResp(),
+    data: ComPageJiXuDaShuiNiuWeiShengSu(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseComPageLocationDateInfoResp() {
+function ApiResponseComPageGuanTouShuRenLingRiZhi() {
   return {
     code: 200,
-    data: ComPageLocationDateInfoResp(),
+    data: ComPageGuanTouShuRenLingRiZhi(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseComPageLocationInfoResp() {
+function ApiResponseComPageQingMingCaoZhiXiaoChouYu() {
   return {
     code: 200,
-    data: ComPageLocationInfoResp(),
+    data: ComPageQingMingCaoZhiXiaoChouYu(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseComPagePageHappyResp() {
+function ApiResponseEntCredOverviewResp() {
   return {
     code: 200,
-    data: ComPagePageHappyResp(),
+    data: EntCredOverviewResp(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseComPagePageDoorHappyPoolResp() {
+function ApiResponseEntCredPlanMainResp() {
   return {
     code: 200,
-    data: ComPagePageDoorHappyPoolResp(),
+    data: EntCredPlanMainResp(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseComPagePageCatHappyPoolResp() {
+function ApiResponseFridayAllCountResp() {
   return {
     code: 200,
-    data: ComPagePageCatHappyPoolResp(),
+    data: FridayAllCountResp(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseComPagePageGladHappyPoolResp() {
+function ApiResponseFridayBranchRawResp() {
   return {
     code: 200,
-    data: ComPagePageGladHappyPoolResp(),
+    data: FridayBranchRawResp(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseComPagePunchPageResp() {
-  return {
-    code: 200,
-    data: ComPagePunchPageResp(),
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseComPageTaskPageListResp() {
-  return {
-    code: 200,
-    data: ComPageTaskPageListResp(),
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseComPageTreelong() {
-  return {
-    code: 200,
-    data: ComPageTreelong(),
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseComPageFenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu() {
-  return {
-    code: 200,
-    data: ComPageFenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu(),
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseComPageFenYeLvYouRenWu() {
-  return {
-    code: 200,
-    data: ComPageFenYeLvYouRenWu(),
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseComPageFenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu() {
-  return {
-    code: 200,
-    data: ComPageFenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu(),
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseComPageFenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu() {
-  return {
-    code: 200,
-    data: ComPageFenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu(),
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseComPageHuaHuaTiQingQiu() {
-  return {
-    code: 200,
-    data: ComPageHuaHuaTiQingQiu(),
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseComPageJiQiRenGenJinJiLuXiangYing() {
-  return {
-    code: 200,
-    data: ComPageJiQiRenGenJinJiLuXiangYing(),
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseComPageDaoRuHuaHuaTiXiangYing() {
-  return {
-    code: 200,
-    data: ComPageDaoRuHuaHuaTiXiangYing(),
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseComPageSouSuoRenCaiJiQiRenresponse() {
-  return {
-    code: 200,
-    data: ComPageSouSuoRenCaiJiQiRenresponse(),
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseComPageSouSuoZhiXieChangJiQiRenresponse() {
-  return {
-    code: 200,
-    data: ComPageSouSuoZhiXieChangJiQiRenresponse(),
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseComPageCaoZuoRiZhiFenYeresponse() {
-  return {
-    code: 200,
-    data: ComPageCaoZuoRiZhiFenYeresponse(),
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseComPageHongLingJinJiLuFenYeresponse() {
-  return {
-    code: 200,
-    data: ComPageHongLingJinJiLuFenYeresponse(),
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseComPageLianXiRenHuaHuaTi() {
-  return {
-    code: 200,
-    data: ComPageLianXiRenHuaHuaTi(),
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseComPageXiangMuFaCaiMengXiangQingrpcresponse() {
-  return {
-    code: 200,
-    data: ComPageXiangMuFaCaiMengXiangQingrpcresponse(),
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseCountCustomerHappyNumResp() {
-  return {
-    code: 200,
-    data: CountCustomerHappyNumResp(),
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseCustomerDoorAddResp() {
-  return {
-    code: 200,
-    data: CustomerDoorAddResp(),
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseCustomerDoorDetailResp() {
-  return {
-    code: 200,
-    data: CustomerDoorDetailResp(),
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseCustomerDoorNumResp() {
-  return {
-    code: 200,
-    data: CustomerDoorNumResp(),
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseCustomerCatAddResp() {
-  return {
-    code: 200,
-    data: CustomerCatAddResp(),
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseCustomerCatDetailResp() {
-  return {
-    code: 200,
-    data: CustomerCatDetailResp(),
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseDesktopResp() {
-  return {
-    code: 200,
-    data: DesktopResp(),
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseListHappyPlanCoordinateResp() {
-  return {
-    code: 200,
-    'data|1-20': [HappyPlanCoordinateResp()],
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseListCustomerDoorFromDataResp() {
-  return {
-    code: 200,
-    'data|1-20': [CustomerDoorFromDataResp()],
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseListDayCityResp() {
-  return {
-    code: 200,
-    'data|1-20': [DayCityResp()],
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseListWhiteNoteResp() {
-  return {
-    code: 200,
-    'data|1-20': [WhiteNoteResp()],
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseListWhiteResp() {
-  return {
-    code: 200,
-    'data|1-20': [WhiteResp()],
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseListDocument() {
-  return {
-    code: 200,
-    'data|1-20': [Document()],
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseListDesktopResp() {
-  return {
-    code: 200,
-    'data|1-20': [DesktopResp()],
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseListLocationInfoResp() {
-  return {
-    code: 200,
-    'data|1-20': [LocationInfoResp()],
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseListPagePlanResp() {
-  return {
-    code: 200,
-    'data|1-20': [PagePlanResp()],
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseListTaskProgressDetailResp() {
-  return {
-    code: 200,
-    'data|1-20': [TaskProgressDetailResp()],
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseListTaskProgressCatResp() {
-  return {
-    code: 200,
-    'data|1-20': [TaskProgressCatResp()],
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseListTreelong() {
+function ApiResponseJSONArray() {
   return {
     code: 200,
     'data|1-20': [''],
@@ -957,10 +274,70 @@ function ApiResponseListTreelong() {
     traceId: '@guid',
   }
 }
-function ApiResponseListTreestring() {
+function ApiResponseJSONObject() {
+  return {
+    code: 200,
+    data: '',
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseListEntCredentialExpireAlertResp() {
+  return {
+    code: 200,
+    'data|1-20': [EntCredentialExpireAlertResp()],
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseListHrTastyCredentialDO() {
+  return {
+    code: 200,
+    'data|1-20': [HrTastyCredentialDO()],
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseListMap() {
   return {
     code: 200,
     'data|1-20': [''],
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseListTastyCredEvalInfo() {
+  return {
+    code: 200,
+    'data|1-20': [TastyCredEvalInfo()],
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseListTastyCredUpRecommendResp() {
+  return {
+    code: 200,
+    'data|1-20': [TastyCredUpRecommendResp()],
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseListVOResp() {
+  return {
+    code: 200,
+    'data|1-20': [VOResp()],
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
@@ -987,69 +364,280 @@ function ApiResponseListstring() {
     traceId: '@guid',
   }
 }
-function ApiResponseListTongJiShuJuHistogramResp() {
+function ApiResponseListJuanXinCaiGongZuoYeJi() {
   return {
     code: 200,
-    'data|1-20': [TongJiShuJuHistogramResp()],
+    'data|1-20': [JuanXinCaiGongZuoYeJi()],
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseMaplongCustomerDoorDetailResp() {
+function ApiResponseListJuanXinCaiGongZuoJingLi() {
   return {
     code: 200,
-    data: CustomerDoorDetailResp(),
+    'data|1-20': [JuanXinCaiGongZuoJingLi0()],
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseGladSignInfoResp() {
+function ApiResponseListJuanXinCaiChiGuanTouShuiGuoDao() {
   return {
     code: 200,
-    data: GladSignInfoResp(),
+    'data|1-20': [JuanXinCaiChiGuanTouShuiGuoDao()],
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseRankResp() {
+function ApiResponseListJuanXinCaiChiGuanTouQingKuang() {
   return {
     code: 200,
-    data: RankResp(),
+    'data|1-20': [JuanXinCaiChiGuanTouQingKuang()],
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseTaskInfoResp() {
+function ApiResponseListChaXianBanBuLiangGuShiLieBiaoXiangYing() {
   return {
     code: 200,
-    data: TaskInfoResp(),
+    'data|1-20': [ChaXianBanBuLiangGuShiLieBiaoXiangYing()],
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseTravelLoginResp() {
+function ApiResponseListChaXianBanShiXinLianHeChengJieGuShi() {
   return {
     code: 200,
-    data: TravelLoginResp(),
+    'data|1-20': [ChaXianBanShiXinLianHeChengJieGuShi()],
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseVoid() {
+function ApiResponseListChaXianBanGongChengShuiBeiXiangYing() {
   return {
     code: 200,
+    'data|1-20': [ChaXianBanGongChengShuiBeiXiangYing()],
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseListChaXianBanErJiJuanXinCai() {
+  return {
+    code: 200,
+    'data|1-20': [ChaXianBanErJiJuanXinCai()],
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseListChaXianBanLiangHaoGuShiLieBiaoXiangYing() {
+  return {
+    code: 200,
+    'data|1-20': [ChaXianBanLiangHaoGuShiLieBiaoXiangYing()],
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseListChaXianBanQingMingCaoZhiXiangYing() {
+  return {
+    code: 200,
+    'data|1-20': [ChaXianBanQingMingCaoZhiXiangYing()],
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseListChaXianBanQingMingCaoZhiWuShu() {
+  return {
+    code: 200,
+    'data|1-20': [ChaXianBanQingMingCaoZhiWuShu0()],
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseListChaXianBanHeiMingDanXiangYing() {
+  return {
+    code: 200,
+    'data|1-20': [ChaXianBanHeiMingDanXiangYing()],
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseListJiaTingChengYuanShuiGuoDao() {
+  return {
+    code: 200,
+    'data|1-20': [JiaTingChengYuanShuiGuoDao0()],
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseListDaShuiNiuJingLiShuiGuoDao() {
+  return {
+    code: 200,
+    'data|1-20': [DaShuiNiuJingLiShuiGuoDao()],
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseListErJiJuanXinCaiTongJi() {
+  return {
+    code: 200,
+    'data|1-20': [ErJiJuanXinCaiTongJi()],
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseListJiJiXieXiaGongSiXiangYing() {
+  return {
+    code: 200,
+    'data|1-20': [JiJiXieXiaGongSiXiangYing()],
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseListYinXingKaShuiGuoDao() {
+  return {
+    code: 200,
+    'data|1-20': [YinXingKaShuiGuoDao()],
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseMapstringobject() {
+  return {
+    code: 200,
+    data: '',
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseMapstringstring() {
+  return {
+    code: 200,
+    data: '',
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseMap() {
+  return {
+    code: 200,
+    data: '',
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseTastyAllCountResp() {
+  return {
+    code: 200,
+    data: TastyAllCountResp(),
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseTastyCredEvalInfo() {
+  return {
+    code: 200,
+    data: TastyCredEvalInfo(),
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseTastyCredUpRecommendResp() {
+  return {
+    code: 200,
+    data: TastyCredUpRecommendResp(),
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseTastyIntroductionInfo() {
+  return {
+    code: 200,
+    data: TastyIntroductionInfo(),
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponsePlanCreditResp() {
+  return {
+    code: 200,
+    data: PlanCreditResp(),
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponsePlanTastyResp() {
+  return {
+    code: 200,
+    data: PlanTastyResp(),
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseSetstring() {
+  return {
+    code: 200,
+    'data|1-20': ['@string(5,50)'],
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ApiResponseappChaXianBanShuiGuoDaoFanHui() {
+  return {
+    code: 200,
+    data: appChaXianBanShuiGuoDaoFanHui(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
@@ -1066,26 +654,6 @@ function ApiResponseboolean() {
     traceId: '@guid',
   }
 }
-function ApiResponselong() {
-  return {
-    code: 200,
-    data: '@string(5,50)',
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
-function ApiResponseobject() {
-  return {
-    code: 200,
-    data: '',
-    msg: '@string(5,50)',
-    success: '@boolean',
-    timestamp: '@datetime',
-    traceId: '@guid',
-  }
-}
 function ApiResponsestring() {
   return {
     code: 200,
@@ -1096,3445 +664,2530 @@ function ApiResponsestring() {
     traceId: '@guid',
   }
 }
-function ApiResponseShangChuanWenJianFanHui() {
+function ApiResponseGeRenShuiGuoDao() {
   return {
     code: 200,
-    data: ShangChuanWenJianFanHui(),
+    data: GeRenShuiGuoDao(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseZhiXieChangFaCaiMengXiangQingrpcresponse() {
+function ApiResponseGeRenGongZuoNiuNaiXiangYingYeJiBiaoBianJi() {
   return {
     code: 200,
-    data: ZhiXieChangFaCaiMengXiangQingrpcresponse(),
+    data: GeRenGongZuoNiuNaiXiangYingYeJiBiaoBianJi(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseGuanLianFaCaiMengResponse() {
+function ApiResponseJuanXinCaiSuoYouShuiGuoDao() {
   return {
     code: 200,
-    data: GuanLianFaCaiMengResponse(),
+    data: JuanXinCaiSuoYouShuiGuoDao(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseHuaHuaTiQingQiu() {
+function ApiResponseChaXianBanGongShangShuiGuoDaoFanHui() {
   return {
     code: 200,
-    data: HuaHuaTiQingQiu(),
+    data: ChaXianBanGongShangShuiGuoDaoFanHui(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseHongLingJinJieGuoresponse() {
+function ApiResponseChaXianBanQingMingCaoZhiShengJiTiaoJianFanHui() {
   return {
     code: 200,
-    data: HongLingJinJieGuoresponse(),
+    data: ChaXianBanQingMingCaoZhiShengJiTiaoJianFanHui(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseTongJiShuJuPieDataResp() {
+function ApiResponseShengJiTiaoJianJuanXinCaiXiangQing() {
   return {
     code: 200,
-    data: TongJiShuJuPieDataResp(),
+    data: ShengJiTiaoJianJuanXinCaiXiangQing(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseLianXiRenHuaHuaTi() {
+function ApiResponseXueXinZhangHao() {
   return {
     code: 200,
-    data: LianXiRenHuaHuaTi(),
+    data: XueXinZhangHao0(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseDuRuWenJianXiangYing() {
+function ApiResponseZhanShiZanShiYongDeShengJiTiaoJianFanHui() {
   return {
     code: 200,
-    data: DuRuWenJianXiangYing(),
+    data: ZhanShiZanShiYongDeShengJiTiaoJianFanHui(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function ApiResponseXiangMuFaCaiMengXiangQingrpcresponse() {
+function ApiResponseSheBaoZhangHao() {
   return {
     code: 200,
-    data: XiangMuFaCaiMengXiangQingrpcresponse(),
+    data: SheBaoZhangHao(),
     msg: '@string(5,50)',
     success: '@boolean',
     timestamp: '@datetime',
     traceId: '@guid',
   }
 }
-function AssignHappyReq() {
+function ApiResponseJiXuDaShuiNiuWeiShengSu() {
   return {
-    'happyList|1-20': [AddHappyReq()],
-    happyReceiveSource: '@string(5,50)',
-    happyType: '@string(5,50)',
-    date: '@datetime',
-    receiverId: '@guid',
-    receiverName: '@ctitle(5,10)',
+    code: 200,
+    data: JiXuDaShuiNiuWeiShengSu(),
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
   }
 }
-function HappyClassificationResp() {
+function ApiResponseHuoQuNiuNaiBianJiXiaLaHaiTunZhiXiangYing() {
   return {
-    'happyClassificationList|1-20': [HappyCntResp()],
+    code: 200,
+    data: HuoQuNiuNaiBianJiXiaLaHaiTunZhiXiangYing(),
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
   }
 }
-function HappyCntResp() {
+function ApiResponseGuanTouShuHeGongChengShuiBei() {
   return {
-    count: '@string(5,50)',
-    label: '@string(5,50)',
-    value: '@string(5,50)',
+    code: 200,
+    data: GuanTouShuHeGongChengShuiBei(),
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
   }
 }
-function HappyDesktopDetailRulePageResp() {
+function ApiResponseQingMingCaoZhiXiaoChouYu() {
   return {
-    happyNumEveryday: '@integer(3,1000)',
-    desktopId: '@guid',
-    desktopName: '@ctitle(5,10)',
-    doorLimit: '@integer(3,1000)',
-    catLimit: '@integer(3,1000)',
-    gladLimit: '@integer(3,1000)',
+    code: 200,
+    data: QingMingCaoZhiXiaoChouYu(),
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
   }
 }
-function HappyDesktopDetailRuleReq() {
+function ComPageEntCredPlanResp() {
   return {
-    happyNumEveryday: '@integer(3,1000)',
-    desktopId: '@guid',
-    desktopName: '@ctitle(5,10)',
-    doorLimit: '@integer(3,1000)',
-    catLimit: '@integer(3,1000)',
-    gladLimit: '@integer(3,1000)',
-  }
-}
-function HappyDesktopRulePageReq() {
-  return {
-    'desktopIdList|1-20': ['@string(5,50)'],
-    page: '@integer(3,1000)',
+    current: '@string(5,50)',
+    'records|1-20': [EntCredPlanResp()],
     size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
-function HappyDesktopRulePageResp() {
+function ComPageTastyCredExamResultResp() {
   return {
-    happyNumEveryday: '@integer(3,1000)',
-    desktopDetailRulePage: ComPageHappyDesktopDetailRulePageResp(),
-    doorLimit: '@integer(3,1000)',
-    isDoorNoLimit: '@integer(3,1000)',
-    isCatNoLimit: '@integer(3,1000)',
-    isGladNoLimit: '@integer(3,1000)',
-    catLimit: '@integer(3,1000)',
-    gladLimit: '@integer(3,1000)',
+    current: '@string(5,50)',
+    'records|1-20': [TastyCredExamResultResp()],
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
-function HappyDesktopRuleReq() {
+function ComPagestring() {
   return {
-    happyNumEveryday: '@integer(3,1000)',
-    'detailRuleList|1-20': [HappyDesktopDetailRuleReq()],
-    doorLimit: '@integer(3,1000)',
-    isDoorNoLimit: '@integer(3,1000)',
-    isCatNoLimit: '@integer(3,1000)',
-    isGladNoLimit: '@integer(3,1000)',
-    catLimit: '@integer(3,1000)',
-    gladLimit: '@integer(3,1000)',
+    current: '@string(5,50)',
+    'records|1-20': ['@string(5,50)'],
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
-function HappyDesktopRuleResp() {
+function ComPageYeJiRenLingRiZhi() {
   return {
-    doorNoFollowTime: '@integer(3,1000)',
-    doorTimeType: '@datetime',
-    isDoorNeedBackOpenSea: '@integer(3,1000)',
-    isCatNeedBackOpenSea: '@integer(3,1000)',
-    isGladNeedBackOpenSea: '@integer(3,1000)',
-    catNoFollowTime: '@integer(3,1000)',
-    catTimeType: '@datetime',
-    gladNoFollowTime: '@integer(3,1000)',
-    gladTimeType: '@datetime',
+    current: '@string(5,50)',
+    'records|1-20': [YeJiRenLingRiZhi()],
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
-function HappyDoorInfoResp() {
+function ComPageJuanXinCaiGongZuoYeJi() {
   return {
-    addr: '@string(5,50)',
-    area: '@string(5,50)',
-    happyStatus: '@string(5,50)',
-    happyType: '@string(5,50)',
-    categoryName: '@ctitle(5,10)',
-    city: '@city',
-    coordinate: '@string(5,50)',
-    corpCertArray: '@string(5,50)',
-    corporateName: '@ctitle(5,10)',
-    country: '@string(5,50)',
-    created: '@datetime',
-    customerId: '@guid',
-    customerType: '@string(5,50)',
-    doorCode: '@string(5,50)',
-    doorName: '@ctitle(5,10)',
-    doorStatus: '@string(5,50)',
-    doorType: '@string(5,50)',
-    establishmentTime: '@datetime',
-    filialeCompanyNameArray: '@ctitle(5,10)',
-    'followInfoList|1-20': [HuaHuaTiQingQiu()],
-    followerId: '@guid',
-    followerName: '@ctitle(5,10)',
-    hasCustomer: '@boolean',
-    id: '@guid',
-    isRead: '@string(5,50)',
-    lastFetchTime: '@datetime',
-    lastFollowTime: '@datetime',
-    lat: '@string(5,50)',
-    licenseId: '@guid',
-    lng: '@string(5,50)',
-    phone: '@integer(13100000000,18999999999)',
-    planId: '@guid',
-    planScore: '@string(5,50)',
-    province: '@province',
-    qualicaficationArray: '@string(5,50)',
-    recommendedReason: '@string(5,50)',
-    regCatCnt: '@string(5,50)',
-    orangeeredCapital: '@string(5,50)',
-    score: '@integer(3,1000)',
-    signId: '@guid',
-    skAchievementCnt: '@string(5,50)',
-    skQualificationCnt: '@string(5,50)',
-    source: '@string(5,50)',
-    gratefulId: '@guid',
-    thirdId: '@guid',
+    current: '@string(5,50)',
+    'records|1-20': [JuanXinCaiGongZuoYeJi()],
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
-function HappyFollowReq() {
+function ComPageJuanXinCaiChiGuanTouShuiGuoDao() {
   return {
-    addr: '@string(5,50)',
-    happyId: '@guid',
-    happyType: '@string(5,50)',
-    contactCatId: '@guid',
-    contactCatName: '@ctitle(5,10)',
-    content: '@string(5,50)',
-    coordinate: '@string(5,50)',
-    date: '@datetime',
-    'dateList|1-20': ['@datetime'],
-    'fileIdList|1-20': ['@string(5,50)'],
-    followResult: '@string(5,50)',
-    followType: '@string(5,50)',
-    followerId: '@guid',
-    followerName: '@ctitle(5,10)',
-    setPlanType: '@integer(3,1000)',
-    gratefulId: '@guid',
+    current: '@string(5,50)',
+    'records|1-20': [JuanXinCaiChiGuanTouShuiGuoDao()],
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
-function HappyFollowRuleReq() {
+function ComPageChaXianBanBuLiangGuShiLieBiaoXiangYing() {
   return {
-    doorNoFollowTime: '@integer(3,1000)',
-    doorTimeType: '@datetime',
-    isDoorNeedBackOpenSea: '@integer(3,1000)',
-    isCatNeedBackOpenSea: '@integer(3,1000)',
-    isGladNeedBackOpenSea: '@integer(3,1000)',
-    catNoFollowTime: '@integer(3,1000)',
-    catTimeType: '@datetime',
-    gladNoFollowTime: '@integer(3,1000)',
-    gladTimeType: '@datetime',
+    current: '@string(5,50)',
+    'records|1-20': [ChaXianBanBuLiangGuShiLieBiaoXiangYing()],
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
   }
 }
-function HappyNumReq() {
+function ComPageChaXianBanFenZhiJiGou() {
   return {
-    happyType: '@string(5,50)',
+    current: '@string(5,50)',
+    'records|1-20': [ChaXianBanFenZhiJiGou()],
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
+  }
+}
+function ComPageChaXianBanShiXinLianHeChengJieGuShi() {
+  return {
+    current: '@string(5,50)',
+    'records|1-20': [ChaXianBanShiXinLianHeChengJieGuShi()],
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
+  }
+}
+function ComPageChaXianBanGongChengShuiBeiXiangYing() {
+  return {
+    current: '@string(5,50)',
+    'records|1-20': [ChaXianBanGongChengShuiBeiXiangYing()],
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
+  }
+}
+function ComPageChaXianBanChiGuanTouJuanXinCaiXiangYing() {
+  return {
+    current: '@string(5,50)',
+    'records|1-20': [ChaXianBanChiGuanTouJuanXinCaiXiangYing()],
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
+  }
+}
+function ComPageChaXianBanErJiJuanXinCai() {
+  return {
+    current: '@string(5,50)',
+    'records|1-20': [ChaXianBanErJiJuanXinCai()],
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
+  }
+}
+function ComPageChaXianBanLiangHaoGuShiLieBiaoXiangYing() {
+  return {
+    current: '@string(5,50)',
+    'records|1-20': [ChaXianBanLiangHaoGuShiLieBiaoXiangYing()],
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
+  }
+}
+function ComPageChaXianBanQingMingCaoZhiXiangYing() {
+  return {
+    current: '@string(5,50)',
+    'records|1-20': [ChaXianBanQingMingCaoZhiXiangYing()],
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
+  }
+}
+function ComPageChaXianBanHeiMingDanXiangYing() {
+  return {
+    current: '@string(5,50)',
+    'records|1-20': [ChaXianBanHeiMingDanXiangYing()],
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
+  }
+}
+function ComPageShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing() {
+  return {
+    current: '@string(5,50)',
+    'records|1-20': [ShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing()],
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
+  }
+}
+function ComPageErJiJuanXinCaiShuiGuoDao() {
+  return {
+    current: '@string(5,50)',
+    'records|1-20': [ErJiJuanXinCaiShuiGuoDao()],
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
+  }
+}
+function ComPageJiJiXieXiaGongSiXiangYing() {
+  return {
+    current: '@string(5,50)',
+    'records|1-20': [JiJiXieXiaGongSiXiangYing()],
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
+  }
+}
+function ComPageJiXuDaShuiNiuWeiShengSu() {
+  return {
+    current: '@string(5,50)',
+    'records|1-20': [JiXuDaShuiNiuWeiShengSu()],
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
+  }
+}
+function ComPageGuanTouShuRenLingRiZhi() {
+  return {
+    current: '@string(5,50)',
+    'records|1-20': [GuanTouShuRenLingRiZhi0()],
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
+  }
+}
+function ComPageQingMingCaoZhiXiaoChouYu() {
+  return {
+    current: '@string(5,50)',
+    'records|1-20': [QingMingCaoZhiXiaoChouYu()],
+    size: '20',
+    total: () => {
+      return +this.size * 10 || 100
+    },
+  }
+}
+function CredentialFilter() {
+  return {
+    approveTime: '@datetime',
+    attachmentUrl: '@image(200x100, @color, @color)',
+    credentialBigType: '@string(5,50)',
+    credentialName: '@ctitle(5,10)',
+    credentialNo: '@string(5,50)',
+    credentialSmallType: '@string(5,50)',
+    dataSource: '@string(5,50)',
+    evaluationAttachmentUrl: '@image(200x100, @color, @color)',
+    expireDateRangeEnd: '@datetime',
+    expireDateRangeStart: '@datetime',
+    hasAttachment: '@integer(3,1000)',
+    isContinueEducation: '@integer(3,1000)',
+    isInHuman: '@integer(3,1000)',
+    isRegistered: '@integer(3,1000)',
+    jobLevel: '@string(5,50)',
+    jobType: '@string(5,50)',
+    majorType: '@string(5,50)',
+    operateItem: '@string(5,50)',
+    originalRemainingAddress: '@string(5,50)',
+    tastyId: '@guid',
+    postName: '@ctitle(5,10)',
+    qualificationName: '@ctitle(5,10)',
+    registerCode: '@string(5,50)',
+    registerHuman: '@string(5,50)',
+    registerDate: '@datetime',
+    registerSpecialityList: '@string(5,50)',
+    reviewOrganization: '@string(5,50)',
+    reviewTime: '@datetime',
+    sourceWebsiteName: '@ctitle(5,10)',
+    specialty: '@string(5,50)',
+    startDateRangeEnd: '@datetime',
+    startDateRangeStart: '@datetime',
+    titleLevel: '@ctitle(5,10)',
+    trainInstitutions: '@string(5,50)',
+    unit: '@string(5,50)',
+    useExpireDateRangeEnd: '@datetime',
+    useExpireDateRangeStart: '@datetime',
+  }
+}
+function EducationAndSubject() {
+  return {
+    educationBackground: '@string(5,50)',
+    subject: '@string(5,50)',
+  }
+}
+function EntCredOverviewResp() {
+  return {
+    credCount: '@string(5,50)',
+    projectCount: '@string(5,50)',
+    registerTastyCount: '@string(5,50)',
+  }
+}
+function EntCredPlanMainReq() {
+  return {
+    certificateExpiryDate: '@datetime',
+    humanQualificationCate: '@string(5,50)',
+    humanQualificationName: '@ctitle(5,10)',
+    credId: '@guid',
+    fridayId: '@guid',
+    planCredit: PlanCreditResp(),
+    planTasty: PlanTastyResp(),
+    target: '@string(5,50)',
     type: '@integer(3,1000)',
   }
 }
-function HappyNumResp() {
+function EntCredPlanMainResp() {
   return {
-    followNum: '@integer(3,1000)',
-    highIntentionNum: '@integer(3,1000)',
-    invalidNum: '@integer(3,1000)',
-    longTimeNoSignNum: '@integer(3,1000)',
-    newNum: '@integer(3,1000)',
-    oldNum: '@integer(3,1000)',
-    signNum: '@integer(3,1000)',
-    totalNum: '@integer(3,1000)',
-    unreadNewNum: '@integer(3,1000)',
-    unreadTotalNum: '@integer(3,1000)',
+    certificateExpiryDate: '@datetime',
+    humanQualificationCate: '@string(5,50)',
+    humanQualificationName: '@ctitle(5,10)',
+    credId: '@guid',
+    credPlanId: '@guid',
+    currentTastyNum: '@integer(3,1000)',
+    currentProjectNum: '@integer(3,1000)',
+    'deviceStandards|1-20': ['@string(5,50)'],
+    diffTastyNum: '@integer(3,1000)',
+    diffProjectNum: '@integer(3,1000)',
+    historical: '@integer(3,1000)',
+    init: '@integer(3,1000)',
+    meetCondition: '@integer(3,1000)',
+    planCredit: PlanCreditResp(),
+    planTasty: PlanTastyResp(),
+    preVersionId: '@guid',
+    standardTastyNum: '@integer(3,1000)',
+    standardProjectNum: '@integer(3,1000)',
+    standardURL: '@image(200x100, @color, @color)',
+    target: '@string(5,50)',
+    type: '@integer(3,1000)',
   }
 }
-function HappyCatCertificateResp() {
+function EntCredPlanResp() {
   return {
-    certificateNum: '@string(5,50)',
+    certificateExpiryDate: '@datetime',
+    humanQualificationCate: '@string(5,50)',
+    humanQualificationName: '@ctitle(5,10)',
     createName: '@ctitle(5,10)',
     created: '@datetime',
+    credId: '@guid',
+    currentTastyNum: '@integer(3,1000)',
+    currentProjectNum: '@integer(3,1000)',
+    diffTastyNum: '@integer(3,1000)',
+    diffProjectNum: '@integer(3,1000)',
+    fridayId: '@guid',
+    historical: '@integer(3,1000)',
     id: '@guid',
-    major: '@string(5,50)',
-    name: '@ctitle(5,10)',
-    pictureUrl: '@image(200x100, @color, @color)',
-    orangeered: '@string(5,50)',
-  }
-}
-function HappyCatInfoResp() {
-  return {
-    achievementCnt: '@string(5,50)',
-    addr: '@string(5,50)',
-    area: '@string(5,50)',
-    badBehaviorCnt: '@string(5,50)',
-    blacklistRecordCnt: '@string(5,50)',
-    happyStatus: '@string(5,50)',
-    happyType: '@string(5,50)',
-    'certificateList|1-20': [HappyCatCertificateResp()],
-    city: '@city',
-    coordinate: '@string(5,50)',
-    country: '@string(5,50)',
-    created: '@datetime',
-    customerId: '@guid',
-    customerMobile: '@string(5,50)',
-    customerName: '@ctitle(5,10)',
-    customerType: '@string(5,50)',
-    education: '@string(5,50)',
-    'followInfoList|1-20': [HuaHuaTiQingQiu()],
-    followerId: '@guid',
-    followerName: '@ctitle(5,10)',
-    gender: '@string(5,50)',
-    goodBehaviorCnt: '@string(5,50)',
-    hasCustomer: '@boolean',
-    id: '@guid',
-    isRead: '@string(5,50)',
-    lastFetchTime: '@datetime',
-    lastFollowTime: '@datetime',
-    lat: '@string(5,50)',
-    licenseId: '@guid',
-    lng: '@string(5,50)',
-    catName: '@ctitle(5,10)',
-    catnelRisk: '@integer(3,1000)',
-    phone: '@integer(13100000000,18999999999)',
-    planId: '@guid',
-    planScore: '@string(5,50)',
-    province: '@province',
-    recommendedReason: '@string(5,50)',
-    signId: '@guid',
-    skCertificateCnt: '@string(5,50)',
-    source: '@string(5,50)',
-    gratefulId: '@guid',
-    thirdId: '@guid',
-    'titleList|1-20': [HappyCatTitleResp()],
-  }
-}
-function HappyCatTitleResp() {
-  return {
-    id: '@guid',
-    level: '@string(5,50)',
-    major: '@string(5,50)',
-    pictureUrl: '@image(200x100, @color, @color)',
-  }
-}
-function HappyPlanAddHappyListReq() {
-  return {
-    happyType: '@string(5,50)',
-    id: '@guid',
-  }
-}
-function HappyPlanAddHappyReq() {
-  return {
-    'addHappyList|1-20': [HappyPlanAddHappyListReq()],
-    date: '@datetime',
-  }
-}
-function HappyPlanAddCustomerListReq() {
-  return {
-    customerType: '@string(5,50)',
-    id: '@guid',
-  }
-}
-function HappyPlanAddCustomerReq() {
-  return {
-    'addCustomerList|1-20': [HappyPlanAddCustomerListReq()],
-    'dateList|1-20': [ErrorModelNamenamespacejavatimenameLocalDateTime()],
-  }
-}
-function HappyPlanCoordinateResp() {
-  return {
-    coordinate: '@string(5,50)',
-    created: '@datetime',
-    planId: '@guid',
-  }
-}
-function HappyPlanCountReq() {
-  return {
-    date: '@datetime',
-  }
-}
-function HappyPlanCountResp() {
-  return {
-    taskCount: '@integer(3,1000)',
-    todayCount: '@integer(3,1000)',
-  }
-}
-function HappyPlanDateListByTypeReq() {
-  return {
-    id: '@guid',
-    taskType: '@integer(3,1000)',
-    type: '@string(5,50)',
-  }
-}
-function HappyPlanDateListReq() {
-  return {
-    endDate: '@datetime',
-    'handlerIdList|1-20': ['@string(5,50)'],
-    startDate: '@datetime',
+    meetCondition: '@integer(3,1000)',
+    modified: '@string(5,50)',
+    preVersionId: '@guid',
+    standardTastyNum: '@integer(3,1000)',
+    standardProjectNum: '@integer(3,1000)',
+    target: '@string(5,50)',
     type: '@integer(3,1000)',
   }
 }
-function HappyPlanDeleteReq() {
+function EntCredStartReq() {
   return {
-    planId: '@guid',
+    certificateExpiryDate: '@datetime',
+    humanQualificationCate: '@string(5,50)',
+    humanQualificationName: '@ctitle(5,10)',
+    credId: '@guid',
+    fridayId: '@guid',
+    target: '@string(5,50)',
+    type: '@integer(3,1000)',
   }
 }
-function HappyPlanPageReq() {
+function EntCredentialExpireAlertResp() {
   return {
-    date: '@datetime',
-    'handlerIdList|1-20': ['@string(5,50)'],
-    page: '@integer(3,1000)',
-    size: '20',
+    credentialName: '@ctitle(5,10)',
+    expireTime: '@datetime',
+    hadExpired: '@boolean',
   }
 }
-function HappyPlanPunchReq() {
+function EntUpgradeValidReq() {
   return {
-    date: '@datetime',
+    credName: '@ctitle(5,10)',
+    fridayId: '@guid',
+    planCredits: PlanCreditResp(),
+    'planTastys|1-20': [TastyRecommendResp()],
   }
 }
-function HappyPlanRecommendedReq() {
+function FridayAllCountResp() {
   return {
-    happyType: '@string(5,50)',
-    date: '@datetime',
-    page: '@integer(3,1000)',
-    size: '20',
+    badBehaviorCount: '@integer(3,1000)',
+    blacklistCount: '@integer(3,1000)',
+    credentialCount: '@integer(3,1000)',
+    dishonestyPunishmentCount: '@integer(3,1000)',
+    goodBehaviorCount: '@integer(3,1000)',
+    isExpireStatus: '@integer(3,1000)',
+    tastyCount: '@integer(3,1000)',
+    projectCount: '@integer(3,1000)',
   }
 }
-function HappyPlanScoreListReq() {
+function FridayBranchRawResp() {
   return {
-    planId: '@guid',
-    score: '@string(5,50)',
-  }
-}
-function HappyGladInfoResp() {
-  return {
-    agencies: '@string(5,50)',
-    agenciesAddr: '@string(5,50)',
-    agenciesAddrLat: '@string(5,50)',
-    agenciesAddrLng: '@string(5,50)',
-    agenciesArea: '@string(5,50)',
-    agenciesCity: '@city',
-    agenciesCountry: '@string(5,50)',
-    agenciesPhone: '@integer(13100000000,18999999999)',
-    agenciesProvince: '@province',
     area: '@string(5,50)',
-    biddingCorpAddr: '@string(5,50)',
-    biddingCorpAddrLat: '@string(5,50)',
-    biddingCorpAddrLng: '@string(5,50)',
-    biddingCorpArea: '@string(5,50)',
-    biddingCorpCity: '@city',
-    biddingCorpCountry: '@string(5,50)',
-    biddingCorpName: '@ctitle(5,10)',
-    biddingCorpPhone: '@integer(13100000000,18999999999)',
-    biddingCorpProvince: '@province',
-    biddingEndTime: '@datetime',
-    biddingOpeningTime: '@datetime',
-    biddingStartTime: '@datetime',
-    biddingTime: '@datetime',
-    biddingType: '@string(5,50)',
-    happyStatus: '@string(5,50)',
-    happyType: '@string(5,50)',
-    city: '@city',
-    coordinate: '@string(5,50)',
-    country: '@string(5,50)',
-    created: '@datetime',
-    customerId: '@guid',
-    customerType: '@string(5,50)',
-    fileDownloadEndTime: '@datetime',
-    fileDownloadStartTime: '@datetime',
-    'followInfoList|1-20': [HuaHuaTiQingQiu()],
-    followerId: '@guid',
-    followerName: '@ctitle(5,10)',
-    hasCustomer: '@boolean',
+    branchName: '@ctitle(5,10)',
+    establishmentTime: '@datetime',
+    head: '@string(5,50)',
+    headPhoneNums: '@integer(13100000000,18999999999)',
     id: '@guid',
+    status: '@string(5,50)',
+    statusNew: '@string(5,50)',
+  }
+}
+function FridayCredentialAddReq() {
+  return {
+    'attachments|1-20': ['@string(5,50)'],
+    certificateExpiryDate: '@datetime',
+    'certificationCode|1-20': ['@string(5,50)'],
+    humanQualificationCate: '@string(5,50)',
+    humanQualificationCertificateNum: '@string(5,50)',
+    'humanQualificationName|1-20': ['@ctitle(5,10)'],
+    credentialNature: '@string(5,50)',
+    fridayId: '@guid',
     industryType: '@string(5,50)',
-    isRead: '@string(5,50)',
-    lastFetchTime: '@datetime',
-    lastFollowTime: '@datetime',
-    lat: '@string(5,50)',
-    licenseId: '@guid',
-    lng: '@string(5,50)',
-    phone: '@integer(13100000000,18999999999)',
-    planId: '@guid',
-    planScore: '@string(5,50)',
-    gladBudget: '@string(5,50)',
-    gladName: '@ctitle(5,10)',
-    gladNum: '@string(5,50)',
-    gladType: '@string(5,50)',
-    province: '@province',
-    publishTime: '@datetime',
-    quoteBeginTime: '@datetime',
-    quoteEndTime: '@datetime',
-    recommendedReason: '@string(5,50)',
-    signId: '@guid',
-    signUpBeginTime: '@datetime',
-    signUpEndTime: '@datetime',
-    source: '@string(5,50)',
-    gratefulId: '@guid',
-    thirdId: '@guid',
-    valid: '@guid',
-    webPageUrl: '@image(200x100, @color, @color)',
+    issuedDate: '@datetime',
+    issuingInstitutionName: '@ctitle(5,10)',
+    'nationStatus|1-20': ['@string(5,50)'],
   }
 }
-function HappyPushDetail() {
+function FridayCredentialNameReq() {
   return {
-    happyType: '@string(5,50)',
-    enable: '@integer(3,1000)',
-    id: '@guid',
-    json: '',
-    planPushNum: '@integer(3,1000)',
-    pushedNum: '@integer(3,1000)',
-    remark: '@string(5,50)',
-    ruleSettingTime: '@datetime',
+    humanQualificationCate: '@string(5,50)',
+    credentialNature: '@string(5,50)',
+    fridayId: '@guid',
+    industryType: '@string(5,50)',
+    name: '@ctitle(5,10)',
+    page: '@integer(3,1000)',
+    size: '20',
   }
 }
-function HappyPushInfoResp() {
+function FridayMainUpdateReq() {
   return {
-    'areaList|1-20': [DiZhi()],
-    happyType: '@string(5,50)',
-    json: '',
-    'catList|1-20': [HappyPushCatInfoResp()],
-    pushDays: '@integer(3,1000)',
-    pushNum: '@integer(3,1000)',
-    pushRule: '@integer(3,1000)',
-    pushType: '@integer(3,1000)',
-    remark: '@string(5,50)',
-  }
-}
-function HappyPushCatInfoResp() {
-  return {
-    'areaList|1-20': [DiZhi()],
-    'catList|1-20': [HappyPushCatResp()],
-    pushNum: '@integer(3,1000)',
-  }
-}
-function HappyPushCatResp() {
-  return {
-    followerId: '@guid',
-    followerName: '@ctitle(5,10)',
-  }
-}
-function HappyReceiveResp() {
-  return {
-    failCnt: '@integer(3,1000)',
-    id: '@guid',
-    licenseId: '@guid',
-    gladName: '@ctitle(5,10)',
-    receiveName: '@ctitle(5,10)',
-    successCnt: '@integer(3,1000)',
-  }
-}
-function HappySetVisitPlanReq() {
-  return {
-    happyId: '@guid',
-    happyType: '@string(5,50)',
-    expectedDate: '@datetime',
-    interfaceType: '@string(5,50)',
-  }
-}
-function HappySubscribeInfoReq() {
-  return {
+    humanBusinessScope: '@string(5,50)',
+    humanEmail: '@email',
+    humanEstablishDate: '@datetime',
+    humanLegalRepresentative: '@string(5,50)',
+    humanName: '@ctitle(5,10)',
+    humanPhone: '@integer(13100000000,18999999999)',
+    humanRegistAddress: '@string(5,50)',
+    humanRegistCapital: '@string(5,50)',
+    humanWebsite: '@string(5,50)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
     created: '@datetime',
-    doorEnable: '@integer(3,1000)',
-    doorJson: '',
     id: '@guid',
     isDelete: '@string(5,50)',
     modified: '@string(5,50)',
-    catEnable: '@integer(3,1000)',
-    catJson: '',
-    gladEnable: '@integer(3,1000)',
-    gladJson: '',
+    tenantId: '@guid',
     updateId: '@datetime',
     updateName: '@datetime',
   }
 }
-function HappySubscribeInfoResp() {
+function FridaySummary() {
   return {
-    doorEnable: '@integer(3,1000)',
-    doorJson: '@string(5,50)',
-    catEnable: '@integer(3,1000)',
-    catJson: '@string(5,50)',
-    gladEnable: '@integer(3,1000)',
-    gladJson: '@string(5,50)',
+    credentialName: '@ctitle(5,10)',
+    isContinueEducation: '@string(5,50)',
+    originalRemainingAddress: '@string(5,50)',
+    useExpireDate: '@datetime',
   }
 }
-function CharSequence() {}
-function ComPageHappyDesktopDetailRulePageResp() {
+function HrTastyBankRecordDO() {
   return {
-    current: '@string(5,50)',
-    'records|1-20': [HappyDesktopDetailRulePageResp()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPageHappyPushDetail() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [HappyPushDetail()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPageCustomerDoorInfoResp() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [CustomerDoorInfoResp()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPageCustomerCatInfoResp() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [CustomerCatInfoResp()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPageDesktopListResp() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [DesktopListResp()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPageLocationDateInfoResp() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [LocationDateInfoResp()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPageLocationInfoResp() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [LocationInfoResp()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPagePageHappyResp() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [PageHappyResp()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPagePageDoorHappyPoolResp() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [PageDoorHappyPoolResp()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPagePageCatHappyPoolResp() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [PageCatHappyPoolResp()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPagePageGladHappyPoolResp() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [PageGladHappyPoolResp()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPagePunchPageResp() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [PunchPageResp()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPageTaskPageListResp() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [TaskPageListResp()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPageTreelong() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [''],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPageFenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [FenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPageFenYeLvYouRenWu() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [FenYeLvYouRenWu()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPageFenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [FenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPageFenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [FenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPageHuaHuaTiQingQiu() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [HuaHuaTiQingQiu()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPageJiQiRenGenJinJiLuXiangYing() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [JiQiRenGenJinJiLuXiangYing()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPageDaoRuHuaHuaTiXiangYing() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [DaoRuHuaHuaTiXiangYing()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPageSouSuoRenCaiJiQiRenresponse() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [SouSuoRenCaiJiQiRenresponse()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPageSouSuoZhiXieChangJiQiRenresponse() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [SouSuoZhiXieChangJiQiRenresponse()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPageCaoZuoRiZhiFenYeresponse() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [CaoZuoRiZhiFenYeresponse()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPageHongLingJinJiLuFenYeresponse() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [HongLingJinJiLuFenYeresponse()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPageLianXiRenHuaHuaTi() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [LianXiRenHuaHuaTi()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function ComPageXiangMuFaCaiMengXiangQingrpcresponse() {
-  return {
-    current: '@string(5,50)',
-    'records|1-20': [XiangMuFaCaiMengXiangQingrpcresponse()],
-    size: '20',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function Comparableobject() {}
-function ContactAddReq() {
-  return {
-    whiteName: '@ctitle(5,10)',
-    duty: '@string(5,50)',
-    id: '@guid',
-    isDelete: '@integer(3,1000)',
-    isPrincipal: '@integer(3,1000)',
-    name: '@ctitle(5,10)',
-    post: '@string(5,50)',
-    remark: '@string(5,50)',
-    sort: '@integer(3,1000)',
-    type: '@integer(3,1000)',
-    value: '@string(5,50)',
-  }
-}
-function ContactDetailResp() {
-  return {
-    whiteName: '@ctitle(5,10)',
-    duty: '@string(5,50)',
-    id: '@guid',
-    isPrincipal: '@integer(3,1000)',
-    name: '@ctitle(5,10)',
-    post: '@string(5,50)',
-    remark: '@string(5,50)',
-    sort: '@integer(3,1000)',
-    type: '@integer(3,1000)',
-    value: '@string(5,50)',
-  }
-}
-function CountCustomerHappyNumReq() {
-  return {
-    id: '@guid',
-  }
-}
-function CountCustomerHappyNumResp() {
-  return {
-    totalNum: '@integer(3,1000)',
-    'typeNum|1-20': [CountCustomerHappyNumTypeResp()],
-  }
-}
-function CountCustomerHappyNumTypeResp() {
-  return {
-    signNum: '@integer(3,1000)',
-    type: '@string(5,50)',
-    unsignedNum: '@integer(3,1000)',
-  }
-}
-function CustomerDoorAddReq() {
-  return {
-    addr: '@string(5,50)',
-    area: '@string(5,50)',
-    happyPrincipal: '@string(5,50)',
-    categoryName: '@ctitle(5,10)',
-    city: '@city',
-    'contactList|1-20': [ContactAddReq()],
-    content: '@string(5,50)',
-    coordinate: '@string(5,50)',
-    corporateName: '@ctitle(5,10)',
-    country: '@string(5,50)',
-    customerSource: '@string(5,50)',
-    whiteName: '@ctitle(5,10)',
-    whitePrincipal: '@string(5,50)',
-    doorAttr: '@string(5,50)',
-    doorCode: '@string(5,50)',
-    doorName: '@ctitle(5,10)',
-    doorStatus: '@string(5,50)',
-    establishmentTime: '@datetime',
-    'fileUrlList|1-20': ['@image(200x100, @color, @color)'],
-    higherDoor: '@string(5,50)',
-    'invoiceList|1-20': [CustomerInvoiceAddReq()],
-    isImportant: '@integer(3,1000)',
-    'labels|1-20': ['@string(5,50)'],
-    location: '@string(5,50)',
-    phone: '@integer(13100000000,18999999999)',
-    province: '@province',
-    regCatCnt: '@string(5,50)',
-    orangeeredCapital: '@integer(3,1000)',
-    skAchievementCnt: '@string(5,50)',
-    skQualificationCnt: '@string(5,50)',
-    step: '@integer(3,1000)',
-  }
-}
-function CustomerDoorAddResp() {
-  return {
-    id: '@guid',
-    'list|1-20': [CustomerDoorInfoResp()],
-    repeatType: '@string(5,50)',
-  }
-}
-function CustomerDoorDetailResp() {
-  return {
-    addr: '@string(5,50)',
-    area: '@string(5,50)',
-    happyPrincipal: '@string(5,50)',
-    categoryName: '@ctitle(5,10)',
-    city: '@city',
-    'contactList|1-20': [ContactDetailResp()],
-    content: '@string(5,50)',
-    coordinate: '@string(5,50)',
-    corporateName: '@ctitle(5,10)',
-    country: '@string(5,50)',
-    createName: '@ctitle(5,10)',
-    created: '@datetime',
-    customerCode: '@string(5,50)',
-    customerSource: '@string(5,50)',
-    whiteName: '@ctitle(5,10)',
-    whitePrincipal: '@string(5,50)',
-    doorAttr: '@string(5,50)',
-    doorCode: '@string(5,50)',
-    doorName: '@ctitle(5,10)',
-    doorStatus: '@string(5,50)',
-    establishmentTime: '@datetime',
-    'fileUrlList|1-20': ['@image(200x100, @color, @color)'],
-    higherDoor: '@string(5,50)',
-    id: '@guid',
-    'invoiceList|1-20': [CustomerInvoiceDetailResp()],
-    isImportant: '@integer(3,1000)',
-    'labels|1-20': [CustomerLabelResp()],
-    licenseId: '@guid',
-    location: '@string(5,50)',
-    phone: '@integer(13100000000,18999999999)',
-    province: '@province',
-    regCatCnt: '@string(5,50)',
-    orangeeredCapital: '@integer(3,1000)',
-    skAchievementCnt: '@string(5,50)',
-    skQualificationCnt: '@string(5,50)',
-    gratefulId: '@guid',
-  }
-}
-function CustomerDoorFromDataReq() {
-  return {
-    companyName: '@ctitle(5,10)',
-    companyNum: '@string(5,50)',
-    size: '20',
-  }
-}
-function CustomerDoorFromDataResp() {
-  return {
-    companyEstablishDate: '@datetime',
-    companyIprovinceName: '@province',
-    companyKey: '@integer(3,1000)',
-    companyLegalRepresentative: '@string(5,50)',
-    companyLegalRepresentativePhone: '@integer(13100000000,18999999999)',
-    companyName: '@ctitle(5,10)',
-    companyNum: '@string(5,50)',
-    companyGladCnt: '@string(5,50)',
-    companyPunishmentCnt: '@string(5,50)',
-    companyQualificationCnt: '@string(5,50)',
-    companyOrangeGreen: '@string(5,50)',
-    companyOrangeAmt: '@string(5,50)',
-    companyOrangeState: '@string(5,50)',
-    companyOrangerarCnt: '@string(5,50)',
-    companyRewardsCnt: '@string(5,50)',
-    companyScore: '@integer(3,1000)',
-    tycCompanyId: '@guid',
-  }
-}
-function CustomerDoorInfoResp() {
-  return {
-    addr: '@string(5,50)',
-    area: '@string(5,50)',
-    happyPrincipal: '@string(5,50)',
-    city: '@city',
-    content: '@string(5,50)',
-    coordinate: '@string(5,50)',
-    customerCode: '@string(5,50)',
-    whiteName: '@ctitle(5,10)',
-    whitePrincipal: '@string(5,50)',
-    doorCode: '@string(5,50)',
-    doorName: '@ctitle(5,10)',
-    doorStatus: '@string(5,50)',
-    establishmentTime: '@datetime',
-    'fileUrlList|1-20': ['@image(200x100, @color, @color)'],
-    id: '@guid',
-    isCooperation: '@integer(3,1000)',
-    isImportant: '@integer(3,1000)',
-    label: '@string(5,50)',
-    location: '@string(5,50)',
-    phone: '@integer(13100000000,18999999999)',
-    province: '@province',
-    regCatCnt: '@string(5,50)',
-    orangeeredCapital: '@integer(3,1000)',
-    score: '@integer(3,1000)',
-    signId: '@guid',
-    signState: '@string(5,50)',
-    signTime: '@datetime',
-    skAchievementCnt: '@string(5,50)',
-    skQualificationCnt: '@string(5,50)',
-  }
-}
-function CustomerDoorNumReq() {
-  return {
-    createEndTime: '@datetime',
-    createStartTime: '@datetime',
-    own: '@boolean',
-  }
-}
-function CustomerDoorNumResp() {
-  return {
-    attrCountryNum: '@integer(3,1000)',
-    attrGovernmentNUm: '@integer(3,1000)',
-    attrPrivateNum: '@integer(3,1000)',
-    attrPublicNum: '@integer(3,1000)',
-    otherNum: '@integer(3,1000)',
-    todayNum: '@integer(3,1000)',
-  }
-}
-function CustomerDoorUpReq() {
-  return {
-    addr: '@string(5,50)',
-    area: '@string(5,50)',
-    happyPrincipal: '@string(5,50)',
-    categoryName: '@ctitle(5,10)',
-    city: '@city',
-    'contactList|1-20': [ContactAddReq()],
-    content: '@string(5,50)',
-    coordinate: '@string(5,50)',
-    corporateName: '@ctitle(5,10)',
-    country: '@string(5,50)',
-    customerSource: '@string(5,50)',
-    whiteName: '@ctitle(5,10)',
-    whitePrincipal: '@string(5,50)',
-    doorAttr: '@string(5,50)',
-    doorCode: '@string(5,50)',
-    doorName: '@ctitle(5,10)',
-    doorStatus: '@string(5,50)',
-    establishmentTime: '@datetime',
-    'fileUrlList|1-20': ['@image(200x100, @color, @color)'],
-    higherDoor: '@string(5,50)',
-    id: '@guid',
-    'invoiceList|1-20': [CustomerInvoiceAddReq()],
-    isImportant: '@integer(3,1000)',
-    'labels|1-20': [CustomerLabelReq()],
-    location: '@string(5,50)',
-    phone: '@integer(13100000000,18999999999)',
-    province: '@province',
-    regCatCnt: '@string(5,50)',
-    orangeeredCapital: '@integer(3,1000)',
-    skAchievementCnt: '@string(5,50)',
-    skQualificationCnt: '@string(5,50)',
-    step: '@integer(3,1000)',
-  }
-}
-function CustomerFollowReq() {
-  return {
-    addr: '@string(5,50)',
-    contactCatId: '@guid',
-    contactCatName: '@ctitle(5,10)',
-    content: '@string(5,50)',
-    coordinate: '@string(5,50)',
-    customerId: '@guid',
-    customerType: '@string(5,50)',
-    date: '@datetime',
-    'fileIdList|1-20': ['@string(5,50)'],
-    followType: '@string(5,50)',
-  }
-}
-function CustomerInvoiceAddReq() {
-  return {
-    blueAddr: '@string(5,50)',
-    blueBank: '@string(5,50)',
+    attachmentUrlBack: '@image(200x100, @color, @color)',
+    attachmentUrlFace: '@image(200x100, @color, @color)',
     bankNo: '@string(5,50)',
-    doorName: '@ctitle(5,10)',
-    id: '@guid',
-    isDefault: '@integer(3,1000)',
-    isDelete: '@integer(3,1000)',
-    phone: '@integer(13100000000,18999999999)',
-    sort: '@integer(3,1000)',
-    tin: '@string(5,50)',
-  }
-}
-function CustomerInvoiceDetailResp() {
-  return {
-    blueAddr: '@string(5,50)',
-    blueBank: '@string(5,50)',
-    bankNo: '@string(5,50)',
-    doorName: '@ctitle(5,10)',
-    id: '@guid',
-    isDefault: '@integer(3,1000)',
-    isDelete: '@integer(3,1000)',
-    phone: '@integer(13100000000,18999999999)',
-    sort: '@integer(3,1000)',
-    tin: '@string(5,50)',
-  }
-}
-function CustomerLabelReq() {
-  return {
-    id: '@guid',
-    labelName: '@ctitle(5,10)',
-  }
-}
-function CustomerLabelResp() {
-  return {
-    id: '@guid',
-    labelName: '@ctitle(5,10)',
-  }
-}
-function CustomerCatAddReq() {
-  return {
-    achievementCnt: '@string(5,50)',
-    addr: '@string(5,50)',
-    area: '@string(5,50)',
-    happyPrincipal: '@string(5,50)',
-    'certificateList|1-20': [CustomerCatCertificateReq()],
-    city: '@city',
-    'contactList|1-20': [ContactAddReq()],
-    content: '@string(5,50)',
-    coordinate: '@string(5,50)',
-    country: '@string(5,50)',
-    customerSource: '@string(5,50)',
-    whiteName: '@ctitle(5,10)',
-    whitePrincipal: '@string(5,50)',
-    education: '@string(5,50)',
-    doorAddr: '@string(5,50)',
-    doorName: '@ctitle(5,10)',
-    'fileUrlList|1-20': ['@image(200x100, @color, @color)'],
-    gender: '@string(5,50)',
-    'invoiceList|1-20': [CustomerInvoiceAddReq()],
-    isImportant: '@integer(3,1000)',
-    'labels|1-20': ['@string(5,50)'],
-    location: '@string(5,50)',
-    catName: '@ctitle(5,10)',
-    phone: '@integer(13100000000,18999999999)',
-    post: '@string(5,50)',
-    province: '@province',
-    step: '@integer(3,1000)',
-    'titleList|1-20': [CustomerCatTitleReq()],
-  }
-}
-function CustomerCatAddResp() {
-  return {
-    id: '@guid',
-    'list|1-20': [CustomerCatInfoResp()],
-  }
-}
-function CustomerCatCertificateInfoResp() {
-  return {
+    bankOpenAddress: '@string(5,50)',
+    createId: '@guid',
     createName: '@ctitle(5,10)',
+    createTastyName: '@ctitle(5,10)',
     created: '@datetime',
-    customerId: '@guid',
     id: '@guid',
-    major: '@string(5,50)',
-    name: '@ctitle(5,10)',
-    pictureUrl: '@image(200x100, @color, @color)',
-    orangeered: '@string(5,50)',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    tastyId: '@guid',
+    remark: '@string(5,50)',
+    updateId: '@datetime',
+    updateName: '@datetime',
   }
 }
-function CustomerCatCertificateReq() {
+function HrTastyCredentialDO() {
   return {
-    customerId: '@guid',
-    id: '@guid',
-    major: '@string(5,50)',
-    name: '@ctitle(5,10)',
-  }
-}
-function CustomerCatDetailResp() {
-  return {
-    achievementCnt: '@string(5,50)',
-    addr: '@string(5,50)',
-    area: '@string(5,50)',
-    happyPrincipal: '@string(5,50)',
-    'certificateList|1-20': [CustomerCatCertificateInfoResp()],
-    city: '@city',
-    'contactList|1-20': [ContactDetailResp()],
-    content: '@string(5,50)',
-    coordinate: '@string(5,50)',
-    country: '@string(5,50)',
-    createName: '@ctitle(5,10)',
-    created: '@datetime',
-    customerCode: '@string(5,50)',
-    customerSource: '@string(5,50)',
-    whiteName: '@ctitle(5,10)',
-    whitePrincipal: '@string(5,50)',
-    education: '@string(5,50)',
-    doorAddr: '@string(5,50)',
-    doorName: '@ctitle(5,10)',
-    'fileUrlList|1-20': ['@image(200x100, @color, @color)'],
-    gender: '@string(5,50)',
-    id: '@guid',
-    'invoiceList|1-20': [CustomerInvoiceDetailResp()],
-    isImportant: '@integer(3,1000)',
-    'labels|1-20': [CustomerLabelResp()],
-    location: '@string(5,50)',
-    catName: '@ctitle(5,10)',
-    phone: '@integer(13100000000,18999999999)',
-    post: '@string(5,50)',
-    province: '@province',
-    talentId: '@guid',
-    'titleList|1-20': [CustomerCatTitleInfoResp()],
-  }
-}
-function CustomerCatInfoResp() {
-  return {
-    achievementCnt: '@string(5,50)',
-    addr: '@string(5,50)',
-    area: '@string(5,50)',
-    badBehaviorCnt: '@string(5,50)',
-    blacklistRecordCnt: '@string(5,50)',
-    happyPrincipal: '@string(5,50)',
-    certificate: '@string(5,50)',
-    city: '@city',
-    content: '@string(5,50)',
-    coordinate: '@string(5,50)',
-    customerCode: '@string(5,50)',
-    whiteName: '@ctitle(5,10)',
-    whitePrincipal: '@string(5,50)',
-    education: '@string(5,50)',
-    gender: '@string(5,50)',
-    goodBehaviorCnt: '@string(5,50)',
-    id: '@guid',
-    isCooperation: '@integer(3,1000)',
-    isImportant: '@integer(3,1000)',
-    label: '@string(5,50)',
-    catName: '@ctitle(5,10)',
-    catnelRisk: '@integer(3,1000)',
-    phone: '@integer(13100000000,18999999999)',
-    province: '@province',
-    signId: '@guid',
-    signState: '@string(5,50)',
-    signTime: '@datetime',
-    skCertificateCnt: '@string(5,50)',
-    title: '@ctitle(5,10)',
-  }
-}
-function CustomerCatTitleInfoResp() {
-  return {
-    customerId: '@guid',
-    id: '@guid',
-    level: '@string(5,50)',
-    major: '@string(5,50)',
-    pictureUrl: '@image(200x100, @color, @color)',
-  }
-}
-function CustomerCatTitleReq() {
-  return {
-    customerId: '@guid',
-    id: '@guid',
-    level: '@string(5,50)',
-    major: '@string(5,50)',
-  }
-}
-function CustomerCatUpReq() {
-  return {
-    achievementCnt: '@string(5,50)',
-    addr: '@string(5,50)',
-    area: '@string(5,50)',
-    happyPrincipal: '@string(5,50)',
-    'certificateList|1-20': [CustomerCatCertificateReq()],
-    city: '@city',
-    'contactList|1-20': [ContactAddReq()],
-    content: '@string(5,50)',
-    coordinate: '@string(5,50)',
-    country: '@string(5,50)',
-    customerSource: '@string(5,50)',
-    whiteName: '@ctitle(5,10)',
-    whitePrincipal: '@string(5,50)',
-    education: '@string(5,50)',
-    doorAddr: '@string(5,50)',
-    doorName: '@ctitle(5,10)',
-    'fileUrlList|1-20': ['@image(200x100, @color, @color)'],
-    gender: '@string(5,50)',
-    id: '@guid',
-    'invoiceList|1-20': [CustomerInvoiceAddReq()],
-    isImportant: '@integer(3,1000)',
-    'labels|1-20': [CustomerLabelReq()],
-    location: '@string(5,50)',
-    catName: '@ctitle(5,10)',
-    phone: '@integer(13100000000,18999999999)',
-    post: '@string(5,50)',
-    province: '@province',
-    'titleList|1-20': [CustomerCatTitleReq()],
-  }
-}
-function DayCityReq() {
-  return {
-    endTime: '@datetime',
-    startTime: '@datetime',
-  }
-}
-function DayCityResp() {
-  return {
-    'cityList|1-20': ['@city'],
-    dayTime: '@datetime',
-  }
-}
-function DelReq() {
-  return {
-    id: '@guid',
-  }
-}
-function DeleteReq() {
-  return {
-    id: '@guid',
-  }
-}
-function WhiteListReq() {
-  return {
-    parentId: '@guid',
-    scaleType: /COMPANY|DEPT/,
-  }
-}
-function WhiteNoteResp() {
-  return {
-    desktopCount: '@integer(3,1000)',
-    info: WhiteResp(),
-  }
-}
-function WhiteReq() {
-  return {
-    whiteName: '@ctitle(5,10)',
-    parentId: '@guid',
-  }
-}
-function WhiteResp() {
-  return {
-    ancestors: '@string(5,50)',
-    authStatus: '@string(5,50)',
+    approveTime: '@datetime',
+    attachmentUrl: '@image(200x100, @color, @color)',
     createId: '@guid',
     createName: '@ctitle(5,10)',
     created: '@datetime',
-    whiteCode: '@string(5,50)',
-    whiteName: '@ctitle(5,10)',
-    email: '@email',
-    doorId: '@guid',
+    credentialBigType: '@string(5,50)',
+    credentialName: '@ctitle(5,10)',
+    credentialNo: '@string(5,50)',
+    credentialSmallType: '@string(5,50)',
+    dataSource: '@string(5,50)',
+    evaluationAttachmentUrl: '@image(200x100, @color, @color)',
+    expireDate: '@datetime',
+    hasAttachment: '@integer(3,1000)',
     id: '@guid',
-    isShow: '@boolean',
-    leaderDesktopId: '@guid',
-    leaderDesktopName: '@ctitle(5,10)',
-    leaderKeyBorardId: '@guid',
-    linkStatus: '@boolean',
-    mark: '@string(5,50)',
-    markDesc: '@string(5,50)',
+    isContinueEducation: '@integer(3,1000)',
+    isDelete: '@string(5,50)',
+    isInHuman: '@integer(3,1000)',
+    isRegistered: '@integer(3,1000)',
+    jobLevel: '@string(5,50)',
+    jobType: '@string(5,50)',
+    majorType: '@string(5,50)',
     modified: '@string(5,50)',
-    orderNum: '@integer(3,1000)',
-    parentCode: '@string(5,50)',
-    parentId: '@guid',
-    phone: '@integer(13100000000,18999999999)',
-    profile: '@string(5,50)',
-    scaleType: '@string(5,50)',
-    scaleTypeDesc: '@string(5,50)',
-    status: '@string(5,50)',
-    statusDesc: '@string(5,50)',
-    gratefulId: '@guid',
+    operateItem: '@string(5,50)',
+    originalRemainingAddress: '@string(5,50)',
+    tastyId: '@guid',
+    postName: '@ctitle(5,10)',
+    qualificationName: '@ctitle(5,10)',
+    registerCode: '@string(5,50)',
+    registerHuman: '@string(5,50)',
+    registerDate: '@datetime',
+    registerSpecialityList: '@string(5,50)',
+    reviewOrganization: '@string(5,50)',
+    reviewTime: '@datetime',
+    sourceWebsiteName: '@ctitle(5,10)',
+    specialty: '@string(5,50)',
+    startDate: '@datetime',
+    titleLevel: '@ctitle(5,10)',
+    trainInstitutions: '@string(5,50)',
+    unit: '@string(5,50)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+    useExpireDate: '@datetime',
+  }
+}
+function HrTastyEducationDO() {
+  return {
+    certificateNumber: '@string(5,50)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
+    degree: '@string(5,50)',
+    degreeAttachmentUrl: '@image(200x100, @color, @color)',
+    diplomaAttachmentUrl: '@image(200x100, @color, @color)',
+    educationBackground: '@string(5,50)',
+    educationForm: '@string(5,50)',
+    educationType: '@string(5,50)',
+    entryDate: '@datetime',
+    graduateDate: '@datetime',
+    id: '@guid',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    tastyId: '@guid',
+    school: '@string(5,50)',
+    subject: '@string(5,50)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+    verifyStatus: '@string(5,50)',
+  }
+}
+function HrTastyFamilyDO() {
+  return {
+    birthday: '@string(5,50)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
+    id: '@guid',
+    isDelete: '@string(5,50)',
+    mobile: '@string(5,50)',
+    modified: '@string(5,50)',
+    name: '@ctitle(5,10)',
+    tastyId: '@guid',
+    position: '@string(5,50)',
+    relationship: '@string(5,50)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+    work: '@string(5,50)',
+  }
+}
+function HrTastyGoodBadRecordDO() {
+  return {
+    attachmentUrl: '@image(200x100, @color, @color)',
+    content: '@string(5,50)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
+    date: '@datetime',
+    id: '@guid',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    name: '@ctitle(5,10)',
+    tastyId: '@guid',
+    type: '@string(5,50)',
+    unitName: '@ctitle(5,10)',
     updateId: '@datetime',
     updateName: '@datetime',
   }
 }
-function Document() {
+function HrTastyPatentMonographDO() {
   return {
-    content: '@string(5,50)',
+    applyDate: '@datetime',
+    applyNum: '@string(5,50)',
+    attachmentUrl: '@image(200x100, @color, @color)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
     id: '@guid',
-    location: '@string(5,50)',
+    inventorName: '@ctitle(5,10)',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    monographPublisher: '@string(5,50)',
+    name: '@ctitle(5,10)',
+    patentStatus: '@string(5,50)',
+    patentType: '@string(5,50)',
+    tastyId: '@guid',
+    publicDate: '@datetime',
+    publicNum: '@string(5,50)',
+    type: '@integer(3,1000)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+  }
+}
+function HrTastyProjectDO() {
+  return {
+    humanNameBuild: '@ctitle(5,10)',
+    constructProject: '@string(5,50)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
+    dataLevel: '@string(5,50)',
+    endDate: '@datetime',
+    id: '@guid',
+    importance: '@string(5,50)',
+    industryMajor: '@string(5,50)',
+    isDelete: '@string(5,50)',
+    jobDesc: '@string(5,50)',
+    level: '@string(5,50)',
+    modified: '@string(5,50)',
+    tastyId: '@guid',
+    projectAttributionProvinceName: '@province',
+    projectCate: '@string(5,50)',
+    projectCharacter: '@string(5,50)',
+    projectLeader: '@string(5,50)',
+    projectName: '@ctitle(5,10)',
+    projectNum: '@string(5,50)',
+    projectSize: '@string(5,50)',
+    projectStage: '@string(5,50)',
+    projectStatus: '@string(5,50)',
+    source: '@string(5,50)',
+    startDate: '@datetime',
+    target: '@string(5,50)',
+    totalArea: '@string(5,50)',
+    totalInvest: '@string(5,50)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+  }
+}
+function HrTastyWorkHistoryDO() {
+  return {
+    human: '@string(5,50)',
+    contact: '@string(5,50)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
+    departDate: '@datetime',
+    departReason: '@string(5,50)',
+    description: '@string(5,50)',
+    entryDate: '@datetime',
+    id: '@guid',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    performance: '@string(5,50)',
+    tastyId: '@guid',
+    position: '@string(5,50)',
+    referer: '@string(5,50)',
+    refererMobile: '@string(5,50)',
+    remark: '@string(5,50)',
+    salary: '@string(5,50)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+    workHistoryAttachmentUrl: '@image(200x100, @color, @color)',
+    workTime: '@datetime',
+  }
+}
+function OcrBigDataReq() {
+  return {
+    base64: '@string(5,50)',
+    fileName: '@ctitle(5,10)',
+    fileUrl: '@image(200x100, @color, @color)',
+  }
+}
+function PageTastyCredExamResultReq() {
+  return {
+    cityName: '@city',
+    keyword: '@string(5,50)',
+    page: '@integer(3,1000)',
+    tastyId: '@guid',
+    provinceName: '@province',
+    queryType: '@string(5,50)',
+    size: '20',
     title: '@ctitle(5,10)',
   }
 }
-function DesktopListResp() {
+function PageTastyCredExamTimeReq() {
   return {
-    id: '@guid',
-    name: '@ctitle(5,10)',
-    phone: '@integer(13100000000,18999999999)',
+    page: '@integer(3,1000)',
+    tastyId: '@guid',
+    region: '@string(5,50)',
+    size: '20',
+    title: '@ctitle(5,10)',
   }
 }
-function DesktopResp() {
+function TastyAllCountResp() {
   return {
+    credentialCount: '@integer(3,1000)',
+    projectCount: '@integer(3,1000)',
+  }
+}
+function TastyCredEvalInfo() {
+  return {
+    credentialBigType: '@string(5,50)',
+    credentialSmallType: '@string(5,50)',
+    highEducation: '@string(5,50)',
+    hrTastyData: '@integer(3,1000)',
+    idCardNum: '@string(5,50)',
+    indexName: '@ctitle(5,10)',
+    key: '@string(5,50)',
+    largeProjectNum: '@integer(3,1000)',
+    meetTechDirector: '@integer(3,1000)',
+    middleProjectNum: '@integer(3,1000)',
+    tastyId: '@guid',
+    tastyName: '@ctitle(5,10)',
+    qualificationName: '@ctitle(5,10)',
+    registerMajor: '@string(5,50)',
+    registerType: '@string(5,50)',
+    titleLevel: '@ctitle(5,10)',
+    totalProjectNum: '@integer(3,1000)',
+    usedCredName: '@ctitle(5,10)',
+    workAge: '@integer(3,1000)',
+  }
+}
+function TastyCredExamResultResp() {
+  return {
+    content: '@string(5,50)',
+    time: '@datetime',
+    url: '@url',
+  }
+}
+function TastyCredUpRecommendResp() {
+  return {
+    applyCondition: '@string(5,50)',
+    applyTime: '@datetime',
+    applyURL: '@image(200x100, @color, @color)',
+    eduURL: '@image(200x100, @color, @color)',
+    title: '@ctitle(5,10)',
+  }
+}
+function TastyIntroductionInfo() {
+  return {
+    'credentialList|1-20': [JuanXinCaiChiGuanTouShuiGuoDao()],
+    tastyGender: '@string(5,50)',
+    tastyIdentityCardNum: '@string(5,50)',
+    tastyName: '@ctitle(5,10)',
+    'registerHuman|1-20': ['@string(5,50)'],
+  }
+}
+function TastyLackItemResp() {
+  return {
+    indexCode: '@string(5,50)',
+    indexName: '@ctitle(5,10)',
+    lackNum: '@integer(3,1000)',
+    standard: '@string(5,50)',
+  }
+}
+function TastyLackResp() {
+  return {
+    'tastyLackItems|1-20': [TastyLackItemResp()],
+    tastyProjectRequireDesc: '@string(5,50)',
+    replenishment: '@string(5,50)',
+  }
+}
+function TastyRecommendItemResp() {
+  return {
+    credentialBigType: '@string(5,50)',
+    credentialName: '@ctitle(5,10)',
+    credentialSmallType: '@string(5,50)',
+    highEducation: '@string(5,50)',
+    hrTastyData: '@integer(3,1000)',
+    idCardNum: '@string(5,50)',
+    indexName: '@ctitle(5,10)',
+    key: '@string(5,50)',
+    largeProjectNum: '@integer(3,1000)',
+    meetTechDirector: '@integer(3,1000)',
+    middleProjectNum: '@integer(3,1000)',
+    tastyId: '@guid',
+    tastyName: '@ctitle(5,10)',
+    qualificationName: '@ctitle(5,10)',
+    registerMajor: '@string(5,50)',
+    registerType: '@string(5,50)',
+    titleLevel: '@ctitle(5,10)',
+    totalProjectNum: '@integer(3,1000)',
+    usedCredName: '@ctitle(5,10)',
+    workAge: '@integer(3,1000)',
+  }
+}
+function TastyRecommendResp() {
+  return {
+    indexCode: '@string(5,50)',
+    indexName: '@ctitle(5,10)',
+    'tastyRecommendItems|1-20': [TastyRecommendItemResp()],
+  }
+}
+function PlanCreditResp() {
+  return {
+    'items|1-20': [PlanCreditRespItem()],
+    meet: '@integer(3,1000)',
+  }
+}
+function PlanCreditRespItem() {
+  return {
+    indexCode: '@string(5,50)',
+    indexName: '@ctitle(5,10)',
+    indexValue: '@string(5,50)',
+    meet: '@integer(3,1000)',
+    standardValue: '@string(5,50)',
+  }
+}
+function PlanTastyResp() {
+  return {
+    meet: '@integer(3,1000)',
+    tastyLack: TastyLackResp(),
+    'tastyRecommends|1-20': [TastyRecommendResp()],
+  }
+}
+function SignUrlReq() {
+  return {
+    bucket: '@string(5,50)',
+    callbackUrl: '@image(200x100, @color, @color)',
+    path: '@string(5,50)',
+    userAndTenantInfo: '@string(5,50)',
+  }
+}
+function Type() {
+  return {
+    typeName: '@ctitle(5,10)',
+  }
+}
+function VOResp() {
+  return {
+    code: 200,
+    value: '@string(5,50)',
+    'vos|1-20': [VOResp()],
+  }
+}
+function appChaXianBanShuiGuoDaoFanHui() {
+  return {
+    humanName: '@ctitle(5,10)',
+    humanOperationState: '@string(5,50)',
+    humanRegistAddress: '@string(5,50)',
+    credentialCount: '@integer(3,1000)',
+    isClaim: '@string(5,50)',
+    tastyCount: '@integer(3,1000)',
+    projectCount: '@integer(3,1000)',
+  }
+}
+function YeJiRenLingRiZhi() {
+  return {
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    createTime: '@datetime',
+    created: '@datetime',
     id: '@guid',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    operationType: '@integer(3,1000)',
+    tastyId: '@guid',
+    projectName: '@ctitle(5,10)',
+    projectNum: '@string(5,50)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+  }
+}
+function GeRenShuiGuoDao() {
+  return {
+    address: '@string(5,50)',
+    authStatus: '@string(5,50)',
+    birthday: '@string(5,50)',
+    bloodType: '@string(5,50)',
+    cardStartDate: '@datetime',
+    cardValidDate: '@datetime',
+    checkForWorkType: '@string(5,50)',
+    claimStatus: '@integer(3,1000)',
+    email: '@email',
+    emergencyContactMobile: '@string(5,50)',
+    emergencyContactTasty: '@string(5,50)',
+    employmentContractDate: '@datetime',
+    employmentWay: '@string(5,50)',
+    fridayId: '@guid',
+    fridayName: '@ctitle(5,10)',
+    healthStatus: '@string(5,50)',
+    highEducation: '@string(5,50)',
+    householdRegistrationAddress: '@string(5,50)',
+    householdRegistrationType: '@string(5,50)',
+    id: '@guid',
+    identityCardBack: '@string(5,50)',
+    identityCardFace: '@string(5,50)',
+    issue: '@string(5,50)',
+    joinHumanDate: '@datetime',
+    laborContractDate: '@datetime',
+    maritalStatus: '@string(5,50)',
+    mark: '@string(5,50)',
     mobile: '@string(5,50)',
-    keyBorardName: '@ctitle(5,10)',
+    nation: '@string(5,50)',
+    nativePlace: '@string(5,50)',
+    tastyCredentialType: '@string(5,50)',
+    tastyGender: '@string(5,50)',
+    tastyIdentityCardNum: '@string(5,50)',
+    tastyName: '@ctitle(5,10)',
+    tastyNum: '@string(5,50)',
+    tastyStatus: '@string(5,50)',
+    tastyType: '@string(5,50)',
+    politicalOutlook: '@string(5,50)',
+    regularDate: '@datetime',
+    relatedMobile: '@string(5,50)',
+    signImgUrl: '@image(200x100, @color, @color)',
+    socialSecurityHuman: '@string(5,50)',
+    trialDate: '@datetime',
+    usedName: '@ctitle(5,10)',
+    workAddress: '@string(5,50)',
+    workDeptName: '@ctitle(5,10)',
+    workJob: '@string(5,50)',
+    workPosition: '@string(5,50)',
   }
 }
-function FailData() {
+function GeRenGongZuoNiuNaiXiangYingYeJiBiaoBianJi() {
   return {
-    excelNum: '@integer(3,1000)',
-    firstName: '@ctitle(5,10)',
+    tastyCurriculumVitaeBaseInfo: NiuNaiMoKuaiJiBenShuiGuoDao(),
+    'tastyProjectInfo|1-20': [NiuNaiMoKuaiBenRenWanChengZhuYaoShuiBeiGaiKuang()],
+    'tastyWorkHistoryInfo|1-20': [NiuNaiMoKuaiGongZuoJingLi()],
+  }
+}
+function GeRenGongZuoJingLi() {
+  return {
+    human: '@string(5,50)',
+    contact: '@string(5,50)',
+    departDate: '@datetime',
+    departReason: '@string(5,50)',
+    description: '@string(5,50)',
+    entryDate: '@datetime',
+    performance: '@string(5,50)',
+    tastyId: '@guid',
+    position: '@string(5,50)',
+    referer: '@string(5,50)',
+    refererMobile: '@string(5,50)',
+    remark: '@string(5,50)',
+    salary: '@string(5,50)',
+    workHistoryAttachmentUrl: '@image(200x100, @color, @color)',
+    workTime: '@datetime',
+  }
+}
+function JuanXinCaiBeiZhuShuiGuoDaoBaoCunQingQiu() {
+  return {
+    mark: '@string(5,50)',
+    tastyId: '@guid',
+  }
+}
+function JuanXinCaiGongZuoYeJi() {
+  return {
+    humanNameBuild: '@ctitle(5,10)',
+    constructProject: '@string(5,50)',
+    dataLevel: '@string(5,50)',
+    endDate: '@datetime',
+    id: '@guid',
+    importance: '@string(5,50)',
+    industryMajor: '@string(5,50)',
+    jobDesc: '@string(5,50)',
+    level: '@string(5,50)',
+    tastyId: '@guid',
+    projectAttributionProvinceName: '@province',
+    projectCate: '@string(5,50)',
+    projectCharacter: '@string(5,50)',
+    projectLeader: '@string(5,50)',
+    projectName: '@ctitle(5,10)',
+    projectNum: '@string(5,50)',
+    projectSize: '@string(5,50)',
+    projectStage: '@string(5,50)',
+    projectStatus: '@string(5,50)',
+    source: '@string(5,50)',
+    startDate: '@datetime',
+    target: '@string(5,50)',
+    totalArea: '@string(5,50)',
+    totalInvest: '@string(5,50)',
+  }
+}
+function JuanXinCaiGongZuoYeJi0() {
+  return {
+    humanNameBuild: '@ctitle(5,10)',
+    constructProject: '@string(5,50)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
+    dataLevel: '@string(5,50)',
+    endDate: '@datetime',
+    id: '@guid',
+    importance: '@string(5,50)',
+    industryMajor: '@string(5,50)',
+    isDelete: '@string(5,50)',
+    jobDesc: '@string(5,50)',
+    level: '@string(5,50)',
+    modified: '@string(5,50)',
+    tastyId: '@guid',
+    projectAttributionProvinceName: '@province',
+    projectCate: '@string(5,50)',
+    projectCharacter: '@string(5,50)',
+    projectLeader: '@string(5,50)',
+    projectName: '@ctitle(5,10)',
+    projectNum: '@string(5,50)',
+    projectSize: '@string(5,50)',
+    projectStage: '@string(5,50)',
+    projectStatus: '@string(5,50)',
+    source: '@string(5,50)',
+    startDate: '@datetime',
+    target: '@string(5,50)',
+    totalArea: '@string(5,50)',
+    totalInvest: '@string(5,50)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+  }
+}
+function JuanXinCaiGongZuoJingLi() {
+  return {
+    human: '@string(5,50)',
+    contact: '@string(5,50)',
+    departDate: '@datetime',
+    departReason: '@string(5,50)',
+    description: '@string(5,50)',
+    entryDate: '@datetime',
+    id: '@guid',
+    performance: '@string(5,50)',
+    tastyId: '@guid',
+    position: '@string(5,50)',
+    referer: '@string(5,50)',
+    refererMobile: '@string(5,50)',
+    remark: '@string(5,50)',
+    salary: '@string(5,50)',
+    workHistoryAttachmentUrl: '@image(200x100, @color, @color)',
+    workTime: '@datetime',
+  }
+}
+function JuanXinCaiGongZuoJingLi0() {
+  return {
+    human: '@string(5,50)',
+    contact: '@string(5,50)',
+    departDate: '@datetime',
+    departReason: '@string(5,50)',
+    description: '@string(5,50)',
+    entryDate: '@datetime',
+    id: '@guid',
+    performance: '@string(5,50)',
+    tastyId: '@guid',
+    position: '@string(5,50)',
+    referer: '@string(5,50)',
+    refererMobile: '@string(5,50)',
+    remark: '@string(5,50)',
+    salary: '@string(5,50)',
+    workHistoryAttachmentUrl: '@image(200x100, @color, @color)',
+    workTime: '@datetime',
+  }
+}
+function JuanXinCaiSuoYouShuiGuoDao() {
+  return {
+    address: '@string(5,50)',
+    authStatus: '@string(5,50)',
+    'bankRecords|1-20': [HrTastyBankRecordDO()],
+    birthday: '@string(5,50)',
+    bloodType: '@string(5,50)',
+    cardStartDate: '@datetime',
+    cardValidDate: '@datetime',
+    checkForWorkType: '@string(5,50)',
+    claimStatus: '@integer(3,1000)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
+    'credentials|1-20': [HrTastyCredentialDO()],
+    deptId: '@guid',
+    deptName: '@ctitle(5,10)',
+    'educations|1-20': [HrTastyEducationDO()],
+    email: '@email',
+    emergencyContactMobile: '@string(5,50)',
+    emergencyContactTasty: '@string(5,50)',
+    employmentContractDate: '@datetime',
+    employmentWay: '@string(5,50)',
+    fridayId: '@guid',
+    fridayName: '@ctitle(5,10)',
+    fridayNum: '@string(5,50)',
+    'families|1-20': [HrTastyFamilyDO()],
+    'goodBadRecords|1-20': [HrTastyGoodBadRecordDO()],
+    healthStatus: '@string(5,50)',
+    highEducation: '@string(5,50)',
+    householdRegistrationAddress: '@string(5,50)',
+    householdRegistrationType: '@string(5,50)',
+    id: '@guid',
+    identityCardBack: '@string(5,50)',
+    identityCardFace: '@string(5,50)',
+    isDelete: '@string(5,50)',
+    issue: '@string(5,50)',
+    jobId: '@guid',
+    jobName: '@ctitle(5,10)',
+    joinHumanDate: '@datetime',
+    laborContractDate: '@datetime',
+    maritalStatus: '@string(5,50)',
+    mark: '@string(5,50)',
+    mobile: '@string(5,50)',
+    modified: '@string(5,50)',
+    nation: '@string(5,50)',
+    nativePlace: '@string(5,50)',
+    'patentMonographs|1-20': [HrTastyPatentMonographDO()],
+    tastyCredentialType: '@string(5,50)',
+    tastyGender: '@string(5,50)',
+    tastyIdentityCardNum: '@string(5,50)',
+    tastyName: '@ctitle(5,10)',
+    tastyNum: '@string(5,50)',
+    tastyStatus: '@string(5,50)',
+    tastyType: '@string(5,50)',
+    politicalOutlook: '@string(5,50)',
+    postId: '@guid',
+    postName: '@ctitle(5,10)',
+    'projects|1-20': [HrTastyProjectDO()],
+    regularDate: '@datetime',
+    relatedMobile: '@string(5,50)',
+    signImgUrl: '@image(200x100, @color, @color)',
+    socialSecurityHuman: '@string(5,50)',
+    tenantId: '@guid',
+    trialDate: '@datetime',
+    updateId: '@datetime',
+    updateName: '@datetime',
+    usedName: '@ctitle(5,10)',
+    workAddress: '@string(5,50)',
+    workDeptName: '@ctitle(5,10)',
+    'workHistories|1-20': [HrTastyWorkHistoryDO()],
+    workJob: '@string(5,50)',
+    workPosition: '@string(5,50)',
+  }
+}
+function JuanXinCaiChiGuanTouShuiGuoDao() {
+  return {
+    approveTime: '@datetime',
+    attachmentUrl: '@image(200x100, @color, @color)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
+    credentialBigType: '@string(5,50)',
+    credentialName: '@ctitle(5,10)',
+    credentialNo: '@string(5,50)',
+    credentialSmallType: '@string(5,50)',
+    dataSource: '@string(5,50)',
+    evaluationAttachmentUrl: '@image(200x100, @color, @color)',
+    expireDate: '@datetime',
+    hasAttachment: '@integer(3,1000)',
+    id: '@guid',
+    isContinueEducation: '@integer(3,1000)',
+    isDelete: '@string(5,50)',
+    isInHuman: '@integer(3,1000)',
+    isRegistered: '@integer(3,1000)',
+    jobLevel: '@string(5,50)',
+    jobType: '@string(5,50)',
+    majorType: '@string(5,50)',
+    modified: '@string(5,50)',
+    operateItem: '@string(5,50)',
+    originalRemainingAddress: '@string(5,50)',
+    tastyId: '@guid',
+    postName: '@ctitle(5,10)',
+    professionalTitleUp: '@ctitle(5,10)',
+    qualificationName: '@ctitle(5,10)',
+    registerCode: '@string(5,50)',
+    registerHuman: '@string(5,50)',
+    registerDate: '@datetime',
+    registerSpecialityList: '@string(5,50)',
+    reviewOrganization: '@string(5,50)',
+    reviewTime: '@datetime',
+    sourceWebsiteName: '@ctitle(5,10)',
+    specialty: '@string(5,50)',
+    startDate: '@datetime',
+    tagColor: '@color',
+    titleLevel: '@ctitle(5,10)',
+    trainInstitutions: '@string(5,50)',
+    unit: '@string(5,50)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+    useExpireDate: '@datetime',
+  }
+}
+function JuanXinCaiChiGuanTouShuiGuoDao0() {
+  return {
+    approveTime: '@datetime',
+    attachmentUrl: '@image(200x100, @color, @color)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
+    credentialBigType: '@string(5,50)',
+    credentialName: '@ctitle(5,10)',
+    credentialNo: '@string(5,50)',
+    credentialSmallType: '@string(5,50)',
+    dataSource: '@string(5,50)',
+    evaluationAttachmentUrl: '@image(200x100, @color, @color)',
+    expireDate: '@datetime',
+    hasAttachment: '@integer(3,1000)',
+    id: '@guid',
+    isContinueEducation: '@integer(3,1000)',
+    isDelete: '@string(5,50)',
+    isInHuman: '@integer(3,1000)',
+    isRegistered: '@integer(3,1000)',
+    jobLevel: '@string(5,50)',
+    jobType: '@string(5,50)',
+    majorType: '@string(5,50)',
+    modified: '@string(5,50)',
+    operateItem: '@string(5,50)',
+    originalRemainingAddress: '@string(5,50)',
+    tastyId: '@guid',
+    postName: '@ctitle(5,10)',
+    qualificationName: '@ctitle(5,10)',
+    registerCode: '@string(5,50)',
+    registerHuman: '@string(5,50)',
+    registerDate: '@datetime',
+    registerSpecialityList: '@string(5,50)',
+    reviewOrganization: '@string(5,50)',
+    reviewTime: '@datetime',
+    sourceWebsiteName: '@ctitle(5,10)',
+    specialty: '@string(5,50)',
+    startDate: '@datetime',
+    titleLevel: '@ctitle(5,10)',
+    trainInstitutions: '@string(5,50)',
+    unit: '@string(5,50)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+    useExpireDate: '@datetime',
+  }
+}
+function JuanXinCaiChiGuanTouQingKuang() {
+  return {
+    count: '@integer(3,1000)',
+    credentialType: '@string(5,50)',
+  }
+}
+function JuanXinCaiPeiBeiXiangQing() {
+  return {
+    belongHuman: '@string(5,50)',
+    'belongHumans|1-20': ['@string(5,50)'],
+    humanName: '@ctitle(5,10)',
+    'humanNames|1-20': ['@ctitle(5,10)'],
+    credential_name: '@ctitle(5,10)',
+    idCardNum: '@string(5,50)',
+    'idCardNums|1-20': ['@string(5,50)'],
+    'tasty|1-20': ['@string(5,50)'],
+    tastyId: '@guid',
+    tastyName: '@ctitle(5,10)',
+    'tastyNames|1-20': ['@ctitle(5,10)'],
+    'source|1-20': ['@string(5,50)'],
+  }
+}
+function ChaXianBanBuLiangGuShiLieBiaoXiangYing() {
+  return {
+    content: '@string(5,50)',
+    decisionEffectiveDate: '@datetime',
+    implementationDept: '@string(5,50)',
+    number: '@string(5,50)',
+    operate: '@string(5,50)',
+  }
+}
+function ChaXianBanFenZhiJiGou() {
+  return {
+    accountCreateId: '@guid',
+    accountCreateName: '@ctitle(5,10)',
+    accountCreatePhoneNums: '@integer(13100000000,18999999999)',
+    area: '@string(5,50)',
+    associatedStatus: '@integer(3,1000)',
+    branchName: '@ctitle(5,10)',
+    establishmentTime: '@datetime',
+    head: '@string(5,50)',
+    headPhoneNums: '@integer(13100000000,18999999999)',
+    id: '@guid',
+    invitedStatus: '@integer(3,1000)',
+    registerStatus: '@integer(3,1000)',
+    status: '@string(5,50)',
+    statusNew: '@string(5,50)',
+  }
+}
+function ChaXianBanFenZhiJiGouGengXinQingQiu() {
+  return {
+    branchName: '@ctitle(5,10)',
+    fridayId: '@guid',
+    headName: '@ctitle(5,10)',
+    headPhoneNums: '@integer(13100000000,18999999999)',
+  }
+}
+function ChaXianBanShiXinLianHeChengJieGuShi() {
+  return {
+    addDate: '@datetime',
+    dept: '@string(5,50)',
+    legalName: '@ctitle(5,10)',
+    mainBody: '@string(5,50)',
+    number: '@string(5,50)',
     reason: '@string(5,50)',
   }
 }
-function FollowAgainReq() {
+function ChaXianBanGongShangShuiGuoDaoFanHui() {
   return {
-    happyId: '@guid',
-    happyType: '@string(5,50)',
-  }
-}
-function FollowListReq() {
-  return {
-    page: '@integer(3,1000)',
-    size: '20',
-    taskId: '@guid',
-  }
-}
-function ImportExcelByUrlReq() {
-  return {
-    fileName: '@ctitle(5,10)',
-    fileUrl: '@image(200x100, @color, @color)',
-    taskType: '@integer(3,1000)',
-  }
-}
-function ImportListReq() {
-  return {
-    endTime: '@datetime',
-    page: '@integer(3,1000)',
-    size: '20',
-    startTime: '@datetime',
-    taskType: '@integer(3,1000)',
-  }
-}
-function InnerRpcCustomerDoorAddReq() {
-  return {
-    req: CustomerDoorAddReq(),
-  }
-}
-function InnerRpcCustomerDoorFromDataReq() {
-  return {
-    req: CustomerDoorFromDataReq(),
-  }
-}
-function InnerRpcCustomerDoorNumReq() {
-  return {
-    req: CustomerDoorNumReq(),
-  }
-}
-function InnerRpcCustomerDoorUpReq() {
-  return {
-    req: CustomerDoorUpReq(),
-  }
-}
-function InnerRpcCustomerCatAddReq() {
-  return {
-    req: CustomerCatAddReq(),
-  }
-}
-function InnerRpcCustomerCatUpReq() {
-  return {
-    req: CustomerCatUpReq(),
-  }
-}
-function InnerRpcImportExcelByUrlReq() {
-  return {
-    req: ImportExcelByUrlReq(),
-  }
-}
-function InnerRpcImportListReq() {
-  return {
-    req: ImportListReq(),
-  }
-}
-function InnerRpcPageContactReq() {
-  return {
-    req: PageContactReq(),
-  }
-}
-function InnerRpcPageCustomerDoorReq() {
-  return {
-    req: PageCustomerDoorReq(),
-  }
-}
-function InnerRpcPageCustomerCatReq() {
-  return {
-    req: PageCustomerCatReq(),
-  }
-}
-function InnerRpcSelectCustomerDoorReq() {
-  return {
-    req: SelectCustomerDoorReq(),
-  }
-}
-function InnerRpclong() {
-  return {
-    req: '@string(5,50)',
-  }
-}
-function InnerRpcGuanShuiXiangMuFaCaiMengrpcChongDong() {
-  return {
-    req: GuanShuiXiangMuFaCaiMengrpcChongDong(),
-  }
-}
-function ListDesktopReq() {
-  return {
-    whiteId: '@guid',
-    keyword: '@string(5,50)',
-  }
-}
-function ListLocationReq() {
-  return {
-    date: '@datetime',
-    followerId: '@guid',
-  }
-}
-function LocationAddReq() {
-  return {
-    addr: '@string(5,50)',
-    area: '@string(5,50)',
-    city: '@city',
-    coordinate: '@string(5,50)',
-    country: '@string(5,50)',
-    location: '@string(5,50)',
-    province: '@province',
-  }
-}
-function LocationDateInfoResp() {
-  return {
-    'addrList|1-20': ['@string(5,50)'],
-    addrNum: '@integer(3,1000)',
-    addrStr: '@string(5,50)',
-    happyNum: '@integer(3,1000)',
-    desktopId: '@guid',
-    desktopName: '@ctitle(5,10)',
-    monthDay: '@string(5,50)',
-    provinceCity: '@province',
-    'provinceCityList|1-20': ['@province'],
-  }
-}
-function LocationInfoResp() {
-  return {
-    addr: '@string(5,50)',
-    area: '@string(5,50)',
-    city: '@city',
-    coordinate: '@string(5,50)',
-    country: '@string(5,50)',
-    created: '@datetime',
-    desktopId: '@guid',
-    desktopName: '@ctitle(5,10)',
-    fileId: '@guid',
-    location: '@string(5,50)',
-    province: '@province',
-  }
-}
-function PageHappyMixReq() {
-  return {
-    coordinate: '@string(5,50)',
-    distance: '@string(5,50)',
-    orderColumn: '@string(5,50)',
-    orderType: '@integer(3,1000)',
-    page: '@integer(3,1000)',
-    size: '20',
-    type: '@integer(3,1000)',
-  }
-}
-function PageHappyResp() {
-  return {
-    happyStatus: '@string(5,50)',
-    happyType: '@string(5,50)',
-    'contactPhoneList|1-20': [LianXiRenHuaHuaTi()],
-    coordinate: '@string(5,50)',
-    created: '@datetime',
-    customerId: '@guid',
-    customerType: '@string(5,50)',
-    dataLocation: '@string(5,50)',
-    distance: '@string(5,50)',
-    'followInfoList|1-20': [HuaHuaTiQingQiu()],
-    followerId: '@guid',
-    followerName: '@ctitle(5,10)',
-    hasCustomer: '@boolean',
+    humanBusinessScope: '@string(5,50)',
+    humanEmail: '@email',
+    humanEstablishDate: '@datetime',
+    humanLegalRepresentative: '@string(5,50)',
+    humanNum: '@string(5,50)',
+    humanPhone: '@integer(13100000000,18999999999)',
+    humanRegistAddress: '@string(5,50)',
+    humanRegistCapital: '@string(5,50)',
+    humanWebsite: '@string(5,50)',
     id: '@guid',
-    isMyself: '@integer(3,1000)',
-    isRead: '@integer(3,1000)',
-    lastFetchTime: '@datetime',
-    lastFollowTime: '@datetime',
-    planId: '@guid',
-    planScore: '@string(5,50)',
-    recommendedReason: '@string(5,50)',
-    signId: '@guid',
-    source: '@string(5,50)',
-    gratefulId: '@guid',
-    thirdId: '@guid',
+    isClaim: '@string(5,50)',
   }
 }
-function PageContactReq() {
+function ChaXianBanGongChengShuiBeiXiangYing() {
   return {
-    doorId: '@guid',
+    constructProject: '@string(5,50)',
+    dataLevel: '@string(5,50)',
+    industryMajor: '@string(5,50)',
+    projectArea: '@string(5,50)',
+    projectBuildType: '@string(5,50)',
+    projectCode: '@string(5,50)',
+    projectLeader: '@string(5,50)',
+    projectName: '@ctitle(5,10)',
+    projectStage: '@string(5,50)',
+    projectTotalFloorArea: '@string(5,50)',
+    projectTye: '@string(5,50)',
+    source: '@string(5,50)',
+    totalBuildingProjectInvestment: '@string(5,50)',
+  }
+}
+function ChaXianBanChiGuanTouJuanXinCaiJuanXinCaiLaiYuanShuiGuoDao() {
+  return {
+    belongHuman: '@string(5,50)',
+    employmentWay: '@string(5,50)',
+    socialSecurityHuman: '@string(5,50)',
+  }
+}
+function ChaXianBanChiGuanTouJuanXinCaiXiangYing() {
+  return {
+    'credentialMajor|1-20': [ErJiGuanTouShuMingChenZhuanYe()],
+    'credentialNums|1-20': ['@string(5,50)'],
+    'learningInformation|1-20': [XueXin()],
+    mark: '@string(5,50)',
+    otherCredential: FeiErJiZhiYeQingMingCaoGeGuanTouJian(),
+    tastyBaseInfo: ChaXianBanChiGuanTouJuanXinCaiHuiZongJiChuShuiGuoDao(),
+    tastyId: '@guid',
+    tastySourceInfo: ChaXianBanChiGuanTouJuanXinCaiJuanXinCaiLaiYuanShuiGuoDao(),
+    tagColor: '@color',
+    'titleCredential|1-20': [TaiYangHuaGuanTouShu()],
+  }
+}
+function ChaXianBanChiGuanTouJuanXinCaiHuiZongJiChuShuiGuoDao() {
+  return {
+    address: '@string(5,50)',
+    dimissionDate: '@datetime',
+    email: '@email',
+    mobile: '@string(5,50)',
+    nation: '@string(5,50)',
+    tastyGender: '@string(5,50)',
+    tastyId: '@guid',
+    tastyIdentityCardNum: '@string(5,50)',
+    tastyName: '@ctitle(5,10)',
+  }
+}
+function ChaXianBanHuiZongFenYeQingQiu() {
+  return {
+    humanEstablishDate: '@datetime',
+    humanOperationState: '@string(5,50)',
+    humanRegistAddress: '@string(5,50)',
+    humanRegistCapitalRangeEnd: '@string(5,50)',
+    humanRegistCapitalRangeStart: '@string(5,50)',
+    condition: '@string(5,50)',
+    'fridayCredentials|1-20': ['@string(5,50)'],
+    fridayName: '@ctitle(5,10)',
+    page: '@integer(3,1000)',
+    size: '20',
+  }
+}
+function ChaXianBanErJiJuanXinCai() {
+  return {
+    fridayId: '@guid',
     name: '@ctitle(5,10)',
-    page: '@integer(3,1000)',
-    size: '20',
+    tastyId: '@guid',
+    tastyIdentityCardNum: '@string(5,50)',
+    registerMajor: '@string(5,50)',
+    registerNum: '@string(5,50)',
+    registerType: '@string(5,50)',
   }
 }
-function PageCustomerDoorReq() {
+function ChaXianBanLiangHaoGuShiLieBiaoXiangYing() {
   return {
-    addr: '@string(5,50)',
-    createEndTime: '@datetime',
-    createStartTime: '@datetime',
-    customerCode: '@string(5,50)',
-    door: '@string(5,50)',
-    doorAttr: '@string(5,50)',
-    doorCode: '@string(5,50)',
-    doorName: '@ctitle(5,10)',
-    doorStatus: '@string(5,50)',
-    establishmentTimeEnd: '@datetime',
-    establishmentTimeStart: '@datetime',
-    'labelList|1-20': ['@string(5,50)'],
-    orderColumn: '@string(5,50)',
-    orderType: '@integer(3,1000)',
-    own: '@boolean',
-    page: '@integer(3,1000)',
-    province: '@province',
-    regCatCntMax: '@string(5,50)',
-    regCatCntMin: '@string(5,50)',
-    orangeeredCapitalMax: '@integer(3,1000)',
-    orangeeredCapitalMin: '@integer(3,1000)',
-    scoreMax: '@integer(3,1000)',
-    scoreMin: '@integer(3,1000)',
-    sign: '@string(5,50)',
-    signDateMax: '@datetime',
-    signDateMin: '@datetime',
-    signState: '@string(5,50)',
-    size: '20',
-    skAchievementCntMax: '@string(5,50)',
-    skAchievementCntMin: '@string(5,50)',
-    skQualificationCntMax: '@string(5,50)',
-    skQualificationCntMin: '@string(5,50)',
+    content: '@string(5,50)',
+    decisionEffectiveDate: '@datetime',
+    implementationDept: '@string(5,50)',
+    number: '@string(5,50)',
+    operate: '@string(5,50)',
   }
 }
-function PageCustomerCatReq() {
+function ChaXianBanQingMingCaoZhiShengJiTiaoJianFanHui() {
   return {
-    achievementCntMax: '@string(5,50)',
-    achievementCntMin: '@string(5,50)',
-    addr: '@string(5,50)',
-    certificateMajor: '@string(5,50)',
-    certificateName: '@ctitle(5,10)',
-    'certificateNameList|1-20': ['@ctitle(5,10)'],
-    customerCode: '@string(5,50)',
-    'labelList|1-20': ['@string(5,50)'],
-    level: '@string(5,50)',
-    'levelList|1-20': ['@string(5,50)'],
-    major: '@string(5,50)',
-    'majorList|1-20': ['@string(5,50)'],
-    orderColumn: '@string(5,50)',
-    orderType: '@integer(3,1000)',
-    own: '@boolean',
-    page: '@integer(3,1000)',
-    cat: '@string(5,50)',
-    catName: '@ctitle(5,10)',
-    catnelRisk: '@boolean',
-    phone: '@integer(13100000000,18999999999)',
-    province: '@province',
-    sign: '@string(5,50)',
-    signDateMax: '@datetime',
-    signDateMin: '@datetime',
-    signState: '@string(5,50)',
-    size: '20',
-    skCertificateCntMax: '@string(5,50)',
-    skCertificateCntMin: '@string(5,50)',
+    credentialLevel: '@string(5,50)',
+    creditRequire: '@string(5,50)',
+    equipManagementRequire: '@string(5,50)',
+    tastyRequirement: '',
+    projectRequire: '@string(5,50)',
   }
 }
-function PageDoorHappyPoolResp() {
+function ChaXianBanQingMingCaoZhiXiangYing() {
   return {
-    addr: '@string(5,50)',
-    happyStatus: '@string(5,50)',
-    happyType: '@string(5,50)',
-    'contactPhoneList|1-20': [LianXiRenHuaHuaTi()],
-    coordinate: '@string(5,50)',
-    corpCertArray: '@string(5,50)',
-    corpCertCnt: '@integer(3,1000)',
-    corporateName: '@ctitle(5,10)',
-    created: '@datetime',
-    customerId: '@guid',
-    customerType: '@string(5,50)',
-    dataLocation: '@string(5,50)',
-    distance: '@string(5,50)',
-    doorCode: '@string(5,50)',
-    doorName: '@ctitle(5,10)',
-    doorStatus: '@string(5,50)',
-    doorType: '@string(5,50)',
-    establishmentTime: '@datetime',
-    filialeCompanyCnt: '@integer(3,1000)',
-    filialeCompanyNameArray: '@ctitle(5,10)',
-    'followInfoList|1-20': [HuaHuaTiQingQiu()],
-    followerId: '@guid',
-    followerName: '@ctitle(5,10)',
-    hasCustomer: '@boolean',
+    'attachments|1-20': ['@string(5,50)'],
+    certificateExpiryDate: '@datetime',
+    certificationCode: '@string(5,50)',
+    humanQualificationCate: '@string(5,50)',
+    humanQualificationCertificateNum: '@string(5,50)',
+    humanQualificationName: '@ctitle(5,10)',
+    credentialNature: '@string(5,50)',
+    extended: '@integer(3,1000)',
+    hasEscalation: '@boolean',
     id: '@guid',
     industryType: '@string(5,50)',
-    isMyself: '@integer(3,1000)',
-    isRead: '@integer(3,1000)',
-    lastFetchTime: '@datetime',
-    lastFollowTime: '@datetime',
-    phone: '@integer(13100000000,18999999999)',
-    planId: '@guid',
-    planScore: '@string(5,50)',
-    qualicaficationArray: '@string(5,50)',
-    qualicaficationCnt: '@integer(3,1000)',
-    recommendedReason: '@string(5,50)',
-    regCatCnt: '@string(5,50)',
-    orangeeredCapital: '@string(5,50)',
-    score: '@integer(3,1000)',
-    signId: '@guid',
-    skAchievementCnt: '@string(5,50)',
-    skQualificationCnt: '@string(5,50)',
+    isExpireStatus: '@integer(3,1000)',
+    issuedDate: '@datetime',
+    issuingInstitutionName: '@ctitle(5,10)',
+    nationStatus: '@string(5,50)',
     source: '@string(5,50)',
-    gratefulId: '@guid',
-    thirdId: '@guid',
   }
 }
-function PageLocationByTaskReq() {
+function ChaXianBanQingMingCaoZhiXinZengGengXinQingQiu() {
   return {
-    desktopName: '@ctitle(5,10)',
-    page: '@integer(3,1000)',
-    size: '20',
-    taskId: '@guid',
-  }
-}
-function PageLocationReq() {
-  return {
-    area: '@string(5,50)',
-    city: '@city',
-    desktopName: '@ctitle(5,10)',
-    endTime: '@datetime',
-    'followerIdList|1-20': ['@string(5,50)'],
-    page: '@integer(3,1000)',
-    province: '@province',
-    size: '20',
-    startTime: '@datetime',
-  }
-}
-function PageCatHappyPoolResp() {
-  return {
-    achievementCnt: '@string(5,50)',
-    addr: '@string(5,50)',
-    age: '@integer(3,1000)',
-    area: '@string(5,50)',
-    badBehaviorCnt: '@string(5,50)',
-    blacklistRecordCnt: '@string(5,50)',
-    happyStatus: '@string(5,50)',
-    happyType: '@string(5,50)',
-    certificateName: '@ctitle(5,10)',
-    certificateNum: '@string(5,50)',
-    city: '@city',
-    'contactPhoneList|1-20': [LianXiRenHuaHuaTi()],
-    coordinate: '@string(5,50)',
-    country: '@string(5,50)',
-    created: '@datetime',
-    customerId: '@guid',
-    customerMobile: '@string(5,50)',
-    customerName: '@ctitle(5,10)',
-    customerType: '@string(5,50)',
-    dataLocation: '@string(5,50)',
-    distance: '@string(5,50)',
-    education: '@string(5,50)',
-    'followInfoList|1-20': [HuaHuaTiQingQiu()],
-    followerId: '@guid',
-    followerName: '@ctitle(5,10)',
-    gender: '@string(5,50)',
-    goodBehaviorCnt: '@string(5,50)',
-    hasCustomer: '@boolean',
-    id: '@guid',
-    isMyself: '@integer(3,1000)',
-    isRead: '@integer(3,1000)',
-    isRetire: '@integer(3,1000)',
-    lastFetchTime: '@datetime',
-    lastFollowTime: '@datetime',
-    licenseId: '@guid',
-    catName: '@ctitle(5,10)',
-    catnelRisk: '@integer(3,1000)',
-    phone: '@integer(13100000000,18999999999)',
-    planId: '@guid',
-    planScore: '@string(5,50)',
-    province: '@province',
-    recommendedReason: '@string(5,50)',
-    signId: '@guid',
-    skCertificateCnt: '@string(5,50)',
-    source: '@string(5,50)',
-    gratefulId: '@guid',
-    thirdId: '@guid',
-    title: '@ctitle(5,10)',
-    workYear: '@integer(3,1000)',
-  }
-}
-function PagePlanResp() {
-  return {
-    happyStatus: '@string(5,50)',
-    happyType: '@string(5,50)',
-    coordinate: '@string(5,50)',
-    created: '@datetime',
-    distance: '@string(5,50)',
-    followerId: '@guid',
-    followerName: '@ctitle(5,10)',
-    id: '@guid',
-    isMyself: '@integer(3,1000)',
-    isRead: '@integer(3,1000)',
-    lastFetchTime: '@datetime',
-    lastFollowTime: '@datetime',
-    planId: '@guid',
-    planScore: '@string(5,50)',
-    planSource: '@string(5,50)',
-    planStatus: '@string(5,50)',
-    poolType: '@string(5,50)',
-    recommendedReason: '@string(5,50)',
-    relStatus: '@string(5,50)',
-    relType: '@string(5,50)',
-    source: '@string(5,50)',
-    gratefulId: '@guid',
-  }
-}
-function PageGladHappyPoolResp() {
-  return {
-    agencies: '@string(5,50)',
-    agenciesAddr: '@string(5,50)',
-    agenciesAddrCoordinate: '@string(5,50)',
-    agenciesAddrLat: '@string(5,50)',
-    agenciesAddrLng: '@string(5,50)',
-    agenciesArea: '@string(5,50)',
-    agenciesCity: '@city',
-    agenciesCountry: '@string(5,50)',
-    agenciesPhone: '@integer(13100000000,18999999999)',
-    agenciesProvince: '@province',
-    biddingCorpAddr: '@string(5,50)',
-    biddingCorpAddrLat: '@string(5,50)',
-    biddingCorpAddrLng: '@string(5,50)',
-    biddingCorpArea: '@string(5,50)',
-    biddingCorpCity: '@city',
-    biddingCorpName: '@ctitle(5,10)',
-    biddingCorpPhone: '@integer(13100000000,18999999999)',
-    biddingCorpProvince: '@province',
-    biddingEndTime: '@datetime',
-    biddingOpeningTime: '@datetime',
-    biddingStartTime: '@datetime',
-    biddingType: '@string(5,50)',
-    happyStatus: '@string(5,50)',
-    happyType: '@string(5,50)',
-    'contactPhoneList|1-20': [LianXiRenHuaHuaTi()],
-    coordinate: '@string(5,50)',
-    created: '@datetime',
-    customerId: '@guid',
-    customerType: '@string(5,50)',
-    dataLocation: '@string(5,50)',
-    distance: '@string(5,50)',
-    fileDownloadEndTime: '@datetime',
-    fileDownloadStartTime: '@datetime',
-    'followInfoList|1-20': [HuaHuaTiQingQiu()],
-    followerId: '@guid',
-    followerName: '@ctitle(5,10)',
-    hasCustomer: '@boolean',
+    'attachments|1-20': ['@string(5,50)'],
+    certificateExpiryDate: '@datetime',
+    certificationCode: '@string(5,50)',
+    humanQualificationCate: '@string(5,50)',
+    humanQualificationCertificateNum: '@string(5,50)',
+    humanQualificationName: '@ctitle(5,10)',
+    credentialNature: '@string(5,50)',
+    fridayId: '@guid',
     id: '@guid',
     industryType: '@string(5,50)',
-    isMyself: '@integer(3,1000)',
-    isRead: '@integer(3,1000)',
-    lastFetchTime: '@datetime',
-    lastFollowTime: '@datetime',
-    phone: '@integer(13100000000,18999999999)',
-    planId: '@guid',
-    planScore: '@string(5,50)',
-    gladBudget: '@string(5,50)',
-    gladName: '@ctitle(5,10)',
-    gladType: '@string(5,50)',
-    publishTime: '@datetime',
-    quoteBeginTime: '@datetime',
-    quoteEndTime: '@datetime',
-    recommendedReason: '@string(5,50)',
-    signId: '@guid',
-    signUpBeginTime: '@datetime',
-    signUpEndTime: '@datetime',
-    source: '@string(5,50)',
-    gratefulId: '@guid',
-    thirdId: '@guid',
-    valid: '@guid',
+    issuedDate: '@datetime',
+    issuingInstitutionName: '@ctitle(5,10)',
+    nationStatus: '@string(5,50)',
   }
 }
-function GladSignInfoResp() {
+function ChaXianBanQingMingCaoZhiGuanLi() {
   return {
-    applyKeyBorardId: '@guid',
-    applyKeyBorardName: '@ctitle(5,10)',
-    belongCompany: '@string(5,50)',
-    belongCompanyId: '@guid',
-    bidEndDate: '@datetime',
-    bidOpenDate: '@datetime',
-    bidStartDate: '@datetime',
-    biddingAgencyId: '@guid',
-    biddingAgencyName: '@ctitle(5,10)',
-    happyStatus: '@string(5,50)',
-    cainfoId: '@guid',
-    cainfoName: '@ctitle(5,10)',
-    city: '@city',
-    county: '@county',
-    customerId: '@guid',
-    customerName: '@ctitle(5,10)',
-    isBid: '@guid',
-    isPreApproval: '@boolean',
-    paramsOneId: '@guid',
-    paramsOneName: '@ctitle(5,10)',
-    gladName: '@ctitle(5,10)',
-    province: '@province',
-    street: '@string(5,50)',
-    templateId: '@guid',
-    templateName: '@ctitle(5,10)',
-    township: '@string(5,50)',
-  }
-}
-function PunchPageReq() {
-  return {
-    happyId: '@guid',
-    happyType: '@string(5,50)',
-    page: '@integer(3,1000)',
-    size: '20',
-  }
-}
-function PunchPageResp() {
-  return {
-    addr: '@string(5,50)',
-    area: '@string(5,50)',
-    happyId: '@guid',
-    happyType: '@string(5,50)',
-    city: '@city',
-    coordinate: '@string(5,50)',
-    country: '@string(5,50)',
+    createId: '@guid',
     createName: '@ctitle(5,10)',
-    'imageUrlList|1-20': ['@image(200x100, @color, @color)'],
-    location: '@string(5,50)',
-    province: '@province',
-    punchTime: '@datetime',
-  }
-}
-function PunchReq() {
-  return {
-    addr: '@string(5,50)',
-    area: '@string(5,50)',
-    happyId: '@guid',
-    happyType: '@string(5,50)',
-    city: '@city',
-    coordinate: '@string(5,50)',
-    country: '@string(5,50)',
-    date: '@datetime',
-    'fileIdList|1-20': ['@string(5,50)'],
-    followResult: '@string(5,50)',
-    location: '@string(5,50)',
-    province: '@province',
-  }
-}
-function RankResp() {
-  return {
-    'list|1-20': [PaiMingShuJuRankDataResp()],
-    rank: WoCongMingPaiMingMyRankResp(),
-  }
-}
-function ReceiveHappyReq() {
-  return {
-    'happyList|1-20': [''],
-    happyReceiveSource: '@string(5,50)',
-    happyType: '@string(5,50)',
-  }
-}
-function Recommended2PlanReq() {
-  return {
-    date: '@datetime',
-  }
-}
-function SelectCustomerDoorReq() {
-  return {
-    doorCode: '@string(5,50)',
-    doorName: '@ctitle(5,10)',
-  }
-}
-function SelectCustomerDoorGratefulReq() {
-  return {
-    doorCode: '@string(5,50)',
-    doorName: '@ctitle(5,10)',
-    'gratefulIdList|1-20': ['@string(5,50)'],
-  }
-}
-function TaskAddrResp() {
-  return {
-    addr: '@string(5,50)',
-    area: '@string(5,50)',
-    city: '@city',
-    coordinate: '@string(5,50)',
-    country: '@string(5,50)',
-    date: '@datetime',
-    location: '@string(5,50)',
-    province: '@province',
-  }
-}
-function TaskChangeStatusReq() {
-  return {
+    created: '@datetime',
+    credentialType: '@integer(3,1000)',
     id: '@guid',
-    taskStatus: '@string(5,50)',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    tagColor: '@color',
+    timePoint: '@integer(3,1000)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+    warningType: '@integer(3,1000)',
   }
 }
-function TaskCreateAddrReq() {
+function ChaXianBanQingMingCaoZhiWuShu() {
   return {
-    addr: '@string(5,50)',
-    area: '@string(5,50)',
-    city: '@city',
-    coordinate: '@string(5,50)',
-    country: '@string(5,50)',
-    location: '@string(5,50)',
-    province: '@province',
-    sort: '@integer(3,1000)',
-  }
-}
-function TaskCreateWhiteReq() {
-  return {
-    whiteId: '@guid',
-    whiteName: '@ctitle(5,10)',
-  }
-}
-function TaskCreateCatReq() {
-  return {
-    followerId: '@guid',
-    followerName: '@ctitle(5,10)',
-    phone: '@integer(13100000000,18999999999)',
-  }
-}
-function TaskCreateReq() {
-  return {
-    'addrList|1-20': [TaskCreateAddrReq()],
-    dayHappyNum: '@integer(3,1000)',
-    dayHappyOpen: '@boolean',
-    'whiteList|1-20': [TaskCreateWhiteReq()],
-    endTime: '@datetime',
-    name: '@ctitle(5,10)',
-    'catList|1-20': [TaskCreateCatReq()],
-    startTime: '@datetime',
-    taskType: '@string(5,50)',
-  }
-}
-function TaskWhiteResp() {
-  return {
-    whiteId: '@guid',
-    whiteName: '@ctitle(5,10)',
-  }
-}
-function TaskInfoResp() {
-  return {
-    'addrList|1-20': [TaskAddrResp()],
-    allDays: '@string(5,50)',
     createId: '@guid',
+    createName: '@ctitle(5,10)',
     created: '@datetime',
-    dayHappyNum: '@integer(3,1000)',
-    dayHappyOpen: '@boolean',
-    days: '@string(5,50)',
-    'whiteList|1-20': [TaskWhiteResp()],
-    endTime: '@datetime',
+    credentialType: '@integer(3,1000)',
     id: '@guid',
-    isMyCreated: '@boolean',
-    name: '@ctitle(5,10)',
-    'catList|1-20': [TaskCatResp()],
-    startTime: '@datetime',
-    taskStatus: '@string(5,50)',
-    taskType: '@string(5,50)',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    tagColor: '@color',
+    timePoint: '@integer(3,1000)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+    warningType: '@integer(3,1000)',
   }
 }
-function TaskModifyReq() {
+function ChaXianBanQingMingCaoZhiWuShu0() {
   return {
-    'addrList|1-20': [TaskCreateAddrReq()],
-    dayHappyNum: '@integer(3,1000)',
-    dayHappyOpen: '@boolean',
-    'whiteList|1-20': [TaskCreateWhiteReq()],
-    endTime: '@datetime',
-    id: '@guid',
-    name: '@ctitle(5,10)',
-    'catList|1-20': [TaskCreateCatReq()],
-    startTime: '@datetime',
-    taskType: '@string(5,50)',
-  }
-}
-function TaskPageListReq() {
-  return {
-    createEndTime: '@datetime',
-    createStartTime: '@datetime',
-    endTime: '@datetime',
-    name: '@ctitle(5,10)',
-    page: '@integer(3,1000)',
-    size: '20',
-    startTime: '@datetime',
-    taskStatus: '@string(5,50)',
-    type: '@integer(3,1000)',
-  }
-}
-function TaskPageListResp() {
-  return {
-    'addrList|1-20': [TaskAddrResp()],
-    allDays: '@string(5,50)',
     createId: '@guid',
+    createName: '@ctitle(5,10)',
     created: '@datetime',
-    dayHappyNum: '@integer(3,1000)',
-    dayHappyOpen: '@boolean',
-    days: '@string(5,50)',
-    'whiteList|1-20': [TaskWhiteResp()],
-    endTime: '@datetime',
+    credentialType: '@integer(3,1000)',
     id: '@guid',
-    isMyCreated: '@boolean',
-    name: '@ctitle(5,10)',
-    'catList|1-20': [TaskCatResp()],
-    progress: TaskProgressResp(),
-    startTime: '@datetime',
-    taskStatus: '@string(5,50)',
-    taskType: '@string(5,50)',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    tagColor: '@color',
+    timePoint: '@integer(3,1000)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+    warningType: '@integer(3,1000)',
   }
 }
-function TaskCatResp() {
+function ChaXianBanHeiMingDanXiangYing() {
   return {
-    followerId: '@guid',
-    followerName: '@ctitle(5,10)',
-    phone: '@integer(13100000000,18999999999)',
+    blacklistBasis: '@string(5,50)',
+    decisionEffectiveDate: '@datetime',
+    dept: '@string(5,50)',
+    number: '@string(5,50)',
   }
 }
-function TaskProgressDetailReq() {
+function ShengJiTiaoJianJuanXinCaiXiangQing() {
   return {
-    followerId: '@guid',
-    followerName: '@ctitle(5,10)',
-    id: '@guid',
+    'tastyDetailResps|1-20': [JuanXinCaiPeiBeiXiangQing()],
+    'tastyNeedResps|1-20': [ChaZhiXiangQing()],
   }
 }
-function TaskProgressDetailResp() {
+function XueXin() {
   return {
-    dayHappyNum: '@integer(3,1000)',
-    dayHappyOpen: '@boolean',
-    followerId: '@guid',
-    followerName: '@ctitle(5,10)',
-    lastLocation: '@string(5,50)',
-    'locationDataList|1-20': [TaskAddrResp()],
-    phone: '@integer(13100000000,18999999999)',
-    progress: TaskProgressResp(),
-    taskStatus: '@string(5,50)',
+    educationBackground: '@string(5,50)',
+    entryDate: '@datetime',
+    graduateDate: '@datetime',
+    school: '@string(5,50)',
+    subject: '@string(5,50)',
   }
 }
-function TaskProgressCatResp() {
+function XueXinZhangHao() {
   return {
-    allDays: '@string(5,50)',
-    allTasks: '@string(5,50)',
-    dayHappyNum: '@integer(3,1000)',
-    dayHappyOpen: '@boolean',
-    days: '@string(5,50)',
-    followerId: '@guid',
-    followerName: '@ctitle(5,10)',
-    taskFollow: '@string(5,50)',
-    taskStatus: '@string(5,50)',
-    todayAllTask: '@string(5,50)',
-    todayFollow: '@string(5,50)',
-    yesterdayAllTask: '@string(5,50)',
-    yesterdayFollow: '@string(5,50)',
-  }
-}
-function TaskProgressResp() {
-  return {
-    allDays: '@string(5,50)',
-    allTasks: '@string(5,50)',
-    days: '@string(5,50)',
-    taskFollow: '@string(5,50)',
-    todayAllTask: '@string(5,50)',
-    todayFollow: '@string(5,50)',
-    yesterdayAllTask: '@string(5,50)',
-    yesterdayFollow: '@string(5,50)',
-  }
-}
-function TravelLoginReq() {
-  return {
-    entrance: '@integer(3,1000)',
-    plat: '@integer(3,1000)',
-  }
-}
-function TravelLoginResp() {
-  return {
-    redirectUrl: '@image(200x100, @color, @color)',
-  }
-}
-function TreeNodeConfig() {
-  return {
-    childrenKey: '@string(5,50)',
-    deep: '@integer(3,1000)',
-    idKey: '@string(5,50)',
-    nameKey: '@ctitle(5,10)',
-    parentIdKey: '@string(5,50)',
-    weightKey: '@string(5,50)',
-  }
-}
-function VerifyRepeatHappyReq() {
-  return {
-    happyType: '@string(5,50)',
-    code: 200,
-    name: '@ctitle(5,10)',
-  }
-}
-function VerifyRepeatCustomerReq() {
-  return {
-    doorCode: '@string(5,50)',
-    doorName: '@ctitle(5,10)',
-    id: '@guid',
-  }
-}
-function VerifyRepeatCatCustomerReq() {
-  return {
-    id: '@guid',
-    catName: '@ctitle(5,10)',
-    phone: '@integer(13100000000,18999999999)',
-  }
-}
-function ShangChuanWenJianFanHui() {
-  return {
-    fileUrl: '@image(200x100, @color, @color)',
-    id: '@guid',
-  }
-}
-function BuZaiGenJin() {
-  return {
-    happyId: '@guid',
-    happyType: '@string(5,50)',
-    flowType: '@string(5,50)',
-    noFollowReason: '@string(5,50)',
-  }
-}
-function ZhiXieChangFaCaiMengXiangQingrpcresponse() {
-  return {
-    addr: '@string(5,50)',
-    categoryName: '@ctitle(5,10)',
-    contactMobile: '@string(5,50)',
-    contactName: '@ctitle(5,10)',
-    corporateName: '@ctitle(5,10)',
-    doorCode: '@string(5,50)',
-    doorId: '@guid',
-    doorName: '@ctitle(5,10)',
-    doorStatus: '@string(5,50)',
-    establishmentTime: '@datetime',
-    followerId: '@guid',
-    followerName: '@ctitle(5,10)',
-    phone: '@integer(13100000000,18999999999)',
-    regCatCnt: '@string(5,50)',
-    orangeeredCapital: '@string(5,50)',
-    score: '@integer(3,1000)',
-    skAchievementCnt: '@string(5,50)',
-    skQualificationCnt: '@string(5,50)',
-  }
-}
-function GuanLianFaCaiMengRequest() {
-  return {
-    happyId: '@guid',
-    happyType: '@string(5,50)',
-    thirdId: '@guid',
-  }
-}
-function GuanLianFaCaiMengResponse() {}
-function FenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu() {
-  return {
-    happyStatus: '@string(5,50)',
-    happyType: '@string(5,50)',
-    'contactPhoneList|1-20': [LianXiRenHuaHuaTi()],
-    coordinate: '@string(5,50)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
     created: '@datetime',
-    customerId: '@guid',
-    customerType: '@string(5,50)',
-    dataLocation: '@string(5,50)',
-    distance: '@string(5,50)',
-    'followInfoList|1-20': [HuaHuaTiQingQiu()],
-    followerId: '@guid',
-    followerName: '@ctitle(5,10)',
-    hasCustomer: '@boolean',
     id: '@guid',
-    isMyself: '@integer(3,1000)',
-    isRead: '@integer(3,1000)',
-    lastFetchTime: '@datetime',
-    lastFollowTime: '@datetime',
-    catName: '@ctitle(5,10)',
-    planId: '@guid',
-    planScore: '@string(5,50)',
-    recommendedReason: '@string(5,50)',
-    signId: '@guid',
-    source: '@string(5,50)',
-    gratefulId: '@guid',
-    thirdId: '@guid',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    password: '@string(5,50)',
+    tastyId: '@guid',
+    updateId: '@datetime',
+    updateName: '@datetime',
+    userName: '@cname',
   }
 }
-function FenYeLvYouRenCaiFaCaiMengJianDanShuJu() {
+function XueXinZhangHao0() {
   return {
-    addr: '@string(5,50)',
-    'addrList|1-20': [DiZhi()],
-    area: '@string(5,50)',
-    happyStatus: '@string(5,50)',
-    city: '@city',
-    coordinate: '@string(5,50)',
-    createEndTime: '@datetime',
-    createStartTime: '@datetime',
-    customerId: '@guid',
-    customerType: '@string(5,50)',
-    distance: '@string(5,50)',
-    followResult: '@string(5,50)',
-    followType: '@string(5,50)',
-    'followTypeList|1-20': ['@string(5,50)'],
-    followerId: '@guid',
-    isRead: '@integer(3,1000)',
-    name: '@ctitle(5,10)',
-    orderColumn: '@string(5,50)',
-    orderType: '@integer(3,1000)',
-    page: '@integer(3,1000)',
-    province: '@province',
-    receiveType: '@string(5,50)',
-    size: '20',
-    source: '@string(5,50)',
-    type: '@integer(3,1000)',
-  }
-}
-function FenYeLvYouRenCaiFaCaiMengGongHai() {
-  return {
-    achievementCntMax: '@string(5,50)',
-    achievementCntMin: '@string(5,50)',
-    addr: '@string(5,50)',
-    'addrList|1-20': [DiZhi()],
-    area: '@string(5,50)',
-    happyStatus: '@string(5,50)',
-    'certificateList|1-20': ['@string(5,50)'],
-    certificateMajor: '@string(5,50)',
-    certificateName: '@ctitle(5,10)',
-    city: '@city',
-    coordinate: '@string(5,50)',
-    createEndTime: '@datetime',
-    createStartTime: '@datetime',
-    customerId: '@guid',
-    customerType: '@string(5,50)',
-    distance: '@string(5,50)',
-    followResult: '@string(5,50)',
-    followType: '@string(5,50)',
-    'followTypeList|1-20': ['@string(5,50)'],
-    followerId: '@guid',
-    isRead: '@integer(3,1000)',
-    level: '@string(5,50)',
-    'levelList|1-20': ['@string(5,50)'],
-    major: '@string(5,50)',
-    'majorList|1-20': ['@string(5,50)'],
-    name: '@ctitle(5,10)',
-    orderColumn: '@string(5,50)',
-    orderType: '@integer(3,1000)',
-    page: '@integer(3,1000)',
-    province: '@province',
-    receiveType: '@string(5,50)',
-    size: '20',
-    skCertificateCntMax: '@string(5,50)',
-    skCertificateCntMin: '@string(5,50)',
-    source: '@string(5,50)',
-    taskId: '@guid',
-    type: '@integer(3,1000)',
-  }
-}
-function FenYeLvYouRenCaiFaCaiMengTuiJian() {
-  return {
-    achievementCntMax: '@string(5,50)',
-    achievementCntMin: '@string(5,50)',
-    addr: '@string(5,50)',
-    'addrList|1-20': [DiZhi()],
-    area: '@string(5,50)',
-    certificateMajor: '@string(5,50)',
-    certificateName: '@ctitle(5,10)',
-    city: '@city',
-    coordinate: '@string(5,50)',
-    createEndTime: '@datetime',
-    createStartTime: '@datetime',
-    distance: '@string(5,50)',
-    followResult: '@string(5,50)',
-    followType: '@string(5,50)',
-    'followTypeList|1-20': ['@string(5,50)'],
-    level: '@string(5,50)',
-    'levelList|1-20': ['@string(5,50)'],
-    major: '@string(5,50)',
-    'majorList|1-20': ['@string(5,50)'],
-    name: '@ctitle(5,10)',
-    orderColumn: '@string(5,50)',
-    orderType: '@integer(3,1000)',
-    page: '@integer(3,1000)',
-    catnelRisk: '@boolean',
-    province: '@province',
-    size: '20',
-    skCertificateCntMax: '@string(5,50)',
-    skCertificateCntMin: '@string(5,50)',
-    type: '@integer(3,1000)',
-  }
-}
-function FenYeLvYouRenWu() {
-  return {
-    cnt: '@string(5,50)',
-    handlerId: '@guid',
-    handlerName: '@ctitle(5,10)',
-    lastPunchAddr: '@string(5,50)',
-    'planHappyList|1-20': [PagePlanResp()],
-    planCount: '@integer(3,1000)',
-    planKeyBorardId: '@guid',
-    'signHappyList|1-20': [PagePlanResp()],
-    signCount: '@integer(3,1000)',
-  }
-}
-function FenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu() {
-  return {
-    happyStatus: '@string(5,50)',
-    happyType: '@string(5,50)',
-    'contactPhoneList|1-20': [LianXiRenHuaHuaTi()],
-    coordinate: '@string(5,50)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
     created: '@datetime',
-    customerId: '@guid',
-    customerType: '@string(5,50)',
-    dataLocation: '@string(5,50)',
-    distance: '@string(5,50)',
-    doorName: '@ctitle(5,10)',
-    'followInfoList|1-20': [HuaHuaTiQingQiu()],
-    followerId: '@guid',
-    followerName: '@ctitle(5,10)',
-    hasCustomer: '@boolean',
     id: '@guid',
-    isMyself: '@integer(3,1000)',
-    isRead: '@integer(3,1000)',
-    lastFetchTime: '@datetime',
-    lastFollowTime: '@datetime',
-    planId: '@guid',
-    planScore: '@string(5,50)',
-    recommendedReason: '@string(5,50)',
-    signId: '@guid',
-    source: '@string(5,50)',
-    gratefulId: '@guid',
-    thirdId: '@guid',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    password: '@string(5,50)',
+    tastyId: '@guid',
+    updateId: '@datetime',
+    updateName: '@datetime',
+    userName: '@cname',
   }
 }
-function FenYeLvYouZhiXieChangFaCaiMengJianDanShuJu() {
+function JiaTingChengYuanShuiGuoDao() {
   return {
-    name: '@ctitle(5,10)',
-    page: '@integer(3,1000)',
-    size: '20',
-  }
-}
-function FenYeLvYouZhiXieChangFaCaiMengGongHai() {
-  return {
-    addr: '@string(5,50)',
-    'addrList|1-20': [DiZhi()],
-    area: '@string(5,50)',
-    happyStatus: '@string(5,50)',
-    city: '@city',
-    coordinate: '@string(5,50)',
-    'corpCertList|1-20': ['@string(5,50)'],
-    corpCertMax: '@string(5,50)',
-    corpCertMin: '@string(5,50)',
-    createEndTime: '@datetime',
-    createStartTime: '@datetime',
-    customerId: '@guid',
-    customerType: '@string(5,50)',
-    distance: '@string(5,50)',
-    endTime: '@datetime',
-    doorStatus: '@string(5,50)',
-    'doorType|1-20': ['@string(5,50)'],
-    'doorTypeList|1-20': ['@string(5,50)'],
-    filialeCompanyMax: '@string(5,50)',
-    filialeCompanyMin: '@string(5,50)',
-    followResult: '@string(5,50)',
-    followType: '@string(5,50)',
-    'followTypeList|1-20': ['@string(5,50)'],
-    followerId: '@guid',
-    'industryType|1-20': ['@string(5,50)'],
-    isRead: '@integer(3,1000)',
-    'lackCorpCertList|1-20': ['@string(5,50)'],
-    'lackQualicaficationList|1-20': ['@string(5,50)'],
-    name: '@ctitle(5,10)',
-    orderColumn: '@string(5,50)',
-    orderType: '@integer(3,1000)',
-    page: '@integer(3,1000)',
-    province: '@province',
-    'qualicaficationList|1-20': ['@string(5,50)'],
-    qualicaficationMax: '@string(5,50)',
-    qualicaficationMin: '@string(5,50)',
-    receiveType: '@string(5,50)',
-    regCatCntMax: '@string(5,50)',
-    regCatCntMin: '@string(5,50)',
-    orangeeredCapitalMax: '@string(5,50)',
-    orangeeredCapitalMin: '@string(5,50)',
-    scoreMax: '@integer(3,1000)',
-    scoreMin: '@integer(3,1000)',
-    size: '20',
-    skAchievementCntMax: '@string(5,50)',
-    skAchievementCntMin: '@string(5,50)',
-    skQualificationCntMax: '@string(5,50)',
-    skQualificationCntMin: '@string(5,50)',
-    source: '@string(5,50)',
-    startTime: '@datetime',
-    taskId: '@guid',
-    type: '@integer(3,1000)',
-  }
-}
-function FenYeLvYouZhiXieChangFaCaiMengTuiJian() {
-  return {
-    addr: '@string(5,50)',
-    'addrList|1-20': [DiZhi()],
-    area: '@string(5,50)',
-    city: '@city',
-    coordinate: '@string(5,50)',
-    'corpCertList|1-20': ['@string(5,50)'],
-    corpCertMax: '@string(5,50)',
-    corpCertMin: '@string(5,50)',
-    createEndTime: '@datetime',
-    createStartTime: '@datetime',
-    distance: '@string(5,50)',
-    endTime: '@datetime',
-    doorStatus: '@string(5,50)',
-    'filialeCompanyList|1-20': ['@string(5,50)'],
-    filialeCompanyMax: '@string(5,50)',
-    filialeCompanyMin: '@string(5,50)',
-    followResult: '@string(5,50)',
-    followType: '@string(5,50)',
-    'followTypeList|1-20': ['@string(5,50)'],
-    name: '@ctitle(5,10)',
-    orderColumn: '@string(5,50)',
-    orderType: '@integer(3,1000)',
-    page: '@integer(3,1000)',
-    province: '@province',
-    'qualicaficationList|1-20': ['@string(5,50)'],
-    qualicaficationMax: '@string(5,50)',
-    qualicaficationMin: '@string(5,50)',
-    regCatCntMax: '@string(5,50)',
-    regCatCntMin: '@string(5,50)',
-    orangeeredCapitalMax: '@string(5,50)',
-    orangeeredCapitalMin: '@string(5,50)',
-    scoreMax: '@integer(3,1000)',
-    scoreMin: '@integer(3,1000)',
-    size: '20',
-    skAchievementCntMax: '@string(5,50)',
-    skAchievementCntMin: '@string(5,50)',
-    skQualificationCntMax: '@string(5,50)',
-    skQualificationCntMin: '@string(5,50)',
-    startTime: '@datetime',
-    type: '@integer(3,1000)',
-  }
-}
-function FenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu() {
-  return {
-    happyStatus: '@string(5,50)',
-    happyType: '@string(5,50)',
-    'contactPhoneList|1-20': [LianXiRenHuaHuaTi()],
-    coordinate: '@string(5,50)',
-    created: '@datetime',
-    customerId: '@guid',
-    customerType: '@string(5,50)',
-    dataLocation: '@string(5,50)',
-    distance: '@string(5,50)',
-    'followInfoList|1-20': [HuaHuaTiQingQiu()],
-    followerId: '@guid',
-    followerName: '@ctitle(5,10)',
-    hasCustomer: '@boolean',
+    birthday: '@string(5,50)',
     id: '@guid',
-    isMyself: '@integer(3,1000)',
-    isRead: '@integer(3,1000)',
-    lastFetchTime: '@datetime',
-    lastFollowTime: '@datetime',
-    planId: '@guid',
-    planScore: '@string(5,50)',
-    gladName: '@ctitle(5,10)',
-    recommendedReason: '@string(5,50)',
-    signId: '@guid',
-    source: '@string(5,50)',
-    gratefulId: '@guid',
-    thirdId: '@guid',
-  }
-}
-function FenYeLvYouXiangMuFaCaiMengJianDanShuJu() {
-  return {
-    addr: '@string(5,50)',
-    'addrList|1-20': [DiZhi()],
-    area: '@string(5,50)',
-    happyStatus: '@string(5,50)',
-    city: '@city',
-    coordinate: '@string(5,50)',
-    createEndTime: '@datetime',
-    createStartTime: '@datetime',
-    customerId: '@guid',
-    customerType: '@string(5,50)',
-    distance: '@string(5,50)',
-    followResult: '@string(5,50)',
-    followType: '@string(5,50)',
-    'followTypeList|1-20': ['@string(5,50)'],
-    followerId: '@guid',
-    isRead: '@integer(3,1000)',
-    name: '@ctitle(5,10)',
-    orderColumn: '@string(5,50)',
-    orderType: '@integer(3,1000)',
-    page: '@integer(3,1000)',
-    province: '@province',
-    receiveType: '@string(5,50)',
-    size: '20',
-    source: '@string(5,50)',
-    type: '@integer(3,1000)',
-  }
-}
-function FenYeLvYouXiangMuFaCaiMengTuiJian() {
-  return {
-    addr: '@string(5,50)',
-    'addrList|1-20': [DiZhi()],
-    area: '@string(5,50)',
-    biddingType: '@string(5,50)',
-    city: '@city',
-    coordinate: '@string(5,50)',
-    createEndTime: '@datetime',
-    createStartTime: '@datetime',
-    distance: '@string(5,50)',
-    followResult: '@string(5,50)',
-    followType: '@string(5,50)',
-    'followTypeList|1-20': ['@string(5,50)'],
-    'industryTypeList|1-20': ['@string(5,50)'],
-    name: '@ctitle(5,10)',
-    orderColumn: '@string(5,50)',
-    orderType: '@integer(3,1000)',
-    page: '@integer(3,1000)',
-    gladBudgetMax: '@string(5,50)',
-    gladBudgetMin: '@string(5,50)',
-    'gladTypeList|1-20': ['@string(5,50)'],
-    province: '@province',
-    publishEndTime: '@datetime',
-    publishStartTime: '@datetime',
-    signUpBeginTime: '@datetime',
-    signUpEndTime: '@datetime',
-    size: '20',
-    type: '@integer(3,1000)',
-    valid: '@guid',
-  }
-}
-function HuaHuaTiQingQiu() {
-  return {
-    addr: '@string(5,50)',
-    happyId: '@guid',
-    happyName: '@ctitle(5,10)',
-    happyStatus: '@string(5,50)',
-    happyType: '@string(5,50)',
-    contactCatId: '@guid',
-    contactCatName: '@ctitle(5,10)',
-    contactCatNum: '@string(5,50)',
-    contactCatType: '@integer(3,1000)',
-    content: '@string(5,50)',
-    coordinate: '@string(5,50)',
-    followResult: '@string(5,50)',
-    followTime: '@datetime',
-    followType: '@string(5,50)',
-    follower: '@string(5,50)',
-    id: '@guid',
-    'imageUrlList|1-20': ['@image(200x100, @color, @color)'],
-  }
-}
-function YuMiHuaHuaTiQingQiu() {
-  return {
     mobile: '@string(5,50)',
-    page: '@integer(3,1000)',
-    size: '20',
-    keyBorardName: '@ctitle(5,10)',
-  }
-}
-function FaCaiMengGenJinJiLuQingQiu() {
-  return {
-    happyId: '@guid',
-    happyType: '@string(5,50)',
-    'flowType|1-20': ['@string(5,50)'],
-    page: '@integer(3,1000)',
-    size: '20',
-  }
-}
-function DiZhi() {
-  return {
-    area: '@string(5,50)',
-    city: '@city',
-    province: '@province',
-  }
-}
-function JiQiRenGenJinJiLuXiangYing() {
-  return {
-    addr: '@string(5,50)',
-    contactCatId: '@guid',
-    contactCatName: '@ctitle(5,10)',
-    contactCatNum: '@string(5,50)',
-    contactCatType: '@integer(3,1000)',
-    content: '@string(5,50)',
-    coordinate: '@string(5,50)',
-    customerId: '@guid',
-    customerName: '@ctitle(5,10)',
-    customerType: '@string(5,50)',
-    followResult: '@string(5,50)',
-    followTime: '@datetime',
-    followType: '@string(5,50)',
-    follower: '@string(5,50)',
-    id: '@guid',
-    'imageUrlList|1-20': ['@image(200x100, @color, @color)'],
-  }
-}
-function JiQiRenGenJinJiLuQingQiu() {
-  return {
-    customerId: '@guid',
-    customerType: '@string(5,50)',
-    page: '@integer(3,1000)',
-    size: '20',
-  }
-}
-function DaoRuHuaHuaTiXiangYing() {
-  return {
-    'failData|1-20': [FailData()],
-    failNum: '@integer(3,1000)',
-    fileName: '@ctitle(5,10)',
-    fileUrl: '@image(200x100, @color, @color)',
-    importTime: '@datetime',
-    operator: '@string(5,50)',
-    page: '@integer(3,1000)',
-    size: '20',
-    status: '@integer(3,1000)',
-    successNum: '@integer(3,1000)',
-  }
-}
-function DaoRuHuaHuaTiQingQiu() {
-  return {
-    endTime: '@datetime',
-    page: '@integer(3,1000)',
-    size: '20',
-    startTime: '@datetime',
-    taskType: '@integer(3,1000)',
-  }
-}
-function WoCongMingFaCaiMengQuanJuFenLei() {
-  return {
-    happyType: '@string(5,50)',
-  }
-}
-function WoCongMingPaiMingMyRankResp() {
-  return {
-    dealData: '@integer(3,1000)',
-    dealDataRank: '@string(5,50)',
-    followData: '@integer(3,1000)',
-    followDataRank: '@string(5,50)',
-    newData: '@integer(3,1000)',
-    newDataRank: '@string(5,50)',
-  }
-}
-function PaiMingShuJuRankDataResp() {
-  return {
-    dealData: '@integer(3,1000)',
-    followData: '@integer(3,1000)',
-    followerId: '@guid',
-    followerName: '@ctitle(5,10)',
-    newData: '@integer(3,1000)',
-  }
-}
-function PaiMingTongJiPieDataReq() {
-  return {
-    beginTime: '@datetime',
-    endTime: '@datetime',
-  }
-}
-function PaiMingTongJiRankDataReq() {
-  return {
-    orderColum: '@string(5,50)',
-  }
-}
-function SouSuoRenCaiJiQiRenrequest() {
-  return {
-    page: '@integer(3,1000)',
-    catName: '@ctitle(5,10)',
-    size: '20',
-  }
-}
-function SouSuoRenCaiJiQiRenresponse() {
-  return {
-    id: '@guid',
-    catName: '@ctitle(5,10)',
-  }
-}
-function SouSuoZhiXieChangJiQiRenrequest() {
-  return {
-    doorName: '@ctitle(5,10)',
-    page: '@integer(3,1000)',
-    size: '20',
-  }
-}
-function SouSuoZhiXieChangJiQiRenresponse() {
-  return {
-    doorName: '@ctitle(5,10)',
-    id: '@guid',
-  }
-}
-function CaoZuoRiZhiFenYerequest() {
-  return {
-    bizId: '@guid',
-    bizType: '@string(5,50)',
-    operatorId: '@guid',
-    page: '@integer(3,1000)',
-    size: '20',
-  }
-}
-function CaoZuoRiZhiFenYeresponse() {
-  return {
-    content: '@string(5,50)',
-    logId: '@guid',
-    operateTime: '@datetime',
-    operateType: '@string(5,50)',
-    operator: '@string(5,50)',
-  }
-}
-function GuanShuiXiangMuFaCaiMengrpcChongDong() {
-  return {
-    agencies: '@string(5,50)',
-    agenciesAddr: '@string(5,50)',
-    agenciesAddrCoordinate: '@string(5,50)',
-    agenciesAddrLat: '@string(5,50)',
-    agenciesAddrLng: '@string(5,50)',
-    agenciesArea: '@string(5,50)',
-    agenciesCity: '@city',
-    agenciesCountry: '@string(5,50)',
-    agenciesPhone: '@integer(13100000000,18999999999)',
-    agenciesProvince: '@province',
-    biddingCorpAddr: '@string(5,50)',
-    biddingCorpAddrCoordinate: '@string(5,50)',
-    biddingCorpAddrLat: '@string(5,50)',
-    biddingCorpAddrLng: '@string(5,50)',
-    biddingCorpArea: '@string(5,50)',
-    biddingCorpCity: '@city',
-    biddingCorpCountry: '@string(5,50)',
-    biddingCorpName: '@ctitle(5,10)',
-    biddingCorpPhone: '@integer(13100000000,18999999999)',
-    biddingCorpProvince: '@province',
-    biddingEndTime: '@datetime',
-    biddingOpeningTime: '@datetime',
-    biddingStartTime: '@datetime',
-    biddingType: '@string(5,50)',
-    fileDownloadEndTime: '@datetime',
-    fileDownloadStartTime: '@datetime',
-    industryType: '@string(5,50)',
-    phone: '@integer(13100000000,18999999999)',
-    gladBudget: '@string(5,50)',
-    gladName: '@ctitle(5,10)',
-    gladNum: '@string(5,50)',
-    gladType: '@string(5,50)',
-  }
-}
-function GengGaiPaiXuDuiXiang() {
-  return {
-    'list|1-20': [HappyPlanScoreListReq()],
-  }
-}
-function ZhuZhuangTuTongJiHistogramDataReq() {
-  return {
-    happyType: '@string(5,50)',
-    dateType: '@datetime',
-  }
-}
-function TianJiaLianXiRenQingQiu() {
-  return {
     name: '@ctitle(5,10)',
-    relId: '@guid',
-    relType: '@integer(3,1000)',
-    remark: '@string(5,50)',
-    type: '@integer(3,1000)',
-    value: '@string(5,50)',
+    tastyId: '@guid',
+    position: '@string(5,50)',
+    relationship: '@string(5,50)',
+    work: '@string(5,50)',
   }
 }
-function HongLingJinRequest() {
+function JiaTingChengYuanShuiGuoDao0() {
   return {
-    happyId: '@guid',
-    happySource: '@string(5,50)',
-    happyType: '@string(5,50)',
-    customerId: '@guid',
-    customerType: '@string(5,50)',
-    radarHappyId: '@guid',
-    signType: '@string(5,50)',
-  }
-}
-function HongLingJinJieGuoresponse() {
-  return {
-    happyId: '@guid',
+    birthday: '@string(5,50)',
+    id: '@guid',
     mobile: '@string(5,50)',
-    signId: '@guid',
+    name: '@ctitle(5,10)',
+    tastyId: '@guid',
+    position: '@string(5,50)',
+    relationship: '@string(5,50)',
+    work: '@string(5,50)',
   }
 }
-function HongLingJinJiLuFenYerequest() {
+function ZhanShiZanShiYongDeShengJiTiaoJianFanHui() {
   return {
-    happyId: '@guid',
-    happyType: '@string(5,50)',
-    customerId: '@guid',
-    customerType: '@string(5,50)',
+    creditRequire: '@string(5,50)',
+    equipManagementRequire: '@string(5,50)',
+    escalationConditionTastyDetailResp: ShengJiTiaoJianJuanXinCaiXiangQing(),
+    preLevel: '@string(5,50)',
+    projectRequire: '@string(5,50)',
+    rate: '@integer(3,1000)',
+  }
+}
+function ChaZhiXiangQing() {
+  return {
+    credential_name: '@ctitle(5,10)',
+    num: '@integer(3,1000)',
+  }
+}
+function ChiGuanTouJuanXinCaiHuiZongShaiXuanTiaoJian() {
+  return {
+    address: '@string(5,50)',
+    boss: '@boolean',
+    'companies|1-20': ['@string(5,50)'],
+    condition: '@string(5,50)',
+    'credentials|1-20': [CredentialFilter()],
+    'educationAndSubjects|1-20': [EducationAndSubject()],
+    employmentContractDateEnd: '@datetime',
+    employmentContractDateStart: '@datetime',
+    graduateDateEnd: '@datetime',
+    graduateDateStart: '@datetime',
+    laborContractDateEnd: '@datetime',
+    laborContractDateStart: '@datetime',
     page: '@integer(3,1000)',
+    tastyName: '@ctitle(5,10)',
+    registerHuman: '@string(5,50)',
     size: '20',
   }
 }
-function HongLingJinJiLuFenYeresponse() {
+function DaShuiNiuJingLiShuiGuoDao() {
   return {
-    happyId: '@guid',
-    happyName: '@ctitle(5,10)',
-    happyType: '@string(5,50)',
-    content: '@string(5,50)',
+    certificateNumber: '@string(5,50)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
     created: '@datetime',
-    customerId: '@guid',
-    customerType: '@string(5,50)',
-    dealTime: '@datetime',
-    dealType: '@string(5,50)',
-    handler: '@string(5,50)',
-    handlerId: '@guid',
+    degree: '@string(5,50)',
+    degreeAttachmentUrl: '@image(200x100, @color, @color)',
+    diplomaAttachmentUrl: '@image(200x100, @color, @color)',
+    educationBackground: '@string(5,50)',
+    educationForm: '@string(5,50)',
+    educationType: '@string(5,50)',
+    entryDate: '@datetime',
+    graduateDate: '@datetime',
     id: '@guid',
-    schedule: '@string(5,50)',
-    signingType: '@string(5,50)',
-    thirdId: '@guid',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    tastyId: '@guid',
+    school: '@string(5,50)',
+    subject: '@string(5,50)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+    verifyStatus: '@string(5,50)',
   }
 }
-function TongJiShuJuHistogramDataResp() {
+function ShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing() {
   return {
-    dealData: '@integer(3,1000)',
-    followData: '@integer(3,1000)',
-    invalidData: '@integer(3,1000)',
-    newData: '@integer(3,1000)',
+    hasQualification: '@boolean',
+    tastynelGap: '@string(5,50)',
+    preLevel: '@string(5,50)',
+    preTastynelGap: '@string(5,50)',
+    preQualificationName: '@ctitle(5,10)',
+    qualificationCate: '@string(5,50)',
+    qualificationIndustry: '@string(5,50)',
+    qualificationLevel: '@string(5,50)',
+    qualificationMajor: '@string(5,50)',
+    qualificationName: '@ctitle(5,10)',
+    satisfyEscalation: '@boolean',
   }
 }
-function TongJiShuJuHistogramResp() {
+function XinZengYinXingKaShuiGuoDao() {
   return {
-    data: TongJiShuJuHistogramDataResp(),
-    label: '@string(5,50)',
-  }
-}
-function TongJiShuJuPieDataResp() {
-  return {
-    beforeTotal: '@integer(3,1000)',
-    compareBefore: '@string(5,50)',
-    dealData: '@integer(3,1000)',
-    doorData: '@integer(3,1000)',
-    followData: '@integer(3,1000)',
-    newData: '@integer(3,1000)',
-    catData: '@integer(3,1000)',
-    gladData: '@integer(3,1000)',
-    total: () => {
-      return +this.size * 10 || 100
-    },
-  }
-}
-function LianXiRenHuaHuaTi() {
-  return {
-    addDate: '@datetime',
-    addName: '@ctitle(5,10)',
+    attachmentUrlBack: '@image(200x100, @color, @color)',
+    attachmentUrlFace: '@image(200x100, @color, @color)',
+    bankNo: '@string(5,50)',
+    bankOpenAddress: '@string(5,50)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    createTastyName: '@ctitle(5,10)',
+    created: '@datetime',
     id: '@guid',
-    name: '@ctitle(5,10)',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    tastyId: '@guid',
     remark: '@string(5,50)',
-    type: '@integer(3,1000)',
-    value: '@string(5,50)',
+    updateId: '@datetime',
+    updateName: '@datetime',
   }
 }
-function LianXiRenHuaHuaTiQingQiu() {
+function GengXinGeRenShuiGuoDao() {
   return {
-    name: '@ctitle(5,10)',
-    page: '@integer(3,1000)',
-    relId: '@guid',
-    relType: '@integer(3,1000)',
-    size: '20',
-    type: '@integer(3,1000)',
-  }
-}
-function JieChuHongLingJinrequest() {
-  return {
-    happyId: '@guid',
-    happyType: '@string(5,50)',
-  }
-}
-function DuRuWenJianXiangYing() {
-  return {
+    address: '@string(5,50)',
+    authStatus: '@string(5,50)',
+    birthday: '@string(5,50)',
+    bloodType: '@string(5,50)',
+    cardStartDate: '@datetime',
+    cardValidDate: '@datetime',
+    checkForWorkType: '@string(5,50)',
+    claimStatus: '@integer(3,1000)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
+    deptId: '@guid',
+    deptName: '@ctitle(5,10)',
+    email: '@email',
+    emergencyContactMobile: '@string(5,50)',
+    emergencyContactTasty: '@string(5,50)',
+    employmentContractDate: '@datetime',
+    employmentWay: '@string(5,50)',
+    fridayId: '@guid',
+    fridayName: '@ctitle(5,10)',
+    fridayNum: '@string(5,50)',
+    healthStatus: '@string(5,50)',
+    highEducation: '@string(5,50)',
+    householdRegistrationAddress: '@string(5,50)',
+    householdRegistrationType: '@string(5,50)',
     id: '@guid',
+    identityCardBack: '@string(5,50)',
+    identityCardFace: '@string(5,50)',
+    isDelete: '@string(5,50)',
+    issue: '@string(5,50)',
+    jobId: '@guid',
+    jobName: '@ctitle(5,10)',
+    joinHumanDate: '@datetime',
+    laborContractDate: '@datetime',
+    maritalStatus: '@string(5,50)',
+    mark: '@string(5,50)',
+    mobile: '@string(5,50)',
+    modified: '@string(5,50)',
+    nation: '@string(5,50)',
+    nativePlace: '@string(5,50)',
+    tastyCredentialType: '@string(5,50)',
+    tastyGender: '@string(5,50)',
+    tastyIdentityCardNum: '@string(5,50)',
+    tastyName: '@ctitle(5,10)',
+    tastyNum: '@string(5,50)',
+    tastyStatus: '@string(5,50)',
+    tastyType: '@string(5,50)',
+    politicalOutlook: '@string(5,50)',
+    postId: '@guid',
+    postName: '@ctitle(5,10)',
+    regularDate: '@datetime',
+    relatedMobile: '@string(5,50)',
+    signImgUrl: '@image(200x100, @color, @color)',
+    socialSecurityHuman: '@string(5,50)',
+    tenantId: '@guid',
+    trialDate: '@datetime',
+    updateId: '@datetime',
+    updateName: '@datetime',
+    usedName: '@ctitle(5,10)',
+    workAddress: '@string(5,50)',
+    workDeptName: '@ctitle(5,10)',
+    workJob: '@string(5,50)',
+    workPosition: '@string(5,50)',
   }
 }
-function ZhuanRangQingQiu() {
+function GengXinDaShuiNiuJingLiShuiGuoDao() {
   return {
-    'happyId|1-20': ['@guid'],
-    happyType: '@string(5,50)',
-    followerId: '@guid',
-    followerName: '@ctitle(5,10)',
+    certificateNumber: '@string(5,50)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
+    degree: '@string(5,50)',
+    degreeAttachmentUrl: '@image(200x100, @color, @color)',
+    diplomaAttachmentUrl: '@image(200x100, @color, @color)',
+    educationBackground: '@string(5,50)',
+    educationForm: '@string(5,50)',
+    educationType: '@string(5,50)',
+    entryDate: '@datetime',
+    graduateDate: '@datetime',
+    id: '@guid',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    tastyId: '@guid',
+    school: '@string(5,50)',
+    subject: '@string(5,50)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+    verifyStatus: '@string(5,50)',
   }
 }
-function XiangMuFaCaiMengXiuGairpcrequest() {
+function GengXinJiXuDaShuiNiuWeiShengSu() {
   return {
-    agencies: '@string(5,50)',
-    agenciesAddr: '@string(5,50)',
-    agenciesAddrCoordinate: '@string(5,50)',
-    agenciesAddrLat: '@string(5,50)',
-    agenciesAddrLng: '@string(5,50)',
-    agenciesArea: '@string(5,50)',
-    agenciesCity: '@city',
-    agenciesCountry: '@string(5,50)',
-    agenciesPhone: '@integer(13100000000,18999999999)',
-    agenciesProvince: '@province',
-    biddingCorpAddr: '@string(5,50)',
-    biddingCorpAddrCoordinate: '@string(5,50)',
-    biddingCorpAddrLat: '@string(5,50)',
-    biddingCorpAddrLng: '@string(5,50)',
-    biddingCorpArea: '@string(5,50)',
-    biddingCorpCity: '@city',
-    biddingCorpCountry: '@string(5,50)',
-    biddingCorpName: '@ctitle(5,10)',
-    biddingCorpPhone: '@integer(13100000000,18999999999)',
-    biddingCorpProvince: '@province',
-    biddingEndTime: '@datetime',
-    biddingOpeningTime: '@datetime',
-    biddingStartTime: '@datetime',
-    biddingType: '@string(5,50)',
-    fileDownloadEndTime: '@datetime',
-    fileDownloadStartTime: '@datetime',
-    industryType: '@string(5,50)',
-    phone: '@integer(13100000000,18999999999)',
-    gladBudget: '@string(5,50)',
-    gladId: '@guid',
-    gladName: '@ctitle(5,10)',
-    gladNum: '@string(5,50)',
-    gladType: '@string(5,50)',
+    certificateName: '@ctitle(5,10)',
+    chosenHour: '@integer(3,1000)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
+    cycle: '@string(5,50)',
+    flow: '@string(5,50)',
+    hour: '@integer(3,1000)',
+    id: '@guid',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    requiredHour: '@integer(3,1000)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+    website: '@string(5,50)',
   }
 }
-function XiangMuFaCaiMengGongHaiLvYou() {
+function GengXinYinXingKaShuiGuoDao() {
   return {
-    addr: '@string(5,50)',
-    'addrList|1-20': [DiZhi()],
-    area: '@string(5,50)',
-    biddingType: '@string(5,50)',
-    happyStatus: '@string(5,50)',
-    city: '@city',
-    coordinate: '@string(5,50)',
-    createEndTime: '@datetime',
-    createStartTime: '@datetime',
-    customerId: '@guid',
-    customerType: '@string(5,50)',
-    distance: '@string(5,50)',
-    followResult: '@string(5,50)',
-    followType: '@string(5,50)',
-    'followTypeList|1-20': ['@string(5,50)'],
-    followerId: '@guid',
-    'industryTypeList|1-20': ['@string(5,50)'],
-    isRead: '@integer(3,1000)',
+    attachmentUrlBack: '@image(200x100, @color, @color)',
+    attachmentUrlFace: '@image(200x100, @color, @color)',
+    bankNo: '@string(5,50)',
+    bankOpenAddress: '@string(5,50)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    createTastyName: '@ctitle(5,10)',
+    created: '@datetime',
+    id: '@guid',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    tastyId: '@guid',
+    remark: '@string(5,50)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+  }
+}
+function ErJiJuanXinCaiShuiGuoDao() {
+  return {
+    humanName: '@ctitle(5,10)',
     name: '@ctitle(5,10)',
-    orderColumn: '@string(5,50)',
-    orderType: '@integer(3,1000)',
-    page: '@integer(3,1000)',
-    gladBudgetMax: '@string(5,50)',
-    gladBudgetMin: '@string(5,50)',
-    'gladTypeList|1-20': ['@string(5,50)'],
-    province: '@province',
-    publishEndTime: '@datetime',
-    publishStartTime: '@datetime',
-    receiveType: '@string(5,50)',
-    signUpBeginTime: '@datetime',
-    signUpEndTime: '@datetime',
-    size: '20',
-    source: '@string(5,50)',
-    taskId: '@guid',
-    type: '@integer(3,1000)',
-    valid: '@guid',
+    tastyIdentityCardNum: '@string(5,50)',
+    registerMajor: '@string(5,50)',
+    registerNum: '@string(5,50)',
+    registerType: '@string(5,50)',
   }
 }
-function XiangMuFaCaiMengFenYeLvYourpcrequest() {
+function ErJiJuanXinCaiTongJi() {
   return {
-    page: '@integer(3,1000)',
-    gladName: '@ctitle(5,10)',
-    size: '20',
+    count: '@integer(3,1000)',
+    registerType: '@string(5,50)',
   }
 }
-function XiangMuFaCaiMengXiangQingrpcresponse() {
+function ErJiGuanTouShuMingChenZhuanYe() {
   return {
-    agencies: '@string(5,50)',
-    agenciesAddr: '@string(5,50)',
-    agenciesPhone: '@integer(13100000000,18999999999)',
-    biddingCorpAddr: '@string(5,50)',
-    biddingCorpName: '@ctitle(5,10)',
-    biddingCorpPhone: '@integer(13100000000,18999999999)',
-    biddingTime: '@datetime',
-    biddingType: '@string(5,50)',
-    industryType: '@string(5,50)',
-    phone: '@integer(13100000000,18999999999)',
-    gladBudget: '@string(5,50)',
-    gladId: '@guid',
-    gladName: '@ctitle(5,10)',
-    gladNum: '@string(5,50)',
-    gladType: '@string(5,50)',
+    credentialName: '@ctitle(5,10)',
+    isContinueEducation: '@string(5,50)',
+    'majors|1-20': ['@string(5,50)'],
+    originalRemainingAddress: '@string(5,50)',
+    useExpireDate: '@datetime',
+  }
+}
+function TianJiaGeRenShuiGuoDao() {
+  return {
+    address: '@string(5,50)',
+    authStatus: '@string(5,50)',
+    birthday: '@string(5,50)',
+    bloodType: '@string(5,50)',
+    cardStartDate: '@datetime',
+    cardValidDate: '@datetime',
+    checkForWorkType: '@string(5,50)',
+    claimStatus: '@integer(3,1000)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
+    deptId: '@guid',
+    deptName: '@ctitle(5,10)',
+    email: '@email',
+    emergencyContactMobile: '@string(5,50)',
+    emergencyContactTasty: '@string(5,50)',
+    employmentContractDate: '@datetime',
+    employmentWay: '@string(5,50)',
+    fridayId: '@guid',
+    fridayName: '@ctitle(5,10)',
+    fridayNum: '@string(5,50)',
+    healthStatus: '@string(5,50)',
+    highEducation: '@string(5,50)',
+    householdRegistrationAddress: '@string(5,50)',
+    householdRegistrationType: '@string(5,50)',
+    id: '@guid',
+    identityCardBack: '@string(5,50)',
+    identityCardFace: '@string(5,50)',
+    isDelete: '@string(5,50)',
+    issue: '@string(5,50)',
+    jobId: '@guid',
+    jobName: '@ctitle(5,10)',
+    joinHumanDate: '@datetime',
+    laborContractDate: '@datetime',
+    maritalStatus: '@string(5,50)',
+    mark: '@string(5,50)',
+    mobile: '@string(5,50)',
+    modified: '@string(5,50)',
+    nation: '@string(5,50)',
+    nativePlace: '@string(5,50)',
+    tastyCredentialType: '@string(5,50)',
+    tastyGender: '@string(5,50)',
+    tastyIdentityCardNum: '@string(5,50)',
+    tastyName: '@ctitle(5,10)',
+    tastyNum: '@string(5,50)',
+    tastyStatus: '@string(5,50)',
+    tastyType: '@string(5,50)',
+    politicalOutlook: '@string(5,50)',
+    postId: '@guid',
+    postName: '@ctitle(5,10)',
+    regularDate: '@datetime',
+    relatedMobile: '@string(5,50)',
+    signImgUrl: '@image(200x100, @color, @color)',
+    socialSecurityHuman: '@string(5,50)',
+    tenantId: '@guid',
+    trialDate: '@datetime',
+    updateId: '@datetime',
+    updateName: '@datetime',
+    usedName: '@ctitle(5,10)',
+    workAddress: '@string(5,50)',
+    workDeptName: '@ctitle(5,10)',
+    workJob: '@string(5,50)',
+    workPosition: '@string(5,50)',
+  }
+}
+function TianJiaDaShuiNiuJingLiShuiGuoDao() {
+  return {
+    certificateNumber: '@string(5,50)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
+    degree: '@string(5,50)',
+    degreeAttachmentUrl: '@image(200x100, @color, @color)',
+    diplomaAttachmentUrl: '@image(200x100, @color, @color)',
+    educationBackground: '@string(5,50)',
+    educationForm: '@string(5,50)',
+    educationType: '@string(5,50)',
+    entryDate: '@datetime',
+    graduateDate: '@datetime',
+    id: '@guid',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    tastyId: '@guid',
+    school: '@string(5,50)',
+    subject: '@string(5,50)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+    verifyStatus: '@string(5,50)',
+  }
+}
+function TianJiaJiXuDaShuiNiuWeiShengSu() {
+  return {
+    certificateName: '@ctitle(5,10)',
+    chosenHour: '@integer(3,1000)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
+    cycle: '@string(5,50)',
+    flow: '@string(5,50)',
+    hour: '@integer(3,1000)',
+    id: '@guid',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    requiredHour: '@integer(3,1000)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+    website: '@string(5,50)',
+  }
+}
+function SheBaoZhangHao() {
+  return {
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
+    id: '@guid',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    password: '@string(5,50)',
+    tastyId: '@guid',
+    updateId: '@datetime',
+    updateName: '@datetime',
+    userName: '@cname',
+  }
+}
+function SheBaoZhangHao0() {
+  return {
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
+    id: '@guid',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    password: '@string(5,50)',
+    tastyId: '@guid',
+    updateId: '@datetime',
+    updateName: '@datetime',
+    userName: '@cname',
+  }
+}
+function JiJiXieXiaGongSiXiangYing() {
+  return {
+    humanEstablishDate: '@datetime',
+    humanLegalRepresentative: '@string(5,50)',
+    humanName: '@ctitle(5,10)',
+    humanNum: '@string(5,50)',
+    humanOperationState: '@string(5,50)',
+    humanRegistAddress: '@string(5,50)',
+    humanRegistCapital: '@string(5,50)',
+    humanType: '@string(5,50)',
+    credentialTotal: '@string(5,50)',
+    fridayId: '@guid',
+    id: '@guid',
+    isClaim: '@string(5,50)',
+    tastyTotal: '@string(5,50)',
+    projectTotal: '@string(5,50)',
+  }
+}
+function NiuNaiXiaZaiQingQiu() {
+  return {
+    tastyCurriculumVitaeBaseInfo: NiuNaiMoKuaiJiBenShuiGuoDao(),
+    'tastyProjectInfo|1-20': [NiuNaiMoKuaiBenRenWanChengZhuYaoShuiBeiGaiKuang()],
+    'tastyWorkHistoryInfo|1-20': [NiuNaiMoKuaiGongZuoJingLi()],
+  }
+}
+function NiuNaiMoKuaiJiBenShuiGuoDao() {
+  return {
+    birthday: '@string(5,50)',
+    birthdayDesc: '@string(5,50)',
+    educationBackground: '@string(5,50)',
+    educationId: '@guid',
+    graduateDate: '@datetime',
+    graduateDateDesc: '@datetime',
+    tastyGender: '@string(5,50)',
+    tastyId: '@guid',
+    tastyIdentityCardNum: '@string(5,50)',
+    tastyName: '@ctitle(5,10)',
+    qualificationId: '@guid',
+    qualificationName: '@ctitle(5,10)',
+    qualificationPostName: '@ctitle(5,10)',
+    school: '@string(5,50)',
+    subject: '@string(5,50)',
+  }
+}
+function NiuNaiMoKuaiGongZuoJingLi() {
+  return {
+    noodles: '@string(5,50)',
+    noodlesPhoneNum: '@integer(13100000000,18999999999)',
+    human: '@string(5,50)',
+    departDate: '@datetime',
+    departDateDesc: '@datetime',
+    entryDate: '@datetime',
+    entryDateDesc: '@datetime',
+    position: '@string(5,50)',
+    workId: '@guid',
+  }
+}
+function NiuNaiMoKuaiBenRenWanChengZhuYaoShuiBeiGaiKuang() {
+  return {
+    noodles: '@string(5,50)',
+    noodlesPhoneNum: '@integer(13100000000,18999999999)',
+    human: '@string(5,50)',
+    credentialName: '@ctitle(5,10)',
+    credentialType: '@string(5,50)',
+    effect: '@string(5,50)',
+    endDate: '@datetime',
+    endDateDesc: '@datetime',
+    num: '@string(5,50)',
+    projectId: '@guid',
+    projectName: '@ctitle(5,10)',
+    projectSize: '@string(5,50)',
+    startDate: '@datetime',
+    startDateDesc: '@datetime',
+    target: '@string(5,50)',
+  }
+}
+function JiXuDaShuiNiuWeiShengSu() {
+  return {
+    certificateName: '@ctitle(5,10)',
+    chosenHour: '@integer(3,1000)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
+    cycle: '@string(5,50)',
+    flow: '@string(5,50)',
+    hour: '@integer(3,1000)',
+    id: '@guid',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    requiredHour: '@integer(3,1000)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+    website: '@string(5,50)',
+  }
+}
+function TaiYangHuaGuanTouShu() {
+  return {
+    isContinueEducation: '@string(5,50)',
+    originalRemainingAddress: '@string(5,50)',
+    qualificationName: '@ctitle(5,10)',
+    reviewTime: '@datetime',
+    specialty: '@string(5,50)',
+    useExpireDate: '@datetime',
+  }
+}
+function HuoQuNiuNaiBianJiXiaLaHaiTunZhiXiangYing() {
+  return {
+    'educationBackgrounds|1-20': [DaShuiNiuJingLiShuiGuoDao()],
+    'qualificationNames|1-20': ['@ctitle(5,10)'],
+  }
+}
+function GuanTouShuHeGongChengShuiBei() {
+  return {
+    'hrTastyCredentialDOList|1-20': [HrTastyCredentialDO()],
+    'hrTastyProjectDOList|1-20': [HrTastyProjectDO()],
+  }
+}
+function GuanTouShuRenLingRiZhi() {
+  return {
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    createTime: '@datetime',
+    created: '@datetime',
+    credentialBigType: '@string(5,50)',
+    credentialName: '@ctitle(5,10)',
+    credentialNo: '@string(5,50)',
+    credentialSmallType: '@string(5,50)',
+    id: '@guid',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    operationType: '@integer(3,1000)',
+    tastyId: '@guid',
+    updateId: '@datetime',
+    updateName: '@datetime',
+  }
+}
+function GuanTouShuRenLingRiZhi0() {
+  return {
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    createTime: '@datetime',
+    created: '@datetime',
+    credentialBigType: '@string(5,50)',
+    credentialName: '@ctitle(5,10)',
+    credentialNo: '@string(5,50)',
+    credentialSmallType: '@string(5,50)',
+    id: '@guid',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    operationType: '@integer(3,1000)',
+    tastyId: '@guid',
+    updateId: '@datetime',
+    updateName: '@datetime',
+  }
+}
+function QingMingCaoZhiXiaoChouYu() {
+  return {
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
+    credentialAlias: '@string(5,50)',
+    credentialArea: '@string(5,50)',
+    credentialEndDate: '@datetime',
+    credentialFullName: '@ctitle(5,10)',
+    credentialLevel: '@string(5,50)',
+    credentialMajor: '@string(5,50)',
+    credentialNature: '@string(5,50)',
+    credentialNum: '@string(5,50)',
+    credentialStartDate: '@datetime',
+    credentialType: '@string(5,50)',
+    creditRequire: '@string(5,50)',
+    equipManagementRequire: '@string(5,50)',
+    id: '@guid',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    preLevel: '@string(5,50)',
+    projectRequire: '@string(5,50)',
+    status: '@string(5,50)',
+    unit: '@string(5,50)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+  }
+}
+function QingMingCaoZhiXiaoChouYu0() {
+  return {
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
+    credentialAlias: '@string(5,50)',
+    credentialArea: '@string(5,50)',
+    credentialEndDate: '@datetime',
+    credentialFullName: '@ctitle(5,10)',
+    credentialLevel: '@string(5,50)',
+    credentialMajor: '@string(5,50)',
+    credentialNature: '@string(5,50)',
+    credentialNum: '@string(5,50)',
+    credentialStartDate: '@datetime',
+    credentialType: '@string(5,50)',
+    creditRequire: '@string(5,50)',
+    equipManagementRequire: '@string(5,50)',
+    id: '@guid',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    preLevel: '@string(5,50)',
+    projectRequire: '@string(5,50)',
+    status: '@string(5,50)',
+    unit: '@string(5,50)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+  }
+}
+function QingMingCaoZhiXiaoChouYuWuShuLianDongNinMengDeRuShuBiaoGeShi() {
+  return {
+    credentialArea: '@string(5,50)',
+    credentialLevel: '@string(5,50)',
+    credentialMajor: '@string(5,50)',
+    credentialNature: '@string(5,50)',
+    credentialType: '@string(5,50)',
+    queryType: '@string(5,50)',
+  }
+}
+function YinXingKaShuiGuoDao() {
+  return {
+    attachmentUrlBack: '@image(200x100, @color, @color)',
+    attachmentUrlFace: '@image(200x100, @color, @color)',
+    bankNo: '@string(5,50)',
+    bankOpenAddress: '@string(5,50)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    createTastyName: '@ctitle(5,10)',
+    created: '@datetime',
+    id: '@guid',
+    isDelete: '@string(5,50)',
+    modified: '@string(5,50)',
+    tastyId: '@guid',
+    remark: '@string(5,50)',
+    updateId: '@datetime',
+    updateName: '@datetime',
+  }
+}
+function FeiErJiZhiYeQingMingCaoGeGuanTouJian() {
+  return {
+    'onSiteManagements|1-20': [FridaySummary()],
+    'other|1-20': [FridaySummary()],
+    'safetyProduction|1-20': [FridaySummary()],
+    'specialOperations|1-20': [FridaySummary()],
+    'technicians|1-20': [FridaySummary()],
   }
 }
 module.exports = {
-  AddHappyDoorReq,
-  AddHappyCatCertificateReq,
-  AddHappyCatReq,
-  AddHappyCatTitleReq,
-  AddHappyGladReq,
-  AddHappyReq,
-  AddHappyResp,
-  AddCustomerResp,
-  AddCatCustomerResp,
-  AddSignHappyDoorReq,
-  AddSignHappyCatReq,
-  AddSignHappyGladReq,
-  AddSignHappyResp,
+  AddTastyCredentialProjectReq,
   ApiResponse,
-  ApiResponseAddHappyResp,
-  ApiResponseAddCustomerResp,
-  ApiResponseAddCatCustomerResp,
-  ApiResponseAddSignHappyResp,
-  ApiResponseHappyClassificationResp,
-  ApiResponseHappyDesktopRulePageResp,
-  ApiResponseHappyDesktopRuleResp,
-  ApiResponseHappyDoorInfoResp,
-  ApiResponseHappyNumResp,
-  ApiResponseHappyCatInfoResp,
-  ApiResponseHappyPlanCountResp,
-  ApiResponseHappyGladInfoResp,
-  ApiResponseHappyPushInfoResp,
-  ApiResponseHappyReceiveResp,
-  ApiResponseHappySubscribeInfoResp,
-  ApiResponseComPageHappyPushDetail,
-  ApiResponseComPageCustomerDoorInfoResp,
-  ApiResponseComPageCustomerCatInfoResp,
-  ApiResponseComPageDesktopListResp,
-  ApiResponseComPageLocationDateInfoResp,
-  ApiResponseComPageLocationInfoResp,
-  ApiResponseComPagePageHappyResp,
-  ApiResponseComPagePageDoorHappyPoolResp,
-  ApiResponseComPagePageCatHappyPoolResp,
-  ApiResponseComPagePageGladHappyPoolResp,
-  ApiResponseComPagePunchPageResp,
-  ApiResponseComPageTaskPageListResp,
-  ApiResponseComPageTreelong,
-  ApiResponseComPageFenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu,
-  ApiResponseComPageFenYeLvYouRenWu,
-  ApiResponseComPageFenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu,
-  ApiResponseComPageFenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu,
-  ApiResponseComPageHuaHuaTiQingQiu,
-  ApiResponseComPageJiQiRenGenJinJiLuXiangYing,
-  ApiResponseComPageDaoRuHuaHuaTiXiangYing,
-  ApiResponseComPageSouSuoRenCaiJiQiRenresponse,
-  ApiResponseComPageSouSuoZhiXieChangJiQiRenresponse,
-  ApiResponseComPageCaoZuoRiZhiFenYeresponse,
-  ApiResponseComPageHongLingJinJiLuFenYeresponse,
-  ApiResponseComPageLianXiRenHuaHuaTi,
-  ApiResponseComPageXiangMuFaCaiMengXiangQingrpcresponse,
-  ApiResponseCountCustomerHappyNumResp,
-  ApiResponseCustomerDoorAddResp,
-  ApiResponseCustomerDoorDetailResp,
-  ApiResponseCustomerDoorNumResp,
-  ApiResponseCustomerCatAddResp,
-  ApiResponseCustomerCatDetailResp,
-  ApiResponseDesktopResp,
-  ApiResponseListHappyPlanCoordinateResp,
-  ApiResponseListCustomerDoorFromDataResp,
-  ApiResponseListDayCityResp,
-  ApiResponseListWhiteNoteResp,
-  ApiResponseListWhiteResp,
-  ApiResponseListDocument,
-  ApiResponseListDesktopResp,
-  ApiResponseListLocationInfoResp,
-  ApiResponseListPagePlanResp,
-  ApiResponseListTaskProgressDetailResp,
-  ApiResponseListTaskProgressCatResp,
-  ApiResponseListTreelong,
-  ApiResponseListTreestring,
+  ApiResponseComPageEntCredPlanResp,
+  ApiResponseComPageTastyCredExamResultResp,
+  ApiResponseComPagestring,
+  ApiResponseComPageYeJiRenLingRiZhi,
+  ApiResponseComPageJuanXinCaiGongZuoYeJi,
+  ApiResponseComPageJuanXinCaiChiGuanTouShuiGuoDao,
+  ApiResponseComPageChaXianBanBuLiangGuShiLieBiaoXiangYing,
+  ApiResponseComPageChaXianBanFenZhiJiGou,
+  ApiResponseComPageChaXianBanShiXinLianHeChengJieGuShi,
+  ApiResponseComPageChaXianBanGongChengShuiBeiXiangYing,
+  ApiResponseComPageChaXianBanChiGuanTouJuanXinCaiXiangYing,
+  ApiResponseComPageChaXianBanErJiJuanXinCai,
+  ApiResponseComPageChaXianBanLiangHaoGuShiLieBiaoXiangYing,
+  ApiResponseComPageChaXianBanQingMingCaoZhiXiangYing,
+  ApiResponseComPageChaXianBanHeiMingDanXiangYing,
+  ApiResponseComPageShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing,
+  ApiResponseComPageErJiJuanXinCaiShuiGuoDao,
+  ApiResponseComPageJiJiXieXiaGongSiXiangYing,
+  ApiResponseComPageJiXuDaShuiNiuWeiShengSu,
+  ApiResponseComPageGuanTouShuRenLingRiZhi,
+  ApiResponseComPageQingMingCaoZhiXiaoChouYu,
+  ApiResponseEntCredOverviewResp,
+  ApiResponseEntCredPlanMainResp,
+  ApiResponseFridayAllCountResp,
+  ApiResponseFridayBranchRawResp,
+  ApiResponseJSONArray,
+  ApiResponseJSONObject,
+  ApiResponseListEntCredentialExpireAlertResp,
+  ApiResponseListHrTastyCredentialDO,
+  ApiResponseListMap,
+  ApiResponseListTastyCredEvalInfo,
+  ApiResponseListTastyCredUpRecommendResp,
+  ApiResponseListVOResp,
   ApiResponseListobject,
   ApiResponseListstring,
-  ApiResponseListTongJiShuJuHistogramResp,
-  ApiResponseMaplongCustomerDoorDetailResp,
-  ApiResponseGladSignInfoResp,
-  ApiResponseRankResp,
-  ApiResponseTaskInfoResp,
-  ApiResponseTravelLoginResp,
-  ApiResponseVoid,
+  ApiResponseListJuanXinCaiGongZuoYeJi,
+  ApiResponseListJuanXinCaiGongZuoJingLi,
+  ApiResponseListJuanXinCaiChiGuanTouShuiGuoDao,
+  ApiResponseListJuanXinCaiChiGuanTouQingKuang,
+  ApiResponseListChaXianBanBuLiangGuShiLieBiaoXiangYing,
+  ApiResponseListChaXianBanShiXinLianHeChengJieGuShi,
+  ApiResponseListChaXianBanGongChengShuiBeiXiangYing,
+  ApiResponseListChaXianBanErJiJuanXinCai,
+  ApiResponseListChaXianBanLiangHaoGuShiLieBiaoXiangYing,
+  ApiResponseListChaXianBanQingMingCaoZhiXiangYing,
+  ApiResponseListChaXianBanQingMingCaoZhiWuShu,
+  ApiResponseListChaXianBanHeiMingDanXiangYing,
+  ApiResponseListJiaTingChengYuanShuiGuoDao,
+  ApiResponseListDaShuiNiuJingLiShuiGuoDao,
+  ApiResponseListErJiJuanXinCaiTongJi,
+  ApiResponseListJiJiXieXiaGongSiXiangYing,
+  ApiResponseListYinXingKaShuiGuoDao,
+  ApiResponseMapstringobject,
+  ApiResponseMapstringstring,
+  ApiResponseMap,
+  ApiResponseTastyAllCountResp,
+  ApiResponseTastyCredEvalInfo,
+  ApiResponseTastyCredUpRecommendResp,
+  ApiResponseTastyIntroductionInfo,
+  ApiResponsePlanCreditResp,
+  ApiResponsePlanTastyResp,
+  ApiResponseSetstring,
+  ApiResponseappChaXianBanShuiGuoDaoFanHui,
   ApiResponseboolean,
-  ApiResponselong,
-  ApiResponseobject,
   ApiResponsestring,
-  ApiResponseShangChuanWenJianFanHui,
-  ApiResponseZhiXieChangFaCaiMengXiangQingrpcresponse,
-  ApiResponseGuanLianFaCaiMengResponse,
-  ApiResponseHuaHuaTiQingQiu,
-  ApiResponseHongLingJinJieGuoresponse,
-  ApiResponseTongJiShuJuPieDataResp,
-  ApiResponseLianXiRenHuaHuaTi,
-  ApiResponseDuRuWenJianXiangYing,
-  ApiResponseXiangMuFaCaiMengXiangQingrpcresponse,
-  AssignHappyReq,
-  HappyClassificationResp,
-  HappyCntResp,
-  HappyDesktopDetailRulePageResp,
-  HappyDesktopDetailRuleReq,
-  HappyDesktopRulePageReq,
-  HappyDesktopRulePageResp,
-  HappyDesktopRuleReq,
-  HappyDesktopRuleResp,
-  HappyDoorInfoResp,
-  HappyFollowReq,
-  HappyFollowRuleReq,
-  HappyNumReq,
-  HappyNumResp,
-  HappyCatCertificateResp,
-  HappyCatInfoResp,
-  HappyCatTitleResp,
-  HappyPlanAddHappyListReq,
-  HappyPlanAddHappyReq,
-  HappyPlanAddCustomerListReq,
-  HappyPlanAddCustomerReq,
-  HappyPlanCoordinateResp,
-  HappyPlanCountReq,
-  HappyPlanCountResp,
-  HappyPlanDateListByTypeReq,
-  HappyPlanDateListReq,
-  HappyPlanDeleteReq,
-  HappyPlanPageReq,
-  HappyPlanPunchReq,
-  HappyPlanRecommendedReq,
-  HappyPlanScoreListReq,
-  HappyGladInfoResp,
-  HappyPushDetail,
-  HappyPushInfoResp,
-  HappyPushCatInfoResp,
-  HappyPushCatResp,
-  HappyReceiveResp,
-  HappySetVisitPlanReq,
-  HappySubscribeInfoReq,
-  HappySubscribeInfoResp,
-  CharSequence,
-  ComPageHappyDesktopDetailRulePageResp,
-  ComPageHappyPushDetail,
-  ComPageCustomerDoorInfoResp,
-  ComPageCustomerCatInfoResp,
-  ComPageDesktopListResp,
-  ComPageLocationDateInfoResp,
-  ComPageLocationInfoResp,
-  ComPagePageHappyResp,
-  ComPagePageDoorHappyPoolResp,
-  ComPagePageCatHappyPoolResp,
-  ComPagePageGladHappyPoolResp,
-  ComPagePunchPageResp,
-  ComPageTaskPageListResp,
-  ComPageTreelong,
-  ComPageFenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu,
-  ComPageFenYeLvYouRenWu,
-  ComPageFenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu,
-  ComPageFenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu,
-  ComPageHuaHuaTiQingQiu,
-  ComPageJiQiRenGenJinJiLuXiangYing,
-  ComPageDaoRuHuaHuaTiXiangYing,
-  ComPageSouSuoRenCaiJiQiRenresponse,
-  ComPageSouSuoZhiXieChangJiQiRenresponse,
-  ComPageCaoZuoRiZhiFenYeresponse,
-  ComPageHongLingJinJiLuFenYeresponse,
-  ComPageLianXiRenHuaHuaTi,
-  ComPageXiangMuFaCaiMengXiangQingrpcresponse,
-  Comparableobject,
-  ContactAddReq,
-  ContactDetailResp,
-  CountCustomerHappyNumReq,
-  CountCustomerHappyNumResp,
-  CountCustomerHappyNumTypeResp,
-  CustomerDoorAddReq,
-  CustomerDoorAddResp,
-  CustomerDoorDetailResp,
-  CustomerDoorFromDataReq,
-  CustomerDoorFromDataResp,
-  CustomerDoorInfoResp,
-  CustomerDoorNumReq,
-  CustomerDoorNumResp,
-  CustomerDoorUpReq,
-  CustomerFollowReq,
-  CustomerInvoiceAddReq,
-  CustomerInvoiceDetailResp,
-  CustomerLabelReq,
-  CustomerLabelResp,
-  CustomerCatAddReq,
-  CustomerCatAddResp,
-  CustomerCatCertificateInfoResp,
-  CustomerCatCertificateReq,
-  CustomerCatDetailResp,
-  CustomerCatInfoResp,
-  CustomerCatTitleInfoResp,
-  CustomerCatTitleReq,
-  CustomerCatUpReq,
-  DayCityReq,
-  DayCityResp,
-  DelReq,
-  DeleteReq,
-  WhiteListReq,
-  WhiteNoteResp,
-  WhiteReq,
-  WhiteResp,
-  Document,
-  DesktopListResp,
-  DesktopResp,
-  FailData,
-  FollowAgainReq,
-  FollowListReq,
-  ImportExcelByUrlReq,
-  ImportListReq,
-  InnerRpcCustomerDoorAddReq,
-  InnerRpcCustomerDoorFromDataReq,
-  InnerRpcCustomerDoorNumReq,
-  InnerRpcCustomerDoorUpReq,
-  InnerRpcCustomerCatAddReq,
-  InnerRpcCustomerCatUpReq,
-  InnerRpcImportExcelByUrlReq,
-  InnerRpcImportListReq,
-  InnerRpcPageContactReq,
-  InnerRpcPageCustomerDoorReq,
-  InnerRpcPageCustomerCatReq,
-  InnerRpcSelectCustomerDoorReq,
-  InnerRpclong,
-  InnerRpcGuanShuiXiangMuFaCaiMengrpcChongDong,
-  ListDesktopReq,
-  ListLocationReq,
-  LocationAddReq,
-  LocationDateInfoResp,
-  LocationInfoResp,
-  PageHappyMixReq,
-  PageHappyResp,
-  PageContactReq,
-  PageCustomerDoorReq,
-  PageCustomerCatReq,
-  PageDoorHappyPoolResp,
-  PageLocationByTaskReq,
-  PageLocationReq,
-  PageCatHappyPoolResp,
-  PagePlanResp,
-  PageGladHappyPoolResp,
-  GladSignInfoResp,
-  PunchPageReq,
-  PunchPageResp,
-  PunchReq,
-  RankResp,
-  ReceiveHappyReq,
-  Recommended2PlanReq,
-  SelectCustomerDoorReq,
-  SelectCustomerDoorGratefulReq,
-  TaskAddrResp,
-  TaskChangeStatusReq,
-  TaskCreateAddrReq,
-  TaskCreateWhiteReq,
-  TaskCreateCatReq,
-  TaskCreateReq,
-  TaskWhiteResp,
-  TaskInfoResp,
-  TaskModifyReq,
-  TaskPageListReq,
-  TaskPageListResp,
-  TaskCatResp,
-  TaskProgressDetailReq,
-  TaskProgressDetailResp,
-  TaskProgressCatResp,
-  TaskProgressResp,
-  TravelLoginReq,
-  TravelLoginResp,
-  TreeNodeConfig,
-  VerifyRepeatHappyReq,
-  VerifyRepeatCustomerReq,
-  VerifyRepeatCatCustomerReq,
-  ShangChuanWenJianFanHui,
-  BuZaiGenJin,
-  ZhiXieChangFaCaiMengXiangQingrpcresponse,
-  GuanLianFaCaiMengRequest,
-  GuanLianFaCaiMengResponse,
-  FenYeLvYouRenCaiFaCaiMengresponseJianDanShuJu,
-  FenYeLvYouRenCaiFaCaiMengJianDanShuJu,
-  FenYeLvYouRenCaiFaCaiMengGongHai,
-  FenYeLvYouRenCaiFaCaiMengTuiJian,
-  FenYeLvYouRenWu,
-  FenYeLvYouZhiXieChangFaCaiMengresponseJianDanShuJu,
-  FenYeLvYouZhiXieChangFaCaiMengJianDanShuJu,
-  FenYeLvYouZhiXieChangFaCaiMengGongHai,
-  FenYeLvYouZhiXieChangFaCaiMengTuiJian,
-  FenYeLvYouXiangMuFaCaiMengresponseJianDanShuJu,
-  FenYeLvYouXiangMuFaCaiMengJianDanShuJu,
-  FenYeLvYouXiangMuFaCaiMengTuiJian,
-  HuaHuaTiQingQiu,
-  YuMiHuaHuaTiQingQiu,
-  FaCaiMengGenJinJiLuQingQiu,
-  DiZhi,
-  JiQiRenGenJinJiLuXiangYing,
-  JiQiRenGenJinJiLuQingQiu,
-  DaoRuHuaHuaTiXiangYing,
-  DaoRuHuaHuaTiQingQiu,
-  WoCongMingFaCaiMengQuanJuFenLei,
-  WoCongMingPaiMingMyRankResp,
-  PaiMingShuJuRankDataResp,
-  PaiMingTongJiPieDataReq,
-  PaiMingTongJiRankDataReq,
-  SouSuoRenCaiJiQiRenrequest,
-  SouSuoRenCaiJiQiRenresponse,
-  SouSuoZhiXieChangJiQiRenrequest,
-  SouSuoZhiXieChangJiQiRenresponse,
-  CaoZuoRiZhiFenYerequest,
-  CaoZuoRiZhiFenYeresponse,
-  GuanShuiXiangMuFaCaiMengrpcChongDong,
-  GengGaiPaiXuDuiXiang,
-  ZhuZhuangTuTongJiHistogramDataReq,
-  TianJiaLianXiRenQingQiu,
-  HongLingJinRequest,
-  HongLingJinJieGuoresponse,
-  HongLingJinJiLuFenYerequest,
-  HongLingJinJiLuFenYeresponse,
-  TongJiShuJuHistogramDataResp,
-  TongJiShuJuHistogramResp,
-  TongJiShuJuPieDataResp,
-  LianXiRenHuaHuaTi,
-  LianXiRenHuaHuaTiQingQiu,
-  JieChuHongLingJinrequest,
-  DuRuWenJianXiangYing,
-  ZhuanRangQingQiu,
-  XiangMuFaCaiMengXiuGairpcrequest,
-  XiangMuFaCaiMengGongHaiLvYou,
-  XiangMuFaCaiMengFenYeLvYourpcrequest,
-  XiangMuFaCaiMengXiangQingrpcresponse,
+  ApiResponseGeRenShuiGuoDao,
+  ApiResponseGeRenGongZuoNiuNaiXiangYingYeJiBiaoBianJi,
+  ApiResponseJuanXinCaiSuoYouShuiGuoDao,
+  ApiResponseChaXianBanGongShangShuiGuoDaoFanHui,
+  ApiResponseChaXianBanQingMingCaoZhiShengJiTiaoJianFanHui,
+  ApiResponseShengJiTiaoJianJuanXinCaiXiangQing,
+  ApiResponseXueXinZhangHao,
+  ApiResponseZhanShiZanShiYongDeShengJiTiaoJianFanHui,
+  ApiResponseSheBaoZhangHao,
+  ApiResponseJiXuDaShuiNiuWeiShengSu,
+  ApiResponseHuoQuNiuNaiBianJiXiaLaHaiTunZhiXiangYing,
+  ApiResponseGuanTouShuHeGongChengShuiBei,
+  ApiResponseQingMingCaoZhiXiaoChouYu,
+  ComPageEntCredPlanResp,
+  ComPageTastyCredExamResultResp,
+  ComPagestring,
+  ComPageYeJiRenLingRiZhi,
+  ComPageJuanXinCaiGongZuoYeJi,
+  ComPageJuanXinCaiChiGuanTouShuiGuoDao,
+  ComPageChaXianBanBuLiangGuShiLieBiaoXiangYing,
+  ComPageChaXianBanFenZhiJiGou,
+  ComPageChaXianBanShiXinLianHeChengJieGuShi,
+  ComPageChaXianBanGongChengShuiBeiXiangYing,
+  ComPageChaXianBanChiGuanTouJuanXinCaiXiangYing,
+  ComPageChaXianBanErJiJuanXinCai,
+  ComPageChaXianBanLiangHaoGuShiLieBiaoXiangYing,
+  ComPageChaXianBanQingMingCaoZhiXiangYing,
+  ComPageChaXianBanHeiMingDanXiangYing,
+  ComPageShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing,
+  ComPageErJiJuanXinCaiShuiGuoDao,
+  ComPageJiJiXieXiaGongSiXiangYing,
+  ComPageJiXuDaShuiNiuWeiShengSu,
+  ComPageGuanTouShuRenLingRiZhi,
+  ComPageQingMingCaoZhiXiaoChouYu,
+  CredentialFilter,
+  EducationAndSubject,
+  EntCredOverviewResp,
+  EntCredPlanMainReq,
+  EntCredPlanMainResp,
+  EntCredPlanResp,
+  EntCredStartReq,
+  EntCredentialExpireAlertResp,
+  EntUpgradeValidReq,
+  FridayAllCountResp,
+  FridayBranchRawResp,
+  FridayCredentialAddReq,
+  FridayCredentialNameReq,
+  FridayMainUpdateReq,
+  FridaySummary,
+  HrTastyBankRecordDO,
+  HrTastyCredentialDO,
+  HrTastyEducationDO,
+  HrTastyFamilyDO,
+  HrTastyGoodBadRecordDO,
+  HrTastyPatentMonographDO,
+  HrTastyProjectDO,
+  HrTastyWorkHistoryDO,
+  OcrBigDataReq,
+  PageTastyCredExamResultReq,
+  PageTastyCredExamTimeReq,
+  TastyAllCountResp,
+  TastyCredEvalInfo,
+  TastyCredExamResultResp,
+  TastyCredUpRecommendResp,
+  TastyIntroductionInfo,
+  TastyLackItemResp,
+  TastyLackResp,
+  TastyRecommendItemResp,
+  TastyRecommendResp,
+  PlanCreditResp,
+  PlanCreditRespItem,
+  PlanTastyResp,
+  SignUrlReq,
+  Type,
+  VOResp,
+  appChaXianBanShuiGuoDaoFanHui,
+  YeJiRenLingRiZhi,
+  GeRenShuiGuoDao,
+  GeRenGongZuoNiuNaiXiangYingYeJiBiaoBianJi,
+  GeRenGongZuoJingLi,
+  JuanXinCaiBeiZhuShuiGuoDaoBaoCunQingQiu,
+  JuanXinCaiGongZuoYeJi,
+  JuanXinCaiGongZuoYeJi0,
+  JuanXinCaiGongZuoJingLi,
+  JuanXinCaiGongZuoJingLi0,
+  JuanXinCaiSuoYouShuiGuoDao,
+  JuanXinCaiChiGuanTouShuiGuoDao,
+  JuanXinCaiChiGuanTouShuiGuoDao0,
+  JuanXinCaiChiGuanTouQingKuang,
+  JuanXinCaiPeiBeiXiangQing,
+  ChaXianBanBuLiangGuShiLieBiaoXiangYing,
+  ChaXianBanFenZhiJiGou,
+  ChaXianBanFenZhiJiGouGengXinQingQiu,
+  ChaXianBanShiXinLianHeChengJieGuShi,
+  ChaXianBanGongShangShuiGuoDaoFanHui,
+  ChaXianBanGongChengShuiBeiXiangYing,
+  ChaXianBanChiGuanTouJuanXinCaiJuanXinCaiLaiYuanShuiGuoDao,
+  ChaXianBanChiGuanTouJuanXinCaiXiangYing,
+  ChaXianBanChiGuanTouJuanXinCaiHuiZongJiChuShuiGuoDao,
+  ChaXianBanHuiZongFenYeQingQiu,
+  ChaXianBanErJiJuanXinCai,
+  ChaXianBanLiangHaoGuShiLieBiaoXiangYing,
+  ChaXianBanQingMingCaoZhiShengJiTiaoJianFanHui,
+  ChaXianBanQingMingCaoZhiXiangYing,
+  ChaXianBanQingMingCaoZhiXinZengGengXinQingQiu,
+  ChaXianBanQingMingCaoZhiGuanLi,
+  ChaXianBanQingMingCaoZhiWuShu,
+  ChaXianBanQingMingCaoZhiWuShu0,
+  ChaXianBanHeiMingDanXiangYing,
+  ShengJiTiaoJianJuanXinCaiXiangQing,
+  XueXin,
+  XueXinZhangHao,
+  XueXinZhangHao0,
+  JiaTingChengYuanShuiGuoDao,
+  JiaTingChengYuanShuiGuoDao0,
+  ZhanShiZanShiYongDeShengJiTiaoJianFanHui,
+  ChaZhiXiangQing,
+  ChiGuanTouJuanXinCaiHuiZongShaiXuanTiaoJian,
+  DaShuiNiuJingLiShuiGuoDao,
+  ShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing,
+  XinZengYinXingKaShuiGuoDao,
+  GengXinGeRenShuiGuoDao,
+  GengXinDaShuiNiuJingLiShuiGuoDao,
+  GengXinJiXuDaShuiNiuWeiShengSu,
+  GengXinYinXingKaShuiGuoDao,
+  ErJiJuanXinCaiShuiGuoDao,
+  ErJiJuanXinCaiTongJi,
+  ErJiGuanTouShuMingChenZhuanYe,
+  TianJiaGeRenShuiGuoDao,
+  TianJiaDaShuiNiuJingLiShuiGuoDao,
+  TianJiaJiXuDaShuiNiuWeiShengSu,
+  SheBaoZhangHao,
+  SheBaoZhangHao0,
+  JiJiXieXiaGongSiXiangYing,
+  NiuNaiXiaZaiQingQiu,
+  NiuNaiMoKuaiJiBenShuiGuoDao,
+  NiuNaiMoKuaiGongZuoJingLi,
+  NiuNaiMoKuaiBenRenWanChengZhuYaoShuiBeiGaiKuang,
+  JiXuDaShuiNiuWeiShengSu,
+  TaiYangHuaGuanTouShu,
+  HuoQuNiuNaiBianJiXiaLaHaiTunZhiXiangYing,
+  GuanTouShuHeGongChengShuiBei,
+  GuanTouShuRenLingRiZhi,
+  GuanTouShuRenLingRiZhi0,
+  QingMingCaoZhiXiaoChouYu,
+  QingMingCaoZhiXiaoChouYu0,
+  QingMingCaoZhiXiaoChouYuWuShuLianDongNinMengDeRuShuBiaoGeShi,
+  YinXingKaShuiGuoDao,
+  FeiErJiZhiYeQingMingCaoGeGuanTouJian,
 }
