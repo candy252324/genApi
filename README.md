@@ -1,16 +1,53 @@
-# api 自动生成工具（swagger2.0 ）
+# api 自动生成工具
 
-### 使用方法
+注：目前只支持解析 swagger 2.0 接口文档。
+
+## 安装
 
 ```shell
-npm i @cxxgo/genapi -D
+npm install @cxxgo/genapi -D
+```
 
-# 生成apiConfig.js配置文件
+## 使用
+
+#### 1. 配置文件生成
+
+```shell
+# 在当前命令执行路径下生成 apiConfig 配置文件
 genapi init
+```
 
-# 生成 api
+可选参数:
+
+- `--force`： 是否覆盖本地配置文件。
+
+  如果本地已经存在`apiConfig.ts` 或 `apiConfig.js` 配置文件，执行 `genapi init --force` 将会生成新的配置文件覆盖本地配置文件。
+
+#### 2. 生成 api
+
+```shell
+# 根据 apiConfig 中的配置自动生成api
 genapi now
+```
 
+可选参数:
+
+- `--config <configPath>`： 自定义配置文件路径。
+
+  执行 `genapi now` 时，默认将当前目录下的 `apiConfig.ts` 或 `apiConfig.js` 当做配置文件。
+
+  当然也可以手动指定，如：`genapi now -c ./xxx/myApiConf.ts`， 指定配置文件路径为 `./xxx/myApiConf.ts`。
+
+- `--no-mock`： 是否不生成 mock 数据。
+
+  执行 `genapi now` 除了会生成 api 数据外，还会默认在 node_modules 目录下生成 mock 数据。
+  `genapi now --no-mock` 则不生成 mock 数据，可以一定程度上减少命令执行时间 。
+
+#### 3. 启动 mock 服务
+
+```shell
+# 启动本地 mock 服务，默认端口 8090
+genapi mock-server
 ```
 
 ### apiConfig.js 配置说明
