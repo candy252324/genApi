@@ -1738,7 +1738,7 @@ function DesktopUpReq() {
 }
 function EmpowerWhiteResp() {
   return {
-    'children|1-20': [EmpowerWhiteResp()],
+    'children|1-20': [''],
     id: '@guid',
     info: WhiteResp(),
     label: '@string(5,50)',
@@ -2652,7 +2652,7 @@ function RouterMetaResp() {
 }
 function RouterResp() {
   return {
-    'children|1-20': [RouterResp()],
+    'children|1-20': [''],
     id: '@guid',
     meta: RouterMetaResp(),
     name: '@ctitle(5,10)',
@@ -2731,7 +2731,7 @@ function SysDictDuiXiangnullZhiBuXuLieHua() {
   return {
     'allLevelKindName|1-20': ['@ctitle(5,10)'],
     childFlag: '@integer(3,1000)',
-    'childList|1-20': [SysDictDuiXiangnullZhiBuXuLieHua()],
+    'childList|1-20': [''],
     deleted: '@boolean',
     id: '@guid',
     introduce: '@string(5,50)',

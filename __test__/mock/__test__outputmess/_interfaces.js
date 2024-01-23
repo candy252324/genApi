@@ -93,7 +93,7 @@ export function ApiResponseListJobCategoryConfigResp() {
 }
 export function JobCategoryConfigResp() {
   return {
-    'children|1-20': [JobCategoryConfigResp()],
+    'children|1-20': [''],
     createId: '@guid',
     createName: '@ctitle(5,10)',
     created: '@datetime',

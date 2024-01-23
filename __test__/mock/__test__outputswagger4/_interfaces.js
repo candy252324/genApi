@@ -1609,7 +1609,7 @@ export function VOResp() {
   return {
     code: 200,
     value: '@string(5,50)',
-    'vos|1-20': [VOResp()],
+    'vos|1-20': [''],
   }
 }
 export function appChaXianBanShuiGuoDaoFanHui() {

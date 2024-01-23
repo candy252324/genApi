@@ -15,7 +15,7 @@ export function writeMockInterface(interfaces: IInterface[], { outputDir, cmd = 
     if (item?.properties && item.properties?.length) {
       let mockRes = ''
       item.properties.forEach((it) => {
-        mockRes += getInterfaceMock(it, fieldRules)
+        mockRes += getInterfaceMock(it, fieldRules, item.name)
       })
       str += `\nreturn ${mockRes ? '{\n' + mockRes + '\n}' : ''}`
     }
@@ -49,7 +49,7 @@ export function writeMockInterface(interfaces: IInterface[], { outputDir, cmd = 
    *    }]
    *  }
    */
-function getInterfaceMock(model: IInterface, fieldRules) {
+function getInterfaceMock(model: IInterface, fieldRules, parentInterface) {
   const { name, type, isArray, enums } = model
 
   let _mockStr = ''
@@ -68,8 +68,23 @@ function getInterfaceMock(model: IInterface, fieldRules) {
   } else if (type === 'object') {
     _mockStr = '{}'
   } else {
-    isFn = true
-    _mockStr = `${type}()`
+    //  如下数据，如果当前 type 和 parentInterface 一致（都为JobCategoryConfigResp）
+    //  直接将 _mockStr 处理成空字符串，避免循环调用导致栈溢出
+    /**
+      export function JobCategoryConfigResp() {
+       return {
+         'children|1-20': [JobCategoryConfigResp()],
+         createId: '@guid',
+         createName: '@ctitle(5,10)',
+       }
+     }
+     */
+    if (type === parentInterface) {
+      _mockStr = '' //处理成  'children|1-20': [''],
+    } else {
+      isFn = true
+      _mockStr = `${type}()`
+    }
   }
 
   if (isArray) {
