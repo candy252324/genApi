@@ -26,7 +26,7 @@ function getCommonTpl(needComment = false) {
         },
       ],
       httpTpl: "import request from './request/index'", ${needComment ? '// 文件头部引入内容' : ''}
-      apiBody: ({ url, method, summary, name, parameters, outputInterface, pstr1, pstr2, pstr3 }) => {
+      apiBody: ({ url, method, summary, name, outputInterface, pstr1, pstr2, pstr3 }) => {
         const quotation = pstr3 ? '\`' : "'"; // 引号类型
         return \`
         /** \${summary || '无注释'} */
@@ -35,6 +35,14 @@ function getCommonTpl(needComment = false) {
           return Http.\${method}(\${quotation}\${url}\${quotation}, \${pstr2})
         }\`
       },
+      mock:{
+        fieldRules:{
+          code: 200,
+          current: 1,
+          size: 20,
+          total: '@integer(1, 50)',
+        }
+      }
     }
 `
 }

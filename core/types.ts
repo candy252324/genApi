@@ -18,7 +18,7 @@ export interface UserConfig {
 export interface IApiStation {
   /** swagger 地址(可以是服务端地址也可以是 swagger json 本地文件路径) */
   swaggerUrl: string
-  /** 输出目录 */
+  /** 生成结果的输出目录 */
   outputDir: string
   /** 是否生成(默认true, 设为false，则不生成 ) */
   gen?: boolean
@@ -59,13 +59,13 @@ export interface IApibodyParam {
   summary: string
   /** 接口输出数据模型 */
   outputInterface: string
-  /** 接口入参 */
+  /** 接口所有入参 */
   parameters: IParams[]
-  /** 值如 data: { id: string }, 由 parameters 处理得到  */
+  /** 由 parameters 处理得到，值如 'data: { id: string }' ，可能为空字符串*/
   pstr1: string
-  /** 值如 data, 由 parameters 处理得到 */
+  /** 由 parameters 处理得到，值如 'data'，可能为空字符串 */
   pstr2: string
-  /** 当路径中存在参数时，会有值，值如 const { id } = data , 由 parameters 处理得到 */
+  /** 由 parameters 处理得到，当路径中存在参数时，会有值，值如 'const { id } = data' */
   pstr3: string
 }
 
