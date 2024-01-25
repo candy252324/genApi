@@ -17,6 +17,7 @@ export async function parser(apiConfig: UserConfig) {
         fileName: item.fileName || apiConfig.fileName,
         apiName: item.apiName || apiConfig.apiName,
         pathRewrite: item.pathRewrite || apiConfig.pathRewrite,
+        typeMap: item.typeMap || apiConfig.typeMap,
       }
     })
 
@@ -44,6 +45,7 @@ async function parseFn(apiStation: IApiStation, stationIndex: number): Promise<I
       fileName: apiStation.fileName,
       apiName: apiStation.apiName,
       pathRewrite: apiStation.pathRewrite,
+      typeMap: apiStation.typeMap,
       fileExt: apiStation.fileExt,
     })
     interfaces = handleInterface(swaggerJson.definitions)

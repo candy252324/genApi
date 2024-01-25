@@ -1,5 +1,14 @@
 import { IApiModel, IParams, IApiStation } from '../types'
-import { getUrl, getApiName, getFileName, getFileExt, handleWeirdName, handleJsType, handleDescription } from '../utils'
+import {
+  getUrl,
+  getApiName,
+  getFileName,
+  getFileExt,
+  handleWeirdName,
+  simpleTypeMap,
+  handleDescription,
+  typeIsInterface,
+} from '../utils'
 
 /** 生成 api 数据模型 */
 export function handleApiModel(
@@ -11,7 +20,8 @@ export function handleApiModel(
     fileExt,
     apiName,
     pathRewrite,
-  }: Pick<IApiStation, 'exclude' | 'include' | 'fileName' | 'fileExt' | 'apiName' | 'pathRewrite'>
+    typeMap,
+  }: Pick<IApiStation, 'exclude' | 'include' | 'fileName' | 'fileExt' | 'apiName' | 'pathRewrite' | 'typeMap'>
 ) {
   const apis: IApiModel[] = []
   for (const key in paths) {
@@ -29,7 +39,7 @@ export function handleApiModel(
         const theFileName = getFileName({ url, originUrl: theUrl, userFileName: fileName })
         const theFileExt = getFileExt(fileExt)
         const summary = handleDescription(obj.summary) // 接口注释
-        const parameters = getParameters(obj.parameters) // 入参
+        const parameters = getParameters(obj.parameters, typeMap) // 入参
         const resScheme = obj?.responses['200']?.schema // 出参模型
 
         let outputInterface = '' // 出参 interface
@@ -39,13 +49,9 @@ export function handleApiModel(
         }
         // 出参是个简单类型
         else if (resScheme?.type) {
-          outputInterface = handleJsType(resScheme.type)
+          outputInterface = simpleTypeMap(resScheme.type, typeMap)
         } else {
-          // console.log('该接口不存在出参')
-        }
-        outputInterface = handleJsType(outputInterface) ? handleJsType(outputInterface) : outputInterface
-        if (outputInterface === 'Void' || outputInterface === 'void') {
-          outputInterface = ''
+          // console.warn(`接口${key}不存在出参`)
         }
         apis.push({
           name,
@@ -54,7 +60,7 @@ export function handleApiModel(
           method,
           summary,
           parameters,
-          outputInterface,
+          outputInterface: outputInterface || 'any',
           fileName: theFileName,
           fileExt: theFileExt,
         })
@@ -102,7 +108,7 @@ function matchExp(expArr: any[], apiPath: string) {
 }
 
 /** 处理入参 */
-function getParameters(parameters): IParams[] {
+function getParameters(parameters, customerTypeMap: { [key: string]: string }): IParams[] {
   // 数据格式如：
   // "parameters": [
   //   {
@@ -174,19 +180,16 @@ function getParameters(parameters): IParams[] {
     return parameters.map((item) => {
       let type = '' // 如：string, number, boolean, UserInterface
       let isArray = false // 是否是数组
-      let isSimpleJsType = false //  是否是简单 js 类型
       // 入参是数组
       if (item.type === 'array' || item.schema?.type === 'array') {
         isArray = true
         const itemsObj = item.schema?.type === 'array' ? item.schema?.items : item.items
         // 简单类型
-        if (handleJsType(itemsObj?.format || itemsObj?.type)) {
-          type = handleJsType(itemsObj?.format || itemsObj?.type)
-          isSimpleJsType = true
+        if (simpleTypeMap(itemsObj?.format || itemsObj?.type, customerTypeMap)) {
+          type = simpleTypeMap(itemsObj?.format || itemsObj?.type, customerTypeMap)
         } else if (itemsObj?.originalRef) {
           const _interface = handleWeirdName(itemsObj?.originalRef)
           type = `${_interface}`
-          isSimpleJsType = false
         } else {
           console.log('未处理的情况')
         }
@@ -197,19 +200,17 @@ function getParameters(parameters): IParams[] {
         if (item.schema?.originalRef) {
           const _interface = handleWeirdName(item.schema?.originalRef)
           type = _interface
-          isSimpleJsType = false
         } else {
-          type = handleJsType(item.format || item.type) || 'any'
-          isSimpleJsType = true
+          type = simpleTypeMap(item.format || item.type, customerTypeMap)
         }
       }
       return {
         name: handleWeirdName(item.name),
         description: item.description || '', // 注释
         in: item.in, // 可能值： body ,header, query, path...
-        isSimpleJsType,
+        isSimpleJsType: !typeIsInterface(type),
         isArray,
-        type,
+        type: type || 'any',
       }
     })
   }

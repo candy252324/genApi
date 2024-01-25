@@ -1,5 +1,5 @@
 import path from 'node:path'
-import { handleJsType, writeAndPrettify } from '../utils'
+import { typeIsInterface, writeAndPrettify } from '../utils'
 import { getFieldMockStr } from './mockUtils'
 import { IApiGroup } from '../types'
 
@@ -14,22 +14,20 @@ export function writeMockApi(apiGroup: IApiGroup[], { absOutputDir, fieldRules }
     let fileUsedInterface = [] // 当前文件用到的 interface
     item.apis.forEach((api) => {
       const { name, url, method, summary, parameters, outputInterface } = api
-      // 出参存在且不是简单类型
-      if (outputInterface && !handleJsType(outputInterface)) {
-        fileUsedInterface.push(outputInterface)
-      }
+
       const _summary = summary ? `/** ${summary} */\n` : ''
       let _outputInterface = ''
       // 不存在出参
       if (!outputInterface) {
         _outputInterface = '""'
       }
-      // 出参是简单类型
-      else if (handleJsType(outputInterface)) {
+      // 出参是 interface
+      else if (typeIsInterface(outputInterface)) {
+        fileUsedInterface.push(outputInterface)
+        _outputInterface = `${outputInterface}()`
+      } else {
         const { isCustome, mockStr } = getFieldMockStr({ name, type: outputInterface, fieldRules })
         _outputInterface = isCustome ? mockStr : `\'${mockStr}\'`
-      } else {
-        _outputInterface = `${outputInterface}()`
       }
       const curStr = `${_summary}export const ${name} = () => Mock.mock(${_outputInterface})\n\n`
       apiStr += curStr

@@ -13,6 +13,8 @@ export interface UserConfig {
   pathRewrite?: (data: { url: string }) => string
   /** 文件后缀, 可选值：ts 或 js， 默认 ts */
   fileExt?: 'ts' | 'js' | '.ts' | '.js'
+  /** 接口参数类型映射 */
+  typeMap?: Record<string, string>
   mock?: IMock
 }
 export interface IApiStation {
@@ -44,6 +46,8 @@ export interface IApiStation {
   apiBody?: (data: IApibodyParam) => string
   /** 文件后缀, 可选值：ts 或 js， 默认 ts */
   fileExt?: 'ts' | 'js'
+  /** 接口参数类型映射 */
+  typeMap?: Record<string, string>
 }
 
 export interface IApibodyParam {

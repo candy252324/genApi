@@ -1,6 +1,6 @@
 import path from 'node:path'
 
-import { typeIsInterface, writeAndPrettify, handleDescription } from '../utils'
+import { typeIsInterface, writeAndPrettify, handleDescription, isExistInterface } from '../utils'
 import { IParams, IApiGroup, IInterface, IParsered } from '../types'
 
 /** api 写入 */
@@ -20,18 +20,19 @@ export function writeApi(
       let isInvalidInterface = false
 
       if (item.fileExt === 'ts') {
-        // 出参存在且是interface
-        if (outputInterface && typeIsInterface(outputInterface)) {
-          // 没找到则处理成 any, 防止后端接口写了错误的 interface
-          const findInterface = allInterfaces.find((i) => i.name === outputInterface)
-          if (findInterface) {
-            fileUsedInterface.push(outputInterface)
-          } else {
-            isInvalidInterface = true
-          }
+        // interface 存在
+        if (typeIsInterface(outputInterface)) {
+          isExistInterface(outputInterface, allInterfaces)
+            ? fileUsedInterface.push(outputInterface)
+            : (isInvalidInterface = true)
         }
         // 入参需要引入的interface
-        ;(parameters || []).forEach((item) => !item.isSimpleJsType && item.type && fileUsedInterface.push(item.type))
+        ;(parameters || []).forEach(
+          (item) =>
+            typeIsInterface(item.type) &&
+            isExistInterface(item.type, allInterfaces) &&
+            fileUsedInterface.push(item.type)
+        )
       }
 
       const { p1, p2, p3 } = getParamStr(parameters)

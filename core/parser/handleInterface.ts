@@ -1,5 +1,8 @@
 import { IInterface } from '../types'
-import { handleWeirdName, handleJsType, handleDescription } from '../utils'
+import { handleWeirdName, simpleTypeMap, handleDescription } from '../utils'
+
+/** 用户自定义的字段类型 map 规则 */
+let theCustomerTypeMap = {}
 
 /** 入参格式
  * "ApiResponse«AddUserReq»": {
@@ -12,12 +15,13 @@ import { handleWeirdName, handleJsType, handleDescription } from '../utils'
  *   },
  * },
  */
-export function handleInterface(definitions) {
+export function handleInterface(definitions, customerTypeMap: { [key: string]: string }) {
+  theCustomerTypeMap = customerTypeMap || {}
   const defs: IInterface[] = []
   Object.keys(definitions).forEach((key) => {
     const interfaceName = handleWeirdName(key)
     // 不存在或者是简单类型
-    if (!interfaceName || handleJsType(interfaceName)) return
+    if (!interfaceName || simpleTypeMap(interfaceName, theCustomerTypeMap)) return
 
     const obj = definitions[key]
     const properties = handleProperties(obj.properties || {})
@@ -48,7 +52,7 @@ function handleProperties(properties) {
 function handleInterfaceModal(obj): Omit<IInterface, 'name'> {
   const additionalProperties = obj.type === 'object' && obj.additionalProperties?.originalRef
   const isArray = obj.type === 'array'
-  const isSimpleJsType = !additionalProperties && !!handleJsType(obj.format || obj.type)
+  const isSimpleJsType = !additionalProperties && !!simpleTypeMap(obj.format || obj.type, theCustomerTypeMap)
 
   return {
     isArray, // 是否是数组
@@ -82,10 +86,10 @@ function handleInterfaceModal(obj): Omit<IInterface, 'name'> {
 function handleItemsType(obj) {
   if (obj.type === 'array') {
     if (obj?.items?.originalRef) return handleWeirdName(obj.items.originalRef)
-    else return handleJsType(obj.items?.format || obj.items?.type)
+    else return simpleTypeMap(obj.items?.format || obj.items?.type, theCustomerTypeMap)
   } else if (obj?.originalRef) {
     return handleWeirdName(obj?.originalRef)
   } else {
-    return handleJsType(obj.format || obj.type)
+    return simpleTypeMap(obj.format || obj.type, theCustomerTypeMap)
   }
 }

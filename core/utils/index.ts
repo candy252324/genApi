@@ -3,7 +3,7 @@ import fs from 'node:fs'
 import net from 'node:net'
 import { exec } from 'node:child_process'
 import pinyin from 'js-pinyin'
-import { IApiModel, IParsered, IApiGroup } from '../types'
+import { IApiModel, IParsered, IInterface, IApiGroup } from '../types'
 import { createFolder } from './file'
 
 const jsKeyWords = [
@@ -140,8 +140,13 @@ export function upperCaseFirseLetter(str) {
 export function hasChinese(str) {
   return /[\u4E00-\u9FA5]+/g.test(str)
 }
-export function handleJsType(origintype) {
-  const typeEnmu = {
+
+/** 类型映射
+ * @param origintype 接口文档中的类型
+ * @param customerMap 自定义映射
+ */
+export function simpleTypeMap(origintype, customerMap?: { [key: string]: string }) {
+  const defaultTypeEnum = {
     integer: 'number',
     float: 'number',
     string: 'string',
@@ -169,15 +174,17 @@ export function handleJsType(origintype) {
     uri: 'string',
     url: 'string',
   }
-  return typeEnmu[origintype] || ''
+  const typeEnum = Object.assign({}, defaultTypeEnum, customerMap || {})
+  return typeEnum[origintype] || ''
 }
 
 export function isJsType(type) {
   return ['number', 'string', 'boolean', 'object', 'File'].includes(type)
 }
 
+/** 是 interafce */
 export function typeIsInterface(type) {
-  return !['number', 'string', 'boolean', 'object', 'File', 'any'].includes(type)
+  return type && !['number', 'string', 'boolean', 'object', 'File', 'any'].includes(type)
 }
 
 /** 将路径转化成小驼峰格式的名称，如： '/src/api' => 'srcApi' */
@@ -204,6 +211,11 @@ export function groupApiByFileName(apis: IApiModel[]) {
     }
   })
   return apiGroup
+}
+
+/** 判断 interface 是否存在 */
+export function isExistInterface(theInterface: string, allInterfaces: IInterface[]) {
+  return !!allInterfaces.find((i) => i.name === theInterface)
 }
 
 /** 将内容写入目标文件，并进行格式化

@@ -1,6 +1,6 @@
 import path from 'node:path'
 import { IInterface } from '../types'
-import { writeAndPrettify, typeIsInterface } from '../utils'
+import { writeAndPrettify, typeIsInterface, isExistInterface } from '../utils'
 
 /** interface 写入 */
 export function writeInterface(interfaces: IInterface[], config: { outputDir: string }) {
@@ -17,10 +17,9 @@ export function writeInterface(interfaces: IInterface[], config: { outputDir: st
         } else {
           if (typeIsInterface(it.type)) {
             // 没找到则处理成 any, 防止后端接口写了错误的 interface
-            const validInterface = interfaces.find((i) => i.name === it.type)
-            theType = validInterface ? it.type : 'any'
+            theType = isExistInterface(it.type, interfaces) ? it.type : 'any'
           } else {
-            theType = it.type
+            theType = it.type || 'any'
           }
         }
 
