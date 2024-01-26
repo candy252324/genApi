@@ -13,24 +13,24 @@ export interface UserConfig {
   pathRewrite?: (data: { url: string }) => string
   /** 文件后缀, 可选值：ts 或 js， 默认 ts */
   fileExt?: 'ts' | 'js' | '.ts' | '.js'
-  /** 接口参数类型映射 */
+  /** 接口出入参类型映射 */
   typeMap?: Record<string, string>
   mock?: IMock
 }
 export interface IApiStation {
-  /** swagger 地址(可以是服务端地址也可以是 swagger json 本地文件路径) */
+  /** 接口文档 json 数据地址(可以是服务端地址也可以是 swagger json 本地文件路径) */
   swaggerUrl: string
   /** 生成结果的输出目录 */
   outputDir: string
   /** 是否生成(默认true, 设为false，则不生成 ) */
   gen?: boolean
   /** 无需生成的接口, 支持正则匹配和字符串完全匹配
-   * 注1. 匹配的是原本的 url，而非通过 pathRewrite 函数重写后的 url
+   * 注1. 匹配的是原始的 url，而非通过 pathRewrite 函数重写后的 url
    * 注2. 不判断方法，即 如果有两个接口路径相同方法不同，都不会生成
    */
   exclude?: RegExp | string | (RegExp | string)[]
   /** 只需生成的接口，支持正则匹配和字符串完全匹配
-   * 注1：通exclude 一样，只匹配原本路径，不判断方法
+   * 注1：通exclude 一样，只匹配原始路径，不判断方法
    * 注2：优先级比 exclude 低，即 如果一个接口同时被 exclude 和 include 规则匹配，这个接口将不会生成
    */
   include?: RegExp | string | (RegExp | string)[]
@@ -55,7 +55,7 @@ export interface IApibodyParam {
   name: string
   /** 接口路径 */
   url: string
-  /** 接口原本路径（即重写前路径） */
+  /** 接口原始路径（即重写前路径） */
   originUrl: string
   /** 请求方法（小写，如 get、post） */
   method: string
@@ -76,7 +76,7 @@ export interface IApibodyParam {
 export interface IMock {
   /** 本地启动的 mock 服务端口号 */
   port?: number
-  /** mock 路径重写 */
+  /** 接口路径重写 */
   rewrite?: (data: { url: string }) => string
   /** 自定义 mock 生成规则 */
   fieldRules?: {
@@ -99,7 +99,7 @@ export interface IParams {
 export interface IApiModel {
   /** 接口路径 */
   url: string
-  /** 接口原本路径（即重写前路径） */
+  /** 接口原始路径（即重写前路径） */
   originUrl: string
   /** 请求方法 */
   method: string
@@ -150,7 +150,7 @@ export interface IApiGroup {
 export interface ApiNameFnParam {
   /** 接口路径 */
   url: string
-  /** 接口原本路径（即重写前路径） */
+  /** 接口原始路径（即重写前路径） */
   originUrl: string
   /** 请求方法（小写） */
   method: string
@@ -161,6 +161,6 @@ export interface ApiNameFnParam {
 export interface FileNameFnParam {
   /** 接口路径 */
   url: string
-  /** 接口原本路径（即重写前路径） */
+  /** 接口原始路径（即重写前路径） */
   originUrl: string
 }
