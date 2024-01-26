@@ -208,7 +208,6 @@ function getParameters(parameters, customerTypeMap: { [key: string]: string }): 
         name: handleWeirdName(item.name),
         description: item.description || '', // 注释
         in: item.in, // 可能值： body ,header, query, path...
-        isSimpleJsType: !typeIsInterface(type),
         isArray,
         type: type || 'any',
       }

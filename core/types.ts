@@ -90,11 +90,9 @@ export interface IParams {
   /** 参数注释 */
   description: string // 注释
   in: 'header' | 'body' | 'query' | 'path' // 可能值： body ,header, query, path...
-  /** 是否是简单 js 类型 */
-  isSimpleJsType: boolean
   /** 是否是数组 */
   isArray: boolean
-  /** 入参类型，string, number, boolean, UserInterface */
+  /** 入参类型，可能值：string, number, boolean, any, void, File, UserInterface... */
   type
 }
 
@@ -124,8 +122,6 @@ export interface IInterface {
   name: string
   /** 是否是数组 */
   isArray?: boolean
-  /** 是否是简单 js 类型, 如 number、string 等 */
-  isSimpleJsType?: boolean
   /** 如 string, number, boolean , UserInterface */
   type?: string
   /** 注释 */

@@ -43,7 +43,6 @@ export function writeMockInterface(interfaces: IInterface[], { outputDir, cmd = 
    *    properties:[{
    *      name:"",
    *      isArray:false,  // 是否是数组
-   *      isSimpleJsType:false, // 是否是简单 js 类型, 如 number、string 等
    *      type:"",        // 类型，如 string, number, boolean , UserInterface
    *      description:""  // 注释
    *    }]

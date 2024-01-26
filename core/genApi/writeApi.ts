@@ -73,7 +73,6 @@ export function writeApi(
  *  name: 'name',
  *  in: 'query',
  *  isArray: false,  // 是否是数组
- *  isSimpleJsType:false,  // 是否是简单js类型
  *  type: 'string',
  *  description: 'name',
  * }]

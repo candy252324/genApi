@@ -52,12 +52,11 @@ function handleProperties(properties) {
 function handleInterfaceModal(obj): Omit<IInterface, 'name'> {
   const additionalProperties = obj.type === 'object' && obj.additionalProperties?.originalRef
   const isArray = obj.type === 'array'
-  const isSimpleJsType = !additionalProperties && !!simpleTypeMap(obj.format || obj.type, theCustomerTypeMap)
+  const theType = additionalProperties ? handleWeirdName(additionalProperties) : handleItemsType(obj)
 
   return {
     isArray, // 是否是数组
-    isSimpleJsType, // 是否是简单类型
-    type: additionalProperties ? handleWeirdName(additionalProperties) : handleItemsType(obj),
+    type: theType || 'any',
     description: handleDescription(obj.description),
     enums: obj.enum && Array.isArray(obj.enum) ? obj.enum : undefined,
   }

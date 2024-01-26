@@ -184,7 +184,7 @@ export function isJsType(type) {
 
 /** 是 interafce */
 export function typeIsInterface(type) {
-  return type && !['number', 'string', 'boolean', 'object', 'File', 'any'].includes(type)
+  return type && !['number', 'string', 'boolean', 'object', 'File', 'any', 'void'].includes(type)
 }
 
 /** 将路径转化成小驼峰格式的名称，如： '/src/api' => 'srcApi' */
