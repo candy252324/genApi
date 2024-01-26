@@ -39,7 +39,8 @@ async function parseFn(apiStation: IApiStation, stationIndex: number): Promise<I
   let apis: IApiModel[] = []
   let interfaces: IInterface[] = []
   if (swaggerJson) {
-    apis = handleApiModel(swaggerJson.paths, {
+    interfaces = handleInterface(swaggerJson.definitions, apiStation.typeMap)
+    apis = handleApiModel(swaggerJson.paths, interfaces, {
       include: apiStation.include,
       exclude: apiStation.exclude,
       fileName: apiStation.fileName,
@@ -48,7 +49,6 @@ async function parseFn(apiStation: IApiStation, stationIndex: number): Promise<I
       typeMap: apiStation.typeMap,
       fileExt: apiStation.fileExt,
     })
-    interfaces = handleInterface(swaggerJson.definitions)
   }
   return {
     ...apiStation,
@@ -62,7 +62,13 @@ async function parseFn(apiStation: IApiStation, stationIndex: number): Promise<I
 function validateApiConfig(apiConfig: UserConfig) {
   const apiList = apiConfig.apiList.filter((item) => item.gen !== false)
   if (!apiConfig.apiBody && apiList.some((item) => !item.apiBody)) {
-    throw new Error('请传入 apiBody , 必须是一个函数')
+    throw new Error('请配置 apiBody , 必须是一个函数')
+  }
+  if (apiList.some((item) => !item.outputDir)) {
+    throw new Error('请配置输出路径 outputDir')
+  }
+  if (apiList.some((item) => !item.swaggerUrl)) {
+    throw new Error('请配置 swaggerUrl')
   }
   if (
     (apiConfig.apiName && typeof apiConfig.apiName !== 'function') ||
@@ -75,8 +81,5 @@ function validateApiConfig(apiConfig: UserConfig) {
     apiList.some((item) => item.pathRewrite && typeof item.pathRewrite !== 'function')
   ) {
     throw new Error('pathRewrite 必须是一个函数')
-  }
-  if (apiList.some((item) => !item.swaggerUrl)) {
-    throw new Error('请传入 swaggerUrl')
   }
 }

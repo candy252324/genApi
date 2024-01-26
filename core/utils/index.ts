@@ -213,7 +213,7 @@ export function groupApiByFileName(apis: IApiModel[]) {
   return apiGroup
 }
 
-/** 判断 interface 是否存在 */
+/** 判断当前 type 是否存在于 _interfaces.ts 中 */
 export function isExistInterface(theInterface: string, allInterfaces: IInterface[]) {
   return !!allInterfaces.find((i) => i.name === theInterface)
 }

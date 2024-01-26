@@ -1,10 +1,13 @@
 import path from 'node:path'
 import { getFieldMockStr } from './mockUtils'
 import { IInterface } from '../types'
-import { writeAndPrettify } from '../utils'
+import { writeAndPrettify, isExistInterface } from '../utils'
+
+let allInterfaces: IInterface[] = []
 
 /** interface 写入 */
 export function writeMockInterface(interfaces: IInterface[], { outputDir, cmd = false, fieldRules }) {
+  allInterfaces = interfaces
   let str = cmd ? '' : 'import Mock from "better-mock"\n'
   interfaces.forEach((item) => {
     if (cmd) {
@@ -67,7 +70,7 @@ function getInterfaceMock(model: IInterface, fieldRules, parentInterface) {
   } else if (type === 'object') {
     _mockStr = '{}'
   } else {
-    //  如下数据，如果当前 type 和 parentInterface 一致（都为JobCategoryConfigResp）
+    //  1. 如下数据，如果当前 type 和 parentInterface 一致（都为JobCategoryConfigResp）
     //  直接将 _mockStr 处理成空字符串，避免循环调用导致栈溢出
     /**
       export function JobCategoryConfigResp() {
@@ -78,7 +81,7 @@ function getInterfaceMock(model: IInterface, fieldRules, parentInterface) {
        }
      }
      */
-    if (type === parentInterface) {
+    if (type === parentInterface || !isExistInterface(type, allInterfaces)) {
       _mockStr = '' //处理成  'children|1-20': [''],
     } else {
       isFn = true

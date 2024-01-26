@@ -112,7 +112,7 @@ function JobCategoryConfigResp() {
 function HappyPlanAddCustomerReq() {
   return {
     'addCustomerList|1-20': [HappyPlanAddCustomerListReq()],
-    'dateList|1-20': [ErrorModelNamenamespacejavatimenameLocalDateTime()],
+    'dateList|1-20': [''],
   }
 }
 function HappyPlanAddCustomerListReq() {

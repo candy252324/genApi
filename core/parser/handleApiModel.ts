@@ -1,4 +1,4 @@
-import { IApiModel, IParams, IApiStation } from '../types'
+import { IApiModel, IParams, IApiStation, IInterface } from '../types'
 import {
   getUrl,
   getApiName,
@@ -8,11 +8,13 @@ import {
   simpleTypeMap,
   handleDescription,
   typeIsInterface,
+  isExistInterface,
 } from '../utils'
 
 /** 生成 api 数据模型 */
 export function handleApiModel(
   paths,
+  allInterfaces: IInterface[],
   {
     exclude,
     include,
@@ -39,7 +41,7 @@ export function handleApiModel(
         const theFileName = getFileName({ url, originUrl: theUrl, userFileName: fileName })
         const theFileExt = getFileExt(fileExt)
         const summary = handleDescription(obj.summary) // 接口注释
-        const parameters = getParameters(obj.parameters, typeMap) // 入参
+        const parameters = getParameters(obj.parameters, allInterfaces, typeMap) // 入参
         const resScheme = obj?.responses['200']?.schema // 出参模型
 
         let outputInterface = '' // 出参 interface
@@ -108,7 +110,7 @@ function matchExp(expArr: any[], apiPath: string) {
 }
 
 /** 处理入参 */
-function getParameters(parameters, customerTypeMap: { [key: string]: string }): IParams[] {
+function getParameters(parameters, allInterfaces: IInterface[], customerTypeMap: { [key: string]: string }): IParams[] {
   // 数据格式如：
   // "parameters": [
   //   {
@@ -184,25 +186,29 @@ function getParameters(parameters, customerTypeMap: { [key: string]: string }): 
       if (item.type === 'array' || item.schema?.type === 'array') {
         isArray = true
         const itemsObj = item.schema?.type === 'array' ? item.schema?.items : item.items
-        // 简单类型
-        if (simpleTypeMap(itemsObj?.format || itemsObj?.type, customerTypeMap)) {
+
+        if (itemsObj?.originalRef) {
+          type = handleWeirdName(itemsObj?.originalRef)
+        } else if (itemsObj?.format || itemsObj?.type) {
           type = simpleTypeMap(itemsObj?.format || itemsObj?.type, customerTypeMap)
-        } else if (itemsObj?.originalRef) {
-          const _interface = handleWeirdName(itemsObj?.originalRef)
-          type = `${_interface}`
         } else {
-          console.log('未处理的情况')
+          // console.log('未处理的情况')
         }
       }
       // 非数组
       else {
         isArray = false
         if (item.schema?.originalRef) {
-          const _interface = handleWeirdName(item.schema?.originalRef)
-          type = _interface
-        } else {
+          type = handleWeirdName(item.schema?.originalRef)
+        } else if (item.format || item.type) {
           type = simpleTypeMap(item.format || item.type, customerTypeMap)
+        } else {
+          // console.log('未处理的情况')
         }
+      }
+      // 是 interface ，但是不存在于 interfaces.ts 中
+      if (typeIsInterface(type)) {
+        type = isExistInterface(type, allInterfaces) ? type : 'any'
       }
       return {
         name: handleWeirdName(item.name),
