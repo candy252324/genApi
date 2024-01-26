@@ -710,8 +710,8 @@ export function WhiteResp() {
     status: '@string(5,50)',
     statusDesc: '@string(5,50)',
     gratefulId: '@guid',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 export function DesktopAllInfoResp() {
@@ -736,8 +736,8 @@ export function DesktopResp() {
     relation: '@string(5,50)',
     sex: '@string(5,50)',
     status: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     keyBorardId: '@guid',
     keyBorardName: '@ctitle(5,10)',
   }
@@ -790,8 +790,8 @@ export function ExtWhiteResp() {
     scaleType: '@string(5,50)',
     status: '@string(5,50)',
     gratefulId: '@guid',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 export function ForwardListReq() {
@@ -908,8 +908,8 @@ export function JobResp() {
     parentCode: '@string(5,50)',
     parentId: '@guid',
     status: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 export function MemberBirdStatusResp() {
@@ -965,8 +965,8 @@ export function PostResp() {
     postName: '@ctitle(5,10)',
     postSort: '@integer(3,1000)',
     status: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 export function PutFileResp() {
@@ -1014,8 +1014,8 @@ export function PinkResq() {
     pinkName: '@ctitle(5,10)',
     pinkSort: '@integer(3,1000)',
     status: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 export function SaveRandomReq() {

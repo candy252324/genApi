@@ -797,7 +797,7 @@ export function ApiResponseQingMingCaoZhiXiaoChouYu() {
 }
 export function ComPageEntCredPlanResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(3,1000)',
     'records|1-20': [EntCredPlanResp()],
     size: '20',
     total: () => {
@@ -807,7 +807,7 @@ export function ComPageEntCredPlanResp() {
 }
 export function ComPageTastyCredExamResultResp() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(3,1000)',
     'records|1-20': [TastyCredExamResultResp()],
     size: '20',
     total: () => {
@@ -817,7 +817,7 @@ export function ComPageTastyCredExamResultResp() {
 }
 export function ComPagestring() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(3,1000)',
     'records|1-20': ['@string(5,50)'],
     size: '20',
     total: () => {
@@ -827,7 +827,7 @@ export function ComPagestring() {
 }
 export function ComPageYeJiRenLingRiZhi() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(3,1000)',
     'records|1-20': [YeJiRenLingRiZhi()],
     size: '20',
     total: () => {
@@ -837,7 +837,7 @@ export function ComPageYeJiRenLingRiZhi() {
 }
 export function ComPageJuanXinCaiGongZuoYeJi() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(3,1000)',
     'records|1-20': [JuanXinCaiGongZuoYeJi()],
     size: '20',
     total: () => {
@@ -847,7 +847,7 @@ export function ComPageJuanXinCaiGongZuoYeJi() {
 }
 export function ComPageJuanXinCaiChiGuanTouShuiGuoDao() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(3,1000)',
     'records|1-20': [JuanXinCaiChiGuanTouShuiGuoDao()],
     size: '20',
     total: () => {
@@ -857,7 +857,7 @@ export function ComPageJuanXinCaiChiGuanTouShuiGuoDao() {
 }
 export function ComPageChaXianBanBuLiangGuShiLieBiaoXiangYing() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(3,1000)',
     'records|1-20': [ChaXianBanBuLiangGuShiLieBiaoXiangYing()],
     size: '20',
     total: () => {
@@ -867,7 +867,7 @@ export function ComPageChaXianBanBuLiangGuShiLieBiaoXiangYing() {
 }
 export function ComPageChaXianBanFenZhiJiGou() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(3,1000)',
     'records|1-20': [ChaXianBanFenZhiJiGou()],
     size: '20',
     total: () => {
@@ -877,7 +877,7 @@ export function ComPageChaXianBanFenZhiJiGou() {
 }
 export function ComPageChaXianBanShiXinLianHeChengJieGuShi() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(3,1000)',
     'records|1-20': [ChaXianBanShiXinLianHeChengJieGuShi()],
     size: '20',
     total: () => {
@@ -887,7 +887,7 @@ export function ComPageChaXianBanShiXinLianHeChengJieGuShi() {
 }
 export function ComPageChaXianBanGongChengShuiBeiXiangYing() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(3,1000)',
     'records|1-20': [ChaXianBanGongChengShuiBeiXiangYing()],
     size: '20',
     total: () => {
@@ -897,7 +897,7 @@ export function ComPageChaXianBanGongChengShuiBeiXiangYing() {
 }
 export function ComPageChaXianBanChiGuanTouJuanXinCaiXiangYing() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(3,1000)',
     'records|1-20': [ChaXianBanChiGuanTouJuanXinCaiXiangYing()],
     size: '20',
     total: () => {
@@ -907,7 +907,7 @@ export function ComPageChaXianBanChiGuanTouJuanXinCaiXiangYing() {
 }
 export function ComPageChaXianBanErJiJuanXinCai() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(3,1000)',
     'records|1-20': [ChaXianBanErJiJuanXinCai()],
     size: '20',
     total: () => {
@@ -917,7 +917,7 @@ export function ComPageChaXianBanErJiJuanXinCai() {
 }
 export function ComPageChaXianBanLiangHaoGuShiLieBiaoXiangYing() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(3,1000)',
     'records|1-20': [ChaXianBanLiangHaoGuShiLieBiaoXiangYing()],
     size: '20',
     total: () => {
@@ -927,7 +927,7 @@ export function ComPageChaXianBanLiangHaoGuShiLieBiaoXiangYing() {
 }
 export function ComPageChaXianBanQingMingCaoZhiXiangYing() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(3,1000)',
     'records|1-20': [ChaXianBanQingMingCaoZhiXiangYing()],
     size: '20',
     total: () => {
@@ -937,7 +937,7 @@ export function ComPageChaXianBanQingMingCaoZhiXiangYing() {
 }
 export function ComPageChaXianBanHeiMingDanXiangYing() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(3,1000)',
     'records|1-20': [ChaXianBanHeiMingDanXiangYing()],
     size: '20',
     total: () => {
@@ -947,7 +947,7 @@ export function ComPageChaXianBanHeiMingDanXiangYing() {
 }
 export function ComPageShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(3,1000)',
     'records|1-20': [ShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing()],
     size: '20',
     total: () => {
@@ -957,7 +957,7 @@ export function ComPageShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing() {
 }
 export function ComPageErJiJuanXinCaiShuiGuoDao() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(3,1000)',
     'records|1-20': [ErJiJuanXinCaiShuiGuoDao()],
     size: '20',
     total: () => {
@@ -967,7 +967,7 @@ export function ComPageErJiJuanXinCaiShuiGuoDao() {
 }
 export function ComPageJiJiXieXiaGongSiXiangYing() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(3,1000)',
     'records|1-20': [JiJiXieXiaGongSiXiangYing()],
     size: '20',
     total: () => {
@@ -977,7 +977,7 @@ export function ComPageJiJiXieXiaGongSiXiangYing() {
 }
 export function ComPageJiXuDaShuiNiuWeiShengSu() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(3,1000)',
     'records|1-20': [JiXuDaShuiNiuWeiShengSu()],
     size: '20',
     total: () => {
@@ -987,7 +987,7 @@ export function ComPageJiXuDaShuiNiuWeiShengSu() {
 }
 export function ComPageGuanTouShuRenLingRiZhi() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(3,1000)',
     'records|1-20': [GuanTouShuRenLingRiZhi0()],
     size: '20',
     total: () => {
@@ -997,7 +997,7 @@ export function ComPageGuanTouShuRenLingRiZhi() {
 }
 export function ComPageQingMingCaoZhiXiaoChouYu() {
   return {
-    current: '@string(5,50)',
+    current: '@integer(3,1000)',
     'records|1-20': [QingMingCaoZhiXiaoChouYu()],
     size: '20',
     total: () => {
@@ -1054,9 +1054,9 @@ export function EducationAndSubject() {
 }
 export function EntCredOverviewResp() {
   return {
-    credCount: '@string(5,50)',
-    projectCount: '@string(5,50)',
-    registerTastyCount: '@string(5,50)',
+    credCount: '@integer(3,1000)',
+    projectCount: '@integer(3,1000)',
+    registerTastyCount: '@integer(3,1000)',
   }
 }
 export function EntCredPlanMainReq() {
@@ -1213,11 +1213,11 @@ export function FridayMainUpdateReq() {
     createName: '@ctitle(5,10)',
     created: '@datetime',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     tenantId: '@guid',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 export function FridaySummary() {
@@ -1239,12 +1239,12 @@ export function HrTastyBankRecordDO() {
     createTastyName: '@ctitle(5,10)',
     created: '@datetime',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     tastyId: '@guid',
     remark: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 export function HrTastyCredentialDO() {
@@ -1264,7 +1264,7 @@ export function HrTastyCredentialDO() {
     hasAttachment: '@integer(3,1000)',
     id: '@guid',
     isContinueEducation: '@integer(3,1000)',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     isInHuman: '@integer(3,1000)',
     isRegistered: '@integer(3,1000)',
     jobLevel: '@string(5,50)',
@@ -1288,8 +1288,8 @@ export function HrTastyCredentialDO() {
     titleLevel: '@ctitle(5,10)',
     trainInstitutions: '@string(5,50)',
     unit: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     useExpireDate: '@datetime',
   }
 }
@@ -1308,14 +1308,14 @@ export function HrTastyEducationDO() {
     entryDate: '@datetime',
     graduateDate: '@datetime',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     tastyId: '@guid',
     school: '@string(5,50)',
     subject: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
-    verifyStatus: '@string(5,50)',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
+    verifyStatus: '@integer(3,1000)',
   }
 }
 export function HrTastyFamilyDO() {
@@ -1325,15 +1325,15 @@ export function HrTastyFamilyDO() {
     createName: '@ctitle(5,10)',
     created: '@datetime',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     mobile: '@string(5,50)',
     modified: '@string(5,50)',
     name: '@ctitle(5,10)',
     tastyId: '@guid',
     position: '@string(5,50)',
     relationship: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     work: '@string(5,50)',
   }
 }
@@ -1346,14 +1346,14 @@ export function HrTastyGoodBadRecordDO() {
     created: '@datetime',
     date: '@datetime',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     name: '@ctitle(5,10)',
     tastyId: '@guid',
     type: '@string(5,50)',
     unitName: '@ctitle(5,10)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 export function HrTastyPatentMonographDO() {
@@ -1366,7 +1366,7 @@ export function HrTastyPatentMonographDO() {
     created: '@datetime',
     id: '@guid',
     inventorName: '@ctitle(5,10)',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     monographPublisher: '@string(5,50)',
     name: '@ctitle(5,10)',
@@ -1376,8 +1376,8 @@ export function HrTastyPatentMonographDO() {
     publicDate: '@datetime',
     publicNum: '@string(5,50)',
     type: '@integer(3,1000)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 export function HrTastyProjectDO() {
@@ -1390,9 +1390,9 @@ export function HrTastyProjectDO() {
     dataLevel: '@string(5,50)',
     endDate: '@datetime',
     id: '@guid',
-    importance: '@string(5,50)',
+    importance: '@integer(3,1000)',
     industryMajor: '@string(5,50)',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     jobDesc: '@string(5,50)',
     level: '@string(5,50)',
     modified: '@string(5,50)',
@@ -1411,8 +1411,8 @@ export function HrTastyProjectDO() {
     target: '@string(5,50)',
     totalArea: '@string(5,50)',
     totalInvest: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 export function HrTastyWorkHistoryDO() {
@@ -1427,7 +1427,7 @@ export function HrTastyWorkHistoryDO() {
     description: '@string(5,50)',
     entryDate: '@datetime',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     performance: '@string(5,50)',
     tastyId: '@guid',
@@ -1436,8 +1436,8 @@ export function HrTastyWorkHistoryDO() {
     refererMobile: '@string(5,50)',
     remark: '@string(5,50)',
     salary: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     workHistoryAttachmentUrl: '@image(200x100, @color, @color)',
     workTime: '@datetime',
   }
@@ -1630,14 +1630,14 @@ export function YeJiRenLingRiZhi() {
     createTime: '@datetime',
     created: '@datetime',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     operationType: '@integer(3,1000)',
     tastyId: '@guid',
     projectName: '@ctitle(5,10)',
     projectNum: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 export function GeRenShuiGuoDao() {
@@ -1731,7 +1731,7 @@ export function JuanXinCaiGongZuoYeJi() {
     dataLevel: '@string(5,50)',
     endDate: '@datetime',
     id: '@guid',
-    importance: '@string(5,50)',
+    importance: '@integer(3,1000)',
     industryMajor: '@string(5,50)',
     jobDesc: '@string(5,50)',
     level: '@string(5,50)',
@@ -1762,9 +1762,9 @@ export function JuanXinCaiGongZuoYeJi0() {
     dataLevel: '@string(5,50)',
     endDate: '@datetime',
     id: '@guid',
-    importance: '@string(5,50)',
+    importance: '@integer(3,1000)',
     industryMajor: '@string(5,50)',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     jobDesc: '@string(5,50)',
     level: '@string(5,50)',
     modified: '@string(5,50)',
@@ -1783,8 +1783,8 @@ export function JuanXinCaiGongZuoYeJi0() {
     target: '@string(5,50)',
     totalArea: '@string(5,50)',
     totalInvest: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 export function JuanXinCaiGongZuoJingLi() {
@@ -1862,7 +1862,7 @@ export function JuanXinCaiSuoYouShuiGuoDao() {
     id: '@guid',
     identityCardBack: '@string(5,50)',
     identityCardFace: '@string(5,50)',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     issue: '@string(5,50)',
     jobId: '@guid',
     jobName: '@ctitle(5,10)',
@@ -1892,8 +1892,8 @@ export function JuanXinCaiSuoYouShuiGuoDao() {
     socialSecurityHuman: '@string(5,50)',
     tenantId: '@guid',
     trialDate: '@datetime',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     usedName: '@ctitle(5,10)',
     workAddress: '@string(5,50)',
     workDeptName: '@ctitle(5,10)',
@@ -1919,7 +1919,7 @@ export function JuanXinCaiChiGuanTouShuiGuoDao() {
     hasAttachment: '@integer(3,1000)',
     id: '@guid',
     isContinueEducation: '@integer(3,1000)',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     isInHuman: '@integer(3,1000)',
     isRegistered: '@integer(3,1000)',
     jobLevel: '@string(5,50)',
@@ -1945,8 +1945,8 @@ export function JuanXinCaiChiGuanTouShuiGuoDao() {
     titleLevel: '@ctitle(5,10)',
     trainInstitutions: '@string(5,50)',
     unit: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     useExpireDate: '@datetime',
   }
 }
@@ -1967,7 +1967,7 @@ export function JuanXinCaiChiGuanTouShuiGuoDao0() {
     hasAttachment: '@integer(3,1000)',
     id: '@guid',
     isContinueEducation: '@integer(3,1000)',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     isInHuman: '@integer(3,1000)',
     isRegistered: '@integer(3,1000)',
     jobLevel: '@string(5,50)',
@@ -1991,8 +1991,8 @@ export function JuanXinCaiChiGuanTouShuiGuoDao0() {
     titleLevel: '@ctitle(5,10)',
     trainInstitutions: '@string(5,50)',
     unit: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     useExpireDate: '@datetime',
   }
 }
@@ -2216,12 +2216,12 @@ export function ChaXianBanQingMingCaoZhiGuanLi() {
     created: '@datetime',
     credentialType: '@integer(3,1000)',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     tagColor: '@color',
     timePoint: '@integer(3,1000)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     warningType: '@integer(3,1000)',
   }
 }
@@ -2232,12 +2232,12 @@ export function ChaXianBanQingMingCaoZhiWuShu() {
     created: '@datetime',
     credentialType: '@integer(3,1000)',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     tagColor: '@color',
     timePoint: '@integer(3,1000)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     warningType: '@integer(3,1000)',
   }
 }
@@ -2248,12 +2248,12 @@ export function ChaXianBanQingMingCaoZhiWuShu0() {
     created: '@datetime',
     credentialType: '@integer(3,1000)',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     tagColor: '@color',
     timePoint: '@integer(3,1000)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     warningType: '@integer(3,1000)',
   }
 }
@@ -2286,12 +2286,12 @@ export function XueXinZhangHao() {
     createName: '@ctitle(5,10)',
     created: '@datetime',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     password: '@string(5,50)',
     tastyId: '@guid',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     userName: '@cname',
   }
 }
@@ -2301,12 +2301,12 @@ export function XueXinZhangHao0() {
     createName: '@ctitle(5,10)',
     created: '@datetime',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     password: '@string(5,50)',
     tastyId: '@guid',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     userName: '@cname',
   }
 }
@@ -2354,7 +2354,7 @@ export function ChiGuanTouJuanXinCaiHuiZongShaiXuanTiaoJian() {
   return {
     address: '@string(5,50)',
     boss: '@boolean',
-    'companies|1-20': ['@string(5,50)'],
+    'companies|1-20': ['@integer(3,1000)'],
     condition: '@string(5,50)',
     'credentials|1-20': [CredentialFilter()],
     'educationAndSubjects|1-20': [EducationAndSubject()],
@@ -2385,22 +2385,22 @@ export function DaShuiNiuJingLiShuiGuoDao() {
     entryDate: '@datetime',
     graduateDate: '@datetime',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     tastyId: '@guid',
     school: '@string(5,50)',
     subject: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
-    verifyStatus: '@string(5,50)',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
+    verifyStatus: '@integer(3,1000)',
   }
 }
 export function ShuiLiuKanBanChaXianBanQingMingCaoZhiFenYeXiangYing() {
   return {
     hasQualification: '@boolean',
-    tastynelGap: '@string(5,50)',
+    tastynelGap: '@integer(3,1000)',
     preLevel: '@string(5,50)',
-    preTastynelGap: '@string(5,50)',
+    preTastynelGap: '@integer(3,1000)',
     preQualificationName: '@ctitle(5,10)',
     qualificationCate: '@string(5,50)',
     qualificationIndustry: '@string(5,50)',
@@ -2421,12 +2421,12 @@ export function XinZengYinXingKaShuiGuoDao() {
     createTastyName: '@ctitle(5,10)',
     created: '@datetime',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     tastyId: '@guid',
     remark: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 export function GengXinGeRenShuiGuoDao() {
@@ -2459,7 +2459,7 @@ export function GengXinGeRenShuiGuoDao() {
     id: '@guid',
     identityCardBack: '@string(5,50)',
     identityCardFace: '@string(5,50)',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     issue: '@string(5,50)',
     jobId: '@guid',
     jobName: '@ctitle(5,10)',
@@ -2487,8 +2487,8 @@ export function GengXinGeRenShuiGuoDao() {
     socialSecurityHuman: '@string(5,50)',
     tenantId: '@guid',
     trialDate: '@datetime',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     usedName: '@ctitle(5,10)',
     workAddress: '@string(5,50)',
     workDeptName: '@ctitle(5,10)',
@@ -2511,14 +2511,14 @@ export function GengXinDaShuiNiuJingLiShuiGuoDao() {
     entryDate: '@datetime',
     graduateDate: '@datetime',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     tastyId: '@guid',
     school: '@string(5,50)',
     subject: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
-    verifyStatus: '@string(5,50)',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
+    verifyStatus: '@integer(3,1000)',
   }
 }
 export function GengXinJiXuDaShuiNiuWeiShengSu() {
@@ -2532,11 +2532,11 @@ export function GengXinJiXuDaShuiNiuWeiShengSu() {
     flow: '@string(5,50)',
     hour: '@integer(3,1000)',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     requiredHour: '@integer(3,1000)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     website: '@string(5,50)',
   }
 }
@@ -2551,12 +2551,12 @@ export function GengXinYinXingKaShuiGuoDao() {
     createTastyName: '@ctitle(5,10)',
     created: '@datetime',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     tastyId: '@guid',
     remark: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 export function ErJiJuanXinCaiShuiGuoDao() {
@@ -2614,7 +2614,7 @@ export function TianJiaGeRenShuiGuoDao() {
     id: '@guid',
     identityCardBack: '@string(5,50)',
     identityCardFace: '@string(5,50)',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     issue: '@string(5,50)',
     jobId: '@guid',
     jobName: '@ctitle(5,10)',
@@ -2642,8 +2642,8 @@ export function TianJiaGeRenShuiGuoDao() {
     socialSecurityHuman: '@string(5,50)',
     tenantId: '@guid',
     trialDate: '@datetime',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     usedName: '@ctitle(5,10)',
     workAddress: '@string(5,50)',
     workDeptName: '@ctitle(5,10)',
@@ -2666,14 +2666,14 @@ export function TianJiaDaShuiNiuJingLiShuiGuoDao() {
     entryDate: '@datetime',
     graduateDate: '@datetime',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     tastyId: '@guid',
     school: '@string(5,50)',
     subject: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
-    verifyStatus: '@string(5,50)',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
+    verifyStatus: '@integer(3,1000)',
   }
 }
 export function TianJiaJiXuDaShuiNiuWeiShengSu() {
@@ -2687,11 +2687,11 @@ export function TianJiaJiXuDaShuiNiuWeiShengSu() {
     flow: '@string(5,50)',
     hour: '@integer(3,1000)',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     requiredHour: '@integer(3,1000)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     website: '@string(5,50)',
   }
 }
@@ -2701,12 +2701,12 @@ export function SheBaoZhangHao() {
     createName: '@ctitle(5,10)',
     created: '@datetime',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     password: '@string(5,50)',
     tastyId: '@guid',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     userName: '@cname',
   }
 }
@@ -2716,12 +2716,12 @@ export function SheBaoZhangHao0() {
     createName: '@ctitle(5,10)',
     created: '@datetime',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     password: '@string(5,50)',
     tastyId: '@guid',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     userName: '@cname',
   }
 }
@@ -2735,12 +2735,12 @@ export function JiJiXieXiaGongSiXiangYing() {
     humanRegistAddress: '@string(5,50)',
     humanRegistCapital: '@string(5,50)',
     humanType: '@string(5,50)',
-    credentialTotal: '@string(5,50)',
+    credentialTotal: '@integer(3,1000)',
     fridayId: '@guid',
     id: '@guid',
     isClaim: '@string(5,50)',
-    tastyTotal: '@string(5,50)',
-    projectTotal: '@string(5,50)',
+    tastyTotal: '@integer(3,1000)',
+    projectTotal: '@integer(3,1000)',
   }
 }
 export function NiuNaiXiaZaiQingQiu() {
@@ -2792,7 +2792,7 @@ export function NiuNaiMoKuaiBenRenWanChengZhuYaoShuiBeiGaiKuang() {
     effect: '@string(5,50)',
     endDate: '@datetime',
     endDateDesc: '@datetime',
-    num: '@string(5,50)',
+    num: '@integer(3,1000)',
     projectId: '@guid',
     projectName: '@ctitle(5,10)',
     projectSize: '@string(5,50)',
@@ -2812,11 +2812,11 @@ export function JiXuDaShuiNiuWeiShengSu() {
     flow: '@string(5,50)',
     hour: '@integer(3,1000)',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     requiredHour: '@integer(3,1000)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     website: '@string(5,50)',
   }
 }
@@ -2853,12 +2853,12 @@ export function GuanTouShuRenLingRiZhi() {
     credentialNo: '@string(5,50)',
     credentialSmallType: '@string(5,50)',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     operationType: '@integer(3,1000)',
     tastyId: '@guid',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 export function GuanTouShuRenLingRiZhi0() {
@@ -2872,12 +2872,12 @@ export function GuanTouShuRenLingRiZhi0() {
     credentialNo: '@string(5,50)',
     credentialSmallType: '@string(5,50)',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     operationType: '@integer(3,1000)',
     tastyId: '@guid',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 export function QingMingCaoZhiXiaoChouYu() {
@@ -2898,14 +2898,14 @@ export function QingMingCaoZhiXiaoChouYu() {
     creditRequire: '@string(5,50)',
     equipManagementRequire: '@string(5,50)',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     preLevel: '@string(5,50)',
     projectRequire: '@string(5,50)',
     status: '@string(5,50)',
     unit: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 export function QingMingCaoZhiXiaoChouYu0() {
@@ -2926,14 +2926,14 @@ export function QingMingCaoZhiXiaoChouYu0() {
     creditRequire: '@string(5,50)',
     equipManagementRequire: '@string(5,50)',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     preLevel: '@string(5,50)',
     projectRequire: '@string(5,50)',
     status: '@string(5,50)',
     unit: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 export function QingMingCaoZhiXiaoChouYuWuShuLianDongNinMengDeRuShuBiaoGeShi() {
@@ -2957,12 +2957,12 @@ export function YinXingKaShuiGuoDao() {
     createTastyName: '@ctitle(5,10)',
     created: '@datetime',
     id: '@guid',
-    isDelete: '@string(5,50)',
+    isDelete: '@integer(3,1000)',
     modified: '@string(5,50)',
     tastyId: '@guid',
     remark: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 export function FeiErJiZhiYeQingMingCaoGeGuanTouJian() {

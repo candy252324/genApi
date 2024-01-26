@@ -13,7 +13,13 @@ export function getFieldMockStr({ name, type, fieldRules }) {
     isCustome = true
   }
   // 一些内置的 mock处理规则
-  else if (type === 'string' && /date|time/.test(lowerCaseName)) {
+  else if (
+    lowerCaseName === 'timestamp' ||
+    lowerCaseName === 'datetime' ||
+    lowerCaseName === 'time' ||
+    lowerCaseName === 'date' ||
+    (type === 'string' && /(.*)Date|(.*)Time/.test(name))
+  ) {
     mockStr = '@datetime' // 处理成日期
   } else if (/(.*)id$/.test(lowerCaseName)) {
     mockStr = '@guid' // 处理成 id

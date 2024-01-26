@@ -22,6 +22,9 @@ const config: UserConfig = {
       swaggerUrl: './__test__/json/swagger4.json',
       outputDir: './__test__/output/swagger4',
       gen: true,
+      typeMap: {
+        int64: 'number',
+      },
     },
     {
       swaggerUrl: './__test__/json/swagger4.json',

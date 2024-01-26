@@ -709,8 +709,8 @@ function WhiteResp() {
     status: '@string(5,50)',
     statusDesc: '@string(5,50)',
     gratefulId: '@guid',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function DesktopAllInfoResp() {
@@ -735,8 +735,8 @@ function DesktopResp() {
     relation: '@string(5,50)',
     sex: '@string(5,50)',
     status: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     keyBorardId: '@guid',
     keyBorardName: '@ctitle(5,10)',
   }
@@ -789,8 +789,8 @@ function ExtWhiteResp() {
     scaleType: '@string(5,50)',
     status: '@string(5,50)',
     gratefulId: '@guid',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function ForwardListReq() {
@@ -907,8 +907,8 @@ function JobResp() {
     parentCode: '@string(5,50)',
     parentId: '@guid',
     status: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function MemberBirdStatusResp() {
@@ -964,8 +964,8 @@ function PostResp() {
     postName: '@ctitle(5,10)',
     postSort: '@integer(3,1000)',
     status: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function PutFileResp() {
@@ -1013,8 +1013,8 @@ function PinkResq() {
     pinkName: '@ctitle(5,10)',
     pinkSort: '@integer(3,1000)',
     status: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function SaveRandomReq() {

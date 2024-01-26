@@ -1450,8 +1450,8 @@ function WhiteDetailResp() {
     scaleTypeDesc: '@string(5,50)',
     status: '@string(5,50)',
     statusDesc: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function WhiteLinkDoorReq() {
@@ -1488,8 +1488,8 @@ function WhiteLinkDoorResp() {
     status: '@string(5,50)',
     statusDesc: '@string(5,50)',
     gratefulId: '@guid',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function WhiteResp() {
@@ -1518,8 +1518,8 @@ function WhiteResp() {
     status: '@string(5,50)',
     statusDesc: '@string(5,50)',
     gratefulId: '@guid',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function WhiteUpReq() {
@@ -1605,8 +1605,8 @@ function DesktopComplexResp() {
     sex: '@string(5,50)',
     sexDesc: '@string(5,50)',
     status: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     keyBorardId: '@guid',
     keyBorardName: '@ctitle(5,10)',
   }
@@ -1662,8 +1662,8 @@ function DesktopResp() {
     sex: '@string(5,50)',
     sexDesc: '@string(5,50)',
     status: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     keyBorardId: '@guid',
     keyBorardName: '@ctitle(5,10)',
   }
@@ -1681,8 +1681,8 @@ function DesktopRespReq() {
     relation: '@string(5,50)',
     sex: '@string(5,50)',
     status: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     keyBorardId: '@guid',
     keyBorardName: '@ctitle(5,10)',
   }
@@ -1701,8 +1701,8 @@ function DesktopRespRes() {
     sex: '@string(5,50)',
     sexDesc: '@string(5,50)',
     status: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     keyBorardId: '@guid',
     keyBorardName: '@ctitle(5,10)',
   }
@@ -1802,8 +1802,8 @@ function DoorBeneficiaryReq() {
     id: '@guid',
     isDelete: '@string(5,50)',
     modified: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function DoorBeneficiaryResp() {
@@ -1829,8 +1829,8 @@ function DoorBeneficiaryResp() {
     id: '@guid',
     isDelete: '@string(5,50)',
     modified: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function DoorCredentialResp() {
@@ -1909,8 +1909,8 @@ function DoorShareholderReq() {
     id: '@guid',
     isDelete: '@string(5,50)',
     modified: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function DoorShareholderResp() {
@@ -1931,8 +1931,8 @@ function DoorShareholderResp() {
     id: '@guid',
     isDelete: '@string(5,50)',
     modified: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function EpDesktopResp() {
@@ -1957,8 +1957,8 @@ function EpDesktopResp() {
     sex: '@string(5,50)',
     sexDesc: '@string(5,50)',
     status: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     keyBorardId: '@guid',
     keyBorardName: '@ctitle(5,10)',
   }
@@ -1998,8 +1998,8 @@ function ExtWhiteResp() {
     status: '@string(5,50)',
     statusDesc: '@string(5,50)',
     gratefulId: '@guid',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function FileSystemResource() {
@@ -2157,8 +2157,8 @@ function JobResp() {
     parentCode: '@string(5,50)',
     parentId: '@guid',
     status: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function JudgeSwitchDoorLimitResp() {
@@ -2180,8 +2180,8 @@ function LogLoginResp() {
     mobile: '@string(5,50)',
     modified: '@string(5,50)',
     os: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function MenuCheckedResp() {
@@ -2231,8 +2231,8 @@ function MenuResp() {
     queryParam: '@string(5,50)',
     remarks: '@string(5,50)',
     sort: '@integer(3,1000)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function OcrHappyLicenseBO() {
@@ -2395,8 +2395,8 @@ function PostResp() {
     postName: '@ctitle(5,10)',
     postSort: '@integer(3,1000)',
     status: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function QueryAccInfoResp() {
@@ -2603,8 +2603,8 @@ function PinkInfoResq() {
     status: '@string(5,50)',
     statusDesc: '@string(5,50)',
     type: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function PinkMenuUpReq() {
@@ -2636,8 +2636,8 @@ function PinkResq() {
     status: '@string(5,50)',
     statusDesc: '@string(5,50)',
     type: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function RouterMetaResp() {
@@ -2933,8 +2933,8 @@ function ZhiXieChangZhuTiXinXi() {
     province: '@province',
     serialNum: '@string(5,50)',
     gratefulId: '@guid',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     keyBorardId: '@guid',
     xmail: '@string(5,50)',
   }
@@ -3004,8 +3004,8 @@ function ZhiXieChangBoJuZiXinXi() {
     modified: '@string(5,50)',
     msg: '@string(5,50)',
     stepNum: '@integer(3,1000)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function ZhiXieChangBoJuZiXinXi0() {
@@ -3073,8 +3073,8 @@ function ZhiXieChangBoJuZiXinXi0() {
     modified: '@string(5,50)',
     msg: '@string(5,50)',
     stepNum: '@integer(3,1000)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function ZhiXieChangChuXing() {

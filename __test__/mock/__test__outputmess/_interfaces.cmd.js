@@ -105,8 +105,8 @@ function JobCategoryConfigResp() {
     parentId: '@guid',
     parentName: '@ctitle(5,10)',
     rootName: '@ctitle(5,10)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function HappyPlanAddCustomerReq() {

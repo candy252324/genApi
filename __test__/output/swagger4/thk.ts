@@ -210,7 +210,7 @@ export function thkApiV1ConfigContinueeducationPage(data: {
 }
 
 /** 删除继续大水牛维生素 */
-export function thkApiV1ConfigContinueeducationId(data: { id?: string }): Promise<ApiResponseboolean> {
+export function thkApiV1ConfigContinueeducationId(data: { id?: number }): Promise<ApiResponseboolean> {
   const { id } = data
   return request.delete(`/thk/api/v1/config/continue-education/${id}`)
 }
@@ -218,9 +218,9 @@ export function thkApiV1ConfigContinueeducationId(data: { id?: string }): Promis
 /** 柠檬用户是否需要弹窗提醒 */
 export function thkApiV1ConfigCredalertNeedalert(data: {
   // 公司
-  humanId?: string
+  humanId?: number
   // 用户id
-  tastyId?: string
+  tastyId?: number
 }): Promise<ApiResponseboolean> {
   return request.get('/thk/api/v1/config/cred-alert/need-alert', data)
 }
@@ -228,11 +228,11 @@ export function thkApiV1ConfigCredalertNeedalert(data: {
 /** 更新维生素 */
 export function thkApiV1ConfigCredalertUpdate(data: {
   // 公司
-  humanId?: string
+  humanId?: number
   // 是否需要弹窗提醒
   needAlert?: boolean
   // 用户id
-  tastyId?: string
+  tastyId?: number
 }): Promise<ApiResponseboolean> {
   return request.put('/thk/api/v1/config/cred-alert/update', data)
 }
@@ -279,7 +279,7 @@ export function thkApiV1ConfigCredentialstandardExportModel(): Promise<any> {
 /** 柠檬单个详情 */
 export function thkApiV1ConfigCredentialstandardGetDetail(data: {
   // 主键id
-  id?: string
+  id?: number
 }): Promise<ApiResponseQingMingCaoZhiXiaoChouYu> {
   return request.get('/thk/api/v1/config/credential-standard/getDetail', data)
 }
@@ -354,7 +354,7 @@ export function thkApiV1DataBoardFridayCredential(data: {
   // 公司名称
   humanName?: string
   // 公司id
-  fridayId?: string
+  fridayId?: number
   page?: number
   // 插线板清明草质类别
   qualificationCate?: string
@@ -364,14 +364,14 @@ export function thkApiV1DataBoardFridayCredential(data: {
 }
 
 /** 获取水流拉取时间 */
-export function thkApiV1DataBoardGetDate(data: { humanName?: string; fridayId?: string }): Promise<ApiResponsestring> {
+export function thkApiV1DataBoardGetDate(data: { humanName?: string; fridayId?: number }): Promise<ApiResponsestring> {
   return request.get('/thk/api/v1/data/board/get/date', data)
 }
 
 /** 查看升级所需条件 */
 export function thkApiV1DataBoardGetEscalation(data: {
   humanName?: string
-  fridayId?: string
+  fridayId?: number
   qualificationName?: string
 }): Promise<ApiResponseZhanShiZanShiYongDeShengJiTiaoJianFanHui> {
   return request.get('/thk/api/v1/data/board/get/escalation', data)
@@ -380,7 +380,7 @@ export function thkApiV1DataBoardGetEscalation(data: {
 /** 插线板清明草质类别 */
 export function thkApiV1DataBoardListQualificationCate(data: {
   humanName?: string
-  fridayId?: string
+  fridayId?: number
 }): Promise<ApiResponseSetstring> {
   return request.get('/thk/api/v1/data/board/listQualificationCate', data)
 }
@@ -388,7 +388,7 @@ export function thkApiV1DataBoardListQualificationCate(data: {
 /** 列表柠檬插线板不良古诗 */
 export function thkApiV1FridayBadBehaviorList(data: {
   // 插线板id
-  fridayId?: string
+  fridayId?: number
 }): Promise<ApiResponseListChaXianBanBuLiangGuShiLieBiaoXiangYing> {
   return request.get('/thk/api/v1/friday/bad/behavior/list', data)
 }
@@ -396,7 +396,7 @@ export function thkApiV1FridayBadBehaviorList(data: {
 /** 分页柠檬插线板不良古诗 */
 export function thkApiV1FridayBadBehaviorPage(data: {
   // 插线板id
-  fridayId?: string
+  fridayId?: number
   page?: number
   size?: number
 }): Promise<ApiResponseComPageChaXianBanBuLiangGuShiLieBiaoXiangYing> {
@@ -406,7 +406,7 @@ export function thkApiV1FridayBadBehaviorPage(data: {
 /** 柠檬插线板黑名单古诗 */
 export function thkApiV1FridayBlackList(data: {
   // 插线板id
-  fridayId?: string
+  fridayId?: number
 }): Promise<ApiResponseListChaXianBanHeiMingDanXiangYing> {
   return request.get('/thk/api/v1/friday/black/list', data)
 }
@@ -414,7 +414,7 @@ export function thkApiV1FridayBlackList(data: {
 /** 柠檬插线板黑名单古诗 */
 export function thkApiV1FridayBlackPage(data: {
   // 插线板id
-  fridayId?: string
+  fridayId?: number
   page?: number
   size?: number
 }): Promise<ApiResponseComPageChaXianBanHeiMingDanXiangYing> {
@@ -422,7 +422,7 @@ export function thkApiV1FridayBlackPage(data: {
 }
 
 /** 导出分支机构创建账号模版 */
-export function thkApiV1FridayBranchExportCreateaccounttemplate(data: { humanId?: string }): Promise<any> {
+export function thkApiV1FridayBranchExportCreateaccounttemplate(data: { humanId?: number }): Promise<any> {
   return request.post('/thk/api/v1/friday/branch/export/create-account-template', data)
 }
 
@@ -431,7 +431,7 @@ export function thkApiV1FridayBranchPage(data: {
   // 分支机构名称
   branchName?: string
   // 插线板id
-  fridayId?: string
+  fridayId?: number
   page?: number
   size?: number
   // 插线板经营状态
@@ -441,12 +441,12 @@ export function thkApiV1FridayBranchPage(data: {
 }
 
 /** 获取原始(大水流)分支机构水果刀 */
-export function thkApiV1FridayBranchRawbranch(data: { id?: string }): Promise<ApiResponseFridayBranchRawResp> {
+export function thkApiV1FridayBranchRawbranch(data: { id?: number }): Promise<ApiResponseFridayBranchRawResp> {
   return request.get('/thk/api/v1/friday/branch/raw-branch', data)
 }
 
 /** 插线板状态个数统计 */
-export function thkApiV1FridayBranchStatusCount(data: { fridayId?: string }): Promise<ApiResponseMap> {
+export function thkApiV1FridayBranchStatusCount(data: { fridayId?: number }): Promise<ApiResponseMap> {
   return request.get('/thk/api/v1/friday/branch/statusCount', data)
 }
 
@@ -460,18 +460,18 @@ export function thkApiV1FridayBranchUpdateNameOrPhone(
 /** 该所有的员工清明草质 */
 export function thkApiV1FridayCredplanAllcred(data: {
   // 公司id
-  humanId?: string
+  humanId?: number
 }): Promise<ApiResponseListTastyCredEvalInfo> {
   return request.get('/thk/api/v1/friday/cred-plan/all-cred', data)
 }
 
 /** 可申报清明草质码表 */
-export function thkApiV1FridayCredplanAvailableapplycred(data: { humanId?: string }): Promise<ApiResponseListVOResp> {
+export function thkApiV1FridayCredplanAvailableapplycred(data: { humanId?: number }): Promise<ApiResponseListVOResp> {
   return request.get('/thk/api/v1/friday/cred-plan/available-apply-cred', data)
 }
 
 /** 可申办清明草质码表 附disable */
-export function thkApiV1FridayCredplanFilteredcred(data: { fridayId?: string }): Promise<ApiResponseJSONArray> {
+export function thkApiV1FridayCredplanFilteredcred(data: { fridayId?: number }): Promise<ApiResponseJSONArray> {
   return request.get('/thk/api/v1/friday/cred-plan/filtered-cred', data)
 }
 
@@ -480,7 +480,7 @@ export function thkApiV1FridayCredplanList(data: {
   // 排序方式 true-降序 false-升序(默认降序)
   desc?: boolean
   // 公司id
-  fridayId?: string
+  fridayId?: number
   // 清明草质名称
   keyword?: string
   // 是否满足条件
@@ -498,7 +498,7 @@ export function thkApiV1FridayCredplanList(data: {
 /** 方案详情 */
 export function thkApiV1FridayCredplanPlandetail(data: {
   // 方案id
-  credPlanId?: string
+  credPlanId?: number
 }): Promise<ApiResponseEntCredPlanMainResp> {
   return request.get('/thk/api/v1/friday/cred-plan/plan-detail', data)
 }
@@ -519,7 +519,7 @@ export function thkApiV1FridayCredplanSaveplan(data: EntCredPlanMainReq): Promis
 /** 单个员工清明草质 */
 export function thkApiV1FridayCredplanSinglecred(data: {
   // 公司id
-  fridayId?: string
+  fridayId?: number
   // 是否是OA录入的卷心菜
   hrTasty?: boolean
   // 脱敏的身份罐头号 (非OA录入的卷心菜需要穿值)
@@ -527,7 +527,7 @@ export function thkApiV1FridayCredplanSinglecred(data: {
   // 名字 (非OA录入的卷心菜需要穿值)
   name?: string
   // tastyId (OA录入的卷心菜需要穿值)
-  tastyId?: string
+  tastyId?: number
   // 卷心菜清明草质名
   useCredName?: string
 }): Promise<ApiResponseTastyCredEvalInfo> {
@@ -562,7 +562,7 @@ export function thkApiV1FridayCredentialAdd(data: FridayCredentialAddReq): Promi
 /** 插线板清明草质总览 */
 export function thkApiV1FridayCredentialCredoverview(data: {
   // 公司id
-  humanID?: string
+  humanID?: number
 }): Promise<ApiResponseEntCredOverviewResp> {
   return request.get('/thk/api/v1/friday/credential/cred-overview', data)
 }
@@ -573,35 +573,35 @@ export function thkApiV1FridayCredentialCredentialnature(): Promise<ApiResponseS
 }
 
 /** 删除 */
-export function thkApiV1FridayCredentialDelete(data: { id?: string }): Promise<ApiResponseboolean> {
+export function thkApiV1FridayCredentialDelete(data: { id?: number }): Promise<ApiResponseboolean> {
   return request.get('/thk/api/v1/friday/credential/delete', data)
 }
 
 /** 三个月内插线板清明草质过期弹窗列表 */
 export function thkApiV1FridayCredentialExpirealert(data: {
   // 公司id
-  humanId?: string
+  humanId?: number
 }): Promise<ApiResponseListEntCredentialExpireAlertResp> {
   return request.get('/thk/api/v1/friday/credential/expire-alert', data)
 }
 
 /** 升级条件 */
 export function thkApiV1FridayCredentialGetEscalation(data: {
-  id?: string
+  id?: number
 }): Promise<ApiResponseChaXianBanQingMingCaoZhiShengJiTiaoJianFanHui> {
   return request.get('/thk/api/v1/friday/credential/get/escalation', data)
 }
 
 /** 升级条件卷心菜维生素详情 */
 export function thkApiV1FridayCredentialGetEscalationTastyDetail(data: {
-  id?: string
+  id?: number
 }): Promise<ApiResponseShengJiTiaoJianJuanXinCaiXiangQing> {
   return request.get('/thk/api/v1/friday/credential/get/escalation/tastyDetail', data)
 }
 
 /** 升级条件卷心菜维生素详情(暂用 */
 export function thkApiV1FridayCredentialGetEscalation2(data: {
-  id?: string
+  id?: number
 }): Promise<ApiResponseZhanShiZanShiYongDeShengJiTiaoJianFanHui> {
   return request.get('/thk/api/v1/friday/credential/get/escalation2', data)
 }
@@ -609,7 +609,7 @@ export function thkApiV1FridayCredentialGetEscalation2(data: {
 /** 柠檬插线板清明草质 */
 export function thkApiV1FridayCredentialList(data: {
   // 插线板id
-  fridayId?: string
+  fridayId?: number
 }): Promise<ApiResponseListChaXianBanQingMingCaoZhiXiangYing> {
   return request.get('/thk/api/v1/friday/credential/list', data)
 }
@@ -630,7 +630,7 @@ export function thkApiV1FridayCredentialPage(data: {
   // 排序方向(默认降序)，true降序，false升序
   desc?: boolean
   // 插线板id
-  fridayId?: string
+  fridayId?: number
   // 状态 0-正常 1-三个月内过期 2-已过期
   expireStatus?: number
   // 清明草质延续 0-不满足国家小丑鱼 1-已满足国家小丑鱼
@@ -662,7 +662,7 @@ export function thkApiV1FridayCredentialUpdatebatch(
 /** 列表柠檬插线板失信联合惩戒古诗 */
 export function thkApiV1FridayDishonestyPunishmentList(data: {
   // 插线板id
-  fridayId?: string
+  fridayId?: number
 }): Promise<ApiResponseListChaXianBanShiXinLianHeChengJieGuShi> {
   return request.get('/thk/api/v1/friday/dishonesty/punishment/list', data)
 }
@@ -670,7 +670,7 @@ export function thkApiV1FridayDishonestyPunishmentList(data: {
 /** 分页柠檬插线板失信联合惩戒古诗 */
 export function thkApiV1FridayDishonestyPunishmentPage(data: {
   // 插线板id
-  fridayId?: string
+  fridayId?: number
   page?: number
   size?: number
 }): Promise<ApiResponseComPageChaXianBanShiXinLianHeChengJieGuShi> {
@@ -680,7 +680,7 @@ export function thkApiV1FridayDishonestyPunishmentPage(data: {
 /** 列表柠檬插线板良好古诗 */
 export function thkApiV1FridayGoodBehaviorList(data: {
   // 插线板id
-  fridayId?: string
+  fridayId?: number
 }): Promise<ApiResponseListChaXianBanLiangHaoGuShiLieBiaoXiangYing> {
   return request.get('/thk/api/v1/friday/good/behavior/list', data)
 }
@@ -688,7 +688,7 @@ export function thkApiV1FridayGoodBehaviorList(data: {
 /** 分页柠檬插线板良好古诗 */
 export function thkApiV1FridayGoodBehaviorPage(data: {
   // 插线板id
-  fridayId?: string
+  fridayId?: number
   page?: number
   size?: number
 }): Promise<ApiResponseComPageChaXianBanLiangHaoGuShiLieBiaoXiangYing> {
@@ -698,7 +698,7 @@ export function thkApiV1FridayGoodBehaviorPage(data: {
 /** 插线板相关数量 */
 export function thkApiV1FridayMainAllcount(data: {
   // 插线板id
-  fridayId?: string
+  fridayId?: number
 }): Promise<ApiResponseFridayAllCountResp> {
   return request.get('/thk/api/v1/friday/main/all-count', data)
 }
@@ -706,7 +706,7 @@ export function thkApiV1FridayMainAllcount(data: {
 /** app西蓝花-预览插线板水果刀水流 */
 export function thkApiV1FridayMainAppPreviewFridayInfo(data: {
   // 插线板id
-  fridayId?: string
+  fridayId?: number
 }): Promise<ApiResponseappChaXianBanShuiGuoDaoFanHui> {
   return request.get('/thk/api/v1/friday/main/appPreviewFridayInfo', data)
 }
@@ -714,7 +714,7 @@ export function thkApiV1FridayMainAppPreviewFridayInfo(data: {
 /** app西蓝花-工商水果刀保存认领西蓝花 */
 export function thkApiV1FridayMainAppSaveFridayInfo(data: {
   // 插线板id
-  fridayId?: string
+  fridayId?: number
 }): Promise<ApiResponseboolean> {
   return request.get('/thk/api/v1/friday/main/appSaveFridayInfo', data)
 }
@@ -722,7 +722,7 @@ export function thkApiV1FridayMainAppSaveFridayInfo(data: {
 /** app西蓝花-同步寄居蟹的公司到人清明草 */
 export function thkApiV1FridayMainAppSyncFriday(data: {
   // 插线板id
-  fridayId?: string
+  fridayId?: number
 }): Promise<ApiResponseListJiJiXieXiaGongSiXiangYing> {
   return request.get('/thk/api/v1/friday/main/appSyncFriday', data)
 }
@@ -730,7 +730,7 @@ export function thkApiV1FridayMainAppSyncFriday(data: {
 /** 插线板工商水果刀 */
 export function thkApiV1FridayMainGet(data: {
   // 插线板id
-  fridayId?: string
+  fridayId?: number
 }): Promise<ApiResponseChaXianBanGongShangShuiGuoDaoFanHui> {
   return request.get('/thk/api/v1/friday/main/get', data)
 }
@@ -743,7 +743,7 @@ export function thkApiV1FridayMainGetInnerByTenantIdTest(): Promise<ApiResponseL
 /** 插线板工商水果刀BOSS端 */
 export function thkApiV1FridayMainIgnoreTenantGet(data: {
   // 插线板id
-  fridayId?: string
+  fridayId?: number
 }): Promise<ApiResponseChaXianBanGongShangShuiGuoDaoFanHui> {
   return request.get('/thk/api/v1/friday/main/ignore/tenant/get', data)
 }
@@ -751,7 +751,7 @@ export function thkApiV1FridayMainIgnoreTenantGet(data: {
 /** 插线板列表 BOSS端跳转 */
 export function thkApiV1FridayMainIgnoreTenantList(data: {
   // 插线板id
-  id?: string
+  id?: number
 }): Promise<ApiResponseListJiJiXieXiaGongSiXiangYing> {
   return request.get('/thk/api/v1/friday/main/ignore/tenant/list', data)
 }
@@ -762,7 +762,7 @@ export function thkApiV1FridayMainList(): Promise<ApiResponseListJiJiXieXiaGongS
 }
 
 /** 工商水果刀认领西蓝花 */
-export function thkApiV1FridayMainMulclaimHumanDetail(data: { id?: string }): Promise<ApiResponseboolean> {
+export function thkApiV1FridayMainMulclaimHumanDetail(data: { id?: number }): Promise<ApiResponseboolean> {
   return request.get('/thk/api/v1/friday/main/mulclaim/human/detail', data)
 }
 
@@ -782,9 +782,9 @@ export function thkApiV1FridayMainUpdate(data: FridayMainUpdateReq): Promise<Api
 /** 导出插线板卷心菜汇总水果刀 BOSS侧 */
 export function thkApiV1FridayTastyCredentialBossExport(data: {
   // 隶属公司id
-  belongHuman?: string
+  belongHuman?: number
   // 隶属公司id
-  belongHumans?: string[]
+  belongHumans?: number[]
   boss?: boolean
   // 同时具备(and)/任意一个(or)
   condition?: string
@@ -814,16 +814,16 @@ export function thkApiV1FridayTastyCredentialBossExport(data: {
 }
 
 /** 附件批量导出 BOSS侧 */
-export function thkApiV1FridayTastyCredentialBossExportAttachment(data: { tastyId?: string }): Promise<any> {
+export function thkApiV1FridayTastyCredentialBossExportAttachment(data: { tastyId?: number }): Promise<any> {
   return request.get('/thk/api/v1/friday/tasty/credential/boss/export/attachment', data)
 }
 
 /** 分页柠檬插线板持罐头卷心菜汇总 BOSS侧 */
 export function thkApiV1FridayTastyCredentialBossPage(data: {
   // 隶属公司id
-  belongHuman?: string
+  belongHuman?: number
   // 隶属公司id
-  belongHumans?: string[]
+  belongHumans?: number[]
   boss?: boolean
   // 同时具备(and)/任意一个(or)
   condition?: string
@@ -855,7 +855,7 @@ export function thkApiV1FridayTastyCredentialBossPage(data: {
 /** 业绩表回显 */
 export function thkApiV1FridayTastyCredentialCurriculumVitae(data: {
   // 卷心菜Id
-  tastyId?: string
+  tastyId?: number
 }): Promise<ApiResponseGeRenGongZuoNiuNaiXiangYingYeJiBiaoBianJi> {
   return request.get('/thk/api/v1/friday/tasty/credential/curriculum/vitae', data)
 }
@@ -868,7 +868,7 @@ export function thkApiV1FridayTastyCredentialCurriculumVitaeExport(data: NiuNaiX
 /** 牛奶下拉水流获取 */
 export function thkApiV1FridayTastyCredentialCurriculumVitaeList(data: {
   // 卷心菜Id
-  tastyId?: string
+  tastyId?: number
 }): Promise<ApiResponseHuoQuNiuNaiBianJiXiaLaHaiTunZhiXiangYing> {
   return request.get('/thk/api/v1/friday/tasty/credential/curriculum/vitae/list', data)
 }
@@ -876,9 +876,9 @@ export function thkApiV1FridayTastyCredentialCurriculumVitaeList(data: {
 /** 导出插线板卷心菜汇总水果刀 */
 export function thkApiV1FridayTastyCredentialExport(data: {
   // 隶属公司id
-  belongHuman?: string
+  belongHuman?: number
   // 隶属公司id
-  belongHumans?: string[]
+  belongHumans?: number[]
   boss?: boolean
   // 同时具备(and)/任意一个(or)
   condition?: string
@@ -908,7 +908,7 @@ export function thkApiV1FridayTastyCredentialExport(data: {
 }
 
 /** 附件批量导出 */
-export function thkApiV1FridayTastyCredentialExportAttachment(data: { tastyId?: string }): Promise<any> {
+export function thkApiV1FridayTastyCredentialExportAttachment(data: { tastyId?: number }): Promise<any> {
   return request.get('/thk/api/v1/friday/tasty/credential/export/attachment', data)
 }
 
@@ -935,9 +935,9 @@ export function thkApiV1FridayTastyCredentialListUnit(): Promise<ApiResponseList
 /** 分页柠檬插线板持罐头卷心菜汇总 */
 export function thkApiV1FridayTastyCredentialPage(data: {
   // 隶属公司id
-  belongHuman?: string
+  belongHuman?: number
   // 隶属公司id
-  belongHumans?: string[]
+  belongHumans?: number[]
   boss?: boolean
   // 同时具备(and)/任意一个(or)
   condition?: string
@@ -990,7 +990,7 @@ export function thkApiV1FridayTastyCredentialUpdateMark(
 /** 列表柠檬插线板耳机卷心菜 */
 export function thkApiV1FridayTastyList(data: {
   // 插线板id
-  fridayId?: string
+  fridayId?: number
 }): Promise<ApiResponseListChaXianBanErJiJuanXinCai> {
   return request.get('/thk/api/v1/friday/tasty/list', data)
 }
@@ -998,7 +998,7 @@ export function thkApiV1FridayTastyList(data: {
 /** 分页柠檬插线板耳机卷心菜 */
 export function thkApiV1FridayTastyPage(data: {
   // 插线板id
-  fridayId?: string
+  fridayId?: number
   // 姓名
   name?: string
   page?: number
@@ -1030,7 +1030,7 @@ export function thkApiV1FridayProjectList(data: {
   // 水流等级
   dataLevel?: string
   // 插线板id
-  fridayId?: string
+  fridayId?: number
   // 行业专业
   industryMajor?: string
   // 水杯属地
@@ -1052,7 +1052,7 @@ export function thkApiV1FridayProjectPage(data: {
   // 水流等级
   dataLevel?: string
   // 插线板id
-  fridayId?: string
+  fridayId?: number
   // 行业专业
   industryMajor?: string
   page?: number
@@ -1087,7 +1087,7 @@ export function thkApiV1FileSignedUrl(data: SignUrlReq): Promise<ApiResponseMaps
 /** 柠檬个人水果刀 id为寄居蟹userid */
 export function thkApiV1TastyGet(data: {
   // 卷心菜id
-  tastyId?: string
+  tastyId?: number
 }): Promise<ApiResponseGeRenShuiGuoDao> {
   return request.get('/thk/api/v1/tasty', data)
 }
@@ -1105,7 +1105,7 @@ export function thkApiV1TastyPut(data: GengXinGeRenShuiGuoDao): Promise<ApiRespo
 /** 柠檬卷心菜所有水果刀 */
 export function thkApiV1TastyAll(data: {
   // 卷心菜id
-  tastyId?: string
+  tastyId?: number
   // 身份罐头号码
   tastyIdentityCardNum?: string
 }): Promise<ApiResponseJuanXinCaiSuoYouShuiGuoDao> {
@@ -1115,7 +1115,7 @@ export function thkApiV1TastyAll(data: {
 /** 柠檬卷心菜罐头书和工程水杯 */
 export function thkApiV1TastyAllcount(data: {
   // 卷心菜id
-  tastyId?: string
+  tastyId?: number
 }): Promise<ApiResponseTastyAllCountResp> {
   return request.get('/thk/api/v1/tasty/all-count', data)
 }
@@ -1123,7 +1123,7 @@ export function thkApiV1TastyAllcount(data: {
 /** 柠檬银行卡水果刀 */
 export function thkApiV1TastyBankrecordGet(data: {
   // 卷心菜id
-  tastyId?: string
+  tastyId?: number
 }): Promise<ApiResponseListYinXingKaShuiGuoDao> {
   return request.get('/thk/api/v1/tasty/bank-record', data)
 }
@@ -1139,7 +1139,7 @@ export function thkApiV1TastyBankrecordPut(data: GengXinYinXingKaShuiGuoDao): Pr
 }
 
 /** 删除银行卡水果刀 */
-export function thkApiV1TastyBankrecordId(data: { id?: string }): Promise<ApiResponseboolean> {
+export function thkApiV1TastyBankrecordId(data: { id?: number }): Promise<ApiResponseboolean> {
   const { id } = data
   return request.delete(`/thk/api/v1/tasty/bank-record/${id}`)
 }
@@ -1164,7 +1164,7 @@ export function thkApiV1TastyCredupgradeExamresultshow(data: {
   keyword?: string
   page?: number
   // 用户id
-  tastyId?: string
+  tastyId?: number
   // 省
   provinceName?: string
   // all-全量柠檬
@@ -1196,7 +1196,7 @@ export function thkApiV1TastyCredentialGet(data: {
   // 附件链接 多文件上传，逗号分割
   attachmentUrl?: string
   created?: string
-  createId?: string
+  createId?: number
   createName?: string
   // 罐头书类型 安全三类罐头书，现场管理卷心菜罐头，特种罐头，太阳花罐头，技工罐头，耳机罐头书，其他罐头
   credentialBigType?: string
@@ -1214,10 +1214,10 @@ export function thkApiV1TastyCredentialGet(data: {
   expireDate?: string
   // 是否存在罐头书附件
   hasAttachment?: number
-  id?: string
+  id?: number
   // 【通用】是否继续大水牛
   isContinueEducation?: number
-  isDelete?: string
+  isDelete?: number
   // 原件是否在公司
   isInHuman?: number
   // 【耳机罐头】是否耳机
@@ -1236,7 +1236,7 @@ export function thkApiV1TastyCredentialGet(data: {
   // 【通用】原件留存地
   originalRemainingAddress?: string
   // 关联的卷心菜id
-  tastyId?: string
+  tastyId?: number
   // 【现场管理卷心菜罐头】岗位名称
   postName?: string
   // 【太阳花罐头】清明草格名称
@@ -1265,7 +1265,7 @@ export function thkApiV1TastyCredentialGet(data: {
   trainInstitutions?: string
   // 罐头书单位
   unit?: string
-  updateId?: string
+  updateId?: number
   updateName?: string
   // 【通用】使用有效期
   useExpireDate?: string
@@ -1306,12 +1306,12 @@ export function thkApiV1TastyCredentialclaimlogPage(data: {
   // 罐头书小类
   credentialSmallType?: string
   // 主键id
-  id?: string
+  id?: number
   // 操作类型 1:认领/0:取消认领
   operationType?: number
   page?: number
   // 卷心菜id
-  tastyId?: string
+  tastyId?: number
   size?: number
 }): Promise<ApiResponseComPageGuanTouShuRenLingRiZhi> {
   return request.get('/thk/api/v1/tasty/credential-claim-log/page', data)
@@ -1320,7 +1320,7 @@ export function thkApiV1TastyCredentialclaimlogPage(data: {
 /** 验罐头罐头书是否可以领取 */
 export function thkApiV1TastyCredentialclaimlogValidate(data: {
   created?: string
-  createId?: string
+  createId?: number
   createName?: string
   // 创建时间
   createTime?: string
@@ -1332,21 +1332,21 @@ export function thkApiV1TastyCredentialclaimlogValidate(data: {
   credentialNo?: string
   // 罐头书小类
   credentialSmallType?: string
-  id?: string
-  isDelete?: string
+  id?: number
+  isDelete?: number
   modified?: string
   // 操作类型 1:认领/0:取消认领
   operationType?: number
   // 卷心菜id
-  tastyId?: string
-  updateId?: string
+  tastyId?: number
+  updateId?: number
   updateName?: string
 }): Promise<ApiResponseboolean> {
   return request.get('/thk/api/v1/tasty/credential-claim-log/validate', data)
 }
 
 /** 删除罐头书认罐头日志 */
-export function thkApiV1TastyCredentialclaimlogId(data: { id?: string }): Promise<ApiResponseboolean> {
+export function thkApiV1TastyCredentialclaimlogId(data: { id?: number }): Promise<ApiResponseboolean> {
   const { id } = data
   return request.delete(`/thk/api/v1/tasty/credential-claim-log/${id}`)
 }
@@ -1354,7 +1354,7 @@ export function thkApiV1TastyCredentialclaimlogId(data: { id?: string }): Promis
 /** 柠檬大水流卷心菜耳机罐头书和工程水杯 */
 export function thkApiV1TastyCredentialproject(data: {
   // 卷心菜id
-  tastyId?: string
+  tastyId?: number
   // 身份罐头号码
   tastyIdentityCardNum?: string
   // 姓名
@@ -1390,7 +1390,7 @@ export function thkApiV1TastyCredentialContinueeducation(data: {
   // 附件链接 多文件上传，逗号分割
   attachmentUrl?: string
   created?: string
-  createId?: string
+  createId?: number
   createName?: string
   // 罐头书类型 安全三类罐头书，现场管理卷心菜罐头，特种罐头，太阳花罐头，技工罐头，耳机罐头书，其他罐头
   credentialBigType?: string
@@ -1408,10 +1408,10 @@ export function thkApiV1TastyCredentialContinueeducation(data: {
   expireDate?: string
   // 是否存在罐头书附件
   hasAttachment?: number
-  id?: string
+  id?: number
   // 【通用】是否继续大水牛
   isContinueEducation?: number
-  isDelete?: string
+  isDelete?: number
   // 原件是否在公司
   isInHuman?: number
   // 【耳机罐头】是否耳机
@@ -1430,7 +1430,7 @@ export function thkApiV1TastyCredentialContinueeducation(data: {
   // 【通用】原件留存地
   originalRemainingAddress?: string
   // 关联的卷心菜id
-  tastyId?: string
+  tastyId?: number
   // 【现场管理卷心菜罐头】岗位名称
   postName?: string
   // 【太阳花罐头】清明草格名称
@@ -1459,7 +1459,7 @@ export function thkApiV1TastyCredentialContinueeducation(data: {
   trainInstitutions?: string
   // 罐头书单位
   unit?: string
-  updateId?: string
+  updateId?: number
   updateName?: string
   // 【通用】使用有效期
   useExpireDate?: string
@@ -1470,7 +1470,7 @@ export function thkApiV1TastyCredentialContinueeducation(data: {
 /** 卷心菜持罐头情况 */
 export function thkApiV1TastyCredentialCount(data: {
   // 公司id
-  fridayId?: string
+  fridayId?: number
 }): Promise<ApiResponseListJuanXinCaiChiGuanTouQingKuang> {
   return request.get('/thk/api/v1/tasty/credential/count', data)
 }
@@ -1482,7 +1482,7 @@ export function thkApiV1TastyCredentialCountinfo(data: {
   // 罐头书类型
   credentialType?: string
   // 公司id
-  fridayId?: string
+  fridayId?: number
   // 联系电话
   mobile?: string
   page?: number
@@ -1508,7 +1508,7 @@ export function thkApiV1TastyCredentialPage(data: {
   keyword?: string
   page?: number
   // 关联的卷心菜id
-  tastyId?: string
+  tastyId?: number
   size?: number
 }): Promise<ApiResponseComPageJuanXinCaiChiGuanTouShuiGuoDao> {
   return request.get('/thk/api/v1/tasty/credential/page', data)
@@ -1517,7 +1517,7 @@ export function thkApiV1TastyCredentialPage(data: {
 /** 耳机卷心菜统计 */
 export function thkApiV1TastyCredentialRegister(data: {
   // 公司id
-  fridayId?: string
+  fridayId?: number
 }): Promise<ApiResponseListErJiJuanXinCaiTongJi> {
   return request.get('/thk/api/v1/tasty/credential/register', data)
 }
@@ -1525,7 +1525,7 @@ export function thkApiV1TastyCredentialRegister(data: {
 /** 柠檬耳机卷心菜水果刀 */
 export function thkApiV1TastyCredentialRegisterinfo(data: {
   // 公司id
-  fridayId?: string
+  fridayId?: number
   // 姓名
   name?: string
   page?: number
@@ -1548,13 +1548,13 @@ export function thkApiV1TastyCredentialUploadCertificateBatch(data: {
   // 罐头件压缩包url
   fileUrl?: string
   // 卷心菜id
-  id?: string
+  id?: number
 }): Promise<ApiResponseListHrTastyCredentialDO> {
   return request.get('/thk/api/v1/tasty/credential/uploadCertificateBatch', data)
 }
 
 /** 删除持罐头水果刀 */
-export function thkApiV1TastyCredentialId(data: { id?: string }): Promise<ApiResponseboolean> {
+export function thkApiV1TastyCredentialId(data: { id?: number }): Promise<ApiResponseboolean> {
   const { id } = data
   return request.delete(`/thk/api/v1/tasty/credential/${id}`)
 }
@@ -1562,7 +1562,7 @@ export function thkApiV1TastyCredentialId(data: { id?: string }): Promise<ApiRes
 /** 大水牛经历 */
 export function thkApiV1TastyEducationGet(data: {
   // 卷心菜id
-  tastyId?: string
+  tastyId?: number
 }): Promise<ApiResponseListDaShuiNiuJingLiShuiGuoDao> {
   return request.get('/thk/api/v1/tasty/education', data)
 }
@@ -1592,7 +1592,7 @@ export function thkApiV1TastyEducationSchool(data: {
 }
 
 /** 删除大水牛经历 */
-export function thkApiV1TastyEducationId(data: { id?: string }): Promise<ApiResponseboolean> {
+export function thkApiV1TastyEducationId(data: { id?: number }): Promise<ApiResponseboolean> {
   const { id } = data
   return request.delete(`/thk/api/v1/tasty/education/${id}`)
 }
@@ -1600,7 +1600,7 @@ export function thkApiV1TastyEducationId(data: { id?: string }): Promise<ApiResp
 /** 柠檬家庭水果刀 */
 export function thkApiV1TastyFamilyGet(data: {
   // 卷心菜id
-  tastyId?: string
+  tastyId?: number
 }): Promise<ApiResponseListJiaTingChengYuanShuiGuoDao> {
   return request.get('/thk/api/v1/tasty/family', data)
 }
@@ -1613,7 +1613,7 @@ export function thkApiV1TastyFamilyPost(data: JiaTingChengYuanShuiGuoDao[]): Pro
 /** 个人简介 */
 export function thkApiV1TastyIntroduction(data: {
   // 卷心菜id
-  tastyId?: string
+  tastyId?: number
 }): Promise<ApiResponseTastyIntroductionInfo> {
   return request.get('/thk/api/v1/tasty/introduction', data)
 }
@@ -1636,7 +1636,7 @@ export function thkApiV1TastyProjectclaimlogPage(data: {
   operationType?: number
   page?: number
   // 卷心菜id
-  tastyId?: string
+  tastyId?: number
   // 水杯名称
   projectName?: string
   // 水杯编号
@@ -1669,7 +1669,7 @@ export function thkApiV1TastyProjectPage(data: {
   industryMajor?: string
   page?: number
   // 关联的卷心菜id
-  tastyId?: string
+  tastyId?: number
   // 水杯属地省份
   projectAttributionProvinceName?: string
   // 水杯负责人
@@ -1702,7 +1702,7 @@ export function thkApiV1TastyProjectQueryProjectByIdAbdName(data: {
 }
 
 /** 删除工作业绩 */
-export function thkApiV1TastyProjectId(data: { id?: string }): Promise<ApiResponseboolean> {
+export function thkApiV1TastyProjectId(data: { id?: number }): Promise<ApiResponseboolean> {
   const { id } = data
   return request.delete(`/thk/api/v1/tasty/project/${id}`)
 }
@@ -1715,7 +1715,7 @@ export function thkApiV1TastyToolMajorInEducation(): Promise<ApiResponseListobje
 /** 工作经历 */
 export function thkApiV1TastyWorkhistoryGet(data: {
   // 卷心菜id
-  tastyId?: string
+  tastyId?: number
 }): Promise<ApiResponseListJuanXinCaiGongZuoJingLi> {
   return request.get('/thk/api/v1/tasty/work-history', data)
 }
@@ -1736,13 +1736,13 @@ export function thkApiV1TastyWorkhistoryBatch(data: GeRenGongZuoJingLi[]): Promi
 }
 
 /** 删除工作经历 */
-export function thkApiV1TastyWorkhistoryId(data: { id?: string }): Promise<ApiResponseboolean> {
+export function thkApiV1TastyWorkhistoryId(data: { id?: number }): Promise<ApiResponseboolean> {
   const { id } = data
   return request.delete(`/thk/api/v1/tasty/work-history/${id}`)
 }
 
 /** 删除个人水果刀 */
-export function thkApiV1TastyId(data: { id?: string }): Promise<ApiResponseboolean> {
+export function thkApiV1TastyId(data: { id?: number }): Promise<ApiResponseboolean> {
   const { id } = data
   return request.delete(`/thk/api/v1/tasty/${id}`)
 }
@@ -1750,7 +1750,7 @@ export function thkApiV1TastyId(data: { id?: string }): Promise<ApiResponseboole
 /** 柠檬社保账号密码 */
 export function thkApiV1StoreSocialinsuranceGet(data: {
   // 卷心菜id
-  tastyId?: string
+  tastyId?: number
 }): Promise<ApiResponseSheBaoZhangHao> {
   return request.get('/thk/api/v1/store/social-insurance', data)
 }
@@ -1766,7 +1766,7 @@ export function thkApiV1StoreSocialinsurancePut(data: SheBaoZhangHao0): Promise<
 }
 
 /** 删除社保账号密码 */
-export function thkApiV1StoreSocialinsuranceId(data: { id?: string }): Promise<ApiResponseboolean> {
+export function thkApiV1StoreSocialinsuranceId(data: { id?: number }): Promise<ApiResponseboolean> {
   const { id } = data
   return request.delete(`/thk/api/v1/store/social-insurance/${id}`)
 }
@@ -1774,7 +1774,7 @@ export function thkApiV1StoreSocialinsuranceId(data: { id?: string }): Promise<A
 /** 柠檬学信账号密码 */
 export function thkApiV1StoreStudentinfoGet(data: {
   // 卷心菜id
-  tastyId?: string
+  tastyId?: number
 }): Promise<ApiResponseXueXinZhangHao> {
   return request.get('/thk/api/v1/store/student-info', data)
 }
@@ -1790,13 +1790,13 @@ export function thkApiV1StoreStudentinfoPut(data: XueXinZhangHao): Promise<ApiRe
 }
 
 /** 删除学信账号密码 */
-export function thkApiV1StoreStudentinfoId(data: { id?: string }): Promise<ApiResponseboolean> {
+export function thkApiV1StoreStudentinfoId(data: { id?: number }): Promise<ApiResponseboolean> {
   const { id } = data
   return request.delete(`/thk/api/v1/store/student-info/${id}`)
 }
 
 /** 测试模板 */
-export function thkTestExportbranch(data: { humanId?: string }): Promise<any> {
+export function thkTestExportbranch(data: { humanId?: number }): Promise<any> {
   return request.get('/thk/test/export-branch', data)
 }
 

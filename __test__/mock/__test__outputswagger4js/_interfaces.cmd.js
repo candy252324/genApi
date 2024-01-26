@@ -1215,8 +1215,8 @@ function FridayMainUpdateReq() {
     isDelete: '@string(5,50)',
     modified: '@string(5,50)',
     tenantId: '@guid',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function FridaySummary() {
@@ -1242,8 +1242,8 @@ function HrTastyBankRecordDO() {
     modified: '@string(5,50)',
     tastyId: '@guid',
     remark: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function HrTastyCredentialDO() {
@@ -1287,8 +1287,8 @@ function HrTastyCredentialDO() {
     titleLevel: '@ctitle(5,10)',
     trainInstitutions: '@string(5,50)',
     unit: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     useExpireDate: '@datetime',
   }
 }
@@ -1312,8 +1312,8 @@ function HrTastyEducationDO() {
     tastyId: '@guid',
     school: '@string(5,50)',
     subject: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     verifyStatus: '@string(5,50)',
   }
 }
@@ -1331,8 +1331,8 @@ function HrTastyFamilyDO() {
     tastyId: '@guid',
     position: '@string(5,50)',
     relationship: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     work: '@string(5,50)',
   }
 }
@@ -1351,8 +1351,8 @@ function HrTastyGoodBadRecordDO() {
     tastyId: '@guid',
     type: '@string(5,50)',
     unitName: '@ctitle(5,10)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function HrTastyPatentMonographDO() {
@@ -1375,8 +1375,8 @@ function HrTastyPatentMonographDO() {
     publicDate: '@datetime',
     publicNum: '@string(5,50)',
     type: '@integer(3,1000)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function HrTastyProjectDO() {
@@ -1410,8 +1410,8 @@ function HrTastyProjectDO() {
     target: '@string(5,50)',
     totalArea: '@string(5,50)',
     totalInvest: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function HrTastyWorkHistoryDO() {
@@ -1435,8 +1435,8 @@ function HrTastyWorkHistoryDO() {
     refererMobile: '@string(5,50)',
     remark: '@string(5,50)',
     salary: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     workHistoryAttachmentUrl: '@image(200x100, @color, @color)',
     workTime: '@datetime',
   }
@@ -1635,8 +1635,8 @@ function YeJiRenLingRiZhi() {
     tastyId: '@guid',
     projectName: '@ctitle(5,10)',
     projectNum: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function GeRenShuiGuoDao() {
@@ -1782,8 +1782,8 @@ function JuanXinCaiGongZuoYeJi0() {
     target: '@string(5,50)',
     totalArea: '@string(5,50)',
     totalInvest: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function JuanXinCaiGongZuoJingLi() {
@@ -1891,8 +1891,8 @@ function JuanXinCaiSuoYouShuiGuoDao() {
     socialSecurityHuman: '@string(5,50)',
     tenantId: '@guid',
     trialDate: '@datetime',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     usedName: '@ctitle(5,10)',
     workAddress: '@string(5,50)',
     workDeptName: '@ctitle(5,10)',
@@ -1944,8 +1944,8 @@ function JuanXinCaiChiGuanTouShuiGuoDao() {
     titleLevel: '@ctitle(5,10)',
     trainInstitutions: '@string(5,50)',
     unit: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     useExpireDate: '@datetime',
   }
 }
@@ -1990,8 +1990,8 @@ function JuanXinCaiChiGuanTouShuiGuoDao0() {
     titleLevel: '@ctitle(5,10)',
     trainInstitutions: '@string(5,50)',
     unit: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     useExpireDate: '@datetime',
   }
 }
@@ -2219,8 +2219,8 @@ function ChaXianBanQingMingCaoZhiGuanLi() {
     modified: '@string(5,50)',
     tagColor: '@color',
     timePoint: '@integer(3,1000)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     warningType: '@integer(3,1000)',
   }
 }
@@ -2235,8 +2235,8 @@ function ChaXianBanQingMingCaoZhiWuShu() {
     modified: '@string(5,50)',
     tagColor: '@color',
     timePoint: '@integer(3,1000)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     warningType: '@integer(3,1000)',
   }
 }
@@ -2251,8 +2251,8 @@ function ChaXianBanQingMingCaoZhiWuShu0() {
     modified: '@string(5,50)',
     tagColor: '@color',
     timePoint: '@integer(3,1000)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     warningType: '@integer(3,1000)',
   }
 }
@@ -2289,8 +2289,8 @@ function XueXinZhangHao() {
     modified: '@string(5,50)',
     password: '@string(5,50)',
     tastyId: '@guid',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     userName: '@cname',
   }
 }
@@ -2304,8 +2304,8 @@ function XueXinZhangHao0() {
     modified: '@string(5,50)',
     password: '@string(5,50)',
     tastyId: '@guid',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     userName: '@cname',
   }
 }
@@ -2389,8 +2389,8 @@ function DaShuiNiuJingLiShuiGuoDao() {
     tastyId: '@guid',
     school: '@string(5,50)',
     subject: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     verifyStatus: '@string(5,50)',
   }
 }
@@ -2424,8 +2424,8 @@ function XinZengYinXingKaShuiGuoDao() {
     modified: '@string(5,50)',
     tastyId: '@guid',
     remark: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function GengXinGeRenShuiGuoDao() {
@@ -2486,8 +2486,8 @@ function GengXinGeRenShuiGuoDao() {
     socialSecurityHuman: '@string(5,50)',
     tenantId: '@guid',
     trialDate: '@datetime',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     usedName: '@ctitle(5,10)',
     workAddress: '@string(5,50)',
     workDeptName: '@ctitle(5,10)',
@@ -2515,8 +2515,8 @@ function GengXinDaShuiNiuJingLiShuiGuoDao() {
     tastyId: '@guid',
     school: '@string(5,50)',
     subject: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     verifyStatus: '@string(5,50)',
   }
 }
@@ -2534,8 +2534,8 @@ function GengXinJiXuDaShuiNiuWeiShengSu() {
     isDelete: '@string(5,50)',
     modified: '@string(5,50)',
     requiredHour: '@integer(3,1000)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     website: '@string(5,50)',
   }
 }
@@ -2554,8 +2554,8 @@ function GengXinYinXingKaShuiGuoDao() {
     modified: '@string(5,50)',
     tastyId: '@guid',
     remark: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function ErJiJuanXinCaiShuiGuoDao() {
@@ -2641,8 +2641,8 @@ function TianJiaGeRenShuiGuoDao() {
     socialSecurityHuman: '@string(5,50)',
     tenantId: '@guid',
     trialDate: '@datetime',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     usedName: '@ctitle(5,10)',
     workAddress: '@string(5,50)',
     workDeptName: '@ctitle(5,10)',
@@ -2670,8 +2670,8 @@ function TianJiaDaShuiNiuJingLiShuiGuoDao() {
     tastyId: '@guid',
     school: '@string(5,50)',
     subject: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     verifyStatus: '@string(5,50)',
   }
 }
@@ -2689,8 +2689,8 @@ function TianJiaJiXuDaShuiNiuWeiShengSu() {
     isDelete: '@string(5,50)',
     modified: '@string(5,50)',
     requiredHour: '@integer(3,1000)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     website: '@string(5,50)',
   }
 }
@@ -2704,8 +2704,8 @@ function SheBaoZhangHao() {
     modified: '@string(5,50)',
     password: '@string(5,50)',
     tastyId: '@guid',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     userName: '@cname',
   }
 }
@@ -2719,8 +2719,8 @@ function SheBaoZhangHao0() {
     modified: '@string(5,50)',
     password: '@string(5,50)',
     tastyId: '@guid',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     userName: '@cname',
   }
 }
@@ -2814,8 +2814,8 @@ function JiXuDaShuiNiuWeiShengSu() {
     isDelete: '@string(5,50)',
     modified: '@string(5,50)',
     requiredHour: '@integer(3,1000)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
     website: '@string(5,50)',
   }
 }
@@ -2856,8 +2856,8 @@ function GuanTouShuRenLingRiZhi() {
     modified: '@string(5,50)',
     operationType: '@integer(3,1000)',
     tastyId: '@guid',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function GuanTouShuRenLingRiZhi0() {
@@ -2875,8 +2875,8 @@ function GuanTouShuRenLingRiZhi0() {
     modified: '@string(5,50)',
     operationType: '@integer(3,1000)',
     tastyId: '@guid',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function QingMingCaoZhiXiaoChouYu() {
@@ -2903,8 +2903,8 @@ function QingMingCaoZhiXiaoChouYu() {
     projectRequire: '@string(5,50)',
     status: '@string(5,50)',
     unit: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function QingMingCaoZhiXiaoChouYu0() {
@@ -2931,8 +2931,8 @@ function QingMingCaoZhiXiaoChouYu0() {
     projectRequire: '@string(5,50)',
     status: '@string(5,50)',
     unit: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function QingMingCaoZhiXiaoChouYuWuShuLianDongNinMengDeRuShuBiaoGeShi() {
@@ -2960,8 +2960,8 @@ function YinXingKaShuiGuoDao() {
     modified: '@string(5,50)',
     tastyId: '@guid',
     remark: '@string(5,50)',
-    updateId: '@datetime',
-    updateName: '@datetime',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
   }
 }
 function FeiErJiZhiYeQingMingCaoGeGuanTouJian() {
