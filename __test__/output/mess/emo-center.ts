@@ -21,12 +21,6 @@ export function emocenterApiEnterpriseList(data: {
   id?: string
   // 字母
   letter?: string
-  // 西蓝花名称
-  name?: string
-  page?: number
-  // 省
-  province?: string
-  size?: number
 }): Promise<ApiResponseComPageXiLanHuaLieBiao> {
   return request.get('/emo-center/api/enterprise/list', data)
 }

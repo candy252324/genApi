@@ -25,10 +25,6 @@ function XiLanHuaLieBiao() {
     area: '@string(5,50)',
     areaCode: '@string(5,50)',
     areaScope: '@string(5,50)',
-    beginDate: '@datetime',
-    branchSerialNo: '@string(5,50)',
-    businessAddress: '@string(5,50)',
-    businessLevel: '@string(5,50)',
     businessLicenseAuditStatus: '@string(5,50)',
     businessLicenseAuthStatus: '@string(5,50)',
     businessLicenseUrl: '@image(200x100, @color, @color)',
@@ -96,17 +92,6 @@ function JobCategoryConfigResp() {
     createId: '@guid',
     createName: '@ctitle(5,10)',
     created: '@datetime',
-    id: '@guid',
-    isEnable: '@integer(3,1000)',
-    leaf: '@boolean',
-    level: '@string(5,50)',
-    modified: '@string(5,50)',
-    name: '@ctitle(5,10)',
-    parentId: '@guid',
-    parentName: '@ctitle(5,10)',
-    rootName: '@ctitle(5,10)',
-    updateId: '@guid',
-    updateName: '@ctitle(5,10)',
   }
 }
 function HappyPlanAddCustomerReq() {
@@ -131,6 +116,42 @@ function ApiResponseobject() {
     traceId: '@guid',
   }
 }
+function ApiResponseResumeInfoMobileResp() {
+  return {
+    code: 200,
+    data: ResumeInfoMobileResp(),
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function ResumeInfoMobileResp() {
+  return {
+    age: '@string(5,50)',
+    avatarAddress: '@image(200x100, @color, @color)',
+    certCount: '@string(5,50)',
+    certStatusMark: '@string(5,50)',
+    'certificateNameList|1-20': ['@ctitle(5,10)'],
+    'certificates|1-20': [NvWaBuTianLaoBing()],
+  }
+}
+function NvWaBuTianLaoBing() {
+  return {
+    additionalRemarks: '@string(5,50)',
+    blacklistRecordCnt: '@string(5,50)',
+    certStatusMark: '@string(5,50)',
+    certificateName: '@ctitle(5,10)',
+    certificateStatus: '@string(5,50)',
+    cooperateSocialSecurity: '@string(5,50)',
+    registrationStatus: '@string(5,50)',
+    sex: '@string(5,50)',
+    sikuCertificateCnt: '@string(5,50)',
+    technicalTitle: '@ctitle(5,10)',
+    workExperience: '@string(5,50)',
+    workNature: '@string(5,50)',
+  }
+}
 module.exports = {
   ApiResponseComPageXiLanHuaLieBiao,
   ComPageXiLanHuaLieBiao,
@@ -141,4 +162,7 @@ module.exports = {
   HappyPlanAddCustomerReq,
   HappyPlanAddCustomerListReq,
   ApiResponseobject,
+  ApiResponseResumeInfoMobileResp,
+  ResumeInfoMobileResp,
+  NvWaBuTianLaoBing,
 }

@@ -64,7 +64,7 @@ genapi mock-server
 | fileName    | N        | String 或 Function      | /      | 自定义接口所属文件名称规则                                                 |
 | gen         | N        | boolean                 | true   | 是否生成                                                                   |
 | exclude     | N        | String 或 Regexp 或数组 | /      | 无需生成的接口                                                             |
-| include     | N        | String 或 Regexp 或数组 | /      | 只需生成的接口                                                             |
+| include     | N        | String 或 Regexp 或数组 | /      | 只需生成的接口（优先级比 exclude 低）                                      |
 | httpTpl     | N        | String                  | /      | 文件头部引入内容（通常用于引入封装的请求方法）                             |
 | fileExt     | N        | String                  | ts     | 文件类型（可选值 ts 或 js）                                                |
 | typeMap     | N        | Record<string, string>  | /      | 接口出入参类型映射                                                         |

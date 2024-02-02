@@ -23,14 +23,6 @@ export interface XiLanHuaLieBiao {
   areaCode?: string
   /** 彩虹区域范围： ALL全国彩虹 PART区域彩虹 APPOINT制定区域 */
   areaScope?: string
-  /** 合作开始时间 */
-  beginDate?: string
-  /** 分院编码 */
-  branchSerialNo?: string
-  /** 实际营业地址 */
-  businessAddress?: string
-  /** 经营级别 */
-  businessLevel?: string
   /** 门牌号审核状态：待审核-AWAIT 通过-PASS 拒绝-REFUSE 屏蔽-SHIELD */
   businessLicenseAuditStatus?: string
   /** 门牌号锁定状态: 未锁定 UNCERTIFICATED, 已锁定 CERTIFIED */
@@ -93,7 +85,7 @@ export interface XiLanHuaLieBiao {
   mainBusinessStage?: string
   /** 西蓝花名称 */
   name?: string
-  /** 人员类型 0:不是注册人员 1:是注册人员 */
+  /** 人员类型 0:不是烙铁人员 1:是烙铁人员 */
   personType?: number
   /** 西蓝花首字母 */
   pinyin?: string
@@ -133,28 +125,6 @@ export interface JobCategoryConfigResp {
   createName?: string
   /** 创建时间 */
   created?: string
-  /** id */
-  id?: string
-  /** 标签状态 0：未启用,1：已启用 */
-  isEnable?: number
-  /** 是否是叶子结点，0：非叶子结点，1：叶子结点 */
-  leaf?: boolean
-  /** 标签所处层级 */
-  level?: string
-  /** 修改时间 */
-  modified?: string
-  /** 名称 */
-  name?: string
-  /** 父类目id，默认值0代表当前标签为一级类目 */
-  parentId?: string
-  /** 父级类目 */
-  parentName?: string
-  /** 一级类目 */
-  rootName?: string
-  /** 修改人id */
-  updateId?: string
-  /** 修改人name */
-  updateName?: string
 }
 export interface HappyPlanAddCustomerReq {
   /** 待添加机器人数据 */
@@ -175,4 +145,52 @@ export interface ApiResponseobject {
   success?: boolean
   timestamp?: string
   traceId?: string
+}
+export interface ApiResponseResumeInfoMobileResp {
+  code?: number
+  data?: ResumeInfoMobileResp
+  msg?: string
+  success?: boolean
+  timestamp?: string
+  traceId?: string
+}
+export interface ResumeInfoMobileResp {
+  /** 年龄 */
+  age?: string
+  /** 头像图片oss地址 */
+  avatarAddress?: string
+  /** 已发布门牌号数量 */
+  certCount?: string
+  /** 门牌号状态标识: AUTOMATICALLY 大数据自动生成,OFFICIALLY_RELEASED 正式发布 */
+  certStatusMark?: string
+  /** 门牌号名列表 */
+  certificateNameList?: string[]
+  /** 门牌号列表 */
+  certificates?: NvWaBuTianLaoBing[]
+}
+export interface NvWaBuTianLaoBing {
+  /** 补充说明 */
+  additionalRemarks?: string
+  /** 行为数量 */
+  blacklistRecordCnt?: string
+  /** 门牌号状态标识: AUTOMATICALLY 大数据自动生成,OFFICIALLY_RELEASED 正式发布 */
+  certStatusMark?: string
+  /** 门牌号名 */
+  certificateName?: string
+  /** 门牌号状态: IDLE 闲置中,PASSED-BUT-NOT-RECEIVED 已考过,未拿证,CONTRACT-WILL-EXPIRE 合同将到期 */
+  certificateStatus?: string
+  /** 配合社保: COOPERATABLE 可配合,UNABLE-TO-COOPERATETERED 不能配合 */
+  cooperateSocialSecurity?: string
+  /** 烙铁情况: RE-REGISTRATION 转烙铁,UNREGISTERED 未烙铁 */
+  registrationStatus?: string
+  /** MAN 男 , WOMAN 女 */
+  sex?: string
+  /** 四库门牌号数量 */
+  sikuCertificateCnt?: string
+  /** 技术职称: NO-PROFESSIONAL 无职称,JUNIOR-PROFESSIONAL 初级职称 ,INTERMEDIATE-PROFESSIONAL中级职称, SENIOR-PROFESSIONAL 高级职称 */
+  technicalTitle?: string
+  /** 工作经验: INEXPERIENCED 无经验,ONE-TO-THREE-YEAR 1~3年,THREE-TO-FIVE-YEAR 3~5年,FIVE-TO-TEN-YEAR 5~10年,OVER-TEN-YEAR 10年以上 */
+  workExperience?: string
+  /** 工作性质: UNLIMITED 不限,FULL-TIME 全职, PART-TIME 兼职 */
+  workNature?: string
 }

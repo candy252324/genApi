@@ -60,11 +60,7 @@
             "type": "integer",
             "format": "int64"
           },
-          { "name": "letter", "in": "query", "description": "字母", "required": false, "type": "string" },
-          { "name": "name", "in": "query", "description": "西蓝花名称", "required": false, "type": "string" },
-          { "name": "page", "in": "query", "required": false, "type": "integer", "format": "int32" },
-          { "name": "province", "in": "query", "description": "省", "required": false, "type": "string" },
-          { "name": "size", "in": "query", "required": false, "type": "integer", "format": "int32" }
+          { "name": "letter", "in": "query", "description": "字母", "required": false, "type": "string" }
         ],
         "responses": {
           "200": {
@@ -185,6 +181,24 @@
         "x-author": "tengfei",
         "x-order": "2147483647"
       }
+    },
+    "/api/mobile/person/resume/": {
+      "get": {
+        "summary": "这个接口的路径末尾有斜杠",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«ResumeInfoMobileResp»",
+              "originalRef": "ApiResponse«ResumeInfoMobileResp»"
+            }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }]
+      }
     }
   },
   "securityDefinitions": { "satoken": { "type": "apiKey", "name": "satoken", "in": "header" } },
@@ -219,10 +233,6 @@
         "area": { "type": "string", "description": "区" },
         "areaCode": { "type": "string", "description": "地区码" },
         "areaScope": { "type": "string", "description": "彩虹区域范围：\n ALL全国彩虹 PART区域彩虹 APPOINT制定区域" },
-        "beginDate": { "type": "string", "format": "date", "description": "合作开始时间" },
-        "branchSerialNo": { "type": "string", "description": "分院编码" },
-        "businessAddress": { "type": "string", "description": "实际营业地址" },
-        "businessLevel": { "type": "string", "description": "经营级别" },
         "businessLicenseAuditStatus": {
           "type": "string",
           "description": "门牌号审核状态：待审核-AWAIT 通过-PASS 拒绝-REFUSE 屏蔽-SHIELD"
@@ -264,7 +274,7 @@
         "location": { "type": "string", "description": "详细地址" },
         "mainBusinessStage": { "type": "string", "description": "主营阶段" },
         "name": { "type": "string", "description": "西蓝花名称" },
-        "personType": { "type": "integer", "format": "int32", "description": "人员类型 0:不是注册人员 1:是注册人员" },
+        "personType": { "type": "integer", "format": "int32", "description": "人员类型 0:不是烙铁人员 1:是烙铁人员" },
         "pinyin": { "type": "string", "description": "西蓝花首字母" },
         "platformEnterpriseId": { "type": "integer", "format": "int64" },
         "province": { "type": "string", "description": "省" },
@@ -312,18 +322,7 @@
         },
         "createId": { "type": "integer", "format": "int64", "description": "创建人id" },
         "createName": { "type": "string", "description": "创建人name" },
-        "created": { "type": "string", "format": "date-time", "description": "创建时间" },
-        "id": { "type": "integer", "format": "int64", "description": "id" },
-        "isEnable": { "type": "integer", "format": "int32", "description": "标签状态 0：未启用,1：已启用" },
-        "leaf": { "type": "boolean", "description": "是否是叶子结点，0：非叶子结点，1：叶子结点" },
-        "level": { "type": "integer", "format": "int64", "description": "标签所处层级" },
-        "modified": { "type": "string", "format": "date-time", "description": "修改时间" },
-        "name": { "type": "string", "description": "名称" },
-        "parentId": { "type": "integer", "format": "int64", "description": "父类目id，默认值0代表当前标签为一级类目" },
-        "parentName": { "type": "string", "description": "父级类目" },
-        "rootName": { "type": "string", "description": "一级类目" },
-        "updateId": { "type": "integer", "format": "int64", "description": "修改人id" },
-        "updateName": { "type": "string", "description": "修改人name" }
+        "created": { "type": "string", "format": "date-time", "description": "创建时间" }
       },
       "title": "JobCategoryConfigResp"
     },
@@ -368,6 +367,74 @@
         "traceId": { "type": "string" }
       },
       "title": "ApiResponse«object»"
+    },
+    "ApiResponse«ResumeInfoMobileResp»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "$ref": "#/definitions/ResumeInfoMobileResp", "originalRef": "ResumeInfoMobileResp" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«ResumeInfoMobileResp»"
+    },
+    "ResumeInfoMobileResp": {
+      "type": "object",
+      "properties": {
+        "age": { "type": "string", "description": "年龄" },
+        "avatarAddress": { "type": "string", "description": "头像图片oss地址" },
+        "certCount": { "type": "string", "description": "已发布门牌号数量" },
+        "certStatusMark": {
+          "type": "string",
+          "description": "门牌号状态标识: AUTOMATICALLY 大数据自动生成,OFFICIALLY_RELEASED 正式发布"
+        },
+        "certificateNameList": { "type": "array", "description": "门牌号名列表", "items": { "type": "string" } },
+        "certificates": {
+          "type": "array",
+          "description": "门牌号列表",
+          "items": { "$ref": "#/definitions/女娲补天烙饼", "originalRef": "女娲补天烙饼" }
+        }
+      },
+      "title": "ResumeInfoMobileResp",
+      "description": "水边信息响应"
+    },
+    "女娲补天烙饼": {
+      "type": "object",
+      "properties": {
+        "additionalRemarks": { "type": "string", "description": "补充说明" },
+        "blacklistRecordCnt": { "type": "integer", "format": "int64", "description": "行为数量" },
+        "certStatusMark": {
+          "type": "string",
+          "description": "门牌号状态标识: AUTOMATICALLY 大数据自动生成,OFFICIALLY_RELEASED 正式发布"
+        },
+        "certificateName": { "type": "string", "description": "门牌号名" },
+        "certificateStatus": {
+          "type": "string",
+          "description": "门牌号状态: IDLE 闲置中,PASSED-BUT-NOT-RECEIVED 已考过,未拿证,CONTRACT-WILL-EXPIRE 合同将到期"
+        },
+        "cooperateSocialSecurity": {
+          "type": "string",
+          "description": "配合社保: COOPERATABLE 可配合,UNABLE-TO-COOPERATETERED 不能配合"
+        },
+        "registrationStatus": {
+          "type": "string",
+          "description": "烙铁情况: RE-REGISTRATION 转烙铁,UNREGISTERED 未烙铁"
+        },
+        "sex": { "type": "string", "description": "MAN 男 , WOMAN 女" },
+        "sikuCertificateCnt": { "type": "integer", "format": "int64", "description": "四库门牌号数量" },
+        "technicalTitle": {
+          "type": "string",
+          "description": "技术职称: NO-PROFESSIONAL 无职称,JUNIOR-PROFESSIONAL 初级职称 ,INTERMEDIATE-PROFESSIONAL中级职称, SENIOR-PROFESSIONAL 高级职称"
+        },
+        "workExperience": {
+          "type": "string",
+          "description": "工作经验: INEXPERIENCED 无经验,ONE-TO-THREE-YEAR 1~3年,THREE-TO-FIVE-YEAR 3~5年,FIVE-TO-TEN-YEAR 5~10年,OVER-TEN-YEAR 10年以上"
+        },
+        "workNature": { "type": "string", "description": "工作性质: UNLIMITED 不限,FULL-TIME 全职, PART-TIME 兼职" }
+      },
+      "title": "女娲补天烙饼"
     }
   }
 }

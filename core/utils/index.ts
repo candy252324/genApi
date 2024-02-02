@@ -44,7 +44,7 @@ export function getUrl(url) {
  * /api/handleAddress/deleteAddress/{id} 处理成  handleAddressDeleteAddressId
  */
 export function getApiName(url, method) {
-  let url2 = url.replace(/^\/api/, '') // 去除开头的 /api
+  let url2 = url.replace(/^\/api/, '').replace(/\/$/, '') // 去除开头的 /api 和 结尾的 /
   url2 = url2.replace(/\$|\{|\}|-|\./g, '') // 去除可能存在的短杠、左右花括号和$、 点号
   let name = url2.replace(/\/\w/g, (matched, index) => {
     const letter = matched.replace('/', '')

@@ -105,6 +105,7 @@ import * as __test__outputswagger4thk from './__test__outputswagger4/thk.js'
 import * as __test__outputswagger4jsswagger4Apijs from './__test__outputswagger4js/swagger4Api-js.js'
 import * as __test__outputmessemocenter from './__test__outputmess/emo-center.js'
 import * as __test__outputmesshappyPlan from './__test__outputmess/happyPlan.js'
+import * as __test__outputmessmobile from './__test__outputmess/mobile.js'
 Mock.mock(/\/api\/blue\/acc\/queryAcc/, 'post', __test__outputswagger1blue.blueAccQueryAcc)
 Mock.mock(/\/api\/blue\/door\/addDoor/, 'post', __test__outputswagger1blue.blueDoorAddDoor)
 Mock.mock(/\/api\/blue\/door\/createDoor/, 'post', __test__outputswagger1blue.blueDoorCreateDoor)
@@ -2341,3 +2342,4 @@ Mock.mock(
   __test__outputmessemocenter.emocenterApiAdminJobCategoryByParentIds
 )
 Mock.mock(/\/api\/happyPlan\/addCustomer/, 'get', __test__outputmesshappyPlan.happyPlanAddCustomer)
+Mock.mock(/\/api\/mobile\/person\/resume\//, 'get', __test__outputmessmobile.mobilePersonResume)
