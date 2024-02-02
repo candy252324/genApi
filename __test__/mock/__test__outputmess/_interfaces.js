@@ -156,3 +156,51 @@ export function NvWaBuTianLaoBing() {
     workNature: '@string(5,50)',
   }
 }
+export function ApiResponseVoid() {
+  return {
+    code: 200,
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+export function EntReSetReq() {
+  return {
+    emInviteConfig: EntInviteConfig(),
+    reInviteConfig: EntInviteConfig(),
+    roleConfigInfo: TomatoInfo(),
+  }
+}
+export function EntInviteConfig() {
+  return {
+    auditState: '@boolean',
+    'auditor|1-20': [AuditorInfo()],
+    enterpriseId: '@guid',
+    id: '@guid',
+    inviteType: '@string(5,50)',
+    module: '@string(5,50)',
+    openState: '@boolean',
+  }
+}
+export function AuditorInfo() {
+  return {
+    id: '@guid',
+    name: '@ctitle(5,10)',
+  }
+}
+export function TomatoInfo() {
+  return {
+    'employeeMoon|1-20': [MoonInfo()],
+    'headerMoon|1-20': [MoonInfo()],
+    id: '@guid',
+    roleRange: '@string(5,50)',
+    syncDeptId: '@guid',
+  }
+}
+export function MoonInfo() {
+  return {
+    id: '@guid',
+    name: '@ctitle(5,10)',
+  }
+}

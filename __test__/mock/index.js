@@ -2341,5 +2341,15 @@ Mock.mock(
   'get',
   __test__outputmessemocenter.emocenterApiAdminJobCategoryByParentIds
 )
+Mock.mock(
+  /\/emo-center\/api\/searchRecord\/deleteByKeywords/,
+  'post',
+  __test__outputmessemocenter.emocenterApiSearchRecordDeleteByKeywords
+)
+Mock.mock(
+  /\/emo-center\/api\/empower\/enterpriseRe\/upEntReSet\/.*/,
+  'post',
+  __test__outputmessemocenter.emocenterApiEmpowerEnterpriseReUpEntReSetEnterpriseId
+)
 Mock.mock(/\/api\/happyPlan\/addCustomer/, 'get', __test__outputmesshappyPlan.happyPlanAddCustomer)
 Mock.mock(/\/api\/mobile\/person\/resume\//, 'get', __test__outputmessmobile.mobilePersonResume)

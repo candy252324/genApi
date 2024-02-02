@@ -155,6 +155,54 @@ function NvWaBuTianLaoBing() {
     workNature: '@string(5,50)',
   }
 }
+function ApiResponseVoid() {
+  return {
+    code: 200,
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function EntReSetReq() {
+  return {
+    emInviteConfig: EntInviteConfig(),
+    reInviteConfig: EntInviteConfig(),
+    roleConfigInfo: TomatoInfo(),
+  }
+}
+function EntInviteConfig() {
+  return {
+    auditState: '@boolean',
+    'auditor|1-20': [AuditorInfo()],
+    enterpriseId: '@guid',
+    id: '@guid',
+    inviteType: '@string(5,50)',
+    module: '@string(5,50)',
+    openState: '@boolean',
+  }
+}
+function AuditorInfo() {
+  return {
+    id: '@guid',
+    name: '@ctitle(5,10)',
+  }
+}
+function TomatoInfo() {
+  return {
+    'employeeMoon|1-20': [MoonInfo()],
+    'headerMoon|1-20': [MoonInfo()],
+    id: '@guid',
+    roleRange: '@string(5,50)',
+    syncDeptId: '@guid',
+  }
+}
+function MoonInfo() {
+  return {
+    id: '@guid',
+    name: '@ctitle(5,10)',
+  }
+}
 module.exports = {
   ApiResponseComPageXiLanHuaLieBiao,
   ComPageXiLanHuaLieBiao,
@@ -168,4 +216,10 @@ module.exports = {
   ApiResponseResumeInfoMobileResp,
   ResumeInfoMobileResp,
   NvWaBuTianLaoBing,
+  ApiResponseVoid,
+  EntReSetReq,
+  EntInviteConfig,
+  AuditorInfo,
+  TomatoInfo,
+  MoonInfo,
 }

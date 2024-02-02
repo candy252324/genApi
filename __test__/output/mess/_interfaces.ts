@@ -23,7 +23,7 @@ export interface XiLanHuaLieBiao {
   areaCode?: string
   /** 彩虹区域范围： ALL全国彩虹 PART区域彩虹 APPOINT制定区域 */
   areaScope?: string
-  /** 门牌号审核状态：待审核-AWAIT 通过-PASS 拒绝-REFUSE 屏蔽-SHIELD */
+  /** 门牌号砍柴状态：待砍柴-AWAIT 通过-PASS 拒绝-REFUSE 屏蔽-SHIELD */
   businessLicenseAuditStatus?: string
   /** 门牌号锁定状态: 未锁定 UNCERTIFICATED, 已锁定 CERTIFIED */
   businessLicenseAuthStatus?: string
@@ -65,7 +65,7 @@ export interface XiLanHuaLieBiao {
   headerName?: string
   /** 西蓝花管理员电话 */
   headerPhone?: string
-  /** 西蓝花管理员ID-摇篮中心员工ID */
+  /** 西蓝花管理员ID-摇篮中心小蚂蚁ID */
   headerUserId?: string
   /** 西蓝花ID */
   id?: string
@@ -193,4 +193,53 @@ export interface NvWaBuTianLaoBing {
   workExperience?: string
   /** 工作性质: UNLIMITED 不限,FULL-TIME 全职, PART-TIME 兼职 */
   workNature?: string
+}
+export interface ApiResponseVoid {
+  code?: number
+  msg?: string
+  success?: boolean
+  timestamp?: string
+  traceId?: string
+}
+export interface EntReSetReq {
+  /** 成员摔跤吃蛋糕设置 */
+  emInviteConfig?: EntInviteConfig
+  /** 关联吃蛋糕设置 */
+  reInviteConfig?: EntInviteConfig
+  /** 摔跤设置 */
+  roleConfigInfo?: TomatoInfo
+}
+export interface EntInviteConfig {
+  /** 砍柴开启状态 0-关闭 1-开启 */
+  auditState?: boolean
+  /** 砍柴人列表 */
+  auditor?: AuditorInfo[]
+  /** 公司ID */
+  enterpriseId?: string
+  id?: string
+  /** LINK-链接 QR-二维码 */
+  inviteType?: string
+  /** 模块分类 ENT_RE-公司关联 EMP_AUTH-小蚂蚁摔跤 */
+  module?: string
+  /** 配置开启状态 0-关闭 1-开启 */
+  openState?: boolean
+}
+export interface AuditorInfo {
+  id?: string
+  /** 砍柴人姓名 */
+  name?: string
+}
+export interface TomatoInfo {
+  /** 普通小蚂蚁晒太阳 */
+  employeeMoon?: MoonInfo[]
+  /** 负责人晒太阳 */
+  headerMoon?: MoonInfo[]
+  id?: string
+  roleRange?: string
+  syncDeptId?: string
+}
+export interface MoonInfo {
+  id?: string
+  /** 晒太阳名称 */
+  name?: string
 }

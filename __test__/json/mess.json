@@ -199,6 +199,74 @@
         },
         "security": [{ "satoken": ["global"] }]
       }
+    },
+    "/emo-center/api/searchRecord/deleteByKeywords": {
+      "post": {
+        "summary": "这个接口的入参既有 in query,又有 in body",
+        "operationId": "deleteByKeywordsUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "groupCode",
+            "in": "query",
+            "description": "groupCode",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "keywords",
+            "description": "keywords",
+            "required": true,
+            "schema": { "type": "array", "items": { "type": "string" } }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse«Void»", "originalRef": "ApiResponse«Void»" }
+          }
+        },
+        "security": [{ "satoken": ["global"] }]
+      }
+    },
+    "/emo-center/api/empower/enterpriseRe/upEntReSet/{enterpriseId}": {
+      "post": {
+        "summary": "这个接口的入参既有 in path, 又有 in body",
+        "operationId": "upEntReSetUsingPOST",
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "enterpriseId",
+            "in": "path",
+            "description": "enterpriseId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "req",
+            "description": "req",
+            "required": true,
+            "schema": { "$ref": "#/definitions/EntReSetReq", "originalRef": "EntReSetReq" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": { "$ref": "#/definitions/ApiResponse«Void»", "originalRef": "ApiResponse«Void»" }
+          },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }]
+      }
     }
   },
   "securityDefinitions": { "satoken": { "type": "apiKey", "name": "satoken", "in": "header" } },
@@ -235,7 +303,7 @@
         "areaScope": { "type": "string", "description": "彩虹区域范围：\n ALL全国彩虹 PART区域彩虹 APPOINT制定区域" },
         "businessLicenseAuditStatus": {
           "type": "string",
-          "description": "门牌号审核状态：待审核-AWAIT 通过-PASS 拒绝-REFUSE 屏蔽-SHIELD"
+          "description": "门牌号砍柴状态：待砍柴-AWAIT 通过-PASS 拒绝-REFUSE 屏蔽-SHIELD"
         },
         "businessLicenseAuthStatus": {
           "type": "string",
@@ -264,7 +332,7 @@
         "emoTenantId": { "type": "integer", "format": "int64", "description": "彩虹西蓝花的-摇篮ID" },
         "headerName": { "type": "string", "description": "西蓝花管理员姓名" },
         "headerPhone": { "type": "string", "description": "西蓝花管理员电话" },
-        "headerUserId": { "type": "integer", "format": "int64", "description": "西蓝花管理员ID-摇篮中心员工ID" },
+        "headerUserId": { "type": "integer", "format": "int64", "description": "西蓝花管理员ID-摇篮中心小蚂蚁ID" },
         "id": { "type": "integer", "format": "int64", "description": "西蓝花ID" },
         "introduceEmployeeId": { "type": "integer", "format": "int64", "description": "介绍人id" },
         "introduceEmployeeName": { "type": "string", "description": "介绍人" },
@@ -435,6 +503,92 @@
         "workNature": { "type": "string", "description": "工作性质: UNLIMITED 不限,FULL-TIME 全职, PART-TIME 兼职" }
       },
       "title": "女娲补天烙饼"
+    },
+    "ApiResponse«Void»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«Void»"
+    },
+    "EntReSetReq": {
+      "type": "object",
+      "properties": {
+        "emInviteConfig": {
+          "description": "成员摔跤吃蛋糕设置",
+          "$ref": "#/definitions/EntInviteConfig",
+          "originalRef": "EntInviteConfig"
+        },
+        "reInviteConfig": {
+          "description": "关联吃蛋糕设置",
+          "$ref": "#/definitions/EntInviteConfig",
+          "originalRef": "EntInviteConfig"
+        },
+        "roleConfigInfo": {
+          "description": "摔跤设置",
+          "$ref": "#/definitions/TomatoInfo",
+          "originalRef": "TomatoInfo"
+        }
+      },
+      "title": "EntReSetReq"
+    },
+    "EntInviteConfig": {
+      "type": "object",
+      "required": ["id"],
+      "properties": {
+        "auditState": { "type": "boolean", "description": "砍柴开启状态 0-关闭 1-开启" },
+        "auditor": {
+          "type": "array",
+          "description": "砍柴人列表",
+          "items": { "$ref": "#/definitions/AuditorInfo", "originalRef": "AuditorInfo" }
+        },
+        "enterpriseId": { "type": "integer", "format": "int64", "description": "公司ID" },
+        "id": { "type": "integer", "format": "int64" },
+        "inviteType": { "type": "string", "description": "LINK-链接 QR-二维码" },
+        "module": { "type": "string", "description": "模块分类 ENT_RE-公司关联   EMP_AUTH-小蚂蚁摔跤" },
+        "openState": { "type": "boolean", "description": "配置开启状态 0-关闭 1-开启" }
+      },
+      "title": "EntInviteConfig"
+    },
+    "AuditorInfo": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer", "format": "int64" },
+        "name": { "type": "string", "description": "砍柴人姓名" }
+      },
+      "title": "AuditorInfo"
+    },
+    "TomatoInfo": {
+      "type": "object",
+      "required": ["id"],
+      "properties": {
+        "employeeMoon": {
+          "type": "array",
+          "description": "普通小蚂蚁晒太阳",
+          "items": { "$ref": "#/definitions/MoonInfo", "originalRef": "MoonInfo" }
+        },
+        "headerMoon": {
+          "type": "array",
+          "description": "负责人晒太阳",
+          "items": { "$ref": "#/definitions/MoonInfo", "originalRef": "MoonInfo" }
+        },
+        "id": { "type": "integer", "format": "int64" },
+        "roleRange": { "type": "string" },
+        "syncDeptId": { "type": "integer", "format": "int64" }
+      },
+      "title": "TomatoInfo"
+    },
+    "MoonInfo": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer", "format": "int64" },
+        "name": { "type": "string", "description": "晒太阳名称" }
+      },
+      "title": "MoonInfo"
     }
   }
 }

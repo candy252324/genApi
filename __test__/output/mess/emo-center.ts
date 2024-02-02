@@ -3,6 +3,8 @@ import type {
   ApiResponseComPageXiLanHuaLieBiao,
   ApiResponseListListlong,
   ApiResponseListJobCategoryConfigResp,
+  ApiResponseVoid,
+  EntReSetReq,
 } from './_interfaces.ts'
 
 /** 这个接口注释、入参注释、出参注释 都有换行符 ，导致报错 */
@@ -38,4 +40,21 @@ export function emocenterApiAdminJobCategoryByParentIds(data: {
   parentIds?: string[]
 }): Promise<ApiResponseListJobCategoryConfigResp> {
   return request.get('/emo-center/api/admin/jobCategory/byParentIds', data)
+}
+
+/** 这个接口的入参既有 in query,又有 in body */
+export function emocenterApiSearchRecordDeleteByKeywords(data: {
+  groupCode?: string
+  keywords?: string[]
+}): Promise<ApiResponseVoid> {
+  return request.post('/emo-center/api/searchRecord/deleteByKeywords', data)
+}
+
+/** 这个接口的入参既有 in path, 又有 in body */
+export function emocenterApiEmpowerEnterpriseReUpEntReSetEnterpriseId(data: {
+  enterpriseId?: string
+  req?: EntReSetReq
+}): Promise<ApiResponseVoid> {
+  const { enterpriseId, req } = data
+  return request.post(`/emo-center/api/empower/enterpriseRe/upEntReSet/${enterpriseId}`, { req })
 }
