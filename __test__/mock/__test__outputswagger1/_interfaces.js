@@ -1737,9 +1737,12 @@ export function DesktopUpReq() {
     keyBorardName: '@ctitle(5,10)',
   }
 }
-export function EmpowerWhiteResp() {
+export function EmpowerWhiteResp(n = 2) {
+  if (n <= 0) return null
+  n = n - 1
+
   return {
-    'children|1-20': [''],
+    'children|1-20': [EmpowerWhiteResp(n)],
     id: '@guid',
     info: WhiteResp(),
     label: '@string(5,50)',
@@ -2651,9 +2654,12 @@ export function RouterMetaResp() {
     requiresAuth: '@boolean',
   }
 }
-export function RouterResp() {
+export function RouterResp(n = 2) {
+  if (n <= 0) return null
+  n = n - 1
+
   return {
-    'children|1-20': [''],
+    'children|1-20': [RouterResp(n)],
     id: '@guid',
     meta: RouterMetaResp(),
     name: '@ctitle(5,10)',
@@ -2728,11 +2734,14 @@ export function SuperManResp() {
     superPink: '@string(5,50)',
   }
 }
-export function SysDictDuiXiangnullZhiBuXuLieHua() {
+export function SysDictDuiXiangnullZhiBuXuLieHua(n = 2) {
+  if (n <= 0) return null
+  n = n - 1
+
   return {
     'allLevelKindName|1-20': ['@ctitle(5,10)'],
     childFlag: '@integer(3,1000)',
-    'childList|1-20': [''],
+    'childList|1-20': [SysDictDuiXiangnullZhiBuXuLieHua(n)],
     deleted: '@boolean',
     id: '@guid',
     introduce: '@string(5,50)',

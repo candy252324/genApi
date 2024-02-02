@@ -1604,11 +1604,14 @@ function Type() {
     typeName: '@ctitle(5,10)',
   }
 }
-function VOResp() {
+function VOResp(n = 2) {
+  if (n <= 0) return null
+  n = n - 1
+
   return {
     code: 200,
     value: '@string(5,50)',
-    'vos|1-20': [''],
+    'vos|1-20': [VOResp(n)],
   }
 }
 function appChaXianBanShuiGuoDaoFanHui() {

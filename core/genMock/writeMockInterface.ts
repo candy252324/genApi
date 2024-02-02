@@ -10,10 +10,16 @@ export function writeMockInterface(interfaces: IInterface[], { outputDir, cmd = 
   allInterfaces = interfaces
   let str = cmd ? '' : 'import Mock from "better-mock"\n'
   interfaces.forEach((item) => {
-    if (cmd) {
-      str += `function ${item.name}() {`
+    const hasSame = childTypeSameWithParent(item)
+    if (hasSame) {
+      // 限制执行次数 2 次，避免函数循环调用导致栈溢出
+      str += `${cmd ? '' : 'export'} function ${item.name}(n=2) {`
+      str += `
+          if (n <= 0) return null
+          n = n-1
+        `
     } else {
-      str += `export function ${item.name}() {`
+      str += `${cmd ? '' : 'export'}  function ${item.name}() {`
     }
     if (item?.properties && item.properties?.length) {
       let mockRes = ''
@@ -71,18 +77,23 @@ function getInterfaceMock(model: IInterface, fieldRules, parentInterface) {
     _mockStr = '{}'
   } else {
     //  1. 如下数据，如果当前 type 和 parentInterface 一致（都为JobCategoryConfigResp）
-    //  直接将 _mockStr 处理成空字符串，避免循环调用导致栈溢出
+    //  则增加参数 n 用于控制执行次数，避免循环调用导致栈溢出
     /**
-      export function JobCategoryConfigResp() {
-       return {
-         'children|1-20': [JobCategoryConfigResp()],
-         createId: '@guid',
-         createName: '@ctitle(5,10)',
-       }
+      export function JobCategoryConfigResp(n=2) {
+        if (n <= 0) return null
+        n = n-1
+        return {
+          'children|1-20': [JobCategoryConfigResp(n)],
+          createId: '@guid',
+          createName: '@ctitle(5,10)',
+        }
      }
      */
-    if (type === parentInterface || !isExistInterface(type, allInterfaces)) {
-      _mockStr = '' //处理成  'children|1-20': [''],
+    if (!isExistInterface(type, allInterfaces)) {
+      _mockStr = '' // interface 不存在，处理成  'children|1-20': [''],
+    } else if (type === parentInterface) {
+      isFn = true
+      _mockStr = `${type}(n)` // 增加参数 n 用于控制执行次数，避免循环调用导致栈溢出
     } else {
       isFn = true
       _mockStr = `${type}()`
@@ -102,4 +113,16 @@ function getInterfaceMock(model: IInterface, fieldRules, parentInterface) {
       return `${name}: \'${_mockStr}\',\n`
     }
   }
+}
+
+/** 判断是否存在类型和当前 interface 相同的子属性
+ *  如下数据，children 的类型为 XXX , 当前 interface 也是 XXX， 则函数返回 true
+ *  interface XXX{
+ *    children:XXX[],
+ *    created:string
+ *  }
+ */
+function childTypeSameWithParent(theInterface: IInterface) {
+  const curName = theInterface.name
+  return (theInterface.properties || []).find((item) => item.type === curName)
 }

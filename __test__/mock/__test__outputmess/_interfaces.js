@@ -87,9 +87,12 @@ export function ApiResponseListJobCategoryConfigResp() {
     traceId: '@guid',
   }
 }
-export function JobCategoryConfigResp() {
+export function JobCategoryConfigResp(n = 2) {
+  if (n <= 0) return null
+  n = n - 1
+
   return {
-    'children|1-20': [''],
+    'children|1-20': [JobCategoryConfigResp(n)],
     createId: '@guid',
     createName: '@ctitle(5,10)',
     created: '@datetime',
