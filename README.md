@@ -12,8 +12,9 @@ npm install @cxxgo/genapi -D
 
 ### 1. 生成配置文件
 
+生成 apiConfig 配置文件:
+
 ```shell
-# 生成 apiConfig 配置文件
 genapi init
 ```
 
@@ -25,8 +26,9 @@ genapi init
 
 ### 2. 生成 api
 
+根据 apiConfig 中的配置自动生成 api:
+
 ```shell
-# 根据 apiConfig 中的配置自动生成api
 genapi now
 ```
 
@@ -45,8 +47,9 @@ genapi now
 
 ### 3. 启动 mock 服务
 
+启动本地 mock 服务，默认端口号 8090:
+
 ```shell
-# 启动本地 mock 服务，默认端口号 8090
 genapi mock-server
 ```
 

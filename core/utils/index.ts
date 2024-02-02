@@ -55,7 +55,8 @@ export function getApiName(url, method) {
     name += upperCaseFirseLetter(method)
   }
   // 如果处理后的接口名称正好是 js 关键字，则默认加上Fn, 如，delete 处理成 deleteFn
-  return jsKeyWords.includes(name) ? `${name}Fn` : name
+  name = jsKeyWords.includes(name) ? `${name}Fn` : name
+  return handleWeirdName(name)
 }
 
 /** 获取接口所属文件名称*/
