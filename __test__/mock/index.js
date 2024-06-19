@@ -2352,5 +2352,12 @@ Mock.mock(
   __test__outputmessemocenter.emocenterApiEmpowerEnterpriseReUpEntReSetEnterpriseId
 )
 Mock.mock(/\/api\/emo-center\/effective\/dept/, 'get', __test__outputmessemocenter.emocenterEffectiveDept)
+Mock.mock(/\/api\/emo-center\/white\/get\/.*/, 'get', __test__outputmessemocenter.emocenterWhiteGetWhiteId)
+Mock.mock(/\/api\/emo-center\/auth\/execute/, 'put', __test__outputmessemocenter.emocenterAuthExecute)
+Mock.mock(
+  /\/emo-center\/api\/v1\/tasty\/work-history\/.*/,
+  'delete',
+  __test__outputmessemocenter.emocenterApiV1TastyWorkhistoryId
+)
 Mock.mock(/\/api\/happyPlan\/addCustomer/, 'get', __test__outputmesshappyPlan.happyPlanAddCustomer)
 Mock.mock(/\/api\/mobile\/person\/resume\//, 'get', __test__outputmessmobile.mobilePersonResume)

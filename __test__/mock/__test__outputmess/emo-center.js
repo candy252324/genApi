@@ -4,6 +4,8 @@ import {
   ApiResponseListListlong,
   ApiResponseListJobCategoryConfigResp,
   ApiResponseVoid,
+  ApiResponseWhiteDetailResp,
+  ApiResponseboolean,
 } from './_interfaces'
 
 /** 这个接口注释、入参注释、出参注释 都有换行符 ，导致报错 */
@@ -23,3 +25,12 @@ export const emocenterApiEmpowerEnterpriseReUpEntReSetEnterpriseId = () => Mock.
 
 /** 返回数值是个数组而非对象 */
 export const emocenterEffectiveDept = () => Mock.mock('')
+
+/** 参数在路径上 */
+export const emocenterWhiteGetWhiteId = () => Mock.mock(ApiResponseWhiteDetailResp())
+
+/** 这是一个 put 请求 */
+export const emocenterAuthExecute = () => Mock.mock(ApiResponseVoid())
+
+/** 这是一个 delete 请求 */
+export const emocenterApiV1TastyWorkhistoryId = () => Mock.mock(ApiResponseboolean())

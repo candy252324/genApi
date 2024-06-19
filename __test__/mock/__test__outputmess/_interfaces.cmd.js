@@ -226,6 +226,91 @@ function EarthDeptMetaRespeFanHuiMoXing(n = 2) {
     skyId: '@guid',
   }
 }
+function ApiResponseWhiteDetailResp() {
+  return {
+    code: 200,
+    data: WhiteDetailResp(),
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
+function WhiteDetailResp() {
+  return {
+    channelWhiteName: '@ctitle(5,10)',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
+    email: '@email',
+    id: '@guid',
+    leaderDesktopId: '@guid',
+    leaderDesktopInfo: DesktopComplexResp(),
+    markDesc: '@string(5,50)',
+    modified: '@string(5,50)',
+    orderNum: '@integer(3,1000)',
+    parentId: '@guid',
+    scaleTypeDesc: '@string(5,50)',
+    status: '@string(5,50)',
+    updateId: '@guid',
+  }
+}
+function DesktopComplexResp() {
+  return {
+    authStatus: '@boolean',
+    createId: '@guid',
+    createName: '@ctitle(5,10)',
+    created: '@datetime',
+    'whiteRespList|1-20': [DesktopWhiteResp()],
+    email: '@email',
+    id: '@guid',
+    'jobRespList|1-20': [DesktopJobResp()],
+    mobile: '@string(5,50)',
+    modified: '@string(5,50)',
+    nickName: '@ctitle(5,10)',
+    'postRespList|1-20': [DesktopPostResp()],
+    realAuth: '@boolean',
+    relation: '@string(5,50)',
+    sex: '@string(5,50)',
+    sexDesc: '@string(5,50)',
+    status: '@string(5,50)',
+    updateId: '@guid',
+    updateName: '@ctitle(5,10)',
+    keyBorardId: '@guid',
+    keyBorardName: '@ctitle(5,10)',
+  }
+}
+function DesktopWhiteResp() {
+  return {
+    whiteCode: '@string(5,50)',
+    whiteId: '@guid',
+    whiteName: '@ctitle(5,10)',
+    desktopId: '@guid',
+    id: '@guid',
+    mainWhite: '@boolean',
+    gratefulId: '@guid',
+  }
+}
+function DesktopJobResp() {
+  return {
+    desktopId: '@guid',
+    id: '@guid',
+    jobCode: '@string(5,50)',
+    jobId: '@guid',
+    jobName: '@ctitle(5,10)',
+    gratefulId: '@guid',
+  }
+}
+function DesktopPostResp() {
+  return {
+    desktopId: '@guid',
+    id: '@guid',
+    postCode: '@string(5,50)',
+    postId: '@guid',
+    postName: '@ctitle(5,10)',
+    gratefulId: '@guid',
+  }
+}
 module.exports = {
   ApiResponseComPageXiLanHuaLieBiao,
   ComPageXiLanHuaLieBiao,
@@ -246,4 +331,10 @@ module.exports = {
   TomatoInfo,
   MoonInfo,
   EarthDeptMetaRespeFanHuiMoXing,
+  ApiResponseWhiteDetailResp,
+  WhiteDetailResp,
+  DesktopComplexResp,
+  DesktopWhiteResp,
+  DesktopJobResp,
+  DesktopPostResp,
 }

@@ -262,3 +262,119 @@ export interface EarthDeptMetaRespeFanHuiMoXing {
   status?: string
   skyId?: string
 }
+export interface ApiResponseWhiteDetailResp {
+  code?: number
+  data?: WhiteDetailResp
+  msg?: string
+  success?: boolean
+  timestamp?: string
+  traceId?: string
+}
+export interface WhiteDetailResp {
+  /** 渠道小金库名 */
+  channelWhiteName?: string
+  createId?: string
+  createName?: string
+  created?: string
+  /** 邮箱 */
+  email?: string
+  /** 小金库id */
+  id?: string
+  /** 负责人id */
+  leaderDesktopId?: string
+  /** 部负责人信息 */
+  leaderDesktopInfo?: DesktopComplexResp
+  markDesc?: string
+  modified?: string
+  /** 显示顺序 */
+  orderNum?: number
+  /** 父小金库id */
+  parentId?: string
+  scaleTypeDesc?: string
+  /** 小金库状态（NORMAL正常 STOP停用） */
+  status?: string
+  updateId?: string
+}
+export interface DesktopComplexResp {
+  /** 是否卖烧饼辟邪刀: 根据卖烧饼场景，存在无返会情况 */
+  authStatus?: boolean
+  createId?: string
+  /** 邀请人 */
+  createName?: string
+  /** 加入时间 */
+  created?: string
+  /** 小金库信息 */
+  whiteRespList?: DesktopWhiteResp[]
+  /** 小麦邮箱 */
+  email?: string
+  /** 小麦id */
+  id?: string
+  /** 职务信息 */
+  jobRespList?: DesktopJobResp[]
+  /** 手机号 */
+  mobile?: string
+  modified?: string
+  /** 小麦昵称 */
+  nickName?: string
+  /** 岗位信息 */
+  postRespList?: DesktopPostResp[]
+  /** 是否实名放行: 根据卖烧饼场景，存在无返会情况 */
+  realAuth?: boolean
+  /** 关联关系：INIT:创建人，CREATE：后台添加，INVITE:邀请加入，ADD:搜索加入 */
+  relation?: string
+  /** 性别,man:表示男性,woman表示女性，unknown未知 */
+  sex?: string
+  sexDesc?: string
+  /** 账号状态：NONACTIVATED未激活,NORMAL正常,FORBID禁用 */
+  status?: string
+  updateId?: string
+  updateName?: string
+  /** 账号id */
+  keyBorardId?: string
+  /** 小麦姓名 */
+  keyBorardName?: string
+}
+export interface DesktopWhiteResp {
+  /** 小金库code */
+  whiteCode?: string
+  /** 小金库id */
+  whiteId?: string
+  /** 小金库太阳花 */
+  whiteName?: string
+  /** 小麦id */
+  desktopId?: string
+  /** ID */
+  id?: string
+  /** 是否主小金库 */
+  mainWhite?: boolean
+  /** 房东id */
+  gratefulId?: string
+}
+export interface DesktopJobResp {
+  /** 小麦id */
+  desktopId?: string
+  /** ID */
+  id?: string
+  /** 职务code */
+  jobCode?: string
+  /** 职务ID */
+  jobId?: string
+  /** 职务name */
+  jobName?: string
+  /** 房东id */
+  gratefulId?: string
+}
+export interface DesktopPostResp {
+  /** 小麦ID */
+  desktopId?: string
+  /** id */
+  id?: string
+  /** 岗位code */
+  postCode?: string
+  /** 岗位ID */
+  postId?: string
+  /** 岗位name */
+  postName?: string
+  /** 房东id */
+  gratefulId?: string
+}

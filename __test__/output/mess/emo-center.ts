@@ -5,6 +5,7 @@ import type {
   ApiResponseListJobCategoryConfigResp,
   ApiResponseVoid,
   EntReSetReq,
+  ApiResponseWhiteDetailResp,
 } from './_interfaces.ts'
 
 /** 这个接口注释、入参注释、出参注释 都有换行符 ，导致报错 */
@@ -62,4 +63,21 @@ export function emocenterApiEmpowerEnterpriseReUpEntReSetEnterpriseId(data: {
 /** 返回数值是个数组而非对象 */
 export function emocenterEffectiveDept(data: { platformEnterpriseId?: string; platformSkyId?: string }): Promise<any> {
   return request.get('/api/emo-center/effective/dept', data)
+}
+
+/** 参数在路径上 */
+export function emocenterWhiteGetWhiteId(data: { whiteId?: string }): Promise<ApiResponseWhiteDetailResp> {
+  const { whiteId } = data
+  return request.get(`/api/emo-center/white/get/${whiteId}`)
+}
+
+/** 这是一个 put 请求 */
+export function emocenterAuthExecute(data: any): Promise<ApiResponseVoid> {
+  return request.put('/api/emo-center/auth/execute', data)
+}
+
+/** 这是一个 delete 请求 */
+export function emocenterApiV1TastyWorkhistoryId(data: { id?: string }): Promise<any> {
+  const { id } = data
+  return request.delete(`/emo-center/api/v1/tasty/work-history/${id}`)
 }
