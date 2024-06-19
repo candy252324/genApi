@@ -2351,5 +2351,6 @@ Mock.mock(
   'post',
   __test__outputmessemocenter.emocenterApiEmpowerEnterpriseReUpEntReSetEnterpriseId
 )
+Mock.mock(/\/api\/emo-center\/effective\/dept/, 'get', __test__outputmessemocenter.emocenterEffectiveDept)
 Mock.mock(/\/api\/happyPlan\/addCustomer/, 'get', __test__outputmesshappyPlan.happyPlanAddCustomer)
 Mock.mock(/\/api\/mobile\/person\/resume\//, 'get', __test__outputmessmobile.mobilePersonResume)

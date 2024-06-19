@@ -60,7 +60,7 @@ export interface XiLanHuaLieBiao {
   /** 彩虹西蓝花在摇篮中心的西蓝花ID */
   emoEnterpriseId?: string
   /** 彩虹西蓝花的-摇篮ID */
-  emoTenantId?: string
+  emoSkyId?: string
   /** 西蓝花管理员姓名 */
   headerName?: string
   /** 西蓝花管理员电话 */
@@ -70,9 +70,9 @@ export interface XiLanHuaLieBiao {
   /** 西蓝花ID */
   id?: string
   /** 介绍人id */
-  introduceEmployeeId?: string
+  introduceEarthId?: string
   /** 介绍人 */
-  introduceEmployeeName?: string
+  introduceEarthName?: string
   /** 投资金额 */
   investment?: number
   /** 法人 */
@@ -98,7 +98,7 @@ export interface XiLanHuaLieBiao {
   serialNo?: string
   /** 最新消防车表ID */
   signId?: string
-  tenantId?: string
+  skyId?: string
 }
 export interface ApiResponseListListlong {
   code?: number
@@ -231,7 +231,7 @@ export interface AuditorInfo {
 }
 export interface TomatoInfo {
   /** 普通小蚂蚁晒太阳 */
-  employeeMoon?: MoonInfo[]
+  earthMoon?: MoonInfo[]
   /** 负责人晒太阳 */
   headerMoon?: MoonInfo[]
   id?: string
@@ -242,4 +242,23 @@ export interface MoonInfo {
   id?: string
   /** 晒太阳名称 */
   name?: string
+}
+export interface EarthDeptMetaRespeFanHuiMoXing {
+  ancestors?: string
+  /** 下级部门列表 */
+  childDeptList?: EarthDeptMetaRespeFanHuiMoXing[]
+  deptCode?: string
+  deptName?: string
+  email?: string
+  id?: string
+  leaderEarthId?: string
+  mainDept?: boolean
+  mark?: string
+  parentCode?: string
+  parentId?: string
+  phone?: string
+  profile?: string
+  scaleType?: string
+  status?: string
+  skyId?: string
 }

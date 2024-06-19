@@ -44,13 +44,13 @@ export function XiLanHuaLieBiao() {
     enterpriseBranchName: '@ctitle(5,10)',
     firstCooperationTime: '@datetime',
     emoEnterpriseId: '@guid',
-    emoTenantId: '@guid',
+    emoSkyId: '@guid',
     headerName: '@ctitle(5,10)',
     headerPhone: '@integer(13100000000,18999999999)',
     headerUserId: '@guid',
     id: '@guid',
-    introduceEmployeeId: '@guid',
-    introduceEmployeeName: '@ctitle(5,10)',
+    introduceEarthId: '@guid',
+    introduceEarthName: '@ctitle(5,10)',
     investment: '@integer(3,1000)',
     legalPerson: '@string(5,50)',
     legalPersonPhone: '@integer(13100000000,18999999999)',
@@ -64,7 +64,7 @@ export function XiLanHuaLieBiao() {
     relateContractNum: '@string(5,50)',
     serialNo: '@string(5,50)',
     signId: '@guid',
-    tenantId: '@guid',
+    skyId: '@guid',
   }
 }
 export function ApiResponseListListlong() {
@@ -191,7 +191,7 @@ export function AuditorInfo() {
 }
 export function TomatoInfo() {
   return {
-    'employeeMoon|1-20': [MoonInfo()],
+    'earthMoon|1-20': [MoonInfo()],
     'headerMoon|1-20': [MoonInfo()],
     id: '@guid',
     roleRange: '@string(5,50)',
@@ -202,5 +202,28 @@ export function MoonInfo() {
   return {
     id: '@guid',
     name: '@ctitle(5,10)',
+  }
+}
+export function EarthDeptMetaRespeFanHuiMoXing(n = 2) {
+  if (n <= 0) return null
+  n = n - 1
+
+  return {
+    ancestors: '@string(5,50)',
+    'childDeptList|1-20': [EarthDeptMetaRespeFanHuiMoXing(n)],
+    deptCode: '@string(5,50)',
+    deptName: '@ctitle(5,10)',
+    email: '@email',
+    id: '@guid',
+    leaderEarthId: '@guid',
+    mainDept: '@boolean',
+    mark: '@string(5,50)',
+    parentCode: '@string(5,50)',
+    parentId: '@guid',
+    phone: '@integer(13100000000,18999999999)',
+    profile: '@string(5,50)',
+    scaleType: '@string(5,50)',
+    status: '@string(5,50)',
+    skyId: '@guid',
   }
 }

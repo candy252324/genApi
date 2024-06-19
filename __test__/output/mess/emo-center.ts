@@ -58,3 +58,8 @@ export function emocenterApiEmpowerEnterpriseReUpEntReSetEnterpriseId(data: {
   const { enterpriseId, req } = data
   return request.post(`/emo-center/api/empower/enterpriseRe/upEntReSet/${enterpriseId}`, { req })
 }
+
+/** 返回数值是个数组而非对象 */
+export function emocenterEffectiveDept(data: { platformEnterpriseId?: string; platformSkyId?: string }): Promise<any> {
+  return request.get('/api/emo-center/effective/dept', data)
+}

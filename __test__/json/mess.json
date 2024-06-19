@@ -267,6 +267,48 @@
         },
         "security": [{ "satoken": ["global"] }]
       }
+    },
+    "/api/emo-center/effective/dept": {
+      "get": {
+        "summary": "返回数值是个数组而非对象",
+        "description": "返回数值是个数组而非对象",
+        "operationId": "filterDeptLoginListV2UsingGET",
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "platformEnterpriseId",
+            "in": "query",
+            "description": "platformEnterpriseId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "platformSkyId",
+            "in": "query",
+            "description": "platformSkyId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/EarthDeptMetaRespe返回模型",
+                "originalRef": "EarthDeptMetaRespe返回模型"
+              }
+            }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }]
+      }
     }
   },
   "securityDefinitions": { "satoken": { "type": "apiKey", "name": "satoken", "in": "header" } },
@@ -329,13 +371,13 @@
           "format": "int64",
           "description": "彩虹西蓝花在摇篮中心的西蓝花ID"
         },
-        "emoTenantId": { "type": "integer", "format": "int64", "description": "彩虹西蓝花的-摇篮ID" },
+        "emoSkyId": { "type": "integer", "format": "int64", "description": "彩虹西蓝花的-摇篮ID" },
         "headerName": { "type": "string", "description": "西蓝花管理员姓名" },
         "headerPhone": { "type": "string", "description": "西蓝花管理员电话" },
         "headerUserId": { "type": "integer", "format": "int64", "description": "西蓝花管理员ID-摇篮中心小蚂蚁ID" },
         "id": { "type": "integer", "format": "int64", "description": "西蓝花ID" },
-        "introduceEmployeeId": { "type": "integer", "format": "int64", "description": "介绍人id" },
-        "introduceEmployeeName": { "type": "string", "description": "介绍人" },
+        "introduceEarthId": { "type": "integer", "format": "int64", "description": "介绍人id" },
+        "introduceEarthName": { "type": "string", "description": "介绍人" },
         "investment": { "type": "number", "description": "投资金额" },
         "legalPerson": { "type": "string", "description": "法人" },
         "legalPersonPhone": { "type": "string", "description": "法人电话" },
@@ -349,7 +391,7 @@
         "relateContractNum": { "type": "string", "description": "关联合同数量" },
         "serialNo": { "type": "string", "description": "西蓝花编码" },
         "signId": { "type": "integer", "format": "int64", "description": "最新消防车表ID" },
-        "tenantId": { "type": "integer", "format": "int64" }
+        "skyId": { "type": "integer", "format": "int64" }
       },
       "title": "西蓝花列表"
     },
@@ -566,7 +608,7 @@
       "type": "object",
       "required": ["id"],
       "properties": {
-        "employeeMoon": {
+        "earthMoon": {
           "type": "array",
           "description": "普通小蚂蚁晒太阳",
           "items": { "$ref": "#/definitions/MoonInfo", "originalRef": "MoonInfo" }
@@ -589,6 +631,35 @@
         "name": { "type": "string", "description": "晒太阳名称" }
       },
       "title": "MoonInfo"
+    },
+    "EarthDeptMetaRespe返回模型": {
+      "type": "object",
+      "properties": {
+        "ancestors": { "type": "string" },
+        "childDeptList": {
+          "type": "array",
+          "description": "下级部门列表",
+          "items": {
+            "$ref": "#/definitions/EarthDeptMetaRespe返回模型",
+            "originalRef": "EarthDeptMetaRespe返回模型"
+          }
+        },
+        "deptCode": { "type": "string" },
+        "deptName": { "type": "string" },
+        "email": { "type": "string" },
+        "id": { "type": "integer", "format": "int64" },
+        "leaderEarthId": { "type": "integer", "format": "int64" },
+        "mainDept": { "type": "boolean" },
+        "mark": { "type": "string" },
+        "parentCode": { "type": "string" },
+        "parentId": { "type": "integer", "format": "int64" },
+        "phone": { "type": "string" },
+        "profile": { "type": "string" },
+        "scaleType": { "type": "string" },
+        "status": { "type": "string" },
+        "skyId": { "type": "integer", "format": "int64" }
+      },
+      "title": "EarthDeptMetaRespe返回模型"
     }
   }
 }

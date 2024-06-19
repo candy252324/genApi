@@ -20,3 +20,6 @@ export const emocenterApiSearchRecordDeleteByKeywords = () => Mock.mock(ApiRespo
 
 /** 这个接口的入参既有 in path, 又有 in body */
 export const emocenterApiEmpowerEnterpriseReUpEntReSetEnterpriseId = () => Mock.mock(ApiResponseVoid())
+
+/** 返回数值是个数组而非对象 */
+export const emocenterEffectiveDept = () => Mock.mock('')
