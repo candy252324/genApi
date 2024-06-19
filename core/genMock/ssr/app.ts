@@ -50,6 +50,7 @@ export function createApp(allApiData?: IParsered[]) {
             <span v-else>
               {{api.url}}
             </span>
+            <span style="margin-left:16px; color:#999;">{{api.summary}}</span>
         </div>
       </div>
     `,
