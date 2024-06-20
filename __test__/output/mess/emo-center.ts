@@ -5,6 +5,7 @@ import type {
   ApiResponseListJobCategoryConfigResp,
   ApiResponseVoid,
   EntReSetReq,
+  EarthDeptMetaRespeFanHuiMoXing,
   ApiResponseWhiteDetailResp,
 } from './_interfaces.ts'
 
@@ -61,7 +62,10 @@ export function emocenterApiEmpowerEnterpriseReUpEntReSetEnterpriseId(data: {
 }
 
 /** 返回数值是个数组而非对象 */
-export function emocenterEffectiveDept(data: { platformEnterpriseId?: string; platformSkyId?: string }): Promise<any> {
+export function emocenterEffectiveDept(data: {
+  platformEnterpriseId?: string
+  platformSkyId?: string
+}): Promise<EarthDeptMetaRespeFanHuiMoXing[]> {
   return request.get('/api/emo-center/effective/dept', data)
 }
 

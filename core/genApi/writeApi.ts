@@ -15,7 +15,7 @@ export function writeApi(
     let apiStr = ''
     let fileUsedInterface: string[] = [] // 当前文件用到的 interface
     item.apis.forEach((api) => {
-      const { name, url, originUrl, method, summary, parameters, outputInterface } = api
+      const { name, url, originUrl, method, summary, parameters, outputInterface, outputType } = api
       /** 是否是无效的 interface */
       let isInvalidInterface = false
 
@@ -44,6 +44,7 @@ export function writeApi(
         summary,
         parameters,
         outputInterface: isInvalidInterface || !outputInterface ? 'any' : outputInterface, // 出参不存在，处理成any
+        outputType,
         pstr1: p1,
         pstr2: p2,
         pstr3: p3,

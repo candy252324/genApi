@@ -65,11 +65,12 @@ const config: UserConfig = {
     },
   ],
   httpTpl: 'const request:any=()=>{}', // 文件头部引入内容
-  apiBody: ({ url, method, summary, name, parameters, outputInterface, pstr1, pstr2, pstr3 }) => {
+  apiBody: ({ url, method, summary, name, parameters, outputInterface, outputType, pstr1, pstr2, pstr3 }) => {
     const quotationMark = pstr3 ? '`' : "'"
+    const output = outputType === 'array' ? `${outputInterface}[]` : outputInterface
     return `
         /** ${summary || '无注释'} */
-        export function ${name}  (${pstr1}) :Promise<${outputInterface || undefined}>{
+        export function ${name}  (${pstr1}) :Promise<${output}>{
           ${pstr3 ? pstr3 : ''}
           return request.${method}(${quotationMark}${url}${quotationMark}, ${pstr2})
         }`

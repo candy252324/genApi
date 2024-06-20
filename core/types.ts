@@ -63,6 +63,8 @@ export interface IApibodyParam {
   summary: string
   /** 接口输出数据模型 */
   outputInterface: string
+  /** 接口出参类型 */
+  outputType: 'object' | 'array'
   /** 接口所有入参 */
   parameters: IParams[]
   /** 由 parameters 处理得到，值如 'data: { id: string }' ，可能为空字符串*/
@@ -111,6 +113,8 @@ export interface IApiModel {
   parameters: IParams[]
   /** 接口出参 interface */
   outputInterface: string
+  /** 接口出参类型 */
+  outputType: 'object' | 'array'
   /** 接口所属文件名称（不包含后缀，如 user）*/
   fileName: string
   /** 文件后缀（ts 或 js, 不包含点号） */

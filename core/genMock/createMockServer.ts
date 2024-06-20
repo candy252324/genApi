@@ -36,7 +36,8 @@ export async function createMockServer(mockConfig: IMock, allApiData: IParsered[
         'Access-Control-Allow-Methods': '*',
       })
 
-      const obj: { url: string; method: string; outputInterface: string; stationFlag: string } = {} as any
+      const obj: { url: string; method: string; outputInterface: string; outputType: string; stationFlag: string } =
+        {} as any
       // 找到 url 相同的api
       ;(allApiData || []).find((item) => {
         return (item.apis || []).find((theOne) => {
@@ -50,6 +51,7 @@ export async function createMockServer(mockConfig: IMock, allApiData: IParsered[
             obj.url = theOne.url
             obj.method = theOne.method
             obj.outputInterface = theOne.outputInterface
+            obj.outputType = theOne.outputType
             obj.stationFlag = item.stationFlag
             return true
           }
@@ -58,14 +60,20 @@ export async function createMockServer(mockConfig: IMock, allApiData: IParsered[
 
       if (Object.keys(obj).length) {
         try {
-          const { stationFlag, outputInterface } = obj
+          const { stationFlag, outputInterface, outputType } = obj
           const cmdInterfacePath = path.join(MOCK_OUTPUT_DIR, stationFlag, './_interfaces.cmd.js') // 'D:\____own____\genApi\mock' +  'station0'
           delete require.cache[require.resolve(cmdInterfacePath)] // 删除require缓存, 保证拿到最新的mock数据
           const theInterface = require(cmdInterfacePath)
           const interfaceFn = theInterface[outputInterface] // interface.GreenBookGratefulInfoResp
           if (interfaceFn && typeof interfaceFn === 'function') {
-            const mockObj = Mock.mock(interfaceFn()) // Mock.mock(interface.GreenBookGratefulInfoResp())
-            res.end(JSON.stringify(mockObj))
+            // 接口返回数据是个数组
+            if (outputType === 'array') {
+              const mockObj = Mock.mock({ 'theArray|1-10': [interfaceFn()] }).theArray // Mock.mock({ 'theArray|1-10': [ EarthDeptMetaRespeFanHuiMoXing() ] }).theArray
+              res.end(JSON.stringify(mockObj))
+            } else {
+              const mockObj = Mock.mock(interfaceFn()) // Mock.mock(interface.GreenBookGratefulInfoResp())
+              res.end(JSON.stringify(mockObj))
+            }
           } else {
             res.end()
           }

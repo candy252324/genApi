@@ -13,7 +13,7 @@ export function writeMockApi(apiGroup: IApiGroup[], { absOutputDir, fieldRules }
     let apiStr = ''
     let fileUsedInterface = [] // 当前文件用到的 interface
     item.apis.forEach((api) => {
-      const { name, url, method, summary, parameters, outputInterface } = api
+      const { name, url, method, summary, parameters, outputInterface, outputType } = api
 
       const _summary = summary ? `/** ${summary} */\n` : ''
       let _outputInterface = ''
@@ -29,8 +29,19 @@ export function writeMockApi(apiGroup: IApiGroup[], { absOutputDir, fieldRules }
         const { isCustome, mockStr } = getFieldMockStr({ name, type: outputInterface, fieldRules })
         _outputInterface = isCustome ? mockStr : `\'${mockStr}\'`
       }
-      const curStr = `${_summary}export const ${name} = () => Mock.mock(${_outputInterface})\n\n`
-      apiStr += curStr
+
+      // 出参是数组
+      if (outputType === 'array') {
+        // export const xxx = () => Mock.mock({ 'theArray|1-10': [ EarthDeptMetaRespeFanHuiMoXing() ] }).theArray
+        const curStr = `${_summary}export const ${name} = () => Mock.mock({ 'theArray|1-10': [ ${_outputInterface} ]}).theArray\n\n`
+        apiStr += curStr
+      }
+      // 出参数对象
+      else {
+        // export const xxx = () => Mock.mock(EarthDeptMetaRespeFanHuiMoXing())
+        const curStr = `${_summary}export const ${name} = () => Mock.mock(${_outputInterface})\n\n`
+        apiStr += curStr
+      }
     })
 
     // interface 引入

@@ -45,8 +45,14 @@ export function handleApiModel(
         const resScheme = obj?.responses['200']?.schema // 出参模型
 
         let outputInterface = '' // 出参 interface
+        let outputType: 'object' | 'array' = 'object' // 出参类型
+        // 如果出参是数组
+        if (resScheme?.type === 'array') {
+          outputType = 'array'
+          resScheme?.items?.originalRef && (outputInterface = handleWeirdName(resScheme.items.originalRef))
+        }
         // 如果存在出参模型
-        if (resScheme?.originalRef) {
+        else if (resScheme?.originalRef) {
           outputInterface = handleWeirdName(resScheme.originalRef)
         }
         // 出参是个简单类型
@@ -63,6 +69,7 @@ export function handleApiModel(
           summary,
           parameters,
           outputInterface: outputInterface || 'any',
+          outputType,
           fileName: theFileName,
           fileExt: theFileExt,
         })

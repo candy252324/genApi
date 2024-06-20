@@ -4,6 +4,7 @@ import {
   ApiResponseListListlong,
   ApiResponseListJobCategoryConfigResp,
   ApiResponseVoid,
+  EarthDeptMetaRespeFanHuiMoXing,
   ApiResponseWhiteDetailResp,
   ApiResponseboolean,
 } from './_interfaces'
@@ -24,7 +25,7 @@ export const emocenterApiSearchRecordDeleteByKeywords = () => Mock.mock(ApiRespo
 export const emocenterApiEmpowerEnterpriseReUpEntReSetEnterpriseId = () => Mock.mock(ApiResponseVoid())
 
 /** 返回数值是个数组而非对象 */
-export const emocenterEffectiveDept = () => Mock.mock('')
+export const emocenterEffectiveDept = () => Mock.mock({ 'theArray|1-10': [EarthDeptMetaRespeFanHuiMoXing()] }).theArray
 
 /** 参数在路径上 */
 export const emocenterWhiteGetWhiteId = () => Mock.mock(ApiResponseWhiteDetailResp())
