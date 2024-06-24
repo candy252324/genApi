@@ -1737,7 +1737,15 @@ function DesktopUpReq() {
   }
 }
 function EmpowerWhiteResp(n = 2) {
-  if (n <= 0) return null
+  if (n <= 0) {
+    return {
+      id: '@guid',
+      info: WhiteResp(),
+      label: '@string(5,50)',
+      parentId: '@guid',
+      weight: '@string(5,50)',
+    }
+  }
   n = n - 1
 
   return {
@@ -2654,7 +2662,16 @@ function RouterMetaResp() {
   }
 }
 function RouterResp(n = 2) {
-  if (n <= 0) return null
+  if (n <= 0) {
+    return {
+      id: '@guid',
+      meta: RouterMetaResp(),
+      name: '@ctitle(5,10)',
+      path: '@string(5,50)',
+      query: '@string(5,50)',
+      redirect: '@string(5,50)',
+    }
+  }
   n = n - 1
 
   return {
@@ -2734,7 +2751,20 @@ function SuperManResp() {
   }
 }
 function SysDictDuiXiangnullZhiBuXuLieHua(n = 2) {
-  if (n <= 0) return null
+  if (n <= 0) {
+    return {
+      'allLevelKindName|1-20': ['@ctitle(5,10)'],
+      childFlag: '@integer(3,1000)',
+      deleted: '@boolean',
+      id: '@guid',
+      introduce: '@string(5,50)',
+      kindCode: '@string(5,50)',
+      kindName: '@ctitle(5,10)',
+      parentId: '@guid',
+      sortNum: '@integer(3,1000)',
+      type: '@integer(3,1000)',
+    }
+  }
   n = n - 1
 
   return {

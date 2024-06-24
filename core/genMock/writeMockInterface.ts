@@ -12,10 +12,18 @@ export function writeMockInterface(interfaces: IInterface[], { outputDir, cmd = 
   interfaces.forEach((item) => {
     const hasSame = childTypeSameWithParent(item)
     if (hasSame) {
+      let mockStrWithoutSameField = ''
+      if (item?.properties && item.properties?.length) {
+        const allProperties = item.properties.filter((it) => it.type !== item.name) //  过滤掉和父级 interface name 相同的属性
+        allProperties.forEach((it) => {
+          mockStrWithoutSameField += getInterfaceMock(it, fieldRules, item.name)
+        })
+      }
+      const returnWithoutSameField = `${mockStrWithoutSameField ? '{\n' + mockStrWithoutSameField + '\n}' : ''}`
       // 限制执行次数 2 次，避免函数循环调用导致栈溢出
       str += `${cmd ? '' : 'export'} function ${item.name}(n=2) {`
       str += `
-          if (n <= 0) return null
+          if (n <= 0) {return ${returnWithoutSameField}}
           n = n-1
         `
     } else {

@@ -1606,7 +1606,12 @@ export function Type() {
   }
 }
 export function VOResp(n = 2) {
-  if (n <= 0) return null
+  if (n <= 0) {
+    return {
+      code: 200,
+      value: '@string(5,50)',
+    }
+  }
   n = n - 1
 
   return {

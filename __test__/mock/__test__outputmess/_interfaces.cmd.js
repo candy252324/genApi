@@ -87,7 +87,13 @@ function ApiResponseListJobCategoryConfigResp() {
   }
 }
 function JobCategoryConfigResp(n = 2) {
-  if (n <= 0) return null
+  if (n <= 0) {
+    return {
+      createId: '@guid',
+      createName: '@ctitle(5,10)',
+      created: '@datetime',
+    }
+  }
   n = n - 1
 
   return {
@@ -204,7 +210,25 @@ function MoonInfo() {
   }
 }
 function EarthDeptMetaRespeFanHuiMoXing(n = 2) {
-  if (n <= 0) return null
+  if (n <= 0) {
+    return {
+      ancestors: '@string(5,50)',
+      deptCode: '@string(5,50)',
+      deptName: '@ctitle(5,10)',
+      email: '@email',
+      id: '@guid',
+      leaderEarthId: '@guid',
+      mainDept: '@boolean',
+      mark: '@string(5,50)',
+      parentCode: '@string(5,50)',
+      parentId: '@guid',
+      phone: '@integer(13100000000,18999999999)',
+      profile: '@string(5,50)',
+      scaleType: '@string(5,50)',
+      status: '@string(5,50)',
+      skyId: '@guid',
+    }
+  }
   n = n - 1
 
   return {
