@@ -245,7 +245,7 @@ export interface MoonInfo {
 }
 export interface EarthDeptMetaRespeFanHuiMoXing {
   ancestors?: string
-  /** 下级部门列表 */
+  /** 下级塔列表 */
   childDeptList?: EarthDeptMetaRespeFanHuiMoXing[]
   deptCode?: string
   deptName?: string
@@ -377,4 +377,12 @@ export interface DesktopPostResp {
   postName?: string
   /** 房东id */
   gratefulId?: string
+}
+export interface ApiResponseListTreelong {
+  code?: number
+  data?: any[]
+  msg?: string
+  success?: boolean
+  timestamp?: string
+  traceId?: string
 }

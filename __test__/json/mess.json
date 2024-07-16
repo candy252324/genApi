@@ -390,6 +390,38 @@
         },
         "security": [{ "satoken": ["global"] }]
       }
+    },
+    "/api/emo/emo/employee/tree": {
+      "get": {
+        "tags": ["蓝天控制器"],
+        "summary": "这个接口出参type是object, 需要处理成any",
+        "description": "这个接口出参type是object, 需要处理成any",
+        "operationId": "selectDeptWithEmployeesUsingGET",
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "name": "emoId",
+            "in": "query",
+            "description": "emoId",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse«List«Tree«long»»»",
+              "originalRef": "ApiResponse«List«Tree«long»»»"
+            }
+          },
+          "401": { "description": "Unauthorized" },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" }
+        },
+        "security": [{ "satoken": ["global"] }]
+      }
     }
   },
   "securityDefinitions": { "satoken": { "type": "apiKey", "name": "satoken", "in": "header" } },
@@ -719,7 +751,7 @@
         "ancestors": { "type": "string" },
         "childDeptList": {
           "type": "array",
-          "description": "下级部门列表",
+          "description": "下级塔列表",
           "items": {
             "$ref": "#/definitions/EarthDeptMetaRespe返回模型",
             "originalRef": "EarthDeptMetaRespe返回模型"
@@ -857,6 +889,18 @@
         "gratefulId": { "type": "integer", "format": "int64", "description": "房东id" }
       },
       "title": "DesktopPostResp"
+    },
+    "ApiResponse«List«Tree«long»»»": {
+      "type": "object",
+      "properties": {
+        "code": { "type": "integer", "format": "int32" },
+        "data": { "type": "array", "items": { "type": "object", "additionalProperties": { "type": "object" } } },
+        "msg": { "type": "string" },
+        "success": { "type": "boolean" },
+        "timestamp": { "type": "integer", "format": "int64" },
+        "traceId": { "type": "string" }
+      },
+      "title": "ApiResponse«List«Tree«long»»»"
     }
   }
 }

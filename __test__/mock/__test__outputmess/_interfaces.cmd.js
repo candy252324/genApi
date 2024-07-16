@@ -335,6 +335,16 @@ function DesktopPostResp() {
     gratefulId: '@guid',
   }
 }
+function ApiResponseListTreelong() {
+  return {
+    code: 200,
+    'data|1-20': [''],
+    msg: '@string(5,50)',
+    success: '@boolean',
+    timestamp: '@datetime',
+    traceId: '@guid',
+  }
+}
 module.exports = {
   ApiResponseComPageXiLanHuaLieBiao,
   ComPageXiLanHuaLieBiao,
@@ -361,4 +371,5 @@ module.exports = {
   DesktopWhiteResp,
   DesktopJobResp,
   DesktopPostResp,
+  ApiResponseListTreelong,
 }
