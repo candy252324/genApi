@@ -65,7 +65,6 @@
   "lint-staged": {
     "*.{ts,js}": [
       "eslint --fix",
-      "tsc --noEmit --skipLibCheck",
       "prettier --write"
     ]
   }
