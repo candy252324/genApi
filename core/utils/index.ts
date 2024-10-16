@@ -3,8 +3,9 @@ import fs from 'node:fs'
 import net from 'node:net'
 import { exec } from 'node:child_process'
 import pinyin from 'js-pinyin'
-import { IApiModel, IParsered, IInterface, IApiGroup } from '../types'
+import { IApiModel, IInterface, IApiGroup } from '../types'
 import { createFolder } from './file'
+import { loadConfig } from './config'
 
 const jsKeyWords = [
   'delete',
@@ -267,4 +268,28 @@ export function portIsOccupied(port) {
       }
     })
   })
+}
+
+/** 获取工具运行环境 */
+export async function getRunEnv() {
+  let env: 'linkInTool' | 'linkInUserProject' | 'inUserProject' = 'inUserProject'
+  try {
+    const pkgPath = path.join(process.cwd(), './package.json')
+    const { config: pkgJson } = await loadConfig(pkgPath)
+
+    // link 方式在本工具内运行（执行：npm run test）
+    if (pkgJson?.buildInFlag === 'cxx-genapi-tool') {
+      env = 'linkInTool'
+    } else {
+      // link 方式在使用者项目内运行，__dirname 指向本仓库目录下的 dist 目录，  E:\\xxx\genApi\dist
+      const pkgPath = path.resolve(__dirname, '../package.json')
+      const { config: pkgJson } = await loadConfig(pkgPath)
+      if (pkgJson?.buildInFlag === 'cxx-genapi-tool') {
+        env = 'linkInUserProject'
+      }
+    }
+  } catch (error) {
+    //
+  }
+  return env
 }
