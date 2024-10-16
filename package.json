@@ -5,12 +5,12 @@
   "buildInFlag": "cxx-genapi-tool",
   "scripts": {
     "build": "node ./scripts/build.js",
-    "test": "yarn build && yarn link && genapi now -c ./__test__/apiConfig.ts",
-    "test:init": "yarn build && yarn link && genapi init",
-    "test:mock-server": "yarn build && yarn link && genapi mock-server",
+    "test": "pnpm build && pnpm link --global && npx genapi now -c ./__test__/apiConfig.ts",
+    "test:init": "pnpm build && pnpm link --global && npx genapi init",
+    "test:mock-server": "pnpm build && pnpm link --global && npx genapi mock-server",
     "replace": "node ./scripts/replaceStr.js",
     "prepare": "husky install",
-    "prepublish": "yarn build"
+    "prepublish": "pnpm build"
   },
   "main": "./dist/index.js",
   "types": "./dist/type.d.ts",

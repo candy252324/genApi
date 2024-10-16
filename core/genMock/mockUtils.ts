@@ -91,6 +91,7 @@ export function getCustomeMockStr(name, fieldRules) {
     const res = fieldRules[findRule] || ''
     // 如果是字符串,加个引号,
     if (typeof res === 'string') {
+      // eslint-disable-next-line no-useless-escape
       return `\'${res}\'`
     }
     // 其它情况（数字，正则，函数），直接返回
@@ -111,7 +112,7 @@ export async function getMockPath() {
   const pkgPath = path.join(process.cwd(), './package.json')
   const { config: pkgJson } = await loadConfig(pkgPath)
   let mockPath = ''
-  // link方式在本工具内运行（执行：yarn test）, mock 数据输出到 __test__ 目录下
+  // link方式在本工具内运行（执行：npm run test）, mock 数据输出到 __test__ 目录下
   if (pkgJson?.buildInFlag === 'cxx-genapi-tool') {
     mockPath = path.join(process.cwd(), '__test__/mock')
   }
