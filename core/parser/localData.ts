@@ -1,44 +1,64 @@
 import fs from 'node:fs'
+import path from 'node:path'
 import { saveDataToLocal, readDataFromLocal } from '../utils'
-import { PARSERED_DATA_LOCAL_PATH, USER_CONFIG_LOCAL_PATH } from '../constant'
 import { IParsered } from '../types'
 
 /** 将解析后的数据保存到本地 */
-export function saveParseredDataToLocal(data: any) {
-  saveDataToLocal(PARSERED_DATA_LOCAL_PATH, data)
+export async function saveParseredDataToLocal(data: any) {
+  const p = getParseredDataPath()
+  console.log('解析后的数据存储路径', p)
+  saveDataToLocal(p, data)
 }
 /** 从本地读取解析后的数据 */
-export function getParseredDataFromLocal(): IParsered[] {
+export async function getParseredDataFromLocal(): Promise<IParsered[]> {
   try {
-    const dataStr = readDataFromLocal(PARSERED_DATA_LOCAL_PATH)
+    const p = getParseredDataPath()
+    console.log('解析后的数据读取路径', p)
+    const dataStr = readDataFromLocal(p)
     return JSON.parse(dataStr)
   } catch (error) {
     return []
   }
 }
 
+/** 获取解析后的数据的存储路径 */
+function getParseredDataPath() {
+  const basename = path.basename(process.cwd()) // 运行目录路径最后一个斜杠后的内容
+  // link 方式运行, 数据会输出到本项目来，加前缀用于区分
+  return path.join(__dirname, `../temp/${basename}-parseredData.json`)
+}
+
 /** 将config配置文件路径存储到本地 */
 export function saveConfigPathToLocal(configPath: string) {
+  const p = getConfigFileKey()
   // 数据追加
-  if (fs.existsSync(USER_CONFIG_LOCAL_PATH)) {
-    const dataStr = readDataFromLocal(USER_CONFIG_LOCAL_PATH) // 本地所有用户配置
+  if (fs.existsSync(p)) {
+    const dataStr = readDataFromLocal(p) // 本地所有用户配置
     const obj = dataStr ? JSON.parse(dataStr) : {}
     obj['configPath'] = configPath
-    saveDataToLocal(USER_CONFIG_LOCAL_PATH, obj)
+    saveDataToLocal(p, obj)
   }
   // 文件新增
   else {
-    saveDataToLocal(USER_CONFIG_LOCAL_PATH, { configPath })
+    saveDataToLocal(p, { configPath })
   }
 }
 
 /** 从本地读取config配置文件路径*/
 export function getConfigPathFromLoal(): string {
   try {
-    const dataStr = readDataFromLocal(USER_CONFIG_LOCAL_PATH)
+    const p = getConfigFileKey()
+    const dataStr = readDataFromLocal(p)
     const obj = JSON.parse(dataStr)
     return obj['configPath']
   } catch (error) {
     return ''
   }
+}
+
+/** 获取配置文件存储名称 key */
+function getConfigFileKey() {
+  const basename = path.basename(process.cwd()) // 运行目录路径最后一个斜杠后的内容
+  // link 方式运行, 数据会输出到本项目来，加前缀用于区分
+  return path.join(__dirname, `../temp/${basename}-config.json`)
 }

@@ -11,11 +11,15 @@ import { getMockPath } from '../core/genMock/mockUtils'
 export async function mockServer() {
   // 优先从本地取执行 genapi now 时带的config路径
   const localPath = getConfigPathFromLoal()
+  console.log('localPath:', localPath)
   const configFilePath = fs.existsSync(localPath) ? localPath : getConfigPath()
+  console.log('configFilePath---', configFilePath)
   if (!configFilePath) return
 
   const { config } = (await loadConfig(configFilePath)) as { config: UserConfig }
-  let allApiData = getParseredDataFromLocal()
+  let allApiData = await getParseredDataFromLocal()
+
+  console.log('allApiData----', allApiData.length)
 
   // 不存在本地解析数据
   if (!allApiData?.length) {
@@ -25,6 +29,7 @@ export async function mockServer() {
   // 存在本地解析数据，但是不存在mock数据（执行 genapi now --no-mock）
   else {
     const mockPath = await getMockPath()
+    console.log('mockPath---', mockPath)
     if (!fs.existsSync(mockPath)) {
       // 不存在 mock 目录
       await genMock(allApiData, config.mock)
