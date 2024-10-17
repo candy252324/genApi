@@ -116,9 +116,10 @@ export async function getMockPath() {
   if (env === 'linkInTool') {
     mockPath = path.join(process.cwd(), '__test__/mock')
   }
-  // link方式在使用者项目内运行，cwd 指向使用者项目目录
+  // link方式在使用者项目内运行，cwd 指向使用者项目目录, mock 数据输出到本项目 /mock 目录下
   else if (env === 'linkInUserProject') {
-    mockPath = path.join(process.cwd(), 'node_modules/@cxxgo/genapi/mock')
+    const basename = path.basename(process.cwd()) // 运行目录路径最后一个斜杠后的内容
+    mockPath = path.join(process.cwd(), `node_modules/@cxxgo/genapi/mock/${basename}`)
   }
   // 非link方式在使用者项目内运行, __dirname 指向使用者项目目录下的 node_modules/@cxxgo/genapi/dist 目录
   else {
