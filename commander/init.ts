@@ -1,4 +1,5 @@
 import fs from 'node:fs'
+import log from 'npmlog'
 import { DEFAULT_CONFIG_PATH } from '../core/constant'
 import { saveConfigPathToLocal } from '../core/parser/localData'
 import { apiConfigTpl_ts, apiConfigTpl_js } from './template'
@@ -17,7 +18,7 @@ export function init(options) {
     writeConfigFile(existConfPath || configFilePath)
   } else {
     if (existConfPath) {
-      console.log('本地已经存在配置文件, 如需覆盖，请执行 genapi --force')
+      log.warn('本地已经存在配置文件, 如需覆盖，请添加 --force 参数')
     } else {
       writeConfigFile(configFilePath)
     }
@@ -30,8 +31,8 @@ async function writeConfigFile(configFilePath) {
     const ext = configFilePath.split('.').pop() // 后缀 ts or js
     writeAndPrettify(configFilePath, ext === 'ts' ? apiConfigTpl_ts : apiConfigTpl_js)
     saveConfigPathToLocal(configFilePath)
-    console.log('配置文件创建成功')
+    log.success('配置文件创建成功')
   } catch (error) {
-    console.log('配置文件创建失败', error)
+    log.error('配置文件创建失败', error)
   }
 }

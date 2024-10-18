@@ -1,4 +1,5 @@
 import path from 'node:path'
+import log from 'npmlog'
 import { writeMockIndex } from './writeMockIndex'
 import { writeMockInterface } from './writeMockInterface'
 import { writeMockApi } from './writeMockApi'
@@ -12,8 +13,8 @@ let MOCK_OUTPUT_DIR = '' // mock 数据输出路径
 /** 生成 mock 数据 */
 export async function genMock(data: IParsered[], mockConfig: IMock) {
   MOCK_OUTPUT_DIR = await getMockPath()
-  console.log('mock 路径', MOCK_OUTPUT_DIR)
   console.log(`mock 数据生成中...`)
+  log.verbose('mock 数据输出路径', MOCK_OUTPUT_DIR)
   cleanDir(MOCK_OUTPUT_DIR)
   await genMockParaller(data, mockConfig)
 }

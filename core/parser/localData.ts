@@ -6,14 +6,12 @@ import { IParsered } from '../types'
 /** 将解析后的数据保存到本地 */
 export async function saveParseredDataToLocal(data: any) {
   const p = getParseredDataPath()
-  console.log('解析后的数据存储路径', p)
   saveDataToLocal(p, data)
 }
 /** 从本地读取解析后的数据 */
 export async function getParseredDataFromLocal(): Promise<IParsered[]> {
   try {
     const p = getParseredDataPath()
-    console.log('解析后的数据读取路径', p)
     const dataStr = readDataFromLocal(p)
     return JSON.parse(dataStr)
   } catch (error) {

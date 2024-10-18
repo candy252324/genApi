@@ -1,6 +1,7 @@
 import http from 'node:http'
 import path from 'node:path'
 import Mock from 'better-mock'
+import log from 'npmlog'
 import { portIsOccupied } from '../utils'
 import { MOCK_SERVER_PORT } from '../constant'
 import { getMockPath } from './mockUtils'
@@ -10,6 +11,7 @@ import { ssrServer } from './ssr/server'
 
 export async function createMockServer(mockConfig: IMock, allApiData: IParsered[]) {
   const MOCK_OUTPUT_DIR = await getMockPath()
+  log.verbose('mock 数据读取路径', MOCK_OUTPUT_DIR)
   const port = await portIsOccupied(mockConfig.port || MOCK_SERVER_PORT)
   const server = http.createServer()
 
@@ -63,6 +65,7 @@ export async function createMockServer(mockConfig: IMock, allApiData: IParsered[
           const { stationFlag, outputInterface, outputType } = obj
           const cmdInterfacePath = path.join(MOCK_OUTPUT_DIR, stationFlag, './_interfaces.cmd.js') // 'D:\____own____\genApi\mock' +  'station0'
           delete require.cache[require.resolve(cmdInterfacePath)] // 删除require缓存, 保证拿到最新的mock数据
+          // eslint-disable-next-line @typescript-eslint/no-var-requires
           const theInterface = require(cmdInterfacePath)
           const interfaceFn = theInterface[outputInterface] // interface.GreenBookGratefulInfoResp
           if (interfaceFn && typeof interfaceFn === 'function') {
