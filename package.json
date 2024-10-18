@@ -5,7 +5,7 @@
   "buildInFlag": "cxx-genapi-tool",
   "scripts": {
     "build": "node ./scripts/build.js",
-    "test": "pnpm build && pnpm link --global && npx genapi now -c ./__test__/apiConfig.ts",
+    "test:gen": "pnpm build && pnpm link --global && npx genapi now -c ./__test__/apiConfig.ts",
     "test:init": "pnpm build && pnpm link --global && npx genapi init",
     "test:mock-server": "pnpm build && pnpm link --global && npx genapi mock-server",
     "replace": "node ./scripts/replaceStr.js",
@@ -45,6 +45,7 @@
     "commander": "^11.0.0",
     "eslint": "^8.55.0",
     "js-pinyin": "^0.2.4",
+    "npmlog": "^7.0.1",
     "prettier": "^2.8.8",
     "unconfig": "^0.3.11",
     "vue": "^3.4.15"
