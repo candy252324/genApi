@@ -1,5 +1,6 @@
 import path from 'node:path'
 import { getRunEnv } from '../utils/index'
+import log from 'npmlog'
 
 /** 获取简单数据类型的 mock */
 export function getFieldMockStr({ name, type, fieldRules }) {
@@ -110,7 +111,7 @@ function getRandomOneFromArr(str) {
 /** 获取 mock 数据输出路径 */
 export async function getMockPath() {
   const env = await getRunEnv()
-  console.log('env:', env)
+  log.verbose(`env: ${env}`)
   let mockPath = ''
   // link方式在本工具内运行（执行：npm run test）, mock 数据输出到 __test__ 目录下
   if (env === 'linkInTool') {

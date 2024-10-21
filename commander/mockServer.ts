@@ -28,6 +28,7 @@ export async function mockServer() {
   else {
     log.verbose('存在本地解析数据，但是不存在mock数据')
     const mockPath = await getMockPath()
+    log.verbose(`mock 数据路径: ${mockPath}`)
     if (!fs.existsSync(mockPath)) {
       // 不存在 mock 目录
       await genMock(allApiData, config.mock)

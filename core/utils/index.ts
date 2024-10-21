@@ -281,10 +281,9 @@ export async function getRunEnv() {
     if (pkgJson?.buildInFlag === 'cxx-genapi-tool') {
       env = 'linkInTool'
     } else {
-      // link 方式在使用者项目内运行，__dirname 指向本仓库目录下的 dist 目录，  E:\\xxx\genApi\dist
-      const pkgPath = path.resolve(__dirname, '../package.json')
-      const { config: pkgJson } = await loadConfig(pkgPath)
-      if (pkgJson?.buildInFlag === 'cxx-genapi-tool') {
+      // link 方式在使用者项目内运行，__dirname 指向本仓库目录下的 dist 目录( E:\\xxx\genApi\dist), 存在 .gitignore 文件
+      const gitignoregPath = path.resolve(__dirname, '../.gitignore')
+      if (fs.existsSync(gitignoregPath)) {
         env = 'linkInUserProject'
       }
     }
