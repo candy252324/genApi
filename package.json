@@ -1,6 +1,6 @@
 {
   "name": "@cxxgo/genapi",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "",
   "buildInFlag": "cxx-genapi-tool",
   "scripts": {
