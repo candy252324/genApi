@@ -10,7 +10,7 @@
     "test:mock-server": "pnpm build && pnpm link --global && npx genapi mock-server",
     "replace": "node ./scripts/replaceStr.js",
     "prepare": "husky install",
-    "prepublish": "pnpm build"
+    "prepublishOnly": "pnpm build"
   },
   "main": "./dist/index.js",
   "types": "./dist/type.d.ts",
