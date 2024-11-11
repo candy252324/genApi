@@ -10,7 +10,7 @@
     "/emo-center/api/enterprise/list": {
       "get": {
         "tags": ["西蓝花管理"],
-        "summary": "这个接口注释、入参注释、出参注释\n都有换行符\n，导致报错",
+        "summary": "这个接口注释、入参注释、出参注释\n有特殊字符\n，*/ 等，导致报错",
         "operationId": "listUsingGET",
         "produces": ["*/*"],
         "parameters": [
@@ -34,21 +34,21 @@
           {
             "name": "cooperateTypeFirst",
             "in": "query",
-            "description": "西蓝花类型 合作种类一级分类",
+            "description": "西蓝花类型 **/ * */合作种类一级分类*/",
             "required": false,
             "type": "string"
           },
           {
             "name": "cooperateTypeSecond",
             "in": "query",
-            "description": "西蓝花性质 合作种类二级分类",
+            "description": "/*西蓝花性质 合作/* *种类/**二级分类",
             "required": false,
             "type": "string"
           },
           {
             "name": "cooperateTypeThird",
             "in": "query",
-            "description": "西蓝花性质 合作种类三级分类",
+            "description": "//西蓝花性质 合作种类三级分类\\",
             "required": false,
             "type": "string"
           },

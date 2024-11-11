@@ -125,10 +125,14 @@ export function handleWeirdName(originKey) {
   return str.replace(/[^a-zA-Z0-9_]/g, '') // 去除非数字、非英文、且非下划线的字符
 }
 
-/** 处理注释 (去除首位空格，去除换行符，多个空格合并成一个空格) */
+/** 处理注释 */
 export function handleDescription(desc?: string) {
   if (!desc) return ''
-  return desc.trim().replace(/\n/g, ' ').replace(/\s+/g, ' ')
+  return desc
+    .trim() // 去除首尾空格
+    .replace(/\n/g, ' ') // 去除换行符
+    .replace(/\s+/g, ' ') // 多个空格合并成一个空格
+    .replace(/(\/\*+)|(\*+\/)/g, '') // 去除 /* 和 */
 }
 
 /** 首字母大写 */

@@ -9,7 +9,7 @@ import {
   ApiResponseboolean,
 } from './_interfaces'
 
-/** 这个接口注释、入参注释、出参注释 都有换行符 ，导致报错 */
+/** 这个接口注释、入参注释、出参注释 有特殊字符 ， 等，导致报错 */
 export const emocenterApiEnterpriseList = () => Mock.mock(ApiResponseComPageXiLanHuaLieBiao())
 
 /** 这个接口处理后的 parsedData 里的type为空，导出出现形如 'data|1-20': [()] 的错误mock数据 */
